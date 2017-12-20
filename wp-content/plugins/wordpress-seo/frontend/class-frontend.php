@@ -1461,6 +1461,7 @@ class WPSEO_Frontend {
 
 		if ( ! is_object( $post ) || ! is_attachment() ) {
 			return false;
+<<<<<<< HEAD
 		}
 
 		$attachment = $post;
@@ -1470,6 +1471,17 @@ class WPSEO_Frontend {
 			return true;
 		}
 
+=======
+		}
+
+		$attachment = $post;
+
+		if ( (int) $attachment->post_parent !== 0 ) {
+			$this->redirect( get_permalink( $attachment->post_parent ), 301 );
+			return true;
+		}
+
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 		/**
 		 * Filter: 'wpseo_redirect_orphan_attachment' - Allows for orphaned attachment to be redirected.
 		 *
@@ -1982,6 +1994,7 @@ class WPSEO_Frontend {
 		);
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Returns an instance of the frontend page type.
 	 *
@@ -1995,6 +2008,8 @@ class WPSEO_Frontend {
 		return $this->frontend_page_type;
 	}
 
+=======
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 	/** Deprecated functions */
 	// @codeCoverageIgnoreStart
 	/**

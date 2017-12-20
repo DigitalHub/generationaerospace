@@ -39,7 +39,11 @@ function yoast_add_meta_options_help_center_tabs( $tabs ) {
 	$tabs[] = new WPSEO_Help_Center_Item(
 		'template-variables',
 		__( 'Template explanation', 'wordpress-seo' ),
+<<<<<<< HEAD
 		array( 'content' => wpseo_add_template_variables_helpcenter() )
+=======
+		array( 'content' => add_template_variables_helpcenter() )
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 	);
 
 	return $tabs;
@@ -50,7 +54,11 @@ function yoast_add_meta_options_help_center_tabs( $tabs ) {
  *
  * @return string The content for the template variables tab.
  */
+<<<<<<< HEAD
 function wpseo_add_template_variables_helpcenter() {
+=======
+function add_template_variables_helpcenter() {
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 	$explanation = sprintf(
 		/* translators: %1$s expands to Yoast SEO. */
 		__( 'The title &amp; metas settings for %1$s are made up of variables that are replaced by specific values from the page when the page is displayed. The table below contains a list of the available variables.', 'wordpress-seo' ),

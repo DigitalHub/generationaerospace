@@ -48,6 +48,7 @@ Yoast_Form::get_instance()->admin_header( true, $active_tab->get_opt_group() );
 
 echo '<h2 class="nav-tab-wrapper">';
 foreach ( $tabs->get_tabs() as $tab ) {
+<<<<<<< HEAD
 	printf(
 		'<a class="nav-tab %1$s" id="%2$s" href="%3$s">%4$s</a>',
 		( $tabs->is_active_tab( $tab ) ? 'nav-tab-active' : '' ),
@@ -55,6 +56,10 @@ foreach ( $tabs->get_tabs() as $tab ) {
 		esc_url( admin_url( 'admin.php?page=wpseo_advanced&tab=' . $tab->get_name() ) ),
 		$tab->get_label()
 	);
+=======
+	$active = ( $tabs->is_active_tab( $tab ) ) ? ' nav-tab-active' : '';
+	echo '<a class="nav-tab' . $active . '" id="' . $tab->get_name() . '-tab" href="' . esc_url( admin_url( 'admin.php?page=wpseo_advanced&tab=' . $tab->get_name() ) ) . '">' . $tab->get_label() . '</a>';
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 }
 echo '</h2>';
 

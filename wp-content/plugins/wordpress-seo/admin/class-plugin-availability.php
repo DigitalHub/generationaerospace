@@ -37,7 +37,11 @@ class WPSEO_Plugin_Availability {
 				'installed'    => false,
 				'slug'         => 'wordpress-seo-premium/wp-seo-premium.php',
 				'version_sync' => true,
+<<<<<<< HEAD
 				'premium'      => true,
+=======
+				'premium'       => true,
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 			),
 
 			'video-seo-for-wordpress-seo-by-yoast' => array(
@@ -47,7 +51,11 @@ class WPSEO_Plugin_Availability {
 				'installed'    => false,
 				'slug'         => 'wpseo-video/video-seo.php',
 				'version_sync' => true,
+<<<<<<< HEAD
 				'premium'      => true,
+=======
+				'premium'       => true,
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 			),
 
 			'yoast-news-seo' => array(
@@ -57,7 +65,11 @@ class WPSEO_Plugin_Availability {
 				'installed'    => false,
 				'slug'         => 'wpseo-news/wpseo-news.php',
 				'version_sync' => true,
+<<<<<<< HEAD
 				'premium'      => true,
+=======
+				'premium'       => true,
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 			),
 
 			'local-seo-for-yoast-seo' => array(
@@ -67,7 +79,11 @@ class WPSEO_Plugin_Availability {
 				'installed'    => false,
 				'slug'         => 'wordpress-seo-local/local-seo.php',
 				'version_sync' => true,
+<<<<<<< HEAD
 				'premium'      => true,
+=======
+				'premium'       => true,
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 			),
 
 			'yoast-woocommerce-seo' => array(

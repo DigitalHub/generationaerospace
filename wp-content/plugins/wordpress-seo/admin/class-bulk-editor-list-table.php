@@ -418,6 +418,7 @@ class WPSEO_Bulk_List_Table extends WP_List_Table {
 					'<label for="%1$s" class="screen-reader-text">%2$s</label>',
 					esc_attr( 'post-type-filter-' . $instance_type ),
 					esc_html__( 'Filter by post type', 'wordpress-seo' )
+<<<<<<< HEAD
 				);
 				printf(
 					'<select name="post_type_filter" id="%2$s">%1$s</select>',
@@ -425,6 +426,10 @@ class WPSEO_Bulk_List_Table extends WP_List_Table {
 					esc_attr( 'post-type-filter-' . $instance_type )
 				);
 
+=======
+				);
+				printf( '<select name="post_type_filter" id="post-type-filter-%2$s">%1$s</select>', $options, $instance_type );
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 				submit_button( __( 'Filter', 'wordpress-seo' ), 'button', false, false, array( 'id' => 'post-query-submit' ) );
 				echo '</div>';
 			}

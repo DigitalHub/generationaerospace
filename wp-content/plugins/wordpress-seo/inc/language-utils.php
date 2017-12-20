@@ -51,7 +51,11 @@ class WPSEO_Language_Utils {
 	 * @return string The language name.
 	 */
 	public static function get_site_language_name() {
+<<<<<<< HEAD
 		require_once ABSPATH . 'wp-admin/includes/translation-install.php';
+=======
+		require_once( ABSPATH . 'wp-admin/includes/translation-install.php' );
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 
 		$translations = wp_get_available_translations();
 		$locale       = get_locale();

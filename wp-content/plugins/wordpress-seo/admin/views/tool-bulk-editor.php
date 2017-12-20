@@ -32,7 +32,11 @@ if ( ! empty( $_REQUEST['_wp_http_referer'] ) ) {
 /**
  * Outputs a help center.
  */
+<<<<<<< HEAD
 function wpseo_render_help_center() {
+=======
+function render_help_center() {
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 	$tabs = new WPSEO_Option_Tabs( '', '' );
 	$tabs->add_tab( new WPSEO_Option_Tab( 'title', __( 'Bulk editor', 'wordpress-seo' ),
 		array( 'video_url' => WPSEO_Shortlinker::get( 'https://yoa.st/screencast-tools-bulk-editor' ) ) ) );
@@ -79,10 +83,18 @@ function wpseo_get_rendered_tab( $table, $id ) {
 			href="#top#description"><?php esc_html_e( 'Description', 'wordpress-seo' ); ?></a>
 	</h2>
 
+<<<<<<< HEAD
 	<?php wpseo_render_help_center(); ?>
 
 	<div class="tabwrapper">
 		<?php wpseo_get_rendered_tab( $wpseo_bulk_titles_table, 'title' ); ?>
 		<?php wpseo_get_rendered_tab( $wpseo_bulk_description_table, 'description' ); ?>
+=======
+	<?php render_help_center(); ?>
+
+	<div class="tabwrapper">
+		<?php get_rendered_tab( $wpseo_bulk_titles_table, 'title' ); ?>
+		<?php get_rendered_tab( $wpseo_bulk_description_table, 'description' ); ?>
+>>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 	</div>
 </div>
