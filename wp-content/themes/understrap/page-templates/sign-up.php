@@ -7,9 +7,6 @@
  * @package understrap
  */
 
-get_header();
-$container = get_theme_mod( 'understrap_container_type' );
-
 //response generation function
 global $wpdb;
 $response = "";
@@ -28,9 +25,9 @@ $password_invalid= "Please fill in a valid password. Password must be between 6-
 $username_taken  = "Username is already taken. Try another username.";
 
 //user posted variables
-$email = strip_tags($_POST['signup_email']);
-$username = strip_tags($_POST['signup_username']);
-$password = md5(strip_tags($_POST['signup_password']));
+$email = $wpdb->escape($_POST['signup_email']);
+$username = $wpdb->escape($_POST['signup_username']);
+$password = $wpdb->escape($_POST['signup_password']);
 
 //validate empty content
 if ($_POST['signup_submit']) {
@@ -53,17 +50,23 @@ if ($_POST['signup_submit']) {
 				if(count($check_users) > 0) {
 					my_contact_form_generate_response("error", $username_taken);
 				} else {
-					$wpdb->query($wpdb->prepare("INSERT INTO $table (username,email,password) VALUES (%s,%s,%s)", array($username,$email,$password)));
-					$get_id_sql = $wpdb->prepare("SELECT id FROM $table WHERE username=%s",$username);
-					$results = $wpdb->get_results($get_id_sql);
-					$id = $results[0]->id;
-					// TODO: add to cookies
+					$password_hashed = wp_hash_password($password);
+					$wpdb->query($wpdb->prepare("INSERT INTO $table (username,email,password) VALUES (%s,%s,%s)", array($username,$email,$password_hashed)));
+					
+					session_start();
+					$_SESSION['username'] = $username;
+					wp_redirect( 'member-dashboard', 301 );
+					exit; 
+
 					// TODO: facebook login
 				}			
 			}
 		}
 	}				
 }
+
+get_header();
+$container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
