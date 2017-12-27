@@ -4,6 +4,7 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"mar",
 				"margin-bottom"
 			],
@@ -38,6 +39,10 @@
 			[
 				"po",
 				"pos:a\tposition:absolute"
+=======
+				"wp_",
+				"wp_enqueue_style"
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 			],
 			[
 				"loca",
@@ -276,15 +281,23 @@
 	"buffers":
 	[
 		{
+<<<<<<< HEAD
 			"file": "wp-content/themes/understrap/page-homepage.php",
 			"settings":
 			{
 				"buffer_size": 319,
+=======
+			"file": "wp-content/themes/understrap/js/main.js",
+			"settings":
+			{
+				"buffer_size": 61,
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"contents": "<?php\n/**\n * Template Name: Page Homepage\n *\n * This is the template that displays all pages by default.\n * Please note that this is the WordPress construct of pages\n * and that other 'pages' on your WordPress site will use a\n * different template.\n *\n * @package understrap\n */\n\nget_header(); ?>\n<!-- <div class=\"hexagon\"></div> -->\n<div class=\"wrapper\" id=\"page-wrapper\">\n\t<main id=\"main\" class=\"site-main container\" role=\"main\">\n\t\t<div class=\"HudOverlay\">\n\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\n\t\t\t\t<defs>\n\t\t\t\t\t<filter id=\"blurlayer\" width=\"110%\" height=\"120%\">\n\t\t\t\t\t\t<feGaussianBlur  stdDeviation=\"4\" result=\"blur\"/>\n\t\t\t\t\t</filter>\n\t\t\t\t</defs>\n\t\t\t\t<g> \n\t\t\t\t\t<path d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\n\t\t\t\t\t<path filter=\"url(#blurlayer)\" d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t</g> \n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"640.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"641.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t<!-- <polygon points=\"144 247,172 263,572 267,585 243,568 223,168 223\"></polygon> -->\n\t\t\t</svg>\n\t\t</div> <!-- stroke=\"#ff0\" stroke-width=\"10\" -->\n\n\t\t<?php while(have_posts()) : the_post(); the_content(); endwhile;?>\n\t\t<div class=\"headerbutt login_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>LOGIN</span>\n\t\t</div>\n\t\t<div class=\"headerbutt scroll_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>scroll</span>\n\t\t</div>\n\t\t<div class=\"headerbutt close_butt\">\n\t\t\t<i class=\"fal\"></i>\n\t\t\t<span>Close</span>\n\t\t</div>\n\n\n\t\t<div class=\"double_arrow small_arrow arrow_up\"></div>\n\t\t<div class=\"double_arrow small_arrow arrow_down\"></div>\n\n\n\t\t<div class=\"double_arrow big_arrow arrow_left\"></div>\n\t\t<div class=\"double_arrow big_arrow arrow_right\"></div>\n\n\n\t\t<div class=\"headerbutt menu_butt\">\n\t\t\t<a href=\"#\" class=\"bt-menu\">\n\t\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t\t</svg>\n\t\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<span>Menu</span>\n\t\t\t</a>\n\t\t</div>\n\n\t\t<button class=\"arrowbtn btn--default\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>More Details</span></div>\n\t\t</button>\n\n\t\t<button class=\"arrowbtn btn--color\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\n\t\t<button class=\"defaultbtn btn--color\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<button class=\"defaultbtn btn--default\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<div class=\"clear\"></div><br><br>\t\n\t\t<input type=\"text\">\n\t\t<form action=\"\">\n\t\t\t<input type=\"text\">\n\t\t\t<input type=\"button\" class=\"search\">\n\t\t</form>\n\t</div>\n\n</main><!-- #main -->\n</div><!-- #primary -->\n\n<?php get_footer(); ?>",
 			"settings":
 			{
@@ -306,19 +319,33 @@
 			"settings":
 			{
 				"buffer_size": 714,
+=======
+			"file": "wp-content/themes/understrap/page-templates/sign-up.php",
+			"settings":
+			{
+				"buffer_size": 3344,
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
 			"settings":
 			{
 				"buffer_size": 4532,
+=======
+			"file": "/C/Users/Stefanie/Desktop/genaero_members.sql",
+			"settings":
+			{
+				"buffer_size": 1769,
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 				"line_ending": "Unix"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"contents": "<html>\n<head>\n\t<title>Transistion</title>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/style/jquery.fullPage.css\" />\n\t<link rel=\"stylesheet\" href=\"assets/style/style.css\">\n</head>\n<body>\n\t<menu id=\"menu-content\" class=\"menu-content\">\n\t\t<a href=\"#\" class=\"menubuttonclose closehere\">close</a>\n\t\t<div class=\"menu-content__wrapper\">\n\t\t\t<nav class=\"menu-content__nav\">\n\t\t\t\t<div class=\"menu-content__nav--label\">menu</div>\n\t\t\t\t<div class=\"corner corner-top-left\"></div>\n\t\t\t\t<div class=\"corner corner-top-right\"></div>\n\t\t\t\t<div class=\"corner corner-bottom-left\"></div>\n\t\t\t\t<div class=\"corner corner-bottom-right\"></div>\n\t\t\t\t<img src=\"assets/images/menu-content.png\" class=\"fakemenu\">\n\t\t\t</nav>\n\t\t</div>\n\t</menu>\n\t<div id=\"fullpage\">\n\t\t<div class=\"section\" id=\"section0\">\n\t\t\t<div class=\"bg mainbg\">\n\t\t\t\t<svg class=\"lines\">\n\t\t\t\t\t<line x1=\"220\" x2=\"220\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.5;0\" dur=\"10s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"500\" x2=\"500\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.2;0;0\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"550\" x2=\"550\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.4;0\" dur=\"30s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"1200\" x2=\"1200\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.4;0;1.3\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t</svg>\n\n\t\t\t\t<svg class=\"circlerotate\" viewBox=\"0 0 1200 1200\">\n\t\t\t\t\t<g transform=\"translate(600, 600)\"> \n\t\t\t\t\t\t<circle cx=\"0\" cy=\"0\" r=\"600\">\n\t\t\t\t\t\t\t<animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0\" to=\"360\" begin=\"0\" dur=\"500s\" repeatCount=\"indefinite\" />\n\t\t\t\t\t\t</circle>\n\t\t\t\t\t</g>\n\t\t\t\t</svg> \n\n\t\t\t\t<div class=\"HudOverlay HudOverlay--desktop u-fullParent\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\t\t\t\t\t\t<defs> \n\t\t\t\t\t\t\t<mask id=\"mask\">\n\t\t\t\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\"></rect> <rect class=\"logo-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"65\" height=\"65\" transform=\"scale(1.3,0.4) translate(52.525001525878906,-6.174999237060547)\"></rect> \n\t\t\t\t\t\t\t\t<rect class=\"flock-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(1,0.2) translate(1374,407.8374938964844)\"></rect>\n\t\t\t\t\t\t\t\t<rect class=\"berserk-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,0.3) translate(1188.4000244140625,-30)\"></rect> <rect class=\"title-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"560\" height=\"80\" transform=\"scale(1,0.2) translate(426,-28)\"></rect> \n\t\t\t\t\t\t\t</mask> \n\t\t\t\t\t\t</defs> \n\t\t\t\t\t\t<g mask=\"url(#mask)\"> \n\t\t\t\t\t\t\t<path d=\"M1287.9,818.3c5.5,0,9.5-4.5,10-10c9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9c0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\t\t\tl13.8-19.8c-2.6-195.5-17.4-310-17.4-310c0-5.5-4.5-10-10-10c0,0-630-40-1260,0c-5.5,0.3-10,4.5-10,10c0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\t\t\tl13.4,20.3c-1,42.6-1.2,82.7-0.8,120L1.2,498.2c2,92.6,7,196.7,16.7,310.1c0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t\t\t</g> \n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"274.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"1041.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"fakecontent mainbg\">\n\t\t\t\t\t<ul id=\"menu\">\n\t\t\t\t\t\t<li class=\"firstPage\" data-menuanchor=\"firstPage\" class=\"active\"><a href=\"#firstPage\">.</a></li>\n\t\t\t\t\t\t<li class=\"secondPage\" data-menuanchor=\"secondPage\"><a href=\"#secondPage\">.</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<img src=\"assets/images/butt-login.png\" class=\"button-login\" alt=\"\">\n\t\t\t\t\t<div class=\"mainlogo\">\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--left\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--right\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<img src=\"assets/images/logo.png\" class=\"main-logo\" alt=\"\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<a href=\"#\" class=\"menubutton\">menu</a>\n\t\t\t</div> \n\t\t</div>\n\n\t\t<div class=\"section\" id=\"section1\">\n\t\t\t<div class=\"bg twobg\">\n\t\t\t\t<svg class=\"lines\">\n\t\t\t\t\t<line x1=\"220\" x2=\"220\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.5;0\" dur=\"10s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"500\" x2=\"500\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.2;0;0\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"550\" x2=\"550\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.4;0\" dur=\"30s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"1200\" x2=\"1200\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.4;0;1.3\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t</svg>\n\n\t\t\t\t<svg class=\"circlerotate\"  viewBox=\"0 0 1200 1200\">\n\t\t\t\t\t<g transform=\"translate(600, 600)\"> \n\t\t\t\t\t\t<circle cx=\"0\" cy=\"0\" r=\"600\">\n\t\t\t\t\t\t\t<animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0\" to=\"360\" begin=\"0\" dur=\"500s\" repeatCount=\"indefinite\" />\n\t\t\t\t\t\t</circle>\n\t\t\t\t\t</g>\n\t\t\t\t</svg> \n\t\t\t\t<div class=\"HudOverlay HudOverlay--desktop u-fullParent\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\t\t\t\t\t\t<defs> \n\t\t\t\t\t\t\t<mask id=\"mask\">\n\t\t\t\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\"></rect> <rect class=\"logo-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"185\" height=\"65\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(52.525001525878906,-6.174999237060547)\"></rect> \n\n\t\t\t\t\t\t\t\t<rect class=\"search-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(1365,35.599998474121094)\"></rect> \n\n\t\t\t\t\t\t\t\t<rect class=\"berserk-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(1188.4000244140625,-30)\"></rect> <rect class=\"title-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"560\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(426,-28)\"></rect> \n\t\t\t\t\t\t\t</mask> \n\t\t\t\t\t\t</defs> \n\t\t\t\t\t\t<g mask=\"url(#mask)\"> \n\t\t\t\t\t\t\t<path d=\"M1287.9,818.3c5.5,0,9.5-4.5,10-10c9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9c0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\t\t\tl13.8-19.8c-2.6-195.5-17.4-310-17.4-310c0-5.5-4.5-10-10-10c0,0-630-40-1260,0c-5.5,0.3-10,4.5-10,10c0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\t\t\tl13.4,20.3c-1,42.6-1.2,82.7-0.8,120L1.2,498.2c2,92.6,7,196.7,16.7,310.1c0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t\t\t</g> \n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"274.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"1041.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t\t\t<filter id=\"blur-effect-1\">\n\t\t\t\t\t\t\t<feGaussianBlur stdDeviation=\"2\" />\n\t\t\t\t\t\t</filter>\n\t\t\t\t\t</svg>\n\n\t\t\t\t</div>\n\t\t\t\t<div class=\"fakecontent twobg\">\n\t\t\t\t\t<img src=\"assets/images/butt-login.png\" class=\"button-login\" alt=\"\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"mainlogo\">\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--left\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--right\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<img src=\"assets/images/logo.png\" class=\"main-logo\" alt=\"\">\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"positionbutton\">\n\t\t\t\t\t\t<a class=\"button\"><span class=\"moving\">&rarr;</span>Click Me</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t</div> \n\t\t\t<a href=\"#\" class=\"menubutton\">menu</a>\n\t\t</div>\n\n\t</div>\n\n\t<script type=\"text/javascript\" src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js'></script> \n\t<script src=\"https://code.jquery.com/jquery-3.2.0.min.js\"></script> \n\t<script type=\"text/javascript\" src=\"assets/js/jquery.fullpage.min.js\"></script>\n\t<script type=\"text/javascript\" src=\"assets/js/scrolloverflow.js\"></script>\n\t<script type=\"text/javascript\" src=\"assets/js/main.js\"></script>\n</body>\n</html>",
 			"file": "/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/index.html",
 			"file_size": 10256,
@@ -326,11 +353,18 @@
 			"settings":
 			{
 				"buffer_size": 10077,
+=======
+			"file": "wp-content/themes/understrap/functions.php",
+			"settings":
+			{
+				"buffer_size": 1526,
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
 			"settings":
 			{
@@ -364,6 +398,16 @@
 				"buffer_size": 594,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+=======
+			"contents": "<?php\n\n//create database for members\nregister_activation_hook( __FILE__, 'create_members_db' );\nfunction create_members_db() {\n\t// Create DB Here\n\n\tglobal $wpdb;\n  \t$version = get_option( 'my_plugin_version', '1.0' );\n\t$charset_collate = $wpdb->get_charset_collate();\n\t$table_name = $wpdb->prefix . 'my_analysis';\n\n\t$sql = \"CREATE TABLE $table_name (\n\t\tid mediumint(9) NOT NULL AUTO_INCREMENT,\n\t\ttime datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,\n\t\tviews smallint(5) NOT NULL,\n\t\tclicks smallint(5) NOT NULL,\n\t\tUNIQUE KEY id (id)\n\t) $charset_collate;\";\n\n\trequire_once( ABSPATH . 'wp-admin/includes/upgrade.php' );\n\tdbDelta( $sql );\n\t\n\tif ( version_compare( $version, '2.0' ) < 0 ) {\n\t\t$sql = \"CREATE TABLE $table_name (\n\t\t  id mediumint(9) NOT NULL AUTO_INCREMENT,\n\t\t  time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,\n\t\t  views smallint(5) NOT NULL,\n\t\t  clicks smallint(5) NOT NULL,\n\t\t  blog_id smallint(5) NOT NULL,\n\t\t  UNIQUE KEY id (id)\n\t\t) $charset_collate;\";\n\t\tdbDelta( $sql );\n\t\n\t  \tupdate_option( 'my_plugin_version', '2.0' );\n\t\t\n\t}\n}\n\n?>",
+			"file": "wp-content/themes/understrap/inc/custom-genaero.php",
+			"file_size": 0,
+			"file_write_time": 131584020864241602,
+			"settings":
+			{
+				"buffer_size": 1052,
+				"line_ending": "Windows"
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 			}
 		}
 	],
@@ -374,10 +418,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "todo",
+		"height": 269.0,
+		"last_filter": "java",
 		"selected_items":
 		[
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"todo",
 				"TodoReview: Project Files"
@@ -428,6 +476,7 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/C/wamp64/www/generationaerospace",
 		"/C/wamp64/www/generationaerospace/wp-content",
 		"/C/wamp64/www/generationaerospace/wp-content/themes",
@@ -524,6 +573,36 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/woocommerce.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_carousel.scss",
 		"/C/wamp64/www/generationaerospace/wp-config.php",
+=======
+		"/C/xampp/htdocs/generationaerospace",
+		"/C/xampp/htdocs/generationaerospace/wp-content",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates"
+	],
+	"file_history":
+	[
+		"/C/Users/Stefanie/Desktop/contact-form/page-contact-us.php",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/header.php",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/basic/js/main.js",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/js/main.js",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/enqueue.php",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/js/theme.js",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/functions.php",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page.php",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/content-page.php",
+		"/C/xampp/php/php.ini",
+		"/C/xampp/htdocs/generationaerospace/.gitignore",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/global-templates/left-sidebar-check.php",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/theme-settings.php",
+		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/customizer.php",
+		"/C/xampp/htdocs/generationaerospace/wp-includes/theme.php",
+		"/C/xampp/htdocs/generationaerospace/database/20171220-generationaerospace.sql",
+		"/C/Users/Stefanie/Desktop/.htaccess",
+		"/C/xampp/htdocs/generationaerospace/test.txt",
+		"/C/xampp/htdocs/generationaerospace/wp-config.php",
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-expect.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_posts-and-pages.scss",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-homes.php",
@@ -567,18 +646,95 @@
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-agegroup.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_visit.scss",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-believe.php",
+<<<<<<< HEAD
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-homepage-location.php"
 	],
 	"find":
 	{
 		"height": 52.0
+=======
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-homepage-location.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_headings.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-featured-stories.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_copy.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/searchform.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/style.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_site.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/search.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/twentyseventeen/search.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/single.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_typography.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/LICENSE",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/navigation/navigation-top.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/site-branding.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/site-branding-orange.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/style.css",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-calendar.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/navigation/_menus.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-history.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/elements/_elements.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-featured-stories.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/404.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/variables-site/_typography.scss",
+		"/C/xampp/htdocs/actschurch/wp-admin/css/nav-menus-rtl.css",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/media/_media.scss",
+		"/C/Users/Stefanie/Desktop/acts church/bootstrap.css",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/.sass-cache/39f88e636cc84a4b3e94f95de89fb40d5463ab5b/_header-and-footer.scssc",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-videos.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/archive.php",
+		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config.php",
+		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config 2.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/forms/_buttons.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-page.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/elements/_lists.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/grid/_grid.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/navigation/_links.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_comments.scss",
+		"/C/xampp/htdocs/actschurch/wp-config.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_header.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/secondary/_widgets.scss",
+		"/C/xampp/htdocs/screenastronauts/wp-content/themes/basictheme/sass/navigation/_menus.scss",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/config.rb",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/comments.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/custom-header.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/customizer.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/extras.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/jetpack.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/template-tags.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/index.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/layouts/content-sidebar.css",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/layouts/sidebar-content.css",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/readme.txt",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/rtl.css",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sidebar.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-none.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-search.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/footer/footer-widgets.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/footer/site-info.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-front-page-panels.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-front-page.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-page.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-audio.php",
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-excerpt.php"
+	],
+	"find":
+	{
+		"height": 41.0
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 	},
 	"find_in_files":
 	{
 		"height": 134.0,
 		"where_history":
 		[
+<<<<<<< HEAD
 			"C:\\wamp64\\www\\generationaerospace\\wp-content\\themes\\understrap",
+=======
+			"<open folders>",
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 			"C:\\xampp\\htdocs\\actschurch\\wp-content\\themes\\actschurch",
 			"<open folders>",
 			"",
@@ -592,6 +748,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"images",
 			"$",
 			"mask",
@@ -663,6 +820,22 @@
 			"headings",
 			"wrapper",
 			"theme",
+=======
+			"my_plugin_create_db",
+			"required",
+			"message",
+			" autocomplete=\"off\"",
+			"placeholder",
+			"}",
+			"{",
+			";",
+			"email",
+			"upload_max",
+			"understrap_sidebar_position",
+			"understrap_container_type",
+			"function get_theme_mod",
+			"get_theme_mod",
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 			"4",
 			"slider",
 			"featured-events-slider",
@@ -719,7 +892,68 @@
 			"featured-story",
 			"}\n",
 			"read-more",
+<<<<<<< HEAD
 			".read-more"
+=======
+			".read-more",
+			"blue",
+			"h4",
+			"h2",
+			"4",
+			"watch",
+			"h2",
+			"row",
+			"9",
+			"3",
+			"12",
+			"6",
+			"50px",
+			"6",
+			"3",
+			"src",
+			"fancybox",
+			"fancybox href",
+			"6",
+			"small_groups_picture",
+			"grid-half",
+			"grid-box",
+			"col-lg-3 col-md-3",
+			"col-lg-3",
+			"contain",
+			"grid-box ",
+			" grid-box-small ",
+			"cover",
+			"grid-box",
+			" col-lg-3 col-md-3",
+			"col-lg-3",
+			"col-lg-6",
+			"background-size",
+			"cover",
+			"contain",
+			"contact",
+			"h3",
+			"$color__white;",
+			"a {",
+			"local",
+			"marker",
+			"lat",
+			"showLocation",
+			"prefix_ajax_",
+			"wp_ajax",
+			"_process",
+			"longitude",
+			"latitude",
+			"story_form",
+			"location",
+			"60px",
+			"3.75em",
+			"6",
+			"5",
+			"google_maps_link",
+			"local",
+			"'slow'",
+			"<?=$name?>"
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -745,19 +979,32 @@
 			[
 				{
 					"buffer": 0,
+<<<<<<< HEAD
 					"file": "wp-content/themes/understrap/page-homepage.php",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 319,
+=======
+					"file": "wp-content/themes/understrap/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 61,
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								296,
 								296
+=======
+								61,
+								61
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 							]
 						],
 						"settings":
@@ -813,6 +1060,7 @@
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								1047,
 								1047
 							]
@@ -824,34 +1072,958 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 165.0,
+=======
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
+<<<<<<< HEAD
 					"buffer": 3,
 					"file": "wp-content/themes/understrap/page-templates/navigation-top.php",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 714,
+=======
+					"buffer": 1,
+					"file": "wp-content/themes/understrap/page-templates/sign-up.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3344,
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
+						"regions":
+						{
+						},
+						"selection":
+						[
+<<<<<<< HEAD
+							[
+								689,
+								689
+=======
+							[
+								1576,
+								1576
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										590,
+										591
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										556,
+										557
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Stefanie/Desktop/genaero_members.sql",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1769,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								689,
-								689
+								0,
+								0
 							]
 						],
 						"settings":
 						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"syntax": "Packages/SQL/SQL.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/understrap/functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1518,
+								1518
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1522,
+										1523
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/single_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1498,
+										1499
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1151.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/understrap/inc/custom-genaero.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1052,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								311
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+=======
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										311,
+										312
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/single_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										299,
+										300
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"open_with_edit": true,
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+<<<<<<< HEAD
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -974,6 +2146,8 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 3121.0,
+=======
+>>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1101,6 +2275,14 @@
 		"selected_items":
 		[
 			[
+				"main.js",
+				"wp-content\\themes\\basic\\js\\main.js"
+			],
+			[
+				"functions",
+				"wp-content\\themes\\understrap\\functions.php"
+			],
+			[
 				"_posts",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_posts-and-pages.scss"
 			],
@@ -1109,20 +2291,12 @@
 				"wp-content\\themes\\actschurch\\header.php"
 			],
 			[
-				"main.js",
-				"wp-content\\themes\\actschurch\\js\\main.js"
-			],
-			[
 				"_connect",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_connect.scss"
 			],
 			[
 				"leader",
 				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
-			],
-			[
-				"functions",
-				"wp-content\\themes\\actschurch\\functions.php"
 			],
 			[
 				"home",
