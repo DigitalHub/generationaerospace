@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"pos",
+				"pos:r\tposition:relative"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"Ha",
+				"hexagon"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"d",
+				"d:b\tdisplay:block"
+			],
+			[
+				"po",
+				"pos:a\tposition:absolute"
+			],
+			[
 				"loca",
 				"location_name"
 			],
@@ -136,14 +172,6 @@
 				"organisation_logo"
 			],
 			[
-				"pos",
-				"pos:a\tposition:absolute"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
 				"marin",
 				"margin-bottom"
 			],
@@ -248,12 +276,94 @@
 	"buffers":
 	[
 		{
-			"file": "wp-config.php",
+			"file": "wp-content/themes/understrap/page-homepage.php",
 			"settings":
 			{
-				"buffer_size": 3042,
+				"buffer_size": 319,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n/**\n * Template Name: Page Homepage\n *\n * This is the template that displays all pages by default.\n * Please note that this is the WordPress construct of pages\n * and that other 'pages' on your WordPress site will use a\n * different template.\n *\n * @package understrap\n */\n\nget_header(); ?>\n<!-- <div class=\"hexagon\"></div> -->\n<div class=\"wrapper\" id=\"page-wrapper\">\n\t<main id=\"main\" class=\"site-main container\" role=\"main\">\n\t\t<div class=\"HudOverlay\">\n\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\n\t\t\t\t<defs>\n\t\t\t\t\t<filter id=\"blurlayer\" width=\"110%\" height=\"120%\">\n\t\t\t\t\t\t<feGaussianBlur  stdDeviation=\"4\" result=\"blur\"/>\n\t\t\t\t\t</filter>\n\t\t\t\t</defs>\n\t\t\t\t<g> \n\t\t\t\t\t<path d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\n\t\t\t\t\t<path filter=\"url(#blurlayer)\" d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t</g> \n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"640.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"641.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t<!-- <polygon points=\"144 247,172 263,572 267,585 243,568 223,168 223\"></polygon> -->\n\t\t\t</svg>\n\t\t</div> <!-- stroke=\"#ff0\" stroke-width=\"10\" -->\n\n\t\t<?php while(have_posts()) : the_post(); the_content(); endwhile;?>\n\t\t<div class=\"headerbutt login_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>LOGIN</span>\n\t\t</div>\n\t\t<div class=\"headerbutt scroll_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>scroll</span>\n\t\t</div>\n\t\t<div class=\"headerbutt close_butt\">\n\t\t\t<i class=\"fal\"></i>\n\t\t\t<span>Close</span>\n\t\t</div>\n\n\n\t\t<div class=\"double_arrow small_arrow arrow_up\"></div>\n\t\t<div class=\"double_arrow small_arrow arrow_down\"></div>\n\n\n\t\t<div class=\"double_arrow big_arrow arrow_left\"></div>\n\t\t<div class=\"double_arrow big_arrow arrow_right\"></div>\n\n\n\t\t<div class=\"headerbutt menu_butt\">\n\t\t\t<a href=\"#\" class=\"bt-menu\">\n\t\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t\t</svg>\n\t\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<span>Menu</span>\n\t\t\t</a>\n\t\t</div>\n\n\t\t<button class=\"arrowbtn btn--default\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>More Details</span></div>\n\t\t</button>\n\n\t\t<button class=\"arrowbtn btn--color\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\n\t\t<button class=\"defaultbtn btn--color\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<button class=\"defaultbtn btn--default\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<div class=\"clear\"></div><br><br>\t\n\t\t<input type=\"text\">\n\t\t<form action=\"\">\n\t\t\t<input type=\"text\">\n\t\t\t<input type=\"button\" class=\"search\">\n\t\t</form>\n\t</div>\n\n</main><!-- #main -->\n</div><!-- #primary -->\n\n<?php get_footer(); ?>",
+			"settings":
+			{
+				"buffer_size": 5675,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/header.php",
+			"settings":
+			{
+				"buffer_size": 1055,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/page-templates/navigation-top.php",
+			"settings":
+			{
+				"buffer_size": 714,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
+			"settings":
+			{
+				"buffer_size": 4532,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<html>\n<head>\n\t<title>Transistion</title>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/style/jquery.fullPage.css\" />\n\t<link rel=\"stylesheet\" href=\"assets/style/style.css\">\n</head>\n<body>\n\t<menu id=\"menu-content\" class=\"menu-content\">\n\t\t<a href=\"#\" class=\"menubuttonclose closehere\">close</a>\n\t\t<div class=\"menu-content__wrapper\">\n\t\t\t<nav class=\"menu-content__nav\">\n\t\t\t\t<div class=\"menu-content__nav--label\">menu</div>\n\t\t\t\t<div class=\"corner corner-top-left\"></div>\n\t\t\t\t<div class=\"corner corner-top-right\"></div>\n\t\t\t\t<div class=\"corner corner-bottom-left\"></div>\n\t\t\t\t<div class=\"corner corner-bottom-right\"></div>\n\t\t\t\t<img src=\"assets/images/menu-content.png\" class=\"fakemenu\">\n\t\t\t</nav>\n\t\t</div>\n\t</menu>\n\t<div id=\"fullpage\">\n\t\t<div class=\"section\" id=\"section0\">\n\t\t\t<div class=\"bg mainbg\">\n\t\t\t\t<svg class=\"lines\">\n\t\t\t\t\t<line x1=\"220\" x2=\"220\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.5;0\" dur=\"10s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"500\" x2=\"500\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.2;0;0\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"550\" x2=\"550\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.4;0\" dur=\"30s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"1200\" x2=\"1200\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.4;0;1.3\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t</svg>\n\n\t\t\t\t<svg class=\"circlerotate\" viewBox=\"0 0 1200 1200\">\n\t\t\t\t\t<g transform=\"translate(600, 600)\"> \n\t\t\t\t\t\t<circle cx=\"0\" cy=\"0\" r=\"600\">\n\t\t\t\t\t\t\t<animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0\" to=\"360\" begin=\"0\" dur=\"500s\" repeatCount=\"indefinite\" />\n\t\t\t\t\t\t</circle>\n\t\t\t\t\t</g>\n\t\t\t\t</svg> \n\n\t\t\t\t<div class=\"HudOverlay HudOverlay--desktop u-fullParent\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\t\t\t\t\t\t<defs> \n\t\t\t\t\t\t\t<mask id=\"mask\">\n\t\t\t\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\"></rect> <rect class=\"logo-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"65\" height=\"65\" transform=\"scale(1.3,0.4) translate(52.525001525878906,-6.174999237060547)\"></rect> \n\t\t\t\t\t\t\t\t<rect class=\"flock-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(1,0.2) translate(1374,407.8374938964844)\"></rect>\n\t\t\t\t\t\t\t\t<rect class=\"berserk-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,0.3) translate(1188.4000244140625,-30)\"></rect> <rect class=\"title-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"560\" height=\"80\" transform=\"scale(1,0.2) translate(426,-28)\"></rect> \n\t\t\t\t\t\t\t</mask> \n\t\t\t\t\t\t</defs> \n\t\t\t\t\t\t<g mask=\"url(#mask)\"> \n\t\t\t\t\t\t\t<path d=\"M1287.9,818.3c5.5,0,9.5-4.5,10-10c9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9c0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\t\t\tl13.8-19.8c-2.6-195.5-17.4-310-17.4-310c0-5.5-4.5-10-10-10c0,0-630-40-1260,0c-5.5,0.3-10,4.5-10,10c0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\t\t\tl13.4,20.3c-1,42.6-1.2,82.7-0.8,120L1.2,498.2c2,92.6,7,196.7,16.7,310.1c0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t\t\t</g> \n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"274.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"1041.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"fakecontent mainbg\">\n\t\t\t\t\t<ul id=\"menu\">\n\t\t\t\t\t\t<li class=\"firstPage\" data-menuanchor=\"firstPage\" class=\"active\"><a href=\"#firstPage\">.</a></li>\n\t\t\t\t\t\t<li class=\"secondPage\" data-menuanchor=\"secondPage\"><a href=\"#secondPage\">.</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<img src=\"assets/images/butt-login.png\" class=\"button-login\" alt=\"\">\n\t\t\t\t\t<div class=\"mainlogo\">\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--left\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--right\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<img src=\"assets/images/logo.png\" class=\"main-logo\" alt=\"\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<a href=\"#\" class=\"menubutton\">menu</a>\n\t\t\t</div> \n\t\t</div>\n\n\t\t<div class=\"section\" id=\"section1\">\n\t\t\t<div class=\"bg twobg\">\n\t\t\t\t<svg class=\"lines\">\n\t\t\t\t\t<line x1=\"220\" x2=\"220\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.5;0\" dur=\"10s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"500\" x2=\"500\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.2;0;0\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"550\" x2=\"550\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.4;0\" dur=\"30s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"1200\" x2=\"1200\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.4;0;1.3\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t</svg>\n\n\t\t\t\t<svg class=\"circlerotate\"  viewBox=\"0 0 1200 1200\">\n\t\t\t\t\t<g transform=\"translate(600, 600)\"> \n\t\t\t\t\t\t<circle cx=\"0\" cy=\"0\" r=\"600\">\n\t\t\t\t\t\t\t<animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0\" to=\"360\" begin=\"0\" dur=\"500s\" repeatCount=\"indefinite\" />\n\t\t\t\t\t\t</circle>\n\t\t\t\t\t</g>\n\t\t\t\t</svg> \n\t\t\t\t<div class=\"HudOverlay HudOverlay--desktop u-fullParent\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\t\t\t\t\t\t<defs> \n\t\t\t\t\t\t\t<mask id=\"mask\">\n\t\t\t\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\"></rect> <rect class=\"logo-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"185\" height=\"65\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(52.525001525878906,-6.174999237060547)\"></rect> \n\n\t\t\t\t\t\t\t\t<rect class=\"search-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(1365,35.599998474121094)\"></rect> \n\n\t\t\t\t\t\t\t\t<rect class=\"berserk-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(1188.4000244140625,-30)\"></rect> <rect class=\"title-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"560\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(426,-28)\"></rect> \n\t\t\t\t\t\t\t</mask> \n\t\t\t\t\t\t</defs> \n\t\t\t\t\t\t<g mask=\"url(#mask)\"> \n\t\t\t\t\t\t\t<path d=\"M1287.9,818.3c5.5,0,9.5-4.5,10-10c9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9c0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\t\t\tl13.8-19.8c-2.6-195.5-17.4-310-17.4-310c0-5.5-4.5-10-10-10c0,0-630-40-1260,0c-5.5,0.3-10,4.5-10,10c0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\t\t\tl13.4,20.3c-1,42.6-1.2,82.7-0.8,120L1.2,498.2c2,92.6,7,196.7,16.7,310.1c0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t\t\t</g> \n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"274.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"1041.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t\t\t<filter id=\"blur-effect-1\">\n\t\t\t\t\t\t\t<feGaussianBlur stdDeviation=\"2\" />\n\t\t\t\t\t\t</filter>\n\t\t\t\t\t</svg>\n\n\t\t\t\t</div>\n\t\t\t\t<div class=\"fakecontent twobg\">\n\t\t\t\t\t<img src=\"assets/images/butt-login.png\" class=\"button-login\" alt=\"\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"mainlogo\">\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--left\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--right\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<img src=\"assets/images/logo.png\" class=\"main-logo\" alt=\"\">\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"positionbutton\">\n\t\t\t\t\t\t<a class=\"button\"><span class=\"moving\">&rarr;</span>Click Me</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t</div> \n\t\t\t<a href=\"#\" class=\"menubutton\">menu</a>\n\t\t</div>\n\n\t</div>\n\n\t<script type=\"text/javascript\" src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js'></script> \n\t<script src=\"https://code.jquery.com/jquery-3.2.0.min.js\"></script> \n\t<script type=\"text/javascript\" src=\"assets/js/jquery.fullpage.min.js\"></script>\n\t<script type=\"text/javascript\" src=\"assets/js/scrolloverflow.js\"></script>\n\t<script type=\"text/javascript\" src=\"assets/js/main.js\"></script>\n</body>\n</html>",
+			"file": "/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/index.html",
+			"file_size": 10256,
+			"file_write_time": 131587434595516001,
+			"settings":
+			{
+				"buffer_size": 10077,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
+			"settings":
+			{
+				"buffer_size": 6103,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+			"settings":
+			{
+				"buffer_size": 3609,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/js/main.js",
+			"settings":
+			{
+				"buffer_size": 623,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
+			"settings":
+			{
+				"buffer_size": 594,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -318,10 +428,102 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/generationaerospace"
+		"/C/wamp64/www/generationaerospace",
+		"/C/wamp64/www/generationaerospace/wp-content",
+		"/C/wamp64/www/generationaerospace/wp-content/themes",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/assets",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/_header-and-footer.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-branding.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/header.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/main.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
+		"/C/wamp64/www/ajph/wp-content/themes/ajph/js/main.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/enqueue.php",
+		"/C/wamp64/www/genaerospace-old/index.html",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/index.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/footer.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_variables.scss",
+		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/css/fontawesome-all.css",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
+		"/C/wamp64/www/bursamids/wp-content/themes/bursaselects/header.php",
+		"/C/wamp64/www/bursamids/wp-content/themes/bursaselects/template-parts/header/site-branding.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_colors.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/sass/navigation/_links.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_variables.scss",
+		"/C/wamp64/www/acer/wp-content/themes/acer/style.css",
+		"/C/wamp64/www/acer/wp-content/themes/acer/searchform.php",
+		"/C/wamp64/www/acer/wp-content/themes/acer/js/main.js",
+		"/C/wamp64/www/acer/wp-content/themes/acer/template-parts/header/site-branding.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/navigation-top.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/page-homepage.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/404.php",
+		"/C/wamp64/www/acer/wp-content/themes/acer/archive.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/archive-news.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/search.php",
+		"/C/wamp64/www/acer/wp-content/themes/acer/header.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/searchform 2.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/css/custom-editor-style.css",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/fontawesome.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_core.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/assets/font-awesome.scss",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/searchform.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_icons.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/setup.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_mixins.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme_variables.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_bordered-pulled.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss",
+		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/scss/fontawesome.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/template-tags.php",
+		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/scss/fa-light.scss",
+		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/svg-with-js/css/fa-svg-with-js.css",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/core.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/popper.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/popper.min.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/skip-link-focus-fix.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/theme.js",
+		"/C/wamp64/www/genaerospace-old/assets/style/sass/site/_header-and-footer.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_type.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/mixins/_buttons.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_default.scss",
+		"/C/Users/rachelle.quek/Desktop/acer.sql",
+		"/C/wamp64/www/genaerospace-old/assets/style/sass/mixins/_mixins-master.scss",
+		"/C/wamp64/www/acer/wp-content/themes/acer/sidebar.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/index.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/content-listchildcategoryproducts.php",
+		"/C/wamp64/www/acer/wp-content/themes/acer/single.php",
+		"/C/wamp64/www/acer/wp-content/themes/acer/category.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/taxonomy-productssolutions.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page.php",
+		"/C/wamp64/www/acer/database/20171219_acer.sql",
+		"/C/wamp64/www/harihasanah/wp-content/themes/hasanah/single.php",
+		"/C/wamp64/www/harihasanah/wp-content/themes/hasanah/template-parts/post/content.php",
+		"/C/wamp64/www/harihasanah/wp-content/themes/hasanah/single-stories.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_reboot.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/css/theme.css",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/style.css",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_mixins.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/functions.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/bootstrap.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/functions.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/css/theme.min.css",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/custom-comments.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/style-wpcom.css",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/woocommerce.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_carousel.scss",
+		"/C/wamp64/www/generationaerospace/wp-config.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-expect.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_posts-and-pages.scss",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-homes.php",
@@ -365,101 +567,18 @@
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-agegroup.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_visit.scss",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-believe.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-homepage-location.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_headings.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-featured-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_copy.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/searchform.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/style.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_site.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/twentyseventeen/search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/single.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_typography.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/LICENSE",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/navigation/navigation-top.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/site-branding.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/site-branding-orange.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/style.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-calendar.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/navigation/_menus.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-history.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/elements/_elements.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-featured-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/404.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/variables-site/_typography.scss",
-		"/C/xampp/htdocs/actschurch/wp-admin/css/nav-menus-rtl.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/media/_media.scss",
-		"/C/Users/Stefanie/Desktop/acts church/bootstrap.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/.sass-cache/39f88e636cc84a4b3e94f95de89fb40d5463ab5b/_header-and-footer.scssc",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-videos.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/archive.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config 2.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/forms/_buttons.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/elements/_lists.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/grid/_grid.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/navigation/_links.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_comments.scss",
-		"/C/xampp/htdocs/actschurch/wp-config.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_header.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/secondary/_widgets.scss",
-		"/C/xampp/htdocs/screenastronauts/wp-content/themes/basictheme/sass/navigation/_menus.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/config.rb",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/comments.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/custom-header.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/customizer.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/extras.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/jetpack.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/template-tags.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/index.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/layouts/content-sidebar.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/layouts/sidebar-content.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/readme.txt",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/rtl.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sidebar.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-none.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/footer/footer-widgets.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/footer/site-info.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-front-page-panels.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-front-page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-audio.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-excerpt.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-gallery.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-image.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-none.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/js/main.js",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/functions.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/page-actnow.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/template-parts/page/content-initiative.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/footer.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/elements/_elements.scss",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/forms/_forms.scss",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/site/primary/_posts-and-pages.scss",
-		"/C/xampp/htdocs/map-generator/index.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/page.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/site/primary/_actnow.scss",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/site/_site.scss",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/site/primary/_asides.scss",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/site/primary/_actnow.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/header.php",
-		"/C/xampp/htdocs/tamantugu_v2/wp-content/themes/tamantugu/js/main.js"
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-homepage-location.php"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
-		"height": 113.0,
+		"height": 134.0,
 		"where_history":
 		[
+			"C:\\wamp64\\www\\generationaerospace\\wp-content\\themes\\understrap",
 			"C:\\xampp\\htdocs\\actschurch\\wp-content\\themes\\actschurch",
 			"<open folders>",
 			"",
@@ -473,6 +592,77 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"images",
+			"$",
+			"mask",
+			"\"",
+			"2px",
+			"red",
+			"span",
+			"$",
+			"c",
+			"rrlimegreen",
+			"black",
+			"animate_btn",
+			"transform",
+			"icon-left:after",
+			"\t\t.",
+			"right",
+			"left",
+			"right",
+			"{\n",
+			".after",
+			"after",
+			"texthide",
+			"stroke-width=\"2\"",
+			"stroke: 2",
+			"#fff",
+			"\n\t\t",
+			"span",
+			">\n",
+			"cad63e",
+			"color__link",
+			"login",
+			"minus",
+			"100",
+			"}\n",
+			"highlight_post",
+			">>>",
+			"=======",
+			"==",
+			"webfonts",
+			"fontawesome",
+			"0",
+			"hexagon",
+			"130px",
+			"scale",
+			"opacity(",
+			"24px",
+			"5px",
+			"3rem",
+			"welcome",
+			"font-family-base",
+			"headings-color",
+			"color",
+			"333",
+			"bottom",
+			"$spacer",
+			"spacer",
+			"hr-margin-y",
+			"spacer",
+			"print-styles",
+			"enable-print-styles",
+			"$font-size-base",
+			"stylelint",
+			"js",
+			"wrapper",
+			"wrapper\t",
+			"wrapper ",
+			"wrapper",
+			"font-size-base",
+			"headings",
+			"wrapper",
+			"theme",
 			"4",
 			"slider",
 			"featured-events-slider",
@@ -529,78 +719,7 @@
 			"featured-story",
 			"}\n",
 			"read-more",
-			".read-more",
-			"blue",
-			"h4",
-			"h2",
-			"4",
-			"watch",
-			"h2",
-			"row",
-			"9",
-			"3",
-			"12",
-			"6",
-			"50px",
-			"6",
-			"3",
-			"src",
-			"fancybox",
-			"fancybox href",
-			"6",
-			"small_groups_picture",
-			"grid-half",
-			"grid-box",
-			"col-lg-3 col-md-3",
-			"col-lg-3",
-			"contain",
-			"grid-box ",
-			" grid-box-small ",
-			"cover",
-			"grid-box",
-			" col-lg-3 col-md-3",
-			"col-lg-3",
-			"col-lg-6",
-			"background-size",
-			"cover",
-			"contain",
-			"contact",
-			"h3",
-			"$color__white;",
-			"a {",
-			"local",
-			"marker",
-			"lat",
-			"showLocation",
-			"prefix_ajax_",
-			"wp_ajax",
-			"_process",
-			"longitude",
-			"latitude",
-			"story_form",
-			"location",
-			"60px",
-			"3.75em",
-			"6",
-			"5",
-			"google_maps_link",
-			"local",
-			"'slow'",
-			"<?=$name?>",
-			"span",
-			"h4",
-			"'local_locations'",
-			"local_locations",
-			"endif",
-			"name",
-			"3",
-			"&:nth-of-type(",
-			"transform",
-			"featured_video",
-			"featured_sermon",
-			"purple",
-			"stories",
-			"the_permalink"
+			".read-more"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -621,209 +740,302 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "wp-config.php",
+					"file": "wp-content/themes/understrap/page-homepage.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3042,
+						"buffer_size": 319,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								619,
-								619
+								296,
+								296
 							]
 						],
 						"settings":
 						{
-							"auto_complete_triggers":
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5675,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
+								5675,
+								5675
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2212.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/understrap/header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1055,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										619,
-										620
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
-										"region.greenish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										599,
-										600
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
+								1047,
+								1047
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 165.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/understrap/page-templates/navigation-top.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 714,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
-							],
+								689,
+								689
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4532,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2948,
+								2948
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1931.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10077,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								846,
+								846
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6103,
+								6103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7668.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2237,
+								2237
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3121.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "wp-content/themes/understrap/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 623,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								417,
+								417
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								562,
+								562
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -831,7 +1043,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -846,11 +1058,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.441126056477,
 			1.0
 		],
 		"rows":
@@ -872,7 +1091,7 @@
 	"project": "genaero.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 53.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1314,7 +1533,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1322,7 +1541,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 290.0,
+	"side_bar_width": 215.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

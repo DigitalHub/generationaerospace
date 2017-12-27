@@ -1,0 +1,99 @@
+.welcome_content {
+	color: $white;
+	text-align: center;
+
+	.welcome_text {
+		color: $white;
+	}
+}
+
+.chapter-selector {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	@include translateY(-50%);
+
+	li {
+		border-right: 1px solid hsla(0,0%,100%,.5);
+		font-size: 10px;
+		color: $white;
+		cursor: pointer;
+		letter-spacing: 1px;
+		white-space: nowrap;
+		padding-bottom: 12px;
+		padding-right: 12px;
+		pointer-events: auto;
+		position: relative;
+		text-align: right;
+		text-transform: uppercase;
+		transition: color .5s,padding-bottom .5s,padding-top .5s;
+
+		&:before {
+			background-color: $white;
+			border-radius: 50%;
+			content: "";
+			right: -3px;
+			height: 5.5px;
+			margin-top: 3px;
+			position: absolute;
+			@include transition(background-color .5s ease);
+			width: 5.5px;
+		}
+
+		&:after {
+			border: 1px solid $white;
+			border-radius: 50%;
+			content: "";
+			height: 21px;
+			margin-top: -5px;
+			position: absolute;
+			right: -11px;
+			@include opacity(0);
+			@include transition(opacity .5s ease);
+			width: 21px;
+		}
+
+		&:first-child {
+			padding-top: 0;
+
+			&:before {
+				margin-top: 0;
+			}
+
+			&:after {
+				margin-top: -8px;
+			}
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+
+			&:before {
+				margin-top: 8px;
+			}
+			
+			&:after {
+				margin-top: 0;
+			}
+		}
+
+		&:hover {
+			color: $rrlimegreen;
+			padding-top: 60px;
+
+			&:before {
+				background-color: $rrlimegreen;
+			}
+			
+			&:after {
+				@include opacity(1);
+			}
+		}
+
+		&.selected {
+		}
+	}
+}
