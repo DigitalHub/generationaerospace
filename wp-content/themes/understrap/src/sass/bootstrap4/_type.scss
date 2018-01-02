@@ -25,6 +25,17 @@ h6, .h6 { font-size: $h6-font-size; }
   font-weight: $lead-font-weight;
 }
 
+.welcome_text {
+  color: $headings-color;
+  font-size: $welcome-font-size;
+  font-weight: 100;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+.highlight {
+  font-size: $h5-font-size;
+}
+
 // Type display classes
 .display-1 {
   font-size: $display1-size;

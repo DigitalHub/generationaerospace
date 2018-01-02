@@ -12,6 +12,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 	function understrap_scripts() {
 		// Get the theme data.
 		$the_theme = wp_get_theme();
+		wp_enqueue_style( 'font-styles', 'https://fonts.googleapis.com/css?family=Barlow:100,400,600');
 		wp_enqueue_style( 'understrap-styles', get_stylesheet_directory_uri() . '/css/theme.css', array(), $the_theme->get( 'Version' ), false );
 		wp_enqueue_script( 'jquery');
 		wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), true);

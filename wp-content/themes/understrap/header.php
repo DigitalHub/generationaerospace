@@ -39,19 +39,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
+<<<<<<< HEAD
 	<!-- <script>
 		window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '<?=$app_id;?>',
+=======
+
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1675559965844578',
+>>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
 				cookie     : true,
 				xfbml      : true,
 				version    : 'v2.11'
 			});
+<<<<<<< HEAD
 			FB.AppEvents.logPageView();   
 
 			FB.getLoginStatus(function(response) {
 				statusChangeCallback(response);
 			});
+=======
+			
+			FB.AppEvents.logPageView();   
+			
+>>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
 		};
 
 		(function(d, s, id){
@@ -61,6 +75,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			js.src = "https://connect.facebook.net/en_US/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+<<<<<<< HEAD
 	</script> -->
 
 	<div class="hfeed site" id="page">
@@ -118,3 +133,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</nav><!-- .site-navigation -->
 
 			</div><!-- .wrapper-navbar end -->
+=======
+	</script>
+
+	<div class="hfeed site" id="page">
+
+		<div class="hfeed site" id="page">
+			<?php get_template_part( 'page-templates/site', 'title' ); ?>
+			<?php get_template_part( 'page-templates/navigation', 'top' ); ?>
+		</div>
+>>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
