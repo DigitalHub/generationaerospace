@@ -56,7 +56,7 @@ if ($_POST['signup_submit']) {
 					$_SESSION['username'] = $username;
 					wp_redirect( 'member-dashboard', 301 );
 					exit; 
-				}			
+				}
 			}
 		}
 	}				
@@ -79,7 +79,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<!-- TODO: Rach to replace styling here -->
 					<span>New to GenAero?</span>
-					<span>Already Registered?</span>
+					<span><a href="login">Already Registered?</a></span>
 
 					<h1>Sign Up Here</h1>
 

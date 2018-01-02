@@ -9,6 +9,9 @@
 
 get_header();
 
+if(isset($_SESSION["username"])){
+    unset($_SESSION["username"]);
+}
 	// session_destroy();
 
 $container = get_theme_mod( 'understrap_container_type' );

@@ -41,8 +41,7 @@ if ($_POST['login_submit']) {
 			//check password
 			$hashed_password = $results[0]->password;
 			if(wp_check_password($password, $hashed_password)) {
-				session_start();
-				$_SESSION['id'] = $results[0]->id;
+				$_SESSION['username'] = $username;
 				wp_redirect( 'member-dashboard', 301 );
 				exit; 
 			} else {
@@ -71,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<main class="site-main" id="main" role="main">
 
 					<!-- TODO: Rach to replace styling here -->
-					<span>New to GenAero?</span>
+					<span><a href="../sign-up">New to GenAero?</a></span>
 					<span>Already Registered?</span>
 
 					<h1>Login Now</h1>

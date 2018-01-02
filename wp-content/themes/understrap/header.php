@@ -7,20 +7,24 @@
  * @package understrap
  */
 
-if(!isset($_SESSION['username'])) {
-	//not logged in;
+session_start();
+
+if(isset($_SESSION['username'])) {
+	//loggedin actions
 } else {
-	session_start();
-	echo 'session: '.$_SESSION['username'];
+	//not logged in actions
 }
 
-// $facebook = new Facebook\Facebook([
-// 	'app_id' => APP_ID,
-// 	'app_secret' => APP_SECRET,
-// 	'default_graph_version' => 'v2.4',
-// 	'http_client_handler' => 'curl',
-// 	// 'persistent_data_handler' => 'session'
-// ]);
+$facebook = new Facebook\Facebook([
+	'app_id' => APP_ID,
+	'app_secret' => APP_SECRET,
+	'default_graph_version' => 'v2.2',
+	// 'http_client_handler' => 'curl',
+	'persistent_data_handler' => 'session'
+]);
+
+$helper = $fb->getRedirectLoginHelper();
+$_SESSION['FBRLH_state'] = $_REQUEST['state'];
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
@@ -39,44 +43,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
-<<<<<<< HEAD
-	<!-- <script>
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId      : '<?=$app_id;?>',
-=======
-
-	<script>
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId      : '1675559965844578',
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
-				cookie     : true,
-				xfbml      : true,
-				version    : 'v2.11'
-			});
-<<<<<<< HEAD
-			FB.AppEvents.logPageView();   
-
-			FB.getLoginStatus(function(response) {
-				statusChangeCallback(response);
-			});
-=======
-			
-			FB.AppEvents.logPageView();   
-			
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
-		};
-
-		(function(d, s, id){
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
-			js.src = "https://connect.facebook.net/en_US/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-<<<<<<< HEAD
-	</script> -->
 
 	<div class="hfeed site" id="page">
 
@@ -133,13 +99,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</nav><!-- .site-navigation -->
 
 			</div><!-- .wrapper-navbar end -->
-=======
-	</script>
 
-	<div class="hfeed site" id="page">
+			<div class="hfeed site" id="page">
 
-		<div class="hfeed site" id="page">
-			<?php get_template_part( 'page-templates/site', 'title' ); ?>
-			<?php get_template_part( 'page-templates/navigation', 'top' ); ?>
-		</div>
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+				<div class="hfeed site" id="page">
+					<?php get_template_part( 'page-templates/site', 'title' ); ?>
+					<?php get_template_part( 'page-templates/navigation', 'top' ); ?>
+				</div>
