@@ -10,14 +10,16 @@ a {
 		color: $white;
 	}
 	&:focus {
-		outline: 0;
+		outline: none;
 	}
 	&:hover,
 	&:active {
-		outline: 0;
+		outline: none;
 	}
 }
 
+//*******************************************//
+//** Base Buttons Starts **//
 
 .headerbutt {
 	color: $rrlimegreen;
@@ -100,55 +102,55 @@ a {
 }
 
 .menu_butt {
-	.menubutton {
-		display: block;
-		text-decoration: none;
+	display: block;
+	text-decoration: none;
 
-		.inner {
-			width: 22px;
-			height: 18px;
+	.inner {
+		width: 22px;
+		height: 18px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+
+		.bar {
+			height: 2.5px;
+			margin-bottom: 4px;
+			background-color: $rrlimegreen;
 			position: absolute;
-			top: 50%;
-			left: 50%;
-			@include transform(translate(-50%, -50%));
+			@include transition(all 0.2s ease-in-out);
 
+			&:nth-child(1) {
+				width: 21px;
+				top: 0;
+			}
 
-			.bar {
-				height: 2px;
-				margin-bottom: 4px;
-				background-color: $rrlimegreen;
-				position: absolute;
-				@include transition(all 0.2s ease-in-out);
+			&:nth-child(2) {
+				height: 3px;
+				width: 14px;
+				top: 7px;
+			}
 
-				&:nth-child(1) {
-					width: 21px;
-					top: 0;
-				}
-
-				&:nth-child(2) {
-					width: 14px;
-					top: 7px;
-				}
-
-				&:nth-child(3) {
-					width: 17px;
-					top: 14px;
-				}
+			&:nth-child(3) {
+				width: 17px;
+				top: 14px;
 			}
 		}
+	}
 
-		&:hover .bar:nth-child(1) {
+	&:hover {
+		text-decoration: none;
+		.bar:nth-child(1) {
 			top: 7px;
 		}
-
-		&:nth-child(2) {
-			width: 21px;
-		}
-
-		&:hover .bar:nth-child(3) {
+		.bar:nth-child(3) {
 			width: 21px;
 			top: 7px;
 		}
+	}
+
+	&:nth-child(2) {
+		width: 21px;
 	}
 }
 
@@ -176,12 +178,12 @@ a {
 	}
 
 	&.small_arrow {
-		height: 48px;
+		height: 28px;
 		width: 48px;
 
 		&:before {
 			height: 14px;
-			top: 8%;
+			top: 2%;
 			left: 37%;
 		}
 
@@ -278,7 +280,7 @@ a {
 	}
 
 	&.btn--color {
-		background-color: #202020;
+		background-color: hsla(0, 0%, 13%, 0.5);
 		border: 2px solid $rrlimegreen;
 		color: $white;
 
@@ -404,7 +406,6 @@ a {
 	}
 }
 
-
 .tiny-border {
 	height: 45px;
 	margin-bottom: 15px;
@@ -447,3 +448,5 @@ input {
 	}
 
 }
+//*******************************************//
+//** Base Buttons Ends **//

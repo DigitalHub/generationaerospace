@@ -126,6 +126,14 @@
 	@include transform(scale($scale));
 }
 
+@mixin scaleX($scale) {
+	@include transform(scaleX($scale));
+}
+
+@mixin scaleY($scale) {
+	@include transform(scaleY($scale));
+}
+
 @mixin translate($x, $y) {
 	@include transform(translate($x, $y));
 }

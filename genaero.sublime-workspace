@@ -5,6 +5,8 @@
 		[
 			[
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 				"check",
 				"check_users_sql"
 			],
@@ -15,12 +17,45 @@
 				"margin-bottom"
 			],
 			[
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 				"pos",
 				"pos:r\tposition:relative"
 			],
 			[
-				"text",
+				"wi",
+				"width"
+			],
+			[
+				"sl",
+				"solid"
+			],
+			[
+				"te",
 				"text-transform"
+			],
+			[
+				"pdadin",
+				"padding-bottom"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"mar",
+				"mr:a\tmargin-right:auto"
+			],
+			[
+				"text",
+				"text-decoration"
 			],
 			[
 				"Ha",
@@ -45,11 +80,14 @@
 			[
 				"po",
 				"pos:a\tposition:absolute"
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
 				"wp_",
 				"wp_enqueue_style"
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 			],
 			[
 				"loca",
@@ -256,10 +294,6 @@
 				"color__menu"
 			],
 			[
-				"te",
-				"text-align"
-			],
-			[
 				"cur",
 				"cur:p\tcursor:pointer"
 			],
@@ -289,6 +323,8 @@
 	[
 		{
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 			"file": "wp-content/themes/understrap/header.php",
 			"settings":
 			{
@@ -312,6 +348,7 @@
 		},
 		{
 <<<<<<< HEAD
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 			"contents": "<?php\n/**\n * Template Name: Page Homepage\n *\n * This is the template that displays all pages by default.\n * Please note that this is the WordPress construct of pages\n * and that other 'pages' on your WordPress site will use a\n * different template.\n *\n * @package understrap\n */\n\nget_header(); ?>\n<!-- <div class=\"hexagon\"></div> -->\n<div class=\"wrapper\" id=\"page-wrapper\">\n\t<main id=\"main\" class=\"site-main container\" role=\"main\">\n\t\t<div class=\"HudOverlay\">\n\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\n\t\t\t\t<defs>\n\t\t\t\t\t<filter id=\"blurlayer\" width=\"110%\" height=\"120%\">\n\t\t\t\t\t\t<feGaussianBlur  stdDeviation=\"4\" result=\"blur\"/>\n\t\t\t\t\t</filter>\n\t\t\t\t</defs>\n\t\t\t\t<g> \n\t\t\t\t\t<path d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\n\t\t\t\t\t<path filter=\"url(#blurlayer)\" d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t</g> \n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"640.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"641.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t<!-- <polygon points=\"144 247,172 263,572 267,585 243,568 223,168 223\"></polygon> -->\n\t\t\t</svg>\n\t\t</div> <!-- stroke=\"#ff0\" stroke-width=\"10\" -->\n\n\t\t<?php while(have_posts()) : the_post(); the_content(); endwhile;?>\n\t\t<div class=\"headerbutt login_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>LOGIN</span>\n\t\t</div>\n\t\t<div class=\"headerbutt scroll_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>scroll</span>\n\t\t</div>\n\t\t<div class=\"headerbutt close_butt\">\n\t\t\t<i class=\"fal\"></i>\n\t\t\t<span>Close</span>\n\t\t</div>\n\n\n\t\t<div class=\"double_arrow small_arrow arrow_up\"></div>\n\t\t<div class=\"double_arrow small_arrow arrow_down\"></div>\n\n\n\t\t<div class=\"double_arrow big_arrow arrow_left\"></div>\n\t\t<div class=\"double_arrow big_arrow arrow_right\"></div>\n\n\n\t\t<div class=\"headerbutt menu_butt\">\n\t\t\t<a href=\"#\" class=\"bt-menu\">\n\t\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t\t</svg>\n\t\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<span>Menu</span>\n\t\t\t</a>\n\t\t</div>\n\n\t\t<button class=\"arrowbtn btn--default\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>More Details</span></div>\n\t\t</button>\n\n\t\t<button class=\"arrowbtn btn--color\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\n\t\t<button class=\"defaultbtn btn--color\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<button class=\"defaultbtn btn--default\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<div class=\"clear\"></div><br><br>\t\n\t\t<input type=\"text\">\n\t\t<form action=\"\">\n\t\t\t<input type=\"text\">\n\t\t\t<input type=\"button\" class=\"search\">\n\t\t</form>\n\t</div>\n\n</main><!-- #main -->\n</div><!-- #primary -->\n\n<?php get_footer(); ?>",
 			"settings":
 			{
@@ -320,34 +357,27 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/header.php",
+			"file": "wp-content/themes/understrap/page-homepage.php",
 			"settings":
 			{
-				"buffer_size": 1055,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/page-templates/navigation-top.php",
-			"settings":
-			{
-				"buffer_size": 714,
+<<<<<<< HEAD
+				"buffer_size": 3513,
 =======
-			"file": "wp-content/themes/understrap/page-templates/sign-up.php",
-			"settings":
-			{
 <<<<<<< HEAD
 				"buffer_size": 4098,
 =======
 				"buffer_size": 3344,
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
+			"file": "wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+=======
 <<<<<<< HEAD
 			"file": "wp-content/themes/understrap/js/facebook-functions.js",
 			"settings":
@@ -359,52 +389,28 @@
 =======
 <<<<<<< HEAD
 			"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 			"settings":
 			{
-				"buffer_size": 4532,
-=======
-			"file": "/C/Users/Stefanie/Desktop/genaero_members.sql",
-			"settings":
-			{
-				"buffer_size": 1769,
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
-				"line_ending": "Unix"
-			}
-		},
-		{
-<<<<<<< HEAD
-			"contents": "<html>\n<head>\n\t<title>Transistion</title>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/style/jquery.fullPage.css\" />\n\t<link rel=\"stylesheet\" href=\"assets/style/style.css\">\n</head>\n<body>\n\t<menu id=\"menu-content\" class=\"menu-content\">\n\t\t<a href=\"#\" class=\"menubuttonclose closehere\">close</a>\n\t\t<div class=\"menu-content__wrapper\">\n\t\t\t<nav class=\"menu-content__nav\">\n\t\t\t\t<div class=\"menu-content__nav--label\">menu</div>\n\t\t\t\t<div class=\"corner corner-top-left\"></div>\n\t\t\t\t<div class=\"corner corner-top-right\"></div>\n\t\t\t\t<div class=\"corner corner-bottom-left\"></div>\n\t\t\t\t<div class=\"corner corner-bottom-right\"></div>\n\t\t\t\t<img src=\"assets/images/menu-content.png\" class=\"fakemenu\">\n\t\t\t</nav>\n\t\t</div>\n\t</menu>\n\t<div id=\"fullpage\">\n\t\t<div class=\"section\" id=\"section0\">\n\t\t\t<div class=\"bg mainbg\">\n\t\t\t\t<svg class=\"lines\">\n\t\t\t\t\t<line x1=\"220\" x2=\"220\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.5;0\" dur=\"10s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"500\" x2=\"500\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.2;0;0\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"550\" x2=\"550\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.4;0\" dur=\"30s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"1200\" x2=\"1200\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.4;0;1.3\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t</svg>\n\n\t\t\t\t<svg class=\"circlerotate\" viewBox=\"0 0 1200 1200\">\n\t\t\t\t\t<g transform=\"translate(600, 600)\"> \n\t\t\t\t\t\t<circle cx=\"0\" cy=\"0\" r=\"600\">\n\t\t\t\t\t\t\t<animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0\" to=\"360\" begin=\"0\" dur=\"500s\" repeatCount=\"indefinite\" />\n\t\t\t\t\t\t</circle>\n\t\t\t\t\t</g>\n\t\t\t\t</svg> \n\n\t\t\t\t<div class=\"HudOverlay HudOverlay--desktop u-fullParent\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\t\t\t\t\t\t<defs> \n\t\t\t\t\t\t\t<mask id=\"mask\">\n\t\t\t\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\"></rect> <rect class=\"logo-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"65\" height=\"65\" transform=\"scale(1.3,0.4) translate(52.525001525878906,-6.174999237060547)\"></rect> \n\t\t\t\t\t\t\t\t<rect class=\"flock-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(1,0.2) translate(1374,407.8374938964844)\"></rect>\n\t\t\t\t\t\t\t\t<rect class=\"berserk-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,0.3) translate(1188.4000244140625,-30)\"></rect> <rect class=\"title-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"560\" height=\"80\" transform=\"scale(1,0.2) translate(426,-28)\"></rect> \n\t\t\t\t\t\t\t</mask> \n\t\t\t\t\t\t</defs> \n\t\t\t\t\t\t<g mask=\"url(#mask)\"> \n\t\t\t\t\t\t\t<path d=\"M1287.9,818.3c5.5,0,9.5-4.5,10-10c9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9c0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\t\t\tl13.8-19.8c-2.6-195.5-17.4-310-17.4-310c0-5.5-4.5-10-10-10c0,0-630-40-1260,0c-5.5,0.3-10,4.5-10,10c0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\t\t\tl13.4,20.3c-1,42.6-1.2,82.7-0.8,120L1.2,498.2c2,92.6,7,196.7,16.7,310.1c0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t\t\t</g> \n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"274.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"1041.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t\t</svg>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"fakecontent mainbg\">\n\t\t\t\t\t<ul id=\"menu\">\n\t\t\t\t\t\t<li class=\"firstPage\" data-menuanchor=\"firstPage\" class=\"active\"><a href=\"#firstPage\">.</a></li>\n\t\t\t\t\t\t<li class=\"secondPage\" data-menuanchor=\"secondPage\"><a href=\"#secondPage\">.</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<img src=\"assets/images/butt-login.png\" class=\"button-login\" alt=\"\">\n\t\t\t\t\t<div class=\"mainlogo\">\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--left\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--right\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<img src=\"assets/images/logo.png\" class=\"main-logo\" alt=\"\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<a href=\"#\" class=\"menubutton\">menu</a>\n\t\t\t</div> \n\t\t</div>\n\n\t\t<div class=\"section\" id=\"section1\">\n\t\t\t<div class=\"bg twobg\">\n\t\t\t\t<svg class=\"lines\">\n\t\t\t\t\t<line x1=\"220\" x2=\"220\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.5;0\" dur=\"10s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"500\" x2=\"500\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.2;0;0\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"550\" x2=\"550\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"0;0.4;0\" dur=\"30s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t\t<line x1=\"1200\" x2=\"1200\" y1=\"0\" y2=\"100%\">\n\t\t\t\t\t\t<animate attributeName=\"opacity\" values=\"1.4;0;1.3\" dur=\"15s\" repeatCount=\"indefinite\"/>\n\t\t\t\t\t</line>\n\t\t\t\t</svg>\n\n\t\t\t\t<svg class=\"circlerotate\"  viewBox=\"0 0 1200 1200\">\n\t\t\t\t\t<g transform=\"translate(600, 600)\"> \n\t\t\t\t\t\t<circle cx=\"0\" cy=\"0\" r=\"600\">\n\t\t\t\t\t\t\t<animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0\" to=\"360\" begin=\"0\" dur=\"500s\" repeatCount=\"indefinite\" />\n\t\t\t\t\t\t</circle>\n\t\t\t\t\t</g>\n\t\t\t\t</svg> \n\t\t\t\t<div class=\"HudOverlay HudOverlay--desktop u-fullParent\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\t\t\t\t\t\t<defs> \n\t\t\t\t\t\t\t<mask id=\"mask\">\n\t\t\t\t\t\t\t\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\"></rect> <rect class=\"logo-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"185\" height=\"65\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(52.525001525878906,-6.174999237060547)\"></rect> \n\n\t\t\t\t\t\t\t\t<rect class=\"search-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(1365,35.599998474121094)\"></rect> \n\n\t\t\t\t\t\t\t\t<rect class=\"berserk-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(1188.4000244140625,-30)\"></rect> <rect class=\"title-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"560\" height=\"80\" transform=\"scale(0.9320113314447592,1.3253968253968256) translate(426,-28)\"></rect> \n\t\t\t\t\t\t\t</mask> \n\t\t\t\t\t\t</defs> \n\t\t\t\t\t\t<g mask=\"url(#mask)\"> \n\t\t\t\t\t\t\t<path d=\"M1287.9,818.3c5.5,0,9.5-4.5,10-10c9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9c0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\t\t\tl13.8-19.8c-2.6-195.5-17.4-310-17.4-310c0-5.5-4.5-10-10-10c0,0-630-40-1260,0c-5.5,0.3-10,4.5-10,10c0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\t\t\tl13.4,20.3c-1,42.6-1.2,82.7-0.8,120L1.2,498.2c2,92.6,7,196.7,16.7,310.1c0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t\t\t</g> \n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"274.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"1041.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t\t\t<filter id=\"blur-effect-1\">\n\t\t\t\t\t\t\t<feGaussianBlur stdDeviation=\"2\" />\n\t\t\t\t\t\t</filter>\n\t\t\t\t\t</svg>\n\n\t\t\t\t</div>\n\t\t\t\t<div class=\"fakecontent twobg\">\n\t\t\t\t\t<img src=\"assets/images/butt-login.png\" class=\"button-login\" alt=\"\">\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"mainlogo\">\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--left\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5 \t\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1 \t\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\n\t\t\t\t\t\t<svg class=\"HudTitle-border HudTitle-border--right\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15.5 42\" style=\"enable-background:new 0 0 15.5 42;\" xml:space=\"preserve\">\n\t\t\t\t\t\t\t<rect x=\"0.5\" y=\"0.5\" width=\"3\" height=\"41\"></rect>\n\t\t\t\t\t\t\t<polyline points=\"8.5,15.9 8.5,0.5 15.5,0.5\"></polyline>\n\t\t\t\t\t\t\t<polyline points=\"15.5,41.5 8.5,41.5 8.5,26.1\"></polyline>\n\t\t\t\t\t\t\t<circle cx=\"8.5\" cy=\"21\" r=\"2.5\"></circle>\n\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t<img src=\"assets/images/logo.png\" class=\"main-logo\" alt=\"\">\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"positionbutton\">\n\t\t\t\t\t\t<a class=\"button\"><span class=\"moving\">&rarr;</span>Click Me</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t</div> \n\t\t\t<a href=\"#\" class=\"menubutton\">menu</a>\n\t\t</div>\n\n\t</div>\n\n\t<script type=\"text/javascript\" src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js'></script> \n\t<script src=\"https://code.jquery.com/jquery-3.2.0.min.js\"></script> \n\t<script type=\"text/javascript\" src=\"assets/js/jquery.fullpage.min.js\"></script>\n\t<script type=\"text/javascript\" src=\"assets/js/scrolloverflow.js\"></script>\n\t<script type=\"text/javascript\" src=\"assets/js/main.js\"></script>\n</body>\n</html>",
-			"file": "/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/index.html",
-			"file_size": 10256,
-			"file_write_time": 131587434595516001,
-			"settings":
-			{
-				"buffer_size": 10077,
-=======
-			"file": "wp-content/themes/understrap/functions.php",
-			"settings":
-			{
-				"buffer_size": 1526,
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
-			"settings":
-			{
-				"buffer_size": 6103,
+				"buffer_size": 1715,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+			"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
 			"settings":
 			{
-				"buffer_size": 3609,
+				"buffer_size": 4660,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
+			"settings":
+			{
+				"buffer_size": 6687,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -413,7 +419,16 @@
 			"file": "wp-content/themes/understrap/js/main.js",
 			"settings":
 			{
-				"buffer_size": 623,
+				"buffer_size": 2528,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
+			"settings":
+			{
+				"buffer_size": 5742,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -422,19 +437,9 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
 			"settings":
 			{
-				"buffer_size": 594,
+				"buffer_size": 1467,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-=======
-			"contents": "<?php\n\n//create database for members\nregister_activation_hook( __FILE__, 'create_members_db' );\nfunction create_members_db() {\n\t// Create DB Here\n\n\tglobal $wpdb;\n  \t$version = get_option( 'my_plugin_version', '1.0' );\n\t$charset_collate = $wpdb->get_charset_collate();\n\t$table_name = $wpdb->prefix . 'my_analysis';\n\n\t$sql = \"CREATE TABLE $table_name (\n\t\tid mediumint(9) NOT NULL AUTO_INCREMENT,\n\t\ttime datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,\n\t\tviews smallint(5) NOT NULL,\n\t\tclicks smallint(5) NOT NULL,\n\t\tUNIQUE KEY id (id)\n\t) $charset_collate;\";\n\n\trequire_once( ABSPATH . 'wp-admin/includes/upgrade.php' );\n\tdbDelta( $sql );\n\t\n\tif ( version_compare( $version, '2.0' ) < 0 ) {\n\t\t$sql = \"CREATE TABLE $table_name (\n\t\t  id mediumint(9) NOT NULL AUTO_INCREMENT,\n\t\t  time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,\n\t\t  views smallint(5) NOT NULL,\n\t\t  clicks smallint(5) NOT NULL,\n\t\t  blog_id smallint(5) NOT NULL,\n\t\t  UNIQUE KEY id (id)\n\t\t) $charset_collate;\";\n\t\tdbDelta( $sql );\n\t\n\t  \tupdate_option( 'my_plugin_version', '2.0' );\n\t\t\n\t}\n}\n\n?>",
-			"file": "wp-content/themes/understrap/inc/custom-genaero.php",
-			"file_size": 0,
-			"file_write_time": 131584020864241602,
-			"settings":
-			{
-				"buffer_size": 1052,
-				"line_ending": "Windows"
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 			}
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
 		}
@@ -446,14 +451,10 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 269.0,
-		"last_filter": "java",
+		"height": 392.0,
+		"last_filter": "todo",
 		"selected_items":
 		[
-			[
-				"java",
-				"Set Syntax: JavaScript"
-			],
 			[
 				"todo",
 				"TodoReview: Project Files"
@@ -504,45 +505,76 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
 		"/C/wamp64/www/generationaerospace",
 		"/C/wamp64/www/generationaerospace/wp-content",
 		"/C/wamp64/www/generationaerospace/wp-content/themes",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/assets",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom"
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-trailbazers.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-video.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-events.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
+		"/C/Users/rachelle.quek/Desktop/drawsvg.svg",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-experiment.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/navigation-top.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-homepage.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/search.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_slick.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_variables.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/main.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/custom-header.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/extras.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-title.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/enqueue.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/theme.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_type.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+		"/C/wamp64/www/genaerospace-old/index.html",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured_welcome.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured_video.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/welcome.php",
+		"/C/wamp64/www/genaerospace-old/assets/js/main.js",
+		"/C/wamp64/www/genaerospace-old/assets/style/jquery.fullpage.css",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/index.html",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/left-sidebarpage.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/taxonomy-product.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/navigation-top.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/featured-products-variable.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/page-homepage.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/main.js",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/functions.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/header.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/footer.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/footer.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/single.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/single-news.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/_header-and-footer.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-branding.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/header.php",
-		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/main.js",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
 		"/C/wamp64/www/ajph/wp-content/themes/ajph/js/main.js",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/enqueue.php",
-		"/C/wamp64/www/genaerospace-old/index.html",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/index.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/footer.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_variables.scss",
 		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/css/fontawesome-all.css",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
 		"/C/wamp64/www/bursamids/wp-content/themes/bursaselects/header.php",
 		"/C/wamp64/www/bursamids/wp-content/themes/bursaselects/template-parts/header/site-branding.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_colors.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/sass/navigation/_links.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_variables.scss",
 		"/C/wamp64/www/acer/wp-content/themes/acer/style.css",
 		"/C/wamp64/www/acer/wp-content/themes/acer/searchform.php",
 		"/C/wamp64/www/acer/wp-content/themes/acer/js/main.js",
 		"/C/wamp64/www/acer/wp-content/themes/acer/template-parts/header/site-branding.php",
-		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/navigation-top.php",
-		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/page-homepage.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/404.php",
 		"/C/wamp64/www/acer/wp-content/themes/acer/archive.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/archive-news.php",
@@ -559,7 +591,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_mixins.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme_variables.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_bordered-pulled.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss",
 		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/scss/fontawesome.scss",
@@ -570,9 +601,7 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/popper.js",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/popper.min.js",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/skip-link-focus-fix.js",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/theme.js",
 		"/C/wamp64/www/genaerospace-old/assets/style/sass/site/_header-and-footer.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_type.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/mixins/_buttons.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_default.scss",
 		"/C/Users/rachelle.quek/Desktop/acer.sql",
@@ -601,6 +630,8 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/woocommerce.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_carousel.scss",
 		"/C/wamp64/www/generationaerospace/wp-config.php",
+<<<<<<< HEAD
+=======
 =======
 		"/C/xampp/htdocs/generationaerospace",
 		"/C/xampp/htdocs/generationaerospace/wp-content",
@@ -641,6 +672,7 @@
 		"/C/xampp/htdocs/generationaerospace/wp-config.php",
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-expect.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_posts-and-pages.scss",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-homes.php",
@@ -654,42 +686,13 @@
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/day.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/default-template.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/day.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_homepage.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-leaders.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/month/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/month/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list/default-template.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/responsive/_responsive-classes.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/variables-site/_colors.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/footer.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_header-and-footer.scss",
-		"/C/xampp/htdocs/actschurch/wp-includes/functions.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-locations.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-location.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/single-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-watch.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-cover-photo.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/header-image.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-videos.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_locations.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-locations-mobile.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-locations.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-contact.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-video.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-agegroup.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_visit.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-believe.php",
-<<<<<<< HEAD
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-homepage-location.php"
+		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/day.php"
 	],
 	"find":
 	{
 		"height": 52.0
+<<<<<<< HEAD
+=======
 =======
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-homepage-location.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_headings.scss",
@@ -760,17 +763,14 @@
 		"height": 41.0
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 	},
 	"find_in_files":
 	{
 		"height": 134.0,
 		"where_history":
 		[
-<<<<<<< HEAD
 			"C:\\wamp64\\www\\generationaerospace\\wp-content\\themes\\understrap",
-=======
-			"<open folders>",
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 			"C:\\xampp\\htdocs\\actschurch\\wp-content\\themes\\actschurch",
 			"<open folders>",
 			"",
@@ -785,6 +785,125 @@
 		"find_history":
 		[
 <<<<<<< HEAD
+			"noscript",
+			"));\n",
+			"typewriter",
+			"callback",
+			"25",
+			"100",
+			"0px",
+			"100px",
+			"ddbe72",
+			"icon",
+			"orange",
+			"featured_event",
+			"span",
+			"\n\t\t\t\t\t\t",
+			"\n\t\t\t\t\t\t\t",
+			"\n\t\t\t\t\t\t",
+			"\n\t\t\t\t\t\t\t",
+			"genaero_trailbazers",
+			"X",
+			"315",
+			"320",
+			"370",
+			"94",
+			"400",
+			"100",
+			"95",
+			"id=\"",
+			"95",
+			".5",
+			"style=\"fill:none;stroke:black;stroke-width:1px;",
+			"<circle",
+			"97",
+			"98",
+			"id",
+			"i",
+			"id=",
+			";",
+			":",
+			"style",
+			"<circle ",
+			"<rect",
+			"20",
+			"8",
+			"10",
+			"20",
+			" style=\"text-align: center;\"",
+			"small",
+			"slickElement",
+			"div",
+			"eEWZkH",
+			";",
+			"30px",
+			"\n\t\t\t\t\t<div class=\"col-xl-6\">",
+			"margin",
+			"videos_slide",
+			"span",
+			"slideCount",
+			"color_",
+			"$",
+			"offset-xl-1",
+			"xl",
+			"lg",
+			"1s",
+			"fff",
+			"left",
+			"\"\";\n",
+			"&",
+			"ul.chapter-selector ",
+			"menubutton",
+			"menu-content",
+			"close",
+			"0% {\n\t\t",
+			"0% { opacity",
+			"0% ",
+			"; }",
+			"{ border",
+			" }",
+			") }",
+			"0",
+			"menubuttonclose",
+			"menubutton__close",
+			"0",
+			"site_title",
+			"branding",
+			"HudTitle",
+			"firstPage",
+			"lazyLoading",
+			"$",
+			"product_category_",
+			"product_category",
+			"_category",
+			"a",
+			"“",
+			"”",
+			"‘",
+			"home_page_slider",
+			"o",
+			"fff",
+			"after",
+			"<span class=\"ng-binding\">",
+			"#fff",
+			"<span class=\"ng-binding\">",
+			" ng-class=\"{selected: $index == scrollcontroller.selectedChapter, first: $index == 0, last: $index == (product.locale.paragraphs.length - 1)}\" ng-repeat=\"paragraph in product.locale.paragraphs\" ng-click=\"scrollcontroller.gotoParagraph($index)\" class=\"chapter-selector-item ng-scope\" style=\"\"",
+			"<!-- end ngRepeat: paragraph in product.locale.paragraphs -->",
+			"<!-- ngRepeat: paragraph in product.locale.paragraphs -->",
+			" ng-class=\"{selected: $index == scrollcontroller.selectedChapter, first: $index == 0, last: $index == (product.locale.paragraphs.length - 1)}\" ng-repeat=\"paragraph in product.locale.paragraphs\" ng-click=\"scrollcontroller.gotoParagraph($index)\" class=\"chapter-selector-item ng-scope first\" style=\"\"",
+			"p",
+			" style=\"enable-background:new 0 0 15.5 42;\" ",
+			"\n\t\t<defs> \n\t\t\t<mask id=\"mask\">\n\t\t\t\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\"></rect> <rect class=\"logo-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"65\" height=\"65\" transform=\"scale(1.3,0.4) translate(52.525001525878906,-6.174999237060547)\"></rect> \n\t\t\t\t<rect class=\"flock-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(1,0.2) translate(1374,407.8374938964844)\"></rect>\n\t\t\t\t<rect class=\"berserk-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,0.3) translate(1188.4000244140625,-30)\"></rect> <rect class=\"title-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"560\" height=\"80\" transform=\"scale(1,0.2) translate(426,-28)\"></rect> \n\t\t\t</mask> \n\t\t</defs> ",
+			"fff",
+			"close",
+			"menubutton",
+			"<div class=\"at-above-post\"></div>",
+			"<a href=\"#\">",
+			"transform",
+			"cad63e",
+			"\"\"",
+=======
+<<<<<<< HEAD
 			"strip_tags",
 			"do_action",
 			"sql",
@@ -793,6 +912,7 @@
 			"`",
 =======
 <<<<<<< HEAD
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 			"images",
 			"$",
 			"mask",
@@ -803,6 +923,9 @@
 			"$",
 			"c",
 			"rrlimegreen",
+<<<<<<< HEAD
+			"black"
+=======
 			"black",
 			"animate_btn",
 			"transform",
@@ -1003,6 +1126,7 @@
 			"<?=$name?>"
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1023,11 +1147,21 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
+			"selected": 2,
+=======
 			"selected": 0,
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 			"sheets":
 			[
 				{
 					"buffer": 0,
+<<<<<<< HEAD
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5675,
+=======
 <<<<<<< HEAD
 					"file": "wp-content/themes/understrap/header.php",
 					"semi_transient": false,
@@ -1049,12 +1183,17 @@
 						"buffer_size": 61,
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								4449,
+								4449
+=======
 <<<<<<< HEAD
 								290,
 								290
@@ -1067,6 +1206,7 @@
 								61
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 							]
 						],
 						"settings":
@@ -1075,7 +1215,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 137.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
@@ -1083,16 +1223,21 @@
 				},
 				{
 					"buffer": 1,
+					"file": "wp-content/themes/understrap/page-homepage.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5675,
+						"buffer_size": 3513,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
+								3213,
+								3213
+=======
 <<<<<<< HEAD
 								{
 									"characters": "<",
@@ -1140,6 +1285,7 @@
 =======
 								5675,
 								5675
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 							]
 						],
 						"settings":
@@ -1148,7 +1294,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2212.0,
+						"translation.y": 1021.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
@@ -1156,24 +1302,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "wp-content/themes/understrap/header.php",
+					"file": "wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1055,
+						"buffer_size": 1715,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								1047,
-								1047
+								1669,
+								1669
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
+=======
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -1350,6 +1497,7 @@
 								"bh_square_close",
 								"bh_square_content"
 							],
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -1357,12 +1505,31 @@
 						"translation.y": 60.0,
 =======
 						"translation.y": 0.0,
+<<<<<<< HEAD
+=======
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
+<<<<<<< HEAD
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4660,
+=======
 				},
 				{
 <<<<<<< HEAD
@@ -1384,11 +1551,21 @@
 						"buffer_size": 3344,
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 						"regions":
 						{
 						},
 						"selection":
 						[
+<<<<<<< HEAD
+							[
+								2932,
+								2932
+							],
+							[
+								2969,
+								2969
+=======
 <<<<<<< HEAD
 							[
 								689,
@@ -1622,10 +1799,15 @@
 								311
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+=======
 <<<<<<< HEAD
 =======
 							"auto_complete_triggers":
@@ -1796,94 +1978,89 @@
 >>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 >>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-<<<<<<< HEAD
+						"translation.y": 1927.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6687,
+								6687
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6693.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
+					"buffer": 5,
+					"file": "wp-content/themes/understrap/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4532,
+						"buffer_size": 2528,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2948,
-								2948
+								2528,
+								2528
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1931.0,
+						"translation.y": 1259.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10077,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								846,
-								846
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
 					"buffer": 6,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6103,
+						"buffer_size": 5742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6103,
-								6103
+								4037,
+								4037
 							]
 						],
 						"settings":
@@ -1892,7 +2069,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7668.0,
+						"translation.y": 5611.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1900,6 +2077,8 @@
 				},
 				{
 					"buffer": 7,
+<<<<<<< HEAD
+=======
 					"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 					"semi_transient": false,
 					"settings":
@@ -1961,19 +2140,20 @@
 				},
 				{
 					"buffer": 9,
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 594,
+						"buffer_size": 1467,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								562,
-								562
+								1358,
+								1358
 							]
 						],
 						"settings":
@@ -1982,10 +2162,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1513.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -2019,7 +2199,7 @@
 		"cols":
 		[
 			0.0,
-			0.441126056477,
+			0.607719504903,
 			1.0
 		],
 		"rows":
@@ -2051,6 +2231,8 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
+=======
 				"enqueu",
 				"wp-content\\themes\\understrap\\inc\\enqueue.php"
 			],
@@ -2067,6 +2249,7 @@
 				"wp-content\\themes\\basic\\js\\main.js"
 			],
 			[
+>>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 				"_posts",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_posts-and-pages.scss"
 			],
@@ -2075,12 +2258,20 @@
 				"wp-content\\themes\\actschurch\\header.php"
 			],
 			[
+				"main.js",
+				"wp-content\\themes\\actschurch\\js\\main.js"
+			],
+			[
 				"_connect",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_connect.scss"
 			],
 			[
 				"leader",
 				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
+			],
+			[
+				"functions",
+				"wp-content\\themes\\actschurch\\functions.php"
 			],
 			[
 				"home",
@@ -2499,7 +2690,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 215.0,
+	"side_bar_width": 230.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
