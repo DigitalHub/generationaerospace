@@ -10,11 +10,9 @@
 	<?php //wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 </nav>--><!-- #site-navigation -->
 <menu id="menu-content" class="menu-content">
-	<a href="#" class="menubuttonclose closehere">
-		<div class="headerbutt close_butt">
-			<i class="fal"></i>
-			<span>Close</span>
-		</div>
+	<a href="#" class="menu_butt__close headerbutt close_butt">
+		<i class="fal"></i>
+		<span>Close</span>
 	</a>
 	<div class="container">
 		<div class="menu__wrapper">

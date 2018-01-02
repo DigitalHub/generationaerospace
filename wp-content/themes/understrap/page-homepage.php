@@ -63,19 +63,21 @@ get_header(); ?>
 		</div> <!-- stroke="#ff0" stroke-width="10" -->
 
 		<ul class="chapter-selector">
-			<li>Welcome</li>
-			<li>Find A Video</li>
-			<li>Find An Experiment</li>
-			<li>Be A Genaero Explorer</li>
-			<li>Genaero Trailblazer</li>
-			<li>Events</li>
+			<li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li>
+			<li data-menuanchor="featured_video"><a href="#featured_video">Find A Video</a></li>
+			<li data-menuanchor="featured_experiment"><a href="#featured_experiment">Find An Experiment</a></li>
+			<li data-menuanchor="genaero_explorer"><a href="#genaero_explorer">Be A Genaero Explorer</a></li>
+			<li data-menuanchor="genaero_trailbazers"><a href="#genaero_trailbazers">Be A Genaero Trailbazers</a></li>
+			<li data-menuanchor="featured_events"><a href="#featured_events">Events</a></li>
 		</ul>
 
-		<div class="container welcome_content">
-			<div class="col-lg-8 offset-lg-2">
-				<h1 class="welcome_text">Welcome</h1>
-				<p class="hightlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non iure ipsum fugit incidunt enim, dolore magnam illum eligendi? Nam aperiam dignissimos sequi nemo optio quod incidunt, ex veniam ab, aliquam. Nisi quibusdam, delectus voluptates, id porro repellat. Praesentium veritatis perspiciatis earum laboriosam debitis repellat sed eveniet assumenda dicta nobis aut, ex molestias, nam quam distinctio accusamus, quia rerum nisi. Maxime quos, officia fugit aut natus culpa numquam quidem necessitatibus eius asperiores obcaecati illo iste, recusandae ab in rerum repellat. Provident ratione adipisci velit, reiciendis atque at quisquam. Incidunt inventore illum beatae, necessitatibus iure voluptas, labore impedit temporibus, repudiandae eum odio.</p>
-			</div>
+		<div id="fullpage">
+			<?php get_template_part( 'page-templates/homepage/featured', 'welcome' ); ?>
+			<?php get_template_part( 'page-templates/homepage/featured', 'video' ); ?>
+			<?php get_template_part( 'page-templates/homepage/featured', 'experiment' ); ?>
+			<?php get_template_part( 'page-templates/homepage/genaero', 'explorer' ); ?>
+			<?php get_template_part( 'page-templates/homepage/genaero', 'trailbazers' ); ?>
+			<?php get_template_part( 'page-templates/homepage/featured', 'events' ); ?>
 		</div>
 	</main>
 </div>

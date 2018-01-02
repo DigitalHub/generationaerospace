@@ -48,8 +48,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</script>
 
 	<div class="hfeed site" id="page">
-
-		<div class="hfeed site" id="page">
-			<?php get_template_part( 'page-templates/site', 'title' ); ?>
-			<?php get_template_part( 'page-templates/navigation', 'top' ); ?>
-		</div>
+		<?php get_template_part( 'page-templates/site', 'title' ); ?>
+		<?php get_template_part( 'page-templates/navigation', 'top' ); ?>
