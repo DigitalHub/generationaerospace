@@ -52,7 +52,7 @@ if ($_POST['signup_submit']) {
 				} else {
 					$password_hashed = wp_hash_password($password);
 					$wpdb->query($wpdb->prepare("INSERT INTO $table (username,email,password) VALUES (%s,%s,%s)", array($username,$email,$password_hashed)));
-
+					session_start();
 					$_SESSION['username'] = $username;
 					wp_redirect( 'member-dashboard', 301 );
 					exit; 
@@ -90,7 +90,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<label for="signup_username">Username</label>
 						<input type="text" name="signup_username" id="signup_username" placeholder="Username" minlength="4" maxlength="20" required><br>
 						<label for="signup_password">Password</label>
-						<input type="password" name="signup_password" id="signup_password" placeholder="Password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" required><br><br>
+						<input type="password" name="signup_password" id="signup_password" placeholder="Password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" autocomplete="new-password" required><br><br>
 
 						<input type="submit" name="signup_submit" id="signup_submit" value="Join Now">
 

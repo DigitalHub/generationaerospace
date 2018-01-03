@@ -24,10 +24,12 @@ if($_POST['profile_submit']) {
 	$bio = $wpdb->escape($_POST['profile_bio']);
 	// $photo = $wpdb->escape($_POST['profile_photo']);
 	$email = $wpdb->escape($_POST['profile_email']);
+	$password = $wpdb->escape($_POST['profile_password']);
 	$is_fb_user = $wpdb->escape($_POST['profile_is_fb_user']);
 
-	if(!$is_fb_user) {
-		$password = wp_hash_password($wpdb->escape($_POST['profile_password']));
+	//if is not fb user and password field is not empty, save password
+	if(!$is_fb_user && $password !== NULL && $password !== '') {
+		$password = wp_hash_password($password);
 		$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,email=%s,password=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$email,$password,$username));
 		$wpdb->query($sql);
 	} else {
@@ -53,6 +55,10 @@ if(count($results) > 0) {
 	$bio = $results[0]->bio;
 	$photo = $results[0]->photo;
 	$is_fb_user = $results[0]->is_fb_user;
+
+	if($photo === '' || $photo === NULL) {
+		$photo = get_template_directory_uri().'/img/default-photo.png';
+	}
 }
 ?>
 
@@ -92,20 +98,22 @@ if(count($results) > 0) {
 					<input type="text" name="profile_instagram" id="profile_instagram" value="<?=$instagram?>" placeholder="Instagram">
 					<label for="bio">Bio</label>
 					<textarea name="profile_bio" id="profile_bio" value="<?=$bio?>" rows="5" cols="70"></textarea>
-					<label for="photo">Profile Photo</label>
-					<img src="<?=$photo?>" alt="<?=$fullname?>'s Profile Photo">
-					<!-- TODO: STEF TO ADD PHOTO UPLOAD BUTTON -->
+					<br>
+					<label for="profile_photo">Profile Photo</label>
+					<img src="<?=$photo?>" id="profile_photo" alt="<?=$fullname?>'s Profile Photo" width="100px">
+					<input type="file" name="profile_photo" accept="image/*">
+					<!-- TODO: STEF TO ADD PHOTO PREVIEW AND UPLOAD FUNCTION -->
 
 					<h5>Login Information</h5>
 					<label for="email">Email Address*</label>
 					<input type="text" name="profile_email" id="profile_email" value="<?=$email?>" required>
 					<input type="hidden" name="profile_is_fb_user" value="<?=$is_fb_user?>">
 					<?php if(!$is_fb_user) { ?>
-					<!-- TODO: STEF TO CHECK PASSWORDS AGAINST EACH OTHER -->
 					<label for="password">Password*</label>
-					<input type="password" name="profile_password" id="profile_password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$">
-					<label for="confirm">Confirm Password*</label>
-					<input type="password" name="profile_confirm" id="profile_confirm" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$">
+					<input type="password" name="profile_password" id="profile_password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" autocomplete="new-password">
+					<div class="hide-show">
+						<span>Show</span>
+					</div>
 					<?php } ?>
 				</form>
 

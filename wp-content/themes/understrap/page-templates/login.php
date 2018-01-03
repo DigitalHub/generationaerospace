@@ -41,6 +41,7 @@ if ($_POST['login_submit']) {
 			//check password
 			$hashed_password = $results[0]->password;
 			if(wp_check_password($password, $hashed_password)) {
+				session_start();
 				$_SESSION['username'] = $username;
 				wp_redirect( 'member-dashboard', 301 );
 				exit; 
@@ -80,7 +81,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<label for="login_username">Username</label>
 						<input type="text" name="login_username" id="login_username" placeholder="Username" minlength="4" maxlength="20" required><br>
 						<label for="login_password">Password</label>
-						<input type="password" name="login_password" id="login_password" placeholder="Password" title="Password" minlength="6" maxlength="14" required><br><br>
+						<input type="password" name="login_password" id="login_password" placeholder="Password" title="Password" minlength="6" maxlength="14" autocomplete="new-password" required><br><br>
 
 						<input type="submit" name="login_submit" id="login_submit" value="Login">
 						<a href="../forgot-password">Forgot password?</a>
