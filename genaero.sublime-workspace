@@ -4,20 +4,18 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-				"check",
-				"check_users_sql"
+				"top",
+				"topbox"
 			],
 			[
-=======
-<<<<<<< HEAD
-				"mar",
-				"margin-bottom"
+				"d",
+				"d:ib\tdisplay:inline-block"
 			],
 			[
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
+				"f",
+				"fl\tfloat"
+			],
+			[
 				"pos",
 				"pos:r\tposition:relative"
 			],
@@ -74,20 +72,8 @@
 				"uppercase"
 			],
 			[
-				"d",
-				"d:b\tdisplay:block"
-			],
-			[
 				"po",
 				"pos:a\tposition:absolute"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
-				"wp_",
-				"wp_enqueue_style"
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 			],
 			[
 				"loca",
@@ -322,33 +308,6 @@
 	"buffers":
 	[
 		{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/header.php",
-			"settings":
-			{
-				"buffer_size": 3822,
-=======
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/page-homepage.php",
-			"settings":
-			{
-				"buffer_size": 319,
-=======
-			"file": "wp-content/themes/understrap/js/main.js",
-			"settings":
-			{
-				"buffer_size": 61,
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-<<<<<<< HEAD
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 			"contents": "<?php\n/**\n * Template Name: Page Homepage\n *\n * This is the template that displays all pages by default.\n * Please note that this is the WordPress construct of pages\n * and that other 'pages' on your WordPress site will use a\n * different template.\n *\n * @package understrap\n */\n\nget_header(); ?>\n<!-- <div class=\"hexagon\"></div> -->\n<div class=\"wrapper\" id=\"page-wrapper\">\n\t<main id=\"main\" class=\"site-main container\" role=\"main\">\n\t\t<div class=\"HudOverlay\">\n\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\n\t\t\t\t<defs>\n\t\t\t\t\t<filter id=\"blurlayer\" width=\"110%\" height=\"120%\">\n\t\t\t\t\t\t<feGaussianBlur  stdDeviation=\"4\" result=\"blur\"/>\n\t\t\t\t\t</filter>\n\t\t\t\t</defs>\n\t\t\t\t<g> \n\t\t\t\t\t<path d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\n\t\t\t\t\t<path filter=\"url(#blurlayer)\" d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t</g> \n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"640.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"641.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t<!-- <polygon points=\"144 247,172 263,572 267,585 243,568 223,168 223\"></polygon> -->\n\t\t\t</svg>\n\t\t</div> <!-- stroke=\"#ff0\" stroke-width=\"10\" -->\n\n\t\t<?php while(have_posts()) : the_post(); the_content(); endwhile;?>\n\t\t<div class=\"headerbutt login_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>LOGIN</span>\n\t\t</div>\n\t\t<div class=\"headerbutt scroll_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>scroll</span>\n\t\t</div>\n\t\t<div class=\"headerbutt close_butt\">\n\t\t\t<i class=\"fal\"></i>\n\t\t\t<span>Close</span>\n\t\t</div>\n\n\n\t\t<div class=\"double_arrow small_arrow arrow_up\"></div>\n\t\t<div class=\"double_arrow small_arrow arrow_down\"></div>\n\n\n\t\t<div class=\"double_arrow big_arrow arrow_left\"></div>\n\t\t<div class=\"double_arrow big_arrow arrow_right\"></div>\n\n\n\t\t<div class=\"headerbutt menu_butt\">\n\t\t\t<a href=\"#\" class=\"bt-menu\">\n\t\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t\t</svg>\n\t\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<span>Menu</span>\n\t\t\t</a>\n\t\t</div>\n\n\t\t<button class=\"arrowbtn btn--default\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>More Details</span></div>\n\t\t</button>\n\n\t\t<button class=\"arrowbtn btn--color\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\n\t\t<button class=\"defaultbtn btn--color\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<button class=\"defaultbtn btn--default\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<div class=\"clear\"></div><br><br>\t\n\t\t<input type=\"text\">\n\t\t<form action=\"\">\n\t\t\t<input type=\"text\">\n\t\t\t<input type=\"button\" class=\"search\">\n\t\t</form>\n\t</div>\n\n</main><!-- #main -->\n</div><!-- #primary -->\n\n<?php get_footer(); ?>",
 			"settings":
 			{
@@ -357,44 +316,30 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/page-homepage.php",
+			"file": "wp-content/themes/understrap/page-templates/homepage/genaero-trailbazers.php",
 			"settings":
 			{
-<<<<<<< HEAD
-				"buffer_size": 3513,
-=======
-<<<<<<< HEAD
-				"buffer_size": 4098,
-=======
-				"buffer_size": 3344,
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
+				"buffer_size": 2543,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
-=======
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/js/facebook-functions.js",
+			"file": "wp-content/themes/understrap/footer.php",
 			"settings":
 			{
-				"buffer_size": 637,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-=======
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
-			"settings":
-			{
-				"buffer_size": 1715,
+				"buffer_size": 781,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/page-homepage.php",
+			"settings":
+			{
+				"buffer_size": 3513,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -410,7 +355,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 			"settings":
 			{
-				"buffer_size": 6687,
+				"buffer_size": 7124,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -419,16 +364,25 @@
 			"file": "wp-content/themes/understrap/js/main.js",
 			"settings":
 			{
-				"buffer_size": 2528,
+				"buffer_size": 2074,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+			"settings":
+			{
+				"buffer_size": 8016,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
 			"settings":
 			{
-				"buffer_size": 5742,
+				"buffer_size": 5934,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -437,11 +391,10 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
 			"settings":
 			{
-				"buffer_size": 1467,
+				"buffer_size": 595,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
 		}
 	],
 	"build_system": "",
@@ -510,19 +463,26 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src"
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-experiment.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/navigation-top.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+		"/C/wamp64/www/generationaerospace/wp-includes/js/jquery/ui/effect-scale.min.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_variables.scss",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/wp-config 2.php",
+		"/C/Users/rachelle.quek/Desktop/Loading screen/demo.html",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/wp-config.php",
+		"/C/wamp64/www/generationaerospace/database/20171223-generationaerospace.sql",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-trailbazers.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-video.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-events.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
 		"/C/Users/rachelle.quek/Desktop/drawsvg.svg",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-experiment.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/navigation-top.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-homepage.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/search.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_slick.scss",
@@ -534,12 +494,10 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-title.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/enqueue.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/theme.js",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_type.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 		"/C/wamp64/www/genaerospace-old/index.html",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured_welcome.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured_video.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/welcome.php",
@@ -565,7 +523,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/header.php",
 		"/C/wamp64/www/ajph/wp-content/themes/ajph/js/main.js",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/index.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_variables.scss",
 		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/css/fontawesome-all.css",
 		"/C/wamp64/www/bursamids/wp-content/themes/bursaselects/header.php",
 		"/C/wamp64/www/bursamids/wp-content/themes/bursaselects/template-parts/header/site-branding.php",
@@ -592,7 +549,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme_variables.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_bordered-pulled.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss",
 		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/scss/fontawesome.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/template-tags.php",
 		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/scss/fa-light.scss",
@@ -630,49 +586,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/woocommerce.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_carousel.scss",
 		"/C/wamp64/www/generationaerospace/wp-config.php",
-<<<<<<< HEAD
-=======
-=======
-		"/C/xampp/htdocs/generationaerospace",
-		"/C/xampp/htdocs/generationaerospace/wp-content",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/js",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates"
-	],
-	"file_history":
-	[
-		"/C/xampp/htdocs/generationaerospace/wp-config.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/enqueue.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/sign-up-custom.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/js/main.js",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/functions.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/custom-genaero.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/content-page.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/fullwidthpage.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/plugins/genaero-members/genaero-members.php",
-		"/C/Users/Stefanie/Desktop/genaero_members.sql",
-		"/C/xampp/htdocs/generationaerospace/wp-content/plugins/advanced-custom-fields-pro/acf.php",
-		"/C/Users/Stefanie/Desktop/contact-form/page-contact-us.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/header.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/basic/js/main.js",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/js/theme.js",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page.php",
-		"/C/xampp/php/php.ini",
-		"/C/xampp/htdocs/generationaerospace/.gitignore",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/global-templates/left-sidebar-check.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/theme-settings.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/customizer.php",
-		"/C/xampp/htdocs/generationaerospace/wp-includes/theme.php",
-		"/C/xampp/htdocs/generationaerospace/database/20171220-generationaerospace.sql",
-		"/C/Users/Stefanie/Desktop/.htaccess",
-		"/C/xampp/htdocs/generationaerospace/test.txt",
-<<<<<<< HEAD
-=======
-		"/C/xampp/htdocs/generationaerospace/wp-config.php",
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-expect.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_posts-and-pages.scss",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-homes.php",
@@ -681,89 +594,11 @@
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-leadership.php",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/js/main.js",
 		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_connect.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/header.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/day.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/default-template.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/day.php"
+		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/header.php"
 	],
 	"find":
 	{
 		"height": 52.0
-<<<<<<< HEAD
-=======
-=======
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-homepage-location.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_headings.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-featured-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_copy.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/searchform.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/style.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_site.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/twentyseventeen/search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/single.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_typography.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/LICENSE",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/navigation/navigation-top.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/site-branding.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/site-branding-orange.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/style.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-calendar.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/navigation/_menus.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-history.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/elements/_elements.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-featured-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/404.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/variables-site/_typography.scss",
-		"/C/xampp/htdocs/actschurch/wp-admin/css/nav-menus-rtl.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/media/_media.scss",
-		"/C/Users/Stefanie/Desktop/acts church/bootstrap.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/.sass-cache/39f88e636cc84a4b3e94f95de89fb40d5463ab5b/_header-and-footer.scssc",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-videos.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/archive.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config 2.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/forms/_buttons.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/elements/_lists.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/grid/_grid.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/navigation/_links.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_comments.scss",
-		"/C/xampp/htdocs/actschurch/wp-config.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_header.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/secondary/_widgets.scss",
-		"/C/xampp/htdocs/screenastronauts/wp-content/themes/basictheme/sass/navigation/_menus.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/config.rb",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/comments.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/custom-header.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/customizer.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/extras.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/jetpack.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/template-tags.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/index.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/layouts/content-sidebar.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/layouts/sidebar-content.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/readme.txt",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/rtl.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sidebar.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-none.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/footer/footer-widgets.php"
-	],
-	"find":
-	{
-<<<<<<< HEAD
-		"height": 28.0
-=======
-		"height": 41.0
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 	},
 	"find_in_files":
 	{
@@ -784,7 +619,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-<<<<<<< HEAD
+			"+",
+			"topbox",
+			" data-hover=\"",
+			" style=\"background:#00BCD4\"",
+			"hqIflC",
+			">\n",
+			" [data-hover=\"color2\"]",
+			"differnece",
+			"<img src=\"h",
+			"<p>",
+			"transform",
+			".double_arrow.big_arrow.",
+			"30px",
+			"<span>0",
+			"box",
+			"$",
+			"display: inline-block;",
+			"play",
+			"mag",
+			"localhost",
 			"noscript",
 			"));\n",
 			"typewriter",
@@ -892,241 +746,7 @@
 			"<!-- ngRepeat: paragraph in product.locale.paragraphs -->",
 			" ng-class=\"{selected: $index == scrollcontroller.selectedChapter, first: $index == 0, last: $index == (product.locale.paragraphs.length - 1)}\" ng-repeat=\"paragraph in product.locale.paragraphs\" ng-click=\"scrollcontroller.gotoParagraph($index)\" class=\"chapter-selector-item ng-scope first\" style=\"\"",
 			"p",
-			" style=\"enable-background:new 0 0 15.5 42;\" ",
-			"\n\t\t<defs> \n\t\t\t<mask id=\"mask\">\n\t\t\t\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"white\"></rect> <rect class=\"logo-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"65\" height=\"65\" transform=\"scale(1.3,0.4) translate(52.525001525878906,-6.174999237060547)\"></rect> \n\t\t\t\t<rect class=\"flock-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(1,0.2) translate(1374,407.8374938964844)\"></rect>\n\t\t\t\t<rect class=\"berserk-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"70\" height=\"80\" transform=\"scale(0.9320113314447592,0.3) translate(1188.4000244140625,-30)\"></rect> <rect class=\"title-mask\" stroke=\"none\" fill=\"black\" x=\"0\" y=\"0\" width=\"560\" height=\"80\" transform=\"scale(1,0.2) translate(426,-28)\"></rect> \n\t\t\t</mask> \n\t\t</defs> ",
-			"fff",
-			"close",
-			"menubutton",
-			"<div class=\"at-above-post\"></div>",
-			"<a href=\"#\">",
-			"transform",
-			"cad63e",
-			"\"\"",
-=======
-<<<<<<< HEAD
-			"strip_tags",
-			"do_action",
-			"sql",
-			"_POST",
-			"NOT",
-			"`",
-=======
-<<<<<<< HEAD
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
-			"images",
-			"$",
-			"mask",
-			"\"",
-			"2px",
-			"red",
-			"span",
-			"$",
-			"c",
-			"rrlimegreen",
-<<<<<<< HEAD
-			"black"
-=======
-			"black",
-			"animate_btn",
-			"transform",
-			"icon-left:after",
-			"\t\t.",
-			"right",
-			"left",
-			"right",
-			"{\n",
-			".after",
-			"after",
-			"texthide",
-			"stroke-width=\"2\"",
-			"stroke: 2",
-			"#fff",
-			"\n\t\t",
-			"span",
-			">\n",
-			"cad63e",
-			"color__link",
-			"login",
-			"minus",
-			"100",
-			"}\n",
-			"highlight_post",
-			">>>",
-			"=======",
-			"==",
-			"webfonts",
-			"fontawesome",
-			"0",
-			"hexagon",
-			"130px",
-			"scale",
-			"opacity(",
-			"24px",
-			"5px",
-			"3rem",
-			"welcome",
-			"font-family-base",
-			"headings-color",
-			"color",
-			"333",
-			"bottom",
-			"$spacer",
-			"spacer",
-			"hr-margin-y",
-			"spacer",
-			"print-styles",
-			"enable-print-styles",
-			"$font-size-base",
-			"stylelint",
-			"js",
-			"wrapper",
-			"wrapper\t",
-			"wrapper ",
-			"wrapper",
-			"font-size-base",
-			"headings",
-			"wrapper",
-			"theme",
-=======
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
-			"my_plugin_create_db",
-			"required",
-			"message",
-			" autocomplete=\"off\"",
-			"placeholder",
-			"}",
-			"{",
-			";",
-			"email",
-			"upload_max",
-			"understrap_sidebar_position",
-			"understrap_container_type",
-			"function get_theme_mod",
-			"get_theme_mod",
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
-			"4",
-			"slider",
-			"featured-events-slider",
-			"Featured Events",
-			"video",
-			"Video",
-			"videos",
-			"Videos",
-			"videos",
-			"Videos",
-			"announce",
-			"location_markers",
-			"plant",
-			"location_markers",
-			" use_cache=\"no\"",
-			"your_ajax",
-			"ajax",
-			"homes",
-			"city",
-			"10px 0",
-			"100px",
-			"lower-header",
-			"leader",
-			"Leader",
-			"leaders",
-			"Leaders",
-			" ?>\n\t\t\t<div class=\"clear\"></div>\n\t\t\t<?php ",
-			") {\n\n\t\t\t\t\t\t\t}",
-			"if (",
-			"green",
-			"button",
-			"local",
-			"marker",
-			"sm-12",
-			"12",
-			"sm-12",
-			"push",
-			"Plant",
-			"800",
-			"slow",
-			"h4",
-			"<i class=\"fa fa-circle\" aria-hidden=\"true\"></i>",
-			"hidden-xs",
-			"hidden-sm",
-			"local",
-			"h3",
-			"responsive",
-			".text",
-			";\n",
-			"div",
-			"12",
-			"5",
-			"8",
-			"featured-story",
-			"}\n",
-			"read-more",
-<<<<<<< HEAD
-			".read-more"
-=======
-			".read-more",
-			"blue",
-			"h4",
-			"h2",
-			"4",
-			"watch",
-			"h2",
-			"row",
-			"9",
-			"3",
-			"12",
-			"6",
-			"50px",
-			"6",
-			"3",
-			"src",
-			"fancybox",
-			"fancybox href",
-			"6",
-			"small_groups_picture",
-			"grid-half",
-			"grid-box",
-			"col-lg-3 col-md-3",
-			"col-lg-3",
-			"contain",
-			"grid-box ",
-			" grid-box-small ",
-			"cover",
-			"grid-box",
-			" col-lg-3 col-md-3",
-			"col-lg-3",
-			"col-lg-6",
-			"background-size",
-			"cover",
-			"contain",
-			"contact",
-			"h3",
-			"$color__white;",
-			"a {",
-			"local",
-			"marker",
-			"lat",
-			"showLocation",
-			"prefix_ajax_",
-			"wp_ajax",
-			"_process",
-			"longitude",
-			"latitude",
-			"story_form",
-			"location",
-			"60px",
-<<<<<<< HEAD
-			"3.75em"
-=======
-			"3.75em",
-			"6",
-			"5",
-			"google_maps_link",
-			"local",
-			"'slow'",
-			"<?=$name?>"
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
+			" style=\"enable-background:new 0 0 15.5 42;\" "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1134,6 +754,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"text100dev.com",
 			"actschurch",
 			"screenastronaut",
 			"actschurch"
@@ -1147,66 +768,23 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
 			"selected": 2,
-=======
-			"selected": 0,
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 			"sheets":
 			[
 				{
 					"buffer": 0,
-<<<<<<< HEAD
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 5675,
-=======
-<<<<<<< HEAD
-					"file": "wp-content/themes/understrap/header.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3822,
-=======
-<<<<<<< HEAD
-					"file": "wp-content/themes/understrap/page-homepage.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 319,
-=======
-					"file": "wp-content/themes/understrap/js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 61,
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
 								4449,
 								4449
-=======
-<<<<<<< HEAD
-								290,
-								290
-=======
-<<<<<<< HEAD
-								296,
-								296
-=======
-								61,
-								61
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 							]
 						],
 						"settings":
@@ -1215,14 +793,71 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 137.0,
+						"translation.y": 953.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "wp-content/themes/understrap/page-templates/homepage/genaero-trailbazers.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2298,
+								2298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/understrap/footer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								781,
+								781
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "wp-content/themes/understrap/page-homepage.php",
 					"semi_transient": false,
 					"settings":
@@ -1234,58 +869,8 @@
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								3213,
-								3213
-=======
-<<<<<<< HEAD
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										197,
-										198
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
-										"region.greenish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										176,
-										177
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-=======
-								5675,
-								5675
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
+								395,
+								395
 							]
 						],
 						"settings":
@@ -1294,694 +879,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1021.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1715,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1669,
-								1669
-							]
-						],
-						"settings":
-						{
-<<<<<<< HEAD
-=======
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 165.0,
-=======
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										353,
-										354
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										268,
-										269
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 60.0,
-=======
-						"translation.y": 0.0,
-<<<<<<< HEAD
-=======
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-<<<<<<< HEAD
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 3,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4660,
-=======
-				},
-				{
-<<<<<<< HEAD
-					"buffer": 3,
-					"file": "wp-content/themes/understrap/page-templates/navigation-top.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 714,
-=======
-					"buffer": 1,
-					"file": "wp-content/themes/understrap/page-templates/sign-up.php",
-					"semi_transient": false,
-					"settings":
-					{
-<<<<<<< HEAD
-						"buffer_size": 4098,
-=======
-						"buffer_size": 3344,
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
-						"regions":
-						{
-						},
-						"selection":
-						[
-<<<<<<< HEAD
-							[
-								2932,
-								2932
-							],
-							[
-								2969,
-								2969
-=======
-<<<<<<< HEAD
-							[
-								689,
-								689
-=======
-							[
-								3915,
-								3915
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										3817,
-										3818
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										3816,
-										3817
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										3917,
-										3918
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/tag.png",
-										"region.orangish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										3844,
-										3845
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"open_with_edit": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2040.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "wp-content/themes/understrap/js/facebook-functions.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 637,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								498,
-								498
-=======
-								300,
-								311
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
-							]
-						],
-						"settings":
-						{
-<<<<<<< HEAD
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-=======
-<<<<<<< HEAD
-=======
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"open_with_edit": true,
-<<<<<<< HEAD
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-=======
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
->>>>>>> c4893106bed74ca0a8c32d28458db0dd716e3213
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
-						},
-						"translation.x": 0.0,
-						"translation.y": 1927.0,
+						"translation.y": 119.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -1989,19 +887,58 @@
 				},
 				{
 					"buffer": 4,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4660,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2192,
+								2192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1382.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 5,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6687,
+						"buffer_size": 7124,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6687,
-								6687
+								5768,
+								5767
+							],
+							[
+								5846,
+								5847
 							]
 						],
 						"settings":
@@ -2010,119 +947,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6693.0,
+						"translation.y": 5317.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "wp-content/themes/understrap/js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2528,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2528,
-								2528
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1259.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5742,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4037,
-								4037
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5611.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-<<<<<<< HEAD
-=======
-					"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3609,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2237,
-								2237
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3121.0,
-=======
->>>>>>> 6db50290e1b70b71dbafa2c0640fde3f037c64c6
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "wp-content/themes/understrap/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 623,
+						"buffer_size": 2074,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								417,
-								417
+								704,
+								704
 							]
 						],
 						"settings":
@@ -2132,7 +977,65 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3018,
+								3018
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2716.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5934,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2961,
+								2961
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3099.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
@@ -2140,20 +1043,19 @@
 				},
 				{
 					"buffer": 9,
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1467,
+						"buffer_size": 595,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1358,
-								1358
+								595,
+								595
 							]
 						],
 						"settings":
@@ -2162,10 +1064,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1513.0,
+						"translation.y": 528.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -2221,7 +1123,7 @@
 	"project": "genaero.sublime-project",
 	"replace":
 	{
-		"height": 53.0
+		"height": 93.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2231,25 +1133,6 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
-=======
-				"enqueu",
-				"wp-content\\themes\\understrap\\inc\\enqueue.php"
-			],
-			[
-				"wp-config",
-				"wp-config.php"
-			],
-			[
-				"functions",
-				"wp-content\\themes\\understrap\\functions.php"
-			],
-			[
-				"main.js",
-				"wp-content\\themes\\basic\\js\\main.js"
-			],
-			[
->>>>>>> dcb3dc2adccfa37d55e106dcd51d5575ef5a6887
 				"_posts",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_posts-and-pages.scss"
 			],
@@ -2682,7 +1565,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -2690,7 +1573,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 230.0,
+	"side_bar_width": 226.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

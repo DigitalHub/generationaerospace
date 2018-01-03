@@ -166,6 +166,7 @@ class Webdados_FB {
 	/* Load Options */
 	private function load_options() {
 		$user_options = get_option( 'wonderm00n_open_graph_settings' );
+		if ( !is_array($user_options) ) $user_options = array();
 		$all_options = $this->all_options();
 		$default_options = $this->default_options();
 		if ( is_array( $all_options ) ) {

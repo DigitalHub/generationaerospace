@@ -65,6 +65,12 @@ $out_link_utm='?utm_source='.urlencode(home_url()).'&amp;utm_medium=link&amp;utm
 								<?php _e( '3rd party', 'wonderm00ns-simple-facebook-open-graph-tags' ) ?>
 							</a>
 						</li>
+						<li>
+							<a class="nav-tab" href="#tabs-7" data-tab-index="6">
+								<i class="dashicons-before dashicons-admin-tools"></i>
+								<?php _e( 'Tools', 'wonderm00ns-simple-facebook-open-graph-tags' ) ?>
+							</a>
+						</li>
 					</ul>
 				</h2>
 
@@ -90,6 +96,9 @@ $out_link_utm='?utm_source='.urlencode(home_url()).'&amp;utm_medium=link&amp;utm
 					
 					<!-- 3rd party integrations -->
 					<?php include 'options-page-3rdparty.php'; ?>
+					
+					<!-- Tools -->
+					<?php include 'options-page-tools.php'; ?>
 
 					<div class="clear"></div>
 					<?php submit_button(); ?>

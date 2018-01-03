@@ -25,9 +25,19 @@
 
 			<div class="col-xl-7">
 				<h2>Why be a Genaero Explorer</h2>
-				<h2>Anna Lao</h2>
-				<p class="highlight">Job: REpear Technology March</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor non ratione consectetur voluptate quia quisquam blanditiis commodi obcaecati inventore praesentium vero aliquid dicta deserunt sed, incidunt atque cupiditate delectus itaque.</p>
+				<h2>Anna tai</h2>
+				<p class="highlight">Job: Repair Technology Manager</p>
+				<p>When Anna holds an engine part in her hands, she doesn't just see metal and bolts; she sees hungreds of possibilities. Working as a repair technology manager, Anna is sent parts that have been flying in an engine and now need to be repaired or replaced. Her job is to find ways to repair the part and keep it flying.</p>
+				
+				<button class="arrowbtn btn--color">
+					<span class="fas fa-long-arrow-alt-right icon-left"></span>
+					<div class="arrowbtn-wrapper"><span>Read More</span></div>
+				</button>
+				<span style="width: 25px; "></span>
+				<button class="arrowbtn btn--color">
+					<span class="fas fa-long-arrow-alt-right icon-left"></span>
+					<div class="arrowbtn-wrapper"><span>See More Trailblazers</span></div>
+				</button>
 			</div>
 		</div>
 	</div>

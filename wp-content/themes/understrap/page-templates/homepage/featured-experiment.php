@@ -12,7 +12,7 @@
 	<div class="container sub_content">
 		<div class="row">
 			<div class="col-xl-4 "><!-- offset-xl-1 -->
-				<h1>Featured Video_</h1>
+				<h1>Find An Experiment_</h1>
 				<p class="highlight">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam reiciendis, perferendis officia, dolor ad doloremque doloribus assumenda vel eveniet accusantium.
 				</p>
@@ -40,21 +40,24 @@
 									<h3>ABC</h3>
 								</a>
 							</div>
-							<span class="topbox" data-hover="topbox" style="background:#00BCD4"></span>
-							<div class="col-xl-6">
+							<span class="animate--box topbox"></span>
+						</div>
+						<div class="row">
+							<div class="col-xl-6 hover--bottombox">
 								<a href="#">
 									<img src="http://lorempixel.com/500/225" />
 									<div class="bg-opaque"></div>
 									<h3>ABC</h3>
 								</a>
 							</div>
-							<div class="col-xl-6">
+							<div class="col-xl-6 hover--bottombox">
 								<a href="#">
 									<img src="http://lorempixel.com/500/249" />
 									<div class="bg-opaque"></div>
 									<h3>ABC</h3>
 								</a>
 							</div>
+							<span class="animate--box bottombox"></span>
 						</div>
 					</div>
 				</div>

@@ -4,7 +4,7 @@ Donate link: http://bit.ly/donate_fb_opengraph
 Tags: facebook, open graph, open graph protocol, share, social, meta, rss, twitter card, twitter, schema, google+, g+, google, google plus, image, like, seo, search engine optimization, woocommerce, yoast seo, wordpress seo, woocommerce, subheading, php7
 Requires at least: 4.5
 Tested up to: 4.9.1
-Stable tag: 2.1.6.3
+Stable tag: 2.2
 
 Inserts Facebook Open Graph, Google+/Schema.org, Twitter and SEO Meta Tags into your WordPress Website for more efficient sharing results.
 
@@ -125,7 +125,7 @@ Chouck out this [code snippet](https://gist.github.com/webdados/ef5d5db01f01bee6
 
 Go to the plugin settings and check the `Do not get image size` option.
 This happens on some edge cases we haven't yet been able to identify.
-Update: Probably fixed on 2.1.4.5
+Update: Probably fixed for some users on 2.1.4.5 and completely on 2.2 (pending confirmation)
 
 = Yoast SEO shows up a big nasty warning if both plugins are active. Is the world in danger if I keep both plugins active? =
 
@@ -146,6 +146,16 @@ We DO NOT provide email support for this plugin. If you send us an email asking 
 2. Or we can give you a quote on premium email/phone support if you prefer to
 
 == Changelog ==
+
+= 2.2 =
+* New "Tools" panel on the settings page
+* Tool to clear all the plugin transients, thus resetting size caching for all images (use it only )
+* Small bug fix when the settings aren't yet saved at least one time
+* When getting the image size, the full image is used again, instead of the partial 32Kb (that caused WSOD in some environments), but this can be overridden (and use the partial again) by returning false to the new `fb_og_image_size_use_partial` filter
+* Transient validity is now one week (now that we get the all image and the process can slow down the page load a bit), instead of one day
+* Fix when getting the image and description for the blog url when it's set as a page (Thanks @alexiswilke)
+* Ability to disable image size cache (transients) completely by returning false to the new filter `fb_og_image_size_cache` (which we do NOT recommend)
+* Improved the FAQ
 
 = 2.1.6.3 =
 * Fix the "Suppress cache notices" option (Thanks @digbymaass)
