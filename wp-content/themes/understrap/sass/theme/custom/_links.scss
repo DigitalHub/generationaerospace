@@ -418,5 +418,48 @@ a {
 	}
 }
 
+.tiny-border {
+	height: 45px;
+	margin-bottom: 15px;
+	position: relative;
+
+	&:before {
+		border-left: 1px solid $white;
+		border-top: 1px solid $white;
+		content: " ";
+		position: absolute;
+		height: 10px;
+		width: 10px;
+		z-index: 11;
+	}
+
+	&:after {
+		border-right: 1px solid $white;
+		border-bottom: 1px solid $white;
+		content: " ";
+		position: absolute;
+		height: 10px;
+		right: 0;
+		bottom: 0;
+		width: 10px;
+		z-index: 11;
+	}
+}
+
+input {
+	// background-color: #ffffff40;
+	background-color: #000 !important; //temporary
+	border: none;
+	color: $white;
+	padding: 15px 10px;
+	// height: 100%;
+	height: auto !important; //temporary
+	width: 100%;
+
+	&:focus {
+		outline: 0;
+	}
+
+}
 //*******************************************//
 //** Base Buttons Ends **//

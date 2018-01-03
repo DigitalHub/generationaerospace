@@ -7,20 +7,13 @@
  * @package understrap
  */
 
-if(!isset($_SESSION['username'])) {
-	echo "not logged in";
-} else {
-	session_start();
-	echo 'session: '.$_SESSION['username'];
-}
+session_start();
 
-// $facebook = new Facebook\Facebook([
-// 	'app_id' => APP_ID,
-// 	'app_secret' => APP_SECRET,
-// 	'default_graph_version' => 'v2.4',
-// 	'http_client_handler' => 'curl',
-// 	// 'persistent_data_handler' => 'session'
-// ]);
+if(isset($_SESSION['username'])) {
+	//loggedin actions
+} else {
+	//not logged in actions
+}
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
