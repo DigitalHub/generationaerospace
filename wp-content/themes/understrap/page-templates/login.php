@@ -83,7 +83,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<input type="password" name="login_password" id="login_password" placeholder="Password" title="Password" minlength="6" maxlength="14" required><br><br>
 
 						<input type="submit" name="login_submit" id="login_submit" value="Login">
-						<a href="forgot-password">Forgot password?</a>
+						<a href="../forgot-password">Forgot password?</a>
 
 						<div class="separator">OR</div>
 
