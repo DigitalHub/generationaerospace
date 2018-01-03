@@ -87,7 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<div class="separator">OR</div>
 
-						<a href="<?php echo htmlspecialchars($loginUrl); ?>">Login with Facebook</a>
+						<?php echo do_shortcode("[genaero_facebook]"); ?>
 					</form>
 
 				</main><!-- #main -->

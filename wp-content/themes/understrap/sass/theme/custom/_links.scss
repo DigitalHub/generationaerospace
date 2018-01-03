@@ -436,11 +436,12 @@ a {
 
 input {
 	// background-color: #ffffff40;
-	background-color: #000;
+	background-color: #000 !important; //temporary
 	border: none;
 	color: $white;
 	padding: 15px 10px;
 	// height: 100%;
+	height: auto !important; //temporary
 	width: 100%;
 
 	&:focus {

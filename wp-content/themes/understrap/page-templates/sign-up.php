@@ -97,8 +97,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<p>By clicking Join Now, you agree to our Terms and Conditions <a href="../terms-and-conditions/" rel="noopener" target="_blank">here</a>.</p>
 						<div class="separator">OR</div>
 
-						<!-- <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false" on-login="register_fb_member();"></div> -->
-						<a href="<?php echo htmlspecialchars($loginUrl); ?>">Login with Facebook</a>
+						<?php echo do_shortcode("[genaero_facebook]"); ?>
 					</form>
 
 				</main><!-- #main -->

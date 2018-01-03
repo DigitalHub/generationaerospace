@@ -15,14 +15,6 @@ if(isset($_SESSION['username'])) {
 	//not logged in actions
 }
 
-// $facebook = new Facebook\Facebook([
-// 	'app_id' => APP_ID,
-// 	'app_secret' => APP_SECRET,
-// 	'default_graph_version' => 'v2.2',
-// 	// 'http_client_handler' => 'curl',
-// 	'persistent_data_handler' => 'session'
-// ]);
-
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <!DOCTYPE html>

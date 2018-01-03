@@ -87,10 +87,3 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
-// defining facebook app id and secret
-define('APP_ID', '381256678999175');
-define('APP_SECRET', 'a3343888ed15f157da70d60979c0c5b8');
-define('REDIR_URL', 'http://localhost/generationaerospace/login');
-
-require_once ABSPATH.'vendor/autoload.php';

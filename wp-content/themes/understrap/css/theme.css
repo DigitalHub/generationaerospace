@@ -16865,13 +16865,14 @@ a:hover, a:active {
 
 /* line 437, ../sass/theme/custom/_links.scss */
 input {
-  background-color: #000;
+  background-color: #000 !important;
   border: none;
   color: #fff;
   padding: 15px 10px;
+  height: auto !important;
   width: 100%;
 }
-/* line 446, ../sass/theme/custom/_links.scss */
+/* line 447, ../sass/theme/custom/_links.scss */
 input:focus {
   outline: 0;
 }
