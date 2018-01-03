@@ -30,6 +30,8 @@ class Webdados_FB_Admin {
 		$options_page = add_options_page( WEBDADOS_FB_PLUGIN_NAME, WEBDADOS_FB_PLUGIN_NAME, 'manage_options', basename(__FILE__), array( $this, 'options_page' ) );
 		add_action( 'admin_print_styles-' . $options_page, array( $this, 'admin_style' ) );
 		add_action( 'admin_print_scripts-' . $options_page, array( $this, 'admin_scripts' ) );
+		add_filter( 'pre_update_option_wonderm00n_open_graph_settings', array( $this, 'run_tools' ) );
+		add_action( 'admin_notices', array( $this, 'admin_notice' ) );
 	}
 
 	/* Register settings and sanitization */
@@ -86,6 +88,14 @@ class Webdados_FB_Admin {
 		$exclude_types = apply_filters( 'fb_og_metabox_exclude_types', $exclude_types );
 		//Return diff
 		return array_diff( $public_types, $exclude_types );
+	}
+
+	/* Admin notices */
+	public function admin_notice() {
+		if ( $admin_notice = get_option( 'wonderm00n_open_graph_admin_notice' ) ) {
+			echo $admin_notice;
+			update_option( 'wonderm00n_open_graph_admin_notice', '' );
+		}
 	}
 
 	/* Meta boxes on posts */
@@ -409,6 +419,7 @@ class Webdados_FB_Admin {
 		wp_localize_script( 'webdados_fb_admin_script', 'texts', array(
 			'select_image'	=> __('Select image', 'wonderm00ns-simple-facebook-open-graph-tags'),
 			'use_this_image'	=> __('Use this image', 'wonderm00ns-simple-facebook-open-graph-tags'),
+			'confirm_tool'	=> __('Are you sure you want to run this tool?', 'wonderm00ns-simple-facebook-open-graph-tags'),
 		) );
 	}
 
@@ -438,6 +449,32 @@ class Webdados_FB_Admin {
 			}
 		}
 		return $options;
+	}
+
+	/* Run tools */
+	public function run_tools( $value ) {
+		if ( is_array( $_POST['tools'] ) ) {
+			foreach ( $_POST['tools'] as $tool ) {
+				$function = 'run_tool_'.$tool;
+				$this->$function();
+			}
+		}
+		return $value;
+	}
+	public function run_tool_clear_transients() {
+		global $wpdb;
+		$records = 0;
+		$sql = "DELETE FROM $wpdb->options WHERE option_name LIKE '%webdados_og_image_size_%'";
+		$clean = $wpdb -> query( $sql );
+		$records .= $clean;
+		// If multisite, and the main network, also clear the sitemeta table
+		if ( is_multisite() && is_main_network() ) {
+			$sql = "DELETE FROM $wpdb->sitemeta WHERE meta_key LIKE '%webdados_og_image_size_%'";
+			$clean = $wpdb -> query( $sql );
+			$records .= $clean;
+		}
+		$admin_notice_message = '<div class="updated notice is-dismissible"><p>'.sprintf( __( '%d transients deleted', 'wonderm00ns-simple-facebook-open-graph-tags' ), intval($records/2) ).'</p></div>';
+		update_option( 'wonderm00n_open_graph_admin_notice', $admin_notice_message );
 	}
 
 }

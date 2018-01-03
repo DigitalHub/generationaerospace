@@ -176,8 +176,6 @@ global $webdados_fb;
 					<?php if ( extension_loaded('gd') ) { ?>
 						<tr>
 							<td colspan="2" class="info">
-								- <?php _e('Experimental', 'wonderm00ns-simple-facebook-open-graph-tags'); ?>
-								<br/>
 								- <?php printf( __( 'The original image will be resized/cropped to %dx%dpx and the chosen PNG (that should also have this size) will be overlaid on it. It will only work for locally hosted images.', 'wonderm00ns-simple-facebook-open-graph-tags' ), WEBDADOS_FB_W, WEBDADOS_FB_H);?>
 								<br/>
 								- <?php printf( __( 'You can see an example of the end result <a href="%s" target="_blank">here</a>', '' ), 'https://www.flickr.com/photos/wonderm00n/29890263040/in/dateposted-public/' ); ?>
@@ -244,11 +242,11 @@ global $webdados_fb;
 					</tr>
 					<tr>
 						<td colspan="2" class="info">
-							- <?php _e('Experimental', 'wonderm00ns-simple-facebook-open-graph-tags'); ?>
-							<br/>
 							- <strong><?php _e( 'This is an advanced option: Don\'t mess with this unless you know what you\'re doing', 'wonderm00ns-simple-facebook-open-graph-tags' ); ?></strong>
 							<br/>
 							- <?php _e( 'You should only activate this option if you\'re getting fatal errors (white screen of death) and only keep it active if this options does solve those errors', 'wonderm00ns-simple-facebook-open-graph-tags' ); ?>
+							<br/>
+							- <?php _e( 'Should not be needed on version 2.2 and above', 'wonderm00ns-simple-facebook-open-graph-tags' ); ?>
 							<br/>
 							- <?php _e( 'This can render the "Add image to RSS/RSS2 feeds" and "Open Graph - Include Image Dimensions" options useless', 'wonderm00ns-simple-facebook-open-graph-tags' ); ?>
 						</td>
