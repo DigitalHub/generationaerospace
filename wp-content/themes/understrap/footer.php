@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 			<footer class="site-footer" id="colophon">
 				<div class="site-info">
-					<p>Copyright <?php the_date(Y); ?>. Powered by Rolls-Royce.</p>
+					<p>Copyright <?php echo date(Y); ?>. Powered by Rolls-Royce.</p>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- row end -->

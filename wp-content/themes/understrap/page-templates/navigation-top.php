@@ -16,7 +16,10 @@
 	</a>
 	<div class="container">
 		<div class="menu__wrapper">
-			<input type="text" />
+			<div class="search-form">
+				<input type="text" />
+				<button type="submit"><i class="fal fa-search"></i></button>
+			</div>
 			<div class="menu-content__wrapper">
 				<nav class="menu-content__nav">
 					<div class="menu-content__nav--label">menu</div>
@@ -27,12 +30,30 @@
 					<div class="corner corner-bottom-right"></div>
 					
 					<div class="menu-content__list">
-						<a href="#"><span>01</span>home</a>
-						<a href="#"><span>02</span>find a video</a>
-						<a href="#"><span>03</span>find an experiments</a>
-						<a href="#"><span>04</span>genaero trailblazers</a>
-						<a href="#"><span>05</span>events</a>
-						<a href="#"><span>06</span>the vault</a>
+						<a href="#">
+							<span>01</span>
+							<p>home</p>
+						</a>
+						<a href="#">
+							<span>02</span>
+							<p>find a video</p>
+						</a>
+						<a href="#">
+							<span>03</span>
+							<p>find an experiments</p>
+						</a>
+						<a href="#">
+							<span>04</span>
+							<p>genaero trailblazers</p>
+						</a>
+						<a href="#">
+							<span>05</span>
+							<p>events</p>
+						</a>
+						<a href="#">
+							<span>06</span>
+							<p>the vault</p>
+						</a>
 					</div>
 				</nav>
 			</div>

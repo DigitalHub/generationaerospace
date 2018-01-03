@@ -117,6 +117,95 @@
 	}
 }
 
+// Spin animation
+@keyframes spin {
+	to { transform: rotate(360deg); }
+}
+
+.stroke-solid {
+	fill: transparent;
+	stroke: $rrlimegreen;
+	stroke-dashoffset: 0;
+	stroke-dashArray: 300;
+	stroke-width: 2px;
+	transition: stroke-dashoffset 1s ease, 
+	opacity 1s ease;
+}
+
+.pathicon {
+	fill: $white;
+	stroke: $white;
+	transform: scale(.8);
+	transform-origin: 50% 50%;
+	transition: transform 200ms ease-out;
+}
+
+/* The typing effect */
+@keyframes typing {
+	from { width: 0; animation-timing-function: ease-out; }
+	to { width: 100%; animation-timing-function: ease-out; }
+}
+
+
+.watch_video--typewriter {
+	cursor: pointer;
+	margin: 50px auto 0;
+	width: 210px;
+
+	.watch_video--button {
+		float: left;
+		height: 50px;
+		margin-right: 10px;
+		position: relative;
+		vertical-align: middle;
+		width: 50px;
+
+		.watch_video--play {
+			position: absolute;
+			left: -50%;
+			top: -50%;
+			@include scale(0.5);
+		}
+	}
+
+	.watch_video--text {
+		float: left;
+		vertical-align: middle;
+
+		p {
+			color: $rrlimegreen;
+			display: flex;
+			font-size: 1.6rem;
+			justify-content: left;
+			@include transition(all 1.5s linear);
+			vertical-align: middle;
+
+			span {
+				letter-spacing: 1px;
+				margin: 0;
+				overflow: hidden;
+				white-space: nowrap; 
+			}
+		}
+	}
+
+	&:hover {
+		.watch_video--play {
+			.stroke-solid {
+				@include opacity(1);
+				stroke-dashoffset: 300;
+			}
+			.pathicon {
+				@include scale(1);
+			}
+		}
+
+		span {
+			animation: typing 0.4s steps(50, end);
+		}
+	}
+}
+
 .featured_video--carousel_wrapper {
 	display: inline-block;
 	// vertical-align: middle;
@@ -169,28 +258,6 @@
 	}
 }
 
-.fobrEk {
-	-webkit-animation: hqIflC 800ms cubic-bezier(0.23,1,0.32,1) 100ms both;
-	animation: hqIflC 800ms cubic-bezier(0.23,1,0.32,1) 100ms both;
-	bottom: 0;
-	display: block;
-	height: 2rem;
-	left: -3rem;
-	pointer-events: none;
-	position: absolute;
-	-webkit-transform-origin: center bottom;
-	-ms-transform-origin: center bottom;
-	transform-origin: center bottom;
-	width: 2rem;
-	will-change: transform;
-	z-index: 20;
-}
-
-.cyAFJw:hover [data-hover="color2"], .cyAFJw:focus [data-hover="color2"] {
-	-webkit-animation: eiZjjY 9000ms ease;
-	animation: eiZjjY 9000ms ease;
-}
-
 .bg-opaque {
 	bottom: -5px;
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 30%, rgba(0,0,0,1) 100%); /* FF3.6+ */
@@ -203,68 +270,32 @@
 
 	@include transition(opacity .1s ease);
 	position: absolute;
-	height: 55%;
+	height: 60%;
 	width: 100%;
 }
 
-.eEWZkH {
-	-webkit-animation: lgCAmt 800ms cubic-bezier(0.23,1,0.32,1) both;
-	animation: lgCAmt 800ms cubic-bezier(0.23,1,0.32,1) both;
-	display: block;
+.animate--box {
+	display:block;
 	height: 2rem;
 	pointer-events: none;
 	position: absolute;
-	right: 0;
-	top: -5rem;
-	-webkit-transform-origin: right center;
-	-ms-transform-origin: right center;
-	transform-origin: right center;
 	width: 2rem;
-	will-change: transform;
 	z-index: 20;
-}
 
+	&.topbox {
+		background-color: $rrskyblue;
+		top: -3rem;
+		right: 15px;
+		@include transition(right .1s ease);
+	}
 
-.topbox {
-	-webkit-animation:lgCAmt 800ms cubic-bezier(0.23,1,0.32,1) both;
-	animation:lgCAmt 800ms cubic-bezier(0.23,1,0.32,1) both;
-	display:block;
-	height:2rem;
-	pointer-events:none;
-	position:absolute;
-	right: 15px;
-	top:-5rem;
-	-webkit-transform-origin:right center;
-	-ms-transform-origin:right center;
-	transform-origin:right center;
-	width:2rem;
-	will-change:transform;
-	z-index:20;
-}
-@media (min-width:55em){
-	.topbox {
-		height:3rem;
-		width:3rem;
+	&.bottombox {
+		background-color: $rrlimegreen;
+		bottom: -3rem;
+		left: -15px;
+		@include transition(left .1s ease);
 	}
 }
-/* sc-component-id: sc-keyframes-hqIflC */
-@-webkit-keyframes hqIflC{
-	0%{
-		-webkit-transform:scale(1,0);
-		-ms-transform:scale(1,0);
-		transform:scale(1,0);
-	}
-}
-
-@keyframes hqIflC{
-	0%{
-		-webkit-transform:scale(1,0);
-		-ms-transform:scale(1,0);
-		transform:scale(1,0);
-	}
-}
-/* sc-component-id: sc-Rmtcm */
-
 
 .featured_experiment--keywords {
 	a {
@@ -299,14 +330,46 @@
 	}
 
 	.hover--topbox {
-		&:first-child,
-		&:nth-child(2) {
-			&:hover {
-				+ span[data-hover='topbox'] {
-					right: 50px;
-				}
+		&:hover {
+			~ .topbox {
+				right: 50px;
 			}
 		}
+	}
+	
+	.hover--bottombox {
+		&:hover {
+			~ .bottombox {
+				left: 50px;
+			}
+		}
+	}
+}
+
+.explorer_slide {
+	text-align: center;
+
+	.post-thumbnail {
+		height: 185px;
+		margin: 0 auto 40px;
+		overflow: hidden;
+		position: relative;
+		width: 185px;
+
+		img {
+			height: 185px;
+			left: 50%;
+			max-width: none;
+			top: 50%;
+			@include translate(-50%,-50%);
+			position: absolute;
+			width: auto;
+		}
+	}
+
+	p {
+		width: 80%;
+		margin: auto;
 	}
 }
 

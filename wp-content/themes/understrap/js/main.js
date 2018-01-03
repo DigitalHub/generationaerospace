@@ -1,12 +1,6 @@
 jQuery.noConflict();
 jQuery(document).ready(function($) {
 
-    jQuery( document ).ready(function() {
-        jQuery( "input[type='text']" ).wrap(function() {
-          return "<div class='tiny-border'></div>";
-      });
-    });
-
     jQuery('.menu_butt').click(function(event){
         event.preventDefault();
         jQuery(this).toggleClass('opened');
@@ -52,27 +46,14 @@ jQuery(document).ready(function($) {
         prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
         nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>',
     });
+
+
+  //   jQuery(".watch_video--typewriter").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
+  //     jQuery(this).removeClass("animated")  
+  // })
+
+  //   jQuery(".watch_video--typewriter").hover(function(){
+  //     jQuery(this).addClass("animated");        
+  // })
 });
 
-function randomIntFromInterval(min,max) {
-    return Math.floor(Math.random()*(max-min+1)+min);
-}
-
-function typeWrite(span) {
-  jQuery('#'+span).addClass('cursor')
-  var text = jQuery('#'+span).text();
-  var randInt = 0
-  for (var i = 0; i < text.length; i++) {
-    randInt += parseInt(randomIntFromInterval(40,300));
-    var typing = setTimeout(function(y){
-      jQuery('#'+span).append(text.charAt(y));
-  },randInt, i);
-};
-setTimeout(function(){
-    jQuery('#'+span).removeClass('cursor');
-},randInt+2500);
-}
-
-jQuery(document).ready(function(){
-  typeWrite('test');
-});
