@@ -39,12 +39,15 @@ if ($_POST['login_submit']) {
 		//check username
 		$username_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
 		$results = $wpdb->get_results($username_sql);
-		if(count($results) > 0) {
+		if($wpdb->num_rows > 0) {
 			//check password
 			$hashed_password = $results[0]->password;
 			if(wp_check_password($password, $hashed_password)) {
+				$user_id = $results[0]->id;
+
 				session_start();
 				$_SESSION['username'] = $username;
+				$_SESSION['user_id'] = $user_id;
 				wp_redirect( 'member-dashboard', 301 );
 				exit; 
 			} else {

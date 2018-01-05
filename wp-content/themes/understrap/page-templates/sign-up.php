@@ -13,6 +13,7 @@ $response = "";
 
 //function to generate response
 //RACH: DON'T STYLE THIS FIRST. WILL DISCUSS WITH YOU WHEN YOU REACH HERE
+//TODO: STEF TO MOVE THIS TO FUNCTIONS.PHP
 function my_contact_form_generate_response($type, $message){
 	global $response;
 	$response = "<div class='error'>{$message}</div>";
@@ -52,8 +53,17 @@ if ($_POST['signup_submit']) {
 				} else {
 					$password_hashed = wp_hash_password($password);
 					$wpdb->query($wpdb->prepare("INSERT INTO $table (username,email,password) VALUES (%s,%s,%s)", array($username,$email,$password_hashed)));
+
+					//get generated ID
+					$members_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
+					$results = $wpdb->get_results($members_sql);
+					if($wpdb->num_rows > 0) {
+						$user_id = $results[0]->id;
+					}
+
 					session_start();
 					$_SESSION['username'] = $username;
+					$_SESSION['user_id'] = $user_id;
 					wp_redirect( 'member-dashboard', 301 );
 					exit; 
 				}

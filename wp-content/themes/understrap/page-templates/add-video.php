@@ -23,22 +23,27 @@ $missing_content = "Please fill in all fields.";
 $long_desc = "Your description has exceeded the 500 characters limit. Please reduce the number of characters in your description.";
 $success_content = "Thanks for your submission. We'll notify you once your video has been reviewed and approved.";
 
+global $wpdb;
+$videos_table = $wpdb->prefix.'genaero_videos';
+$user_id = $_SESSION['user_id'];
+
 //if submit a video page
 if(is_page('submit-a-video')) {
-	$is_new_video = 1;
+	$is_new_video = '1';
 } else {
-	$is_new_video = 0;
-}
+	$is_new_video = '0';
 
-global $wpdb;
-$members_table = $wpdb->prefix.'genaero_members';
-$videos_table = $wpdb->prefix.'genaero_videos';
-$username = $_SESSION['username'];
+	if($_GET['id']) {
+		$video_id = $_GET['id'];
 
-$members_sql = $wpdb->prepare("SELECT * FROM $members_table WHERE username = %s", $username);
-$results = $wpdb->get_results($members_sql);
-if(count($results) > 0) {
-	$member_id = $results[0]->id;
+		$edit_sql = $wpdb->prepare("SELECT * FROM $videos_table WHERE id = %s", $video_id);
+		$results = $wpdb->get_results($edit_sql);
+		if($wpdb->num_rows > 0) {
+			$title = stripslashes($results[0]->title);
+			$desc = stripslashes(stripslashes($results[0]->description));
+			$youtube = $results[0]->youtube;
+		}
+	}
 }
 
 if($_POST['video_submit']) {
@@ -46,7 +51,6 @@ if($_POST['video_submit']) {
 	$desc = $wpdb->escape($_POST['video_desc']);
 	$youtube = $wpdb->escape($_POST['video_youtube']);
 	$new_video = $wpdb->escape($_POST['video_is_new_video']);
-	echo 'is new video: '.$new_video;
 
 	if(empty($title) || empty($youtube)) {
 		my_contact_form_generate_response("error", $missing_content);
@@ -56,11 +60,11 @@ if($_POST['video_submit']) {
 		} else {
 			//is new video
 			if($new_video === '1') {
-				$sql = $wpdb->prepare("INSERT INTO $videos_table (member_id,title,description,youtube) VALUES (%s,%s,%s,%s)", array($member_id,$title,$desc,$youtube));
+				$sql = $wpdb->prepare("INSERT INTO $videos_table (member_id,title,description,youtube) VALUES (%s,%s,%s,%s)", array($user_id,$title,$desc,$youtube));
 				$wpdb->query($sql);
 				my_contact_form_generate_response("success", $success_content);
 			} else if($new_video === '0') {
-				$sql = $wpdb->prepare("UPDATE $videos_table SET title=%s,description=%s,youtube=%s WHERE member_id=%s", array($title,$desc,$youtube,$member_id));
+				$sql = $wpdb->prepare("UPDATE $videos_table SET title=%s,description=%s,youtube=%s WHERE member_id=%s", array($title,$desc,$youtube,$user_id));
 				$wpdb->query($sql);
 				my_contact_form_generate_response("success", $success_content);
 			} else {
@@ -69,29 +73,6 @@ if($_POST['video_submit']) {
 		}
 	}
 }
-
-// $sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
-// $results = $wpdb->get_results($sql);
-// if(count($results) > 0) {
-// 	$id = $results[0]->id;
-// 	$email = $results[0]->email;
-// 	$password = $results[0]->password;
-// 	$fullname = $results[0]->fullname;
-// 	$school = $results[0]->school;
-// 	$phone = $results[0]->phone;
-// 	$address = $results[0]->address;
-// 	$country = $results[0]->country;
-// 	$birthdate = $results[0]->birthdate;
-// 	$facebook = $results[0]->facebook;
-// 	$instagram = $results[0]->instagram;
-// 	$bio = $results[0]->bio;
-// 	$photo = $results[0]->photo;
-// 	$is_fb_user = $results[0]->is_fb_user;
-
-// 	if($photo === '' || $photo === NULL) {
-// 		$photo = get_template_directory_uri().'/img/default-photo.png';
-// 	}
-// }
 ?>
 
 <div class="wrapper" id="page-wrapper">
@@ -110,7 +91,13 @@ if($_POST['video_submit']) {
 
 				<form id="video_form" method="post" action="">
 
-					<h4>Submit your Video Here!</h4>
+					<?php
+					if($is_new_video === '1') {
+						echo '<h4>Submit your Video!</h4>';
+					} else if($is_new_video === '0') {
+						echo '<h4>Edit your Video!</h4>';
+					}
+					?>
 
 					<!-- TODO: RACH: ADD A STYLE FOR SUCCESS -->
 					<?php echo $response; ?>
@@ -120,7 +107,7 @@ if($_POST['video_submit']) {
 					<label for="title">Title</label>
 					<input type="text" name="video_title" id="video_title" value="<?=$title?>" required>
 					<label for="desc">Description (500 characters limit)</label>
-					<textarea name="video_desc" id="video_desc" value="<?=$desc?>" rows="5" cols="70" maxlength="500"></textarea>
+					<textarea name="video_desc" id="video_desc" rows="5" cols="70" maxlength="500"><?=$desc?></textarea>
 					<br>
 					<!-- <div class="col-lg-3">
 						<label for="thumbnail">Thumbnail</label>

@@ -40,7 +40,7 @@ if($_POST['profile_submit']) {
 
 $sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
 $results = $wpdb->get_results($sql);
-if(count($results) > 0) {
+if($wpdb->num_rows > 0) {
 	$id = $results[0]->id;
 	$email = $results[0]->email;
 	$password = $results[0]->password;
@@ -99,7 +99,7 @@ if(count($results) > 0) {
 					<input type="text" name="profile_facebook" id="profile_facebook" value="<?=$facebook?>" placeholder="Facebook">
 					<input type="text" name="profile_instagram" id="profile_instagram" value="<?=$instagram?>" placeholder="Instagram">
 					<label for="bio">Bio</label>
-					<textarea name="profile_bio" id="profile_bio" value="<?=$bio?>" rows="5" cols="70"></textarea>
+					<textarea name="profile_bio" id="profile_bio" rows="5" cols="70"><?=$bio?></textarea>
 					<br>
 					<label for="profile_photo">Profile Photo</label>
 					<img src="<?=$photo?>" id="profile_photo" alt="<?=$fullname?>'s Profile Photo" width="100px">

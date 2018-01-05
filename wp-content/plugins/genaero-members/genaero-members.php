@@ -28,11 +28,11 @@ function create_members_db() {
 	school varchar(200) DEFAULT NULL,
 	phone varchar(20) DEFAULT NULL,
     address varchar(200) DEFAULT NULL,
-	country varchar(200) DEFAULT NULL,
+    country varchar(200) DEFAULT NULL,
     birthdate varchar(200) DEFAULT NULL,
-	facebook varchar(200) DEFAULT NULL,
-	instagram varchar(200) DEFAULT NULL,
-	bio varchar(500) DEFAULT NULL,
+    facebook varchar(200) DEFAULT NULL,
+    instagram varchar(200) DEFAULT NULL,
+    bio varchar(500) DEFAULT NULL,
     photo varchar(500) DEFAULT NULL,
     is_fb_user tinyint(1) DEFAULT 0,
     create_date datetime DEFAULT CURRENT_TIMESTAMP,
@@ -388,7 +388,10 @@ class GenAeroFacebook{
     	if(count($results) > 0) {
     		$hashed_password = $results[0]->password;
     		if(wp_check_password($password, $hashed_password)) {
+                $user_id = $results[0]->id;
+                
                 $_SESSION['username'] = $username;
+                $_SESSION['user_id'] = $user_id;
                 wp_redirect( 'member-dashboard', 301 );
                 exit; 
             }
@@ -412,11 +415,19 @@ class GenAeroFacebook{
         $photo = $this->facebook_details['picture']['url'];
         $fblink = $this->facebook_details['link'];
 
-    	$this->wpdb->query($this->wpdb->prepare("INSERT INTO $table (username,email,password,fullname,photo,facebook,is_fb_user) VALUES (%s,%s,%s,%s,%s,%s,%s)", array($username,$email,$password,$fullname,$photo,$fblink,'1')));
+        $this->wpdb->query($this->wpdb->prepare("INSERT INTO $table (username,email,password,fullname,photo,facebook,is_fb_user) VALUES (%s,%s,%s,%s,%s,%s,%s)", array($username,$email,$password,$fullname,$photo,$fblink,'1')));
 
-    	$_SESSION['username'] = $username;
-    	wp_redirect( 'member-dashboard', 301 );
-    	exit; 
+        //get generated ID
+        $members_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
+        $results = $wpdb->get_results($members_sql);
+        if(count($results) > 0) {
+            $user_id = $results[0]->id;
+        }
+
+        $_SESSION['username'] = $username;
+        $_SESSION['user_id'] = $user_id;
+        wp_redirect( 'member-dashboard', 301 );
+        exit; 
     }
 }
 
