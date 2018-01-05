@@ -61,7 +61,7 @@ dbDelta( $sql );
 
 }
 
-//create database for members
+//create database for videos list
 register_activation_hook( __FILE__, 'create_videos_db' );
 function create_videos_db() {
     global $wpdb;
@@ -82,6 +82,32 @@ function create_videos_db() {
     update_date datetime DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (member_id) REFERENCES $members_table(id)
+) $charset_collate;";
+
+require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+dbDelta( $sql );
+
+}
+
+//create database for favourite videos list
+register_activation_hook( __FILE__, 'create_favourite_videos_db' );
+function create_favourite_videos_db() {
+    global $wpdb;
+
+    $version = get_option( 'my_plugin_version', '1.0' );
+    $charset_collate = $wpdb->get_charset_collate();
+    $members_table = $wpdb->prefix . 'genaero_members';
+    $videos_table = $wpdb->prefix . 'genaero_videos';
+    $fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
+
+    $sql = "CREATE TABLE $fav_videos_table (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    member_id int(11) NOT NULL,
+    video_id int(11) NOT NULL,
+    create_date datetime DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    FOREIGN KEY (member_id) REFERENCES $members_table(id),
+    FOREIGN KEY (video_id) REFERENCES $videos_table(id)
 ) $charset_collate;";
 
 require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
@@ -389,7 +415,7 @@ class GenAeroFacebook{
     		$hashed_password = $results[0]->password;
     		if(wp_check_password($password, $hashed_password)) {
                 $user_id = $results[0]->id;
-                
+
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $user_id;
                 wp_redirect( 'member-dashboard', 301 );

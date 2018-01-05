@@ -26,9 +26,24 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+
+		wp_localize_script( "main-js", 'deletefavvideo',
+			array(
+            'ajaxUrl' => admin_url( 'admin-ajax.php' ), //url for php file that process ajax request to WP
+        )
+		);
 	}
 } // endif function_exists( 'understrap_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
 
 
+add_action("wp_ajax_delete_fav_video", "delete_fav_video");
+add_action("wp_ajax_nopriv_delete_fav_video", "delete_fav_video");
+
+function delete_fav_video() {
+	global $wpdb;
+	$favID = $_POST['favID'];
+	$fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
+	$wpdb->delete($fav_videos_table,array('id' => $favID));
+}
