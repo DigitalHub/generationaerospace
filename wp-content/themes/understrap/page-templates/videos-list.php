@@ -13,7 +13,7 @@ $videos_table = $wpdb->prefix.'genaero_videos';
 $username = $_SESSION['username'];
 $user_id = $_SESSION['user_id'];
 
-$videos_sql = $wpdb->prepare("SELECT * FROM $videos_table WHERE member_id = %s AND approved = '1'", $user_id);
+$videos_sql = $wpdb->prepare("SELECT * FROM $videos_table WHERE member_id = %s", $user_id);
 $results = $wpdb->get_results($videos_sql);
 $results_count = $wpdb->num_rows;
 ?>
@@ -49,7 +49,7 @@ $results_count = $wpdb->num_rows;
 							get_template_part( 'page-templates/members/video', 'row' );
 						}
 					} else {
-						echo '<p>You have not submitted any videos yet or your videos are still under review. Why not submit your own video here?</p>';
+						echo '<p>You have not submitted any videos yet. Why not submit your own video here?</p>';
 						echo '<a href="'.get_permalink( get_page_by_path( 'submit-a-video' ) ).'">Submit New Video</a>';
 					}
 					?>

@@ -10,7 +10,9 @@ global $result;
 
 $video_id = $result->id;
 $title = $result->title;
-$desc = $result->desc;
+$desc = substr($result->description,0,120);
+$approved = $result->approved;
+
 $youtube = $result->youtube;
 parse_str( parse_url( $youtube, PHP_URL_QUERY ), $my_array_of_vars );
 $youtube_id =  $my_array_of_vars['v'];
@@ -30,8 +32,15 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
 		</a>
 	</div>
 	<div class="col-lg-8">
-		<h5><?=$title?></h5>
-		<span><?=$desc?></span>
+		<h5>
+			<?php
+			echo $title;
+			if(!$approved) {
+				echo ' (Pending Approval)'; //TODO: RACHELLE, MAYBE CSS THIS ONE?
+			}
+			?>
+		</h5>
+		<span><?=$desc?>...</span>
 	</div>
 	<div class="col-lg-1">
 		<!-- TODO: RACH TO REPLACE WITH ICON -->
