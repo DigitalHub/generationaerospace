@@ -96,4 +96,8 @@ jQuery(document).ready(function($) {
    })
   });
 
+  if($('#member_username').length) {
+    $('#member_username').val($('#username').data('user-id'));
+  }
+
 });
