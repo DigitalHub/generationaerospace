@@ -91,8 +91,10 @@ if(count($results) > 0) {
 					<input type="text" name="profile_address" id="profile_address" value="<?=$address?>">
 					<label for="country">Country</label>
 					<input type="text" name="profile_country" id="profile_country" value="<?=$country?>">
+					<!-- TODO: STEF TO CHANGE IT TO COUNTRY DROPDOWN -->
 					<label for="birthdate">Date of Birth</label>
 					<input type="text" name="profile_birthdate" id="profile_birthdate" value="<?=$birthdate?>">
+					<!-- TODO: STEF TO CHANGE TO DATESELECT -->
 					<label for="facebook">Social Media</label>
 					<input type="text" name="profile_facebook" id="profile_facebook" value="<?=$facebook?>" placeholder="Facebook">
 					<input type="text" name="profile_instagram" id="profile_instagram" value="<?=$instagram?>" placeholder="Instagram">

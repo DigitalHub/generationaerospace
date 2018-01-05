@@ -27,6 +27,8 @@ $wrong_login_details = "Wrong username or password. Please try again.";
 $username = $wpdb->escape($_POST['login_username']);
 $password = $wpdb->escape($_POST['login_password']);
 
+// TODO: STEF TO ADD 'USERNAME IS TAKEN' IF USER IS TRYING TO LOGIN WITH A FB USERNAME MANUALLY
+
 //validate empty content
 if ($_POST['login_submit']) {
 	$table = $wpdb->prefix.'genaero_members';
