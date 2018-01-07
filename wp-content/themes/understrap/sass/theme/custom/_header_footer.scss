@@ -1,9 +1,20 @@
 
 //*******************************************//
 //** Main Title Starts **//
+
+
+.home {
+	.site-title {
+		position: fixed;
+	}
+	.site-menu {
+		position: fixed;
+	}
+}
+
 .site-title {
-	position: fixed;
 	left: 50%;
+	position: absolute;
 	@include translateX(-50%);
 	z-index: 502;
 
@@ -20,7 +31,7 @@
 			transition: opacity 200ms ease-in 1.2s;
 			width: 80%;
 		}
- 
+
 		.site-title-border {
 			position: absolute;
 			width: 16px;
@@ -75,7 +86,7 @@
 //** Main Menu Starts **//
 
 .site-menu {
-	position: fixed;
+	position: absolute;
 	right: 7%;
 	top: 5%;
 	z-index: 500;
@@ -130,13 +141,6 @@
 
 	}
 
-	.menu-content__footer {
-		bottom: 15px;
-		position: absolute;
-		left: 50%;
-		@include translateX(-50%);
-	}
-
 	.menu-content__wrapper {
 		color: $white;
 		-webkit-box-sizing: border-box;
@@ -170,32 +174,48 @@
 				@include translate(-50%, -50%);
 				width: 100%;
 
-				a {
-					color: $white;
-					display: block;
-					font-size: 30px;
-					vertical-align: top;
-					line-height: 30px;
-					margin-bottom: 20px;
+				ol {
+					counter-reset: item;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
 
-					span {
-						border-bottom: 1px solid $rrlimegreen;
-						color: $rrlimegreen;
-						font-size: 15px;
-						height: 20px;
-						letter-spacing: 1px;
-						margin-right: 20px;
-						padding-bottom: 7px;
-						vertical-align: top;
-					}
+					li {
+						margin-bottom: 20px;
 
-					&:hover {
-						color: $rrlimegreen;
-						text-decoration: none;
-					}
+						&:before {
+							content: "0" counter(item);
+							counter-increment: item;
+							border-bottom: 1px solid $rrlimegreen;
+							color: $rrlimegreen;
+							display: inline-block;
+							font-size: 15px;
+							height: 29px;
+							letter-spacing: 1px;
+							margin-right: 20px;
+							padding-bottom: 7px;
+							vertical-align: bottom;
+						}
 
-					&:last-child {
-						margin: 0;
+						a {
+							color: $white;
+							display: inline-block;
+							font-size: 30px;
+							vertical-align: middle;
+							line-height: 30px;
+
+
+							&:hover {
+								color: $rrlimegreen;
+								text-decoration: none;
+							}
+
+							&:last-child {
+								margin: 0;
+							}
+						}
+
+
 					}
 				}
 			}
@@ -356,13 +376,13 @@
 	margin-bottom: 50px;
 
 	input {
-		background-color: #ffffff40;
+		background-color: #ffffff40 !important;
 		border: none;
 		color: $white;
 		float: left;
 		font-size: 1.333rem;
 		padding: 15px 10px;
-		height: 50px;
+		height: 50px !important;
 		width: calc(100% - 60px);
 
 		&:focus {
@@ -370,13 +390,15 @@
 		}
 	}
 
-	button {
+	button {    
+		background-color: #ffffff40 !important;
+		border: 0;
+		color: $white;
 		cursor: pointer;
 		font-size: 2rem;
-		padding: 10px 15px;
-		border: 0;
 		float: left;
 		height: 50px;
+		padding-right: 20px;
 		vertical-align: top;
 		width: 60px;
 
@@ -391,6 +413,39 @@
 //** Main Menu Ends **//
 //*******************************************//
 //** Footer Starts **//
+
+.scrolling {
+	bottom: 0;
+	right: 0;
+	position: fixed;
+}
+
+.menu-content__footer {
+	bottom: 15px;
+	position: absolute;
+	left: 50%;
+	@include translateX(-50%);
+
+	ul#menu-footer-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+
+			&:after {
+				content: " | ";
+				margin: 0 5px;
+			}
+
+			&:last-child:after {
+				content: " ";
+				margin: 0;
+			}
+		}
+	}
+}
 
 .small-text {
 	color: #a9c6e1;
@@ -427,6 +482,12 @@
 	}
 }
 
+.home {
+	#wrapper-footer {
+		position: absolute;
+	}
+}
+
 #wrapper-footer {
 	line-height: 46px;
 	padding: 0;
@@ -438,7 +499,7 @@
 		font-weight: 700;
 		left: 50%;
 		letter-spacing: 1px;
-		position: absolute;
+		position: relative;
 		text-align: center;
 		text-transform: uppercase;
 		@include translateX(-50%);

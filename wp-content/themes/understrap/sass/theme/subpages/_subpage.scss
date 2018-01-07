@@ -1,0 +1,277 @@
+.subpage--hud {
+	display: table;
+	height: 480px;
+	width: 100%;
+
+	.subpage--content {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	h1, h2, h3, h4, h5, p, a  {
+		color: $white !important;
+	}
+
+	p {
+		text-align: left;
+		&.highlight {
+			margin-bottom: 40px;
+		}
+	}
+
+	.search-form {
+		margin-bottom: 15px;
+	}
+}
+
+.sub_main {
+	background-color: #eee;
+
+	.wrapper {
+		padding: 65px 0;
+	}
+
+}
+
+
+
+.featured_experiment--card {
+	position: relative;
+	margin-bottom: 30px;
+
+	.experiment--fav_link {
+		position: absolute;
+		top: 15px;
+		right: 30px;
+
+		a {
+			border-radius: 63px;
+			background-color: rgba(0, 0, 0, 0.8);
+			display: block;
+			width: 63px;
+			line-height: 63px;
+			font-size: 40px;
+			text-align: center;
+			color: $white;
+			vertical-align: middle;
+
+			&:hover {
+				color: $rrlimegreen;
+			}
+		}
+	}
+
+	.experiment_card--content {
+		background-color: $white; 
+		padding: 25px;
+
+		a {
+			color: $black;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.meta-keywords {
+			margin: 0 0 10px;
+			padding: 0;
+
+			li {
+				color: $rrskyblue;
+				display: inline-block;
+
+				a {
+					color: $rrskyblue;
+					font-style: italic;
+					text-decoration: underline;
+				}
+
+				&:after {
+					content: ", ";
+					display: inline-block;
+				}
+			}			
+		}
+	}
+}
+
+
+.meta-date_fav {
+	border-top: 1px dashed #7f7f7f;
+	overflow: hidden;
+	padding-top: 10px;
+
+	.meta-profile_pic {
+		overflow: hidden;
+		color: #979797;
+		background-color: #ababab;
+		height: 36px;
+		width: 36px;
+		font-size: 30px;
+		border-radius: 36px;
+		text-align: center;
+		vertical-align: top;
+		border: 1px solid #999;
+	}
+
+	.meta-date {
+		font-size: 0.9333rem;
+		display: inline-block;
+		margin-right: 15px;
+
+		i {
+			color: #00aed4;
+			margin-right: 5px;
+		}
+	}
+
+	.meta-comment {
+		font-size: 0.9333rem;
+		display: inline-block;
+		margin-right: 15px;
+
+		i {
+			color: $rrlimegreen;
+			margin-right: 5px;
+		}
+	}
+
+	.meta-fav {
+		display: inline-block;
+		i {
+			color: #fd7e2e;
+			margin-right: 5px;
+		}
+	}
+}
+
+.featured_trailblazer--card {
+	margin-bottom: 30px;
+	a {
+		color: $black;
+		text-transform: uppercase;
+
+		&:hover { 
+			color: $black;
+			text-decoration: none;
+		}
+
+		.featured_trailblazer--img {
+			height: 397px;
+			margin-bottom: 30px;
+			@include transition(all 500ms ease);
+
+
+			.post-thumbnail--wrapper {
+				height: 100%;
+				@include transition(all 500ms ease);
+
+				img {
+					height: 397px;
+					@include transition(all 500ms ease);
+				}
+
+				i {
+					color: transparent;
+					font-size: 80px;
+					left: 50%;
+					position: absolute;
+					top: 50%;
+					@include translate(-50%, -50%);
+				}
+			}
+			&:hover {
+				.post-thumbnail--wrapper {		
+					transform: scale(1.2);
+					i {
+						color: $white;
+					}
+
+					.whitebg {
+						background-color: transparent;
+					}
+
+				}
+			}
+		}
+
+		.featured_trailblazer--details {
+			.featured_trailblazer--name {
+				font-weight: 700;
+				text-align: center;
+			}
+
+			.featured_trailblazer--position {
+				text-transform: uppercase;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.single_trailblazers--profile {
+	background-color: #3d4b57;
+	height: 100vh;
+}
+
+.single_trailblazers--video {
+	background-color: #dbdad6;
+	height: 100vh;
+}
+
+.ongoing_events,
+.past_events {
+	margin-bottom: 25px;
+
+	.events_row--header {
+		background-color: $rrblue;
+		padding: 0 40px;
+
+		div:not(:first-child) {
+			text-align: center;
+		}
+
+
+		h3 {
+			color: $white;
+			line-height: 74px;
+			margin: 0;
+			text-transform: uppercase;
+		}
+	}
+
+	.events_row--content {
+		background-color: $white;
+		border-bottom: 1px solid #7f7f7f;
+		min-height: 95px;
+		padding: 25px 40px;  
+		justify-content: center;
+		align-items: center; 
+
+		div:not(:first-child) {
+			text-align: center;
+		}
+
+		div:first-child {
+			p {
+				font-weight: 700;				
+				text-transform: uppercase;
+			}
+
+			a {
+				color: $rrblue;
+				text-decoration: underline;
+
+				&:hover {
+					color: $rrskyblue;
+				}
+			}
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
