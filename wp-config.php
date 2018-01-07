@@ -87,3 +87,6 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+/** YouTube API Key */
+define(YOUTUBE_API_KEY, 'AIzaSyDmfdGOPcsVKZr1WoXFz2sym3fnN4YRgAc');

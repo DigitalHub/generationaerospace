@@ -26,17 +26,19 @@ function create_members_db() {
 	password varchar(50) DEFAULT NULL,
 	fullname varchar(200) DEFAULT NULL,
 	school varchar(200) DEFAULT NULL,
-	address varchar(200) DEFAULT NULL,
 	phone varchar(20) DEFAULT NULL,
-	country varchar(200) DEFAULT NULL,
-	facebook varchar(200) DEFAULT NULL,
-	instagram varchar(200) DEFAULT NULL,
-	bio varchar(500) DEFAULT NULL,
-	is_fb_user tinyint(1) DEFAULT 0,
-	create_date datetime DEFAULT CURRENT_TIMESTAMP,
-	update_date datetime DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
-	UNIQUE KEY id (id),
-	UNIQUE KEY username (username)
+    address varchar(200) DEFAULT NULL,
+    country varchar(200) DEFAULT NULL,
+    birthdate varchar(200) DEFAULT NULL,
+    facebook varchar(200) DEFAULT NULL,
+    instagram varchar(200) DEFAULT NULL,
+    bio varchar(500) DEFAULT NULL,
+    photo varchar(500) DEFAULT NULL,
+    is_fb_user tinyint(1) DEFAULT 0,
+    create_date datetime DEFAULT CURRENT_TIMESTAMP,
+    update_date datetime DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY id (id),
+    UNIQUE KEY username (username)
 ) $charset_collate;";
 
 require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
@@ -56,6 +58,60 @@ dbDelta( $sql );
 // update_option( 'my_plugin_version', '2.0' );
 
 // }
+
+}
+
+//create database for videos list
+register_activation_hook( __FILE__, 'create_videos_db' );
+function create_videos_db() {
+    global $wpdb;
+
+    $version = get_option( 'my_plugin_version', '1.0' );
+    $charset_collate = $wpdb->get_charset_collate();
+    $members_table = $wpdb->prefix . 'genaero_members';
+    $videos_table = $wpdb->prefix . 'genaero_videos';
+
+    $sql = "CREATE TABLE $videos_table (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    member_id int(11) NOT NULL,
+    title varchar(200) NOT NULL,
+    description varchar(500) DEFAULT NULL,
+    youtube varchar(100) NOT NULL,
+    approved tinyint(1) DEFAULT 0,
+    create_date datetime DEFAULT CURRENT_TIMESTAMP,
+    update_date datetime DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    FOREIGN KEY (member_id) REFERENCES $members_table(id)
+) $charset_collate;";
+
+require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+dbDelta( $sql );
+
+}
+
+//create database for favourite videos list
+register_activation_hook( __FILE__, 'create_favourite_videos_db' );
+function create_favourite_videos_db() {
+    global $wpdb;
+
+    $version = get_option( 'my_plugin_version', '1.0' );
+    $charset_collate = $wpdb->get_charset_collate();
+    $members_table = $wpdb->prefix . 'genaero_members';
+    $videos_table = $wpdb->prefix . 'genaero_videos';
+    $fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
+
+    $sql = "CREATE TABLE $fav_videos_table (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    member_id int(11) NOT NULL,
+    video_id int(11) NOT NULL,
+    create_date datetime DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    FOREIGN KEY (member_id) REFERENCES $members_table(id),
+    FOREIGN KEY (video_id) REFERENCES $videos_table(id)
+) $charset_collate;";
+
+require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+dbDelta( $sql );
 
 }
 
@@ -245,7 +301,7 @@ class GenAeroFacebook{
     	$fb_user = $this->facebook_details;
 
         // We first try to login the user
-    	// $this->loginUser();
+    	$this->loginUser();
 
         // Otherwise, we create a new account
     	$this->createUser();
@@ -311,7 +367,7 @@ class GenAeroFacebook{
     {
 
     	try {
-    		$response = $fb->get('/me?fields=id,name,first_name,last_name,email,link', $this->access_token);
+    		$response = $fb->get('/me?fields=id,name,first_name,last_name,email,link,picture.width(300).height(300)', $this->access_token);
     	} catch(FacebookResponseException $e) {
     		$message = __('Graph returned an error: ','genaeroweb'). $e->getMessage();
     		$message = array(
@@ -358,13 +414,14 @@ class GenAeroFacebook{
     	if(count($results) > 0) {
     		$hashed_password = $results[0]->password;
     		if(wp_check_password($password, $hashed_password)) {
-				$_SESSION['username'] = $username;
-				wp_redirect( 'member-dashboard', 301 );
-				exit; 
-			}
-    	} else {
-    		echo 'nothing';
-    	}
+                $user_id = $results[0]->id;
+
+                $_SESSION['username'] = $username;
+                $_SESSION['user_id'] = $user_id;
+                wp_redirect( 'member-dashboard', 301 );
+                exit; 
+            }
+        }
 
     }
 
@@ -380,12 +437,23 @@ class GenAeroFacebook{
     	$username = sanitize_user(str_replace(' ', '_', strtolower($this->facebook_details['name'])));
     	$email = $this->facebook_details['email'];
     	$password = wp_hash_password($this->facebook_details['id']);
+        $fullname = $this->facebook_details['name'];
+        $photo = $this->facebook_details['picture']['url'];
+        $fblink = $this->facebook_details['link'];
 
-    	$this->wpdb->query($this->wpdb->prepare("INSERT INTO $table (username,email,password,is_fb_user) VALUES (%s,%s,%s,%s)", array($username,$email,$password,'1')));
+        $this->wpdb->query($this->wpdb->prepare("INSERT INTO $table (username,email,password,fullname,photo,facebook,is_fb_user) VALUES (%s,%s,%s,%s,%s,%s,%s)", array($username,$email,$password,$fullname,$photo,$fblink,'1')));
 
-    	$_SESSION['username'] = $username;
-    	wp_redirect( 'member-dashboard', 301 );
-    	exit; 
+        //get generated ID
+        $members_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
+        $results = $wpdb->get_results($members_sql);
+        if(count($results) > 0) {
+            $user_id = $results[0]->id;
+        }
+
+        $_SESSION['username'] = $username;
+        $_SESSION['user_id'] = $user_id;
+        wp_redirect( 'member-dashboard', 301 );
+        exit; 
     }
 }
 

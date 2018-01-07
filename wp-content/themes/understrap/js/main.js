@@ -46,6 +46,50 @@ jQuery(document).ready(function($) {
         prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
         nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>',
     });
+    
+    $(function(){
+        $('.hide-show').show();
+        $('.hide-show span').addClass('show')
+
+        $('.hide-show span').click(function(){
+          if( $(this).hasClass('show') ) {
+            $(this).text('Hide');
+            $('input[name="profile_password"]').attr('type','text');
+            $(this).removeClass('show');
+        } else {
+         $(this).text('Show');
+         $('input[name="profile_password"]').attr('type','password');
+         $(this).addClass('show');
+     }
+ });
+
+        $('form button[type="submit"]').on('click', function(){
+          $('.hide-show span').text('Show').addClass('show');
+          $('.hide-show').parent().find('input[name="profile_password"]').attr('type','password');
+      }); 
+    });
+
+    $('.delete-fav-video').on('click', function() {
+        var favID = $(this).data('fav-id');
+        $.ajax({
+          url: deletefavvideo.ajaxUrl,
+          type: 'post',
+          data: {
+            action: 'delete_fav_video',
+            favID: favID
+        },
+        success: function(data) {
+            location.reload();
+        },
+        error: function(errorThrown){
+         console.log(errorThrown);
+     }
+ })
+    });
+
+    if($('#member_username').length) {
+        $('#member_username').val($('#username').data('user-id'));
+    }
 
     // jQuery(document).on('click', '.scrolling', function(event){                        
     //     event.preventDefault();

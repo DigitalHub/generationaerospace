@@ -12220,6 +12220,23 @@ input {
     .past_events .events_row--content p {
       margin-bottom: 0; }
 
+.hide-show {
+  width: 95%;
+  margin: -3em 3% 0 1.5%;
+  position: relative;
+  z-index: 5;
+  display: none; }
+  .hide-show span {
+    background: #fff;
+    font-size: 1em;
+    padding: .5em;
+    float: right;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

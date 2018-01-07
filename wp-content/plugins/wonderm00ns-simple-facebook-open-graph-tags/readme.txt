@@ -4,7 +4,7 @@ Donate link: http://bit.ly/donate_fb_opengraph
 Tags: facebook, open graph, open graph protocol, share, social, meta, rss, twitter card, twitter, schema, google+, g+, google, google plus, image, like, seo, search engine optimization, woocommerce, yoast seo, wordpress seo, woocommerce, subheading, php7
 Requires at least: 4.5
 Tested up to: 4.9.1
-Stable tag: 2.2
+Stable tag: 2.2.1
 
 Inserts Facebook Open Graph, Google+/Schema.org, Twitter and SEO Meta Tags into your WordPress Website for more efficient sharing results.
 
@@ -56,9 +56,12 @@ Our settings page is discreetly kept under "Options", as it should, instead of t
 = The (Google+) Schema.org Tags that this plugin inserts are: =
 
 * **name**: Same as `og:title`.
+* **headline**: Same as `og:title`.
 * **description**: Same as `og:description`.
 * **image**: Same as `og:image`.
-* **author**: From the user (post author) Google+ profile URL.
+* **author**: From the user (post author) Display Name.
+* **datePublished**: Article published date (for posts only)
+* **dateModified**: Article modified time (for posts only)
 * **publisher**: The website Google+ Page URL. 
 
 = Other Tags: =
@@ -146,6 +149,10 @@ We DO NOT provide email support for this plugin. If you send us an email asking 
 2. Or we can give you a quote on premium email/phone support if you prefer to
 
 == Changelog ==
+
+= 2.2.1 =
+* Added the Schema.org headline, author, datePublished and dateModified tags
+* Removed some unnecessary / duplicated `esc_attr` calls
 
 = 2.2 =
 * New "Tools" panel on the settings page

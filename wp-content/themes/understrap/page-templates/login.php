@@ -27,6 +27,8 @@ $wrong_login_details = "Wrong username or password. Please try again.";
 $username = $wpdb->escape($_POST['login_username']);
 $password = $wpdb->escape($_POST['login_password']);
 
+// TODO: STEF TO ADD 'USERNAME IS TAKEN' IF USER IS TRYING TO LOGIN WITH A FB USERNAME MANUALLY
+
 //validate empty content
 if ($_POST['login_submit']) {
 	$table = $wpdb->prefix.'genaero_members';
@@ -37,11 +39,15 @@ if ($_POST['login_submit']) {
 		//check username
 		$username_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
 		$results = $wpdb->get_results($username_sql);
-		if(count($results) > 0) {
+		if($wpdb->num_rows > 0) {
 			//check password
 			$hashed_password = $results[0]->password;
 			if(wp_check_password($password, $hashed_password)) {
+				$user_id = $results[0]->id;
+
+				session_start();
 				$_SESSION['username'] = $username;
+				$_SESSION['user_id'] = $user_id;
 				wp_redirect( 'member-dashboard', 301 );
 				exit; 
 			} else {
@@ -80,7 +86,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<label for="login_username">Username</label>
 						<input type="text" name="login_username" id="login_username" placeholder="Username" minlength="4" maxlength="20" required><br>
 						<label for="login_password">Password</label>
-						<input type="password" name="login_password" id="login_password" placeholder="Password" title="Password" minlength="6" maxlength="14" required><br><br>
+						<input type="password" name="login_password" id="login_password" placeholder="Password" title="Password" minlength="6" maxlength="14" autocomplete="new-password" required><br><br>
 
 						<input type="submit" name="login_submit" id="login_submit" value="Login">
 						<a href="../forgot-password">Forgot password?</a>

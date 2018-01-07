@@ -1,18 +1,21 @@
 /*
-Error: Undefined variable: "$grid-gutter-width".
-        on line 3 of c:/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss
+Error: Undefined variable: "$gray-300".
+        on line 16 of c:/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss
 
-1: // Some basic padding for all wrappers
-2: .wrapper {
-3:   padding: $grid-gutter-width 0; }
-4: 
-5: // Reset hero wrapper padding to 0
-6: #wrapper-hero { padding: 0px !important; }
-7: 
-8: // Adding basic WordPress classes to pass the WordPress.org tests
+11: .bypostauthor {
+12:   font-size: inherit;
+13: }
+14: 
+15: // Separate sticky wrapper from main content
+16: .wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }
+17: 
+18: // Adding some contrast background color to footer full widget
+19: #wrapper-footer-full,
+20: #wrapper-static-hero { background-color: $gray-200; }
+21: 
 
 Backtrace:
-c:/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss:3
+c:/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss:16
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.24/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.24/lib/sass/script/tree/node.rb:58:in `perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.24/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
@@ -71,4 +74,4 @@ C:/Ruby22-x64/bin/compass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$grid-gutter-width\".\A         on line 3 of c:/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss\A \A 1: // Some basic padding for all wrappers\A 2: .wrapper {\A 3:   padding: $grid-gutter-width 0; }\A 4: \A 5: // Reset hero wrapper padding to 0\A 6: #wrapper-hero { padding: 0px !important; }\A 7: \A 8: // Adding basic WordPress classes to pass the WordPress.org tests"; }
+  content: "Error: Undefined variable: \"$gray-300\".\A         on line 16 of c:/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss\A \A 11: .bypostauthor {\A 12:   font-size: inherit;\A 13: }\A 14: \A 15: // Separate sticky wrapper from main content\A 16: .wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }\A 17: \A 18: // Adding some contrast background color to footer full widget\A 19: #wrapper-footer-full,\A 20: #wrapper-static-hero { background-color: $gray-200; }\A 21: "; }
