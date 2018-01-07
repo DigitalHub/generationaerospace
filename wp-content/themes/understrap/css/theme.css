@@ -12220,6 +12220,16 @@ input {
     .past_events .events_row--content p {
       margin-bottom: 0; }
 
+.vault--card {
+  margin-bottom: 30px; }
+  .vault--card .vault_card--content {
+    background-color: #fff;
+    padding: 25px; }
+    .vault--card .vault_card--content a {
+      color: #000; }
+      .vault--card .vault_card--content a:hover {
+        text-decoration: none; }
+
 .hide-show {
   width: 95%;
   margin: -3em 3% 0 1.5%;
