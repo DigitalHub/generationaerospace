@@ -6,9 +6,6 @@
  */
 
 ?>
-<!-- <nav id="site-navigation" class="main-navigation" role="navigation"> 
-	<?php //wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-</nav>--><!-- #site-navigation -->
 <menu id="menu-content" class="menu-content">
 	<a href="#" class="menu_butt__close headerbutt close_butt">
 		<i class="fal"></i>
@@ -28,36 +25,16 @@
 					<div class="corner corner-top-right"></div>
 					<div class="corner corner-bottom-left"></div>
 					<div class="corner corner-bottom-right"></div>
-					
 					<div class="menu-content__list">
-						<a href="#">
-							<span>01</span>
-							<p>home</p>
-						</a>
-						<a href="#">
-							<span>02</span>
-							<p>find a video</p>
-						</a>
-						<a href="#">
-							<span>03</span>
-							<p>find an experiments</p>
-						</a>
-						<a href="#">
-							<span>04</span>
-							<p>genaero trailblazers</p>
-						</a>
-						<a href="#">
-							<span>05</span>
-							<p>events</p>
-						</a>
-						<a href="#">
-							<span>06</span>
-							<p>the vault</p>
-						</a>
+						<nav id="site-navigation" class="main-navigation" role="navigation"> 
+							<ol><?php wp_nav_menu( array( 'menu' => 'primary Menu', 'container'	=> false, 'items_wrap'=> '%3$s', 'depth' => 0, ) ); ?></ol>
+						</nav>
 					</div>
 				</nav>
 			</div>
 		</div>
 	</div>
-	<div class="menu-content__footer small-text"><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a></div>
+	<div class="menu-content__footer small-text">
+		<?php wp_nav_menu( array( 'menu' => 'footer menu', 'container' => false, 'depth' => 0, ) ); ?>
+	</div>
 </menu>

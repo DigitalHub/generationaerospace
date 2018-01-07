@@ -8,8 +8,8 @@ body.home {
 }
 
 .HudOverlay {
-	height: 100%;
 	left: 0;
+	height: 100%;
 	pointer-events: none;
 	position: absolute;
 	top: 0;
@@ -19,12 +19,64 @@ body.home {
 	.HudOverlay-fullBorder {
 		position: absolute;
 		height: calc(100% - 70px);
-		top: 45px;
+		top: 35px;
 		width: calc(100% - 46px);
 		left: 20px;
 		stroke-width: 1px;
 		fill: rgba(255,255,255,0.17);
 		stroke: #c9c9c9;
+	}
+}
 
+.page-template:not(.home) {
+	.HudOverlay {
+		height: 480px;
+		z-index: 0;
+	}
+}
+
+.path, 
+.polygon {
+	fill: $white;
+}
+
+.post-thumbnail {
+	height: 262px;
+	overflow: hidden;
+	position: relative;
+
+	span.blackbg {
+		background: rgba(0, 0, 0, 0.04);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: block;
+		left: 0;
+		z-index: 1;
+	}
+
+	span.whitebg {
+		background: rgba(250, 250, 250, 0.15);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: block;
+		left: 0;
+		z-index: 1;
+	}
+
+	img {
+		height: 262px;
+		left: 50%;
+		max-width: none;
+		top: 50%;
+		@include translate(-50%,-50%);
+		position: absolute;
+		width: auto;
+	}
+
+	&.portrait img {
+		height: auto;
+		width: 100%;
 	}
 }

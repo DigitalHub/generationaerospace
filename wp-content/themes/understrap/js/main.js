@@ -21,8 +21,8 @@ jQuery(document).ready(function($) {
       // lazyLoading: true,
   });
 
-    var $status = $('.pagingInfo');
-    var $slickElement = $('.featured_video--carousel');
+    var $status = jQuery('.pagingInfo');
+    var $slickElement = jQuery('.featured_video--carousel');
 
     $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
@@ -47,6 +47,13 @@ jQuery(document).ready(function($) {
         nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>',
     });
 
+    // jQuery(document).on('click', '.scrolling', function(event){                        
+    //     event.preventDefault();
+    //     var y = $(window).scrollTop();
+    //     jQuery('html, body').animate({
+    //         scrollTop: y + 500
+    //     }, 500);
+    // });
 
   //   jQuery(".watch_video--typewriter").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
   //     jQuery(this).removeClass("animated")  
@@ -57,3 +64,12 @@ jQuery(document).ready(function($) {
   // })
 });
 
+
+
+// jQuery(window).scroll(function() {
+//     jQuery('.scrolling').addClass('up--button');
+//     if(jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {
+//         jQuery('.scrolling').removeClass('up--button');
+//         alert("bottom!");
+//     } 
+// });
