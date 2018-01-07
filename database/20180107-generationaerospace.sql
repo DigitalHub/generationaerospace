@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2018 at 04:37 PM
+-- Generation Time: Jan 07, 2018 at 04:41 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -432,7 +432,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (778, 'category_children', 'a:0:{}', 'yes'),
 (782, '_transient_timeout_plugin_slugs', '1515422181', 'no'),
 (783, '_transient_plugin_slugs', 'a:12:{i:0;s:25:\"adminimize/adminimize.php\";i:1;s:33:\"admin-menu-editor/menu-editor.php\";i:2;s:34:\"advanced-custom-fields-pro/acf.php\";i:3;s:36:\"contact-form-7/wp-contact-form-7.php\";i:4;s:58:\"contact-form-7-to-database-extension/contact-form-7-db.php\";i:5;s:69:\"wonderm00ns-simple-facebook-open-graph-tags/wonderm00n-open-graph.php\";i:6;s:35:\"genaero-members/genaero-members.php\";i:7;s:50:\"google-analytics-for-wordpress/googleanalytics.php\";i:8;s:25:\"login-logo/login-logo.php\";i:9;s:44:\"wp-native-php-sessions/pantheon-sessions.php\";i:10;s:27:\"wp-pagenavi/wp-pagenavi.php\";i:11;s:24:\"wordpress-seo/wp-seo.php\";}', 'no'),
-(793, '_transient_is_multi_author', '0', 'yes');
+(795, '_transient_is_multi_author', '0', 'yes');
 
 -- --------------------------------------------------------
 
@@ -481,17 +481,17 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (6, 5, '_edit_lock', '1514969156:1'),
 (7, 5, '_wp_page_template', 'page-homepage.php'),
 (8, 7, '_edit_last', '1'),
-(9, 7, '_wp_page_template', 'page-templates/fullwidthpage.php'),
-(10, 7, '_edit_lock', '1515337201:1'),
+(9, 7, '_wp_page_template', 'page-videos.php'),
+(10, 7, '_edit_lock', '1515339467:1'),
 (11, 9, '_edit_last', '1'),
-(12, 9, '_wp_page_template', 'page-templates/fullwidthpage.php'),
-(13, 9, '_edit_lock', '1513854531:1'),
+(12, 9, '_wp_page_template', 'page-experiments.php'),
+(13, 9, '_edit_lock', '1515339617:1'),
 (14, 11, '_edit_last', '1'),
-(15, 11, '_edit_lock', '1513854549:1'),
-(16, 11, '_wp_page_template', 'page-templates/fullwidthpage.php'),
+(15, 11, '_edit_lock', '1515339651:1'),
+(16, 11, '_wp_page_template', 'page-trailblazers.php'),
 (17, 13, '_edit_last', '1'),
-(18, 13, '_wp_page_template', 'page-templates/fullwidthpage.php'),
-(19, 13, '_edit_lock', '1513854555:1'),
+(18, 13, '_wp_page_template', 'page-events.php'),
+(19, 13, '_edit_lock', '1515339624:1'),
 (20, 15, '_edit_last', '1'),
 (21, 15, '_wp_page_template', 'page-templates/fullwidthpage.php'),
 (22, 15, '_edit_lock', '1513854560:1'),
@@ -1184,14 +1184,16 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (815, 154, '_config_errors', 'a:1:{s:23:\"mail.additional_headers\";a:1:{i:0;a:2:{s:4:\"code\";i:102;s:4:\"args\";a:3:{s:7:\"message\";s:51:\"Invalid mailbox syntax is used in the %name% field.\";s:6:\"params\";a:1:{s:4:\"name\";s:8:\"Reply-To\";}s:4:\"link\";s:68:\"https://contactform7.com/configuration-errors/invalid-mailbox-syntax\";}}}}'),
 (816, 157, '_edit_lock', '1515339157:1'),
 (817, 157, '_edit_last', '1'),
-(818, 160, '_edit_lock', '1515339441:1'),
+(818, 160, '_edit_lock', '1515339526:1'),
 (819, 160, '_edit_last', '1'),
 (820, 160, 'message', 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
 (821, 160, '_message', 'field_5a522db96537e'),
 (822, 160, 'expiry_date', '2018-01-07 23:30:00'),
 (823, 160, '_expiry_date', 'field_5a522dea6537f'),
 (824, 160, '_webdados_fb_open_graph_specific_image', ''),
-(825, 160, '_webdados_fb_open_graph_specific_description', '');
+(825, 160, '_webdados_fb_open_graph_specific_description', ''),
+(846, 7, '_webdados_fb_open_graph_specific_image', ''),
+(847, 7, '_webdados_fb_open_graph_specific_description', '');
 
 -- --------------------------------------------------------
 
@@ -1233,13 +1235,13 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (1, 1, '2017-12-20 10:26:42', '2017-12-20 10:26:42', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hello world!', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2017-12-20 10:26:42', '2017-12-20 10:26:42', '', 0, 'http://localhost/generationaerospace/?p=1', 0, 'post', '', 1),
 (5, 1, '2017-12-21 11:08:19', '2017-12-21 11:08:19', '', 'Home', '', 'publish', 'closed', 'closed', '', 'home', '', '', '2018-01-03 08:48:14', '2018-01-03 08:48:14', '', 0, 'http://localhost/generationaerospace/?page_id=5', 0, 'page', '', 0),
 (6, 1, '2017-12-21 11:08:19', '2017-12-21 11:08:19', '', 'Home', '', 'inherit', 'closed', 'closed', '', '5-revision-v1', '', '', '2017-12-21 11:08:19', '2017-12-21 11:08:19', '', 5, 'http://localhost/generationaerospace/2017/12/21/5-revision-v1/', 0, 'revision', '', 0),
-(7, 1, '2017-12-21 11:11:07', '2017-12-21 11:11:07', '', 'Find a Video', '', 'publish', 'closed', 'closed', '', 'find-a-video', '', '', '2017-12-21 11:51:01', '2017-12-21 11:51:01', '', 0, 'http://localhost/generationaerospace/?page_id=7', 0, 'page', '', 0),
+(7, 1, '2017-12-21 11:11:07', '2017-12-21 11:11:07', '', 'Find a Video', '', 'publish', 'closed', 'closed', '', 'find-a-video', '', '', '2018-01-07 15:40:00', '2018-01-07 15:40:00', '', 0, 'http://localhost/generationaerospace/?page_id=7', 0, 'page', '', 0),
 (8, 1, '2017-12-21 11:11:07', '2017-12-21 11:11:07', '', 'Find a Video', '', 'inherit', 'closed', 'closed', '', '7-revision-v1', '', '', '2017-12-21 11:11:07', '2017-12-21 11:11:07', '', 7, 'http://localhost/generationaerospace/2017/12/21/7-revision-v1/', 0, 'revision', '', 0),
-(9, 1, '2017-12-21 11:11:14', '2017-12-21 11:11:14', '', 'Find an Experiment', '', 'publish', 'closed', 'closed', '', 'find-an-experiment', '', '', '2017-12-21 11:51:01', '2017-12-21 11:51:01', '', 0, 'http://localhost/generationaerospace/?page_id=9', 0, 'page', '', 0),
+(9, 1, '2017-12-21 11:11:14', '2017-12-21 11:11:14', '', 'Find an Experiment', '', 'publish', 'closed', 'closed', '', 'find-an-experiment', '', '', '2018-01-07 15:40:17', '2018-01-07 15:40:17', '', 0, 'http://localhost/generationaerospace/?page_id=9', 0, 'page', '', 0),
 (10, 1, '2017-12-21 11:11:14', '2017-12-21 11:11:14', '', 'Find an Experiment', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2017-12-21 11:11:14', '2017-12-21 11:11:14', '', 9, 'http://localhost/generationaerospace/2017/12/21/9-revision-v1/', 0, 'revision', '', 0),
-(11, 1, '2017-12-21 11:11:32', '2017-12-21 11:11:32', '', 'GenAero Trailblazers', '', 'publish', 'closed', 'closed', '', 'genaero-trailblazers', '', '', '2017-12-21 11:51:01', '2017-12-21 11:51:01', '', 0, 'http://localhost/generationaerospace/?page_id=11', 0, 'page', '', 0),
+(11, 1, '2017-12-21 11:11:32', '2017-12-21 11:11:32', '', 'GenAero Trailblazers', '', 'publish', 'closed', 'closed', '', 'genaero-trailblazers', '', '', '2018-01-07 15:40:50', '2018-01-07 15:40:50', '', 0, 'http://localhost/generationaerospace/?page_id=11', 0, 'page', '', 0),
 (12, 1, '2017-12-21 11:11:32', '2017-12-21 11:11:32', '', 'GenAero Trailblazers', '', 'inherit', 'closed', 'closed', '', '11-revision-v1', '', '', '2017-12-21 11:11:32', '2017-12-21 11:11:32', '', 11, 'http://localhost/generationaerospace/2017/12/21/11-revision-v1/', 0, 'revision', '', 0),
-(13, 1, '2017-12-21 11:11:38', '2017-12-21 11:11:38', '', 'Events', '', 'publish', 'closed', 'closed', '', 'events', '', '', '2017-12-21 11:51:01', '2017-12-21 11:51:01', '', 0, 'http://localhost/generationaerospace/?page_id=13', 0, 'page', '', 0),
+(13, 1, '2017-12-21 11:11:38', '2017-12-21 11:11:38', '', 'Events', '', 'publish', 'closed', 'closed', '', 'events', '', '', '2018-01-07 15:40:24', '2018-01-07 15:40:24', '', 0, 'http://localhost/generationaerospace/?page_id=13', 0, 'page', '', 0),
 (14, 1, '2017-12-21 11:11:38', '2017-12-21 11:11:38', '', 'Events', '', 'inherit', 'closed', 'closed', '', '13-revision-v1', '', '', '2017-12-21 11:11:38', '2017-12-21 11:11:38', '', 13, 'http://localhost/generationaerospace/2017/12/21/13-revision-v1/', 0, 'revision', '', 0),
 (15, 1, '2017-12-21 11:11:43', '2017-12-21 11:11:43', '', 'The Vault', '', 'publish', 'closed', 'closed', '', 'the-vault', '', '', '2017-12-21 11:51:01', '2017-12-21 11:51:01', '', 0, 'http://localhost/generationaerospace/?page_id=15', 0, 'page', '', 0),
 (16, 1, '2017-12-21 11:11:43', '2017-12-21 11:11:43', '', 'The Vault', '', 'inherit', 'closed', 'closed', '', '15-revision-v1', '', '', '2017-12-21 11:11:43', '2017-12-21 11:11:43', '', 15, 'http://localhost/generationaerospace/2017/12/21/15-revision-v1/', 0, 'revision', '', 0),
@@ -1753,12 +1755,12 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=794;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=796;
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=846;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=848;
 --
 -- AUTO_INCREMENT for table `wp_posts`
 --
