@@ -60,8 +60,10 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 	</div> 
 	<div class="subpage--content">
 		<div class="container">
-			<h1><?php the_title(); ?></h1>
-			<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
+			<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
+				<h1><?php the_title(); ?></h1>
+				<p class="highlight text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
+			</div>
 		</div>
 	</div>
 </section>

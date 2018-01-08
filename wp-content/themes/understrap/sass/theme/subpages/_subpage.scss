@@ -1,40 +1,10 @@
-.subpage--hud {
-	display: table;
-	height: 480px;
-	width: 100%;
-
-	.subpage--content {
-		display: table-cell;
-		text-align: center;
-		vertical-align: middle;
-	}
-
-	h1, h2, h3, h4, h5, p, a  {
-		color: $white !important;
-	}
-
-	p {
-		text-align: left;
-		&.highlight {
-			margin-bottom: 40px;
-		}
-	}
-
-	.search-form {
-		margin-bottom: 15px;
-	}
-}
-
 .sub_main {
 	background-color: #eee;
 
 	.wrapper {
 		padding: 65px 0;
 	}
-
 }
-
-
 
 .featured_experiment--card {
 	position: relative;
@@ -62,6 +32,14 @@
 		}
 	}
 
+	.post-thumbnail {
+		height: 350px;
+
+		img {
+			height: 370px;
+		}
+	}
+	
 	.experiment_card--content {
 		background-color: $white; 
 		padding: 25px;
@@ -92,6 +70,12 @@
 					content: ", ";
 					display: inline-block;
 				}
+
+				&:last-child {
+					&:after {
+						content: "";
+					}
+				}			
 			}			
 		}
 	}
@@ -277,7 +261,7 @@
 }
 
 .vault--card {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 	.vault_card--content {
 		background-color: $white; 
 		padding: 25px;

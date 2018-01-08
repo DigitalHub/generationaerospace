@@ -1,4 +1,12 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+.clear:before,
+.clear:after {
+	@include clearfix;
+}
+
+.clear:after {
+	@include clearfix-after;
+}
 
 body.home {
 	// background-color: $black;
@@ -9,12 +17,12 @@ body.home {
 
 .HudOverlay {
 	left: 0;
-	height: 100%;
+	height: 480px;
 	pointer-events: none;
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: -1;
+	z-index: 0;
 
 	.HudOverlay-fullBorder {
 		position: absolute;
@@ -28,16 +36,62 @@ body.home {
 	}
 }
 
-.page-template:not(.home) {
+.home {
 	.HudOverlay {
-		height: 480px;
-		z-index: 0;
+		height: 100%;
+		z-index: -1;
 	}
 }
 
 .path, 
 .polygon {
 	fill: $white;
+}
+
+.singlepost--hud ,
+.subpage--hud {
+	display: table;
+	height: 480px;
+	width: 100%;
+
+	.singlepost--content ,
+	.subpage--content {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	h1, h2, h3, h4, h5, p, a {
+		color: $white !important;
+	}
+
+	p {
+		text-align: left;
+		&.highlight {
+			margin-bottom: 40px;
+		}
+	}
+
+	.search-form {
+		margin-bottom: 15px;
+	}
+}
+
+.content--overflow {
+	.singlepost--content {
+		position: relative;
+		top: 30%;
+	}
+}
+
+.content--overflow + .single_main {
+	margin-top: 200px;
+}
+
+.singlepost--hud {
+	height: 480px;
+	width: 100%;
+
 }
 
 .post-thumbnail {
