@@ -12,6 +12,7 @@ $fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
 $posted_by = $video->posted_by;
 $video_id = $video->video_id;
 $title = $video->video_title;
+$favourite = $video->favourite;
 
 $posted_date = date_create($video->posted_date);
 $posted_date = date_format($posted_date, 'd M Y');
@@ -54,8 +55,7 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->high->url;
 				<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
 				<!-- TODO: STEF TO ADD NUMBER OF COMMENTS -->
 				<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
-				<!-- TODO: STEF TO ADD NUMBER OF LIKES -->
-				<div class="meta-fav"><i class="fas fa-heart"></i>100</div>
+				<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
 			</div>
 		</div>
 	</div>

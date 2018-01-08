@@ -78,6 +78,7 @@ function create_videos_db() {
     title varchar(200) NOT NULL,
     description varchar(500) DEFAULT NULL,
     youtube varchar(100) NOT NULL,
+    favourite int(11) DEFAULT 0 NOT NULL,
     create_date datetime DEFAULT CURRENT_TIMESTAMP,
     update_date datetime DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id),

@@ -9,10 +9,12 @@
 
 session_start();
 
+global $loggedin;
+
 if(isset($_SESSION['username'])) {
-	//loggedin actions
+	$loggedin = '1';
 } else {
-	//not logged in actions
+	$loggedin = '0';
 }
 
 $container = get_theme_mod( 'understrap_container_type' );

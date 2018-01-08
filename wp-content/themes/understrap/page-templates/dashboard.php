@@ -16,7 +16,7 @@ $user_id = $_SESSION['user_id'];
 //get announcement
 $args = array(
 	'post_type' => 'announcements',
-	// 'posts_per_page' => 1,
+	'posts_per_page' => 1,
 	// 'date_query' => array(
 	// 	array(
 	// 	'column' => 'post_date_gmt', 
@@ -25,15 +25,14 @@ $args = array(
 );
 $announcement = new WP_Query( $args );
 
-//get total number of submitted videos, regardless of approval
-$videos_sql = $wpdb->prepare("SELECT * FROM $videos_table WHERE member_id = %s", $user_id);
+//get total videos stats
+$videos_sql = $wpdb->prepare("SELECT COUNT(id) as total_videos, SUM(favourite) as total_favs FROM $videos_table WHERE member_id = %s", $user_id);
 $results = $wpdb->get_results($videos_sql);
 $video_results_count = $wpdb->num_rows;
-
-//get favourited videos count
-$fav_sql = $wpdb->prepare("SELECT t2.member_id as member_id, t1.id as fav_id,t1.member_id as fav_by,t1.video_id as video_id,t2.title as video_title,t2.description as video_desc,t2.youtube as video_link FROM $fav_videos_table t1 INNER JOIN $videos_table t2 ON t1.video_id = t2.id WHERE t2.member_id = %s", $user_id);
-$results = $wpdb->get_results($fav_sql);
-$fav_results_count = $wpdb->num_rows;
+foreach($results as $result) {
+	$total_videos = $result->total_videos;
+	$total_favs = $result->total_favs;
+}
 
 if($video_results_count > 0) {
 //get last video
@@ -84,11 +83,11 @@ if($video_results_count > 0) {
 
 				<div class="row">
 					<div class="col-lg-6">
-						<h1><?=$video_results_count?></h1>
+						<h1><?=$total_videos?></h1>
 						<p>Videos Submitted</p>
 					</div>
 					<div class="col-lg-6">
-						<h1><?=$fav_results_count?></h1>
+						<h1><?=$total_favs?></h1>
 						<p>Favourited Videos</p>
 					</div>
 				</div>
