@@ -8,7 +8,18 @@
  */
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' ); ?>
+$container = get_theme_mod( 'understrap_container_type' ); 
+
+global $wpdb;
+$members_table = $wpdb->prefix.'genaero_members';
+$videos_table = $wpdb->prefix.'genaero_videos';
+$fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
+
+$all_videos_sql = "SELECT t1.id as video_id, t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id WHERE approved = '1'";
+
+$all_videos_results = $wpdb->get_results($all_videos_sql);
+$all_videos_count = $wpdb->num_rows;
+?>
 
 <section class="subpage--hud" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg1.jpg ); ">
 	<div class="HudOverlay">
@@ -65,6 +76,7 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 			<div class="row">
 				<div class="col-xl-8 ">
 					<div class="search-form">
+						<!-- TODO: STEF DO SEARCH -->
 						<input type="text" />
 						<button type="submit"><i class="fal fa-search"></i></button>
 					</div>
@@ -73,7 +85,7 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 					<h3>Submit your videos here:</h3>
 					<button class="arrowbtn btn--color">
 						<span class="fas fa-long-arrow-alt-right icon-left"></span>
-						<div class="arrowbtn-wrapper"><span>Sign up or Register Now</span></div>
+						<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>"><span>Sign up or Register Now</span></a></div>
 					</button>
 				</div>
 			</div>
@@ -114,67 +126,20 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 					<main class="site-main" id="main" role="main">
 						<h3>Featured_</h3>
 						<div class="row">
-							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 featured_experiment--card">
-								<div class="post-thumbnail">
-									<a href="#ab"><img src="http://lorempixel.com/500/250" /></a>
-								</div>
-								<div class="experiment--fav_link"><a href="#heart"><i class="fas fa-heart"></i></a></div>
-								<div class="experiment_card--content">
-									<a href="#a">Lorem ipsum dolor sit amet <?php the_title(); ?></a>
-									<div class="meta-date_fav">
-										<div class="alignleft">
-											<div class="meta-profile_pic"><i class="fas fa-user"></i></div>
-										</div>
-										<div class="alignleft">
-											<div class="meta-posted">Posted by <span class="meta-student">Jimmy Bin Ali</span></div>
-											<div class="meta-date"><i class="fas fa-clock"></i><?php echo get_the_date("d M Y"); ?></div>
-											<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
-											<div class="meta-fav"><i class="fas fa-heart"></i>100</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- .featured_experimentcard end -->
-							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 featured_experiment--card">
-								<div class="post-thumbnail">
-									<a href="#ab"><img src="http://lorempixel.com/500/251" /></a>
-								</div>
-								<div class="experiment--fav_link"><a href="#heart"><i class="fas fa-heart"></i></a></div>
-								<div class="experiment_card--content">
-									<a href="#a">Lorem ipsum dolor sit amet <?php the_title(); ?></a>
-									<div class="meta-date_fav">
-										<div class="alignleft">
-											<div class="meta-profile_pic"><i class="fas fa-user"></i></div>
-										</div>
-										<div class="alignleft">
-											<div class="meta-posted">Posted by <span class="meta-student">Jimmy Bin Ali</span></div>
-											<div class="meta-date"><i class="fas fa-clock"></i><?php echo get_the_date("d M Y"); ?></div>
-											<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
-											<div class="meta-fav"><i class="fas fa-heart"></i>100</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- .featured_experimentcard end -->
-							<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 featured_experiment--card">
-								<div class="post-thumbnail">
-									<a href="#ab"><img src="http://lorempixel.com/500/252" /></a>
-								</div>
-								<div class="experiment--fav_link"><a href="#heart"><i class="fas fa-heart"></i></a></div>
-								<div class="experiment_card--content">
-									<a href="#a">Lorem ipsum dolor sit amet <?php the_title(); ?></a>
-									<div class="meta-date_fav">
-										<div class="alignleft">
-											<div class="meta-profile_pic"><i class="fas fa-user"></i></div>
-										</div>
-										<div class="alignleft">
-											<div class="meta-posted">Posted by <span class="meta-student">Jimmy Bin Ali</span></div>
-											<div class="meta-date"><i class="fas fa-clock"></i><?php echo get_the_date("d M Y"); ?></div>
-											<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
-											<div class="meta-fav"><i class="fas fa-heart"></i>100</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- .featured_experimentcard end -->
+							<?php //get_template_part( 'loop-templates/tile', 'video' ); ?>
 						</div>
+
+						<hr>
+
+						<h3>All Videos_</h3>
+						<?php
+						if($all_videos_count > 0) {
+							foreach($all_videos_results as $video) {
+								global $video;
+								get_template_part( 'loop-templates/tile', 'video' );
+							}
+						}
+						?>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .row end -->
