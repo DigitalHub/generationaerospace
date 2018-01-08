@@ -13,9 +13,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 global $wpdb;
 $members_table = $wpdb->prefix.'genaero_members';
 $videos_table = $wpdb->prefix.'genaero_videos';
-$fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
 
-$all_videos_sql = "SELECT t1.id as video_id, t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id WHERE approved = '1'";
+$all_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.post_status FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t3.post_date DESC";
 
 $all_videos_results = $wpdb->get_results($all_videos_sql);
 $all_videos_count = $wpdb->num_rows;
@@ -98,7 +97,7 @@ $all_videos_count = $wpdb->num_rows;
 			<div class="row">
 				<div class="col-xl-8 col-xl-8 col-md-6 col-sm-12 col-xs-12 featured_experiment--card">
 					<div class="post-thumbnail">
-						<a href="#ab"><img src="http://lorempixel.com/500/253" /></a>
+						<a href="#ab"><img src="" /></a>
 					</div>
 					<div class="experiment--fav_link"><a href="#heart"><i class="fas fa-heart"></i></a></div>
 				</div>
@@ -125,18 +124,29 @@ $all_videos_count = $wpdb->num_rows;
 				<div class="col-xl-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
 						<h3>Featured_</h3>
-						<div class="row">
-							<?php //get_template_part( 'loop-templates/tile', 'video' ); ?>
-						</div>
+						<?php
+						// $featured = get_field('featured_videos');
+						// if($featured):
+						// 	foreach($featured as $single) {
+						// 		echo get_the_title($single->ID);
+						// 	}
+						// endif;
+						?>
 
 						<hr>
 
 						<h3>All Videos_</h3>
 						<?php
 						if($all_videos_count > 0) {
+							$count = 0;
 							foreach($all_videos_results as $video) {
+								if($count % 3 == 0) :
+									echo $count > 0 ? '</div>' : '';
+									echo '<div class="row">';
+								endif;
 								global $video;
 								get_template_part( 'loop-templates/tile', 'video' );
+								$count++;
 							}
 						}
 						?>

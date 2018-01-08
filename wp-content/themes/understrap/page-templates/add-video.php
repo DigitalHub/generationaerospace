@@ -8,6 +8,11 @@
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 
+global $wpdb;
+$videos_table = $wpdb->prefix.'genaero_videos';
+$user_id = $_SESSION['user_id'];
+$username = $_SESSION['username'];
+
 function my_contact_form_generate_response($type, $message){
 	global $response;
 	if($type ==='error') {
@@ -22,10 +27,6 @@ $general_error = "There seems to be a problem. Please try to submit again.";
 $missing_content = "Please fill in all fields.";
 $long_desc = "Your description has exceeded the 500 characters limit. Please reduce the number of characters in your description.";
 $success_content = "Thanks for your submission. We'll notify you once your video has been reviewed and approved.";
-
-global $wpdb;
-$videos_table = $wpdb->prefix.'genaero_videos';
-$user_id = $_SESSION['user_id'];
 
 //if submit a video page
 if(is_page('submit-a-video')) {
@@ -60,9 +61,23 @@ if($_POST['video_submit']) {
 		} else {
 			//is new video
 			if($new_video === '1') {
-				$sql = $wpdb->prepare("INSERT INTO $videos_table (member_id,title,description,youtube) VALUES (%s,%s,%s,%s)", array($user_id,$title,$desc,$youtube));
-				$wpdb->query($sql);
-				my_contact_form_generate_response("success", $success_content);
+				$video_cpt_args = array(
+					'post_title' => $title,
+					'post_status' => 'pending',
+					'post_type' => 'genaero_videos'
+				);
+
+				$video_cpt_id = wp_insert_post( $video_cpt_args, $wp_error);
+
+				if($video_cpt_id) {
+					$sql = $wpdb->prepare("INSERT INTO $videos_table (link_id, member_id,title,description,youtube) VALUES (%s,%s,%s,%s,%s)", array($video_cpt_id,$user_id,$title,$desc,$youtube));
+					$wpdb->query($sql);
+
+					my_contact_form_generate_response("success", $success_content);
+				} else {
+					my_contact_form_generate_response("error", $general_error);
+				}
+				
 			} else if($new_video === '0') {
 				$sql = $wpdb->prepare("UPDATE $videos_table SET title=%s,description=%s,youtube=%s WHERE member_id=%s", array($title,$desc,$youtube,$user_id));
 				$wpdb->query($sql);
@@ -73,6 +88,7 @@ if($_POST['video_submit']) {
 		}
 	}
 }
+
 ?>
 
 <div class="wrapper" id="page-wrapper">
@@ -106,29 +122,26 @@ if($_POST['video_submit']) {
 
 					<label for="title">Title</label>
 					<input type="text" name="video_title" id="video_title" value="<?=$title?>" required>
+
 					<label for="desc">Description (500 characters limit)</label>
 					<textarea name="video_desc" id="video_desc" rows="5" cols="70" maxlength="500"><?=$desc?></textarea>
+
 					<br>
-					<!-- <div class="col-lg-3">
-						<label for="thumbnail">Thumbnail</label>
-						<img src="<?=$thumbnail?>" name="video_thumbnail" id="video_thumbnail" height="150px">
-					</div>
-					<div class="col-lg-9"> -->
-						<label for="youtube">YouTube URL</label>
-						<input type="text" name="video_youtube" id="video_youtube" value="<?=$youtube?>" pattern="https?://.+" required>
-						<!-- </div> -->
-						<input type="hidden" name="video_is_new_video" value="<?=$is_new_video?>">
 
-						<input type="submit" name="video_submit" id="video_submit" value="Submit">
-					</form>
+					<label for="youtube">YouTube URL</label>
+					<input type="text" name="video_youtube" id="video_youtube" value="<?=$youtube?>" pattern="https?://.+" required>
+					<input type="hidden" name="video_is_new_video" value="<?=$is_new_video?>">
 
-				</main><!-- #main -->
+					<input type="submit" name="video_submit" id="video_submit" value="Submit">
+				</form>
 
-			</div><!-- #primary -->
+			</main><!-- #main -->
 
-		</div><!-- .row -->
+		</div><!-- #primary -->
 
-	</div><!-- Container end -->
+	</div><!-- .row -->
+
+</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 

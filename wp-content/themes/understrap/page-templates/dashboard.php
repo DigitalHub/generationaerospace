@@ -35,24 +35,26 @@ $fav_sql = $wpdb->prepare("SELECT t2.member_id as member_id, t1.id as fav_id,t1.
 $results = $wpdb->get_results($fav_sql);
 $fav_results_count = $wpdb->num_rows;
 
-//get last approved video
-$last_video_sql = $wpdb->prepare("SELECT * FROM $videos_table WHERE member_id = %s AND approved = '1' AND create_date = (SELECT MAX(create_date) FROM $videos_table WHERE member_id = %s AND approved = '1')", $user_id, $user_id);
-$results = $wpdb->get_results($last_video_sql);
-$lastvid_results_count = $wpdb->num_rows;
-if($lastvid_results_count > 0) {
-	$title = $results[0] -> title;
-	$desc = substr($results[0]->description,0,120);
-	$youtube = $results[0] -> youtube;
+if($video_results_count > 0) {
+//get last video
+	$last_video_sql = $wpdb->prepare("SELECT * FROM $videos_table WHERE member_id = %s AND create_date = (SELECT MAX(create_date) FROM $videos_table WHERE member_id = %s)", $user_id, $user_id);
+	$results = $wpdb->get_results($last_video_sql);
+	$lastvid_results_count = $wpdb->num_rows;
+	if($lastvid_results_count > 0) {
+		$title = $results[0] -> title;
+		$desc = substr($results[0]->description,0,120);
+		$youtube = $results[0] -> youtube;
 
-	parse_str( parse_url( $youtube, PHP_URL_QUERY ), $my_array_of_vars );
-	$youtube_id =  $my_array_of_vars['v'];
+		parse_str( parse_url( $youtube, PHP_URL_QUERY ), $my_array_of_vars );
+		$youtube_id =  $my_array_of_vars['v'];
 
-	$url_to_json = 'https://www.googleapis.com/youtube/v3/videos?key='.YOUTUBE_API_KEY.'&part=snippet&id='.$youtube_id;
+		$url_to_json = 'https://www.googleapis.com/youtube/v3/videos?key='.YOUTUBE_API_KEY.'&part=snippet&id='.$youtube_id;
 
-	$data = file_get_contents($url_to_json);
-	$json = json_decode($data);
-	$thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
-}
+		$data = file_get_contents($url_to_json);
+		$json = json_decode($data);
+		$thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
+	}	
+} 
 ?>
 
 <div class="wrapper" id="page-wrapper">
@@ -91,8 +93,9 @@ if($lastvid_results_count > 0) {
 					</div>
 				</div>
 				<hr>
+				<?php if($video_results_count > 0) { ?>
 				<div class="row">
-					<h3>Most Recent Approved Video</h3>
+					<h3>Most Recent Video</h3>
 				</div>
 				<div class="row">
 					<div class="col-lg-3">
@@ -106,6 +109,12 @@ if($lastvid_results_count > 0) {
 						<a href="<?php echo get_permalink( get_page_by_path( 'my-videos' ) ) ?>"><button>See More Videos</button></a>
 					</div>
 				</div>
+				<?php  } else { ?>
+				<div class="row">
+					<h3>It looks like you haven't submitted any videos yet. Why don't you get started by clicking over here?</h3>
+					<a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>"><button>Submit a Video</button></a>
+				</div>
+				<?php } ?>
 			</main><!-- #main -->
 
 		</div><!-- #primary -->

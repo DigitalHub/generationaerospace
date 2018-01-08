@@ -11,7 +11,7 @@ global $result;
 $video_id = $result->id;
 $title = $result->title;
 $desc = substr($result->description,0,120);
-$approved = $result->approved;
+$approved = $result->post_status;
 
 $youtube = $result->youtube;
 parse_str( parse_url( $youtube, PHP_URL_QUERY ), $my_array_of_vars );
@@ -35,7 +35,7 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
 		<h5>
 			<?php
 			echo $title;
-			if(!$approved) {
+			if($approved === 'pending') {
 				echo ' (Pending Approval)'; //TODO: RACHELLE, MAYBE CSS THIS ONE?
 			}
 			?>
