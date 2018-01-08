@@ -14,6 +14,11 @@ global $wpdb;
 $members_table = $wpdb->prefix.'genaero_members';
 $videos_table = $wpdb->prefix.'genaero_videos';
 
+$featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.post_status, t4.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id INNER JOIN $wpdb->postmeta t4 ON t4.post_id = t1.link_id WHERE t3.post_status = 'publish' AND t4.meta_key = 'featured' AND t4.meta_value = '1' ORDER BY t3.post_date DESC";
+
+$featured_videos_results = $wpdb->get_results($featured_videos_sql);
+$featured_videos_count = $wpdb->num_rows;
+
 $all_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.post_status FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t3.post_date DESC";
 
 $all_videos_results = $wpdb->get_results($all_videos_sql);
@@ -125,12 +130,22 @@ $all_videos_count = $wpdb->num_rows;
 					<main class="site-main" id="main" role="main">
 						<h3>Featured_</h3>
 						<?php
-						// $featured = get_field('featured_videos');
-						// if($featured):
-						// 	foreach($featured as $single) {
-						// 		echo get_the_title($single->ID);
-						// 	}
-						// endif;
+						if($featured_videos_count > 0) {
+							$count = 0;
+							foreach($featured_videos_results as $video) {
+								if($count % 3 == 0) :
+									echo $count > 0 ? '</div>' : '';
+									echo '<div class="row">';
+								endif;
+								global $video;
+								get_template_part( 'loop-templates/tile', 'video' );
+								$count++;
+							}
+
+							if($count % 3 !== 0) {
+								echo '</div>';
+							}
+						}
 						?>
 
 						<hr>
@@ -147,6 +162,10 @@ $all_videos_count = $wpdb->num_rows;
 								global $video;
 								get_template_part( 'loop-templates/tile', 'video' );
 								$count++;
+							}
+
+							if($count % 3 !== 0) {
+								echo '</div>';
 							}
 						}
 						?>
