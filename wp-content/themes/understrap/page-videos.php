@@ -14,11 +14,56 @@ global $wpdb;
 $members_table = $wpdb->prefix.'genaero_members';
 $videos_table = $wpdb->prefix.'genaero_videos';
 
+//featured of the month loop
+$featured_month = get_field('monthly_feature');
+if($featured_month) :
+	$post = $featured_month;
+	setup_postdata( $post ); 
+	$post_id = get_the_ID();
+	wp_reset_postdata();
+endif;
+$featured_month_sql = $wpdb->prepare("SELECT t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t1.link_id = '%s'", $post_id);
+
+$featured_month_results = $wpdb->get_results($featured_month_sql);
+$featured_month_count = $wpdb->num_rows;
+
+if($featured_month_count > 0) {
+	foreach($featured_month_results as $video) {
+		$posted_by = $video->posted_by;
+		$video_id = $video->video_id;
+		$title = $video->video_title;
+		$desc = substr(stripslashes(stripslashes($video->video_desc)), 0, 180);
+
+		$posted_date = date_create($video->posted_date);
+		$posted_date = date_format($posted_date, 'd M Y');
+
+		$permalink = get_permalink($post_id);
+
+		$profile_pic = $video->profile_pic;
+		if($profile_pic === '' || $profile_pic === NULL) {
+			$profile_pic = get_template_directory_uri().'/img/default-photo.png';
+		}
+
+		$youtube = $video->video_link;
+		parse_str( parse_url( $youtube, PHP_URL_QUERY ), $my_array_of_vars );
+		$youtube_id =  $my_array_of_vars['v'];
+
+		$url_to_json = 'https://www.googleapis.com/youtube/v3/videos?key='.YOUTUBE_API_KEY.'&part=snippet&id='.$youtube_id;
+
+		$data = file_get_contents($url_to_json);
+		$json = json_decode($data);
+		$thumbnail_url = $json->items[0]->snippet->thumbnails->standard->url;
+	}
+}
+
+//featured videos loop
+//'best' code i ever wrote, 4 inner joined tables, you're welcome future programmer
 $featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.post_status, t4.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id INNER JOIN $wpdb->postmeta t4 ON t4.post_id = t1.link_id WHERE t3.post_status = 'publish' AND t4.meta_key = 'featured' AND t4.meta_value = '1' ORDER BY t3.post_date DESC";
 
 $featured_videos_results = $wpdb->get_results($featured_videos_sql);
 $featured_videos_count = $wpdb->num_rows;
 
+//all (approved) videos loop
 $all_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.post_status FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t3.post_date DESC";
 
 $all_videos_results = $wpdb->get_results($all_videos_sql);
@@ -102,25 +147,32 @@ $all_videos_count = $wpdb->num_rows;
 			<div class="row">
 				<div class="col-xl-8 col-xl-8 col-md-6 col-sm-12 col-xs-12 featured_experiment--card">
 					<div class="post-thumbnail">
-						<a href="#ab"><img src="" /></a>
+						<!-- TODO: STEF TO ADD FANCYBOX POPUP -->
+						<a href="<?=$permalink?>"><img src="<?=$thumbnail_url?>" /></a>
 					</div>
 					<div class="experiment--fav_link"><a href="#heart"><i class="fas fa-heart"></i></a></div>
 				</div>
 				<div class="col-xl-4 col-xl-4 col-md-6 col-sm-12 col-xs-12">
 					<h2>Featured Video of the Month_</h2>
-					<h3>Title Goes Here <?php the_title(); ?></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati debitis, omnis est distinctio aperiam sint, harum magnam tempora quas veniam id laboriosam assumenda dolores cumque accusamus iste quia sapiente quis! Quibusdam sunt soluta odit maxime iure tempora corporis suscipit laboriosam.</p>
+					<h3><?=$title?></h3>
+					<p><?=$desc?>...</p>
 
 					<div class="meta-date_fav">
 						<div class="alignleft">
-							<div class="meta-profile_pic"><i class="fas fa-user"></i></div>
+							<div class="meta-profile_pic"><?=$profile_pic?></div>
 						</div>
 						<div class="alignleft">
-							<div class="meta-posted">Posted by <span class="meta-student">Jimmy Bin Ali</span></div>
-							<div class="meta-date"><i class="fas fa-clock"></i><?php echo get_the_date("d M Y"); ?></div>
+							<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
+							<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
+							<!-- TODO: STEF TO ADD NUMBER OF COMMENTS -->
 							<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
+							<!-- TODO: STEF TO ADD NUMBER OF LIKES -->
 							<div class="meta-fav"><i class="fas fa-heart"></i>100</div>
 						</div>
+						<button class="arrowbtn btn--color">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span>
+							<div class="arrowbtn-wrapper"><a href="<?=$permalink?>"><span>More Details</span></a></div>
+						</button>
 					</div>
 				</div>
 			</div>
