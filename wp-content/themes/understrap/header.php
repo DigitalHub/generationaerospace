@@ -15,6 +15,11 @@ if(isset($_SESSION['username'])) {
 	$loggedin = '1';
 } else {
 	$loggedin = '0';
+
+	//if not logged in and at member pages, immediately redirect to login page
+	if(is_page('member-dashboard') || is_page('my-profile') || is_page('my-videos') || is_page('submit-a-video') || is_page('edit-a-video') || is_page('my-favourite-videos') || is_page('my-favourite-experiments') || is_page('submit-an-idea')) {
+		wp_redirect( 'login', 301 );
+	}
 }
 
 $container = get_theme_mod( 'understrap_container_type' );
@@ -30,6 +35,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+	<script type="text/javascript">
+		loggedin = '<?=$loggedin?>';
+	</script>
 	<?php wp_head(); ?>
 </head>
 

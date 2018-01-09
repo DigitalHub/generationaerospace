@@ -25,7 +25,7 @@ if($featured_month) :
 	$post_id = get_the_ID();
 	wp_reset_postdata();
 endif;
-$featured_month_sql = $wpdb->prepare("SELECT t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.favourite, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t1.link_id = '%s'", $post_id);
+$featured_month_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.favourite, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t1.link_id = '%s'", $post_id);
 
 $featured_month_results = $wpdb->get_results($featured_month_sql);
 $featured_month_count = $wpdb->num_rows;
@@ -158,7 +158,13 @@ $all_videos_count = $wpdb->num_rows;
 						<!-- TODO: RACHELLE TO ADD PLAY ICON -->
 						<a data-fancybox href="<?=$youtube?>"><img src="<?=$thumbnail_url?>" /></a>
 					</div>
-					<div class="experiment--fav_link"><a href="#heart"><i class="fas fa-heart"></i></a></div>
+					<!-- TODO: STEF TO ADD FAV FUNCTION -->
+					<?php if($loggedin == '0') { ?>
+					<!-- TODO: STEF TO ADD SPECIAL LOGIN/REGISTER FANCYBOX -->
+					<div class="experiment--fav_link"><a data-fancybox="iframe" data-src="login" data-type="iframe" href="javascript:;"><i class="fas fa-heart"></i></a></div>
+					<?php } elseif($loggedin == '1') { ?>
+					<div class="experiment--fav_link"><a href="#heart" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></a></div>
+					<?php } ?>
 				</div>
 				<div class="col-xl-4 col-xl-4 col-md-6 col-sm-12 col-xs-12">
 					<h2>Featured Video of the Month_</h2>
