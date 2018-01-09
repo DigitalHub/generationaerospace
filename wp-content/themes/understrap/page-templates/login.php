@@ -118,9 +118,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<input type="text" name="login_username" id="login_username" placeholder="Username" minlength="4" maxlength="20" required><br>
 					<!-- <label for="login_password">Password</label> -->
 					<input type="password" name="login_password" id="login_password" placeholder="Password" title="Password" minlength="6" maxlength="14" autocomplete="new-password" required><br><br>
-
-					<input type="submit" name="login_submit" id="login_submit" value="Login">
-					<a href="../forgot-passw1rd">Forgot password?</a>
+					<div class="clear"></div>
+					<div class="login_submit--wrap arrowbtn btn--color">
+						<span class="fas fa-long-arrow-alt-right icon-left"></span>	
+						<div class="arrowbtn-wrapper">
+							<input type="submit" name="login_submit" class="" id="login_submit" value="Login">
+						</div>	
+					</div>
+					<a class="forgot_password--btn" href="../forgot-passw1rd">Forgot password?</a>
 
 					<div class="separator">OR</div>
 

@@ -276,6 +276,11 @@ a {
 			z-index: -1;
 			@include transition(.4s .02s ease-in all);
 		}
+
+		input {
+			padding: 0 !important;
+			height: 100% !important;
+		}
 	}
 
 	&:hover {
@@ -335,7 +340,7 @@ a {
 	outline: none;
 	height: 47px;
 	padding: 10px 35px;
-    text-align: center;
+	text-align: center;
 	text-transform: uppercase;
 	@include transition(.01s .23s ease-out all);
 	width: 225px;
@@ -458,8 +463,8 @@ input {
 	border: none;
 	color: $white;
 	padding: 15px 10px;
-	// height: 100%;
-	height: auto !important; //temporary
+	height: 40px;
+	// height: auto !important; //temporary
 	width: 100%;
 
 	&:focus {
@@ -467,5 +472,35 @@ input {
 	}
 
 }
+
+a#genaero-facebook-button {
+	background-color: #3b5999;
+	color: $white;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	margin: auto;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	width: 50%;
+
+	i {
+		background-color: #354f88;
+		font-size: 30px;
+		left: 0;
+		height: 100%;
+		line-height: 40px;
+		width: 40px;
+		position: absolute;
+		vertical-align: middle;
+		display: block;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 //*******************************************//
 //** Base Buttons Ends **//
