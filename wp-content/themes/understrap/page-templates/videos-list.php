@@ -13,7 +13,7 @@ $videos_table = $wpdb->prefix.'genaero_videos';
 $username = $_SESSION['username'];
 $user_id = $_SESSION['user_id'];
 
-$videos_sql = $wpdb->prepare("SELECT * FROM $videos_table WHERE member_id = %s", $user_id);
+$videos_sql = $wpdb->prepare("SELECT * FROM $videos_table INNER JOIN $wpdb->posts ON $videos_table.link_id = $wpdb->posts.id WHERE member_id = %s", $user_id);
 $results = $wpdb->get_results($videos_sql);
 $results_count = $wpdb->num_rows;
 ?>

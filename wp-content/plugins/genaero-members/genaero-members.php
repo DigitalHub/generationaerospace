@@ -73,11 +73,12 @@ function create_videos_db() {
 
     $sql = "CREATE TABLE $videos_table (
     id int(11) NOT NULL AUTO_INCREMENT,
+    link_id int(11) NOT NULL,
     member_id int(11) NOT NULL,
     title varchar(200) NOT NULL,
     description varchar(500) DEFAULT NULL,
     youtube varchar(100) NOT NULL,
-    approved tinyint(1) DEFAULT 0,
+    favourite int(11) DEFAULT 0 NOT NULL,
     create_date datetime DEFAULT CURRENT_TIMESTAMP,
     update_date datetime DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
