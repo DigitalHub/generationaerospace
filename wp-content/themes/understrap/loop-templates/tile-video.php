@@ -40,8 +40,7 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->high->url;
 	<div class="post-thumbnail">
 		<a href="<?=$permalink?>"><img src="<?=$thumbnail_url?>" /></a>
 	</div>
-	<!-- TODO: STEF TO ADD FUNCTIONALITY FOR LIKE -->
-	<div class="experiment--fav_link"><a href="#heart"><i class="fas fa-heart"></i></a></div>
+	<div class="experiment--fav_link" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></div>
 	<div class="experiment_card--content">
 		<a href="<?=$permalink?>"><?=$title?></a>
 		<div class="meta-date_fav">
