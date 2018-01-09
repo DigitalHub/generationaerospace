@@ -1,10 +1,12 @@
-body.page-template-login {
+body.page-template-login,
+body.page-template-sign-up {
 	background-attachment: fixed;
 	background-image: url("../img/Dashboard_Bg.jpg");
 	background-position: center;
 }
 
 
+.sign-up-row,
 .login-row {
 	align-items: center;
 	justify-content: center;
@@ -12,6 +14,7 @@ body.page-template-login {
 	height: 100vh;
 }
 
+#signup_form,
 #login_form {
 	input {
 		background-color: #ffffff40 !important;
@@ -22,7 +25,6 @@ body.page-template-login {
 		font-size: 1.333rem;
 		margin-bottom: 15px;
 		padding: 15px 10px;
-		height: 50px !important;
 		width: 100%;
 
 		&:focus {
@@ -30,10 +32,61 @@ body.page-template-login {
 		}
 	}
 
+
 	input::-webkit-input-placeholder,
 	input:-moz-placeholder, /* Firefox 18- */
 	input::-moz-placeholder ,  /* Firefox 19+ */
 	input:-ms-input-placeholder {  
 		color: $white !important;  
+	}
+
+	.login_submit--wrap {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.forgot_password--btn {
+		display: inline-block;
+		line-height: 47px;
+		margin-left: 30px;
+		vertical-align: middle;
+	}
+
+	.click_terms {
+		color: $rrskyblue;
+		margin: 15px 0 0;
+		text-align: center;
+
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.separator {
+	color: $white;
+	overflow: hidden;
+	text-align: center;
+	margin: 40px auto 15px;
+
+	&:before,
+	&:after {
+		background-color: $white;
+		content: "";
+		display: inline-block;
+		height: 1px;
+		position: relative;
+		vertical-align: middle;
+		width: 50%;
+	}
+
+	&:before {
+		right: 0.5em;
+		margin-left: -50%;
+	}
+
+	&:after {
+		left: 0.5em;
+		margin-right: -50%;
 	}
 }

@@ -10806,6 +10806,7 @@ body.home {
     stroke: #c9c9c9; }
 
 .page-template-login .HudOverlay,
+.page-template-sign-up .HudOverlay,
 .home .HudOverlay {
   height: 100%;
   z-index: -1; }
@@ -11126,6 +11127,9 @@ a {
       -o-transition: 0.4s 0.02s ease-in all;
       -webkit-transition: 0.4s 0.02s ease-in all;
       transition: 0.4s 0.02s ease-in all; }
+    .arrowbtn .arrowbtn-wrapper input {
+      padding: 0 !important;
+      height: 100% !important; }
   .arrowbtn:hover {
     cursor: pointer; }
     .arrowbtn:hover .icon-left {
@@ -11268,10 +11272,34 @@ input {
   border: none;
   color: #fff;
   padding: 15px 10px;
-  height: auto !important;
+  height: 40px;
   width: 100%; }
   input:focus {
     outline: 0; }
+
+a#genaero-facebook-button {
+  background-color: #3b5999;
+  color: #fff;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%; }
+  a#genaero-facebook-button i {
+    background-color: #354f88;
+    font-size: 30px;
+    left: 0;
+    height: 100%;
+    line-height: 40px;
+    width: 40px;
+    position: absolute;
+    vertical-align: middle;
+    display: block; }
+  a#genaero-facebook-button:hover {
+    text-decoration: none; }
 
 .home .site-title {
   position: fixed; }
@@ -12380,17 +12408,20 @@ input {
     border-radius: 5px;
     cursor: pointer; }
 
-body.page-template-login {
+body.page-template-login,
+body.page-template-sign-up {
   background-attachment: fixed;
   background-image: url("../img/Dashboard_Bg.jpg");
   background-position: center; }
 
+.sign-up-row,
 .login-row {
   align-items: center;
   justify-content: center;
   align-items: center;
   height: 100vh; }
 
+#signup_form input,
 #login_form input {
   background-color: #ffffff40 !important;
   border: none;
@@ -12400,15 +12431,57 @@ body.page-template-login {
   font-size: 1.333rem;
   margin-bottom: 15px;
   padding: 15px 10px;
-  height: 50px !important;
   width: 100%; }
+  #signup_form input:focus,
   #login_form input:focus {
     outline: 0; }
+#signup_form input::-webkit-input-placeholder,
+#signup_form input:-moz-placeholder,
+#signup_form input::-moz-placeholder,
+#signup_form input:-ms-input-placeholder,
 #login_form input::-webkit-input-placeholder,
 #login_form input:-moz-placeholder,
 #login_form input::-moz-placeholder,
 #login_form input:-ms-input-placeholder {
   color: #fff !important; }
+#signup_form .login_submit--wrap,
+#login_form .login_submit--wrap {
+  display: inline-block;
+  vertical-align: middle; }
+#signup_form .forgot_password--btn,
+#login_form .forgot_password--btn {
+  display: inline-block;
+  line-height: 47px;
+  margin-left: 30px;
+  vertical-align: middle; }
+#signup_form .click_terms,
+#login_form .click_terms {
+  color: #00aed4;
+  margin: 15px 0 0;
+  text-align: center; }
+  #signup_form .click_terms a,
+  #login_form .click_terms a {
+    text-decoration: underline; }
+
+.separator {
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+  margin: 40px auto 15px; }
+  .separator:before, .separator:after {
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%; }
+  .separator:before {
+    right: 0.5em;
+    margin-left: -50%; }
+  .separator:after {
+    left: 0.5em;
+    margin-right: -50%; }
 
 /*
 * Use existing Bootstrap 4 classes and
