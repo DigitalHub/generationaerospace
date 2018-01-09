@@ -59,7 +59,7 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 	</div> 
 	<div class="singlepost--content content--overflow">
 		<div class="container">
-			<div class="col-xl-10 offset-xl-1">
+			<div class="col-xl-10 offset-xl-1 col-lg-10 offset-xl-1 col-md-10 offset-md-1 col-sm-12 col-xs-12">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/imgbg_homepage-event.jpg" alt="Singapore Airshow 2018">
 			</div>
 		</div>
@@ -72,10 +72,8 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 				<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
 						<div class="row">
-							<div class="col-xl-2 entry-share">
-								<div class="addthis">Lorem ipsum.</div>
-							</div>
-							<div class="col-xl-10">
+							<div class="col-xl-2 col-lg-2 col-md-2 col-sm- col-xs- entry-share"><div class="row"><div class="addthis_inline_share_toolbox"></div></div></div>
+							<div class="col-xl-10 col-lg-10 col-md-10 col-sm- col-xs-">
 								<div class="entry-content">
 									<h2><?php the_title(); ?></h2>
 									<p class="highlight">10-February 2018, Changi Exhibition Centre, Singapore</p>
@@ -94,4 +92,5 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 		</div><!-- Container end -->
 	</div><!-- Wrapper end -->
 </section>
+
 <?php get_footer(); ?>

@@ -88,7 +88,7 @@
 .site-menu {
 	position: absolute;
 	right: 7%;
-	top: 5%;
+	top: 3%;
 	z-index: 500;
 }
 
@@ -482,9 +482,12 @@
 	}
 }
 
+.page-template-login,
 .home {
 	#wrapper-footer {
+		bottom: 0;
 		position: absolute;
+		width: 100%;
 	}
 }
 

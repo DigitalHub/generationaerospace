@@ -1,8 +1,6 @@
 <?php
 /**
- * Template Name: Page Events
- *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
+ * The template for displaying all single posts.
  *
  * @package understrap
  */
@@ -60,76 +58,19 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 	</div> 
 	<div class="subpage--content">
 		<div class="container">
-			<h1><?php //the_title(); ?>What's Happening</h1>
+			<h1><?php the_title(); ?></h1>
 			<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
-			<button class="defaultbtn btn--color">
-				<div class="defaultbtn-wrapper"><span>All</span></div>
-			</button>
-
-			<button class="defaultbtn btn--color">
-				<div class="defaultbtn-wrapper"><span>Upcoming</span></div>
-			</button>
 		</div>
 	</div>
 </section>
 <section class="sub_main">
-	<div class="wrapper">
+	<div class="wrapper" id="single-wrapper">
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
-				<div class="col-xl-12 content-area" id="primary">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
-						<div class="container">
-							<div class="events_table ongoing_events">
-								<div class="row events_row--header">
-									<div class="col-xl-5"><h3>Events</h3></div>
-									<div class="col-xl-2"><h3>Date</h3></div>
-									<div class="col-xl-2"><h3>time</h3></div>
-									<div class="col-xl-3"><h3>venue</h3></div>
-								</div>
-								<!-- TODO: Stef start looping here -->
-								<div class="row events_row--content">
-									<div class="col-xl-5">
-										<p>Lorem Ipsum</p>
-										<a href="#">Click to read more</a>
-									</div>
-									<div class="col-xl-2">
-										<p><?php echo get_the_date(); ?></p>
-									</div>
-									<div class="col-xl-2">
-										<p>9:30am - 5:00pm</p>
-									</div>
-									<div class="col-xl-3">
-										<p>Changi Exhibition Center</p>
-									</div>
-								</div> <!-- .events_row end -->
-							</div><!-- .ongoing_events end -->
-							
-							<div class="events_table past_events">
-								<div class="row events_row--header">
-									<div class="col-xl-5"><h3>Past Events</h3></div>
-									<div class="col-xl-2"><h3>Date</h3></div>
-									<div class="col-xl-2"><h3>time</h3></div>
-									<div class="col-xl-3"><h3>venue</h3></div>
-								</div>
-								<!-- TODO: Stef start looping here -->
-								<div class="row events_row--content">
-									<div class="col-xl-5">
-										<p>Lorem Ipsum</p>
-										<a href="#">Click to read more</a>
-									</div>
-									<div class="col-xl-2">
-										<p><?php echo get_the_date(); ?></p>
-									</div>
-									<div class="col-xl-2">
-										<p>9:30am - 5:00pm</p>
-									</div>
-									<div class="col-xl-3">
-										<p>Changi Exhibition Center</p>
-									</div>
-								</div><!-- .events_row end -->
-							</div><!-- .past_events end -->
-						</div>
-					</main>
+						<?php the_content(); ?>
+					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 		</div><!-- Container end -->
