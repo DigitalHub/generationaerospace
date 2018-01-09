@@ -77,7 +77,6 @@ if($featured_month_count > 0) {
 }
 
 //featured videos loop
-//'best' code i ever wrote, 4 inner joined tables, you're welcome future programmer
 $featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' ORDER BY t1.create_date DESC LIMIT 3";
 
 $featured_videos_results = $wpdb->get_results($featured_videos_sql);
