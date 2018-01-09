@@ -8,7 +8,15 @@
  */
 
  get_header();
- $container = get_theme_mod( 'understrap_container_type' ); ?>
+ $container = get_theme_mod( 'understrap_container_type' ); 
+
+ $args = array(
+ 	'post_type' => 'genaero_vault',
+ 	'posts_per_page' => -1,
+ );
+ $the_query = new WP_Query( $args );
+ $post_count = $the_query->post_count;
+ ?>
 
  <section class="subpage--hud" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg1.jpg ); ">
  	<div class="HudOverlay">
@@ -73,34 +81,23 @@
  			<div class="row">
  				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
  					<main class="site-main" id="main" role="main">
- 						<div class="row">
- 							<!-- TODO: Stef start looping here -->
- 							<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-x-12 vault--card">
- 								<div class="post-thumbnail">
- 									<a href="#ab"><img src="http://lorempixel.com/500/250" /></a>
- 								</div>
- 								<div class="vault_card--content">
- 									<a href="#a">Lorem ipsum dolor sit amet <?php the_title(); ?></a>
- 								</div>
- 							</div><!-- .vault-card end -->
- 							<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-x-12 vault--card">
- 								<div class="post-thumbnail">
- 									<a href="#ab"><img src="http://lorempixel.com/500/250" /></a>
- 								</div>
- 								<div class="vault_card--content">
- 									<a href="#a">Lorem ipsum dolor sit amet <?php the_title(); ?></a>
- 								</div>
- 							</div><!-- .vault-card end -->
- 							<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-x-12 vault--card">
- 								<div class="post-thumbnail">
- 									<a href="#ab"><img src="http://lorempixel.com/500/250" /></a>
- 								</div>
- 								<div class="vault_card--content">
- 									<a href="#a">Lorem ipsum dolor sit amet <?php the_title(); ?></a>
- 								</div>
- 							</div><!-- .vault-card end -->
- 							<!-- endlooping here -->
- 						</div> 
+ 						<?php
+ 						if($the_query->have_posts()) :
+ 							$count = 0;
+ 							while($the_query->have_posts()) : $the_query->the_post();
+ 								if($count % 3 == 0) :
+ 									echo $count > 0 ? '</div>' : '';
+ 									echo '<div class="row">';
+ 								endif;
+ 								get_template_part( 'loop-templates/tile', 'vault' );
+								$count++;
+ 							endwhile;
+
+ 							if($count % 3 !== 0) {
+ 								echo '</div>';
+ 							}
+ 						endif;
+ 						?>
  					</main><!-- #main -->
  				</div><!-- #primary -->
  			</div><!-- .row end -->
