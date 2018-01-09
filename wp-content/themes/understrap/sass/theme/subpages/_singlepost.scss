@@ -1,3 +1,172 @@
 .entry-content {
 	margin-bottom: 50px;
 }
+
+//social media has icon and name
+.addthis_inline_share_toolbox {
+	.at-icon-wrapper.at-share-btn {
+		background-color: transparent !important;
+		border-bottom: 1px solid #7f7f7f !important;
+		margin: 0 !important;
+		width: 100%;
+
+		span {
+			color: $black !important;
+		}
+
+		&.at-svc-facebook {
+			svg {
+				fill: rgb(59, 89, 152) !important;
+			}
+		}
+
+		&.at-svc-twitter {
+			svg {
+				fill: rgb(29, 161, 242) !important;
+			}
+		}
+
+		&.at-svc-lineme {
+			svg {
+				fill: rgb(0, 195, 0) !important;
+			}
+		}
+
+		&.at-svc-compact {
+			svg {
+				fill: rgb(255, 101, 80) !important;
+			}
+		}
+
+		&.at-svc-whatsapp {
+			svg {
+				fill: rgb(77, 194, 71) !important;
+			}
+		}
+
+		&:hover {
+			transform: none !important;
+
+			span {
+				color: $white !important;
+			}
+
+			&.at-svc-facebook {
+				background-color: rgb(59, 89, 152) !important;
+				svg {
+					fill: $white !important;
+				}
+			}
+
+			&.at-svc-twitter {
+				background-color: rgb(29, 161, 242) !important;
+				svg {
+					fill: $white !important;
+				}
+			}
+
+			&.at-svc-lineme {
+				background-color: rgb(0, 195, 0) !important;
+				svg {
+					fill: $white !important;
+				}
+			}
+
+			&.at-svc-compact {
+				background-color: rgb(255, 101, 80) !important;
+				svg {
+					fill: $white !important;
+				}
+			}
+
+			&.at-svc-whatsapp {
+				background-color: rgb(77, 194, 71) !important;
+				svg {
+					fill: $white !important;
+				}
+			}
+		}
+	}
+}
+
+//social media has icon only
+.addthis_inline_share_toolbox_dznu {
+	.at-style-responsive .at-share-btn {
+		border-radius: 30px !important;
+	}
+}
+
+.single_trailblazers {
+	.single_trailblazers--row {
+		justify-content: center;
+		align-items: center;
+		height: 100%; 
+
+
+		.post-thumbnail {
+			height: 400px;
+
+			img {
+				height: 400px;
+			}
+		}
+
+		.single_trailblazers--col {
+			min-height: 550px;
+		}
+	}
+
+	// .trailblazers-template-default {
+	// 	overflow: hidden;
+	// }
+	
+	.single_trailblazers--profile {
+		background-color: #3d4b57;
+		color: $white;
+		height: 100vh;
+
+		.single_trailblazers--profile_wrapper {
+			height: 100%;
+
+			h1 {
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			h2 {
+				color: $white;
+			}
+
+			p.highlight {
+				color: $rrskyblue;
+				text-transform: uppercase;
+			}
+		}
+
+	}
+	
+	.single_trailblazers--video {
+		background-color: #dbdad6;
+		height: 100vh;
+
+		h1 {
+			color: $black;
+			text-transform: uppercase;
+		}
+		
+		h3 {
+			color: $black;
+		}
+
+		.single_trailblazers--iframe {
+			height: 251px;
+			margin-bottom: 20px;
+			width: 100%;
+
+			iframe {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

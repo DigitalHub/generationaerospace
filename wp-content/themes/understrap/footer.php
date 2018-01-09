@@ -20,21 +20,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div>
 		<span>scroll</span>
 	</div>
-	</a> -->
-	<?php get_sidebar( 'footerfull' ); ?>
-	<div class="wrapper" id="wrapper-footer">
-		<div class="<?php echo esc_attr( $container ); ?>">
-			<div class="row">
-				<footer class="site-footer" id="colophon">
-					<div class="site-info">
-						<p>Copyright <?php echo date(Y); ?>. Powered by Rolls-Royce.</p>
-					</div><!-- .site-info -->
-				</footer><!-- #colophon -->
-			</div><!-- row end -->
-		</div><!-- container end -->
-	</div><!-- wrapper end -->
+</a> -->
+<?php get_sidebar( 'footerfull' ); ?>
+<div class="wrapper" id="wrapper-footer">
+	<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="row">
+			<footer class="site-footer" id="colophon">
+				<div class="site-info">
+					<p>Copyright <?php echo date(Y); ?>. Powered by Rolls-Royce.</p>
+				</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+		</div><!-- row end -->
+	</div><!-- container end -->
+</div><!-- wrapper end -->
 </div><!-- #page we need this extra closing tag here -->
 <?php wp_footer(); ?>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a52e2069431fe9c"></script>
+
 </body>
 </html>
 

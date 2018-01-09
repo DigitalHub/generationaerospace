@@ -11327,7 +11327,7 @@ input {
 .site-menu {
   position: absolute;
   right: 7%;
-  top: 5%;
+  top: 3%;
   z-index: 500; }
 
 .menu_butt__close {
@@ -12209,14 +12209,6 @@ input {
       text-transform: uppercase;
       text-align: center; }
 
-.single_trailblazers--profile {
-  background-color: #3d4b57;
-  height: 100vh; }
-
-.single_trailblazers--video {
-  background-color: #dbdad6;
-  height: 100vh; }
-
 .ongoing_events,
 .past_events {
   margin-bottom: 25px; }
@@ -12271,6 +12263,91 @@ input {
 
 .entry-content {
   margin-bottom: 50px; }
+
+.addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn {
+  background-color: transparent !important;
+  border-bottom: 1px solid #7f7f7f !important;
+  margin: 0 !important;
+  width: 100%; }
+  .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn span {
+    color: #000 !important; }
+  .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn.at-svc-facebook svg {
+    fill: #3b5998 !important; }
+  .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn.at-svc-twitter svg {
+    fill: #1da1f2 !important; }
+  .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn.at-svc-lineme svg {
+    fill: #00c300 !important; }
+  .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn.at-svc-compact svg {
+    fill: #ff6550 !important; }
+  .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn.at-svc-whatsapp svg {
+    fill: #4dc247 !important; }
+  .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover {
+    transform: none !important; }
+    .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover span {
+      color: #fff !important; }
+    .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-facebook {
+      background-color: #3b5998 !important; }
+      .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-facebook svg {
+        fill: #fff !important; }
+    .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-twitter {
+      background-color: #1da1f2 !important; }
+      .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-twitter svg {
+        fill: #fff !important; }
+    .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-lineme {
+      background-color: #00c300 !important; }
+      .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-lineme svg {
+        fill: #fff !important; }
+    .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-compact {
+      background-color: #ff6550 !important; }
+      .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-compact svg {
+        fill: #fff !important; }
+    .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-whatsapp {
+      background-color: #4dc247 !important; }
+      .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn:hover.at-svc-whatsapp svg {
+        fill: #fff !important; }
+
+.addthis_inline_share_toolbox_dznu .at-style-responsive .at-share-btn {
+  border-radius: 30px !important; }
+
+.single_trailblazers .single_trailblazers--row {
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+  .single_trailblazers .single_trailblazers--row .post-thumbnail {
+    height: 400px; }
+    .single_trailblazers .single_trailblazers--row .post-thumbnail img {
+      height: 400px; }
+  .single_trailblazers .single_trailblazers--row .single_trailblazers--col {
+    min-height: 550px; }
+.single_trailblazers .single_trailblazers--profile {
+  background-color: #3d4b57;
+  color: #fff;
+  height: 100vh; }
+  .single_trailblazers .single_trailblazers--profile .single_trailblazers--profile_wrapper {
+    height: 100%; }
+    .single_trailblazers .single_trailblazers--profile .single_trailblazers--profile_wrapper h1 {
+      color: #fff;
+      text-transform: uppercase; }
+    .single_trailblazers .single_trailblazers--profile .single_trailblazers--profile_wrapper h2 {
+      color: #fff; }
+    .single_trailblazers .single_trailblazers--profile .single_trailblazers--profile_wrapper p.highlight {
+      color: #00aed4;
+      text-transform: uppercase; }
+.single_trailblazers .single_trailblazers--video {
+  background-color: #dbdad6;
+  height: 100vh; }
+  .single_trailblazers .single_trailblazers--video h1 {
+    color: #000;
+    text-transform: uppercase; }
+  .single_trailblazers .single_trailblazers--video h3 {
+    color: #000; }
+  .single_trailblazers .single_trailblazers--video .single_trailblazers--iframe {
+    height: 251px;
+    margin-bottom: 20px;
+    width: 100%; }
+    .single_trailblazers .single_trailblazers--video .single_trailblazers--iframe iframe {
+      height: 100%;
+      width: 100%; }
 
 .hide-show {
   width: 95%;
