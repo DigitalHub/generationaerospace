@@ -10805,6 +10805,7 @@ body.home {
     fill: rgba(255, 255, 255, 0.17);
     stroke: #c9c9c9; }
 
+.page-template-login .HudOverlay,
 .home .HudOverlay {
   height: 100%;
   z-index: -1; }
@@ -11073,9 +11074,13 @@ a {
 .arrowbtn {
   letter-spacing: 2px;
   position: relative;
+  display: block;
   outline: none;
   height: 47px;
+  margin-left: 5px;
   padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   -moz-transition: 0.01s 0.23s ease-out all;
   -o-transition: 0.01s 0.23s ease-out all;
@@ -11151,11 +11156,13 @@ a {
       background-color: #000; }
 
 .defaultbtn {
+  display: inline-block;
   letter-spacing: 2px;
   position: relative;
   outline: none;
   height: 47px;
   padding: 10px 35px;
+  text-align: center;
   text-transform: uppercase;
   -moz-transition: 0.01s 0.23s ease-out all;
   -o-transition: 0.01s 0.23s ease-out all;
@@ -11688,8 +11695,11 @@ input {
   .footer-nav-link a:hover {
     border: 1px solid #cad63e; }
 
+.page-template-login #wrapper-footer,
 .home #wrapper-footer {
-  position: absolute; }
+  bottom: 0;
+  position: absolute;
+  width: 100%; }
 
 #wrapper-footer {
   line-height: 46px;
@@ -12104,7 +12114,9 @@ input {
     background-color: #fff;
     padding: 25px; }
     .featured_experiment--card .experiment_card--content a {
-      color: #000; }
+      color: #000;
+      display: block;
+      margin-bottom: 15px; }
       .featured_experiment--card .experiment_card--content a:hover {
         text-decoration: none; }
     .featured_experiment--card .experiment_card--content .meta-keywords {
@@ -12138,6 +12150,8 @@ input {
     text-align: center;
     vertical-align: top;
     border: 1px solid #999; }
+    .meta-date_fav .meta-profile_pic img {
+      display: block; }
   .meta-date_fav .meta-date {
     font-size: 0.9333rem;
     display: inline-block;
@@ -12365,6 +12379,36 @@ input {
     -ms-border-radius: 5px;
     border-radius: 5px;
     cursor: pointer; }
+
+body.page-template-login {
+  background-attachment: fixed;
+  background-image: url("../img/Dashboard_Bg.jpg");
+  background-position: center; }
+
+.login-row {
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+#login_form input {
+  background-color: #ffffff40 !important;
+  border: none;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 1.333rem;
+  margin-bottom: 15px;
+  padding: 15px 10px;
+  height: 50px !important;
+  width: 100%; }
+  #login_form input:focus {
+    outline: 0; }
+#login_form input::-webkit-input-placeholder,
+#login_form input:-moz-placeholder,
+#login_form input::-moz-placeholder,
+#login_form input:-ms-input-placeholder {
+  color: #fff !important; }
 
 /*
 * Use existing Bootstrap 4 classes and

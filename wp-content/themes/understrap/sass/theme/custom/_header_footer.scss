@@ -482,9 +482,12 @@
 	}
 }
 
+.page-template-login,
 .home {
 	#wrapper-footer {
+		bottom: 0;
 		position: absolute;
+		width: 100%;
 	}
 }
 

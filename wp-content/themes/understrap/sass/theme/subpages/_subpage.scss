@@ -46,6 +46,8 @@
 
 		a {
 			color: $black;
+			display: block;
+			margin-bottom: 15px;
 
 			&:hover {
 				text-decoration: none;
@@ -98,6 +100,10 @@
 		text-align: center;
 		vertical-align: top;
 		border: 1px solid #999;
+
+		img {
+			display: block;
+		}
 	}
 
 	.meta-date {
