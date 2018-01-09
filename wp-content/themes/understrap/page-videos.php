@@ -11,11 +11,27 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' ); 
 
 global $loggedin;
+$username = $_SESSION['username'];
+$user_id = $_SESSION['user_id'];
 
 global $wpdb;
 $members_table = $wpdb->prefix.'genaero_members';
 $videos_table = $wpdb->prefix.'genaero_videos';
 $fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
+
+//get favourites if loggedin
+if($loggedin == '1') {
+	$favs_sql = $wpdb->prepare("SELECT video_id FROM $fav_videos_table WHERE member_id = '%s'", $user_id);
+	$favs_results = $wpdb->get_results($favs_sql);
+	$favs_count = $wpdb->num_rows;
+	$fav_ids = array();
+	if($favs_count > 0) {
+		foreach($favs_results as $result) {
+			array_push($fav_ids,$result->video_id);
+		}
+		echo '<script>fav_ids = '.json_encode($fav_ids).'</script>';
+	}
+}
 
 //featured of the month loop
 $featured_month = get_field('monthly_feature');
@@ -62,13 +78,13 @@ if($featured_month_count > 0) {
 
 //featured videos loop
 //'best' code i ever wrote, 4 inner joined tables, you're welcome future programmer
-$featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.post_status, t4.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id INNER JOIN $wpdb->postmeta t4 ON t4.post_id = t1.link_id WHERE t3.post_status = 'publish' AND t4.meta_key = 'featured' AND t4.meta_value = '1' ORDER BY t3.post_date DESC";
+$featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' ORDER BY t1.create_date DESC LIMIT 3";
 
 $featured_videos_results = $wpdb->get_results($featured_videos_sql);
 $featured_videos_count = $wpdb->num_rows;
 
 //all (approved) videos loop
-$all_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.post_status FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t3.post_date DESC";
+$all_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t1.create_date DESC";
 
 $all_videos_results = $wpdb->get_results($all_videos_sql);
 $all_videos_count = $wpdb->num_rows;
@@ -158,13 +174,7 @@ $all_videos_count = $wpdb->num_rows;
 						<!-- TODO: RACHELLE TO ADD PLAY ICON -->
 						<a data-fancybox href="<?=$youtube?>"><img src="<?=$thumbnail_url?>" /></a>
 					</div>
-					<!-- TODO: STEF TO ADD FAV FUNCTION -->
-					<?php if($loggedin == '0') { ?>
-					<!-- TODO: STEF TO ADD SPECIAL LOGIN/REGISTER FANCYBOX -->
-					<div class="experiment--fav_link"><a data-fancybox="iframe" data-src="login" data-type="iframe" href="javascript:;"><i class="fas fa-heart"></i></a></div>
-					<?php } elseif($loggedin == '1') { ?>
-					<div class="experiment--fav_link"><a href="#heart" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></a></div>
-					<?php } ?>
+					<div class="experiment--fav_link" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></div>
 				</div>
 				<div class="col-xl-4 col-xl-4 col-md-6 col-sm-12 col-xs-12">
 					<h2>Featured Video of the Month_</h2>

@@ -91,6 +91,19 @@ jQuery(document).ready(function($) {
     $('#member_username').val($('#username').data('user-id'));
   }
 
+  if(typeof fav_ids !== 'undefined' && fav_ids.length > 0) {
+    $.each(fav_ids, function(key, value) {
+      addFavouriteVideos(value);
+    });
+  }
+
+  function addFavouriteVideos(value) {
+    var selector = '.experiment--fav_link[data-video-id="' + value + '"] > i';
+    if(!$(selector).hasClass('fav')) {
+      $(selector).addClass('fav');
+    }
+  }
+
   // $('a[href$="#heart"]').on('click', function(e) {
   //   e.preventDefault();
   //   var video_id = $(this).data('video-id');
