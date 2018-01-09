@@ -144,7 +144,7 @@ function videos_post_type() {
 		'label'                 => __( 'Video', 'text_domain' ),
 		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title' ),
+		'supports'              => array( 'title', 'comments' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
