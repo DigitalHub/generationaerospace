@@ -6,8 +6,6 @@
  */
 
 global $video;
-global $wpdb;
-$fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
 
 $posted_by = $video->posted_by;
 $video_id = $video->video_id;

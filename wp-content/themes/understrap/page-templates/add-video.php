@@ -43,6 +43,7 @@ if(is_page('submit-a-video')) {
 			$title = stripslashes($results[0]->title);
 			$desc = stripslashes(stripslashes($results[0]->description));
 			$youtube = $results[0]->youtube;
+			$video_cpt_id = $results[0]->link_id; 
 		}
 	}
 }
@@ -81,6 +82,12 @@ if($_POST['video_submit']) {
 			} else if($new_video === '0') {
 				$sql = $wpdb->prepare("UPDATE $videos_table SET title=%s,description=%s,youtube=%s WHERE member_id=%s", array($title,$desc,$youtube,$user_id));
 				$wpdb->query($sql);
+
+				$video_cpt_post = array(
+					'ID'			=>	$video_cpt_id,
+					'post_title' 	=> $title,
+				);
+				wp_update_post($video_cpt_post);
 				my_contact_form_generate_response("success", $success_content);
 			} else {
 				my_contact_form_generate_response("error", $general_error);
@@ -131,6 +138,7 @@ if($_POST['video_submit']) {
 					<label for="youtube">YouTube URL</label>
 					<input type="text" name="video_youtube" id="video_youtube" value="<?=$youtube?>" pattern="https?://.+" required>
 					<input type="hidden" name="video_is_new_video" value="<?=$is_new_video?>">
+					<input type="hidden" name="video_cpt_id" value="<?=$video_cpt_id?>">
 
 					<input type="submit" name="video_submit" id="video_submit" value="Submit">
 				</form>

@@ -87,9 +87,9 @@ $embed_code = youtubeEmbedFromUrl($youtube, 720, 540);
 			<!-- <polygon points="144 247,172 263,572 267,585 243,568 223,168 223"></polygon> -->
 		</svg>
 	</div> 
-	<div class="subpage--content">
+	<div class="singlepost--content content--overflow">
 		<div class="container">
-			<div class="offset-xl-1 offset-lg-1 offset-md-1 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+			<div class="col-xl-10 offset-xl-1 col-lg-10 offset-xl-1 col-md-10 offset-md-1 col-sm-12 col-xs-12">
 				<?php echo $embed_code; ?>
 			</div>
 		</div>
@@ -99,29 +99,45 @@ $embed_code = youtubeEmbedFromUrl($youtube, 720, 540);
 	<div class="wrapper" id="single-wrapper">
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
-				<div class="offset-xl-1 offset-lg-1 offset-md-1 col-xl-2 col-lg-2 col-md-2">
-					sharing
-				</div>
-				<div class="col-xl-8 col-lg-8 col-md-8 content-area" id="primary">
+				<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
-						<h2><?=$title?></h2>
-						<div class="meta-date_fav">
-							<div class="alignleft">
-								<div class="meta-profile_pic">
-									<img src="<?=$profile_pic?>" class="profile_photo" alt="<?=$fullname?>'s Profile Photo">
+						<div class="row">
+							<div class="col-xl-2 col-lg-2 col-md-2 col-sm- col-xs- entry-share"><div class="row"><div class="addthis_inline_share_toolbox"></div></div></div>
+							<div class="col-xl-10 col-lg-10 col-md-10 col-sm- col-xs-">
+								<div class="entry-content">
+									<h2><?=$title?></h2>
+									<div class="meta-date_fav">
+										<div class="alignleft">
+											<div class="meta-profile_pic">
+												<img src="<?=$profile_pic?>" class="profile_photo" alt="<?=$fullname?>'s Profile Photo">
+											</div>
+										</div>
+										<div class="alignleft">
+											<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
+											<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
+											<!-- TODO: STEF TO ADD NUMBER OF COMMENTS -->
+											<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
+											<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
+										</div>
+									</div>
+									<?=$desc?>
 								</div>
-							</div>
-							<div class="alignleft">
-								<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
-								<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
-								<!-- TODO: STEF TO ADD NUMBER OF COMMENTS -->
-								<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
-								<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
+								<div class="entry-comments">
+									<h4>Add Comment</h4>
+									<?php comments_template('', true); ?>
+								</div>
 							</div>
 						</div>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .row end -->
+			<hr>
+			<div class="row">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<!-- TODO: STEF DO CUSTOM RELATED POSTS BECAUSE YARPP IS BS -->
+					<?php //related_posts(); ?>
+				</div>
+			</div>
 		</div><!-- Container end -->
 	</div><!-- Wrapper end -->
 </section>
