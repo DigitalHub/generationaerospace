@@ -5,6 +5,19 @@
  * @package understrap
  */
 
+$startdate = get_field('start_date');
+$enddate = get_field('end_date');
+$date = getDates($startdate, $enddate);
+
+$starttime = get_field('start_time');
+$endtime = get_field('end_time');
+$time = $starttime.' - '.$endtime;
+
+$venue = get_field('venue');
+$map = get_field('google_map');
+$summary = get_field('post_event_summary');
+$gallery = get_field('gallery');
+$size = 'thumbnail';
 ?>
 <section class="singlepost--hud content--overflow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg1.jpg ); ">
 	<div class="HudOverlay">
@@ -57,7 +70,7 @@
 	<div class="singlepost--content content--overflow">
 		<div class="container">
 			<div class="col-xl-10 offset-xl-1">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/imgbg_homepage-event.jpg" alt="Singapore Airshow 2018">
+				<?php the_post_thumbnail( 'full' ); ?>
 			</div>
 		</div>
 	</div>
@@ -70,12 +83,22 @@
 					<main class="site-main" id="main" role="main">
 						<div class="entry-content">
 							<h2><?php the_title(); ?></h2>
-							<p class="highlight">10-February 2018, Changi Exhibition Centre, Singapore</p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum repellendus esse corporis nulla tenetur iure inventore architecto deleniti omnis harum blanditiis fugit explicabo sapiente repudiandae magni magnam natus sed ullam animi obcaecati iste, consequuntur necessitatibus. Nobis ut repudiandae fuga iure eaque nisi, laboriosam ipsum culpa modi eum quasi a eius similique totam, necessitatibus reprehenderit ratione eveniet alias quibusdam accusamus corporis nemo earum. Error accusantium soluta odit, ab minima, vitae corporis laboriosam quas ullam debitis ipsum dolores animi commodi officia, quaerat, vero repudiandae mollitia porro. Aliquam dignissimos officiis corporis deleniti, facilis eos, a maxime quis praesentium, facere, vel labore eligendi tempora?
-							<?php the_content(); ?>
+							<p class="highlight"><?=$date?>, <?=$venue?></p>
+							<div class="addthis_inline_share_toolbox_dznu"></div>
+							<br>
+							<?=$summary?>
 						</div>
+						<hr>
 						<div class="entry-gallery">
+							<!-- TODO: RACH TO STYLE -->
 							<h3>Gallery</h3>
+							<?php
+							if($gallery) :
+								foreach($gallery as $image) :
+									echo wp_get_attachment_image($image["ID"], $size);
+								endforeach;
+							endif;
+							?>
 							<!-- gallery image -->
 						</div>
 					</main><!-- #main -->
