@@ -102,7 +102,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 		<div class="row login-row">
 			<div class="col-xl-6 content-area" id="primary">
-				<!-- TODO: Rach to replace styling here -->
 
 				<a href="../sign-up" class="defaultbtn btn--color">
 					<div class="defaultbtn-wrapper"><span>New to GenAero?</span></div>

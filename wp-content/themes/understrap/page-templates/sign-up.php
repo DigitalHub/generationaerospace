@@ -113,39 +113,43 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row sign-up-row">
 			<div class="col-md-6 content-area" id="primary">
 
-				<!-- TODO: Rach to replace styling here -->
-				<span>New to GenAero?</span>
-				<span><a href="login">Already Registered?</a></span>
 
-				<h2>Sign Up Here</h2>
+				<a href="#" class="defaultbtn btn--color">
+					<div class="defaultbtn-wrapper"><span>New to GenAero?</span></div>
+				</a>
+				<a href="../login" class="defaultbtn btn--color">
+					<div class="defaultbtn-wrapper"><span>Already Registered</span></div>
+				</a>
 
-				<?php echo $response; ?>
-				<form id="signup_form" method="post" action="">
-					<!-- <label for="signup_email">Email</label> -->
-					<input type="email" name="signup_email" id="signup_email" placeholder="Email" required><br>
-					<!-- <label for="signup_username">Username</label> -->
-					<input type="text" name="signup_username" id="signup_username" placeholder="Username" minlength="4" maxlength="20" required><br>
-					<!-- <label for="signup_password">Password</label> -->
-					<input type="password" name="signup_password" id="signup_password" placeholder="Password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" autocomplete="new-password" required><br><br>
-					<div class="clear"></div>
-					<div class="login_submit--wrap arrowbtn btn--color">
-						<span class="fas fa-long-arrow-alt-right icon-left"></span>	
-						<div class="arrowbtn-wrapper">
-							<input type="submit" name="signup_submit" id="signup_submit" value="Join Now">
-						</div>	
-					</div>
-					<p class="click_terms">By clicking Join Now, you agree to our Terms and Conditions <a href="../terms-and-conditions/" rel="noopener" target="_blank">here</a>.</p>
-					<div class="separator">OR</div>
-					<?php echo do_shortcode("[genaero_facebook]"); ?>
-				</form>
+					<h2>Sign Up Here</h2>
 
-			</div><!-- #primary -->
+					<?php echo $response; ?>
+					<form id="signup_form" method="post" action="">
+						<!-- <label for="signup_email">Email</label> -->
+						<input type="email" name="signup_email" id="signup_email" placeholder="Email" required><br>
+						<!-- <label for="signup_username">Username</label> -->
+						<input type="text" name="signup_username" id="signup_username" placeholder="Username" minlength="4" maxlength="20" required><br>
+						<!-- <label for="signup_password">Password</label> -->
+						<input type="password" name="signup_password" id="signup_password" placeholder="Password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" autocomplete="new-password" required><br><br>
+						<div class="clear"></div>
+						<div class="login_submit--wrap arrowbtn btn--color">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span>	
+							<div class="arrowbtn-wrapper">
+								<input type="submit" name="signup_submit" id="signup_submit" value="Join Now">
+							</div>	
+						</div>
+						<p class="click_terms">By clicking Join Now, you agree to our Terms and Conditions <a href="../terms-and-conditions/" rel="noopener" target="_blank">here</a>.</p>
+						<div class="separator">OR</div>
+						<?php echo do_shortcode("[genaero_facebook]"); ?>
+					</form>
 
-		</div><!-- .row end -->
+				</div><!-- #primary -->
 
-	</div><!-- Container end -->
+			</div><!-- .row end -->
 
-</main><!-- #main -->
+		</div><!-- Container end -->
+
+	</main><!-- #main -->
 
 </div><!-- Wrapper end -->
 

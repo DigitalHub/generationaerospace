@@ -1,17 +1,39 @@
 body.page-template-login,
-body.page-template-sign-up {
+body.page-template-sign-up,
+body.page-template-dashboard,
+body.page-template-profile,
+body.page-template-videos-list,
+body.page-template-add-video,
+body.page-template-submit-idea {
 	background-attachment: fixed;
 	background-image: url("../img/Dashboard_Bg.jpg");
 	background-position: center;
 }
 
-
 .sign-up-row,
-.login-row {
+.login-row,
+.dashboard-row {
 	align-items: center;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+
+	h2 {
+		color: white;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.error {
+		color: red;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	.success {
+		color: $rrlimegreen;
+		margin-bottom: 15px;
+	}
 }
 
 #signup_form,
@@ -67,7 +89,7 @@ body.page-template-sign-up {
 	color: $white;
 	overflow: hidden;
 	text-align: center;
-	margin: 40px auto 15px;
+	margin: 15px auto;
 
 	&:before,
 	&:after {
@@ -88,5 +110,277 @@ body.page-template-sign-up {
 	&:after {
 		left: 0.5em;
 		margin-right: -50%;
+	}
+}
+
+.profile_sidebar {
+	.profil_pic {
+		@include border-radius(100px);
+		margin: 0 auto 10px;
+		overflow: hidden;
+		width: 100px;
+	}
+
+	h3 {
+		color: $white;
+		text-align: center;
+	}
+}
+
+// member dashboard 
+ul#menu-members-only-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		background-color: #ffffff1f;
+		letter-spacing: 2px;
+		margin: 0 0 7px;
+		text-transform: uppercase;
+		
+
+		a {
+			display: block;
+			height: 100%;
+			padding: 10px;
+
+			&:hover {
+				text-decoration: none;
+				color: $rrlimegreen;
+			}
+		}
+
+		&.current-menu-item > a {
+			color: $rrlimegreen;
+		}
+
+		ul.sub-menu {
+			margin: 0;
+			padding: 0;
+			li {
+				a {
+					padding: 0 0 10px 40px;
+				}
+
+				&.current-menu-item > a {
+					color: $rrlimegreen;
+				}
+			}
+		}
+	}
+}
+
+.dashboard_content {
+	color: $white;
+	background-color: #ffffff1f;
+	height: calc(100vh - 250px);
+	overflow-y: scroll;
+	padding: 30px 45px;
+
+	.dashboard_content--title {
+		float: left;
+		width: 50%;
+
+		h4 {
+			color: $white;
+		}
+	}
+
+	.dashboard_content--editlink {
+
+		input, a {
+			background-color: transparent;
+			border-bottom: 1px solid $white;
+			color: $white;
+			float: right;
+			padding: 0;
+			width: auto;
+
+			&:hover {
+				border-bottom: 1px solid $rrskyblue;
+				color: $rrskyblue;
+				text-decoration: none;
+			}
+		}
+	}
+
+	label {
+		color: $white;
+		display: block;
+		float: left;
+		padding: 10px 0;
+		width: 110px;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="file"],
+	textarea {
+		background-color: #ffffff1f;
+		color: $white;
+		@include border-radius(0);
+		border: none;
+		display: block;
+		float: right;
+		margin-bottom: 10px;
+		width: calc(100% - 115px);
+
+		&:focus {
+			background-color: #ffffff1f;
+			border: none;
+			color: $white;
+			outline: none;
+		}
+	}
+
+	textarea {
+		border: none;
+		color: $white;
+		height: 120px;
+		min-height: 120px;
+		max-width: calc(100% - 115px);
+		min-width: calc(100% - 115px);
+		padding: 10px;
+		overflow: hidden;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.profile_photo--wrapper {
+		img {
+			float: left;
+			margin-left: 6px;
+		}
+
+		input[type="file"] {
+			background-color: transparent;
+			width: calc(100% - 220px);
+		}
+	}
+
+	input#profile_password {
+		margin: 0;
+		width: calc(100% - 195px);
+	}
+
+	.hide-show {
+		background-color: #ffffff1f;
+		display: none;
+		float: right;
+		height: 40px;
+		padding: 10px 0;
+		text-align: center;
+		width: 80px;
+
+		span {
+			background-color: $white;
+			@include border-radius(5px);
+			cursor: pointer;
+			height: 20px;
+			text-align: center;
+			padding: 5px;
+			text-transform: uppercase;
+			width: auto;
+		}
+	}
+}
+
+.announcement {
+	background-color: #ffffff1f;
+	border: 1px solid #d21709;
+	i {
+		color: $white;
+		font-size: 40px;
+		background-color: #d21709;
+		line-height: 75px;
+		height: 100%;
+		margin-left: -15px;
+		text-align: center;
+		vertical-align: middle;
+		width: 75px;
+	}
+
+	p {
+		color: $white;
+		display: inline-block;
+		margin-bottom: 0;
+		padding: 0 15px;
+	}
+}
+
+.row.dashboard_user--stats {
+	border-bottom: 1px solid #f7f7f7;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	text-align: center;
+
+	.total_videos,
+	.total_favs { 
+		color: $white;
+
+		h1 {
+			color: $white;
+			margin-bottom: 0;
+		}
+	}
+
+	.total_videos {
+		margin: 10px 50px 0 auto;
+	}
+
+	.total_favs {
+		margin: 10px auto 0 50px;
+	}
+}
+
+.recent_submitted_video {
+	a {
+		display: block;
+		width: 100%;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	h3, p {
+		color: $white;
+	}
+}
+
+.videopost--row {
+	border-bottom: 1px solid;
+	color: $white;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+
+	p {
+		color: $white;
+		font-weight: 700;
+		margin-bottom: 0;
+
+		span {
+			font-size: 12px;
+			padding-left: 5px;
+		}
+	}
+
+	.edit_videopost--btn {
+		@include border-radius(30px);
+		border: 1px solid;
+		color: $rrlimegreen;
+		display: block;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		width: 30px;
+
+		&:hover {
+			color: $white;
+		}
 	}
 }

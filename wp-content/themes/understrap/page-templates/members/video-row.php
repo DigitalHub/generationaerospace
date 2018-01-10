@@ -24,7 +24,7 @@ $json = json_decode($data);
 $thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
 ?>
 
-<div class="row">
+<div class="row videopost--row">
 	<div class="col-lg-3">
 		<!-- TODO: REPLACE VIDEO WITH FANCYBOX LINK -->
 		<a href="<?=$youtube?>" target="_blank">
@@ -32,19 +32,15 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
 		</a>
 	</div>
 	<div class="col-lg-8">
-		<h5>
-			<?php
-			echo $title;
-			if($approved === 'pending') {
-				echo ' (Pending Approval)'; //TODO: RACHELLE, MAYBE CSS THIS ONE?
-			}
+		<p class="highlight">
+			<?php echo $title;
+			if($approved === 'pending') { echo '<span>(Pending Approval)<span>'; } 
 			?>
-		</h5>
+		</p>
 		<span><?=$desc?>...</span>
 	</div>
 	<div class="col-lg-1">
-		<!-- TODO: RACH TO REPLACE WITH ICON -->
-		<a href="<?php echo get_permalink( get_page_by_path( 'edit-a-video' ) ) ?>?id=<?=$video_id?>">edit</a>
+		<a class="edit_videopost--btn" href="<?php echo get_permalink( get_page_by_path( 'edit-a-video' ) ) ?>?id=<?=$video_id?>"><i class="fal fa-pencil"></i></a>
 	</div>
 </div>
 
