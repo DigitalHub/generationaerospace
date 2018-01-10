@@ -97,7 +97,7 @@ $post_count = $the_query->post_count;
 									echo $count > 0 ? '</div>' : '';
 									echo '<div class="row">';
 								endif;
-								get_template_part( 'loop-templates/tile', 'trailblazer' );
+								get_template_part( 'loop-templates/tile', $template );
 								$count++;
 							endwhile;
 
