@@ -11,11 +11,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 global $the_query;
 
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$cpt = 'genaero_trailblazers';
+$posts_per_page = 4;
+$template = 'trailblazer';
 
+//Load More AJAX
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
-	'post_type' => 'genaero_trailblazers',
-	'posts_per_page' => 4,
+	'post_type' => $cpt,
+	'posts_per_page' => $posts_per_page,
 	'paged' =>  $paged,
 );
 $the_query = new WP_Query( $args );
@@ -89,7 +93,7 @@ $post_count = $the_query->post_count;
 						if($the_query->have_posts()) :
 							$count = 0;
 							while($the_query->have_posts()) : $the_query->the_post();
-								if($count % 4 == 0) :
+								if($count % $posts_per_page == 0) :
 									echo $count > 0 ? '</div>' : '';
 									echo '<div class="row">';
 								endif;
@@ -97,7 +101,7 @@ $post_count = $the_query->post_count;
 								$count++;
 							endwhile;
 
-							if($count % 4 !== 0) {
+							if($count % $posts_per_page !== 0) {
 								echo '</div>';
 							}
 						endif;
@@ -105,7 +109,7 @@ $post_count = $the_query->post_count;
 					</main><!-- #main -->
 					<?php 
 					if (  $the_query->max_num_pages > 1 ) {
-						echo '<div class="row"><a href="#" class="genaero_loadmore">More posts</a></div>';
+						echo '<div class="row"><a href="#" class="genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'">More posts</a></div>';
 					}
 					?>
 				</div><!-- #primary -->

@@ -70,17 +70,22 @@ function fav_this_video() {
 add_action( 'wp_ajax_nopriv_genaero_ajax_pagination', 'genaero_ajax_pagination' );
 add_action( 'wp_ajax_genaero_ajax_pagination', 'genaero_ajax_pagination' );
 
+// TODO: STEF TO RESOLVE ROW ISSUE
 function genaero_ajax_pagination() {
 	$paged = $_POST['page'];
+	$cpt = $_POST['cpt'];
+	$posts_per_page = $_POST['posts_per_page'];
+	$template = $_POST['template'];
+
 	$args = array(
-		'post_type' => 'genaero_trailblazers',
-		'posts_per_page' => 4,
+		'post_type' => $cpt,
+		'posts_per_page' => $posts_per_page,
 		'paged' =>  $paged,
 	);
 	$the_query = new WP_Query($args);
 	if($the_query->have_posts()) :
 		while($the_query->have_posts()) : $the_query->the_post();
-			get_template_part( 'loop-templates/tile', 'trailblazer' );
+			get_template_part( 'loop-templates/tile', $template );
 		endwhile;
 	endif;
 

@@ -107,12 +107,18 @@ jQuery(document).ready(function($) {
   $('.genaero_loadmore').on('click', function(e) {
     e.preventDefault();
     var button = $(this);
+    var cpt = button.data('cpt');
+    var posts_per_page = button.data('posts_per_page');
+    var template = button.data('template');
 
     $.ajax({
       url: ajaxpagination.ajaxUrl,
       type : 'post',
       data: {
         action: 'genaero_ajax_pagination',
+        cpt: cpt,
+        posts_per_page: posts_per_page,
+        template: template,
         query: ajaxpagination.posts,
         page: ajaxpagination.current_page,
       },
