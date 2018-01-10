@@ -95,7 +95,7 @@ $size = 'thumbnail';
 							<?php
 							if($gallery) :
 								foreach($gallery as $image) :
-									echo wp_get_attachment_image($image["ID"], $size);
+									echo '<a data-fancybox="gallery" href="'.$image['sizes']['large'].'">'.wp_get_attachment_image($image["ID"], $size).'</a>';
 								endforeach;
 							endif;
 							?>
