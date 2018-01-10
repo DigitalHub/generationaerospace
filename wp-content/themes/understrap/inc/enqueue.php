@@ -27,11 +27,20 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		wp_localize_script( "main-js", 'ajax',
+		wp_localize_script( 'main-js', 'ajax',
 			array(
-            'ajaxUrl' => admin_url( 'admin-ajax.php' ), //url for php file that process ajax request to WP
-        )
-		);
+				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			));
+
+		global $the_query; 
+
+		wp_localize_script( 'main-js', 'ajaxpagination', array(
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			'posts' => json_encode( $the_query->query_vars ), // everything about your loop is here
+			'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 2,
+			'max_page' => $the_query->max_num_pages
+		));
+
 	}
 } // endif function_exists( 'understrap_scripts' ).
 
@@ -56,4 +65,24 @@ function fav_this_video() {
 	// $video_id = $_POST['video_id'];
 	// $fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
 	// $wpdb->delete($fav_videos_table,array('id' => $favID));
+}
+
+add_action( 'wp_ajax_nopriv_genaero_ajax_pagination', 'genaero_ajax_pagination' );
+add_action( 'wp_ajax_genaero_ajax_pagination', 'genaero_ajax_pagination' );
+
+function genaero_ajax_pagination() {
+	$paged = $_POST['page'];
+	$args = array(
+		'post_type' => 'genaero_trailblazers',
+		'posts_per_page' => 4,
+		'paged' =>  $paged,
+	);
+	$the_query = new WP_Query($args);
+	if($the_query->have_posts()) :
+		while($the_query->have_posts()) : $the_query->the_post();
+			get_template_part( 'loop-templates/tile', 'trailblazer' );
+		endwhile;
+	endif;
+
+	wp_die();
 }

@@ -104,6 +104,30 @@ jQuery(document).ready(function($) {
     }
   }
 
+  $('.genaero_loadmore').on('click', function(e) {
+    e.preventDefault();
+    var button = $(this);
+
+    $.ajax({
+      url: ajaxpagination.ajaxUrl,
+      type : 'post',
+      data: {
+        action: 'genaero_ajax_pagination',
+        query: ajaxpagination.posts,
+        page: ajaxpagination.current_page,
+      },
+      success : function( data ){
+        if(data) {
+          $('.site-main').append(data);
+          console.log('success: ' + ajaxpagination.current_page);
+          ajaxpagination.current_page++;
+        } else {
+          button.remove();
+        }
+      }
+    });
+  });
+
   // $('a[href$="#heart"]').on('click', function(e) {
   //   e.preventDefault();
   //   var video_id = $(this).data('video-id');
