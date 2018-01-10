@@ -1,25 +1,14 @@
 <?php
 /**
- * Single post partial template.
+ * The template for displaying single genaero_vault posts.
  *
  * @package understrap
  */
 
-$startdate = get_field('start_date');
-$enddate = get_field('end_date');
-$date = getDates($startdate, $enddate);
+get_header();
+$container = get_theme_mod( 'understrap_container_type' ); ?>
 
-$starttime = get_field('start_time');
-$endtime = get_field('end_time');
-$time = $starttime.' - '.$endtime;
-
-$venue = get_field('venue');
-$map = get_field('google_map');
-$summary = get_field('post_event_summary');
-$gallery = get_field('gallery');
-$size = 'thumbnail';
-?>
-<section class="singlepost--hud content--overflow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg1.jpg ); ">
+<section class="subpage--hud" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg1.jpg ); ">
 	<div class="HudOverlay">
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 835" style="enable-background:new 0 0 1316 835" xml:space="preserve" class="HudOverlay-fullBorder" preserveAspectRatio="none"> 
 			<defs>
@@ -67,43 +56,28 @@ $size = 'thumbnail';
 			<!-- <polygon points="144 247,172 263,572 267,585 243,568 223,168 223"></polygon> -->
 		</svg>
 	</div> 
-	<div class="singlepost--content content--overflow">
+	<div class="subpage--content">
 		<div class="container">
-			<div class="col-xl-10 offset-xl-1">
-				<?php the_post_thumbnail( 'full' ); ?>
-			</div>
+			<h1><?php the_title(); ?></h1>
+			<p class="highlight"><?php the_excerpt(); ?></p>
 		</div>
 	</div>
 </section>
-<section class="single_main">
+<section class="sub_main">
 	<div class="wrapper" id="single-wrapper">
-		<div class="container" id="content">
+		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
-				<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
-						<div class="entry-content">
-							<h2><?php the_title(); ?></h2>
-							<p class="highlight"><?=$date?>, <?=$venue?></p>
-							<div class="addthis_inline_share_toolbox_dznu"></div>
-							<br>
-							<?=$summary?>
-						</div>
-						<hr>
-						<div class="entry-gallery">
-							<!-- TODO: RACH TO STYLE -->
-							<h3>Gallery</h3>
-							<?php
-							if($gallery) :
-								foreach($gallery as $image) :
-									echo '<a data-fancybox="gallery" href="'.$image['sizes']['large'].'">'.wp_get_attachment_image($image["ID"], $size).'</a>';
-								endforeach;
-							endif;
-							?>
-							<!-- gallery image -->
-						</div>
+						<?php 
+						while ( have_posts() ) : the_post();
+							the_content(); 
+						endwhile;
+						?>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 		</div><!-- Container end -->
 	</div><!-- Wrapper end -->
 </section>
+<?php get_footer(); ?>

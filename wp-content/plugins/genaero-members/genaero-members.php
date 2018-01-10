@@ -521,4 +521,28 @@ function generateYoutubeEmbedCode($vid_id, $width, $height){
     return $html;
 }
 
+function getDates($startdate, $enddate) {
+    $startyear = substr($startdate, 0, 4);
+    $startmonth = substr($startdate, 4, 2);
+    $dateObj   = DateTime::createFromFormat('!m', $startmonth);
+    $startmonth = $dateObj->format('M');
+    $startday = substr($startdate, 6, 2);
+
+    $endyear = substr($enddate, 0, 4);
+    $endmonth = substr($enddate, 4, 2);
+    $dateObj   = DateTime::createFromFormat('!m', $endmonth);
+    $endmonth = $dateObj->format('M');
+    $endday = substr($enddate, 6, 2);
+
+    if(($startmonth === $endmonth) && ($startyear === $endyear)) {
+        $date = $startday.'-'.$endday.' '.$startmonth.' '.$startyear;
+    } elseif(($startmonth !== $endmonth) && ($startyear === $endyear)) {
+        $date = $startday.' '.$startmonth.' - '.$endday.' '.$endmonth.' '.$startyear;
+    } elseif($startyear !== $endyear) {
+        $date = $startday.' '.$startmonth.' '.$startyear.' - '.$endday.' '.$endmonth.' '.$endyear;
+    }
+
+    return $date;
+}
+
 ?>

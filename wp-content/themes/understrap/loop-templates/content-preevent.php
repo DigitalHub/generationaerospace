@@ -5,6 +5,17 @@
  * @package understrap
  */
 
+$startdate = get_field('start_date');
+$enddate = get_field('end_date');
+$date = getDates($startdate, $enddate);
+
+$starttime = get_field('start_time');
+$endtime = get_field('end_time');
+$time = $starttime.' - '.$endtime;
+
+$venue = get_field('venue');
+$map = get_field('google_map');
+$summary = get_field('pre_event_summary');
 ?>
 <section class="singlepost--hud" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg1.jpg ); ">
 	<div class="HudOverlay">
@@ -57,7 +68,7 @@
 	<div class="singlepost--content">
 		<div class="container">
 			<h1><?php the_title(); ?></h1>
-			<p class="highlight text-center">10-February 2018, Changi Exhibition Centre, Singapore</p>
+			<p class="highlight text-center"><?=$date?>, <?=$venue?></p>
 		</div>
 	</div>
 </section>
@@ -68,10 +79,21 @@
 				<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
 						<div class="entry-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum repellendus esse corporis nulla tenetur iure inventore architecto deleniti omnis harum blanditiis fugit explicabo sapiente repudiandae magni magnam natus sed ullam animi obcaecati iste, consequuntur necessitatibus. Nobis ut repudiandae fuga iure eaque nisi, laboriosam ipsum culpa modi eum quasi a eius similique totam, necessitatibus reprehenderit ratione eveniet alias quibusdam accusamus corporis nemo earum. Error accusantium soluta odit, ab minima, vitae corporis laboriosam quas ullam debitis ipsum dolores animi commodi officia, quaerat, vero repudiandae mollitia porro. Aliquam dignissimos officiis corporis deleniti, facilis eos, a maxime quis praesentium, facere, vel labore eligendi tempora?
-							<?php the_content(); ?>
+							<div class="addthis_inline_share_toolbox_dznu"></div>
+							<br>
+							<?=$summary?>
+							<br>
+							<h4>Date: <?=$date?></h4>
+							<h4>Time: <?=$time?></h4>
+							<h4>Venue: <?=$venue?></h4>
+							<br>
+							<?php if(!empty($map)) : ?>
+								<!-- TODO: RACH TO ADD STYLES TO SASS FILE -->
+								<div class="acf-map" style="width: 100%;height: 390px;border: #ccc solid 1px;margin: 20px 0;">
+									<div class="marker" data-lat="<?php echo $map['lat']; ?>" data-lng="<?php echo $map['lng']; ?>"></div>
+								</div>
+							<?php endif; ?>
 						</div>
-
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .row end -->

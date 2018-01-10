@@ -104,6 +104,36 @@ jQuery(document).ready(function($) {
     }
   }
 
+  $('.genaero_loadmore').on('click', function(e) {
+    e.preventDefault();
+    var button = $(this);
+    var cpt = button.data('cpt');
+    var posts_per_page = button.data('posts_per_page');
+    var template = button.data('template');
+
+    $.ajax({
+      url: ajaxpagination.ajaxUrl,
+      type : 'post',
+      data: {
+        action: 'genaero_ajax_pagination',
+        cpt: cpt,
+        posts_per_page: posts_per_page,
+        template: template,
+        query: ajaxpagination.posts,
+        page: ajaxpagination.current_page,
+      },
+      success : function( data ){
+        if(data) {
+          $('.site-main').append(data);
+          console.log('success: ' + ajaxpagination.current_page);
+          ajaxpagination.current_page++;
+        } else {
+          button.remove();
+        }
+      }
+    });
+  });
+
   // $('a[href$="#heart"]').on('click', function(e) {
   //   e.preventDefault();
   //   var video_id = $(this).data('video-id');
@@ -139,6 +169,134 @@ jQuery(document).ready(function($) {
   //   jQuery(".watch_video--typewriter").hover(function(){
   //     jQuery(this).addClass("animated");        
   // })
+  
+  function new_map( $el ) {
+    var $markers = $el.find('.marker');
+    var args = {
+      zoom    : 16,
+      center    : new google.maps.LatLng(0, 0),
+      mapTypeId : google.maps.MapTypeId.ROADMAP,
+      styles: [
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#ff0000"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": -30
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#353535"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#656565"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#505050"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#808080"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#454545"
+            }
+        ]
+    }
+]
+    };
+
+    var map = new google.maps.Map( $el[0], args);
+    map.markers = [];
+    $markers.each(function(){
+      add_marker( $(this), map );
+    });
+    center_map( map );
+    return map;
+  }
+
+  function add_marker( $marker, map ) {
+    var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
+    var marker = new google.maps.Marker({
+      position  : latlng,
+      map     : map
+    });
+    map.markers.push( marker );
+    if( $marker.html() )
+    {
+      var infowindow = new google.maps.InfoWindow({
+        content   : $marker.html()
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open( map, marker );
+      });
+    }
+
+  }
+
+  function center_map( map ) {
+    var bounds = new google.maps.LatLngBounds();
+    $.each( map.markers, function( i, marker ){
+      var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+      bounds.extend( latlng );
+    });
+    if( map.markers.length == 1 ) {
+      map.setCenter( bounds.getCenter() );
+      map.setZoom( 15 );
+    }
+    else {
+      map.fitBounds( bounds );
+    }
+  }
+
+  var map = null;
+
+  $('.acf-map').each(function(){
+    map = new_map( $(this) );
+  });
 });
 
 

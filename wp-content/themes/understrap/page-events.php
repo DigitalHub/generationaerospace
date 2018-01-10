@@ -8,7 +8,43 @@
  */
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' ); ?>
+$container = get_theme_mod( 'understrap_container_type' ); 
+
+$today = date('Ymd');
+
+$args1 = array(
+	'post_type' 		=> 'genaero_events',
+	'posts_per_page' 	=> -1,
+	'meta_query' 		=> array(
+		array(
+			'key' 		=> 'start_date',
+			'value' 	=> $today,
+			'compare' 	=> '>=',
+			'type' 		=> 'DATE'
+		)),
+	'meta_key'			=> 'start_date',
+	'orderby'			=> 'meta_value',
+	'order'				=> 'ASC',
+);
+$upcoming_query = new WP_Query($args1);
+
+$args2 = array(
+	'post_type' 		=> 'genaero_events',
+	'posts_per_page' 	=> -1,
+	'meta_query' 		=> array(
+		array(
+			'key' 		=> 'start_date',
+			'value' 	=> $today,
+			'compare' 	=> '<',
+			'type' 		=> 'DATE'
+		)),
+	'meta_key'			=> 'start_date',
+	'orderby'			=> 'meta_value',
+	'order'				=> 'DESC',
+);
+$old_query = new WP_Query($args2);
+
+?>
 
 <section class="subpage--hud" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg1.jpg ); ">
 	<div class="HudOverlay">
@@ -61,7 +97,13 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 	<div class="subpage--content">
 		<div class="container">
 			<h1><?php //the_title(); ?>What's Happening</h1>
-			<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
+			<?php 
+			if (have_posts()) : while (have_posts()) : the_post(); 
+				the_content();
+			endwhile; endif; 
+			?>
+
+			<!-- TODO: STEF TO ADD FUNCTIONALITY -->
 			<button class="defaultbtn btn--color">
 				<div class="defaultbtn-wrapper"><span>All</span></div>
 			</button>
@@ -86,22 +128,13 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 									<div class="col-xl-2"><h3>time</h3></div>
 									<div class="col-xl-3"><h3>venue</h3></div>
 								</div>
-								<!-- TODO: Stef start looping here -->
-								<div class="row events_row--content">
-									<div class="col-xl-5">
-										<p>Lorem Ipsum</p>
-										<a href="#">Click to read more</a>
-									</div>
-									<div class="col-xl-2">
-										<p><?php echo get_the_date(); ?></p>
-									</div>
-									<div class="col-xl-2">
-										<p>9:30am - 5:00pm</p>
-									</div>
-									<div class="col-xl-3">
-										<p>Changi Exhibition Center</p>
-									</div>
-								</div> <!-- .events_row end -->
+								<?php
+								if($upcoming_query->have_posts()) :
+									while($upcoming_query->have_posts()) : $upcoming_query->the_post();
+										get_template_part( 'loop-templates/row', 'event' );
+									endwhile;
+								endif;
+								?>
 							</div><!-- .ongoing_events end -->
 							
 							<div class="events_table past_events">
@@ -111,22 +144,13 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 									<div class="col-xl-2"><h3>time</h3></div>
 									<div class="col-xl-3"><h3>venue</h3></div>
 								</div>
-								<!-- TODO: Stef start looping here -->
-								<div class="row events_row--content">
-									<div class="col-xl-5">
-										<p>Lorem Ipsum</p>
-										<a href="#">Click to read more</a>
-									</div>
-									<div class="col-xl-2">
-										<p><?php echo get_the_date(); ?></p>
-									</div>
-									<div class="col-xl-2">
-										<p>9:30am - 5:00pm</p>
-									</div>
-									<div class="col-xl-3">
-										<p>Changi Exhibition Center</p>
-									</div>
-								</div><!-- .events_row end -->
+								<?php
+								if($old_query->have_posts()) :
+									while($old_query->have_posts()) : $old_query->the_post();
+										get_template_part( 'loop-templates/row', 'event' );
+									endwhile;
+								endif;
+								?>
 							</div><!-- .past_events end -->
 						</div>
 					</main>
