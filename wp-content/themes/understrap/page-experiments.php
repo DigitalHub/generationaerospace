@@ -101,7 +101,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
 				<div class="col-xl-12 content-area" id="primary">
-					<main class="site-main" id="main" role="main">
+ 					<main class="site-main" id="main" role="main">
  						<?php
  						if($the_query->have_posts()) :
  							$count = 0;
@@ -119,7 +119,12 @@ $container = get_theme_mod( 'understrap_container_type' );
  							}
  						endif;
  						?>
-					</main><!-- #main -->
+ 					</main><!-- #main -->
+ 					<?php 
+ 					if (  $the_query->max_num_pages > 1 ) {
+ 						echo '<div class="row"><a href="#" class="genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'">More posts</a></div>';
+ 					}
+ 					?>
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 		</div><!-- Container end -->
