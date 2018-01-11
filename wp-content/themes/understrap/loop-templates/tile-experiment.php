@@ -12,7 +12,7 @@ $tags = get_the_tags();
 	<div class="post-thumbnail">
 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
 	</div>
-	<div class="experiment--fav_link"><i class="fas fa-heart"></i></div>
+	<div class="experiment--fav_link" data-experiment-id="<?php echo get_the_ID();?>"><i class="fas fa-heart"></i></div>
 	<div class="experiment_card--content">
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		<ul class="meta-keywords">

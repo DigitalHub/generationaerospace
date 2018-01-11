@@ -104,6 +104,19 @@ jQuery(document).ready(function($) {
     }
   }
 
+  if(typeof fav_exp_ids !== 'undefined' && fav_exp_ids.length > 0) {
+    $.each(fav_exp_ids, function(key, value) {
+      addFavouriteExperiments(value);
+    });
+  }
+
+  function addFavouriteExperiments(value) {
+    var selector = '.experiment--fav_link[data-experiment-id="' + value + '"] > i';
+    if(!$(selector).hasClass('fav')) {
+      $(selector).addClass('fav');
+    }
+  }
+
   $('.genaero_loadmore').on('click', function(e) {
     e.preventDefault();
     var button = $(this);
