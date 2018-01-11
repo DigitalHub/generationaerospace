@@ -280,6 +280,14 @@ a {
 		input {
 			padding: 0 !important;
 			height: 100% !important;
+
+			&.wpcf7-submit {
+				color: $white;
+
+				&:hover {
+					background-color: transparent;
+				}
+			}
 		}
 	}
 
@@ -459,7 +467,7 @@ a {
 
 input {
 	// background-color: #ffffff40;
-	background-color: #000 !important; //temporary
+	background-color: #000;
 	border: none;
 	color: $white;
 	padding: 15px 10px;

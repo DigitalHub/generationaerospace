@@ -10807,6 +10807,11 @@ body.home {
 
 .page-template-login .HudOverlay,
 .page-template-sign-up .HudOverlay,
+.page-template-dashboard .HudOverlay,
+.page-template-profile .HudOverlay,
+.page-template-videos-list .HudOverlay,
+.page-template-add-video .HudOverlay,
+.page-template-submit-idea .HudOverlay,
 .home .HudOverlay {
   height: 100%;
   z-index: -1; }
@@ -11130,6 +11135,10 @@ a {
     .arrowbtn .arrowbtn-wrapper input {
       padding: 0 !important;
       height: 100% !important; }
+      .arrowbtn .arrowbtn-wrapper input.wpcf7-submit {
+        color: #fff; }
+        .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:hover {
+          background-color: transparent; }
   .arrowbtn:hover {
     cursor: pointer; }
     .arrowbtn:hover .icon-left {
@@ -11268,7 +11277,7 @@ a {
     z-index: 11; }
 
 input {
-  background-color: #000 !important;
+  background-color: #000;
   border: none;
   color: #fff;
   padding: 15px 10px;
@@ -11723,7 +11732,13 @@ a#genaero-facebook-button {
   .footer-nav-link a:hover {
     border: 1px solid #cad63e; }
 
+.page-template-sign-up #wrapper-footer,
 .page-template-login #wrapper-footer,
+.page-template-dashboard #wrapper-footer,
+.page-template-profile #wrapper-footer,
+.page-template-videos-list #wrapper-footer,
+.page-template-add-video #wrapper-footer,
+.page-template-submit-idea #wrapper-footer,
 .home #wrapper-footer {
   bottom: 0;
   position: absolute;
@@ -12391,35 +12406,41 @@ a#genaero-facebook-button {
       height: 100%;
       width: 100%; }
 
-.hide-show {
-  width: 95%;
-  margin: -3em 3% 0 1.5%;
-  position: relative;
-  z-index: 5;
-  display: none; }
-  .hide-show span {
-    background: #fff;
-    font-size: 1em;
-    padding: .5em;
-    float: right;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    border-radius: 5px;
-    cursor: pointer; }
-
 body.page-template-login,
-body.page-template-sign-up {
+body.page-template-sign-up,
+body.page-template-dashboard,
+body.page-template-profile,
+body.page-template-videos-list,
+body.page-template-add-video,
+body.page-template-submit-idea {
   background-attachment: fixed;
   background-image: url("../img/Dashboard_Bg.jpg");
   background-position: center; }
 
 .sign-up-row,
-.login-row {
+.login-row,
+.dashboard-row {
   align-items: center;
   justify-content: center;
   align-items: center;
   height: 100vh; }
+  .sign-up-row h2,
+  .login-row h2,
+  .dashboard-row h2 {
+    color: white;
+    margin: 20px auto;
+    text-align: center; }
+  .sign-up-row .error,
+  .login-row .error,
+  .dashboard-row .error {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center; }
+  .sign-up-row .success,
+  .login-row .success,
+  .dashboard-row .success {
+    color: #cad63e;
+    margin-bottom: 15px; }
 
 #signup_form input,
 #login_form input {
@@ -12467,7 +12488,7 @@ body.page-template-sign-up {
   color: #fff;
   overflow: hidden;
   text-align: center;
-  margin: 40px auto 15px; }
+  margin: 15px auto; }
   .separator:before, .separator:after {
     background-color: #fff;
     content: "";
@@ -12482,6 +12503,208 @@ body.page-template-sign-up {
   .separator:after {
     left: 0.5em;
     margin-right: -50%; }
+
+.profile_sidebar .profil_pic {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  border-radius: 100px;
+  margin: 0 auto 10px;
+  overflow: hidden;
+  width: 100px; }
+.profile_sidebar h3 {
+  color: #fff;
+  text-align: center; }
+
+ul#menu-members-only-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul#menu-members-only-menu > li {
+    background-color: #ffffff1f;
+    letter-spacing: 2px;
+    margin: 0 0 7px;
+    text-transform: uppercase; }
+    ul#menu-members-only-menu > li a {
+      display: block;
+      height: 100%;
+      padding: 10px; }
+      ul#menu-members-only-menu > li a:hover {
+        text-decoration: none;
+        color: #cad63e; }
+    ul#menu-members-only-menu > li.current-menu-item > a {
+      color: #cad63e; }
+    ul#menu-members-only-menu > li ul.sub-menu {
+      margin: 0;
+      padding: 0; }
+      ul#menu-members-only-menu > li ul.sub-menu li a {
+        padding: 0 0 10px 40px; }
+      ul#menu-members-only-menu > li ul.sub-menu li.current-menu-item > a {
+        color: #cad63e; }
+
+.dashboard_content {
+  color: #fff;
+  background-color: #ffffff1f;
+  height: calc(100vh - 250px);
+  overflow-y: scroll;
+  padding: 30px 45px; }
+  .dashboard_content .dashboard_content--title {
+    float: left;
+    width: 50%; }
+    .dashboard_content .dashboard_content--title h4 {
+      color: #fff; }
+  .dashboard_content .dashboard_content--editlink input, .dashboard_content .dashboard_content--editlink a {
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    float: right;
+    padding: 0;
+    width: auto; }
+    .dashboard_content .dashboard_content--editlink input:hover, .dashboard_content .dashboard_content--editlink a:hover {
+      border-bottom: 1px solid #00aed4;
+      color: #00aed4;
+      text-decoration: none; }
+  .dashboard_content label {
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 10px 0;
+    width: 110px; }
+  .dashboard_content input[type="text"],
+  .dashboard_content input[type="password"],
+  .dashboard_content input[type="file"],
+  .dashboard_content textarea {
+    background-color: #ffffff1f;
+    color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    display: block;
+    float: right;
+    margin-bottom: 10px;
+    width: calc(100% - 115px); }
+    .dashboard_content input[type="text"]:focus,
+    .dashboard_content input[type="password"]:focus,
+    .dashboard_content input[type="file"]:focus,
+    .dashboard_content textarea:focus {
+      background-color: #ffffff1f;
+      color: #fff;
+      border: none;
+      outline: none; }
+  .dashboard_content textarea {
+    border: none;
+    color: #fff;
+    height: 120px;
+    min-height: 120px;
+    max-width: calc(100% - 115px);
+    min-width: calc(100% - 115px);
+    padding: 10px;
+    overflow: hidden; }
+    .dashboard_content textarea:focus {
+      outline: none; }
+  .dashboard_content .profile_photo--wrapper img {
+    float: left;
+    margin-left: 6px; }
+  .dashboard_content .profile_photo--wrapper input[type="file"] {
+    background-color: transparent;
+    width: calc(100% - 220px); }
+  .dashboard_content input#profile_password {
+    margin: 0;
+    width: calc(100% - 195px); }
+  .dashboard_content .hide-show {
+    background-color: #ffffff1f;
+    display: none;
+    float: right;
+    height: 40px;
+    padding: 10px 0;
+    text-align: center;
+    width: 80px; }
+    .dashboard_content .hide-show span {
+      background-color: #fff;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 20px;
+      text-align: center;
+      padding: 5px;
+      text-transform: uppercase;
+      width: auto; }
+
+.announcement {
+  background-color: #ffffff1f;
+  border: 1px solid #d21709; }
+  .announcement i {
+    color: #fff;
+    font-size: 40px;
+    background-color: #d21709;
+    line-height: 75px;
+    height: 100%;
+    margin-left: -15px;
+    text-align: center;
+    vertical-align: middle;
+    width: 75px; }
+  .announcement p {
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0 15px; }
+
+.row.dashboard_user--stats {
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  text-align: center; }
+  .row.dashboard_user--stats .total_videos,
+  .row.dashboard_user--stats .total_favs {
+    color: #fff; }
+    .row.dashboard_user--stats .total_videos h1,
+    .row.dashboard_user--stats .total_favs h1 {
+      color: #fff;
+      margin-bottom: 0; }
+  .row.dashboard_user--stats .total_videos {
+    margin: 10px 50px 0 auto; }
+  .row.dashboard_user--stats .total_favs {
+    margin: 10px auto 0 50px; }
+
+.recent_submitted_video a {
+  display: block;
+  width: 100%; }
+  .recent_submitted_video a img {
+    display: block;
+    width: 100%; }
+.recent_submitted_video h3, .recent_submitted_video p {
+  color: #fff; }
+
+.videopost--row {
+  border-bottom: 1px solid;
+  color: #fff;
+  margin-bottom: 15px;
+  padding-bottom: 15px; }
+  .videopost--row p {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0; }
+    .videopost--row p span {
+      font-size: 12px;
+      padding-left: 5px; }
+  .videopost--row .edit_videopost--btn {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid;
+    color: #cad63e;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px; }
+    .videopost--row .edit_videopost--btn:hover {
+      color: #fff; }
 
 /*
 * Use existing Bootstrap 4 classes and
