@@ -116,6 +116,30 @@ dbDelta( $sql );
 
 }
 
+//create database for favourite experiments list
+register_activation_hook( __FILE__, 'create_favourite_experiments_db' );
+function create_favourite_experiments_db() {
+    global $wpdb;
+
+    $version = get_option( 'my_plugin_version', '1.0' );
+    $charset_collate = $wpdb->get_charset_collate();
+    $members_table = $wpdb->prefix . 'genaero_members';
+    $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
+
+    $sql = "CREATE TABLE $fav_experiments_table (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    member_id int(11) NOT NULL,
+    experiment_id int(11) NOT NULL,
+    create_date datetime DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    FOREIGN KEY (member_id) REFERENCES $members_table(id),
+) $charset_collate;";
+
+require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+dbDelta( $sql );
+
+}
+
 /*
  * Import the Facebook SDK and load all the classes
  */
