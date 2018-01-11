@@ -32,6 +32,9 @@ if($loggedin == '1') {
 	}
 }
 
+$tags = get_field('tags');
+$num_of_tags = count($tags);
+
 global $the_query;
 
 $cpt = 'genaero_experiments';
@@ -111,8 +114,22 @@ $post_count = $the_query->post_count;
 						<input type="text" />
 						<button type="submit"><i class="fal fa-search"></i></button>
 					</div>
-					<!-- TODO: STEF TO ADD KEYWORDS FROM TAGS -->
-					<p>Suggestion search: <a href="#">Air pressure</a>, <a href="#">Plants</a></p>
+					<p>Suggestion search: 
+						<?php
+						if($tags) {
+							$count = 0;
+							// TODO: STEF TO ADD TAG LINK
+							foreach($tags as $tag) {
+								echo '<a href="'.get_term_link( $tag ).'">'.$tag->name.'</a>';
+								$count++;
+								if($count < $num_of_tags) {
+									echo ', ';
+								}
+							}
+						}
+						?>
+						<!-- <a href="#">Air pressure</a>, <a href="#">Plants</a> -->
+					</p>
 				</div>
 			</div>
 		</div>
