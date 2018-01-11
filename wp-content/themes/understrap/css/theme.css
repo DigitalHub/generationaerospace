@@ -10782,28 +10782,47 @@ readers do not read off random characters that represent icons */
 .clear:after {
   clear: both; }
 
-body.home {
-  background-attachment: fixed;
-  background-image: url("../img/bg1.jpg");
-  background-position: center; }
-
 .HudOverlay {
   left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 480px;
   pointer-events: none;
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 0; }
+  z-index: -1; }
+  .HudOverlay .subHudOverlay {
+    height: 480px;
+    width: 100%; }
   .HudOverlay .HudOverlay-fullBorder {
-    position: absolute;
-    height: calc(100% - 70px);
-    top: 35px;
-    width: calc(100% - 46px);
-    left: 20px;
+    height: 100%;
+    width: 100%;
     stroke-width: 1px;
-    fill: rgba(255, 255, 255, 0.17);
     stroke: #c9c9c9; }
+  .HudOverlay .HudOverlay-fill {
+    clip-path: url(#SVGID_4_);
+    opacity: 0.50; }
+  .HudOverlay .path {
+    fill: #00000080; }
+  .HudOverlay .HubOverlay--Blur {
+    clip-path: url(#HubOverlay--Blur);
+    filter: url(#blurlayer); }
+  .HudOverlay:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: -1; }
+  .HudOverlay image {
+    height: 110%;
+    overflow: visible;
+    width: 100%; }
+
+.polygon {
+  fill: #fff; }
 
 .page-template-login .HudOverlay,
 .page-template-sign-up .HudOverlay,
@@ -10815,10 +10834,6 @@ body.home {
 .home .HudOverlay {
   height: 100%;
   z-index: -1; }
-
-.path,
-.polygon {
-  fill: #fff; }
 
 .singlepost--hud,
 .subpage--hud {
@@ -11490,6 +11505,8 @@ a#genaero-facebook-button {
                 text-decoration: none; }
               .menu-content .menu-content__wrapper .menu-content__nav .menu-content__list ol li a:last-child {
                 margin: 0; }
+            .menu-content .menu-content__wrapper .menu-content__nav .menu-content__list ol li.current-menu-item a {
+              color: #cad63e; }
 
 .corner {
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -11800,7 +11817,7 @@ a#genaero-facebook-button {
       position: absolute;
       margin-top: 4px;
       border-radius: 50%;
-      right: -2.9px;
+      right: -2.5px;
       -moz-transition: background-color 0.5s;
       -o-transition: background-color 0.5s;
       -webkit-transition: background-color 0.5s;
@@ -12310,13 +12327,15 @@ a#genaero-facebook-button {
 
 .vault--card {
   margin-bottom: 30px; }
-  .vault--card .vault_card--content {
-    background-color: #fff;
-    padding: 25px; }
-    .vault--card .vault_card--content a {
-      color: #000; }
-      .vault--card .vault_card--content a:hover {
-        text-decoration: none; }
+  .vault--card a {
+    color: #000;
+    display: block; }
+    .vault--card a:hover {
+      color: #00aed4;
+      text-decoration: none; }
+    .vault--card a .vault_card--content {
+      background-color: #fff;
+      padding: 25px; }
 
 .entry-content {
   margin-bottom: 50px; }
@@ -12405,17 +12424,6 @@ a#genaero-facebook-button {
     .single_trailblazers .single_trailblazers--video .single_trailblazers--iframe iframe {
       height: 100%;
       width: 100%; }
-
-body.page-template-login,
-body.page-template-sign-up,
-body.page-template-dashboard,
-body.page-template-profile,
-body.page-template-videos-list,
-body.page-template-add-video,
-body.page-template-submit-idea {
-  background-attachment: fixed;
-  background-image: url("../img/Dashboard_Bg.jpg");
-  background-position: center; }
 
 .sign-up-row,
 .login-row,
@@ -12590,8 +12598,8 @@ ul#menu-members-only-menu {
     .dashboard_content input[type="file"]:focus,
     .dashboard_content textarea:focus {
       background-color: #ffffff1f;
-      color: #fff;
       border: none;
+      color: #fff;
       outline: none; }
   .dashboard_content textarea {
     border: none;
