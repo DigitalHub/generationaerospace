@@ -102,6 +102,24 @@ jQuery(document).ready(function($) {
    })
   });
 
+  $('.delete-fav-experiment').on('click', function() {
+    var favID = $(this).data('fav-id');
+    $.ajax({
+      url: ajax.ajaxUrl,
+      type: 'post',
+      data: {
+        action: 'delete_fav_experiment',
+        favID: favID
+      },
+      success: function(data) {
+        location.reload();
+      },
+      error: function(errorThrown){
+       console.log(errorThrown);
+     }
+   })
+  });
+
   if($('#member_username').length) {
     $('#member_username').val($('#username').data('user-id'));
   }

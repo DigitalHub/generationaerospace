@@ -200,7 +200,7 @@ function experiments_post_type() {
 		'label'                 => __( 'Experiment', 'text_domain' ),
 		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'thumbnail' ),
+		'supports'              => array( 'title', 'excerpt', 'thumbnail' ),
 		'taxonomies'            => array( 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,

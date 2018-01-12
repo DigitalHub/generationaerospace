@@ -63,6 +63,19 @@ function delete_fav_video() {
 add_action("wp_ajax_fav_this_video", "fav_this_video");
 add_action("wp_ajax_nopriv_fav_this_video", "fav_this_video");
 
+add_action("wp_ajax_delete_fav_experiment", "delete_fav_experiment");
+add_action("wp_ajax_nopriv_delete_fav_experiment", "delete_fav_experiment");
+
+function delete_fav_experiment() {
+	global $wpdb;
+	$favID = $_POST['favID'];
+	$fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
+	$wpdb->delete($fav_experiments_table,array('id' => $favID));
+}
+
+add_action("wp_ajax_fav_this_video", "fav_this_video");
+add_action("wp_ajax_nopriv_fav_this_video", "fav_this_video");
+
 function fav_this_video() {
 	global $wpdb;
 	// $video_id = $_POST['video_id'];
