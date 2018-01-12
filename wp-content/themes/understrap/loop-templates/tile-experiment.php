@@ -20,8 +20,7 @@ $tags = get_the_tags();
 			<?php
 			if($tags) :
 				foreach($tags as $tag) :
-					// TODO: STEF TO ADD TAG LINK
-					echo '<li><a href="#">'.$tag->name.'</a></li>';
+					echo '<li><a href="'.get_term_link($tag).'">'.$tag->name.'</a></li>';
 				endforeach;
 			endif;
 			?>
