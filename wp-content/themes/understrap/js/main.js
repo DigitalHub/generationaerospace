@@ -91,12 +91,12 @@ jQuery(document).ready(function($) {
     $('#member_username').val($('#username').data('user-id'));
   }
 
+  //if favourite videos found, toggle heart
   if(typeof fav_ids !== 'undefined' && fav_ids.length > 0) {
     $.each(fav_ids, function(key, value) {
       addFavouriteVideos(value);
     });
   }
-
   function addFavouriteVideos(value) {
     var selector = '.experiment--fav_link[data-video-id="' + value + '"] > i';
     if(!$(selector).hasClass('fav')) {
@@ -104,18 +104,44 @@ jQuery(document).ready(function($) {
     }
   }
 
+  //if favourite experiments found, toggle heart
   if(typeof fav_exp_ids !== 'undefined' && fav_exp_ids.length > 0) {
     $.each(fav_exp_ids, function(key, value) {
       addFavouriteExperiments(value);
     });
   }
-
   function addFavouriteExperiments(value) {
     var selector = '.experiment--fav_link[data-experiment-id="' + value + '"] > i';
     if(!$(selector).hasClass('fav')) {
       $(selector).addClass('fav');
     }
   }
+
+  $('#experiment_submit').on('click', function() {
+    var cpt = $(this).data('cpt');
+    var posts_per_page = $(this).data('posts_per_page');
+    var template = $(this).data('template');
+
+    $.ajax({
+      url: ajax.ajaxUrl,
+      type: 'post',
+      data: {
+        action: 'search_experiment',
+        cpt: cpt,
+        posts_per_page: posts_per_page,
+        template: template,
+        search: $('#experiment_search').val(),
+      },
+      beforeSend: function() {
+        $('.site-main').html('');
+        $('.ajax-loading').show();
+      },
+      success: function(data) {
+        $('.ajax-loading').hide();
+        $('.site-main').html(data);
+      }
+    });
+  });
 
   $('.genaero_loadmore').on('click', function(e) {
     e.preventDefault();
@@ -138,7 +164,6 @@ jQuery(document).ready(function($) {
       success : function( data ){
         if(data) {
           $('.site-main').append(data);
-          console.log('success: ' + ajaxpagination.current_page);
           ajaxpagination.current_page++;
         } else {
           button.remove();
