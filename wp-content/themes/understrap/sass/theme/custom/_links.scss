@@ -193,7 +193,7 @@ a {
 			width: 30px;
 			height: 30px;
 		}
-		
+
 		&.arrow_left {
 			position: absolute;
 			top: 25%;
@@ -334,6 +334,22 @@ a {
 		.arrowbtn-wrapper {
 			&:before {
 				background-color: $rrlimegreen;
+			}
+		}
+	}
+
+	&.btn--invert {
+		background-color: $rrlimegreen;
+		border: 2px solid $rrlimegreen;
+		color: $black !important;
+
+		.icon-left {
+			color: $black;
+		}
+
+		.arrowbtn-wrapper {
+			&:before {
+				background-color: $black;
 			}
 		}
 	}

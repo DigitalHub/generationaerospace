@@ -16,13 +16,10 @@ $tags = get_the_tags();
 	<div class="experiment_card--content">
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		<ul class="meta-keywords">
-			<!-- TODO: RACH TO FIX COMMA ISSUE -->
-			<?php
-			if($tags) : foreach($tags as $tag) :
+			<?php if($tags) : foreach($tags as $tag) :
 					// TODO: STEF TO ADD TAG LINK
-				echo '<li><a href="#">'.$tag->name.'</a></li>';
-			endforeach; endif;
-			?>
+			echo '<li><a href="#">'.$tag->name.'</a></li>';
+			endforeach; endif; ?>
 		</ul>
 		<div class="meta-date_fav">
 			<div class="meta-date"><i class="fas fa-clock"></i><?php echo get_the_date("d M Y"); ?></div>

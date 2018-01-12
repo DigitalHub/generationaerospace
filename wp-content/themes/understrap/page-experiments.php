@@ -66,8 +66,10 @@ $post_count = $the_query->post_count;
 					endwhile; endif; 
 					?>
 					<div class="search-form">
-						<input type="text" />
-						<button type="submit"><i class="fal fa-search"></i></button>
+						<input type="text" id="experiment_search" name="experiment_search" />
+						<button type="submit" id="experiment_submit" name="experiment_submit" data-cpt="<?=$cpt?>" data-posts_per_page="<?=$posts_per_page?>" data-template="<?=$template?>">
+							<i class="fal fa-search"></i>
+						</button>
 					</div>
 					<p>Suggestion search: 
 						<?php
@@ -83,7 +85,6 @@ $post_count = $the_query->post_count;
 							}
 						}
 						?>
-						<!-- <a href="#">Air pressure</a>, <a href="#">Plants</a> -->
 					</p>
 				</div>
 			</div>
@@ -95,6 +96,7 @@ $post_count = $the_query->post_count;
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
 				<div class="col-xl-12 content-area" id="primary">
+					<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>./img/ajax-loader.gif" style="display:none">
 					<main class="site-main" id="main" role="main">
 						<?php
 						if($the_query->have_posts()) :

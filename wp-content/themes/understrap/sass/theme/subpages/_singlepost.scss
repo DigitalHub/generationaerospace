@@ -121,9 +121,18 @@
 
 	.single_experiment--methods,
 	.single_trailblazers--profile {
-		background-color: #3d4b57;
 		color: $white;
 		height: 100vh;
+
+		&.single_experiment--methods {
+			background-color: $rrblue;
+
+		}
+
+		&.single_experiment--profile {
+			background-color: #3d4b57;
+
+		}
 
 		.single_experiment--methods_wrapper,
 		.single_trailblazers--profile_wrapper {
@@ -170,6 +179,68 @@
 				width: 100%;
 			}
 		}
+
+		&.single_experiment--materials {
+			a {
+				color: $black;
+				font-size: 1.24688rem;
+
+				&:hover {
+					color: $rrlimegreen;
+					text-decoration: none;
+				}
+				&:last-child {
+					margin-left: 30px;
+				}
+			}
+		}
+	}
+}
+
+.single-genaero_experiments {
+	h2 {
+		text-align: left;
+		text-transform: uppercase;
+	}
+	.experiment-meta {
+		color: $rrskyblue;
+		margin-bottom: 30px; 
+		text-align: left;
+
+		.meta-date {
+			display: inline-block;
+			width: 150px;
+		}
+
+		.meta-keywords {
+			display: inline-block;
+			width: calc(100% - 160px);
+
+			a {
+				color: $rrskyblue !important;
+				font-style: italic;
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+
+				&:first-child {
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+
+	.experiment--link {
+		position: relative;
+
+		.arrowbtn {
+			position: absolute;
+			left: 50%;
+			@include translate(-50%, -50%);
+			top: 50%;
+		}
 	}
 }
 
@@ -205,6 +276,16 @@
 				margin: 10px 0;
 				width: 25px;
 			}
+		}
+	}
+
+	.tried_experiement {
+		background-color: #0e3e66;
+		margin-top: 40px;
+		padding: 35px 55px;
+
+		h3 {
+			color: $white;
 		}
 	}
 

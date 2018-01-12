@@ -50,43 +50,43 @@
 
 		a {
 			color: $black;
-			display: block;
+			display: inline-block;
 			margin-bottom: 15px;
 
 			&:hover {
 				text-decoration: none;
 			}
 		}
-
-		.meta-keywords {
-			margin: 0 0 10px;
-			padding: 0;
-
-			li {
-				color: $rrskyblue;
-				display: inline-block;
-
-				a {
-					color: $rrskyblue;
-					font-style: italic;
-					text-decoration: underline;
-				}
-
-				&:after {
-					content: ", ";
-					display: inline-block;
-				}
-
-				&:last-child {
-					&:after {
-						content: "";
-					}
-				}			
-			}			
-		}
 	}
 }
 
+
+.meta-keywords {
+	margin: 0 0 10px;
+	padding: 0;
+
+	li {
+		color: $rrskyblue;
+		display: inline-block;
+
+		a {
+			color: $rrskyblue;
+			font-style: italic;
+			text-decoration: underline;
+		}
+
+		&:after {
+			content: ", ";
+			display: inline-block;
+		}
+
+		&:last-child {
+			&:after {
+				content: "";
+			}
+		}			
+	}			
+}
 
 .meta-date_fav {
 	border-top: 1px dashed #7f7f7f;
@@ -218,6 +218,12 @@
 		top: 0;
 		right: 50px;
 	}
+}
+.single-genaero_experiments .fancybox-slide>* {
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
 }
 
 .ongoing_events,

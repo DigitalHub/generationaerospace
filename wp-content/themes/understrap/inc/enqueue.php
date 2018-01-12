@@ -94,3 +94,58 @@ function genaero_ajax_pagination() {
 
 	wp_die();
 }
+
+add_action( 'wp_ajax_nopriv_search_experiment', 'search_experiment' );
+add_action( 'wp_ajax_search_experiment', 'search_experiment' );
+
+function search_experiment() {
+	$search = $_POST['search'];
+	$cpt = $_POST['cpt'];
+	$posts_per_page = $_POST['posts_per_page'];
+	$template = $_POST['template'];
+
+	$query1 = new WP_Query(array(
+		'post_type' => $cpt,
+		's' => $search,
+	));
+	$query2 = new WP_Query(array(
+		'post_type' => $cpt,
+		'tag_slug__in' => $search,
+	));
+
+	$combined_ids = array();
+	$combined = array_merge($query1->posts,$query2->posts);
+	foreach($combined as $id) {
+		$combined_ids[] = $id->ID;
+	}
+	$unique_ids = array_unique($combined_ids);
+
+	$the_query = new WP_Query(array(
+		'post_type' => $cpt,
+		'posts_per_page' => $posts_per_page,
+		'post__in' => $unique_ids,
+	));
+
+	$post_count = $the_query->post_count;
+
+	// TODO: STEF TO FIX LOAD MORE ISSUE
+	if($the_query->have_posts()) {
+		$count = 0;
+		while($the_query->have_posts()) : $the_query->the_post();
+			if($count % $posts_per_page == 0) :
+				echo $count > 0 ? '</div>' : '';
+				echo '<div class="row">';
+			endif;
+			get_template_part( 'loop-templates/tile', $template );
+			$count++;
+		endwhile;
+
+		if($count % $posts_per_page !== 0) {
+			echo '</div>';
+		}
+	} else {
+		echo 'No results found.';
+	}
+
+	wp_die();
+}
