@@ -9,7 +9,7 @@
 
 $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
-?>
+?> 
 <!-- <a href="#" class="scrolling up--button down--button">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">
@@ -22,6 +22,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>
 </a> -->
 <?php get_sidebar( 'footerfull' ); ?>
+
+
+<?php if ( is_singular( 'genaero_trailblazers' ) ) { //for fancybox   
+} else { ?>
 <div class="wrapper" id="wrapper-footer">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<div class="row">
@@ -33,6 +37,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div><!-- row end -->
 	</div><!-- container end -->
 </div><!-- wrapper end -->
+
+<?php } ?>
 </div><!-- #page we need this extra closing tag here -->
 <?php wp_footer(); ?>
 

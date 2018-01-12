@@ -96,7 +96,9 @@
 	}
 }
 
+.single_experiment,
 .single_trailblazers {
+	.single_experiment--row,
 	.single_trailblazers--row {
 		justify-content: center;
 		align-items: center;
@@ -111,20 +113,19 @@
 			}
 		}
 
+		.single_experiment--col,
 		.single_trailblazers--col {
 			min-height: 550px;
 		}
 	}
 
-	// .trailblazers-template-default {
-	// 	overflow: hidden;
-	// }
-	
+	.single_experiment--methods,
 	.single_trailblazers--profile {
 		background-color: #3d4b57;
 		color: $white;
 		height: 100vh;
 
+		.single_experiment--methods_wrapper,
 		.single_trailblazers--profile_wrapper {
 			height: 100%;
 
@@ -145,6 +146,7 @@
 
 	}
 	
+	.single_experiment--materials, 
 	.single_trailblazers--video {
 		background-color: #dbdad6;
 		height: 100vh;
@@ -167,6 +169,53 @@
 				height: 100%;
 				width: 100%;
 			}
+		}
+	}
+}
+
+.experiment--carousel_wrapper {
+	width: 80%;
+
+	.double_arrow.small_arrow.arrow_left {
+		left: -8%;
+	}
+
+	.double_arrow.small_arrow.arrow_right {
+		right: -8%;
+	}
+
+	.experiment_counts {
+		float: left;
+		font-size: 24px;
+		font-weight: 400;
+		margin-right: 25px;
+		vertical-align: middle;
+		width: 25px;
+
+		.counting {
+			color: $rrlimegreen;
+			@include transition(all 500ms ease);
+		}
+
+		.totalcount {
+			&:before { 
+				border-top: 1px solid $rrlimegreen;
+				content: "";
+				display: block;
+				margin: 10px 0;
+				width: 25px;
+			}
+		}
+	}
+
+	.experiment_steps {
+		border-left: 1px solid $white;
+		float: left;
+		padding-left: 25px;
+		width: calc(100% - 101px);
+
+		p:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

@@ -1,199 +1,216 @@
 jQuery.noConflict();
 jQuery(document).ready(function($) {
 
-  jQuery('.menu_butt').click(function(event){
-    event.preventDefault();
-    jQuery(this).toggleClass('opened');
-    jQuery('.menu-content').toggleClass('opened');
-  });
-
-  jQuery('.menu_butt__close').click(function(event){
-    event.preventDefault();
-    jQuery('.menu_butt').removeClass('opened');
-    jQuery('.menu-content').removeClass('opened');
-  });
-
-  jQuery('#fullpage').fullpage({
-    anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailbazers', 'featured_events'],
-    menu: '.chapter-selector',
-    css3: true,
-    fitToSectionDelay: 1000,
-      // lazyLoading: true,
+    jQuery('.menu_butt').click(function(event){
+        event.preventDefault();
+        jQuery(this).toggleClass('opened');
+        jQuery('.menu-content').toggleClass('opened');
     });
 
-  var $status = jQuery('.pagingInfo');
-  var $slickElement = jQuery('.featured_video--carousel');
+    jQuery('.menu_butt__close').click(function(event){
+        event.preventDefault();
+        jQuery('.menu_butt').removeClass('opened');
+        jQuery('.menu-content').removeClass('opened');
+    });
 
-  $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-    var i = (currentSlide ? currentSlide : 0) + 1;
+    jQuery('#fullpage').fullpage({
+        anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailbazers', 'featured_events'],
+        menu: '.chapter-selector',
+        css3: true,
+        fitToSectionDelay: 1000,
+        // lazyLoading: true,
+    });
+
+    var $status = jQuery('.pagingInfo');
+    var $slickElement = jQuery('.featured_video--carousel');
+
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        var i = (currentSlide ? currentSlide : 0) + 1;
         // $status.text(i + '/' + slick.slideCount);
         $status.html('<span class="counting">0'+i+'</span><span class="totalcount">0'+ slick.slideCount +'</span>')
-      });
-
-  $slickElement.slick({
-    autoplay: false,
-    dots: false,
-    fade: true,
-    prevArrow: '<div class="double_arrow small_arrow arrow_up"></div>',
-    nextArrow: '<div class="double_arrow small_arrow arrow_down"></div>',
-  });
-
-  jQuery('.genaero_explorer--carousel').slick({
-    autoplay: false,
-    dots: false,
-    centerMode: true,
-    centerPadding: ($('.slider').find('>div').outerWidth() / 2) + 'px',
-    prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
-    nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>',
-  });
-
-  $(function(){
-    $('.hide-show').show();
-    $('.hide-show span').addClass('show')
-
-    $('.hide-show span').click(function(){
-      if( $(this).hasClass('show') ) {
-        $(this).text('Hide');
-        $('input[name="profile_password"]').attr('type','text');
-        $(this).removeClass('show');
-      } else {
-       $(this).text('Show');
-       $('input[name="profile_password"]').attr('type','password');
-       $(this).addClass('show');
-     }
-   });
-
-    $('form button[type="submit"]').on('click', function(){
-      $('.hide-show span').text('Show').addClass('show');
-      $('.hide-show').parent().find('input[name="profile_password"]').attr('type','password');
-    }); 
-  });
-
-  $('.delete-fav-video').on('click', function() {
-    var favID = $(this).data('fav-id');
-    $.ajax({
-      url: ajax.ajaxUrl,
-      type: 'post',
-      data: {
-        action: 'delete_fav_video',
-        favID: favID
-      },
-      success: function(data) {
-        location.reload();
-      },
-      error: function(errorThrown){
-       console.log(errorThrown);
-     }
-   })
-  });
-
-  if($('#member_username').length) {
-    $('#member_username').val($('#username').data('user-id'));
-  }
-
-  if(typeof fav_ids !== 'undefined' && fav_ids.length > 0) {
-    $.each(fav_ids, function(key, value) {
-      addFavouriteVideos(value);
     });
-  }
 
-  function addFavouriteVideos(value) {
-    var selector = '.experiment--fav_link[data-video-id="' + value + '"] > i';
-    if(!$(selector).hasClass('fav')) {
-      $(selector).addClass('fav');
-    }
-  }
-
-  if(typeof fav_exp_ids !== 'undefined' && fav_exp_ids.length > 0) {
-    $.each(fav_exp_ids, function(key, value) {
-      addFavouriteExperiments(value);
+    $slickElement.slick({
+        autoplay: false,
+        dots: false,
+        fade: true,
+        prevArrow: '<div class="double_arrow small_arrow arrow_up"></div>',
+        nextArrow: '<div class="double_arrow small_arrow arrow_down"></div>',
     });
-  }
 
-  function addFavouriteExperiments(value) {
-    var selector = '.experiment--fav_link[data-experiment-id="' + value + '"] > i';
-    if(!$(selector).hasClass('fav')) {
-      $(selector).addClass('fav');
+    jQuery('.experiment--carousel').slick({
+        autoplay: false,
+        dots: false,
+        fade: true,
+        prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
+        nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
+    });
+
+    jQuery('.fullpopup').fancybox({
+        toolbar  : false,
+        smallBtn : true,
+        // iframe : {
+        //     preload : false
+        // }
+    });
+
+    jQuery('.genaero_explorer--carousel').slick({
+        autoplay: false,
+        dots: false,
+        centerMode: true,
+        centerPadding: ($('.slider').find('>div').outerWidth() / 2) + 'px',
+        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
+        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>',
+    });
+
+    $(function(){
+        $('.hide-show').show();
+        $('.hide-show span').addClass('show')
+
+        $('.hide-show span').click(function(){
+            if( $(this).hasClass('show') ) {
+                $(this).text('Hide');
+                $('input[name="profile_password"]').attr('type','text');
+                $(this).removeClass('show');
+            } else {
+                $(this).text('Show');
+                $('input[name="profile_password"]').attr('type','password');
+                $(this).addClass('show');
+            }
+        });
+
+        $('form button[type="submit"]').on('click', function(){
+            $('.hide-show span').text('Show').addClass('show');
+            $('.hide-show').parent().find('input[name="profile_password"]').attr('type','password');
+        }); 
+    });
+
+    $('.delete-fav-video').on('click', function() {
+        var favID = $(this).data('fav-id');
+        $.ajax({
+            url: ajax.ajaxUrl,
+            type: 'post',
+            data: {
+                action: 'delete_fav_video',
+                favID: favID
+            },
+            success: function(data) {
+                location.reload();
+            },
+            error: function(errorThrown){
+                console.log(errorThrown);
+            }
+        })
+    });
+
+    if($('#member_username').length) {
+        $('#member_username').val($('#username').data('user-id'));
     }
-  }
 
-  $('.genaero_loadmore').on('click', function(e) {
-    e.preventDefault();
-    var button = $(this);
-    var cpt = button.data('cpt');
-    var posts_per_page = button.data('posts_per_page');
-    var template = button.data('template');
+    if(typeof fav_ids !== 'undefined' && fav_ids.length > 0) {
+        $.each(fav_ids, function(key, value) {
+            addFavouriteVideos(value);
+        });
+    }
 
-    $.ajax({
-      url: ajaxpagination.ajaxUrl,
-      type : 'post',
-      data: {
-        action: 'genaero_ajax_pagination',
-        cpt: cpt,
-        posts_per_page: posts_per_page,
-        template: template,
-        query: ajaxpagination.posts,
-        page: ajaxpagination.current_page,
-      },
-      success : function( data ){
-        if(data) {
-          $('.site-main').append(data);
-          console.log('success: ' + ajaxpagination.current_page);
-          ajaxpagination.current_page++;
-        } else {
-          button.remove();
+    function addFavouriteVideos(value) {
+        var selector = '.experiment--fav_link[data-video-id="' + value + '"] > i';
+        if(!$(selector).hasClass('fav')) {
+            $(selector).addClass('fav');
         }
-      }
+    }
+
+    if(typeof fav_exp_ids !== 'undefined' && fav_exp_ids.length > 0) {
+        $.each(fav_exp_ids, function(key, value) {
+            addFavouriteExperiments(value);
+        });
+    }
+
+    function addFavouriteExperiments(value) {
+        var selector = '.experiment--fav_link[data-experiment-id="' + value + '"] > i';
+        if(!$(selector).hasClass('fav')) {
+            $(selector).addClass('fav');
+        }
+    }
+
+    $('.genaero_loadmore').on('click', function(e) {
+        e.preventDefault();
+        var button = $(this);
+        var cpt = button.data('cpt');
+        var posts_per_page = button.data('posts_per_page');
+        var template = button.data('template');
+
+        $.ajax({
+            url: ajaxpagination.ajaxUrl,
+            type : 'post',
+            data: {
+                action: 'genaero_ajax_pagination',
+                cpt: cpt,
+                posts_per_page: posts_per_page,
+                template: template,
+                query: ajaxpagination.posts,
+                page: ajaxpagination.current_page,
+            },
+            success : function( data ){
+                if(data) {
+                    $('.site-main').append(data);
+                    console.log('success: ' + ajaxpagination.current_page);
+                    ajaxpagination.current_page++;
+                } else {
+                    button.remove();
+                }
+            }
+        });
+
     });
-  });
 
-  // $('a[href$="#heart"]').on('click', function(e) {
-  //   e.preventDefault();
-  //   var video_id = $(this).data('video-id');
+// $('a[href$="#heart"]').on('click', function(e) {
+//   e.preventDefault();
+//   var video_id = $(this).data('video-id');
 
-  //   $.ajax({
-  //     url: ajax.ajaxUrl,
-  //     type: 'post',
-  //     data: {
-  //       action: 'fav_this_video',
-  //       video_id: video_id
-  //     },
-  //     success: function(data) {
-  //       // location.reload();
-  //     },
-  //     error: function(errorThrown){
-  //      console.log(errorThrown);
-  //    }
-  //  })
-  // });
+//   $.ajax({
+//     url: ajax.ajaxUrl,
+//     type: 'post',
+//     data: {
+//       action: 'fav_this_video',
+//       video_id: video_id
+//     },
+//     success: function(data) {
+//       // location.reload();
+//     },
+//     error: function(errorThrown){
+//      console.log(errorThrown);
+//    }
+//  })
+// });
 
-    // jQuery(document).on('click', '.scrolling', function(event){                        
-    //     event.preventDefault();
-    //     var y = $(window).scrollTop();
-    //     jQuery('html, body').animate({
-    //         scrollTop: y + 500
-    //     }, 500);
-    // });
+// jQuery(document).on('click', '.scrolling', function(event){                        
+//     event.preventDefault();
+//     var y = $(window).scrollTop();
+//     jQuery('html, body').animate({
+//         scrollTop: y + 500
+//     }, 500);
+// });
 
-  //   jQuery(".watch_video--typewriter").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
-  //     jQuery(this).removeClass("animated")  
-  // })
+//   jQuery(".watch_video--typewriter").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
+//     jQuery(this).removeClass("animated")  
+// })
 
-  //   jQuery(".watch_video--typewriter").hover(function(){
-  //     jQuery(this).addClass("animated");        
-  // })
-  
-  function new_map( $el ) {
+//   jQuery(".watch_video--typewriter").hover(function(){
+//     jQuery(this).addClass("animated");        
+// })
+
+function new_map( $el ) {
     var $markers = $el.find('.marker');
     var args = {
-      zoom    : 16,
-      center    : new google.maps.LatLng(0, 0),
-      mapTypeId : google.maps.MapTypeId.ROADMAP,
-      styles: [
-    {
-        "featureType": "all",
-        "elementType": "all",
-        "stylers": [
+        zoom    : 16,
+        center    : new google.maps.LatLng(0, 0),
+        mapTypeId : google.maps.MapTypeId.ROADMAP,
+        styles: [
+        {
+            "featureType": "all",
+            "elementType": "all",
+            "stylers": [
             {
                 "hue": "#ff0000"
             },
@@ -203,117 +220,114 @@ jQuery(document).ready(function($) {
             {
                 "lightness": -30
             }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text.fill",
-        "stylers": [
+            ]
+        },
+        {
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [
             {
                 "color": "#ffffff"
             }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text.stroke",
-        "stylers": [
+            ]
+        },
+        {
+            "featureType": "all",
+            "elementType": "labels.text.stroke",
+            "stylers": [
             {
                 "color": "#353535"
             }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [
             {
                 "color": "#656565"
             }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry.fill",
-        "stylers": [
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry.fill",
+            "stylers": [
             {
                 "color": "#505050"
             }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry.stroke",
-        "stylers": [
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry.stroke",
+            "stylers": [
             {
                 "color": "#808080"
             }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry",
-        "stylers": [
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
             {
                 "color": "#454545"
             }
+            ]
+        }
         ]
-    }
-]
     };
 
     var map = new google.maps.Map( $el[0], args);
     map.markers = [];
     $markers.each(function(){
-      add_marker( $(this), map );
+        add_marker( $(this), map );
     });
     center_map( map );
     return map;
-  }
+}
 
-  function add_marker( $marker, map ) {
+function add_marker( $marker, map ) {
     var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
     var marker = new google.maps.Marker({
-      position  : latlng,
-      map     : map
+        position  : latlng,
+        map     : map
     });
     map.markers.push( marker );
     if( $marker.html() )
     {
-      var infowindow = new google.maps.InfoWindow({
-        content   : $marker.html()
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open( map, marker );
-      });
+        var infowindow = new google.maps.InfoWindow({
+            content   : $marker.html()
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open( map, marker );
+        });
     }
 
-  }
+}
 
-  function center_map( map ) {
+function center_map( map ) {
     var bounds = new google.maps.LatLngBounds();
     $.each( map.markers, function( i, marker ){
-      var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
-      bounds.extend( latlng );
+        var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+        bounds.extend( latlng );
     });
     if( map.markers.length == 1 ) {
-      map.setCenter( bounds.getCenter() );
-      map.setZoom( 15 );
+        map.setCenter( bounds.getCenter() );
+        map.setZoom( 15 );
     }
     else {
-      map.fitBounds( bounds );
+        map.fitBounds( bounds );
     }
-  }
+}
 
-  var map = null;
+var map = null;
 
-  $('.acf-map').each(function(){
+$('.acf-map').each(function(){
     map = new_map( $(this) );
-  });
 });
-
-
-
+});
 // jQuery(window).scroll(function() {
 //     jQuery('.scrolling').addClass('up--button');
 //     if(jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {

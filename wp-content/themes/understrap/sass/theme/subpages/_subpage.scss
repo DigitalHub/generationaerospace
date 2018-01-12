@@ -10,6 +10,10 @@
 	position: relative;
 	margin-bottom: 30px;
 
+	&:hover .bg-opaque {
+		@include opacity(0);
+	}
+
 	.experiment--fav_link {
 		position: absolute;
 		top: 15px;
@@ -201,6 +205,20 @@
 	}
 }
 
+.page-template-page-trailblazers .fancybox-slide--iframe {
+	.fancybox-content {
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0;
+		width: 100%;
+	}
+
+	.fancybox-close-small {
+		top: 0;
+		right: 50px;
+	}
+}
 
 .ongoing_events,
 .past_events {
@@ -270,9 +288,15 @@
 			text-decoration: none;
 		}
 
+		&:hover .bg-opaque {
+			@include opacity(0);
+		}
+
 		.vault_card--content {
 			background-color: $white; 
 			padding: 25px;
 		}
 	}
+
+
 }

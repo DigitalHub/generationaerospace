@@ -8,7 +8,7 @@
 
 get_header();
 $container = get_theme_mod( 'understrap_container_type' ); 
-
+$page_template = get_page_template_slug( get_queried_object_id() );
 $has_video = get_field('video');
 
 if($has_video) {
@@ -18,8 +18,7 @@ if($has_video) {
 	$embed_code = youtubeEmbedFromUrl($video_link, 480, 360);
 
 	?>
-
-	<div class="container-fluid single_trailblazers">
+	<div class="<?php echo $page_template ?> container-fluid single_trailblazers">
 		<div class="row">
 			<div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 single_trailblazers--profile">
 				<div class="col-xl-10 offset-xl-2 col-lg-11 offset-lg-1 col-md-12 col-sm-12 col-xs-12 single_trailblazers--profile_wrapper">
@@ -104,9 +103,4 @@ if($has_video) {
 			</div>
 		</div>
 	</div>
-
-	<?php 
-} 
-
-get_footer(); 
-?>
+	<?php  }  get_footer();  ?>

@@ -193,6 +193,20 @@ a {
 			width: 30px;
 			height: 30px;
 		}
+		
+		&.arrow_left {
+			position: absolute;
+			top: 25%;
+			left: -4%;
+			@include rotate(-90);
+		}
+
+		&.arrow_right {
+			position: absolute;
+			top: 25%;
+			right: -4%;
+			@include rotate(90);
+		}
 	}
 
 	&.big_arrow {

@@ -45,6 +45,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?>>
 
 	<div class="hfeed site" id="page">
-		<?php get_template_part( 'page-templates/site', 'title' ); ?>
-		<?php get_template_part( 'page-templates/navigation', 'top' ); ?>
 
+		<?php if ( is_singular( 'genaero_trailblazers' ) ) { //for fancybox  
+		} else {
+			get_template_part( 'page-templates/site', 'title' );
+			get_template_part( 'page-templates/navigation', 'top' );
+		} ?>

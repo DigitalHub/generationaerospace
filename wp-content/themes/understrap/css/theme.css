@@ -11061,6 +11061,24 @@ a {
       top: 20%;
       width: 30px;
       height: 30px; }
+    .double_arrow.small_arrow.arrow_left {
+      position: absolute;
+      top: 25%;
+      left: -4%;
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
+    .double_arrow.small_arrow.arrow_right {
+      position: absolute;
+      top: 25%;
+      right: -4%;
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
   .double_arrow.big_arrow {
     height: 48px;
     width: 48px; }
@@ -12150,6 +12168,9 @@ a#genaero-facebook-button {
 .featured_experiment--card {
   position: relative;
   margin-bottom: 30px; }
+  .featured_experiment--card:hover .bg-opaque {
+    opacity: 0;
+    filter: alpha(opacity=0); }
   .featured_experiment--card .experiment--fav_link {
     position: absolute;
     top: 15px;
@@ -12283,6 +12304,16 @@ a#genaero-facebook-button {
       text-transform: uppercase;
       text-align: center; }
 
+.page-template-page-trailblazers .fancybox-slide--iframe .fancybox-content {
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  width: 100%; }
+.page-template-page-trailblazers .fancybox-slide--iframe .fancybox-close-small {
+  top: 0;
+  right: 50px; }
+
 .ongoing_events,
 .past_events {
   margin-bottom: 25px; }
@@ -12333,6 +12364,9 @@ a#genaero-facebook-button {
     .vault--card a:hover {
       color: #00aed4;
       text-decoration: none; }
+    .vault--card a:hover .bg-opaque {
+      opacity: 0;
+      filter: alpha(opacity=0); }
     .vault--card a .vault_card--content {
       background-color: #fff;
       padding: 25px; }
@@ -12385,45 +12419,140 @@ a#genaero-facebook-button {
 .addthis_inline_share_toolbox_dznu .at-style-responsive .at-share-btn {
   border-radius: 30px !important; }
 
+.single_experiment .single_experiment--row,
+.single_experiment .single_trailblazers--row,
+.single_trailblazers .single_experiment--row,
 .single_trailblazers .single_trailblazers--row {
   justify-content: center;
   align-items: center;
   height: 100%; }
+  .single_experiment .single_experiment--row .post-thumbnail,
+  .single_experiment .single_trailblazers--row .post-thumbnail,
+  .single_trailblazers .single_experiment--row .post-thumbnail,
   .single_trailblazers .single_trailblazers--row .post-thumbnail {
     height: 400px; }
+    .single_experiment .single_experiment--row .post-thumbnail img,
+    .single_experiment .single_trailblazers--row .post-thumbnail img,
+    .single_trailblazers .single_experiment--row .post-thumbnail img,
     .single_trailblazers .single_trailblazers--row .post-thumbnail img {
       height: 400px; }
+  .single_experiment .single_experiment--row .single_experiment--col,
+  .single_experiment .single_experiment--row .single_trailblazers--col,
+  .single_experiment .single_trailblazers--row .single_experiment--col,
+  .single_experiment .single_trailblazers--row .single_trailblazers--col,
+  .single_trailblazers .single_experiment--row .single_experiment--col,
+  .single_trailblazers .single_experiment--row .single_trailblazers--col,
+  .single_trailblazers .single_trailblazers--row .single_experiment--col,
   .single_trailblazers .single_trailblazers--row .single_trailblazers--col {
     min-height: 550px; }
+.single_experiment .single_experiment--methods,
+.single_experiment .single_trailblazers--profile,
+.single_trailblazers .single_experiment--methods,
 .single_trailblazers .single_trailblazers--profile {
   background-color: #3d4b57;
   color: #fff;
   height: 100vh; }
+  .single_experiment .single_experiment--methods .single_experiment--methods_wrapper,
+  .single_experiment .single_experiment--methods .single_trailblazers--profile_wrapper,
+  .single_experiment .single_trailblazers--profile .single_experiment--methods_wrapper,
+  .single_experiment .single_trailblazers--profile .single_trailblazers--profile_wrapper,
+  .single_trailblazers .single_experiment--methods .single_experiment--methods_wrapper,
+  .single_trailblazers .single_experiment--methods .single_trailblazers--profile_wrapper,
+  .single_trailblazers .single_trailblazers--profile .single_experiment--methods_wrapper,
   .single_trailblazers .single_trailblazers--profile .single_trailblazers--profile_wrapper {
     height: 100%; }
+    .single_experiment .single_experiment--methods .single_experiment--methods_wrapper h1,
+    .single_experiment .single_experiment--methods .single_trailblazers--profile_wrapper h1,
+    .single_experiment .single_trailblazers--profile .single_experiment--methods_wrapper h1,
+    .single_experiment .single_trailblazers--profile .single_trailblazers--profile_wrapper h1,
+    .single_trailblazers .single_experiment--methods .single_experiment--methods_wrapper h1,
+    .single_trailblazers .single_experiment--methods .single_trailblazers--profile_wrapper h1,
+    .single_trailblazers .single_trailblazers--profile .single_experiment--methods_wrapper h1,
     .single_trailblazers .single_trailblazers--profile .single_trailblazers--profile_wrapper h1 {
       color: #fff;
       text-transform: uppercase; }
+    .single_experiment .single_experiment--methods .single_experiment--methods_wrapper h2,
+    .single_experiment .single_experiment--methods .single_trailblazers--profile_wrapper h2,
+    .single_experiment .single_trailblazers--profile .single_experiment--methods_wrapper h2,
+    .single_experiment .single_trailblazers--profile .single_trailblazers--profile_wrapper h2,
+    .single_trailblazers .single_experiment--methods .single_experiment--methods_wrapper h2,
+    .single_trailblazers .single_experiment--methods .single_trailblazers--profile_wrapper h2,
+    .single_trailblazers .single_trailblazers--profile .single_experiment--methods_wrapper h2,
     .single_trailblazers .single_trailblazers--profile .single_trailblazers--profile_wrapper h2 {
       color: #fff; }
+    .single_experiment .single_experiment--methods .single_experiment--methods_wrapper p.highlight,
+    .single_experiment .single_experiment--methods .single_trailblazers--profile_wrapper p.highlight,
+    .single_experiment .single_trailblazers--profile .single_experiment--methods_wrapper p.highlight,
+    .single_experiment .single_trailblazers--profile .single_trailblazers--profile_wrapper p.highlight,
+    .single_trailblazers .single_experiment--methods .single_experiment--methods_wrapper p.highlight,
+    .single_trailblazers .single_experiment--methods .single_trailblazers--profile_wrapper p.highlight,
+    .single_trailblazers .single_trailblazers--profile .single_experiment--methods_wrapper p.highlight,
     .single_trailblazers .single_trailblazers--profile .single_trailblazers--profile_wrapper p.highlight {
       color: #00aed4;
       text-transform: uppercase; }
+.single_experiment .single_experiment--materials,
+.single_experiment .single_trailblazers--video,
+.single_trailblazers .single_experiment--materials,
 .single_trailblazers .single_trailblazers--video {
   background-color: #dbdad6;
   height: 100vh; }
+  .single_experiment .single_experiment--materials h1,
+  .single_experiment .single_trailblazers--video h1,
+  .single_trailblazers .single_experiment--materials h1,
   .single_trailblazers .single_trailblazers--video h1 {
     color: #000;
     text-transform: uppercase; }
+  .single_experiment .single_experiment--materials h3,
+  .single_experiment .single_trailblazers--video h3,
+  .single_trailblazers .single_experiment--materials h3,
   .single_trailblazers .single_trailblazers--video h3 {
     color: #000; }
+  .single_experiment .single_experiment--materials .single_trailblazers--iframe,
+  .single_experiment .single_trailblazers--video .single_trailblazers--iframe,
+  .single_trailblazers .single_experiment--materials .single_trailblazers--iframe,
   .single_trailblazers .single_trailblazers--video .single_trailblazers--iframe {
     height: 251px;
     margin-bottom: 20px;
     width: 100%; }
+    .single_experiment .single_experiment--materials .single_trailblazers--iframe iframe,
+    .single_experiment .single_trailblazers--video .single_trailblazers--iframe iframe,
+    .single_trailblazers .single_experiment--materials .single_trailblazers--iframe iframe,
     .single_trailblazers .single_trailblazers--video .single_trailblazers--iframe iframe {
       height: 100%;
       width: 100%; }
+
+.experiment--carousel_wrapper {
+  width: 80%; }
+  .experiment--carousel_wrapper .double_arrow.small_arrow.arrow_left {
+    left: -8%; }
+  .experiment--carousel_wrapper .double_arrow.small_arrow.arrow_right {
+    right: -8%; }
+  .experiment--carousel_wrapper .experiment_counts {
+    float: left;
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 25px;
+    vertical-align: middle;
+    width: 25px; }
+    .experiment--carousel_wrapper .experiment_counts .counting {
+      color: #cad63e;
+      -moz-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease; }
+    .experiment--carousel_wrapper .experiment_counts .totalcount:before {
+      border-top: 1px solid #cad63e;
+      content: "";
+      display: block;
+      margin: 10px 0;
+      width: 25px; }
+  .experiment--carousel_wrapper .experiment_steps {
+    border-left: 1px solid #fff;
+    float: left;
+    padding-left: 25px;
+    width: calc(100% - 101px); }
+    .experiment--carousel_wrapper .experiment_steps p:last-child {
+      margin-bottom: 0; }
 
 .sign-up-row,
 .login-row,

@@ -90,44 +90,47 @@ $all_videos_count = $wpdb->num_rows;
 ?>
 
 <section class="subpage--hud">
-<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
-include(locate_template('loop-templates/hub-base.php')); ?>
-<div class="subpage--content">
-	<div class="container">
-		<h1><?php the_title(); ?></h1>
-		<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
-		<div class="row">
-			<div class="col-xl-8 ">
-				<div class="search-form">
-					<!-- TODO: STEF DO SEARCH -->
-					<input type="text" />
-					<button type="submit"><i class="fal fa-search"></i></button>
+	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
+	include(locate_template('loop-templates/hub-base.php')); ?>
+	<div class="subpage--content">
+		<div class="container">
+			<h1><?php the_title(); ?></h1>
+			<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
+			<div class="row">
+				<div class="col-xl-8 ">
+					<div class="search-form">
+						<!-- TODO: STEF DO SEARCH -->
+						<input type="text" />
+						<button type="submit"><i class="fal fa-search"></i></button>
+					</div>
 				</div>
-			</div>
-			<div class="col-xl-4">
-				<h3>Submit your videos here:</h3>
-				<button class="arrowbtn btn--color">
-					<span class="fas fa-long-arrow-alt-right icon-left"></span>
-					<?php if($loggedin === '0') {?>
-					<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>"><span>Sign up or Register Now</span></a></div>
-					<?php } elseif($loggedin === '1') {?>
-					<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>"><span>Submit a Video</span></a></div>
-					<?php } ?>
-				</button>
+				<div class="col-xl-4">
+					<h3>Submit your videos here:</h3>
+					<button class="arrowbtn btn--color">
+						<span class="fas fa-long-arrow-alt-right icon-left"></span>
+						<?php if($loggedin === '0') {?>
+						<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>"><span>Sign up or Register Now</span></a></div>
+						<?php } elseif($loggedin === '1') {?>
+						<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>"><span>Submit a Video</span></a></div>
+						<?php } ?>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </section>
 <section class="sub_main">
 	<div class="wrapper">
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
 				<div class="col-xl-8 col-xl-8 col-md-6 col-sm-12 col-xs-12 featured_experiment--card">
-					<div class="post-thumbnail">
-						<!-- TODO: RACHELLE TO ADD PLAY ICON -->
-						<a data-fancybox href="<?=$youtube?>"><img src="<?=$thumbnail_url?>" /></a>
-					</div>
+					<a data-fancybox href="<?=$youtube?>">
+						<div class="post-thumbnail">
+							<!-- TODO: RACHELLE TO ADD PLAY ICON -->
+							<i class="fas fa-play"></i>
+							<img src="<?=$thumbnail_url?>" />
+						</div>
+					</a>
 					<div class="experiment--fav_link" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></div>
 				</div>
 				<div class="col-xl-4 col-xl-4 col-md-6 col-sm-12 col-xs-12">
@@ -137,7 +140,7 @@ include(locate_template('loop-templates/hub-base.php')); ?>
 
 					<div class="meta-date_fav">
 						<div class="alignleft">
-							<div class="meta-profile_pic"><?=$profile_pic?></div>
+							<div class="meta-profile_pic"><img src="<?=$profile_pic?>" class="profile_photo" alt="<?=$fullname?>'s Profile Photo"></div>
 						</div>
 						<div class="alignleft">
 							<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
@@ -174,33 +177,31 @@ include(locate_template('loop-templates/hub-base.php')); ?>
 							if($count % 3 !== 0) {
 								echo '</div>';
 							}
+						} ?>
+					</div>
+					<hr>
+
+					<h3>All Videos_</h3>
+					<?php
+					if($all_videos_count > 0) {
+						$count = 0;
+						foreach($all_videos_results as $video) {
+							if($count % 3 == 0) :
+								echo $count > 0 ? '</div>' : '';
+								echo '<div class="row">';
+							endif;
+							global $video;
+							get_template_part( 'loop-templates/tile', 'video' );
+							$count++;
 						}
-						?>
 
-						<hr>
-
-						<h3>All Videos_</h3>
-						<?php
-						if($all_videos_count > 0) {
-							$count = 0;
-							foreach($all_videos_results as $video) {
-								if($count % 3 == 0) :
-									echo $count > 0 ? '</div>' : '';
-									echo '<div class="row">';
-								endif;
-								global $video;
-								get_template_part( 'loop-templates/tile', 'video' );
-								$count++;
-							}
-
-							if($count % 3 !== 0) {
-								echo '</div>';
-							}
+						if($count % 3 !== 0) {
+							echo '</div>';
 						}
-						?>
-					</main><!-- #main -->
-				</div><!-- #primary -->
-			</div><!-- .row end -->
-		</div><!-- Container end -->
-	</div><!-- Wrapper end --></section>
-	<?php get_footer(); ?>
+					} ?>
+				</main><!-- #main -->
+			</div><!-- #primary -->
+		</div><!-- .row end -->
+	</div><!-- Container end -->
+</div><!-- Wrapper end --></section>
+<?php get_footer(); ?>

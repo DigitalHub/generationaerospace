@@ -18,12 +18,10 @@ $tags = get_the_tags();
 		<ul class="meta-keywords">
 			<!-- TODO: RACH TO FIX COMMA ISSUE -->
 			<?php
-			if($tags) :
-				foreach($tags as $tag) :
+			if($tags) : foreach($tags as $tag) :
 					// TODO: STEF TO ADD TAG LINK
-					echo '<li><a href="#">'.$tag->name.'</a></li>';
-				endforeach;
-			endif;
+				echo '<li><a href="#">'.$tag->name.'</a></li>';
+			endforeach; endif;
 			?>
 		</ul>
 		<div class="meta-date_fav">

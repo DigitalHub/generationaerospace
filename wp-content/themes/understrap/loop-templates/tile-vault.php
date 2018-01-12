@@ -6,12 +6,11 @@
  */
 
 ?>
-
-<!-- TODO: RACH TO ADD HOVER EFFECTS -->
 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-x-12 vault--card">
 	<a href="<?php the_permalink(); ?>">
 		<div class="post-thumbnail">
 			<?php the_post_thumbnail( 'medium' ); ?>
+			<div class="bg-opaque"></div>
 		</div>
 
 		<div class="vault_card--content">
