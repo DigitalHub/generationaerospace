@@ -8,33 +8,66 @@
 	@include clearfix-after;
 }
 
-body.home {
-	// background-color: $black;
-	background-attachment: fixed;
-	background-image: url("../img/bg1.jpg");
-	background-position: center;
-}
 
 .HudOverlay {
 	left: 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	height: 480px;
 	pointer-events: none;
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 0;
+	z-index: -1;
+
+	.subHudOverlay {
+		height: 480px;
+		width: 100%;
+	}
 
 	.HudOverlay-fullBorder {
-		position: absolute;
-		height: calc(100% - 70px);
-		top: 35px;
-		width: calc(100% - 46px);
-		left: 20px;
+		height: 100%;
+		width: 100%;
 		stroke-width: 1px;
-		fill: rgba(255,255,255,0.17);
 		stroke: #c9c9c9;
 	}
+
+	.HudOverlay-fill {
+		clip-path:url(#SVGID_4_);
+		opacity: 0.50;
+	}
+
+	.path {
+		fill: #00000080;
+	}
+
+	.HubOverlay--Blur {
+		clip-path:url(#HubOverlay--Blur);
+		filter:url(#blurlayer);
+	}
+
+	&:before {
+		content: "";
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.80);
+		position: absolute;
+		z-index: -1;
+	}
+
+	image {
+		height: 110%;
+		overflow: visible;
+		width: 100%;
+	}
 }
+
+.polygon {
+	fill: $white;
+}
+
+
 
 .page-template-login,
 .page-template-sign-up,
@@ -48,11 +81,6 @@ body.home {
 		height: 100%;
 		z-index: -1;
 	}
-}
-
-.path, 
-.polygon {
-	fill: $white;
 }
 
 .singlepost--hud ,

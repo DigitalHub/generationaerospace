@@ -214,7 +214,11 @@
 								margin: 0;
 							}
 						}
-
+						&.current-menu-item {
+							a {
+								color: $rrlimegreen;
+							}
+						}
 
 					}
 				}

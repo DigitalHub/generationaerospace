@@ -259,16 +259,20 @@
 
 .vault--card {
 	margin-bottom: 30px;
-	.vault_card--content {
-		background-color: $white; 
-		padding: 25px;
 
-		a {
-			color: $black;
 
-			&:hover {
-				text-decoration: none;
-			}
+	a {
+		color: $black;
+		display: block;
+
+		&:hover {
+			color: $rrskyblue;
+			text-decoration: none;
+		}
+
+		.vault_card--content {
+			background-color: $white; 
+			padding: 25px;
 		}
 	}
 }

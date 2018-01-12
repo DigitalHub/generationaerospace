@@ -9,10 +9,13 @@
 
 <!-- TODO: RACH TO ADD HOVER EFFECTS -->
 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-x-12 vault--card">
-	<div class="post-thumbnail">
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
-	</div>
-	<div class="vault_card--content">
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	</div>
+	<a href="<?php the_permalink(); ?>">
+		<div class="post-thumbnail">
+			<?php the_post_thumbnail( 'medium' ); ?>
+		</div>
+
+		<div class="vault_card--content">
+			<?php the_title(); ?>
+		</div>
+	</a>
 </div><!-- .vault-card end -->
