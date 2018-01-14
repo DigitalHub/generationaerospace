@@ -13,9 +13,7 @@
 		<div class="row">
 			<div class="col-xl-4 "><!-- offset-xl-1 -->
 				<h1>Find An Experiment_</h1>
-				<p class="highlight">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam reiciendis, perferendis officia, dolor ad doloremque doloribus assumenda vel eveniet accusantium.
-				</p>
+				<div class="highlight"><?php echo get_field('featured_experiment_copy'); ?></div>
 				
 				<button class="arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
@@ -25,40 +23,34 @@
 			<div class="col-xl-7 featured_experiment--keywords"><!-- offset-xl-1 -->
 				<div class="row">
 					<div class="col-xl-11 offset-xl-1">
-						<div class="row">
-							<div class="col-xl-6 hover--topbox">
-								<a href="#">
-									<img src="http://lorempixel.com/500/245" />
-									<div class="bg-opaque"></div>
-									<h3>ABC</h3>
-								</a>
-							</div>
-							<div class="col-xl-6 hover--topbox">
-								<a href="#">
-									<img src="http://lorempixel.com/500/251" />
-									<div class="bg-opaque"></div>
-									<h3>ABC</h3>
-								</a>
-							</div>
-							<span class="animate--box topbox"></span>
-						</div>
-						<div class="row">
-							<div class="col-xl-6 hover--bottombox">
-								<a href="#">
-									<img src="http://lorempixel.com/500/225" />
-									<div class="bg-opaque"></div>
-									<h3>ABC</h3>
-								</a>
-							</div>
-							<div class="col-xl-6 hover--bottombox">
-								<a href="#">
-									<img src="http://lorempixel.com/500/249" />
-									<div class="bg-opaque"></div>
-									<h3>ABC</h3>
-								</a>
-							</div>
-							<span class="animate--box bottombox"></span>
-						</div>
+						<?php
+						if(have_rows('featured_tags')) :
+							$count = 0;
+							while(have_rows('featured_tags')) : the_row();
+								$tag = get_sub_field('tag');
+								$image = get_sub_field('image');
+
+								if($count % 2 == 0) :
+									echo $count > 0 ? '</div>' : '';
+									echo '<div class="row">';
+								endif;
+								?>
+								<!-- TODO: STEF TO DO KEYWORD SEARCH -->
+								<div class="col-xl-6 hover--topbox">
+									<a href="<?php echo get_term_link($tag); ?>">
+										<img src="<?=$image['url']?>" />
+										<div class="bg-opaque"></div>
+										<h3><?php echo $tag->name; ?></h3>
+									</a>
+								</div>
+								<?php
+								if($count === 2 || $count === 4) {
+									echo '<span class="animate--box topbox"></span>';
+								}
+								$count++;
+							endwhile;
+						endif;
+						?>
 					</div>
 				</div>
 			</div>

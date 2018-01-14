@@ -257,7 +257,7 @@ function trailblazers_post_type() {
 		'label'                 => __( 'Trailblazers', 'text_domain' ),
 		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'supports'              => array( 'title', 'excerpt', 'editor', 'thumbnail' ),
 		// 'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
