@@ -26,12 +26,14 @@ get_header(); ?>
 		</ul>
 
 		<div id="fullpage">
-			<?php get_template_part( 'page-templates/homepage/featured', 'welcome' ); ?>
-			<?php get_template_part( 'page-templates/homepage/featured', 'video' ); ?>
-			<?php get_template_part( 'page-templates/homepage/featured', 'experiment' ); ?>
-			<?php get_template_part( 'page-templates/homepage/genaero', 'explorer' ); ?>
-			<?php get_template_part( 'page-templates/homepage/genaero', 'trailbazers' ); ?>
-			<?php get_template_part( 'page-templates/homepage/featured', 'events' ); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php get_template_part( 'page-templates/homepage/featured', 'welcome' ); ?>
+				<?php get_template_part( 'page-templates/homepage/featured', 'video' ); ?>
+				<?php get_template_part( 'page-templates/homepage/featured', 'experiment' ); ?>
+				<?php get_template_part( 'page-templates/homepage/genaero', 'explorer' ); ?>
+				<?php get_template_part( 'page-templates/homepage/genaero', 'trailbazers' ); ?>
+				<?php get_template_part( 'page-templates/homepage/featured', 'events' ); ?>
+			<?php endwhile;endif; ?>
 		</div>
 	</main>
 </div>

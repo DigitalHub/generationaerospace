@@ -6,14 +6,15 @@
  *
  * @package understrap
  */
+
 ?>
 <section class="section" data-anchor="welcome">
 	<div class="container welcome_content">
 		<div class="col-lg-10 offset-lg-1">
 			<h1 class="welcome_text">Welcome</h1>
-			<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non iure ipsum fugit incidunt enim, dolore magnam illum eligendi? Nam aperiam dignissimos sequi nemo optio quod incidunt, ex veniam ab, aliquam. Nisi quibusdam, delectus voluptates, id porro repellat. Praesentium veritatis perspiciatis earum laboriosam debitis repellat sed eveniet assumenda dicta nobis aut, ex molestias, nam quam distinctio accusamus, quia rerum nisi. Maxime quos, officia fugit aut natus culpa numquam quidem necessitatibus eius asperiores obcaecati illo iste, recusandae ab in rerum repellat. Provident ratione adipisci velit, reiciendis atque at quisquam. Incidunt inventore illum beatae, necessitatibus iure voluptas, labore impedit temporibus, repudiandae eum odio.</p>
+			<div class="highlight"><?php echo get_field('welcome_copy'); ?></div>
 
-
+			<!-- TODO: STEF TO ADD BACKGROUND VIDEO -->
 			<div class="watch_video--typewriter">
 				<div class="watch_video--button">
 					<div class="watch_video--play">

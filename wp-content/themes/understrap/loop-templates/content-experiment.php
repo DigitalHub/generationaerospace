@@ -4,6 +4,7 @@
  *
  * @package understrap
  */
+global $loggedin;
 ?>
 <div class="<?php echo $page_template ?> container-fluid single_experiment">
 	<div class="row">
@@ -15,42 +16,54 @@
 						<br/>
 						<div class="experiment--carousel_wrapper">
 							<div class="experiment--carousel">
-								<div class="experiment_slide">
-									<div class="post_thumbnail">
-										<img src="http://lorempixel.com/500/250" />
-									</div>
-									<br>
-									<div class="experiment_counts">
-										<span class="counting">01</span><span class="totalcount">06</span>
-									</div>
-									<div class="experiment_steps">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque laborum molestiae eaque molestias eum minus sit adipisci incidunt, veritatis ad consequatur quia tempora maiores magnam illo voluptas unde, dignissimos esse? Alias quisquam et voluptatum! Necessitatibus vitae, eius? Odit, ad repudiandae velit, expedita asperiores quasi dolor iure ab eius, facere reprehenderit porro. Ex dolores in sed placeat praesentium facilis laborum iusto, assumenda rem tempora eius quo!</p>
-									</div>
-								</div>
-								<div class="experiment_slide">
-									<div class="post_thumbnail">
-										<img src="http://lorempixel.com/500/250" />
-									</div>
-									<br>
-									<div class="experiment_counts">
-										<span class="counting">02</span><span class="totalcount">06</span>
-									</div>
-									<div class="experiment_steps">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque laborum molestiae eaque molestias eum minus sit adipisci incidunt, veritatis ad consequatur quia tempora maiores magnam illo voluptas unde, dignissimos esse? Alias quisquam et voluptatum! Necessitatibus vitae, eius? Odit, ad repudiandae velit, expedita asperiores quasi dolor iure ab eius, facere reprehenderit porro. Ex dolores in sed placeat praesentium facilis laborum iusto, assumenda rem tempora eius quo!</p>
-									</div>
-								</div>
-								<div class="experiment_slide last_experiment--slide">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, voluptas animi magni deserunt, ipsam. Animi commodi amet necessitatibus fuga eius corporis nihil ad voluptates quasi eum. At reprehenderit, asperiores nihil animi autem ipsam magnam rerum ipsum nesciunt! Quo molestias cum dolores repellat earum eligendi sed libero quos cupiditate natus, pariatur quidem corporis perspiciatis modi minus nisi totam, aperiam eos non ipsum ducimus ullam adipisci ipsa maiores velit. Eaque deleniti sapiente nobis sequi. Necessitatibus labore, eligendi nobis ducimus vel sapiente alias molestias?</p>
+								<?php
+								$totalcount = 0;
+								if(have_rows('steps')) :
+									$totalcount = count(get_field('steps'));
+									$count = 1;
+									while(have_rows('steps')) : the_row();
+										$photo = get_sub_field('photo');
+										$step = get_sub_field('step');
+										?>
+										<div class="experiment_slide">
+											<div class="post_thumbnail">
+												<img src="<?=$photo?>">
+											</div>
+											<br>
+											<div class="experiment_counts">
+												<span class="counting"><?=$count?></span><span class="totalcount"><?=$totalcount?></span>
+											</div>
+											<div class="experiment_steps">
+												<?=$step?>
+											</div>
+										</div>
+										<?php
+										$count++;
+									endwhile;
+								endif;
 
-									<div class="tried_experiement">
-										<h3>Tried the experiment?<br>Submit your experiemnt video here: </h3>
-										<!-- TODO: STEF TO ADD ONE EXTRA BUTTON FOR SIGN UP -->
-										<a href="#" class="arrowbtn btn--color">
-											<span class="fas fa-long-arrow-alt-right icon-left"></span>
-											<div class="arrowbtn-wrapper"><span>Submit My Video</span></div>
-										</a>  <!-- Sign Up Or Register Now -->
+								if($count === $totalcount + 1) :
+									?>
+									<div class="experiment_slide last_experiment--slide">
+										<?php echo get_field('lesson'); ?>
+
+										<div class="tried_experiement">
+											<h3>Tried the experiment?<br>Submit your experiemnt video here: </h3>
+
+											<?php if($loggedin === '0') {?>
+											<a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>" class="arrowbtn btn--color">
+												<span class="fas fa-long-arrow-alt-right icon-left"></span>
+												<div class="arrowbtn-wrapper"><span>Sign up or Register Now</span></div>
+											</a>
+											<?php } elseif($loggedin === '1') {?>
+											<a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>" class="arrowbtn btn--color">
+												<span class="fas fa-long-arrow-alt-right icon-left"></span>
+												<div class="arrowbtn-wrapper"><span>Submit My Video</span></div>
+											</a>
+											<?php } ?>
+										</div>
 									</div>
-								</div>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
@@ -63,16 +76,14 @@
 
 					<h1>Materials_</h1>
 					<div class="experiment_matterial--list">
-						<ul>
-							<li>2-liter bottle of diet soda</li>
-							<li>Roll of tissue</li>
-						</ul>
+						<?php echo get_field('materials'); ?>
 					</div>
 					<br>
 					<div class="addthis_inline_share_toolbox_dznu"></div>
 					<br>
+					<!-- TODO: STEF TO DO SAVE EXPERIMENT FUNCTION -->
 					<a href="#"><i class="fal fa-heart"></i> Save Experiment</a>
-					<a href="#"><i class="fal fa-print"></i> Print</a>
+					<a href="<?php echo get_field('pdf_upload'); ?>" target="_blank"><i class="fal fa-print"></i> Print</a>
 				</div>
 				<div class="col-xl-2 col-lg-2 hidden-md-down" style="color: transparent;">Lorem</div><!-- this is to push video col to left  -->
 			</div>
