@@ -121,6 +121,13 @@ $post_count = $the_query->post_count;
 						echo '<div class="row"><a href="#" class="genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'">More posts</a></div>';
 					}
 					?>
+					<div class="clear"></div>
+					
+					<!-- TODO: STEF TO ADD LOAD MORE -->
+					<a href="#" class="defaultbtn btn--default aligncenter">
+						<div class="defaultbtn-wrapper"><span>See More Videos</span></div>
+					</a>
+
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 		</div><!-- Container end -->

@@ -98,6 +98,7 @@ $all_videos_count = $wpdb->num_rows;
 			<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
 			<div class="row">
 				<div class="col-xl-8 ">
+					<h3 class="text-left">Search for Videos</h3>
 					<div class="search-form">
 						<!-- TODO: STEF DO SEARCH -->
 						<input type="text" />
@@ -105,15 +106,18 @@ $all_videos_count = $wpdb->num_rows;
 					</div>
 				</div>
 				<div class="col-xl-4">
-					<h3>Submit your videos here:</h3>
-					<button class="arrowbtn btn--color">
-						<span class="fas fa-long-arrow-alt-right icon-left"></span>
+					<div class="submit_register--btn">
+						<h3 class="text-left">Submit your videos here:</h3>
 						<?php if($loggedin === '0') {?>
-						<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>"><span>Sign up or Register Now</span></a></div>
+						<a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>" class="arrowbtn btn--color">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>Sign up or Register Now</span></div>
+						</a>
 						<?php } elseif($loggedin === '1') {?>
-						<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>"><span>Submit a Video</span></a></div>
+						<a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>" class="arrowbtn btn--color">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>Submit a Video</span></div>
+						</a>
 						<?php } ?>
-					</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -123,36 +127,35 @@ $all_videos_count = $wpdb->num_rows;
 	<div class="wrapper">
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
-				<div class="col-xl-8 col-xl-8 col-md-6 col-sm-12 col-xs-12 featured_experiment--card">
+				<div class="month_experiment--card col-xl-8 col-xl-8 col-md-6 col-sm-12 col-xs-12">
 					<a data-fancybox href="<?=$youtube?>">
 						<div class="post-thumbnail">
-							<!-- TODO: RACHELLE TO ADD PLAY ICON -->
 							<i class="fas fa-play"></i>
 							<img src="<?=$thumbnail_url?>" />
 						</div>
 					</a>
-					<div class="experiment--fav_link" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></div>
+					<div class="month_experiment--link" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></div>
 				</div>
-				<div class="col-xl-4 col-xl-4 col-md-6 col-sm-12 col-xs-12">
+				<div class="month_experiment--content col-xl-4 col-xl-4 col-md-6 col-sm-12 col-xs-12">
 					<h2>Featured Video of the Month_</h2>
 					<h3><?=$title?></h3>
-					<p><?=$desc?>...</p>
-
+					<p><?=$desc?>...</p><br>
 					<div class="meta-date_fav">
 						<div class="alignleft">
 							<div class="meta-profile_pic"><img src="<?=$profile_pic?>" class="profile_photo" alt="<?=$fullname?>'s Profile Photo"></div>
 						</div>
 						<div class="alignleft">
+							<!-- TODO: STEF TO ADD LINK TO STUDENT PROFILE -->
 							<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
 							<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
 							<!-- TODO: STEF TO ADD NUMBER OF COMMENTS -->
 							<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
 							<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
 						</div>
-						<button class="arrowbtn btn--color">
-							<span class="fas fa-long-arrow-alt-right icon-left"></span>
-							<div class="arrowbtn-wrapper"><a href="<?=$permalink?>"><span>More Details</span></a></div>
-						</button>
+						<div class="clear"></div><br>
+						<a href="<?=$permalink?>" class="arrowbtn btn--default">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>More Details</span></div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -199,6 +202,12 @@ $all_videos_count = $wpdb->num_rows;
 							echo '</div>';
 						}
 					} ?>
+
+					<!-- TODO: STEF TO ADD LOAD MORE -->
+					<a href="#" class="defaultbtn btn--default aligncenter">
+						<div class="defaultbtn-wrapper"><span>See More Videos</span></div>
+					</a>
+
 				</main><!-- #main -->
 			</div><!-- #primary -->
 		</div><!-- .row end -->

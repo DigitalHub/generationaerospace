@@ -34,11 +34,13 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->high->url;
 
 ?>
 
-<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 featured_experiment--card">
-	<div class="post-thumbnail">
-		<a href="<?=$permalink?>"><img src="<?=$thumbnail_url?>" /></a>
-		<div class="bg-opaque"></div>
-	</div>
+<div class="featured_experiment--card col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+	<a href="<?=$permalink?>">
+		<div class="post-thumbnail">
+			<img src="<?=$thumbnail_url?>" />
+			<div class="bg-opaque"></div>
+		</div>
+	</a>
 	<div class="experiment--fav_link" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></div>
 	<div class="experiment_card--content">
 		<a href="<?=$permalink?>"><?=$title?></a>

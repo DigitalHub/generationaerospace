@@ -59,13 +59,13 @@ $old_query = new WP_Query($args2);
 			?>
 
 			<!-- TODO: STEF TO ADD FUNCTIONALITY -->
-			<button class="defaultbtn btn--color">
+			<a href="#" class="defaultbtn btn--color">
 				<div class="defaultbtn-wrapper"><span>All</span></div>
-			</button>
+			</a>
 
-			<button class="defaultbtn btn--color">
+			<a href="#" class="defaultbtn btn--color">
 				<div class="defaultbtn-wrapper"><span>Upcoming</span></div>
-			</button>
+			</a>
 		</div>
 	</div>
 </section>
@@ -78,10 +78,10 @@ $old_query = new WP_Query($args2);
 						<div class="container">
 							<div class="events_table ongoing_events">
 								<div class="row events_row--header">
-									<div class="col-xl-5"><h3>Events</h3></div>
-									<div class="col-xl-2"><h3>Date</h3></div>
-									<div class="col-xl-2"><h3>time</h3></div>
-									<div class="col-xl-3"><h3>venue</h3></div>
+									<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12"><h3>Events</h3></div>
+									<div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none"><h3>Date</h3></div>
+									<div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none"><h3>time</h3></div>
+									<div class="col-xl-3 col-lg-3 col-md-3 d-md-block d-sm-none d-none"><h3>venue</h3></div>
 								</div>
 								<?php
 								if($upcoming_query->have_posts()) :
@@ -94,10 +94,10 @@ $old_query = new WP_Query($args2);
 							
 							<div class="events_table past_events">
 								<div class="row events_row--header">
-									<div class="col-xl-5"><h3>Past Events</h3></div>
-									<div class="col-xl-2"><h3>Date</h3></div>
-									<div class="col-xl-2"><h3>time</h3></div>
-									<div class="col-xl-3"><h3>venue</h3></div>
+									<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12"><h3>Past Events</h3></div>
+									<div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none"><h3>Date</h3></div>
+									<div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none"><h3>time</h3></div>
+									<div class="col-xl-3 col-lg-3 col-md-3 d-md-block d-sm-none d-none"><h3>venue</h3></div>
 								</div>
 								<?php
 								if($old_query->have_posts()) :

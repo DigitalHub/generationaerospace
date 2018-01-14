@@ -11201,7 +11201,6 @@ a {
     .arrowbtn.btn--invert .arrowbtn-wrapper:before {
       background-color: #000; }
   .arrowbtn.btn--default {
-    background-color: #fff;
     border: 2px solid #000;
     color: #000; }
     .arrowbtn.btn--default .icon-left {
@@ -11293,6 +11292,9 @@ a {
     .defaultbtn.btn--default:hover {
       background-color: #000;
       color: #fff; }
+
+.defaultbtn + .defaultbtn {
+  margin-left: 15px; }
 
 .tiny-border {
   height: 45px;
@@ -12173,41 +12175,15 @@ a#genaero-facebook-button {
   .sub_main .wrapper {
     padding: 65px 0; }
 
-.featured_experiment--card {
-  position: relative;
-  margin-bottom: 30px; }
-  .featured_experiment--card:hover .bg-opaque {
-    opacity: 0;
-    filter: alpha(opacity=0); }
-  .featured_experiment--card .experiment--fav_link {
-    position: absolute;
-    top: 15px;
-    right: 30px; }
-    .featured_experiment--card .experiment--fav_link i {
-      border-radius: 63px;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: block;
-      width: 63px;
-      line-height: 63px;
-      font-size: 40px;
-      text-align: center;
-      color: #fff;
-      vertical-align: middle; }
-      .featured_experiment--card .experiment--fav_link i:hover, .featured_experiment--card .experiment--fav_link i.fav {
-        color: #cad63e; }
-  .featured_experiment--card .post-thumbnail {
-    height: 350px; }
-    .featured_experiment--card .post-thumbnail img {
-      height: 370px; }
-  .featured_experiment--card .experiment_card--content {
-    background-color: #fff;
-    padding: 25px; }
-    .featured_experiment--card .experiment_card--content a {
-      color: #000;
-      display: inline-block;
-      margin-bottom: 15px; }
-      .featured_experiment--card .experiment_card--content a:hover {
-        text-decoration: none; }
+.submit_register--btn {
+  border-left: 1px solid #fff;
+  padding-left: 40px;
+  margin-left: 25px; }
+
+.meta-posted {
+  color: #999; }
+  .meta-posted .meta-student {
+    color: #000; }
 
 .meta-keywords {
   margin: 0 0 10px;
@@ -12217,13 +12193,84 @@ a#genaero-facebook-button {
     display: inline-block; }
     .meta-keywords li a {
       color: #00aed4;
+      display: inline-block;
       font-style: italic;
+      padding: 0;
       text-decoration: underline; }
     .meta-keywords li:after {
       content: ", ";
-      display: inline-block; }
+      display: inline-block;
+      padding-right: 2px; }
     .meta-keywords li:last-child:after {
       content: ""; }
+
+.experiment--fav_link,
+.month_experiment--link {
+  position: absolute;
+  top: 15px;
+  right: 30px; }
+  .experiment--fav_link i,
+  .month_experiment--link i {
+    border-radius: 63px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+    width: 63px;
+    line-height: 63px;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle; }
+    .experiment--fav_link i:hover, .experiment--fav_link i.fav,
+    .month_experiment--link i:hover,
+    .month_experiment--link i.fav {
+      color: #cad63e; }
+
+.month_experiment--card {
+  position: relative;
+  margin-bottom: 30px; }
+  .month_experiment--card a {
+    display: block; }
+    .month_experiment--card a:hover i {
+      color: #cad63e; }
+  .month_experiment--card .post-thumbnail {
+    height: 400px; }
+    .month_experiment--card .post-thumbnail img {
+      height: auto;
+      width: 100%; }
+    .month_experiment--card .post-thumbnail i {
+      color: #fff;
+      position: absolute;
+      font-size: 55px;
+      left: 50%;
+      top: 50%;
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: 1; }
+
+.month_experiment--content {
+  padding: 0 25px 25px; }
+  .month_experiment--content h2, .month_experiment--content h3 {
+    color: #000; }
+
+.featured_experiment--card:hover .bg-opaque {
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.experiment_card--content {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 0 25px 25px; }
+  .experiment_card--content h3, .experiment_card--content a {
+    color: #000; }
+  .experiment_card--content a {
+    display: block;
+    padding: 25px 0; }
+    .experiment_card--content a:hover {
+      color: #00aed4;
+      text-decoration: none; }
 
 .meta-date_fav {
   border-top: 1px dashed #7f7f7f;
@@ -12233,10 +12280,10 @@ a#genaero-facebook-button {
     overflow: hidden;
     color: #979797;
     background-color: #ababab;
-    height: 36px;
-    width: 36px;
+    height: 45px;
+    width: 45px;
     font-size: 30px;
-    border-radius: 36px;
+    border-radius: 45px;
     text-align: center;
     vertical-align: top;
     border: 1px solid #999; }
@@ -12300,18 +12347,18 @@ a#genaero-facebook-button {
           -ms-transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
-      .featured_trailblazer--card a .featured_trailblazer--img:hover .post-thumbnail--wrapper {
-        transform: scale(1.2); }
-        .featured_trailblazer--card a .featured_trailblazer--img:hover .post-thumbnail--wrapper i {
-          color: #fff; }
-        .featured_trailblazer--card a .featured_trailblazer--img:hover .post-thumbnail--wrapper .whitebg {
-          background-color: transparent; }
     .featured_trailblazer--card a .featured_trailblazer--details .featured_trailblazer--name {
       font-weight: 700;
       text-align: center; }
     .featured_trailblazer--card a .featured_trailblazer--details .featured_trailblazer--position {
       text-transform: uppercase;
       text-align: center; }
+  .featured_trailblazer--card:hover .post-thumbnail--wrapper {
+    transform: scale(1.2); }
+    .featured_trailblazer--card:hover .post-thumbnail--wrapper i {
+      color: #fff; }
+    .featured_trailblazer--card:hover .post-thumbnail--wrapper .whitebg {
+      background-color: transparent; }
 
 .page-template-page-trailblazers .fancybox-slide--iframe .fancybox-content {
   height: 100%;
@@ -12360,12 +12407,12 @@ a#genaero-facebook-button {
     .past_events .events_row--content div:first-child p {
       font-weight: 700;
       text-transform: uppercase; }
-    .ongoing_events .events_row--content div:first-child a,
-    .past_events .events_row--content div:first-child a {
+    .ongoing_events .events_row--content a,
+    .past_events .events_row--content a {
       color: #004890;
       text-decoration: underline; }
-      .ongoing_events .events_row--content div:first-child a:hover,
-      .past_events .events_row--content div:first-child a:hover {
+      .ongoing_events .events_row--content a:hover,
+      .past_events .events_row--content a:hover {
         color: #00aed4; }
     .ongoing_events .events_row--content p,
     .past_events .events_row--content p {
@@ -12471,10 +12518,10 @@ a#genaero-facebook-button {
   .single_trailblazers .single_experiment--methods.single_experiment--methods,
   .single_trailblazers .single_trailblazers--profile.single_experiment--methods {
     background-color: #004890; }
-  .single_experiment .single_experiment--methods.single_experiment--profile,
-  .single_experiment .single_trailblazers--profile.single_experiment--profile,
-  .single_trailblazers .single_experiment--methods.single_experiment--profile,
-  .single_trailblazers .single_trailblazers--profile.single_experiment--profile {
+  .single_experiment .single_experiment--methods.single_trailblazers--profile,
+  .single_experiment .single_trailblazers--profile.single_trailblazers--profile,
+  .single_trailblazers .single_experiment--methods.single_trailblazers--profile,
+  .single_trailblazers .single_trailblazers--profile.single_trailblazers--profile {
     background-color: #3d4b57; }
   .single_experiment .single_experiment--methods .single_experiment--methods_wrapper,
   .single_experiment .single_experiment--methods .single_trailblazers--profile_wrapper,
@@ -12923,6 +12970,10 @@ ul#menu-members-only-menu {
     .videopost--row .edit_videopost--btn:hover {
       color: #fff; }
 
+@media (max-width: 768px) {
+  .ongoing_events .events_row--content div:not(:first-child),
+  .past_events .events_row--content div:not(:first-child) {
+    text-align: left; } }
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

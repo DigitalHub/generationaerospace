@@ -355,7 +355,7 @@ a {
 	}
 
 	&.btn--default {
-		background-color: $white;
+		// background-color: $white;
 		border: 2px solid $black;
 		color: $black;
 
@@ -465,6 +465,11 @@ a {
 			color: $white;
 		}
 	}
+}
+
+//if there two btn side by side
+.defaultbtn + .defaultbtn { 
+	margin-left: 15px;
 }
 
 .tiny-border {

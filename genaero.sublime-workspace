@@ -4,7 +4,6 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
 				"margin",
 				"margin-top"
 			],
@@ -71,14 +70,6 @@
 			[
 				"ov",
 				"ov:h\toverflow:hidden"
-=======
-				"combined",
-				"combined_ids"
-			],
-			[
-				"posts",
-				"posts_per_page"
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 			],
 			[
 				"th",
@@ -93,7 +84,6 @@
 				"jQuery"
 			],
 			[
-<<<<<<< HEAD
 				"di",
 				"d:ib\tdisplay:inline-block"
 			],
@@ -136,14 +126,6 @@
 			[
 				"padding",
 				"padding-bottom"
-=======
-				"vid",
-				"video_cpt_post"
-			],
-			[
-				"featured",
-				"featured_month"
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 			],
 			[
 				"paddin",
@@ -154,46 +136,20 @@
 				"mr:a\tmargin-right:auto"
 			],
 			[
-<<<<<<< HEAD
 				"Ha",
 				"hexagon"
 			],
 			[
 				"tra",
 				"transition"
-=======
-				"a",
-				"announcement"
 			],
 			[
-				"results",
-				"results_count"
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+				"font",
+				"font-weight"
 			],
 			[
-				"resul",
-				"results_count"
-			],
-			[
-<<<<<<< HEAD
 				"po",
 				"pos:a\tposition:absolute"
-=======
-				"videos",
-				"videos"
-			],
-			[
-				"face",
-				"facebook_details"
-			],
-			[
-				"check",
-				"check_username"
-			],
-			[
-				"wp_",
-				"wp_enqueue_style"
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 			],
 			[
 				"loca",
@@ -328,14 +284,6 @@
 				"organisation_logo"
 			],
 			[
-				"pos",
-				"pos:a\tposition:absolute"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
 				"marin",
 				"margin-bottom"
 			],
@@ -408,10 +356,6 @@
 				"color__menu"
 			],
 			[
-				"te",
-				"text-align"
-			],
-			[
 				"cur",
 				"cur:p\tcursor:pointer"
 			],
@@ -440,7 +384,6 @@
 	"buffers":
 	[
 		{
-<<<<<<< HEAD
 			"contents": "<?php\n/**\n * Template Name: Page Homepage\n *\n * This is the template that displays all pages by default.\n * Please note that this is the WordPress construct of pages\n * and that other 'pages' on your WordPress site will use a\n * different template.\n *\n * @package understrap\n */\n\nget_header(); ?>\n<!-- <div class=\"hexagon\"></div> -->\n<div class=\"wrapper\" id=\"page-wrapper\">\n\t<main id=\"main\" class=\"site-main container\" role=\"main\">\n\t\t<div class=\"HudOverlay\">\n\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\n\t\t\t\t<defs>\n\t\t\t\t\t<filter id=\"blurlayer\" width=\"110%\" height=\"120%\">\n\t\t\t\t\t\t<feGaussianBlur  stdDeviation=\"4\" result=\"blur\"/>\n\t\t\t\t\t</filter>\n\t\t\t\t</defs>\n\t\t\t\t<g> \n\t\t\t\t\t<path d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\n\t\t\t\t\t<path filter=\"url(#blurlayer)\" d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t</g> \n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"640.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"641.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t<!-- <polygon points=\"144 247,172 263,572 267,585 243,568 223,168 223\"></polygon> -->\n\t\t\t</svg>\n\t\t</div> <!-- stroke=\"#ff0\" stroke-width=\"10\" -->\n\n\t\t<?php while(have_posts()) : the_post(); the_content(); endwhile;?>\n\t\t<div class=\"headerbutt login_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>LOGIN</span>\n\t\t</div>\n\t\t<div class=\"headerbutt scroll_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>scroll</span>\n\t\t</div>\n\t\t<div class=\"headerbutt close_butt\">\n\t\t\t<i class=\"fal\"></i>\n\t\t\t<span>Close</span>\n\t\t</div>\n\n\n\t\t<div class=\"double_arrow small_arrow arrow_up\"></div>\n\t\t<div class=\"double_arrow small_arrow arrow_down\"></div>\n\n\n\t\t<div class=\"double_arrow big_arrow arrow_left\"></div>\n\t\t<div class=\"double_arrow big_arrow arrow_right\"></div>\n\n\n\t\t<div class=\"headerbutt menu_butt\">\n\t\t\t<a href=\"#\" class=\"bt-menu\">\n\t\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t\t</svg>\n\t\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<span>Menu</span>\n\t\t\t</a>\n\t\t</div>\n\n\t\t<button class=\"arrowbtn btn--default\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>More Details</span></div>\n\t\t</button>\n\n\t\t<button class=\"arrowbtn btn--color\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\n\t\t<button class=\"defaultbtn btn--color\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<button class=\"defaultbtn btn--default\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<div class=\"clear\"></div><br><br>\t\n\t\t<input type=\"text\">\n\t\t<form action=\"\">\n\t\t\t<input type=\"text\">\n\t\t\t<input type=\"button\" class=\"search\">\n\t\t</form>\n\t</div>\n\n</main><!-- #main -->\n</div><!-- #primary -->\n\n<?php get_footer(); ?>",
 			"settings":
 			{
@@ -453,89 +396,32 @@
 			"settings":
 			{
 				"buffer_size": 2942,
-=======
-			"file": "wp-content/themes/understrap/page-experiments.php",
-			"settings":
-			{
-				"buffer_size": 3815,
-				"encoding": "UTF-8",
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 				"line_ending": "Windows"
 			}
 		},
 		{
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/single-genaero_experiments.php",
+			"file": "wp-content/themes/understrap/loop-templates/row-event.php",
 			"settings":
 			{
-				"buffer_size": 4873,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/loop-templates/content-experiment.php",
-			"settings":
-			{
-				"buffer_size": 4369,
-=======
-			"file": "wp-content/themes/understrap/page-trailblazers.php",
-			"settings":
-			{
-				"buffer_size": 2433,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/inc/enqueue.php",
-			"settings":
-			{
-				"buffer_size": 4927,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+				"buffer_size": 1035,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
+			"file": "wp-content/themes/understrap/page-events.php",
 			"settings":
 			{
-				"buffer_size": 4521,
+				"buffer_size": 3663,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/js/main.js",
+			"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
 			"settings":
 			{
-				"buffer_size": 9637,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
-			"settings":
-			{
-				"buffer_size": 7760,
-				"encoding": "UTF-8",
-=======
-			"file": "wp-content/themes/understrap/loop-templates/tile-experiment.php",
-			"settings":
-			{
-				"buffer_size": 1111,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
-				"line_ending": "Windows"
-			}
-		},
-		{
-<<<<<<< HEAD
-			"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
-			"settings":
-			{
-				"buffer_size": 2396,
+				"buffer_size": 891,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -544,13 +430,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
 			"settings":
 			{
-				"buffer_size": 4285,
-=======
-			"file": "wp-content/themes/understrap/js/main.js",
-			"settings":
-			{
-				"buffer_size": 9252,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+				"buffer_size": 4902,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -563,13 +443,13 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 269.0,
-		"last_filter": "java",
+		"height": 490.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
 			[
-				"java",
-				"Set Syntax: JavaScript"
+				"Package Control: ",
+				"Package Control: Install Package"
 			],
 			[
 				"todo",
@@ -578,10 +458,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ",
-				"Package Control: List Packages"
 			],
 			[
 				"remove",
@@ -600,7 +476,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 540.0
+		"width": 450.0
 	},
 	"console":
 	{
@@ -621,20 +497,42 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
 		"/C/wamp64/www/generationaerospace",
 		"/C/wamp64/www/generationaerospace/wp-content",
 		"/C/wamp64/www/generationaerospace/wp-content/themes",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage"
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/understrap"
 	],
 	"file_history":
 	[
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_members.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-events.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_responsive.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/main.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/sass/responsive/_responsive-master.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-experiments.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/tile-experiment.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_videos.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_vault.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/single-hubbase.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-events.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/tile-video.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-videos.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-preevent.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-postevent.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-trailblazers.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/tile-trailblazer.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_experiments.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-experiment.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_members.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_trailblazers.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/section-timeline.php",
@@ -642,23 +540,14 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/css/theme.css",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/footer.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_videos.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/tile-trailblazer.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_experiments.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-video.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_vault.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/style.css",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-trailblazers.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/tile-video.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-videos.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-vault.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/tile-vault.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-events.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-experiments.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/hub-base.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/videos-list.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-trailblazers.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-homepage.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/profile.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/submit-idea.php",
@@ -677,9 +566,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/members/video-row.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_form.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sidebar-left.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/main.js",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-events.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_mixins.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_variables.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_icons.scss",
@@ -692,11 +578,8 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/assets/font-awesome.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-experiments.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/1_desktop_AJB_homepage.html",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/2_desktop_AJB_subpage_aboutus.html",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-postevent.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-preevent.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-post-event.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/sass/modules/_clearings.scss",
 		"/C/wamp64/www/generationaerospace/database/20180105-generationaerospace.sql",
@@ -712,8 +595,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/navigation-top.php",
 		"/C/wamp64/www/harihasanah/wp-content/themes/hasanah/page-downloads.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_slick.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-trailbazers.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_mixins.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/setup.php",
@@ -755,172 +636,19 @@
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/single.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/single-news.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/_header-and-footer.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-branding.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/header.php",
-		"/C/wamp64/www/ajph/wp-content/themes/ajph/js/main.js",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/index.php",
-		"/C/Users/rachelle.quek/Desktop/fontawesome-pro-5.0.2/web-fonts-with-css/css/fontawesome-all.css"
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-branding.php"
 	],
 	"find":
 	{
 		"height": 52.0
-=======
-		"/C/xampp/htdocs/generationaerospace",
-		"/C/xampp/htdocs/generationaerospace/wp-content",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates"
-	],
-	"file_history":
-	[
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-videos.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/tile-video.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/tile-experiment.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/login.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/plugins/genaero-members/genaero-members.php",
-		"/C/xampp/htdocs/generationaerospace/database/20180111-generationaerospace.sql",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/extras.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/tile-trailblazer.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-vault.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-events.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/mixins/_forms.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_forms.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/basic/sass/forms/_forms.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/js/main.js",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/row-event.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/single-genaero_events.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/content-preevent.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/content-postevent.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/tile-vault.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/enqueue.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/single-trailblazers.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/single-vault.php",
-		"/C/xampp/htdocs/generationaerospace/wp-config.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-trailblazers.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/single-genaero_trailblazers.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/single-genaero_vault.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/setup.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/add-video.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/single-genaero_videos.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/yarpp-template-genaero.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/yarpp-template-example.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/members/video-row.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/header.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/fav-videos.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/members/fav-video-row.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/dashboard.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/logout.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/videos-list.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/profile.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/single-videos.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/add-video-old.php",
-		"/C/xampp/htdocs/generationaerospace/wp-includes/link-template.php",
-		"/C/xampp/htdocs/generationaerospace/.htaccess",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sidebar-left.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/functions.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/custom-post-type.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/submit-idea.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/widgets.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/sign-up.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/basic/page-homepage.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/loop-templates/content-page.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config 4.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/footer.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config 3.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/header 2.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/functions.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/header.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/style.css",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config 2.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/stylesheet.css",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/dripicons.min.css",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/uninstall.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-video.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-homepage.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_form.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/basic/js/main.js",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-includes/theme-compat/header.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/left-sidebarpage.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/fullwidthpage.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
-		"/C/Users/Stefanie/AppData/Local/Packages/Microsoft.SkypeApp_kzf8qxf38zg5c/LocalState/Downloads/header (2).php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/basic/sass/navigation/_links.scss",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/config.rb",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/theme.css",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/style.css",
-		"/C/Users/Stefanie/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
-		"/C/Users/Stefanie/AppData/Local/Packages/Microsoft.SkypeApp_kzf8qxf38zg5c/LocalState/Downloads/header.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/js/facebook-functions.js",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page-templates/sign-up-custom.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/custom-genaero.php",
-		"/C/Users/Stefanie/Desktop/genaero_members.sql",
-		"/C/xampp/htdocs/generationaerospace/wp-content/plugins/advanced-custom-fields-pro/acf.php",
-		"/C/Users/Stefanie/Desktop/contact-form/page-contact-us.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/js/theme.js",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/page.php",
-		"/C/xampp/php/php.ini",
-		"/C/xampp/htdocs/generationaerospace/.gitignore",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/global-templates/left-sidebar-check.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/theme-settings.php",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap/inc/customizer.php",
-		"/C/xampp/htdocs/generationaerospace/wp-includes/theme.php",
-		"/C/xampp/htdocs/generationaerospace/database/20171220-generationaerospace.sql",
-		"/C/Users/Stefanie/Desktop/.htaccess",
-		"/C/xampp/htdocs/generationaerospace/test.txt",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-expect.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_posts-and-pages.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-homes.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-homepage.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/functions.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-leadership.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/js/main.js",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_connect.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/header.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/day.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/default-template.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/day.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_homepage.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-leaders.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/month/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/month/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list/default-template.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/responsive/_responsive-classes.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/variables-site/_colors.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/footer.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_header-and-footer.scss",
-		"/C/xampp/htdocs/actschurch/wp-includes/functions.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-locations.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-stories.php"
-	],
-	"find":
-	{
-		"height": 41.0
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 	},
 	"find_in_files":
 	{
-		"height": 113.0,
+		"height": 134.0,
 		"where_history":
 		[
-<<<<<<< HEAD
 			"C:\\wamp64\\www\\generationaerospace\\wp-content\\",
 			"C:\\wamp64\\www\\generationaerospace\\wp-content\\themes\\understrap",
-=======
-			"C:\\xampp\\htdocs\\generationaerospace\\wp-content\\themes\\understrap",
-			"<open folders>",
-			"C:\\xampp\\htdocs\\generationaerospace\\wp-content\\themes\\understrap",
-			"<open folders>",
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 			"C:\\xampp\\htdocs\\actschurch\\wp-content\\themes\\actschurch",
 			"<open folders>",
 			"",
@@ -934,7 +662,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-<<<<<<< HEAD
+			"d-xs-none",
+			" .",
+			"d-sm-none",
+			"hidden-sm",
+			"col-xl-",
+			"col-sm-12",
+			"col-xl-",
+			"video",
+			"single--hud",
+			"content--overflow",
+			";''",
+			"12",
+			"button",
+			".bg-opaque",
+			".bg-opaque ",
+			"month_experiment--content",
+			"experiment--fav_",
+			"primary",
+			"featured_experiment--card",
+			"36px",
+			"button",
+			"experiment--fav_content",
+			"button",
+			"single_experiment--profile",
 			"fancybox-content",
 			"fanc",
 			"button",
@@ -1022,35 +773,8 @@
 			"genaero_facebook",
 			"}\n",
 			"h1",
-=======
-			"combined_ids",
-			") ",
-			"( ",
-			") ",
-			"[",
-			"(",
-			"the_query",
-			"button",
-			".'",
-			"'.",
-			"hide",
-			"genaero_ajax_pagination",
-			"-",
-			"video",
-			"Videos",
-			"fav_ids",
-			"video",
-			"videos",
-			"wp_posts",
-			"index",
-			" `",
-			"video",
-			"videos",
-			"location",
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 			"h2",
 			"1",
-<<<<<<< HEAD
 			"input:",
 			"input",
 			"red !important",
@@ -1065,122 +789,7 @@
 			"xl",
 			"228",
 			"\n\t\tspan {\n\t\t\tcolor: $black !important;\n\t\t}",
-			"h3",
-			"12",
-			"(); ",
-			"subpage",
-=======
-			"'F'",
-			"date",
-			"start",
-			"enddate",
-			"date('F',",
-			"M",
-			"year",
-			"start",
-			"Trailblazer",
-			"Trailblazers",
-			"trailblazer",
-			"4",
-			"posts_per_page",
-			"cpt",
-			"1",
-			"2",
-			"the_query",
-			"wp_query",
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
-			"1",
-			"3",
-<<<<<<< HEAD
-			"$",
-			"remove",
-			"();\n",
-			">\n",
-			"$",
-			"scrolling",
-			"$",
-			"\n\t\t\t\t\t\t\t\t\t<ul class=\"meta-keywords\">\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"#b\">Nature</a></li> \n\t\t\t\t\t\t\t\t\t\t<li><a href=\"#b\">Air pressure</a></li>\n\t\t\t\t\t\t\t\t\t</ul>",
-			"col-xl-",
-			"col-xl-4 featured_experiment--card",
-			"col-xl-4 ",
-			"card",
-			"col-xl-3",
-			"col-xl-12 ",
-			"\n\t\t\t\t\t\t\t\t\t\t",
-			"$('",
-			"$(",
-			"$",
-			".site-menu"
-=======
-			"Vault",
-			"experiment",
-			"Experiment",
-			"Experiments",
-			"experiments",
-			"2",
-			"10",
-			"[0]",
-			"results",
-			"video",
-			"result",
-			"all_videos_",
-			"all_videos_sql",
-			"todo",
-			"t3.post_date",
-			"post_date",
-			"t4",
-			"favID",
-			"delete_fav_",
-			"favID",
-			"username",
-			"result",
-			"videos",
-			"t2",
-			"t1",
-			"1",
-			"btn--color",
-			"title",
-			"#ab",
-			"featured_videos",
-			"all",
-			"all_videos_count",
-			"all",
-			"all_videos",
-			"photo",
-			"approved",
-			"function get_permalink",
-			"function the_permalink",
-			"_id",
-			"Experiment",
-			"Experiments",
-			"experiments",
-			"result",
-			"desc",
-			"posted_by",
-			", ",
-			"videos",
-			"videos_sql",
-			">>>>>",
-			">>>>>>>>>>",
-			"the_query",
-			"posts",
-			"experiment",
-			"Experiment",
-			"Experiments",
-			"youtube",
-			"results_count",
-			"last_video_Sql",
-			"videos_sql",
-			"username",
-			"initiative_form_process",
-			"a href=\"\"",
-			"video",
-			"youtube",
-			"$is_new_video",
-			"is_new_video",
-			"new_video",
-			"password"
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+			"h3"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1188,6 +797,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"text100dev.com",
 			"actschurch",
 			"screenastronaut",
 			"actschurch"
@@ -1201,253 +811,39 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
 			"selected": 2,
-=======
-			"selected": 0,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 			"sheets":
 			[
 				{
 					"buffer": 0,
-<<<<<<< HEAD
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 5675,
-=======
-					"file": "wp-content/themes/understrap/page-experiments.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3815,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								5013,
-								5196
-=======
-								3815,
-								3815
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+								5320,
+								5445
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
-=======
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										3768,
-										3769
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/double_quote.png",
-										"region.greenish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										3750,
-										3751
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 2272.0,
+						"translation.y": 2034.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-=======
-						"translation.y": 2315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-<<<<<<< HEAD
 					"semi_transient": false,
 					"settings":
 					{
@@ -1458,8 +854,8 @@
 						"selection":
 						[
 							[
-								0,
-								2942
+								1410,
+								1410
 							]
 						],
 						"settings":
@@ -1468,27 +864,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 357.0,
+						"translation.y": 306.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "wp-content/themes/understrap/single-genaero_experiments.php",
+					"file": "wp-content/themes/understrap/loop-templates/row-event.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4873,
+						"buffer_size": 1035,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3119,
-								3119
+								261,
+								242
 							]
 						],
 						"settings":
@@ -1497,7 +893,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1196.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1505,19 +901,39 @@
 				},
 				{
 					"buffer": 3,
-					"file": "wp-content/themes/understrap/loop-templates/content-experiment.php",
+					"file": "wp-content/themes/understrap/page-events.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4369,
+						"buffer_size": 3663,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4369,
-								4369
+								2206,
+								2206
+							],
+							[
+								2303,
+								2303
+							],
+							[
+								2400,
+								2400
+							],
+							[
+								2992,
+								2992
+							],
+							[
+								3089,
+								3089
+							],
+							[
+								3186,
+								3186
 							]
 						],
 						"settings":
@@ -1526,704 +942,73 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1178.0,
+						"translation.y": 1565.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 4,
-					"file": "wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
+					"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4521,
-=======
-					"file": "wp-content/themes/understrap/page-trailblazers.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2433,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+						"buffer_size": 891,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								325,
-								327
-=======
-								596,
-								559
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+								405,
+								405
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-=======
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1661.0,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-<<<<<<< HEAD
-					"buffer": 5,
-					"file": "wp-content/themes/understrap/js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9637,
-=======
-					"buffer": 2,
-					"file": "wp-content/themes/understrap/inc/enqueue.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4927,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								1570,
-								1570
-=======
-								4505,
-								4505
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
-							]
-						],
-						"settings":
-						{
-<<<<<<< HEAD
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 481.0,
-=======
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										4503,
-										4504
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										4473,
-										4474
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-									"1":
-									[
-										3809,
-										3810
-									]
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2631.0,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-<<<<<<< HEAD
-					"buffer": 6,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7760,
-=======
-					"buffer": 3,
-					"file": "wp-content/themes/understrap/loop-templates/tile-experiment.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1111,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								4721,
-								4721
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4210.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2396,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								361,
-								361
-=======
-								0,
-								0
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
-							]
-						],
-						"settings":
-						{
-<<<<<<< HEAD
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 102.0,
-=======
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+						"translation.y": 306.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-<<<<<<< HEAD
-					"buffer": 8,
+					"buffer": 5,
 					"file": "wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4285,
-=======
-					"buffer": 4,
-					"file": "wp-content/themes/understrap/js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9252,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+						"buffer_size": 4902,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								3234,
-								3234
-=======
-								3875,
-								3875
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+								4583,
+								4583
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3182.0,
+						"translation.y": 5178.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-=======
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										4357,
-										4358
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										3736,
-										3737
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2346.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 					"type": "text"
 				}
 			]
@@ -2231,11 +1016,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
-		"height": 43.0
+		"height": 46.0
 	},
 	"layout":
 	{
@@ -2246,15 +1031,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-<<<<<<< HEAD
-			0.577101554027,
-=======
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+			0.584193752609,
 			1.0
 		],
 		"rows":
@@ -2276,11 +1064,7 @@
 	"project": "genaero.sublime-project",
 	"replace":
 	{
-<<<<<<< HEAD
 		"height": 53.0
-=======
-		"height": 52.0
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2290,293 +1074,6 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
-=======
-				"tile-e",
-				"wp-content\\themes\\understrap\\loop-templates\\tile-experiment.php"
-			],
-			[
-				"page-trail",
-				"wp-content\\themes\\understrap\\page-trailblazers.php"
-			],
-			[
-				"enqu",
-				"wp-content\\themes\\understrap\\inc\\enqueue.php"
-			],
-			[
-				"login",
-				"wp-content\\themes\\understrap\\page-templates\\login.php"
-			],
-			[
-				"tile-vid",
-				"wp-content\\themes\\understrap\\loop-templates\\tile-video.php"
-			],
-			[
-				"tile-",
-				"wp-content\\themes\\understrap\\loop-templates\\tile-experiment.php"
-			],
-			[
-				"main.js",
-				"wp-content\\themes\\understrap\\js\\main.js"
-			],
-			[
-				"page-vid",
-				"wp-content\\themes\\understrap\\page-videos.php"
-			],
-			[
-				"genaero",
-				"wp-content\\plugins\\genaero-members\\genaero-members.php"
-			],
-			[
-				"_forms.scss",
-				"wp-content\\themes\\understrap\\src\\sass\\bootstrap4\\mixins\\_forms.scss"
-			],
-			[
-				"_forms",
-				"wp-content\\themes\\understrap\\src\\sass\\bootstrap4\\_forms.scss"
-			],
-			[
-				"page-even",
-				"wp-content\\themes\\understrap\\page-events.php"
-			],
-			[
-				"page-vault",
-				"wp-content\\themes\\understrap\\page-vault.php"
-			],
-			[
-				"extras",
-				"wp-content\\themes\\understrap\\inc\\extras.php"
-			],
-			[
-				"page-va",
-				"wp-content\\themes\\understrap\\page-vault.php"
-			],
-			[
-				"enqueu",
-				"wp-content\\themes\\understrap\\inc\\enqueue.php"
-			],
-			[
-				"trailbl",
-				"wp-content\\themes\\understrap\\single-trailblazers.php"
-			],
-			[
-				"vault",
-				"wp-content\\themes\\understrap\\single-vault.php"
-			],
-			[
-				"row",
-				"wp-content\\themes\\understrap\\loop-templates\\row-event.php"
-			],
-			[
-				"content-po",
-				"wp-content\\themes\\understrap\\loop-templates\\content-postevent.php"
-			],
-			[
-				"content-pre",
-				"wp-content\\themes\\understrap\\loop-templates\\content-preevent.php"
-			],
-			[
-				"page-",
-				"wp-content\\themes\\understrap\\page-vault.php"
-			],
-			[
-				"con",
-				"wp-config.php"
-			],
-			[
-				"wp-con",
-				"wp-config.php"
-			],
-			[
-				"page-v",
-				"wp-content\\themes\\understrap\\page-vault.php"
-			],
-			[
-				"page-eve",
-				"wp-content\\themes\\understrap\\page-events.php"
-			],
-			[
-				"extr",
-				"wp-content\\themes\\understrap\\inc\\extras.php"
-			],
-			[
-				"single-va",
-				"wp-content\\themes\\understrap\\single-vault.php"
-			],
-			[
-				"page-vaul",
-				"wp-content\\themes\\understrap\\page-vault.php"
-			],
-			[
-				"page-vi",
-				"wp-content\\themes\\understrap\\page-videos.php"
-			],
-			[
-				"add-vi",
-				"wp-content\\themes\\understrap\\page-templates\\add-video.php"
-			],
-			[
-				"vid",
-				"wp-content\\themes\\understrap\\page-videos.php"
-			],
-			[
-				"subpage",
-				"wp-content\\themes\\understrap\\sass\\theme\\subpages\\_subpage.scss"
-			],
-			[
-				"tile",
-				"wp-content\\themes\\understrap\\loop-templates\\tile-video.php"
-			],
-			[
-				"video",
-				"wp-content\\themes\\understrap\\page-templates\\members\\video-row.php"
-			],
-			[
-				"subp",
-				"wp-content\\themes\\understrap\\sass\\theme\\subpages\\_subpage.scss"
-			],
-			[
-				"subpa",
-				"wp-content\\themes\\understrap\\sass\\theme\\subpages\\_subpage.scss"
-			],
-			[
-				"fav",
-				"wp-content\\themes\\understrap\\page-templates\\fav-videos.php"
-			],
-			[
-				"_subpage",
-				"wp-content\\themes\\understrap\\sass\\theme\\subpages\\_subpage.scss"
-			],
-			[
-				"add-vide",
-				"wp-content\\themes\\understrap\\page-templates\\add-video.php"
-			],
-			[
-				"logout",
-				"wp-content\\themes\\understrap\\page-templates\\logout.php"
-			],
-			[
-				"dashbo",
-				"wp-content\\themes\\understrap\\page-templates\\dashboard.php"
-			],
-			[
-				"video-row",
-				"wp-content\\themes\\understrap\\page-templates\\members\\video-row.php"
-			],
-			[
-				"video-ro",
-				"wp-content\\themes\\understrap\\page-templates\\members\\video-row.php"
-			],
-			[
-				"login.php",
-				"wp-content\\themes\\understrap\\page-templates\\login.php"
-			],
-			[
-				"header.php",
-				"wp-content\\themes\\understrap\\header.php"
-			],
-			[
-				"dash",
-				"wp-content\\themes\\understrap\\page-templates\\dashboard.php"
-			],
-			[
-				"profil",
-				"wp-content\\themes\\understrap\\page-templates\\profile.php"
-			],
-			[
-				"tile-video",
-				"wp-content\\themes\\understrap\\loop-templates\\tile-video.php"
-			],
-			[
-				"wp-confi",
-				"wp-config.php"
-			],
-			[
-				"sidebar-left",
-				"wp-content\\themes\\understrap\\sidebar-left.php"
-			],
-			[
-				"funct",
-				"wp-content\\themes\\understrap\\functions.php"
-			],
-			[
-				"dashboard.php",
-				"wp-content\\themes\\understrap\\page-templates\\dashboard.php"
-			],
-			[
-				"widgets.php",
-				"wp-content\\themes\\understrap\\inc\\widgets.php"
-			],
-			[
-				"profile",
-				"wp-content\\themes\\understrap\\page-templates\\profile.php"
-			],
-			[
-				"config",
-				"wp-config.php"
-			],
-			[
-				"content",
-				"wp-content\\themes\\understrap\\loop-templates\\content-page.php"
-			],
-			[
-				"homep",
-				"wp-content\\themes\\basic\\page-homepage.php"
-			],
-			[
-				"sign",
-				"wp-content\\themes\\understrap\\page-templates\\sign-up.php"
-			],
-			[
-				"featured-video",
-				"wp-content\\themes\\understrap\\page-templates\\homepage\\featured-video.php"
-			],
-			[
-				"content-hom",
-				"wp-content\\themes\\understrap\\page-homepage.php"
-			],
-			[
-				"page-home",
-				"wp-content\\themes\\basic\\page-homepage.php"
-			],
-			[
-				"mainjs",
-				"wp-content\\themes\\understrap\\js\\main.js"
-			],
-			[
-				"sign-up",
-				"wp-content\\themes\\understrap\\page-templates\\sign-up.php"
-			],
-			[
-				"content-page",
-				"wp-content\\themes\\understrap\\loop-templates\\content-page.php"
-			],
-			[
-				"header_",
-				"wp-content\\themes\\understrap\\sass\\theme\\custom\\_header_footer.scss"
-			],
-			[
-				"_links",
-				"wp-content\\themes\\understrap\\sass\\theme\\custom\\_links.scss"
-			],
-			[
-				"wp-config",
-				"wp-config.php"
-			],
-			[
-				"enque",
-				"wp-content\\themes\\understrap\\inc\\enqueue.php"
-			],
-			[
-				"func",
-				"wp-content\\themes\\understrap\\functions.php"
-			],
-			[
-				"functions",
-				"wp-content\\themes\\understrap\\functions.php"
-			],
-			[
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 				"_posts",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_posts-and-pages.scss"
 			],
@@ -2585,12 +1082,20 @@
 				"wp-content\\themes\\actschurch\\header.php"
 			],
 			[
+				"main.js",
+				"wp-content\\themes\\actschurch\\js\\main.js"
+			],
+			[
 				"_connect",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_connect.scss"
 			],
 			[
 				"leader",
 				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
+			],
+			[
+				"functions",
+				"wp-content\\themes\\actschurch\\functions.php"
 			],
 			[
 				"home",
@@ -2673,7 +1178,15 @@
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_posts-and-pages.scss"
 			],
 			[
+				"func",
+				"wp-content\\themes\\actschurch\\functions.php"
+			],
+			[
 				"homepa",
+				"wp-content\\themes\\actschurch\\page-homepage.php"
+			],
+			[
+				"homep",
 				"wp-content\\themes\\actschurch\\page-homepage.php"
 			],
 			[
@@ -2811,7 +1324,6 @@
 			[
 				"_connec",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_connect.scss"
-<<<<<<< HEAD
 			],
 			[
 				"location.p",
@@ -2968,8 +1480,6 @@
 			[
 				"page-conn",
 				"wp-content\\themes\\tamantugu\\page-connectors.php"
-=======
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
 			]
 		],
 		"width": 0.0
@@ -2996,7 +1506,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -3004,11 +1514,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-<<<<<<< HEAD
-	"side_bar_width": 190.0,
-=======
-	"side_bar_width": 290.0,
->>>>>>> 3c2dab47d4b5b205bd95dde2e68e907735575d83
+	"side_bar_width": 325.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

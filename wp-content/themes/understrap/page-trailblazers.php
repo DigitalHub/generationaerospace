@@ -27,16 +27,16 @@ $post_count = $the_query->post_count;
 ?>
 
 <section class="subpage--hud">
-<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/img-header_findanexperiment.jpg";
-include(locate_template('loop-templates/hub-base.php')); ?>
-<div class="subpage--content">
-	<div class="container">
-		<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
-			<h1><?php the_title(); ?></h1>
-			<p class="highlight text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
+	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/img-header_findanexperiment.jpg";
+	include(locate_template('loop-templates/hub-base.php')); ?>
+	<div class="subpage--content">
+		<div class="container">
+			<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
+				<h1><?php the_title(); ?></h1>
+				<p class="highlight text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
+			</div>
 		</div>
 	</div>
-</div>
 </section>
 <section class="sub_main">
 	<div class="wrapper">
@@ -58,20 +58,16 @@ include(locate_template('loop-templates/hub-base.php')); ?>
 
 							if($count % $posts_per_page !== 0) {
 								echo '</div>';
-							}
-						endif;
-						?>
-					</main><!-- #main -->
-					<?php 
-					if (  $the_query->max_num_pages > 1 ) {
-						echo '<div class="row"><a href="#" class="genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'">More posts</a></div>';
-					}
-					?>
-				</div><!-- #primary -->
-			</div><!-- .row end -->
-		</div><!-- Container end -->
-	</div><!-- Wrapper end -->
-</section>
-<?php
-wp_reset_postdata();
-get_footer(); ?>
+							} endif; ?>
+						</main><!-- #main -->
+						<?php if (  $the_query->max_num_pages > 1 ) {
+							echo '<div class="row"><a href="#" class="genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'">More posts</a></div>';
+						} ?>
+					</div><!-- #primary -->
+				</div><!-- .row end -->
+			</div><!-- Container end -->
+		</div><!-- Wrapper end -->
+	</section>
+	<?php
+	wp_reset_postdata();
+	get_footer(); ?>

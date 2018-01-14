@@ -6,60 +6,18 @@
 	}
 }
 
-.featured_experiment--card {
-	position: relative;
-	margin-bottom: 30px;
-
-	&:hover .bg-opaque {
-		@include opacity(0);
-	}
-
-	.experiment--fav_link {
-		position: absolute;
-		top: 15px;
-		right: 30px;
-
-		i {
-			border-radius: 63px;
-			background-color: rgba(0, 0, 0, 0.8);
-			display: block;
-			width: 63px;
-			line-height: 63px;
-			font-size: 40px;
-			text-align: center;
-			color: $white;
-			vertical-align: middle;
-
-			&:hover, &.fav {
-				color: $rrlimegreen;
-			}
-		}
-	}
-
-	.post-thumbnail {
-		height: 350px;
-
-		img {
-			height: 370px;
-		}
-	}
-	
-	.experiment_card--content {
-		background-color: $white; 
-		padding: 25px;
-
-		a {
-			color: $black;
-			display: inline-block;
-			margin-bottom: 15px;
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-	}
+.submit_register--btn {
+	border-left: 1px solid $white;
+	padding-left: 40px;
+	margin-left: 25px;
 }
 
+.meta-posted {
+	color: #999;
+	.meta-student {
+		color: $black;
+	}
+}
 
 .meta-keywords {
 	margin: 0 0 10px;
@@ -71,13 +29,16 @@
 
 		a {
 			color: $rrskyblue;
+			display: inline-block;
 			font-style: italic;
+			padding: 0;
 			text-decoration: underline;
 		}
 
 		&:after {
 			content: ", ";
 			display: inline-block;
+			padding-right: 2px;
 		}
 
 		&:last-child {
@@ -86,6 +47,98 @@
 			}
 		}			
 	}			
+}
+
+.experiment--fav_link,
+.month_experiment--link {
+	position: absolute;
+	top: 15px;
+	right: 30px;
+
+	i {
+		border-radius: 63px;
+		background-color: rgba(0, 0, 0, 0.8);
+		display: block;
+		width: 63px;
+		line-height: 63px;
+		font-size: 40px;
+		text-align: center;
+		color: $white;
+		vertical-align: middle;
+
+		&:hover, &.fav {
+			color: $rrlimegreen;
+		}
+	}
+}
+
+.month_experiment--card {
+	position: relative;
+	margin-bottom: 30px;
+
+	a {
+		display: block;
+		&:hover {
+			i {
+				color: $rrlimegreen;
+			}
+		}
+	}
+
+	.post-thumbnail {
+		height: 400px;
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+
+		i {
+			color: $white;
+			position: absolute;
+			font-size: 55px;
+			left: 50%;
+			top: 50%;
+			@include translate(-50%, -50%);
+			z-index: 1;
+		}
+	}
+}
+
+.month_experiment--content {
+	padding: 0 25px 25px;
+
+	h2, h3 {
+		color: $black;
+	}
+}
+
+.featured_experiment--card {
+	&:hover {
+		.bg-opaque {
+			@include opacity(0);
+		}
+	}
+}
+
+.experiment_card--content {
+	background-color: $white;
+	margin-bottom: 30px;
+	padding: 0 25px 25px;
+
+	h3, a {
+		color: $black;
+	}
+	
+	a {
+		display: block;
+		padding: 25px 0;
+
+		&:hover {
+			color: $rrskyblue;
+			text-decoration: none;
+		}
+	}
 }
 
 .meta-date_fav {
@@ -97,10 +150,10 @@
 		overflow: hidden;
 		color: #979797;
 		background-color: #ababab;
-		height: 36px;
-		width: 36px;
+		height: 45px;
+		width: 45px;
 		font-size: 30px;
-		border-radius: 36px;
+		border-radius: 45px;
 		text-align: center;
 		vertical-align: top;
 		border: 1px solid #999;
@@ -176,19 +229,6 @@
 					@include translate(-50%, -50%);
 				}
 			}
-			&:hover {
-				.post-thumbnail--wrapper {		
-					transform: scale(1.2);
-					i {
-						color: $white;
-					}
-
-					.whitebg {
-						background-color: transparent;
-					}
-
-				}
-			}
 		}
 
 		.featured_trailblazer--details {
@@ -201,6 +241,20 @@
 				text-transform: uppercase;
 				text-align: center;
 			}
+		}
+	}
+
+	&:hover {
+		.post-thumbnail--wrapper {		
+			transform: scale(1.2);
+			i {
+				color: $white;
+			}
+
+			.whitebg {
+				background-color: transparent;
+			}
+
 		}
 	}
 }
@@ -264,14 +318,14 @@
 				font-weight: 700;				
 				text-transform: uppercase;
 			}
+		}
 
-			a {
-				color: $rrblue;
-				text-decoration: underline;
+		a {
+			color: $rrblue;
+			text-decoration: underline;
 
-				&:hover {
-					color: $rrskyblue;
-				}
+			&:hover {
+				color: $rrskyblue;
 			}
 		}
 
