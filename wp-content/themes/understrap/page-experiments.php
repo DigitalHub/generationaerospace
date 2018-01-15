@@ -41,15 +41,31 @@ $cpt = 'genaero_experiments';
 $posts_per_page = 3;
 $template = 'experiment';
 
+
+if($_GET['keyword']) {
+	$keyword = $_GET['keyword'];
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$args = array(
+		'post_type' => $cpt,
+		'tag_slug__in' => $keyword,
+		'posts_per_page' => $posts_per_page,
+		'paged' =>  $paged,
+	);
+	$the_query = new WP_Query( $args );
+	$post_count = $the_query->post_count;
+} else {
 //Load More AJAX
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array(
-	'post_type' => $cpt,
-	'posts_per_page' => $posts_per_page,
-	'paged' =>  $paged,
-);
-$the_query = new WP_Query( $args );
-$post_count = $the_query->post_count;
+	$keyword = '';
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$args = array(
+		'post_type' => $cpt,
+		'posts_per_page' => $posts_per_page,
+		'paged' =>  $paged,
+	);
+	$the_query = new WP_Query( $args );
+	$post_count = $the_query->post_count;
+}
+
 ?>
 
 <section class="subpage--hud">
@@ -66,7 +82,7 @@ $post_count = $the_query->post_count;
 					endwhile; endif; 
 					?>
 					<div class="search-form">
-						<input type="text" id="experiment_search" name="experiment_search" />
+						<input type="text" id="experiment_search" name="experiment_search" value="<?=$keyword?>" />
 						<button type="submit" id="experiment_submit" name="experiment_submit" data-cpt="<?=$cpt?>" data-posts_per_page="<?=$posts_per_page?>" data-template="<?=$template?>">
 							<i class="fal fa-search"></i>
 						</button>
