@@ -8,8 +8,11 @@
 	@include clearfix-after;
 }
 
-#page {
-	position: relative;
+
+.page-template-page-videos {
+	#page {
+		position: relative;
+	}
 }
 
 .HudOverlay {

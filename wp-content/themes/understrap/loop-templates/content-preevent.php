@@ -83,13 +83,12 @@ $summary = get_field('pre_event_summary');
 							<br>
 							<?=$summary?>
 							<br>
-							<h4>Date: <?=$date?></h4>
-							<h4>Time: <?=$time?></h4>
-							<h4>Venue: <?=$venue?></h4>
+							<h4>Date: <?=$date?><br/>
+								Time: <?=$time?><br/>
+								Venue: <?=$venue?></h4>
 							<br>
 							<?php if(!empty($map)) : ?>
-								<!-- TODO: RACH TO ADD STYLES TO SASS FILE -->
-								<div class="acf-map" style="width: 100%;height: 390px;border: #ccc solid 1px;margin: 20px 0;">
+								<div class="acf-map">
 									<div class="marker" data-lat="<?php echo $map['lat']; ?>" data-lng="<?php echo $map['lng']; ?>"></div>
 								</div>
 							<?php endif; ?>

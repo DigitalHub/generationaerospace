@@ -41,15 +41,31 @@ $cpt = 'genaero_experiments';
 $posts_per_page = 3;
 $template = 'experiment';
 
+
+if($_GET['keyword']) {
+	$keyword = $_GET['keyword'];
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$args = array(
+		'post_type' => $cpt,
+		'tag_slug__in' => $keyword,
+		'posts_per_page' => $posts_per_page,
+		'paged' =>  $paged,
+	);
+	$the_query = new WP_Query( $args );
+	$post_count = $the_query->post_count;
+} else {
 //Load More AJAX
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array(
-	'post_type' => $cpt,
-	'posts_per_page' => $posts_per_page,
-	'paged' =>  $paged,
-);
-$the_query = new WP_Query( $args );
-$post_count = $the_query->post_count;
+	$keyword = '';
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$args = array(
+		'post_type' => $cpt,
+		'posts_per_page' => $posts_per_page,
+		'paged' =>  $paged,
+	);
+	$the_query = new WP_Query( $args );
+	$post_count = $the_query->post_count;
+}
+
 ?>
 
 <section class="subpage--hud">
@@ -66,7 +82,7 @@ $post_count = $the_query->post_count;
 					endwhile; endif; 
 					?>
 					<div class="search-form">
-						<input type="text" id="experiment_search" name="experiment_search" />
+						<input type="text" id="experiment_search" name="experiment_search" value="<?=$keyword?>" />
 						<button type="submit" id="experiment_submit" name="experiment_submit" data-cpt="<?=$cpt?>" data-posts_per_page="<?=$posts_per_page?>" data-template="<?=$template?>">
 							<i class="fal fa-search"></i>
 						</button>
@@ -75,7 +91,6 @@ $post_count = $the_query->post_count;
 						<?php
 						if($tags) {
 							$count = 0;
-							// TODO: STEF TO ADD TAG LINK
 							foreach($tags as $tag) {
 								echo '<a href="'.get_term_link( $tag ).'">'.$tag->name.'</a>';
 								$count++;
@@ -116,18 +131,15 @@ $post_count = $the_query->post_count;
 						endif;
 						?>
 					</main><!-- #main -->
+					<div class="clear"></div>
 					<?php 
 					if (  $the_query->max_num_pages > 1 ) {
-						echo '<div class="row"><a href="#" class="genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'">More posts</a></div>';
+						echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
 					}
 					?>
-					<div class="clear"></div>
 					
 					<!-- TODO: STEF TO ADD LOAD MORE -->
-					<a href="#" class="defaultbtn btn--default aligncenter">
-						<div class="defaultbtn-wrapper"><span>See More Videos</span></div>
-					</a>
-
+					
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 		</div><!-- Container end -->

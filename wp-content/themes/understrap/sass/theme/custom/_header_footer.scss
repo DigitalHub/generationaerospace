@@ -4,12 +4,17 @@
 
 
 .home {
-	.site-title {
+	.site-title,
+	.site-menu,
+	.site-toplogin_btn {
 		position: fixed;
 	}
-	.site-menu {
-		position: fixed;
-	}
+}
+
+.site-toplogin_btn {
+	position: absolute;
+	left: 6%;
+	top: 20px;
 }
 
 .site-title {
@@ -523,6 +528,7 @@
 }
 
 .page-template-page-videos {
+	padding-bottom: 66px;
 	#wrapper-footer {
 		background-color: transparent;
 		bottom: 0;

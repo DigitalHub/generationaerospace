@@ -203,9 +203,9 @@ $all_videos_count = $wpdb->num_rows;
 						}
 					} ?>
 					<!-- TODO: STEF TO ADD LOAD MORE -->
-					<a href="#" class="defaultbtn btn--default aligncenter">
+					<!-- <a href="#" class="defaultbtn btn--default aligncenter">
 						<div class="defaultbtn-wrapper"><span>See More Videos</span></div>
-					</a>
+					</a> -->
 				</main><!-- #main -->
 			</div><!-- #primary -->
 		</div><!-- .row end -->

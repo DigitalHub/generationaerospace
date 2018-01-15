@@ -2,7 +2,7 @@
 	background-color: #eee;
 
 	.wrapper {
-		padding: 65px 0;
+		padding: 65px 0 20px;
 	}
 }
 
@@ -253,6 +253,13 @@ a.j-paginate.juicer-button {
 	}
 }
 
+.entry-content {
+	.meta-date_fav {
+		border-top: none;
+		margin-bottom: 22px;
+	}
+}
+
 .featured_trailblazer--card {
 	margin-bottom: 30px;
 	a {
@@ -280,7 +287,7 @@ a.j-paginate.juicer-button {
 				}
 
 				i {
-					color: transparent;
+					color: $white;
 					font-size: 80px;
 					left: 50%;
 					position: absolute;

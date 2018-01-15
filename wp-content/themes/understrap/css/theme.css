@@ -10782,7 +10782,7 @@ readers do not read off random characters that represent icons */
 .clear:after {
   clear: both; }
 
-#page {
+.page-template-page-videos #page {
   position: relative; }
 
 .HudOverlay {
@@ -10955,9 +10955,13 @@ a {
     text-transform: uppercase; }
 
 .login_butt i:before {
+  color: #cad63e;
   content: "\f013"; }
-.login_butt:hover i:before {
-  content: "\f068"; }
+.login_butt:hover {
+  color: #cad63e;
+  text-decoration: none; }
+  .login_butt:hover i:before {
+    content: "\f068"; }
 
 .close_butt {
   text-align: center; }
@@ -11304,7 +11308,7 @@ a {
       background-color: #000;
       color: #fff; }
 
-.arrowbtn + .arrowbtn
+.arrowbtn + .arrowbtn,
 .defaultbtn + .defaultbtn {
   margin-left: 15px; }
 
@@ -11365,10 +11369,15 @@ a#genaero-facebook-button {
   a#genaero-facebook-button:hover {
     text-decoration: none; }
 
-.home .site-title {
+.home .site-title,
+.home .site-menu,
+.home .site-toplogin_btn {
   position: fixed; }
-.home .site-menu {
-  position: fixed; }
+
+.site-toplogin_btn {
+  position: absolute;
+  left: 6%;
+  top: 20px; }
 
 .site-title {
   left: 50%;
@@ -11817,11 +11826,13 @@ a#genaero-facebook-button {
   #wrapper-footer .site-footer p {
     margin: 0; }
 
-.page-template-page-videos #wrapper-footer {
-  background-color: transparent;
-  bottom: 0;
-  color: #fff;
-  position: absolute; }
+.page-template-page-videos {
+  padding-bottom: 66px; }
+  .page-template-page-videos #wrapper-footer {
+    background-color: transparent;
+    bottom: 0;
+    color: #fff;
+    position: absolute; }
 
 .home h1, .home h2, .home h3, .home h4, .home h5 {
   color: #fff !important; }
@@ -11830,7 +11841,7 @@ a#genaero-facebook-button {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   right: 4%;
   top: 50%;
   text-align: right;
@@ -12185,7 +12196,7 @@ a#genaero-facebook-button {
 .sub_main {
   background-color: #eee; }
   .sub_main .wrapper {
-    padding: 65px 0; }
+    padding: 65px 0 20px; }
 
 .juicer-section {
   position: relative;
@@ -12368,6 +12379,10 @@ a.j-paginate.juicer-button {
       color: #fd7e2e;
       margin-right: 5px; }
 
+.entry-content .meta-date_fav {
+  border-top: none;
+  margin-bottom: 22px; }
+
 .featured_trailblazer--card {
   margin-bottom: 30px; }
   .featured_trailblazer--card a {
@@ -12396,7 +12411,7 @@ a.j-paginate.juicer-button {
           -webkit-transition: all 500ms ease;
           transition: all 500ms ease; }
         .featured_trailblazer--card a .featured_trailblazer--img .post-thumbnail--wrapper i {
-          color: transparent;
+          color: #fff;
           font-size: 80px;
           left: 50%;
           position: absolute;
@@ -12540,6 +12555,12 @@ a.j-paginate.juicer-button {
 .addthis_inline_share_toolbox_dznu .at-style-responsive .at-share-btn {
   border-radius: 30px !important; }
 
+.acf-map {
+  border: #ccc solid 1px;
+  height: 390px;
+  margin: 20px 0;
+  width: 100%; }
+
 .single_experiment .single_experiment--row,
 .single_experiment .single_trailblazers--row,
 .single_trailblazers .single_experiment--row,
@@ -12678,6 +12699,8 @@ a.j-paginate.juicer-button {
   .single-genaero_experiments .experiment-meta .meta-date {
     display: inline-block;
     width: 150px; }
+    .single-genaero_experiments .experiment-meta .meta-date i {
+      margin-left: 3px; }
   .single-genaero_experiments .experiment-meta .meta-keywords {
     display: inline-block;
     width: calc(100% - 160px); }
@@ -12687,8 +12710,6 @@ a.j-paginate.juicer-button {
       text-decoration: underline; }
       .single-genaero_experiments .experiment-meta .meta-keywords a:hover {
         text-decoration: none; }
-      .single-genaero_experiments .experiment-meta .meta-keywords a:first-child {
-        margin-right: 30px; }
 .single-genaero_experiments .experiment--link {
   position: relative; }
   .single-genaero_experiments .experiment--link .arrowbtn {
@@ -12739,6 +12760,11 @@ a.j-paginate.juicer-button {
     width: calc(100% - 101px); }
     .experiment--carousel_wrapper .experiment_steps p:last-child {
       margin-bottom: 0; }
+
+.faved {
+  color: #cad63e; }
+  .faved i {
+    color: #cad63e; }
 
 .sign-up-row,
 .login-row,

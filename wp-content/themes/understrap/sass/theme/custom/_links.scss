@@ -56,10 +56,13 @@ a {
 
 .login_butt {
 	i:before {
+		color: $rrlimegreen;
 		content: fa-content($fa-var-cog);
 	}
 
 	&:hover {
+		color: $rrlimegreen;
+		text-decoration: none;
 		i:before {
 			content: fa-content($fa-var-minus);
 		}
@@ -480,7 +483,7 @@ a {
 }
 
 //if there two btn side by side
-.arrowbtn + .arrowbtn 
+.arrowbtn + .arrowbtn,
 .defaultbtn + .defaultbtn { 
 	margin-left: 15px;
 }

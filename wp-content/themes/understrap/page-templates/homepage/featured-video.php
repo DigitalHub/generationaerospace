@@ -6,6 +6,20 @@
  *
  * @package understrap
  */
+global $wpdb;
+$videos_table = $wpdb->prefix.'genaero_videos';
+$members_table = $wpdb->prefix.'genaero_members';
+
+//videos loop
+$videos = array();
+if(have_rows('featured_video')) :
+	while(have_rows('featured_video')) : the_row();
+		$sql = $wpdb->prepare("SELECT t1.id, t1.link_id, t1.title, t1.youtube, t2.fullname FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id WHERE link_id = '%s'", get_sub_field('id'));
+
+		$videos[] = $wpdb->get_results($sql);
+	endwhile;
+endif;
+
 ?>
 
 <section class="section" data-anchor="featured_video">
@@ -22,29 +36,16 @@
 			<div class="col-xl-6 "><!-- offset-xl-1 -->
 				<div class="featured_video--carousel_wrapper">
 					<div class="featured_video--carousel">
-						<!-- TODO: STEF KIV -->
 						<?php
-						if(have_rows('featured_video')) :
-							while(have_rows('featured_video')) : the_row();
-								$test = get_sub_field('id');
-							endwhile;
-						endif;
-						?>
-						<div class="video_slide">
-							<img src="http://lorempixel.com/500/250" />
-							<h3>Video One</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, voluptas.</p>
-						</div>
-						<div class="video_slide">
-							<img src="http://lorempixel.com/500/251" />
-							<h3>Video One</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat repellat nam consequatur ullam perspiciatis?</p>
-						</div>
-						<div class="video_slide">
-							<img src="http://lorempixel.com/500/249" />
-							<h3>Video One</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate velit, officiis reprehenderit!</p>
-						</div>
+						foreach($videos as $video) :
+							$thumbnail = getYoutubeThumbnail($video[0]->youtube);
+							?>
+							<div class="video_slide">
+								<img src="<?=$thumbnail?>" />
+								<h3><?=$video[0]->title?></h3>
+								<p><?=$video[0]->fullname?></p>
+							</div>
+						<?php endforeach; ?>
 					</div>
 				</div>
 				<div class="pagingInfo"></div>
