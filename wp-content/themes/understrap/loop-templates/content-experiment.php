@@ -81,8 +81,18 @@ global $loggedin;
 					<br>
 					<div class="addthis_inline_share_toolbox_dznu"></div>
 					<br>
-					<!-- TODO: STEF TO DO SAVE EXPERIMENT FUNCTION -->
+
+					<!-- TODO: STEF TO DO LOGIN FUNCTION IN FANCYBOX -->
+					<?php if($loggedin === '0') {?>
+
+					<a href="javascript:;" data-fancybox="modal" data-src="#login-modal"><i class="fal fa-heart"></i> Save Experiment</a>
+					<div id="login-modal" style="display:none; max-width:300px; padding:20px"><span>You need to be logged in to save the experiment. Login here now.</span></div>
+
+					<?php } elseif($loggedin === '1') {?>
 					<a href="#"><i class="fal fa-heart"></i> Save Experiment</a>
+					
+					<?php } ?>
+
 					<a href="<?php echo get_field('pdf_upload'); ?>" target="_blank"><i class="fal fa-print"></i> Print</a>
 				</div>
 				<div class="col-xl-2 col-lg-2 hidden-md-down" style="color: transparent;">Lorem</div><!-- this is to push video col to left  -->
