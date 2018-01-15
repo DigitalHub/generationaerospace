@@ -37,6 +37,12 @@ if($wpdb->num_rows > 0) {
 }
 
 $embed_code = youtubeEmbedFromUrl($youtube, 720, 540);
+
+//featured videos loop
+$featured_videos_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' AND NOT t1.id = '%s' ORDER BY t1.create_date DESC LIMIT 3", $video_id);
+
+$featured_videos_results = $wpdb->get_results($featured_videos_sql);
+$featured_videos_count = $wpdb->num_rows;
 ?>
 
 <section class="subpage--hud">
@@ -71,8 +77,7 @@ $embed_code = youtubeEmbedFromUrl($youtube, 720, 540);
 										<div class="alignleft">
 											<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
 											<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
-											<!-- TODO: STEF TO ADD NUMBER OF COMMENTS -->
-											<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
+											<!-- <div class="meta-comment"><i class="fas fa-comment"></i>200</div> -->
 											<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
 										</div>
 									</div>
@@ -88,12 +93,24 @@ $embed_code = youtubeEmbedFromUrl($youtube, 720, 540);
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 			<hr>
-			<div class="row">
-				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<!-- TODO: STEF DO CUSTOM RELATED POSTS BECAUSE YARPP IS BS -->
-					<?php //related_posts(); ?>
-				</div>
-			</div>
+			<h3>Related Videos_</h3>
+			<?php
+			if($featured_videos_count > 0) {
+				$count = 0;
+				foreach($featured_videos_results as $video) {
+					if($count % 3 == 0) :
+						echo $count > 0 ? '</div>' : '';
+						echo '<div class="row">';
+					endif;
+					global $video;
+					get_template_part( 'loop-templates/tile', 'video' );
+					$count++;
+				}
+
+				if($count % 3 !== 0) {
+					echo '</div>';
+				}
+			} ?>
 		</div><!-- Container end -->
 	</div><!-- Wrapper end -->
 </section>

@@ -121,6 +121,42 @@ function genaero_ajax_pagination() {
 	wp_die();
 }
 
+add_action( 'wp_ajax_nopriv_search_video', 'search_video' );
+add_action( 'wp_ajax_search_video', 'search_video' );
+
+function search_video() {
+	global $wpdb;
+	$search = "%".$_POST['search']."%";
+	$members_table = $wpdb->prefix.'genaero_members';
+	$videos_table = $wpdb->prefix.'genaero_videos';
+
+	$sql = $wpdb->prepare("SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id WHERE t1.title LIKE '%s' OR t2.fullname LIKE '%s'",$search, $search);
+	$results = $wpdb->get_results($sql);
+	$results_count = $wpdb->num_rows;
+
+	// TODO: STEF TO FIX LOAD MORE ISSUE
+	if($results_count > 0) {
+		$count = 0;
+		foreach($results as $video) {
+			if($count % 3 == 0) :
+				echo $count > 0 ? '</div>' : '';
+				echo '<div class="row">';
+			endif;
+			global $video;
+			get_template_part( 'loop-templates/tile', 'video' );
+			$count++;
+		}
+
+		if($count % 3 !== 0) {
+			echo '</div>';
+		}
+	} else {
+		echo 'No results found.';
+	}
+
+	wp_die();
+}
+
 add_action( 'wp_ajax_nopriv_search_experiment', 'search_experiment' );
 add_action( 'wp_ajax_search_experiment', 'search_experiment' );
 
