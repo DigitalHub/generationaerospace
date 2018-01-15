@@ -91,7 +91,6 @@ if($_GET['keyword']) {
 						<?php
 						if($tags) {
 							$count = 0;
-							// TODO: STEF TO ADD TAG LINK
 							foreach($tags as $tag) {
 								echo '<a href="'.get_term_link( $tag ).'">'.$tag->name.'</a>';
 								$count++;

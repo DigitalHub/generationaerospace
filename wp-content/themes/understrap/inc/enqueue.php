@@ -83,6 +83,19 @@ function fav_this_video() {
 	// $wpdb->delete($fav_videos_table,array('id' => $favID));
 }
 
+add_action("wp_ajax_fav_this_experiment", "fav_this_experiment");
+add_action("wp_ajax_nopriv_fav_this_experiment", "fav_this_experiment");
+
+function fav_this_experiment() {
+	global $wpdb;
+	$expID = $_POST['expID'];
+	$userID = $_POST['userID'];
+	$fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
+	$sql = $wpdb->prepare("INSERT INTO $fav_experiments_table (member_id, experiment_id) VALUES (%s,%s)", $userID, $expID);
+	$wpdb->query($sql);
+	echo 'success';
+}
+
 add_action( 'wp_ajax_nopriv_genaero_ajax_pagination', 'genaero_ajax_pagination' );
 add_action( 'wp_ajax_genaero_ajax_pagination', 'genaero_ajax_pagination' );
 

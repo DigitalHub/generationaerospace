@@ -5,6 +5,8 @@
  * @package understrap
  */
 global $loggedin;
+$user_id = $_SESSION['user_id'];
+$fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 ?>
 <div class="<?php echo $page_template ?> container-fluid single_experiment">
 	<div class="row">
@@ -83,20 +85,35 @@ global $loggedin;
 					<br>
 
 					<!-- TODO: STEF TO DO LOGIN FUNCTION IN FANCYBOX -->
-					<?php if($loggedin === '0') {?>
+					<?php if($loggedin === '0') {
+						?>
 
-					<a href="javascript:;" data-fancybox="modal" data-src="#login-modal"><i class="fal fa-heart"></i> Save Experiment</a>
-					<div id="login-modal" style="display:none; max-width:300px; padding:20px"><span>You need to be logged in to save the experiment. Login here now.</span></div>
+						<a href="javascript:;" data-fancybox="modal" data-src="#login-modal"><i class="fal fa-heart"></i> Save Experiment</a>
+						<div id="login-modal" style="display:none; max-width:300px; padding:20px"><span>You need to be logged in to save the experiment. Login here now.</span></div>
 
-					<?php } elseif($loggedin === '1') {?>
-					<a href="#"><i class="fal fa-heart"></i> Save Experiment</a>
-					
-					<?php } ?>
+						<?php 
+					} elseif($loggedin === '1') {
+						$favs_sql = $wpdb->prepare("SELECT experiment_id FROM $fav_experiments_table WHERE member_id = '%s'", $user_id);
+						$favs_results = $wpdb->get_results($favs_sql);
+						$favs_count = $wpdb->num_rows;
+						if($favs_count > 0) {
+							?>
+							<!-- TODO: RACH PLEASE ADD A CLASS FOR ALREADY FAVOURITED EXPERIMENT. USE CLASSNAME faved NEXT TO .fav-experiment -->
+							<a href="#" class="faved"><i class="fal fa-heart"></i> Save Experiment</a>
+							<?php
+						} else {
+							?>
+							<a href="#" class="fav-experiment" data-id="<?php echo get_the_ID();?>" data-user="<?=$user_id?>"><i class="fal fa-heart"></i> Save Experiment</a>
+							<?php
+						}
+						?>
 
-					<a href="<?php echo get_field('pdf_upload'); ?>" target="_blank"><i class="fal fa-print"></i> Print</a>
+						<?php } ?>
+
+						<a href="<?php echo get_field('pdf_upload'); ?>" target="_blank"><i class="fal fa-print"></i> Print</a>
+					</div>
+					<div class="col-xl-2 col-lg-2 hidden-md-down" style="color: transparent;">Lorem</div><!-- this is to push video col to left  -->
 				</div>
-				<div class="col-xl-2 col-lg-2 hidden-md-down" style="color: transparent;">Lorem</div><!-- this is to push video col to left  -->
 			</div>
 		</div>
 	</div>
-</div>

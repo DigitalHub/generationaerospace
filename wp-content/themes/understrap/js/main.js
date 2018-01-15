@@ -26,8 +26,8 @@ jQuery(document).ready(function($) {
 
   $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     var i = (currentSlide ? currentSlide : 0) + 1;
-        $status.html('<span class="counting">0'+i+'</span><span class="totalcount">0'+ slick.slideCount +'</span>')
-      });
+    $status.html('<span class="counting">0'+i+'</span><span class="totalcount">0'+ slick.slideCount +'</span>')
+  });
 
   $slickElement.slick({
     autoplay: false,
@@ -37,21 +37,21 @@ jQuery(document).ready(function($) {
     nextArrow: '<div class="double_arrow small_arrow arrow_down"></div>',
   });
 
-    jQuery('.experiment--carousel').slick({
-        autoplay: false,
-        dots: false,
-        fade: true,
-        prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
-        nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
-    });
+  jQuery('.experiment--carousel').slick({
+    autoplay: false,
+    dots: false,
+    fade: true,
+    prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
+    nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
+  });
 
-    jQuery('.fullpopup').fancybox({
-        toolbar  : false,
-        smallBtn : true,
+  jQuery('.fullpopup').fancybox({
+    toolbar  : false,
+    smallBtn : true,
         // iframe : {
         //     preload : false
         // }
-    });
+      });
 
   jQuery('.genaero_explorer--carousel').slick({
     autoplay: false,
@@ -205,6 +205,27 @@ jQuery(document).ready(function($) {
     });
   });
 
+  $('a.fav-experiment').on('click', function(e) {
+    e.preventDefault();
+    expID = $(this).data('id');
+    userID = $(this).data('user');
+    var button = $(this);
+    console.log('test: '+expID+' '+userID);
+
+    $.ajax({
+      url: ajax.ajaxUrl,
+      type : 'post',
+      data: {
+        action: 'fav_this_experiment',
+        userID: userID,
+        expID: expID,
+      },
+      success : function( data ){
+        button.addClass('faved');
+      }
+    });
+  });
+
   // $('a[href$="#heart"]').on('click', function(e) {
   //   e.preventDefault();
   //   var video_id = $(this).data('video-id');
@@ -248,76 +269,76 @@ jQuery(document).ready(function($) {
       center    : new google.maps.LatLng(0, 0),
       mapTypeId : google.maps.MapTypeId.ROADMAP,
       styles: [
-    {
+      {
         "featureType": "all",
         "elementType": "all",
         "stylers": [
-            {
-                "hue": "#ff0000"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": -30
-            }
+        {
+          "hue": "#ff0000"
+        },
+        {
+          "saturation": -100
+        },
+        {
+          "lightness": -30
+        }
         ]
-    },
-    {
+      },
+      {
         "featureType": "all",
         "elementType": "labels.text.fill",
         "stylers": [
-            {
-                "color": "#ffffff"
-            }
+        {
+          "color": "#ffffff"
+        }
         ]
-    },
-    {
+      },
+      {
         "featureType": "all",
         "elementType": "labels.text.stroke",
         "stylers": [
-            {
-                "color": "#353535"
-            }
+        {
+          "color": "#353535"
+        }
         ]
-    },
-    {
+      },
+      {
         "featureType": "landscape",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#656565"
-            }
+        {
+          "color": "#656565"
+        }
         ]
-    },
-    {
+      },
+      {
         "featureType": "poi",
         "elementType": "geometry.fill",
         "stylers": [
-            {
-                "color": "#505050"
-            }
+        {
+          "color": "#505050"
+        }
         ]
-    },
-    {
+      },
+      {
         "featureType": "poi",
         "elementType": "geometry.stroke",
         "stylers": [
-            {
-                "color": "#808080"
-            }
+        {
+          "color": "#808080"
+        }
         ]
-    },
-    {
+      },
+      {
         "featureType": "road",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#454545"
-            }
+        {
+          "color": "#454545"
+        }
         ]
-    }
-]
+      }
+      ]
     };
 
     var map = new google.maps.Map( $el[0], args);

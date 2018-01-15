@@ -35,9 +35,7 @@
 									echo '<div class="row">';
 								endif;
 								?>
-								<!-- TODO: STEF TO DO KEYWORD SEARCH -->
 								<div class="col-xl-6 hover--topbox">
-									<!-- <a href="<?php echo get_term_link($tag); ?>"> -->
 									<a href="<?php echo get_permalink( get_page_by_path( 'find-an-experiment' ) ).'?keyword='.$tag->name; ?>">
 										<img src="<?=$image['url']?>" />
 										<div class="bg-opaque"></div>
