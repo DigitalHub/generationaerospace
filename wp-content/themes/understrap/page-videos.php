@@ -87,6 +87,10 @@ $all_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title
 
 $all_videos_results = $wpdb->get_results($all_videos_sql);
 $all_videos_count = $wpdb->num_rows;
+
+$cpt = 'genaero_videos';
+$posts_per_page = 3;
+$template = 'video';
 ?>
 
 <section class="subpage--hud">
@@ -101,8 +105,10 @@ $all_videos_count = $wpdb->num_rows;
 					<h3 class="text-left">Search for Videos</h3>
 					<div class="search-form">
 						<!-- TODO: STEF DO SEARCH -->
-						<input type="text" />
-						<button type="submit"><i class="fal fa-search"></i></button>
+						<input type="text" id="video_search" name="video_search"/>
+						<button type="submit" id="video_submit" name="video_submit">
+							<i class="fal fa-search"></i>
+						</button>
 					</div>
 				</div>
 				<div class="col-xl-4">
@@ -125,7 +131,7 @@ $all_videos_count = $wpdb->num_rows;
 </section>
 <section class="sub_main">
 	<div class="wrapper">
-		<div class="<?php echo esc_attr( $container ); ?>" id="content">
+		<div class="video-main <?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
 				<div class="month_experiment--card col-xl-8 col-xl-8 col-md-6 col-sm-12 col-xs-12">
 					<a data-fancybox href="<?=$youtube?>">
@@ -148,8 +154,7 @@ $all_videos_count = $wpdb->num_rows;
 							<!-- TODO: STEF TO ADD LINK TO STUDENT PROFILE -->
 							<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
 							<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
-							<!-- TODO: STEF TO ADD NUMBER OF COMMENTS -->
-							<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
+							<!-- <div class="meta-comment"><i class="fas fa-comment"></i>200</div> -->
 							<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
 						</div>
 						<div class="clear"></div><br>

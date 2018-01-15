@@ -150,6 +150,25 @@ jQuery(document).ready(function($) {
     }
   }
 
+  $('#video_submit').on('click', function() {
+    $.ajax({
+      url: ajax.ajaxUrl,
+      type: 'post',
+      data: {
+        action: 'search_video',
+        search: $('#video_search').val(),
+      },
+      beforeSend: function() {
+        $('.video-main').html('');
+        $('.ajax-loading').show();
+      },
+      success: function(data) {
+        $('.ajax-loading').hide();
+        $('.video-main').html(data);
+      }
+    });
+  });
+
   $('#experiment_submit').on('click', function() {
     var cpt = $(this).data('cpt');
     var posts_per_page = $(this).data('posts_per_page');

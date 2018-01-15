@@ -71,8 +71,7 @@ $embed_code = youtubeEmbedFromUrl($youtube, 720, 540);
 										<div class="alignleft">
 											<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
 											<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
-											<!-- TODO: STEF TO ADD NUMBER OF COMMENTS -->
-											<div class="meta-comment"><i class="fas fa-comment"></i>200</div>
+											<!-- <div class="meta-comment"><i class="fas fa-comment"></i>200</div> -->
 											<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
 										</div>
 									</div>
