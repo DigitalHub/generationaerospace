@@ -35,15 +35,14 @@ if($trailblazer) :
 					<p class="highlight"><?php echo get_field('job_title'); ?></p>
 					<?php the_excerpt(); ?>
 
-					<button class="arrowbtn btn--color">
+					<a href="<?php the_permalink(); ?>" class="arrowbtn btn--color">
 						<span class="fas fa-long-arrow-alt-right icon-left"></span>
-						<div class="arrowbtn-wrapper"><a href="<?php the_permalink(); ?>"><span>Read More</span></a></div>
-					</button>
-					<span style="width: 25px; "></span>
-					<button class="arrowbtn btn--color">
+						<div class="arrowbtn-wrapper"><span>Read More</span></div>
+					</a>
+					<a  href="<?php echo get_permalink( get_page_by_path( 'genaero-trailblazers' ) ) ?>" class="arrowbtn btn--color">
 						<span class="fas fa-long-arrow-alt-right icon-left"></span>
-						<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'genaero-trailblazers' ) ) ?>"><span>See More Trailblazers</span></a></div>
-					</button>
+						<div class="arrowbtn-wrapper"><span>See More Trailblazers</span></div>
+					</a>
 				</div>
 			</div>
 		</div>

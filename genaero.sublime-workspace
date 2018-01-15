@@ -4,7 +4,6 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
 				"margin",
 				"margin-top"
 			],
@@ -151,10 +150,6 @@
 			[
 				"po",
 				"pos:a\tposition:absolute"
-=======
-				"faceboo",
-				"facebook_page"
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 			],
 			[
 				"loca",
@@ -389,7 +384,6 @@
 	"buffers":
 	[
 		{
-<<<<<<< HEAD
 			"contents": "<?php\n/**\n * Template Name: Page Homepage\n *\n * This is the template that displays all pages by default.\n * Please note that this is the WordPress construct of pages\n * and that other 'pages' on your WordPress site will use a\n * different template.\n *\n * @package understrap\n */\n\nget_header(); ?>\n<!-- <div class=\"hexagon\"></div> -->\n<div class=\"wrapper\" id=\"page-wrapper\">\n\t<main id=\"main\" class=\"site-main container\" role=\"main\">\n\t\t<div class=\"HudOverlay\">\n\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 835\" style=\"enable-background:new 0 0 1316 835\" xml:space=\"preserve\" class=\"HudOverlay-fullBorder\" preserveAspectRatio=\"none\"> \n\n\t\t\t\t<defs>\n\t\t\t\t\t<filter id=\"blurlayer\" width=\"110%\" height=\"120%\">\n\t\t\t\t\t\t<feGaussianBlur  stdDeviation=\"4\" result=\"blur\"/>\n\t\t\t\t\t</filter>\n\t\t\t\t</defs>\n\t\t\t\t<g> \n\t\t\t\t\t<path d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\n\t\t\t\t\t<path filter=\"url(#blurlayer)\" d=\"M1287.9,818.3\n\t\t\t\t\tc5.5,0,9.5-4.5,10-10\n\t\t\t\t\tc9.7-113.4,14.6-217.5,16.7-310.1l-13.6-19.9\n\t\t\t\t\tc0.8-42.6,0.9-82.7,0.5-120.1\n\t\t\t\t\tl13.8-19.8\n\t\t\t\t\tc-2.6-195.5-17.4-310-17.4-310\n\t\t\t\t\tc0-5.5-4.5-10-10-10\n\t\t\t\t\tc0,0-630-40-1260,0\n\t\t\t\t\tc-5.5,0.3-10,4.5-10,10\n\t\t\t\t\tc0,0-14.8,114.5-17.4,309.7\n\t\t\t\t\tl13.4,20.3\n\t\t\t\t\tc-1,42.6-1.2,82.7-0.8,120L1.2,498.2\n\t\t\t\t\tc2,92.6,7,196.7,16.7,310.1\n\t\t\t\t\tc0.5,5.5,4.5,9.7,10,10\"></path> \n\t\t\t\t</g> \n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--left\" x1=\"27.9\" y1=\"818.3\" x2=\"640.0113314447592\" y2=\"826.4018783163646\"></line>\n\t\t\t\t<line class=\"HudBorder-line HudBorder-line--right\" x1=\"641.8958314890226\" y1=\"825.9018783163646\" x2=\"1287.9\" y2=\"818.3\"></line> \n\t\t\t\t<!-- <polygon points=\"144 247,172 263,572 267,585 243,568 223,168 223\"></polygon> -->\n\t\t\t</svg>\n\t\t</div> <!-- stroke=\"#ff0\" stroke-width=\"10\" -->\n\n\t\t<?php while(have_posts()) : the_post(); the_content(); endwhile;?>\n\t\t<div class=\"headerbutt login_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>LOGIN</span>\n\t\t</div>\n\t\t<div class=\"headerbutt scroll_butt\">\n\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t</svg>\n\t\t\t\t<i class=\"fal\"></i>\n\t\t\t</div>\n\t\t\t<span>scroll</span>\n\t\t</div>\n\t\t<div class=\"headerbutt close_butt\">\n\t\t\t<i class=\"fal\"></i>\n\t\t\t<span>Close</span>\n\t\t</div>\n\n\n\t\t<div class=\"double_arrow small_arrow arrow_up\"></div>\n\t\t<div class=\"double_arrow small_arrow arrow_down\"></div>\n\n\n\t\t<div class=\"double_arrow big_arrow arrow_left\"></div>\n\t\t<div class=\"double_arrow big_arrow arrow_right\"></div>\n\n\n\t\t<div class=\"headerbutt menu_butt\">\n\t\t\t<a href=\"#\" class=\"bt-menu\">\n\t\t\t\t<div class=\"hexagon-icon\">\n\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewbox=\"0 0 173.20508075688772 200\" stroke=\"#fff\" fill=\"#000\" stroke-width=\"5\">\n\t\t\t\t\t\t<path d=\"M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z\"></path>\n\t\t\t\t\t</svg>\n\t\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t\t<div class=\"bar\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<span>Menu</span>\n\t\t\t</a>\n\t\t</div>\n\n\t\t<button class=\"arrowbtn btn--default\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>More Details</span></div>\n\t\t</button>\n\n\t\t<button class=\"arrowbtn btn--color\">\n\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span>\n\t\t\t<div class=\"arrowbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\n\t\t<button class=\"defaultbtn btn--color\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<button class=\"defaultbtn btn--default\">\n\t\t\t<div class=\"defaultbtn-wrapper\"><span>See More Videos</span></div>\n\t\t</button>\n\t\t<div class=\"clear\"></div><br><br>\t\n\t\t<input type=\"text\">\n\t\t<form action=\"\">\n\t\t\t<input type=\"text\">\n\t\t\t<input type=\"button\" class=\"search\">\n\t\t</form>\n\t</div>\n\n</main><!-- #main -->\n</div><!-- #primary -->\n\n<?php get_footer(); ?>",
 			"settings":
 			{
@@ -406,21 +400,20 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/loop-templates/row-event.php",
+			"file": "wp-content/themes/understrap/page-videos.php",
 			"settings":
 			{
-				"buffer_size": 1035,
+				"buffer_size": 8467,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/page-events.php",
+			"file": "wp-content/themes/understrap/footer.php",
 			"settings":
 			{
-				"buffer_size": 3663,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 1687,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -438,13 +431,16 @@
 			{
 				"buffer_size": 4902,
 				"encoding": "UTF-8",
-=======
-			"file": "wp-content/themes/understrap/page-videos.php",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 			"settings":
 			{
-				"buffer_size": 7976,
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
-				"line_ending": "Windows"
+				"buffer_size": 9249,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -455,7 +451,6 @@
 	"build_varint": "",
 	"command_palette":
 	{
-<<<<<<< HEAD
 		"height": 490.0,
 		"last_filter": "Package Control: ",
 		"selected_items":
@@ -465,13 +460,6 @@
 				"Package Control: Install Package"
 			],
 			[
-=======
-		"height": 392.0,
-		"last_filter": "todo",
-		"selected_items":
-		[
-			[
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 				"todo",
 				"TodoReview: Project Files"
 			],
@@ -517,7 +505,6 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
 		"/C/wamp64/www/generationaerospace",
 		"/C/wamp64/www/generationaerospace/wp-content",
 		"/C/wamp64/www/generationaerospace/wp-content/themes",
@@ -530,10 +517,12 @@
 	],
 	"file_history":
 	[
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-events.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_responsive.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/footer.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/row-event.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_responsive.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/main.js",
@@ -560,7 +549,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/home-hubbase.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/css/theme.css",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/footer.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-video.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/style.css",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-trailblazers.php",
@@ -656,164 +644,19 @@
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/footer.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/single.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/single-news.php",
-		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/_header-and-footer.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-branding.php"
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/_header-and-footer.scss"
 	],
 	"find":
 	{
-		"height": 52.0
-=======
-		"/C/xampp/htdocs/generationaerospace",
-		"/C/xampp/htdocs/generationaerospace/wp-content",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes",
-		"/C/xampp/htdocs/generationaerospace/wp-content/themes/understrap"
-	],
-	"file_history":
-	[
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-leadership.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/responsive/_responsive-classes.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/js/main.js",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/footer.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/header.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tag.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/functions.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_homepage.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_connect.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_visit.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-location.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-leaders.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-homepage.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-featured-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-agegroup.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-homepage-location.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/style.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-homes.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-believe.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/variables-site/_colors.scss",
-		"/C/xampp/htdocs/screenastronauts/wp-config.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config.php",
-		"/C/xampp/htdocs/actschurch/wp-config.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/modules/_slick.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/forms/_fields.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/modules/_slick-theme.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_header-and-footer.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/site-branding.php",
-		"/C/xampp/htdocs/actschurch/wp-includes/theme-compat/footer.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-expect.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_posts-and-pages.scss",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-activate.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/adminer-F24PG9C3.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/day.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/default-template.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/day.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/month/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list/month.php",
-		"/C/xampp/htdocs/actschurch/wp-content/plugins/the-events-calendar/src/views/month/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/tribe-events/list/default-template.php",
-		"/C/xampp/htdocs/actschurch/wp-includes/functions.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-locations.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/single-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-watch.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-cover-photo.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/header-image.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-videos.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_locations.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-locations-mobile.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-locations.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-contact.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-video.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_headings.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_copy.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/searchform.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/style.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_site.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/twentyseventeen/search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/single.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/typography/_typography.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/LICENSE",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/navigation/navigation-top.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/header/site-branding-orange.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-calendar.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/navigation/_menus.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-history.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/elements/_elements.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-featured-stories.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/404.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/variables-site/_typography.scss",
-		"/C/xampp/htdocs/actschurch/wp-admin/css/nav-menus-rtl.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/media/_media.scss",
-		"/C/Users/Stefanie/Desktop/acts church/bootstrap.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/.sass-cache/39f88e636cc84a4b3e94f95de89fb40d5463ab5b/_header-and-footer.scssc",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/page-videos.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/archive.php",
-		"/C/Users/Stefanie/AppData/Local/Temp/fz3temp-2/wp-config 2.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/forms/_buttons.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/elements/_lists.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/grid/_grid.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/navigation/_links.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/primary/_comments.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/_header.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sass/site/secondary/_widgets.scss",
-		"/C/xampp/htdocs/screenastronauts/wp-content/themes/basictheme/sass/navigation/_menus.scss",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/config.rb",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/comments.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/custom-header.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/customizer.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/extras.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/jetpack.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/inc/template-tags.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/index.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/layouts/content-sidebar.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/layouts/sidebar-content.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/readme.txt",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/rtl.css",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/sidebar.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-none.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/content-search.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/footer/footer-widgets.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/footer/site-info.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-front-page-panels.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-front-page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/page/content-page.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-audio.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-excerpt.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-gallery.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-image.php",
-		"/C/xampp/htdocs/actschurch/wp-content/themes/actschurch/template-parts/post/content-none.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/js/main.js",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/functions.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/page-actnow.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/template-parts/page/content-initiative.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/footer.php",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/elements/_elements.scss",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/forms/_forms.scss",
-		"/C/xampp/htdocs/harihasanah/wp-content/themes/hasanah/sass/site/primary/_posts-and-pages.scss"
-	],
-	"find":
-	{
-		"height": 41.0
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
+		"height": 29.0
 	},
 	"find_in_files":
 	{
 		"height": 134.0,
 		"where_history":
 		[
-<<<<<<< HEAD
 			"C:\\wamp64\\www\\generationaerospace\\wp-content\\",
 			"C:\\wamp64\\www\\generationaerospace\\wp-content\\themes\\understrap",
-=======
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 			"C:\\xampp\\htdocs\\actschurch\\wp-content\\themes\\actschurch",
 			"<open folders>",
 			"",
@@ -827,7 +670,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-<<<<<<< HEAD
 			"d-xs-none",
 			" .",
 			"d-sm-none",
@@ -944,143 +786,18 @@
 			"input:",
 			"input",
 			"red !important",
-=======
-			"setCenter",
-			"setMap",
-			"addmarkers",
-			"setCenter",
-			"position",
-			"query1",
-			"combined",
-			"the_query",
-			");",
-			"args",
-			"userLat",
-			"h2",
-			"tag",
-			"pastors",
-			"key",
-			"125",
-			"12",
-			"6",
-			"4",
-			"landscape",
-			"';",
-			".'",
-			"'.",
-			"echo '",
-			"get_sub_field('posters-landscape')",
-			"landscape",
-			"posters",
-			"<script",
-			"script",
-			"flex",
-			"ima",
-			"prev",
-			"slick",
-			"header",
-			"width",
-			"xs-12",
-			"grid-pic-up ",
-			"grid-box-small ",
-			"4",
-			"slider",
-			"featured-events-slider",
-			"Featured Events",
-			"video",
-			"Video",
-			"videos",
-			"Videos",
-			"videos",
-			"Videos",
-			"announce",
-			"location_markers",
-			"plant",
-			"location_markers",
-			" use_cache=\"no\"",
-			"your_ajax",
-			"ajax",
-			"homes",
-			"city",
-			"10px 0",
-			"100px",
-			"lower-header",
-			"leader",
-			"Leader",
-			"leaders",
-			"Leaders",
-			" ?>\n\t\t\t<div class=\"clear\"></div>\n\t\t\t<?php ",
-			") {\n\n\t\t\t\t\t\t\t}",
-			"if (",
-			"green",
-			"button",
-			"local",
-			"marker",
-			"sm-12",
-			"12",
-			"sm-12",
-			"push",
-			"Plant",
-			"800",
-			"slow",
-			"h4",
-			"<i class=\"fa fa-circle\" aria-hidden=\"true\"></i>",
-			"hidden-xs",
-			"hidden-sm",
-			"local",
-			"h3",
-			"responsive",
-			".text",
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 			";\n",
+			"\n.page-template-login,",
+			".home",
+			"a>",
 			"div",
-			"12",
+			"http://text100dev.com/mockup/ajb/",
 			"5",
 			"8",
-<<<<<<< HEAD
 			"xl",
 			"228",
 			"\n\t\tspan {\n\t\t\tcolor: $black !important;\n\t\t}",
 			"h3"
-=======
-			"featured-story",
-			"}\n",
-			"read-more",
-			".read-more",
-			"blue",
-			"h4",
-			"h2",
-			"4",
-			"watch",
-			"h2",
-			"row",
-			"9",
-			"3",
-			"12",
-			"6",
-			"50px",
-			"6",
-			"3",
-			"src",
-			"fancybox",
-			"fancybox href",
-			"6",
-			"small_groups_picture",
-			"grid-half",
-			"grid-box",
-			"col-lg-3 col-md-3",
-			"col-lg-3",
-			"contain",
-			"grid-box ",
-			" grid-box-small ",
-			"cover",
-			"grid-box",
-			" col-lg-3 col-md-3",
-			"col-lg-3",
-			"col-lg-6",
-			"background-size",
-			"cover"
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1102,45 +819,27 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
 			"selected": 2,
-=======
-			"selected": 0,
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 			"sheets":
 			[
 				{
 					"buffer": 0,
-<<<<<<< HEAD
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 5675,
-=======
-					"file": "wp-content/themes/understrap/page-videos.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7976,
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
 								5320,
 								5445
-=======
-								7737,
-								7737
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -1148,7 +847,7 @@
 						"translation.y": 2034.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1173,27 +872,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 306.0,
+						"translation.y": 204.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "wp-content/themes/understrap/loop-templates/row-event.php",
+					"file": "wp-content/themes/understrap/page-videos.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1035,
+						"buffer_size": 8467,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								261,
-								242
+								8440,
+								8440
 							]
 						],
 						"settings":
@@ -1202,242 +901,45 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3481.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "wp-content/themes/understrap/page-events.php",
-					"semi_transient": false,
+					"file": "wp-content/themes/understrap/footer.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3663,
+						"buffer_size": 1687,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2206,
-								2206
-							],
-							[
-								2303,
-								2303
-							],
-							[
-								2400,
-								2400
-							],
-							[
-								2992,
-								2992
-							],
-							[
-								3089,
-								3089
-							],
-							[
-								3186,
-								3186
+								857,
+								857
 							]
 						],
 						"settings":
 						{
-=======
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										7802,
-										7803
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										7445,
-										7446
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 1565.0,
+						"translation.y": 102.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1462,10 +964,10 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 306.0,
+						"translation.y": 289.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1481,8 +983,8 @@
 						"selection":
 						[
 							[
-								4583,
-								4583
+								67,
+								67
 							]
 						],
 						"settings":
@@ -1491,13 +993,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5178.0,
-=======
-						"translation.y": 4140.0,
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
+						"translation.y": 153.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9028,
+								9028
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 8428.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1531,10 +1059,7 @@
 		"cols":
 		[
 			0.0,
-<<<<<<< HEAD
 			0.584193752609,
-=======
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 			1.0
 		],
 		"rows":
@@ -1552,19 +1077,11 @@
 	{
 		"height": 0.0
 	},
-	"output.mdpopups":
-	{
-		"height": 0.0
-	},
 	"pinned_build_system": "",
 	"project": "genaero.sublime-project",
 	"replace":
 	{
-<<<<<<< HEAD
 		"height": 53.0
-=======
-		"height": 52.0
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1574,166 +1091,10 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
-=======
-				"footer",
-				"wp-content\\themes\\actschurch\\footer.php"
-			],
-			[
-				"header",
-				"wp-content\\themes\\actschurch\\header.php"
-			],
-			[
-				"_respon",
-				"wp-content\\themes\\actschurch\\sass\\responsive\\_responsive-classes.scss"
-			],
-			[
-				"page-lea",
-				"wp-content\\themes\\actschurch\\page-leadership.php"
-			],
-			[
-				"func",
-				"wp-content\\themes\\actschurch\\functions.php"
-			],
-			[
-				"main.j",
-				"wp-content\\themes\\actschurch\\js\\main.js"
-			],
-			[
-				"_homep",
-				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_homepage.scss"
-			],
-			[
-				"_conn",
-				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_connect.scss"
-			],
-			[
-				"visit",
-				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_visit.scss"
-			],
-			[
-				"content-lea",
-				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
-			],
-			[
-				"_visi",
-				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_visit.scss"
-			],
-			[
-				"content-leader",
-				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
-			],
-			[
-				"leader",
-				"wp-content\\themes\\actschurch\\page-leadership.php"
-			],
-			[
-				"page-lo",
-				"wp-content\\themes\\actschurch\\page-location.php"
-			],
-			[
-				"_home",
-				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_homepage.scss"
-			],
-			[
-				"_responsi",
-				"wp-content\\themes\\actschurch\\sass\\responsive\\_responsive-classes.scss"
-			],
-			[
-				"content-featu",
-				"wp-content\\themes\\actschurch\\template-parts\\post\\content-featured-stories.php"
-			],
-			[
-				"homepag",
-				"wp-content\\themes\\actschurch\\page-homepage.php"
-			],
-			[
-				"ageg",
-				"wp-content\\themes\\actschurch\\page-agegroup.php"
-			],
-			[
-				"homepage-lo",
-				"wp-content\\themes\\actschurch\\template-parts\\post\\content-homepage-location.php"
-			],
-			[
-				"page-hom",
-				"wp-content\\themes\\actschurch\\page-homepage.php"
-			],
-			[
-				"page-h",
-				"wp-content\\themes\\actschurch\\page-homes.php"
-			],
-			[
-				"_colo",
-				"wp-content\\themes\\actschurch\\sass\\variables-site\\_colors.scss"
-			],
-			[
-				"_visit",
-				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_visit.scss"
-			],
-			[
-				"main.js",
-				"wp-content\\themes\\actschurch\\js\\main.js"
-			],
-			[
-				"_connec",
-				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_connect.scss"
-			],
-			[
-				"homes",
-				"wp-content\\themes\\actschurch\\page-homes.php"
-			],
-			[
-				"_slick",
-				"wp-content\\themes\\actschurch\\sass\\modules\\_slick.scss"
-			],
-			[
-				"homepa",
-				"wp-content\\themes\\actschurch\\page-homepage.php"
-			],
-			[
-				"_fields",
-				"wp-content\\themes\\actschurch\\sass\\forms\\_fields.scss"
-			],
-			[
-				"_slick-theme",
-				"wp-content\\themes\\actschurch\\sass\\modules\\_slick-theme.scss"
-			],
-			[
-				"funct",
-				"wp-content\\themes\\actschurch\\functions.php"
-			],
-			[
-				"_homepage",
-				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_homepage.scss"
-			],
-			[
-				"_header",
-				"wp-content\\themes\\actschurch\\sass\\site\\_header-and-footer.scss"
-			],
-			[
-				"site-branding",
-				"wp-content\\themes\\actschurch\\template-parts\\header\\site-branding.php"
-			],
-			[
-				"content-leaders",
-				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
-			],
-			[
-				"leaders",
-				"wp-content\\themes\\actschurch\\page-leadership.php"
-			],
-			[
-				"footer.hp",
-				"wp-includes\\theme-compat\\footer.php"
-			],
-			[
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 				"_posts",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_posts-and-pages.scss"
 			],
 			[
-<<<<<<< HEAD
 				"header",
 				"wp-content\\themes\\actschurch\\header.php"
 			],
@@ -1742,14 +1103,12 @@
 				"wp-content\\themes\\actschurch\\js\\main.js"
 			],
 			[
-=======
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 				"_connect",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_connect.scss"
 			],
 			[
-				"functions",
-				"wp-content\\themes\\actschurch\\functions.php"
+				"leader",
+				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
 			],
 			[
 				"functions",
@@ -1760,8 +1119,20 @@
 				"wp-content\\themes\\actschurch\\page-homepage.php"
 			],
 			[
+				"_colo",
+				"wp-content\\themes\\actschurch\\sass\\variables-site\\_colors.scss"
+			],
+			[
 				"respons",
 				"wp-content\\themes\\actschurch\\sass\\responsive\\_responsive-classes.scss"
+			],
+			[
+				"_header",
+				"wp-content\\themes\\actschurch\\sass\\site\\_header-and-footer.scss"
+			],
+			[
+				"footer",
+				"wp-content\\themes\\actschurch\\footer.php"
 			],
 			[
 				"page-loca",
@@ -1772,8 +1143,16 @@
 				"wp-content\\themes\\actschurch\\page-locations.php"
 			],
 			[
+				"funct",
+				"wp-content\\themes\\actschurch\\functions.php"
+			],
+			[
 				"page-homes",
 				"wp-content\\themes\\actschurch\\page-homes.php"
+			],
+			[
+				"_homep",
+				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_homepage.scss"
 			],
 			[
 				"content-stori",
@@ -1816,15 +1195,11 @@
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_posts-and-pages.scss"
 			],
 			[
-<<<<<<< HEAD
 				"func",
 				"wp-content\\themes\\actschurch\\functions.php"
 			],
 			[
 				"homepa",
-=======
-				"homep",
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 				"wp-content\\themes\\actschurch\\page-homepage.php"
 			],
 			[
@@ -1846,6 +1221,10 @@
 			[
 				"page-locas",
 				"wp-content\\themes\\actschurch\\page-locations.php"
+			],
+			[
+				"homes",
+				"wp-content\\themes\\actschurch\\page-homes.php"
 			],
 			[
 				"_locatio",
@@ -1884,12 +1263,28 @@
 				"wp-content\\themes\\actschurch\\page-homepage.php"
 			],
 			[
+				"_visit",
+				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_visit.scss"
+			],
+			[
+				"content-lea",
+				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
+			],
+			[
+				"page-lea",
+				"wp-content\\themes\\actschurch\\page-leadership.php"
+			],
+			[
 				"beli",
 				"wp-content\\themes\\actschurch\\page-believe.php"
 			],
 			[
 				"expect",
 				"wp-content\\themes\\actschurch\\page-expect.php"
+			],
+			[
+				"page-hom",
+				"wp-content\\themes\\actschurch\\page-homepage.php"
 			],
 			[
 				"_head",
@@ -1920,6 +1315,10 @@
 				"wp-content\\themes\\actschurch\\searchform.php"
 			],
 			[
+				"_home",
+				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_homepage.scss"
+			],
+			[
 				"searchform",
 				"wp-content\\themes\\actschurch\\searchform.php"
 			],
@@ -1940,13 +1339,10 @@
 				"wp-content\\themes\\actschurch\\template-parts\\post\\content-video.php"
 			],
 			[
-<<<<<<< HEAD
 				"_connec",
 				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_connect.scss"
 			],
 			[
-=======
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 				"location.p",
 				"wp-content\\themes\\actschurch\\page-location.php"
 			],
@@ -1999,6 +1395,14 @@
 				"wp-content\\themes\\actschurch\\header.php"
 			],
 			[
+				"content-leaders",
+				"wp-content\\themes\\actschurch\\template-parts\\page\\content-leaders.php"
+			],
+			[
+				"homepag",
+				"wp-content\\themes\\actschurch\\page-homepage.php"
+			],
+			[
 				"_menus",
 				"wp-content\\themes\\actschurch\\sass\\navigation\\_menus.scss"
 			],
@@ -2017,6 +1421,10 @@
 			[
 				"page-home",
 				"wp-content\\themes\\actschurch\\page-homepage.php"
+			],
+			[
+				"_visi",
+				"wp-content\\themes\\actschurch\\sass\\site\\primary\\_visit.scss"
 			],
 			[
 				"foo",
@@ -2101,7 +1509,7 @@
 		[
 			[
 				"",
-				"C:\\xampp\\htdocs\\generationaerospace\\genaero.sublime-project"
+				"C:\\xampp\\htdocs\\tamantugu.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -2115,7 +1523,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -2123,11 +1531,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-<<<<<<< HEAD
 	"side_bar_width": 325.0,
-=======
-	"side_bar_width": 290.0,
->>>>>>> 6b5dd51c5f8b0f4979558d99f278001f29c54340
 	"status_bar_visible": true,
 	"template_settings":
 	{

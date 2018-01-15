@@ -10782,6 +10782,9 @@ readers do not read off random characters that represent icons */
 .clear:after {
   clear: both; }
 
+#page {
+  position: relative; }
+
 .HudOverlay {
   left: 0;
   background-position: center;
@@ -11113,11 +11116,10 @@ a {
 .arrowbtn {
   letter-spacing: 2px;
   position: relative;
-  display: block;
+  display: inline-block;
   outline: none;
   height: 47px;
   margin-left: 5px;
-  padding: 10px 35px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -11125,7 +11127,7 @@ a {
   -o-transition: 0.01s 0.23s ease-out all;
   -webkit-transition: 0.01s 0.23s ease-out all;
   transition: 0.01s 0.23s ease-out all;
-  width: 225px;
+  width: auto;
   z-index: 2; }
   .arrowbtn .icon-left {
     font-size: 27px;
@@ -11150,7 +11152,7 @@ a {
     left: 0;
     line-height: 45px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%; }
     .arrowbtn .arrowbtn-wrapper:before {
@@ -11165,6 +11167,10 @@ a {
       -o-transition: 0.4s 0.02s ease-in all;
       -webkit-transition: 0.4s 0.02s ease-in all;
       transition: 0.4s 0.02s ease-in all; }
+    .arrowbtn .arrowbtn-wrapper span {
+      display: block;
+      padding: 0 35px;
+      width: 100%; }
     .arrowbtn .arrowbtn-wrapper input {
       padding: 0 !important;
       height: 100% !important; }
@@ -11173,7 +11179,8 @@ a {
         .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:hover {
           background-color: transparent; }
   .arrowbtn:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
     .arrowbtn:hover .icon-left {
       left: 95%;
       -moz-transition: 0.2s 0.2s ease all;
@@ -11214,14 +11221,13 @@ a {
   position: relative;
   outline: none;
   height: 47px;
-  padding: 10px 35px;
   text-align: center;
   text-transform: uppercase;
   -moz-transition: 0.01s 0.23s ease-out all;
   -o-transition: 0.01s 0.23s ease-out all;
   -webkit-transition: 0.01s 0.23s ease-out all;
   transition: 0.01s 0.23s ease-out all;
-  width: 225px;
+  width: auto;
   z-index: 2; }
   .defaultbtn .icon-left {
     font-size: 27px;
@@ -11246,7 +11252,7 @@ a {
     left: 0;
     line-height: 45px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%; }
     .defaultbtn .defaultbtn-wrapper:before {
@@ -11261,8 +11267,13 @@ a {
       -o-transition: 0.4s 0.02s ease-in all;
       -webkit-transition: 0.4s 0.02s ease-in all;
       transition: 0.4s 0.02s ease-in all; }
+    .defaultbtn .defaultbtn-wrapper span {
+      display: block;
+      padding: 0 35px;
+      width: 100%; }
   .defaultbtn:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
     .defaultbtn:hover .defaultbtn-wrapper:before {
       left: 110%; }
   .defaultbtn:focus {
@@ -11293,6 +11304,7 @@ a {
       background-color: #000;
       color: #fff; }
 
+.arrowbtn + .arrowbtn
 .defaultbtn + .defaultbtn {
   margin-left: 15px; }
 
@@ -11785,31 +11797,31 @@ a#genaero-facebook-button {
 .page-template-add-video #wrapper-footer,
 .page-template-submit-idea #wrapper-footer,
 .home #wrapper-footer {
+  background-color: transparent;
   bottom: 0;
+  color: #a9c6e1;
   position: absolute;
   width: 100%; }
 
 #wrapper-footer {
+  background-color: #eee;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 700;
   line-height: 46px;
-  padding: 0; }
-  #wrapper-footer .site-footer {
-    bottom: 0;
-    color: #a9c6e1;
-    font-size: 0.8rem;
-    font-weight: 700;
-    left: 50%;
-    letter-spacing: 1px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: auto; }
-    #wrapper-footer .site-footer p {
-      margin: 0; }
+  letter-spacing: 1px;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%; }
+  #wrapper-footer .site-footer p {
+    margin: 0; }
+
+.page-template-page-videos #wrapper-footer {
+  background-color: transparent;
+  bottom: 0;
+  color: #fff;
+  position: absolute; }
 
 .home h1, .home h2, .home h3, .home h4, .home h5 {
   color: #fff !important; }
@@ -12174,6 +12186,53 @@ a#genaero-facebook-button {
   background-color: #eee; }
   .sub_main .wrapper {
     padding: 65px 0; }
+
+.juicer-section {
+  position: relative;
+  overflow: hidden; }
+  .juicer-section .juicer-wrapper {
+    background-image: url(../img/imgbg_homepage-event.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(3px);
+    height: 100%;
+    position: absolute;
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    width: 100%;
+    z-index: -1; }
+    .juicer-section .juicer-wrapper:before {
+      background-color: rgba(0, 0, 0, 0.5);
+      content: " ";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 1; }
+  .juicer-section .juicer-content {
+    padding-top: 66px;
+    padding-bottom: 66px; }
+    .juicer-section .juicer-content h2, .juicer-section .juicer-content p {
+      color: #fff; }
+
+.juicer-feed.image-grid li.feed-item,
+.juicer-feed.slider
+.juicer-feed.hip li.feed-item {
+  background-color: transparent;
+  height: 170px;
+  margin-bottom: 30px !important;
+  width: 170px; }
+  .juicer-feed.image-grid li.feed-item:hover .j-text,
+  .juicer-feed.slider
+  .juicer-feed.hip li.feed-item:hover .j-text {
+    visibility: hidden !important;
+    opacity: 0 !important; }
+
+.juicer-feed h1.referral,
+a.j-paginate.juicer-button {
+  display: none !important; }
 
 .submit_register--btn {
   border-left: 1px solid #fff;

@@ -6,6 +6,65 @@
 	}
 }
 
+.juicer-section {
+	position: relative;
+	overflow: hidden;
+
+	.juicer-wrapper {
+		background-image: url(../img/imgbg_homepage-event.jpg);
+		background-position: center;
+		background-size: cover;
+		filter: blur(3px);
+		height: 100%;
+		position: absolute;
+		@include scale(1.02);
+		width: 100%;
+		z-index: -1;
+
+		&:before {
+			background-color: rgba(0, 0, 0, 0.5);
+			content: " ";
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+
+	.juicer-content {
+		padding-top: 66px;
+		padding-bottom: 66px;
+
+		h2, p {
+			color: $white;
+		}
+	}
+}
+
+.juicer-feed.image-grid, 
+.juicer-feed.slider  
+.juicer-feed.hip {
+	li.feed-item {
+		background-color: transparent;
+		height: 170px;
+		margin-bottom: 30px !important;
+		width: 170px;
+
+		&:hover {
+			.j-text {
+				visibility: hidden !important;
+				opacity: 0 !important;
+			}
+		}
+	}
+}
+
+
+.juicer-feed h1.referral,
+a.j-paginate.juicer-button {
+	display: none !important;
+}
+
 .submit_register--btn {
 	border-left: 1px solid $white;
 	padding-left: 40px;
@@ -273,6 +332,7 @@
 		right: 50px;
 	}
 }
+
 .single-genaero_experiments .fancybox-slide>* {
 	margin: 0;
 	overflow: hidden;

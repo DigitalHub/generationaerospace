@@ -8,6 +8,9 @@
 	@include clearfix-after;
 }
 
+#page {
+	position: relative;
+}
 
 .HudOverlay {
 	left: 0;
