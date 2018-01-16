@@ -4,12 +4,17 @@
 
 
 .home {
-	.site-title {
+	.site-title,
+	.site-menu,
+	.site-toplogin_btn {
 		position: fixed;
 	}
-	.site-menu {
-		position: fixed;
-	}
+}
+
+.site-toplogin_btn {
+	position: absolute;
+	left: 6%;
+	top: 20px;
 }
 
 .site-title {
@@ -495,35 +500,42 @@
 .page-template-submit-idea,
 .home {
 	#wrapper-footer {
+		background-color: transparent;
 		bottom: 0;
+		color: #a9c6e1;
 		position: absolute;
 		width: 100%;
 	}
 }
 
 #wrapper-footer {
+	background-color: #eee;
+	color: $black;
+	font-size: 0.8rem;
+	font-weight: 700;
 	line-height: 46px;
+	letter-spacing: 1px;
 	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
 
 	.site-footer {
-		bottom: 0;
-		color: #a9c6e1;
-		font-size: 0.8rem;
-		font-weight: 700;
-		left: 50%;
-		letter-spacing: 1px;
-		position: relative;
-		text-align: center;
-		text-transform: uppercase;
-		@include translateX(-50%);
-		width: auto;
-
 		p {
 			margin: 0;
-
-
 		}
 	}
 }
+
+.page-template-page-videos {
+	padding-bottom: 66px;
+	#wrapper-footer {
+		background-color: transparent;
+		bottom: 0;
+		color: $white;
+		position: absolute;
+	}
+}
+
 //** Main Menu Ends **//
 //*******************************************//

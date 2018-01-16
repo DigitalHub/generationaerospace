@@ -96,6 +96,13 @@
 	}
 }
 
+.acf-map {
+	border: #ccc solid 1px;
+	height: 390px;
+	margin: 20px 0;
+	width: 100%;
+}
+
 .single_experiment,
 .single_trailblazers {
 	.single_experiment--row,
@@ -210,6 +217,10 @@
 		.meta-date {
 			display: inline-block;
 			width: 150px;
+
+			i {
+				margin-left: 3px;
+			}
 		}
 
 		.meta-keywords {
@@ -223,10 +234,6 @@
 
 				&:hover {
 					text-decoration: none;
-				}
-
-				&:first-child {
-					margin-right: 30px;
 				}
 			}
 		}
@@ -298,5 +305,12 @@
 		p:last-child {
 			margin-bottom: 0;
 		}
+	}
+}
+
+.faved {
+	color: $rrlimegreen;
+	i {
+		color: $rrlimegreen;
 	}
 }

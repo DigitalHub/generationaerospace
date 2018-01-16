@@ -131,18 +131,15 @@ if($_GET['keyword']) {
 						endif;
 						?>
 					</main><!-- #main -->
+					<div class="clear"></div>
 					<?php 
 					if (  $the_query->max_num_pages > 1 ) {
-						echo '<div class="row"><a href="#" class="genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'">More posts</a></div>';
+						echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
 					}
 					?>
-					<div class="clear"></div>
 					
 					<!-- TODO: STEF TO ADD LOAD MORE -->
-					<a href="#" class="defaultbtn btn--default aligncenter">
-						<div class="defaultbtn-wrapper"><span>See More Videos</span></div>
-					</a>
-
+					
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 		</div><!-- Container end -->

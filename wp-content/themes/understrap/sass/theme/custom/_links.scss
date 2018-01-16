@@ -56,10 +56,13 @@ a {
 
 .login_butt {
 	i:before {
+		color: $rrlimegreen;
 		content: fa-content($fa-var-cog);
 	}
 
 	&:hover {
+		color: $rrlimegreen;
+		text-decoration: none;
 		i:before {
 			content: fa-content($fa-var-minus);
 		}
@@ -244,16 +247,15 @@ a {
 .arrowbtn {
 	letter-spacing: 2px;
 	position: relative;
-	display: block;
+	display: inline-block;
 	outline: none;
 	height: 47px;
 	margin-left: 5px;
-	padding: 10px 35px;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	@include transition(.01s .23s ease-out all);
-	width: 225px;
+	width: auto;
 	z-index: 2;
 
 	.icon-left {
@@ -276,7 +278,7 @@ a {
 		left: 0;
 		line-height: 45px;
 		overflow: hidden;
-		position: absolute;
+		position: relative;
 		top: 0;
 		width: 100%;
 
@@ -289,6 +291,12 @@ a {
 			width: 15%;
 			z-index: -1;
 			@include transition(.4s .02s ease-in all);
+		}
+
+		span {
+			display: block;
+			padding: 0 35px;
+			width: 100%;
 		}
 
 		input {
@@ -307,6 +315,7 @@ a {
 
 	&:hover {
 		cursor: pointer;
+		text-decoration: none;
 
 		.icon-left {
 			left: 95%;
@@ -377,11 +386,10 @@ a {
 	position: relative;
 	outline: none;
 	height: 47px;
-	padding: 10px 35px;
 	text-align: center;
 	text-transform: uppercase;
 	@include transition(.01s .23s ease-out all);
-	width: 225px;
+	width: auto;
 	z-index: 2;
 
 	.icon-left {
@@ -404,7 +412,7 @@ a {
 		left: 0;
 		line-height: 45px;
 		overflow: hidden;
-		position: absolute;
+		position: relative;
 		top: 0;
 		width: 100%;
 
@@ -418,10 +426,17 @@ a {
 			z-index: -1;
 			@include transition(.4s .02s ease-in all);
 		}
+
+		span {
+			display: block;
+			padding: 0 35px;
+			width: 100%;
+		}
 	}
 
 	&:hover {
 		cursor: pointer;
+		text-decoration: none;
 		.defaultbtn-wrapper:before {
 			left: 110%;
 		}
@@ -468,6 +483,7 @@ a {
 }
 
 //if there two btn side by side
+.arrowbtn + .arrowbtn,
 .defaultbtn + .defaultbtn { 
 	margin-left: 15px;
 }

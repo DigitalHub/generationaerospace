@@ -10782,6 +10782,9 @@ readers do not read off random characters that represent icons */
 .clear:after {
   clear: both; }
 
+.page-template-page-videos #page {
+  position: relative; }
+
 .HudOverlay {
   left: 0;
   background-position: center;
@@ -10952,9 +10955,13 @@ a {
     text-transform: uppercase; }
 
 .login_butt i:before {
+  color: #cad63e;
   content: "\f013"; }
-.login_butt:hover i:before {
-  content: "\f068"; }
+.login_butt:hover {
+  color: #cad63e;
+  text-decoration: none; }
+  .login_butt:hover i:before {
+    content: "\f068"; }
 
 .close_butt {
   text-align: center; }
@@ -11113,11 +11120,10 @@ a {
 .arrowbtn {
   letter-spacing: 2px;
   position: relative;
-  display: block;
+  display: inline-block;
   outline: none;
   height: 47px;
   margin-left: 5px;
-  padding: 10px 35px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -11125,7 +11131,7 @@ a {
   -o-transition: 0.01s 0.23s ease-out all;
   -webkit-transition: 0.01s 0.23s ease-out all;
   transition: 0.01s 0.23s ease-out all;
-  width: 225px;
+  width: auto;
   z-index: 2; }
   .arrowbtn .icon-left {
     font-size: 27px;
@@ -11150,7 +11156,7 @@ a {
     left: 0;
     line-height: 45px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%; }
     .arrowbtn .arrowbtn-wrapper:before {
@@ -11165,6 +11171,10 @@ a {
       -o-transition: 0.4s 0.02s ease-in all;
       -webkit-transition: 0.4s 0.02s ease-in all;
       transition: 0.4s 0.02s ease-in all; }
+    .arrowbtn .arrowbtn-wrapper span {
+      display: block;
+      padding: 0 35px;
+      width: 100%; }
     .arrowbtn .arrowbtn-wrapper input {
       padding: 0 !important;
       height: 100% !important; }
@@ -11173,7 +11183,8 @@ a {
         .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:hover {
           background-color: transparent; }
   .arrowbtn:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
     .arrowbtn:hover .icon-left {
       left: 95%;
       -moz-transition: 0.2s 0.2s ease all;
@@ -11214,14 +11225,13 @@ a {
   position: relative;
   outline: none;
   height: 47px;
-  padding: 10px 35px;
   text-align: center;
   text-transform: uppercase;
   -moz-transition: 0.01s 0.23s ease-out all;
   -o-transition: 0.01s 0.23s ease-out all;
   -webkit-transition: 0.01s 0.23s ease-out all;
   transition: 0.01s 0.23s ease-out all;
-  width: 225px;
+  width: auto;
   z-index: 2; }
   .defaultbtn .icon-left {
     font-size: 27px;
@@ -11246,7 +11256,7 @@ a {
     left: 0;
     line-height: 45px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%; }
     .defaultbtn .defaultbtn-wrapper:before {
@@ -11261,8 +11271,13 @@ a {
       -o-transition: 0.4s 0.02s ease-in all;
       -webkit-transition: 0.4s 0.02s ease-in all;
       transition: 0.4s 0.02s ease-in all; }
+    .defaultbtn .defaultbtn-wrapper span {
+      display: block;
+      padding: 0 35px;
+      width: 100%; }
   .defaultbtn:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
     .defaultbtn:hover .defaultbtn-wrapper:before {
       left: 110%; }
   .defaultbtn:focus {
@@ -11293,6 +11308,7 @@ a {
       background-color: #000;
       color: #fff; }
 
+.arrowbtn + .arrowbtn,
 .defaultbtn + .defaultbtn {
   margin-left: 15px; }
 
@@ -11353,10 +11369,15 @@ a#genaero-facebook-button {
   a#genaero-facebook-button:hover {
     text-decoration: none; }
 
-.home .site-title {
+.home .site-title,
+.home .site-menu,
+.home .site-toplogin_btn {
   position: fixed; }
-.home .site-menu {
-  position: fixed; }
+
+.site-toplogin_btn {
+  position: absolute;
+  left: 6%;
+  top: 20px; }
 
 .site-title {
   left: 50%;
@@ -11785,31 +11806,33 @@ a#genaero-facebook-button {
 .page-template-add-video #wrapper-footer,
 .page-template-submit-idea #wrapper-footer,
 .home #wrapper-footer {
+  background-color: transparent;
   bottom: 0;
+  color: #a9c6e1;
   position: absolute;
   width: 100%; }
 
 #wrapper-footer {
+  background-color: #eee;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 700;
   line-height: 46px;
-  padding: 0; }
-  #wrapper-footer .site-footer {
+  letter-spacing: 1px;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%; }
+  #wrapper-footer .site-footer p {
+    margin: 0; }
+
+.page-template-page-videos {
+  padding-bottom: 66px; }
+  .page-template-page-videos #wrapper-footer {
+    background-color: transparent;
     bottom: 0;
-    color: #a9c6e1;
-    font-size: 0.8rem;
-    font-weight: 700;
-    left: 50%;
-    letter-spacing: 1px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: auto; }
-    #wrapper-footer .site-footer p {
-      margin: 0; }
+    color: #fff;
+    position: absolute; }
 
 .home h1, .home h2, .home h3, .home h4, .home h5 {
   color: #fff !important; }
@@ -11818,7 +11841,7 @@ a#genaero-facebook-button {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   right: 4%;
   top: 50%;
   text-align: right;
@@ -12173,7 +12196,54 @@ a#genaero-facebook-button {
 .sub_main {
   background-color: #eee; }
   .sub_main .wrapper {
-    padding: 65px 0; }
+    padding: 65px 0 20px; }
+
+.juicer-section {
+  position: relative;
+  overflow: hidden; }
+  .juicer-section .juicer-wrapper {
+    background-image: url(../img/imgbg_homepage-event.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(3px);
+    height: 100%;
+    position: absolute;
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    width: 100%;
+    z-index: -1; }
+    .juicer-section .juicer-wrapper:before {
+      background-color: rgba(0, 0, 0, 0.5);
+      content: " ";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 1; }
+  .juicer-section .juicer-content {
+    padding-top: 66px;
+    padding-bottom: 66px; }
+    .juicer-section .juicer-content h2, .juicer-section .juicer-content p {
+      color: #fff; }
+
+.juicer-feed.image-grid li.feed-item,
+.juicer-feed.slider
+.juicer-feed.hip li.feed-item {
+  background-color: transparent;
+  height: 170px;
+  margin-bottom: 30px !important;
+  width: 170px; }
+  .juicer-feed.image-grid li.feed-item:hover .j-text,
+  .juicer-feed.slider
+  .juicer-feed.hip li.feed-item:hover .j-text {
+    visibility: hidden !important;
+    opacity: 0 !important; }
+
+.juicer-feed h1.referral,
+a.j-paginate.juicer-button {
+  display: none !important; }
 
 .submit_register--btn {
   border-left: 1px solid #fff;
@@ -12309,6 +12379,10 @@ a#genaero-facebook-button {
       color: #fd7e2e;
       margin-right: 5px; }
 
+.entry-content .meta-date_fav {
+  border-top: none;
+  margin-bottom: 22px; }
+
 .featured_trailblazer--card {
   margin-bottom: 30px; }
   .featured_trailblazer--card a {
@@ -12337,7 +12411,7 @@ a#genaero-facebook-button {
           -webkit-transition: all 500ms ease;
           transition: all 500ms ease; }
         .featured_trailblazer--card a .featured_trailblazer--img .post-thumbnail--wrapper i {
-          color: transparent;
+          color: #fff;
           font-size: 80px;
           left: 50%;
           position: absolute;
@@ -12481,6 +12555,12 @@ a#genaero-facebook-button {
 .addthis_inline_share_toolbox_dznu .at-style-responsive .at-share-btn {
   border-radius: 30px !important; }
 
+.acf-map {
+  border: #ccc solid 1px;
+  height: 390px;
+  margin: 20px 0;
+  width: 100%; }
+
 .single_experiment .single_experiment--row,
 .single_experiment .single_trailblazers--row,
 .single_trailblazers .single_experiment--row,
@@ -12619,6 +12699,8 @@ a#genaero-facebook-button {
   .single-genaero_experiments .experiment-meta .meta-date {
     display: inline-block;
     width: 150px; }
+    .single-genaero_experiments .experiment-meta .meta-date i {
+      margin-left: 3px; }
   .single-genaero_experiments .experiment-meta .meta-keywords {
     display: inline-block;
     width: calc(100% - 160px); }
@@ -12628,8 +12710,6 @@ a#genaero-facebook-button {
       text-decoration: underline; }
       .single-genaero_experiments .experiment-meta .meta-keywords a:hover {
         text-decoration: none; }
-      .single-genaero_experiments .experiment-meta .meta-keywords a:first-child {
-        margin-right: 30px; }
 .single-genaero_experiments .experiment--link {
   position: relative; }
   .single-genaero_experiments .experiment--link .arrowbtn {
@@ -12680,6 +12760,11 @@ a#genaero-facebook-button {
     width: calc(100% - 101px); }
     .experiment--carousel_wrapper .experiment_steps p:last-child {
       margin-bottom: 0; }
+
+.faved {
+  color: #cad63e; }
+  .faved i {
+    color: #cad63e; }
 
 .sign-up-row,
 .login-row,

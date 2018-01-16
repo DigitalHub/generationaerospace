@@ -141,6 +141,7 @@ $template = 'video';
 					</a>
 					<div class="month_experiment--link" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></div>
 				</div>
+
 				<div class="month_experiment--content col-xl-4 col-xl-4 col-md-6 col-sm-12 col-xs-12">
 					<h2>Featured Video of the Month_</h2>
 					<h3><?=$title?></h3>
@@ -164,6 +165,7 @@ $template = 'video';
 				</div>
 			</div>
 			<hr>
+
 			<div class="row">
 				<div class="col-xl-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
@@ -184,13 +186,11 @@ $template = 'video';
 							if($count % 3 !== 0) {
 								echo '</div>';
 							}
-						} ?>
-					</div>
+						}
+					echo "</div>"; ?>
 					<hr>
-
 					<h3>All Videos_</h3>
-					<?php
-					if($all_videos_count > 0) {
+					<?php if($all_videos_count > 0) {
 						$count = 0;
 						foreach($all_videos_results as $video) {
 							if($count % 3 == 0) :
@@ -206,15 +206,25 @@ $template = 'video';
 							echo '</div>';
 						}
 					} ?>
-
 					<!-- TODO: STEF TO ADD LOAD MORE -->
-					<a href="#" class="defaultbtn btn--default aligncenter">
+					<!-- <a href="#" class="defaultbtn btn--default aligncenter">
 						<div class="defaultbtn-wrapper"><span>See More Videos</span></div>
-					</a>
-
+					</a> -->
 				</main><!-- #main -->
 			</div><!-- #primary -->
 		</div><!-- .row end -->
-	</div><!-- Container end -->
-</div><!-- Wrapper end --></section>
+	</div><!-- .container end -->
+</div><!-- .wrapper end -->
+</section>
+
+<section class="juicer-section">
+	<div class="juicer-wrapper"></div>
+	<div class="juicer-content container">
+		<h2 class="text-center">#GENAERO</h2>
+		<p class="highlight text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nemo modi fuga fugit cumque voluptas cum animi dolore accusamus.</p>
+		<ul class="juicer-feed" data-feed-id="harihasanah" data-per="12" data-columns="7"></ul>
+	</div>
+</section>
+<link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+<script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
 <?php get_footer(); ?>

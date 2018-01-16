@@ -27,15 +27,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php if ( is_singular( 'genaero_trailblazers' ) ) { //for fancybox   
 } else { ?>
 <div class="wrapper" id="wrapper-footer">
-	<div class="<?php echo esc_attr( $container ); ?>">
-		<div class="row">
-			<footer class="site-footer" id="colophon">
-				<div class="site-info">
-					<p>Copyright <?php echo date(Y); ?>. Powered by Rolls-Royce.</p>
-				</div><!-- .site-info -->
-			</footer><!-- #colophon -->
-		</div><!-- row end -->
-	</div><!-- container end -->
+	<footer class="site-footer" id="colophon">
+		<div class="site-info">
+			<p>Copyright <?php echo date(Y); ?>. Powered by Rolls-Royce.</p>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
 </div><!-- wrapper end -->
 
 <?php } ?>

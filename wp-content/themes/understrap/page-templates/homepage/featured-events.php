@@ -61,10 +61,11 @@ $second_query = new WP_Query($args2);
 						$summary = get_field('pre_event_summary');
 						echo substr($summary, 0, 200);
 						?>
-						<button class="arrowbtn btn--color">
+						<div class="clear"></div>
+						<a href="<?php the_permalink(); ?>" class="arrowbtn btn--color">
 							<span class="fas fa-long-arrow-alt-right icon-left"></span>
-							<div class="arrowbtn-wrapper"><a href="<?php the_permalink(); ?>"><span>Read More</span></a></div>
-						</button>
+							<div class="arrowbtn-wrapper"><span>Read More</span></div>
+						</a>
 					</div>
 					<?php
 				endwhile;
@@ -88,10 +89,10 @@ $second_query = new WP_Query($args2);
 					endwhile;
 				endif;
 				?>
-				<button class="arrowbtn btn--color">
+				<a href="<?php echo get_permalink( get_page_by_path( 'events' ) ) ?>" class="arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
-					<div class="arrowbtn-wrapper"><a href="<?php echo get_permalink( get_page_by_path( 'events' ) ) ?>"><span>See More Videos</span></a></div>
-				</button>
+					<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
+				</a>
 			</div>
 		</div>
 	</div>
