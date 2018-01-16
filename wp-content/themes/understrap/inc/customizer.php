@@ -41,18 +41,18 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		) );
 
 		 //select sanitization function
-        function understrap_theme_slug_sanitize_select( $input, $setting ){
-         
+		function understrap_theme_slug_sanitize_select( $input, $setting ){
+			
             //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
-            $input = sanitize_key($input);
- 
+			$input = sanitize_key($input);
+			
             //get the list of possible select options 
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-                             
+			$choices = $setting->manager->get_control( $setting->id )->choices;
+			
             //return input if valid or return default option
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
-             
-        }
+			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+			
+		}
 
 		$wp_customize->add_setting( 'understrap_container_type', array(
 			'default'           => 'container',
@@ -91,7 +91,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'understrap_sidebar_position', array(
 					'label'       => __( 'Sidebar Positioning', 'understrap' ),
 					'description' => __( "Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
-					'understrap' ),
+						'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_sidebar_position',
 					'type'        => 'select',
@@ -122,3 +122,19 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	}
 }
 add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
+
+function custom_post_thumbnail() {
+	if ( '' !== get_the_post_thumbnail() ) : 
+		$image_arr = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'medium');
+		$image_url = $image_arr[0]; 
+		if ($image_arr[1] > $image_arr[2]) {
+			$getimagesize = "landscape";
+		} else {
+			$getimagesize = "portrait";
+		} 
+		echo "<div class='post-thumbnail ".$getimagesize."'>";
+		the_post_thumbnail( 'medium' );
+		echo "<div class='bg-opaque'></div>";
+		echo "</div>";
+	endif;
+}

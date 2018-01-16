@@ -78,11 +78,13 @@ $tags = get_the_tags();
 					</ul>
 				</div>
 				<div class="experiment--link">
-					<?php the_post_thumbnail( 'large' ); ?>
-					<a data-fancybox data-src="#singleexperiement" href="javascript:;" class="arrowbtn btn--invert fullpopup">
-						<span class="fas fa-long-arrow-alt-right icon-left"></span>
-						<div class="arrowbtn-wrapper"><span>Try It Now</span></div>
-					</a>
+					<div class="content--overflow_wrapper">
+						<?php the_post_thumbnail( 'large' ); ?>
+						<a data-fancybox data-src="#singleexperiement" href="javascript:;" class="arrowbtn btn--invert fullpopup">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span>
+							<div class="arrowbtn-wrapper"><span>Try It Now</span></div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

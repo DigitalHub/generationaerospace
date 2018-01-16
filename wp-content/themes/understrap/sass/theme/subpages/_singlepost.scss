@@ -1,5 +1,39 @@
 .entry-content {
 	margin-bottom: 50px;
+
+	h2, h3 , h4 {
+		color: $black;
+
+	}
+}
+
+.singlepost--content,
+.event_summary,
+.entry-gallery,
+.entry-comments {
+
+	h2, h3 , h4 {
+		color: $black;
+
+	}
+	.highlight {
+		color: $rrskyblue;
+	}
+}
+
+.entry-gallery--wrapper {
+	a {
+		display: inline-block;
+		margin: 0 30px 30px 0;
+		height: 150px;
+		width: 150px;
+		background: black;
+		vertical-align: top;
+
+		&:nth-child(5n) {
+			margin: 0 0 30px;
+		}
+	}
 }
 
 //social media has icon and name
@@ -251,59 +285,70 @@
 	}
 }
 
-.experiment--carousel_wrapper {
-	width: 80%;
+.single_experimentcaraousel--wrapper {
+	height: 80%;
+	overflow-y: scroll;
 
-	.double_arrow.small_arrow.arrow_left {
-		left: -8%;
-	}
+	.experiment--carousel_wrapper {
+		width: 85%;
+		margin: auto;
 
-	.double_arrow.small_arrow.arrow_right {
-		right: -8%;
-	}
-
-	.experiment_counts {
-		float: left;
-		font-size: 24px;
-		font-weight: 400;
-		margin-right: 25px;
-		vertical-align: middle;
-		width: 25px;
-
-		.counting {
-			color: $rrlimegreen;
-			@include transition(all 500ms ease);
+		.double_arrow.small_arrow.arrow_left {
+			left: -8%;
 		}
 
-		.totalcount {
-			&:before { 
-				border-top: 1px solid $rrlimegreen;
-				content: "";
-				display: block;
-				margin: 10px 0;
-				width: 25px;
+		.double_arrow.small_arrow.arrow_right {
+			right: -8%;
+		}
+
+		.experiment_slide {
+			min-width: 550px;
+		}
+
+		.experiment_counts {
+			float: left;
+			font-size: 24px;
+			font-weight: 400;
+			margin-right: 25px;
+			vertical-align: middle;
+			width: 25px;
+
+			.counting {
+				color: $rrlimegreen;
+				@include transition(all 500ms ease);
+			}
+
+			.totalcount {
+				&:before { 
+					border-top: 1px solid $rrlimegreen;
+					content: "";
+					display: block;
+					margin: 10px 0;
+					width: 25px;
+				}
 			}
 		}
-	}
 
-	.tried_experiement {
-		background-color: #0e3e66;
-		margin-top: 40px;
-		padding: 35px 55px;
+		.tried_experiement {
+			background-color: #0e3e66;
+			margin-top: 40px;
+			padding: 35px 55px;
 
-		h3 {
-			color: $white;
+			h3 {
+				color: $white;
+			}
 		}
-	}
 
-	.experiment_steps {
-		border-left: 1px solid $white;
-		float: left;
-		padding-left: 25px;
-		width: calc(100% - 101px);
+		.experiment_steps {
+			border-left: 1px solid $white;
+			float: left;
+			min-height: 100px;
+			padding-left: 25px;
+			width: calc(100% - 101px);
 
-		p:last-child {
-			margin-bottom: 0;
+			p:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }

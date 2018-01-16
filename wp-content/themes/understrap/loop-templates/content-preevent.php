@@ -68,7 +68,8 @@ $summary = get_field('pre_event_summary');
 	<div class="singlepost--content">
 		<div class="container">
 			<h1><?php the_title(); ?></h1>
-			<p class="highlight text-center"><?=$date?>, <?=$venue?></p>
+			<p class="highlight text-center" style="color: #00aed4 !important;"><?=$date?>, <?=$venue?></p>
+			<div class="addthis_inline_share_toolbox_dznu"></div>
 		</div>
 	</div>
 </section>
@@ -79,23 +80,21 @@ $summary = get_field('pre_event_summary');
 				<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
 						<div class="entry-content">
-							<div class="addthis_inline_share_toolbox_dznu"></div>
-							<br>
 							<?=$summary?>
 							<br>
 							<h4>Date: <?=$date?><br/>
 								Time: <?=$time?><br/>
 								Venue: <?=$venue?></h4>
-							<br>
-							<?php if(!empty($map)) : ?>
-								<div class="acf-map">
-									<div class="marker" data-lat="<?php echo $map['lat']; ?>" data-lng="<?php echo $map['lng']; ?>"></div>
-								</div>
-							<?php endif; ?>
-						</div>
-					</main><!-- #main -->
-				</div><!-- #primary -->
-			</div><!-- .row end -->
-		</div><!-- Container end -->
-	</div><!-- Wrapper end -->
-</section>
+								<br>
+								<?php if(!empty($map)) : ?>
+									<div class="acf-map">
+										<div class="marker" data-lat="<?php echo $map['lat']; ?>" data-lng="<?php echo $map['lng']; ?>"></div>
+									</div>
+								<?php endif; ?>
+							</div>
+						</main><!-- #main -->
+					</div><!-- #primary -->
+				</div><!-- .row end -->
+			</div><!-- Container end -->
+		</div><!-- Wrapper end -->
+	</section>

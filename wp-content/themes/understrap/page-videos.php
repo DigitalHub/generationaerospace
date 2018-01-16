@@ -223,7 +223,7 @@ $template = 'video';
 	<div class="juicer-content container">
 		<h2 class="text-center">#GENAERO</h2>
 		<p class="highlight text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nemo modi fuga fugit cumque voluptas cum animi dolore accusamus.</p>
-		<ul class="juicer-feed" data-feed-id="harihasanah" data-per="12" data-columns="7"></ul>
+		<ul class="juicer-feed" data-feed-id="harihasanah" data-per="11" data-columns="5"></ul>
 	</div>
 </section>
 <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />

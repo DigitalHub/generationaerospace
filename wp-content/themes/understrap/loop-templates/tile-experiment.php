@@ -18,10 +18,7 @@ $results_count = $wpdb->num_rows;
 
 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 featured_experiment--card">
 	<a href="<?php the_permalink(); ?>">
-		<div class="post-thumbnail">
-			<?php the_post_thumbnail( 'medium' ); ?>
-			<div class="bg-opaque"></div>
-		</div>
+		<?php custom_post_thumbnail(); ?>
 	</a>
 	<div class="experiment--fav_link" data-experiment-id="<?=$experiment_id?>"><i class="fas fa-heart"></i></div>
 	<div class="experiment_card--content">
