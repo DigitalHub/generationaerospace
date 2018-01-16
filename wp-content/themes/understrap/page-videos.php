@@ -104,7 +104,6 @@ $template = 'video';
 				<div class="col-xl-8 ">
 					<h3 class="text-left">Search for Videos</h3>
 					<div class="search-form">
-						<!-- TODO: STEF DO SEARCH -->
 						<input type="text" id="video_search" name="video_search"/>
 						<button type="submit" id="video_submit" name="video_submit">
 							<i class="fal fa-search"></i>
