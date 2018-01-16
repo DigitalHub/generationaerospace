@@ -45,19 +45,21 @@ $featured_videos_results = $wpdb->get_results($featured_videos_sql);
 $featured_videos_count = $wpdb->num_rows;
 ?>
 
-<section class="subpage--hud">
+<section class="singlepost--hud content--overflow">
 	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
 	include(locate_template('loop-templates/single-hubbase.php')); ?>
 
 	<div class="singlepost--content content--overflow">
 		<div class="container">
 			<div class="col-xl-10 offset-xl-1 col-lg-10 offset-xl-1 col-md-10 offset-md-1 col-sm-12 col-xs-12">
-				<?php echo $embed_code; ?>
+				<div class="row">
+					<div class="content--overflow_wrapper"><?php echo $embed_code; ?></div>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="sub_main">
+<section class="single_main">
 	<div class="wrapper" id="single-wrapper">
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
@@ -65,7 +67,7 @@ $featured_videos_count = $wpdb->num_rows;
 					<main class="site-main" id="main" role="main">
 						<div class="row">
 							<div class="col-xl-2 col-lg-2 col-md-2 col-sm- col-xs- entry-share"><div class="row"><div class="addthis_inline_share_toolbox"></div></div></div>
-							<div class="col-xl-10 col-lg-10 col-md-10 col-sm- col-xs-">
+							<div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
 								<div class="entry-content">
 									<h2><?=$title?></h2>
 									<div class="meta-date_fav">
@@ -85,6 +87,7 @@ $featured_videos_count = $wpdb->num_rows;
 								</div>
 								<div class="entry-comments">
 									<h4>Add Comment</h4>
+									<hr style="border-top: 1px solid #00000047;">
 									<?php comments_template('', true); ?>
 								</div>
 							</div>

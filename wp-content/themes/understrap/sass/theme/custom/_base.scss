@@ -122,11 +122,22 @@
 	.singlepost--content {
 		position: relative;
 		top: 30%;
+
+		.content--overflow_wrapper {
+			max-height: 520px;
+			overflow: hidden;
+			width: 100%;
+		}
+		
+		iframe, img {
+			width: 100%;
+		}
 	}
 }
 
 .content--overflow + .single_main {
-	margin-top: 200px;
+	background-color: #eeeeee;
+	padding-top: 200px;
 }
 
 .singlepost--hud {

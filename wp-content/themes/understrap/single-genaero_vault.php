@@ -16,13 +16,9 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 	<div class="singlepost--content content--overflow">
 		<div class="container">
 			<div class="col-xl-10 offset-xl-1 col-lg-10 offset-xl-1 col-md-10 offset-md-1 col-sm-12 col-xs-12">
-				<?php echo $embed_code; ?>
-			</div>
-		</div>
-		<div class="subpage--content">
-			<div class="container">
+				
 				<h1><?php the_title(); ?></h1>
-				<p class="highlight"><?php the_excerpt(); ?></p>
+				<div class="highlight text-center"><?php the_excerpt(); ?></div>
 			</div>
 		</div>
 	</div>
