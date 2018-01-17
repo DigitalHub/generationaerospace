@@ -10,7 +10,7 @@
 $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
 ?> 
-<!-- <a href="#" class="scrolling up--button down--button">
+<a id="link" class="scrolling up--button down--button">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewbox="0 0 173.20508075688772 200" stroke="#fff" fill="#000" stroke-width="5">
@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div>
 		<span>scroll</span>
 	</div>
-</a> -->
+</a>
 <?php get_sidebar( 'footerfull' ); ?>
 
 

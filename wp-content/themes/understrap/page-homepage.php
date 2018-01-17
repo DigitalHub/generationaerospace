@@ -13,9 +13,7 @@
 get_header(); ?>
 
 <div class="wrapper" id="page-wrapper">
-	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
-	include(locate_template('loop-templates/home-hubbase.php')); ?>
-	<main id="main" class="site-main container" role="main">
+	<main id="main" class="site-main" role="main">
 		<ul class="chapter-selector">
 			<li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li>
 			<li data-menuanchor="featured_video"><a href="#featured_video">Find A Video</a></li>

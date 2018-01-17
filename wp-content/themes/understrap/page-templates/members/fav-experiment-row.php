@@ -14,7 +14,7 @@ $title = $result->post_title;
 $excerpt = substr($result->post_excerpt, 0, 150);
 ?>
 
-<div class="row">
+<div class="row videopost--row">
 	<div class="col-lg-3">
 		<a href="<?php echo get_permalink( $experiment_id )?>" target="_blank">
 			<?php echo get_the_post_thumbnail( $experiment_id, 'thumbnail' ); ?>
@@ -28,8 +28,7 @@ $excerpt = substr($result->post_excerpt, 0, 150);
 		?>
 	</div>
 	<div class="col-lg-1">
-		<!-- TODO: RACH TO REPLACE WITH ICONS -->
-		<button class="delete-fav-experiment" data-fav-id="<?=$fav_id?>">delete</button>
+		<a href="#" class="delete-fav-experiment edit_videopost--btn" data-fav-id="<?=$fav_id?>"><i class="fal fa-trash"></i></a>
 	</div>
 </div>
 

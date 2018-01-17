@@ -9,6 +9,8 @@
 
 ?>
 <section class="section" data-anchor="welcome">
+	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
+	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container welcome_content">
 		<div class="col-lg-10 offset-lg-1">
 			<h1 class="welcome_text">Welcome</h1>

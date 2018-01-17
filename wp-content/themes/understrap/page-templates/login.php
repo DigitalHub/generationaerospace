@@ -68,17 +68,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="full-width-page-wrapper">
 
 	<main id="main" class="site-main container" role="main">
-		<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
+		<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
 		include(locate_template('loop-templates/home-hubbase.php')); ?>
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row login-row">
 				<div class="col-xl-6 content-area" id="primary">
 
-					<a href="../sign-up" class="defaultbtn btn--color">
+					<a href="<?php bloginfo('url') ?>/sign-up" class="defaultbtn btn--color">
 						<div class="defaultbtn-wrapper"><span>New to GenAero?</span></div>
-					</a>
-					<a href="#" class="defaultbtn btn--color">
-						<div class="defaultbtn-wrapper"><span>Already Registered</span></div>
 					</a>
 
 					<h2>Login Now</h2>

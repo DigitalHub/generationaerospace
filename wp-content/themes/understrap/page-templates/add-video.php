@@ -97,7 +97,7 @@ if($_POST['video_submit']) {
 } ?>
 
 <div class="wrapper" id="page-wrapper">
-	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 		<div class="row dashboard-row">

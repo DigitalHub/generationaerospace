@@ -26,9 +26,9 @@ if($loggedin == 1) :
 	?>
 	<div class="site-toplogin_btn">
 		<a href="<?php echo get_permalink( get_page_by_path( 'member-dashboard' ) ) ?>" class="headerbutt login_butt">
-			<div class="hexagon-icon">
-				<img src="<?=$photo?>" id="profile_photo" alt="<?=$fullname?>'s Profile Photo" width="100px">
-			</div>
+
+			<div class="hexagon"><div class="hexagon-in1"><div style="background-image: url(<?=$photo?>);" class="hexagon-in2">
+			</div></div></div>
 			<span><?=$fullname;?></span>
 		</a>
 	</div>

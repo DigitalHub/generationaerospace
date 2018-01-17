@@ -1,6 +1,15 @@
 jQuery.noConflict();
 jQuery(document).ready(function($) {
 
+  jQuery('html, body').animate({scrollTop: '0'}, 500);
+  jQuery('#link').click(function(){
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+      jQuery('html, body').animate({scrollTop: '0'}, 500);
+    } else {
+      jQuery('html, body').animate({scrollTop: '+=300'}, 500);
+    }
+  });
+
   jQuery('.menu_butt').click(function(event){
     event.preventDefault();
     jQuery(this).toggleClass('opened');
@@ -265,22 +274,6 @@ jQuery(document).ready(function($) {
   //  })
   // });
 
-    // jQuery(document).on('click', '.scrolling', function(event){                        
-    //     event.preventDefault();
-    //     var y = $(window).scrollTop();
-    //     jQuery('html, body').animate({
-    //         scrollTop: y + 500
-    //     }, 500);
-    // });
-
-  //   jQuery(".watch_video--typewriter").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
-  //     jQuery(this).removeClass("animated")  
-  // })
-
-  //   jQuery(".watch_video--typewriter").hover(function(){
-  //     jQuery(this).addClass("animated");        
-  // })
-  
   function new_map( $el ) {
     var $markers = $el.find('.marker');
     var args = {
@@ -409,13 +402,3 @@ jQuery(document).ready(function($) {
     map = new_map( $(this) );
   });
 });
-
-
-
-// jQuery(window).scroll(function() {
-//     jQuery('.scrolling').addClass('up--button');
-//     if(jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {
-//         jQuery('.scrolling').removeClass('up--button');
-//         alert("bottom!");
-//     } 
-// });

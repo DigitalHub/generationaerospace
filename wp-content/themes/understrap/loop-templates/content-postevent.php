@@ -20,7 +20,7 @@ $gallery = get_field('gallery');
 $size = 'thumbnail';
 ?>
 <section class="singlepost--hud content--overflow">
-	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
 	include(locate_template('loop-templates/single-hubbase.php')); ?>
 
 	<div class="singlepost--content">

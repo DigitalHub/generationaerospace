@@ -14,48 +14,50 @@ $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 			<div class="col-xl-10 offset-xl-2 col-lg-11 offset-lg-1 col-md-12 col-sm-12 col-xs-12 single_experiment--methods_wrapper">
 				<div class="row single_experiment--row">
 					<div class="single_experimentcaraousel--wrapper">
-						<h1>Methods_</h1><!-- What Just Happened --><br/>
-						<div class="experiment--carousel_wrapper">
-							<div class="experiment--carousel">
-								<?php $totalcount = 0;
-								if(have_rows('steps')) :
-									$totalcount = count(get_field('steps'));
-									$count = 1;
-									while(have_rows('steps')) : the_row();
-										$photo = get_sub_field('photo');
-										$step = get_sub_field('step'); ?>
-										<div class="experiment_slide">
-											<div class="post-thumbnail"><img src="<?=$photo?>"></div><br>
-											<div class="experiment_counts">
-												<span class="counting">0<?=$count?></span><span class="totalcount">0<?=$totalcount?></span>
+						<div class="single_experimentcaraousel--hidbar">
+							<h1>Methods_</h1><!-- What Just Happened --><br/>
+							<div class="experiment--carousel_wrapper">
+								<div class="experiment--carousel">
+									<?php $totalcount = 0;
+									if(have_rows('steps')) :
+										$totalcount = count(get_field('steps'));
+										$count = 1;
+										while(have_rows('steps')) : the_row();
+											$photo = get_sub_field('photo');
+											$step = get_sub_field('step'); ?>
+											<div class="experiment_slide">
+												<div class="post-thumbnail"><img src="<?=$photo?>"></div><br>
+												<div class="experiment_counts">
+													<span class="counting">0<?=$count?></span><span class="totalcount">0<?=$totalcount?></span>
+												</div>
+												<div class="experiment_steps"><?=$step?></div>
 											</div>
-											<div class="experiment_steps"><?=$step?></div>
+											<?php $count++;
+										endwhile;
+									endif;
+
+									if($count === $totalcount + 1) : ?>
+									<div class="experiment_slide last_experiment--slide">
+										<?php echo get_field('lesson'); ?>
+
+										<div class="tried_experiement">
+											<h3>Tried the experiment?<br>Submit your experiemnt video here: </h3>
+
+											<?php if($loggedin === '0') {?>
+											<a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>" class="arrowbtn btn--color">
+												<span class="fas fa-long-arrow-alt-right icon-left"></span>
+												<div class="arrowbtn-wrapper"><span>Sign up or Register Now</span></div>
+											</a>
+											<?php } elseif($loggedin === '1') {?>
+											<a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>" class="arrowbtn btn--color">
+												<span class="fas fa-long-arrow-alt-right icon-left"></span>
+												<div class="arrowbtn-wrapper"><span>Submit My Video</span></div>
+											</a>
+											<?php } ?>
 										</div>
-										<?php $count++;
-									endwhile;
-								endif;
-
-								if($count === $totalcount + 1) : ?>
-								<div class="experiment_slide last_experiment--slide">
-									<?php echo get_field('lesson'); ?>
-
-									<div class="tried_experiement">
-										<h3>Tried the experiment?<br>Submit your experiemnt video here: </h3>
-
-										<?php if($loggedin === '0') {?>
-										<a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>" class="arrowbtn btn--color">
-											<span class="fas fa-long-arrow-alt-right icon-left"></span>
-											<div class="arrowbtn-wrapper"><span>Sign up or Register Now</span></div>
-										</a>
-										<?php } elseif($loggedin === '1') {?>
-										<a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>" class="arrowbtn btn--color">
-											<span class="fas fa-long-arrow-alt-right icon-left"></span>
-											<div class="arrowbtn-wrapper"><span>Submit My Video</span></div>
-										</a>
-										<?php } ?>
 									</div>
-								</div>
-							<?php endif; ?>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
 				</div>

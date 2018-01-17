@@ -73,7 +73,17 @@
 	fill: $white;
 }
 
-
+.page-template-sign-up,
+.page-template-login,
+.page-template-dashboard,
+.page-template-profile,
+.page-template-videos-list,
+.page-template-add-video,
+.page-template-submit-idea,
+.page-template-fav-videos,
+.page-template-fav-experiments {
+	overflow-y: hidden;
+}
 
 .page-template-login,
 .page-template-sign-up,
@@ -82,6 +92,8 @@
 .page-template-videos-list,
 .page-template-add-video,
 .page-template-submit-idea,
+.page-template-fav-videos,
+.page-template-fav-experiments,
 .home {
 	.HudOverlay {
 		height: 100%;
@@ -128,7 +140,7 @@
 			overflow: hidden;
 			width: 100%;
 		}
-		
+
 		iframe, img {
 			width: 100%;
 		}

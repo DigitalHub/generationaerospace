@@ -21,12 +21,15 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'generationaerospace');
+// define('DB_NAME', 'admin_generationaerospace');
 
 /** MySQL database username */
 define('DB_USER', 'root');
+// define('DB_USER', 'admin_admin');
 
 /** MySQL database password */
 define('DB_PASSWORD', '');
+// define('DB_PASSWORD', 'jQjmEK70');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

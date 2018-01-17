@@ -10827,6 +10827,17 @@ readers do not read off random characters that represent icons */
 .polygon {
   fill: #fff; }
 
+.page-template-sign-up,
+.page-template-login,
+.page-template-dashboard,
+.page-template-profile,
+.page-template-videos-list,
+.page-template-add-video,
+.page-template-submit-idea,
+.page-template-fav-videos,
+.page-template-fav-experiments {
+  overflow-y: hidden; }
+
 .page-template-login .HudOverlay,
 .page-template-sign-up .HudOverlay,
 .page-template-dashboard .HudOverlay,
@@ -10834,6 +10845,8 @@ readers do not read off random characters that represent icons */
 .page-template-videos-list .HudOverlay,
 .page-template-add-video .HudOverlay,
 .page-template-submit-idea .HudOverlay,
+.page-template-fav-videos .HudOverlay,
+.page-template-fav-experiments .HudOverlay,
 .home .HudOverlay {
   height: 100%;
   z-index: -1; }
@@ -10884,7 +10897,6 @@ readers do not read off random characters that represent icons */
   padding-top: 200px; }
 
 .singlepost--hud {
-  background-color: #eeeeee;
   height: 480px;
   width: 100%; }
 
@@ -11184,7 +11196,7 @@ a {
       padding: 0 35px;
       width: 100%; }
     .arrowbtn .arrowbtn-wrapper input {
-      padding: 0 !important;
+      padding: 0 30px !important;
       height: 100% !important; }
       .arrowbtn .arrowbtn-wrapper input.wpcf7-submit {
         color: #fff; }
@@ -11377,15 +11389,67 @@ a#genaero-facebook-button {
   a#genaero-facebook-button:hover {
     text-decoration: none; }
 
+.hexagon {
+  cursor: pointer;
+  height: 55px;
+  overflow: hidden;
+  -moz-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  width: 50px; }
+  .hexagon .hexagon-in1 {
+    height: 100%;
+    overflow: hidden;
+    -moz-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    width: 100%; }
+  .hexagon .hexagon-in2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    -moz-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    width: 100%; }
+
 .home .site-title,
 .home .site-menu,
 .home .site-toplogin_btn {
-  position: fixed; }
+  position: fixed;
+  z-index: 1; }
 
 .site-toplogin_btn {
   position: absolute;
   left: 6%;
   top: 20px; }
+  .site-toplogin_btn .hex {
+    position: relative;
+    width: 50px;
+    height: 28.87px;
+    background-color: #64C7CC;
+    margin: 14.43px 0; }
+  .site-toplogin_btn .hex:before,
+  .site-toplogin_btn .hex:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent; }
+  .site-toplogin_btn .hex:before {
+    bottom: 100%;
+    border-bottom: 14.43px solid #64C7CC; }
+  .site-toplogin_btn .hex:after {
+    top: 100%;
+    width: 0;
+    border-top: 14.43px solid #64C7CC; }
 
 .site-title {
   left: 50%;
@@ -11439,6 +11503,10 @@ a#genaero-facebook-button {
     left: 0; }
   .site-title.active .site-title-border--right {
     right: 0; }
+
+.page-template-page-videos .site-toplogin_btn,
+.page-template-page-videos .site-menu {
+  top: 10px; }
 
 .site-menu {
   position: absolute;
@@ -11755,8 +11823,8 @@ a#genaero-facebook-button {
       outline: none; }
 
 .scrolling {
-  bottom: 0;
-  right: 0;
+  bottom: 30px;
+  right: 30px;
   position: fixed; }
 
 .menu-content__footer {
@@ -11813,6 +11881,8 @@ a#genaero-facebook-button {
 .page-template-videos-list #wrapper-footer,
 .page-template-add-video #wrapper-footer,
 .page-template-submit-idea #wrapper-footer,
+.page-template-fav-videos #wrapper-footer,
+.page-template-fav-experiments #wrapper-footer,
 .home #wrapper-footer {
   background-color: transparent;
   bottom: 0;

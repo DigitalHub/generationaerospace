@@ -14,6 +14,8 @@ if($trailblazer) :
 	setup_postdata($post);
 	?>
 	<section class="section" data-anchor="genaero_trailbazers">
+		<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
+		include(locate_template('loop-templates/home-hubbase.php')); ?>
 		<div class="container sub_content">
 			<div class="row">
 				<div class="col-xl-4 featured_trailbazers">

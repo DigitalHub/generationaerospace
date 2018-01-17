@@ -23,6 +23,8 @@ endif;
 ?>
 
 <section class="section" data-anchor="featured_video">
+	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
+	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">
 			<div class="col-xl-4"><!-- offset-xl-1 -->
