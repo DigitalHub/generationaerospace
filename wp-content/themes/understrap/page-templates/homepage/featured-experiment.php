@@ -9,7 +9,7 @@
 ?>
 
 <section class="section" data-anchor="featured_experiment">
-	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-findanexperiment.jpg";
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">

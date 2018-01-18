@@ -1,4 +1,5 @@
 .home {
+	overflow: hidden;
 	h1, h2, h3, h4, h5 {
 		color: $white !important;
 	}
@@ -287,6 +288,10 @@
 
 			.video_slide {
 
+				img {
+					height: 345px;
+				}
+
 				h3 {
 					margin-top: 20px;
 				}
@@ -476,17 +481,49 @@
 }
 
 .featured_trailbazers {
-	img {
-		@include grayscale(100%);
-		@include transition(all 0.5s ease)
+	.trailblazer--name {
+		color: $rrskyblue !important;
 	}
-	&:hover img{
+	.post-thumbnail {
+		height: 350px;
+		margin-bottom: 17px;
+	}
+
+	img {
+		height: 470px;
+		@include grayscale(100%);
+		@include transition(all 0.5s ease);
+	}
+
+	&:hover img {
 		@include grayscale(0);
 	}
 }
 
 .featured_events {
+	.post-thumbnail {
+		height: 250px !important;
 
+		img {
+			height: 300px;
+		}
+
+		h3 {
+			font-weight: 700;
+			position: absolute;
+			bottom: 0;
+			left: 25px;
+			z-index: 1;
+		}
+	}
+}
+
+.featured--upcoming_event {
+	margin-bottom: 20px;
+
+	.post_date + p {
+		margin-bottom: 15px;
+	}
 }
 
 .post_date {
@@ -494,6 +531,10 @@
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 100%;
+
+	i {
+		margin-right: 5px;
+	}
 }
 
 

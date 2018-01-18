@@ -392,63 +392,19 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/page-homepage.php",
+			"file": "wp-content/themes/understrap/footer.php",
 			"settings":
 			{
-				"buffer_size": 1609,
+				"buffer_size": 904,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
+			"file": "wp-content/themes/understrap/sidebar-footerfull.php",
 			"settings":
 			{
-				"buffer_size": 272701,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/header.php",
-			"settings":
-			{
-				"buffer_size": 1807,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/page-templates/site-title.php",
-			"settings":
-			{
-				"buffer_size": 2072,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
-			"settings":
-			{
-				"buffer_size": 6515,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
-			"settings":
-			{
-				"buffer_size": 5264,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
-			"settings":
-			{
-				"buffer_size": 7930,
+				"buffer_size": 1676,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -457,7 +413,16 @@
 			"file": "wp-content/themes/understrap/js/main.js",
 			"settings":
 			{
-				"buffer_size": 11633,
+				"buffer_size": 12237,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "database/20180115-generationaerospace.sql",
+			"settings":
+			{
+				"buffer_size": 930910,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -466,8 +431,28 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 			"settings":
 			{
-				"buffer_size": 10283,
+				"buffer_size": 10280,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n/**\n * The base configuration for WordPress\n *\n * The wp-config.php creation script uses this file during the\n * installation. You don't have to use the web site, you can\n * copy this file to \"wp-config.php\" and fill in the values.\n *\n * This file contains the following configurations:\n *\n * * MySQL settings\n * * Secret keys\n * * Database table prefix\n * * ABSPATH\n *\n * @link https://codex.wordpress.org/Editing_wp-config.php\n *\n * @package WordPress\n */\n\n// ** MySQL settings - You can get this info from your web host ** //\n/** The name of the database for WordPress */\ndefine('DB_NAME', 'admin_generationaerospace');\n\n/** MySQL database username */\ndefine('DB_USER', 'admin_admin');\n\n/** MySQL database password */\ndefine('DB_PASSWORD', 'jQjmEK70');\n\n/** MySQL hostname */\ndefine('DB_HOST', 'localhost');\n\n/** Database Charset to use in creating database tables. */\ndefine('DB_CHARSET', 'utf8mb4');\n\n/** The Database Collate type. Don't change this if in doubt. */\ndefine('DB_COLLATE', '');\n\n/**#@+\n * Authentication Unique Keys and Salts.\n *\n * Change these to different unique phrases!\n * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}\n * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.\n *\n * @since 2.6.0\n */\ndefine('AUTH_KEY',         'ommP4+Tl{nixkBiL1}B.cA#tFjcMdxSfFVgl/(Uavz>wSFs>XveT8}Go4sdtw+z8');\ndefine('SECURE_AUTH_KEY',  'sMO+`G.,P%<9v|y8=JD0]u:_l`Wt<&NFO.0uzny2Uw&{;]8CW#3B&=g}FCUAt<.,');\ndefine('LOGGED_IN_KEY',    '0jPi:;.hTL=JNV]A<it)07pWXj3WJ{F{`{qI+h`m}:PK..XgV9me]L(U}I5ew.83');\ndefine('NONCE_KEY',        'l)y]>vG$_Zdz;7&4hP|:}GlgF%0C|t>4,iq@j+]`CY_Q!;CV9eIu,>aMEt04aV3#');\ndefine('AUTH_SALT',        '`dzf?p+UA7!{U&Yb;m@<&#|TeFzyY&]q-k@7@FQhZ8}1&.?S/P3{<7(G}?(POL9?');\ndefine('SECURE_AUTH_SALT', 'GvELwi|oM 8+qlAz*&AHy$&juf,alGrp9G@3=5Ufs.4sSBVLbU~{X.BX2ebKg;d7');\ndefine('LOGGED_IN_SALT',   ' >}&zh[ewGtlH6|k%T7|iTt.E4)Kx[**xyflRalfx[(Qtro~LV&fG0Y^&Ahe-y]8');\ndefine('NONCE_SALT',       '9cF)<`0}!{El)Qa/@u7[>dS;a>0MpuLk#S6_LXCr{afr iLVy((:KPT<C62*sgzN');\n\n/**#@-*/\n\n/**\n * WordPress Database Table prefix.\n *\n * You can have multiple installations in one database if you give each\n * a unique prefix. Only numbers, letters, and underscores please!\n */\n$table_prefix  = 'wp_';\n\n/**\n * For developers: WordPress debugging mode.\n *\n * Change this to true to enable the display of notices during development.\n * It is strongly recommended that plugin and theme developers use WP_DEBUG\n * in their development environments.\n *\n * For information on other constants that can be used for debugging,\n * visit the Codex.\n *\n * @link https://codex.wordpress.org/Debugging_in_WordPress\n */\ndefine('WP_DEBUG', false);\n\n/* That's all, stop editing! Happy blogging. */\n\n/** Absolute path to the WordPress directory. */\nif ( !defined('ABSPATH') )\n\tdefine('ABSPATH', dirname(__FILE__) . '/');\n\n/** Sets up WordPress vars and included files. */\nrequire_once(ABSPATH . 'wp-settings.php');\n\n/** YouTube API Key */\ndefine(YOUTUBE_API_KEY, 'AIzaSyDmfdGOPcsVKZr1WoXFz2sym3fnN4YRgAc');\n\n/** YouTube API Key */\ndefine(GMAP_API_KEY, 'AIzaSyBlgkeNb2t9Vs5fhd4QjzqudI2doBwUTDs');",
+			"file": "/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/wp-config.php",
+			"file_size": 3337,
+			"file_write_time": 131606776557746001,
+			"settings":
+			{
+				"buffer_size": 3243,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
+			"settings":
+			{
+				"buffer_size": 8009,
 				"line_ending": "Unix"
 			}
 		},
@@ -475,7 +460,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
 			"settings":
 			{
-				"buffer_size": 8097,
+				"buffer_size": 9475,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -556,15 +541,25 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/members"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-homepage.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_reboot.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/main.js",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_slick.scss",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/index.html",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/06a_desktop_AJB_ourpartners.html",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/06b_desktop_AJB_ourpartners.html",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/13a_desktop_AJB_FAQ.html",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/03_desktop_AJB_subpage_Leadership.html",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/03b_desktop_AJB_subpage_Single_Leadership.html",
@@ -572,19 +567,16 @@
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/13b_desktop_AJB_FAQ.html",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/members/fav-video-row.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/footer.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/js/main.js",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/fav-videos.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/login.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/sign-up.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/members/fav-experiment-row.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/members/video-row.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
 		"/C/Users/rachelle.quek/Desktop/Loading screen/lottie.js",
 		"/C/Users/rachelle.quek/Desktop/Loading screen/data.json",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-video.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-events.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-experiment.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/dashboard.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-trailbazers.php",
@@ -602,7 +594,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_vault.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-videos.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-vault.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-homepage.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/inc/customizer.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-experiment.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_experiments.php",
@@ -617,25 +608,21 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-title.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/site-toplogin.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/style.css",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/page-homepage.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/_keyframes.scss",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/style.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_responsive.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/row-event.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_responsive.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/sass/responsive/_responsive-master.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/single-hubbase.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-events.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/tile-video.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/tile-trailblazer.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_members.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_trailblazers.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/section-timeline.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/home-hubbase.php",
@@ -686,8 +673,7 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/fullwidthpage.php",
 		"/C/wamp64/www/generationaerospace/database/20180103-generationaerospace.sql",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/understrap/understrap.scss",
-		"/C/wamp64/www/generationaerospace/wp-includes/js/jquery/ui/effect-scale.min.js",
-		"/C/Users/rachelle.quek/Desktop/Loading screen/demo.html"
+		"/C/wamp64/www/generationaerospace/wp-includes/js/jquery/ui/effect-scale.min.js"
 	],
 	"find":
 	{
@@ -713,6 +699,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"localhost/",
+			".scrolling",
+			"up--butto",
+			".arrow",
+			"$",
+			"30px",
+			"scroll_butt",
+			"divider",
 			"0",
 			";\n",
 			"$",
@@ -832,15 +826,7 @@
 			"HubOverlay-Blur",
 			"HubOverlay--Blur",
 			"http://localhost/generationaerospace/wp-content/themes/understrap/img/imgbg_homepage-findanexperiment.jpg",
-			"  ",
-			"SVGID_2_",
-			"SVGID_1_",
-			"SVGID_2_",
-			"SVGID_1_",
-			"fill",
-			"blurlayer",
-			"SVGID_2_",
-			"clip_path_bg"
+			"  "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -848,6 +834,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"text100dev.com/",
 			"<?php $bgimg = get_template_directory_uri() . \"",
 			"text100dev.com/generationaerospace",
 			"text100dev.com",
@@ -864,7 +851,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -889,33 +876,61 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 334.0,
+						"translation.y": 2221.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "wp-content/themes/understrap/page-homepage.php",
+					"file": "wp-content/themes/understrap/footer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1609,
+						"buffer_size": 904,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								476,
-								476
+								271,
+								271
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/understrap/sidebar-footerfull.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								919,
+								919
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -925,199 +940,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 272701,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								251333,
-								251333
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 45111.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
 					"buffer": 3,
-					"file": "wp-content/themes/understrap/header.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1807,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1734,
-								1734
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 285.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wp-content/themes/understrap/page-templates/site-title.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2072,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1100,
-								1215
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6515,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5266,
-								5266
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5636.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5264,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4852,
-								4852
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 413.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7930,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								648,
-								648
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 162.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "wp-content/themes/understrap/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11633,
+						"buffer_size": 12237,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								349,
-								349
+								1983,
+								1983
+							],
+							[
+								2094,
+								2094
 							]
 						],
 						"settings":
@@ -1127,27 +967,63 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 30.0,
+						"translation.y": 510.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 4,
+					"file": "database/20180115-generationaerospace.sql",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 930910,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13747,
+								13757
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4249.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 5,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10283,
+						"buffer_size": 10280,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8491,
-								8491
+								8522,
+								8522
 							]
 						],
 						"settings":
@@ -1156,27 +1032,84 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7884.0,
+						"translation.y": 8647.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 6,
+					"file": "/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/wp-config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								450,
+								450
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8097,
+						"buffer_size": 9475,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4096,
-								4096
+								1328,
+								1328
 							]
 						],
 						"settings":
@@ -1185,14 +1118,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4671.0,
+						"translation.y": 1805.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 9,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
 					"semi_transient": false,
 					"settings":
@@ -1217,7 +1150,7 @@
 						"translation.y": 1016.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1273,7 +1206,7 @@
 	"project": "genaero.sublime-project",
 	"replace":
 	{
-		"height": 53.0
+		"height": 93.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1715,7 +1648,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

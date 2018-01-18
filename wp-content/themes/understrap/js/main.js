@@ -52,12 +52,11 @@ jQuery(document).ready(function($) {
         lazyLoading: true,
         afterLoad: function(anchorLink, index){
            if(index == $('.section').length){
-            jQuery('.scrolling').removeClass('down--button');
-            jQuery('.scrolling').addClass('up--button');
+            jQuery('.down--button').hide();
+            jQuery('.up--button').show();
         } else {
-            jQuery('.scrolling').addClass('down--button');
-            jQuery('.scrolling').removeClass('up--button');
-        }
+            jQuery('.down--button').show();
+            jQuery('.up--button').hide();       }
     }
 });
 

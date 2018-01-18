@@ -560,7 +560,10 @@ a {
 }
 
 //if there two btn side by side
-.arrowbtn + .arrowbtn,
+.arrowbtn + .arrowbtn { 
+	margin-left: 30px;
+}
+
 .defaultbtn + .defaultbtn { 
 	margin-left: 15px;
 }

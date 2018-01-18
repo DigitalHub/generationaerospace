@@ -120,22 +120,6 @@
 			transition: opacity 500ms ease-in 1s, right 500ms ease-in 1s;
 		}
 	}
-
-	&.active {
-		.site-title-border--left,
-		.site-title-border--right,
-		.main-logo {
-			opacity: 1;
-		}
-
-		.site-title-border--left {
-			left: 0;
-		}
-
-		.site-title-border--right {
-			right: 0;
-		}
-	}
 }
 //** Main Title Ends **//
 //*******************************************//
@@ -484,6 +468,7 @@
 
 .scrolling {
     bottom: 10%;
+    cursor: pointer;
     right: 2%;
 	position: fixed;
 }
