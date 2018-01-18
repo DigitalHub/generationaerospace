@@ -11909,6 +11909,12 @@ a#genaero-facebook-button {
   cursor: pointer;
   right: 2%;
   position: fixed; }
+  .scrolling .up--button .hexagon-icon {
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
 
 .menu-content__footer {
   bottom: 15px;
@@ -12399,6 +12405,7 @@ a#genaero-facebook-button {
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
+.featured_trailbazers.featured_events:hover img,
 .featured_trailbazers .featured_trailbazers--img:hover img {
   -webkit-filter: grayscale(0);
   -moz-filter: grayscale(0);
@@ -13364,9 +13371,10 @@ ul#menu-members-only-menu {
 
 .section.fp-section svg {
   opacity: 0;
-  -webkit-transition: opacity 0.4s ease;
+  filter: alpha(opacity=0);
   -moz-transition: opacity 0.4s ease;
   -o-transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease; }
 .section.fp-section .site-title a.site-title-border--left,
 .section.fp-section .site-title a.site-title-border--right,
@@ -13374,9 +13382,10 @@ ul#menu-members-only-menu {
 .section.fp-section .welcome_content,
 .section.fp-section .sub_content {
   opacity: 0;
-  -webkit-transition: opacity 0.6s ease;
+  filter: alpha(opacity=0);
   -moz-transition: opacity 0.6s ease;
   -o-transition: opacity 0.6s ease;
+  -webkit-transition: opacity 0.6s ease;
   transition: opacity 0.6s ease; }
 .section.fp-section.active .site-title a.site-title-border--left,
 .section.fp-section.active .site-title a.site-title-border--right,
@@ -13384,6 +13393,7 @@ ul#menu-members-only-menu {
 .section.fp-section.active svg {
   visibility: inherit;
   opacity: 1;
+  filter: alpha(opacity=100);
   -webkit-transition-delay: 0.4s;
   /* Safari */
   transition-delay: 0.4s; }
@@ -13391,6 +13401,7 @@ ul#menu-members-only-menu {
 .section.fp-section.active .sub_content {
   visibility: inherit;
   opacity: 1;
+  filter: alpha(opacity=100);
   -webkit-transition-delay: 1s;
   /* Safari */
   transition-delay: 1s; }
@@ -13402,95 +13413,122 @@ ul#menu-members-only-menu {
 @-webkit-keyframes infinite-spinning {
   from {
     -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
     -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 @-moz-keyframes infinite-spinning {
   from {
     -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
     -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 @-o-keyframes infinite-spinning {
   from {
     -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  to {
+    transform: rotate(0deg);
     -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  to {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 @keyframes infinite-spinning {
   from {
     -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
     -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 @-webkit-keyframes infinite-spinning-alt {
   from {
     -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); }
   to {
     -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); } }
 @-moz-keyframes infinite-spinning-alt {
   from {
     -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); }
   to {
     -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); } }
 @-o-keyframes infinite-spinning-alt {
   from {
     -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); }
   to {
     -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); } }
 @keyframes infinite-spinning-alt {
   from {
     -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); }
   to {
     -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); } }
 .tiny-stars {
   position: absolute;
   top: -15%;
-  opacity: 0.5;
+  opacity: 1;
+  filter: alpha(opacity=100);
   left: 50%;
   margin-left: -528px;
   z-index: 1;
@@ -13502,6 +13540,7 @@ ul#menu-members-only-menu {
 .middle-stars {
   margin-left: -538px;
   opacity: 0.5;
+  filter: alpha(opacity=50);
   -webkit-animation: infinite-spinning 30s infinite linear;
   -moz-animation: infinite-spinning 30s infinite linear;
   -o-animation: infinite-spinning 30s infinite linear;
@@ -13510,6 +13549,7 @@ ul#menu-members-only-menu {
 .planet-big {
   z-index: 2;
   opacity: 0.5;
+  filter: alpha(opacity=50);
   position: relative;
   margin: -6% auto 0;
   vertical-align: middle;

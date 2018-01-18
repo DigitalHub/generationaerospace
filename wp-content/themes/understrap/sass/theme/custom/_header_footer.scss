@@ -467,11 +467,17 @@
 //** Footer Starts **//
 
 .scrolling {
-    bottom: 10%;
-    cursor: pointer;
-    right: 2%;
+	bottom: 10%;
+	cursor: pointer;
+	right: 2%;
 	position: fixed;
+
+	.up--button .hexagon-icon {
+		@include rotate(180);
+	}
 }
+
+
 
 .menu-content__footer {
 	bottom: 15px;

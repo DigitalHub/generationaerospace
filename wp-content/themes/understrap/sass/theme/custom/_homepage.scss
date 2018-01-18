@@ -501,6 +501,7 @@
 		@include transition(all 0.5s ease);
 	}
 
+	&.featured_events,
 	.featured_trailbazers--img {	
 		&:hover img {
 			@include grayscale(0);
