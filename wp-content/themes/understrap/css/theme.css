@@ -12306,22 +12306,24 @@ a#genaero-facebook-button {
   position: relative;
   overflow: hidden;
   width: 100%; }
-  .featured_experiment--keywords a img {
-    height: 100%;
-    left: 50%;
-    max-width: none;
-    top: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    position: absolute;
-    width: auto; }
-  .featured_experiment--keywords a h3 {
-    bottom: 15px;
-    left: 15px;
-    position: absolute; }
+  .featured_experiment--keywords a .post-thumbnail {
+    height: 100%; }
+    .featured_experiment--keywords a .post-thumbnail img {
+      height: 100%;
+      left: 50%;
+      max-width: none;
+      top: 50%;
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: auto; }
+    .featured_experiment--keywords a .post-thumbnail h3 {
+      bottom: 15px;
+      left: 15px;
+      position: absolute; }
   .featured_experiment--keywords a:hover .bg-opaque {
     opacity: 0;
     filter: alpha(opacity=0); }
@@ -12397,7 +12399,7 @@ a#genaero-facebook-button {
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-.featured_trailbazers:hover img {
+.featured_trailbazers .featured_trailbazers--img:hover img {
   -webkit-filter: grayscale(0);
   -moz-filter: grayscale(0);
   filter: grayscale(0); }

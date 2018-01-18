@@ -374,20 +374,25 @@
 		overflow: hidden;
 		width: 100%;
 
-		img {
-			height: 100%;
-			left: 50%;
-			max-width: none;
-			top: 50%;
-			@include translate(-50%,-50%);
-			position: absolute;
-			width: auto;
-		}
 
-		h3 {
-			bottom: 15px;
-			left: 15px;
-			position: absolute;
+		.post-thumbnail {
+			height: 100%;
+			
+			img {
+				height: 100%;
+				left: 50%;
+				max-width: none;
+				top: 50%;
+				@include translate(-50%,-50%);
+				position: absolute;
+				width: auto;
+			}
+
+			h3 {
+				bottom: 15px;
+				left: 15px;
+				position: absolute;
+			}
 		}
 
 		&:hover {
@@ -484,6 +489,7 @@
 	.trailblazer--name {
 		color: $rrskyblue !important;
 	}
+
 	.post-thumbnail {
 		height: 350px;
 		margin-bottom: 17px;
@@ -495,8 +501,10 @@
 		@include transition(all 0.5s ease);
 	}
 
-	&:hover img {
-		@include grayscale(0);
+	.featured_trailbazers--img {	
+		&:hover img {
+			@include grayscale(0);
+		}
 	}
 }
 
