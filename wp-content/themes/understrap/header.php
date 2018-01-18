@@ -43,12 +43,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
-
+	
+	<?php if ( ! is_home() && is_front_page() ) {
+		get_template_part( 'page-templates/homepage/loading', 'bay' ); 
+	} ?>
 	<div class="hfeed site" id="page">
 
-		<?php if ( is_singular( 'genaero_trailblazers' ) ) { //for fancybox  
-		} else {
-			get_template_part( 'page-templates/site', 'toplogin_btn' );
-			get_template_part( 'page-templates/site', 'title' );
-			get_template_part( 'page-templates/navigation', 'top' );
-		} ?>
+	<?php if ( is_singular( 'genaero_trailblazers' ) ) { //for fancybox  
+	} else {
+		get_template_part( 'page-templates/site', 'toplogin_btn' );
+		get_template_part( 'page-templates/site', 'title' );
+		get_template_part( 'page-templates/navigation', 'top' );
+	} ?>

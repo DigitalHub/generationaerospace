@@ -20,7 +20,7 @@
 			<div class="menu-content__wrapper">
 				<nav class="menu-content__nav">
 					<div class="menu-content__nav--label">menu</div>
-					<div class="menu-content__nav--login small-text"><a href="#">Login</a> or <a href="#">Register</a> to join us</div>
+					<div class="menu-content__nav--login small-text"><a href="<?php bloginfo('url') ?>/login">Login</a> or <a href="<?php bloginfo('url') ?>/sign-up">Register</a> to join us</div>
 					<div class="corner corner-top-left"></div>
 					<div class="corner corner-top-right"></div>
 					<div class="corner corner-bottom-left"></div>

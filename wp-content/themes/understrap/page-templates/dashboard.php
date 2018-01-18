@@ -57,14 +57,13 @@ if($video_results_count > 0) {
 ?>
 
 <div class="wrapper" id="page-wrapper">
-	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
-	include(locate_template('loop-templates/home-hubbase.php')); ?>
+	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
+	include(locate_template('loop-templates/hub-base.php')); ?>
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row dashboard-row">
 			<?php get_sidebar( 'left' ); ?>
-			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
-				id="primary">
+			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12<?php else : ?>col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12<?php endif; ?> content-area" id="primary">
 
 				<main class="site-main container dashboard_content" id="main" role="main">
 					<div class="row">

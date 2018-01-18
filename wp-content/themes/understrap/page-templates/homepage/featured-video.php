@@ -23,12 +23,14 @@ endif;
 ?>
 
 <section class="section" data-anchor="featured_video">
+	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-feature-video.jpg";
+	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">
 			<div class="col-xl-4"><!-- offset-xl-1 -->
 				<h1>Featured Video_</h1>
 				<div class="highlight"><?php echo get_field('featured_video_copy'); ?></div>
-				<a href="<?php echo get_permalink( get_page_by_path( 'find-a-video' ) ); ?>" class="arrowbtn btn--color">
+				<a href="<?php bloginfo('url') ?>/find-a-video/" class="arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
 					<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
 				</a>
@@ -41,7 +43,9 @@ endif;
 							$thumbnail = getYoutubeThumbnail($video[0]->youtube);
 							?>
 							<div class="video_slide">
-								<img src="<?=$thumbnail?>" />
+								<div class="post-thumbnail">
+									<img src="<?=$thumbnail?>" />
+								</div>
 								<h3><?=$video[0]->title?></h3>
 								<p><?=$video[0]->fullname?></p>
 							</div>

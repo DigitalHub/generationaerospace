@@ -1,13 +1,36 @@
 
 //*******************************************//
 //** Main Title Starts **//
+.hexagon {
+	cursor: pointer;
+	height: 55px;
+	overflow: hidden;
+	@include rotate(120);
+	width: 50px;
 
+	.hexagon-in1 {
+		height: 100%;
+		overflow: hidden;
+		@include rotate(-60);
+		width: 100%;
+	}
+
+	.hexagon-in2 {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 100%;
+		@include rotate(-60);
+		width: 100%;
+	}
+}
 
 .home {
 	.site-title,
 	.site-menu,
 	.site-toplogin_btn {
 		position: fixed;
+		z-index: 1;
 	}
 }
 
@@ -15,6 +38,34 @@
 	position: absolute;
 	left: 6%;
 	top: 20px;
+
+	.hex {
+		position: relative;
+		width: 50px; 
+		height: 28.87px;
+		background-color: #64C7CC;
+		margin: 14.43px 0;
+	}
+
+	.hex:before,
+	.hex:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+	}
+
+	.hex:before {
+		bottom: 100%;
+		border-bottom: 14.43px solid #64C7CC;
+	}
+
+	.hex:after {
+		top: 100%;
+		width: 0;
+		border-top: 14.43px solid #64C7CC;
+	}
 }
 
 .site-title {
@@ -35,13 +86,14 @@
 			// @include opacity(0);
 			transition: opacity 200ms ease-in 1.2s;
 			width: 80%;
+			margin-top: -10px;
 		}
 
 		.site-title-border {
 			position: absolute;
 			width: 16px;
 			height: 42px;
-			top: 40%;
+			top: 30%;
 			margin-top: -17px;
 			stroke: $white;
 			fill: none;
@@ -69,26 +121,18 @@
 			transition: opacity 500ms ease-in 1s, right 500ms ease-in 1s;
 		}
 	}
-
-	&.active {
-		.site-title-border--left,
-		.site-title-border--right,
-		.main-logo {
-			opacity: 1;
-		}
-
-		.site-title-border--left {
-			left: 0;
-		}
-
-		.site-title-border--right {
-			right: 0;
-		}
-	}
 }
 //** Main Title Ends **//
 //*******************************************//
 //** Main Menu Starts **//
+
+.page-template-page-videos {
+	.site-toplogin_btn,
+	.site-menu {
+		top: 10px;
+	}
+
+}
 
 .site-menu {
 	position: absolute;
@@ -424,10 +468,17 @@
 //** Footer Starts **//
 
 .scrolling {
-	bottom: 0;
-	right: 0;
+	bottom: 10%;
+	cursor: pointer;
+	right: 2%;
 	position: fixed;
+
+	.up--button .hexagon-icon {
+		@include rotate(180);
+	}
 }
+
+
 
 .menu-content__footer {
 	bottom: 15px;
@@ -498,6 +549,8 @@
 .page-template-videos-list,
 .page-template-add-video,
 .page-template-submit-idea,
+.page-template-fav-videos,
+.page-template-fav-experiments,
 .home {
 	#wrapper-footer {
 		background-color: transparent;

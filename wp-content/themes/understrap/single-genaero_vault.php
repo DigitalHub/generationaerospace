@@ -10,7 +10,7 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 
 
 <section class="subpage--hud">
-	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
 	include(locate_template('loop-templates/single-hubbase.php')); ?>
 
 	<div class="singlepost--content content--overflow">

@@ -12,10 +12,9 @@
 
 get_header(); ?>
 
+<div class="clear"></div>
 <div class="wrapper" id="page-wrapper">
-	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
-	include(locate_template('loop-templates/home-hubbase.php')); ?>
-	<main id="main" class="site-main container" role="main">
+	<main id="main" class="site-main" role="main">
 		<ul class="chapter-selector">
 			<li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li>
 			<li data-menuanchor="featured_video"><a href="#featured_video">Find A Video</a></li>
@@ -26,14 +25,14 @@ get_header(); ?>
 		</ul>
 
 		<div id="fullpage">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<?php get_template_part( 'page-templates/homepage/featured', 'welcome' ); ?>
-				<?php get_template_part( 'page-templates/homepage/featured', 'video' ); ?>
-				<?php get_template_part( 'page-templates/homepage/featured', 'experiment' ); ?>
-				<?php get_template_part( 'page-templates/homepage/genaero', 'explorer' ); ?>
-				<?php get_template_part( 'page-templates/homepage/genaero', 'trailbazers' ); ?>
-				<?php get_template_part( 'page-templates/homepage/featured', 'events' ); ?>
-			<?php endwhile;endif; ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post();
+			get_template_part( 'page-templates/homepage/featured', 'welcome' );
+			get_template_part( 'page-templates/homepage/featured', 'video' );
+			get_template_part( 'page-templates/homepage/featured', 'experiment' );
+			get_template_part( 'page-templates/homepage/genaero', 'explorer' );
+			get_template_part( 'page-templates/homepage/genaero', 'trailbazers' );
+			get_template_part( 'page-templates/homepage/featured', 'events' ); 
+			endwhile;endif; ?>
 		</div>
 	</main>
 </div>

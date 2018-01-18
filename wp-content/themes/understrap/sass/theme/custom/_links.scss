@@ -26,8 +26,9 @@ a {
 	width: 50px;
 
 	.hexagon-icon {
-		position: relative;
 		height: 50px;
+		overflow: hidden;
+		position: relative;
 		width: 50px;
 
 		svg {
@@ -99,10 +100,86 @@ a {
 }
 
 .scroll_butt {
-	i:before {
-		content: fa-content($fa-var-long-arrow-down);
+	i {
+		margin: -5px -6px;
+		&:before {
+			content: fa-content($fa-var-long-arrow-down);
+		}
 	}
 }
+
+.text--left {
+	.headerbutt {
+		width: auto;
+
+		.hexagon-icon {
+			float: right;
+		}
+
+		span {
+			float: left;
+			margin: 15px 5px 0 0;
+		}
+	}
+}
+
+.bounce {
+	-moz-animation: bounce 3s infinite;
+	-webkit-animation: bounce 3s infinite;
+	animation: bounce 3s infinite;
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-moz-transform: translateY(-25px);
+		transform: translateY(-25px);
+	}
+	60% {
+		-moz-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-25px);
+		transform: translateY(-25px);
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-moz-transform: translateY(-25px);
+		-ms-transform: translateY(-25px);
+		-webkit-transform: translateY(-25px);
+		transform: translateY(-25px);
+	}
+	60% {
+		-moz-transform: translateY(-15px);
+		-ms-transform: translateY(-15px);
+		-webkit-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+}
+
+
+
 
 .menu_butt {
 	display: block;
@@ -300,7 +377,7 @@ a {
 		}
 
 		input {
-			padding: 0 !important;
+			padding: 0 30px !important;
 			height: 100% !important;
 
 			&.wpcf7-submit {
@@ -483,7 +560,10 @@ a {
 }
 
 //if there two btn side by side
-.arrowbtn + .arrowbtn,
+.arrowbtn + .arrowbtn { 
+	margin-left: 30px;
+}
+
 .defaultbtn + .defaultbtn { 
 	margin-left: 15px;
 }
@@ -544,9 +624,13 @@ a#genaero-facebook-button {
 	vertical-align: middle;
 	width: 50%;
 
-	i {
+	&:before {
 		background-color: #354f88;
-		font-size: 30px;
+		background-image: url(../img/FaceBook-Icon.png);
+		background-size: 80%;
+		background-repeat: no-repeat;
+		background-position: center;
+		content: " ";
 		left: 0;
 		height: 100%;
 		line-height: 40px;

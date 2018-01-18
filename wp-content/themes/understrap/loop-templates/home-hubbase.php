@@ -5,7 +5,30 @@
  * @package understrap
  */?>
  <div class="HudOverlay" style="background-image: url('<?php echo $bgimg; ?>');">
- 	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
+
+ 	<svg class="lines">
+ 		<line x1="220" x2="220" y1="0" y2="100%">
+ 			<animate attributeName="opacity" values="0;0.5;0" dur="10s" repeatCount="indefinite"/>
+ 		</line>
+ 		<line x1="500" x2="500" y1="0" y2="100%">
+ 			<animate attributeName="opacity" values="1.2;0;0" dur="15s" repeatCount="indefinite"/>
+ 		</line>
+ 		<line x1="550" x2="550" y1="0" y2="100%">
+ 			<animate attributeName="opacity" values="0;0.4;0" dur="30s" repeatCount="indefinite"/>
+ 		</line>
+ 		<line x1="1200" x2="1200" y1="0" y2="100%">
+ 			<animate attributeName="opacity" values="1.4;0;1.3" dur="15s" repeatCount="indefinite"/>
+ 		</line>
+ 	</svg>
+
+ 	<svg class="circlerotate" viewBox="0 0 1200 1200">
+ 		<g transform="translate(600, 600)"> 
+ 			<circle cx="0" cy="0" r="600">
+ 				<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0" to="360" begin="0" dur="500s" repeatCount="indefinite" />
+ 			</circle>
+ 		</g>
+ 	</svg> 
+ 	<svg class="HudOverlayme" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
  		<filter height="120%" id="blurlayer" width="110%">
  			<feGaussianBlur  result="blur" stdDeviation="2"></feGaussianBlur>
  		</filter>

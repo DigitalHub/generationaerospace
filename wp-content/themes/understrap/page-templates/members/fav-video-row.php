@@ -24,10 +24,9 @@ $json = json_decode($data);
 $thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
 ?>
 
-<div class="row">
+<div class="row videopost--row">
 	<div class="col-lg-3">
-		<!-- TODO: REPLACE VIDEO WITH FANCYBOX LINK -->
-		<a href="<?=$youtube?>" target="_blank">
+		<a data-fancybox href="<?=$youtube?>" target="_blank">
 			<img src="<?=$thumbnail_url?>" alt="<?=$title?>">
 		</a>
 	</div>
@@ -36,8 +35,7 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
 		<span><?=$desc?>...</span>
 	</div>
 	<div class="col-lg-1">
-		<!-- TODO: RACH TO REPLACE WITH ICONS -->
-		<button class="delete-fav-video" data-fav-id="<?=$fav_id?>">delete</button>
+		<a href="#" class="delete-fav-video edit_videopost--btn" data-fav-id="<?=$fav_id?>"><i class="fal fa-trash"></i></a>
 	</div>
 </div>
 

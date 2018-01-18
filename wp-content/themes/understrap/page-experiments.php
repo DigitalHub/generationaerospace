@@ -69,7 +69,7 @@ if($_GET['keyword']) {
 ?>
 
 <section class="subpage--hud">
-	<?php $bgimg = "http://localhost/generationaerospace/wp-content/themes/understrap/img/Dashboard_Bg.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
 	include(locate_template('loop-templates/hub-base.php')); ?>
 	<div class="subpage--content">
 		<div class="container">
@@ -98,8 +98,7 @@ if($_GET['keyword']) {
 									echo ', ';
 								}
 							}
-						}
-						?>
+						} ?>
 					</p>
 				</div>
 			</div>
@@ -132,14 +131,10 @@ if($_GET['keyword']) {
 						?>
 					</main><!-- #main -->
 					<div class="clear"></div>
-					<?php 
-					if (  $the_query->max_num_pages > 1 ) {
+					<?php if (  $the_query->max_num_pages > 1 ) {
 						echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
-					}
-					?>
-					
+					} ?>
 					<!-- TODO: STEF TO ADD LOAD MORE -->
-					
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 		</div><!-- Container end -->

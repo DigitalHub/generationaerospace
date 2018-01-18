@@ -9,6 +9,8 @@
 ?>
 
 <section class="section" data-anchor="featured_experiment">
+	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-findanexperiment.jpg";
+	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">
 			<div class="col-xl-4 "><!-- offset-xl-1 -->
@@ -28,7 +30,9 @@
 							$count = 0;
 							while(have_rows('featured_tags')) : the_row();
 								$tag = get_sub_field('tag');
-								$image = get_sub_field('image');
+								$image_object  = get_sub_field('image');
+								$image_size = 'large';
+								$image_url = $image_object['sizes'][$image_size];
 
 								if($count % 2 == 0) :
 									echo $count > 0 ? '</div>' : '';
@@ -37,9 +41,11 @@
 								?>
 								<div class="col-xl-6 hover--topbox">
 									<a href="<?php echo get_permalink( get_page_by_path( 'find-an-experiment' ) ).'?keyword='.$tag->name; ?>">
-										<img src="<?=$image['url']?>" />
-										<div class="bg-opaque"></div>
-										<h3><?php echo $tag->name; ?></h3>
+										<div class="post-thumbnail">
+											<img src="<?=$image_url?>" />
+											<div class="bg-opaque"></div>
+											<h3><?php echo $tag->name; ?></h3>
+										</div>
 									</a>
 								</div>
 								<?php

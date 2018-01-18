@@ -26,8 +26,7 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
 
 <div class="row videopost--row">
 	<div class="col-lg-3">
-		<!-- TODO: REPLACE VIDEO WITH FANCYBOX LINK -->
-		<a href="<?=$youtube?>" target="_blank">
+		<a data-fancybox href="<?=$youtube?>" target="_blank">
 			<img src="<?=$thumbnail_url?>" alt="<?=$title?>">
 		</a>
 	</div>

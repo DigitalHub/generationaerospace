@@ -1,8 +1,73 @@
 .home {
+	overflow: hidden;
 	h1, h2, h3, h4, h5 {
 		color: $white !important;
 	}
 }
+
+#loadingbay {
+	background-color: $black;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000000;
+}
+
+#lottie{
+	background-color: $black;
+	width: 120%;
+	height: 120%;
+	margin: auto;
+	top: -10%;
+	left: -10%;
+	position: absolute;
+	display:block;
+	overflow: hidden;
+	transform: translate3d(0,0,0);
+	text-align: center;
+	opacity: 1;
+}
+
+.progress--logo {
+	position: absolute;
+	width: 30%;
+	left: 50%;
+	transform: translate(-50%,0);
+	top: 10%;
+}
+
+.progress--wrap { 
+	overflow: hidden;
+	padding: 0;
+	left: 50%;
+	bottom: 10%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 135px;
+
+	.progression { 
+		color: $white;
+		display: inline-block;
+		letter-spacing: 2px;
+		overflow: hidden;
+
+		&.count-wrap {
+			min-width: 25px;
+			.count {
+				color: $rrlimegreen;
+			}
+		}
+
+		.divider {
+			margin: 0 10px;
+		}
+	} 
+}
+
 
 .chapter-selector {
 	list-style: none;
@@ -146,7 +211,6 @@
 	to { width: 100%; animation-timing-function: ease-out; }
 }
 
-
 .watch_video--typewriter {
 	cursor: pointer;
 	margin: 50px auto 0;
@@ -223,6 +287,10 @@
 			margin: 25px auto;
 
 			.video_slide {
+
+				img {
+					height: 345px;
+				}
 
 				h3 {
 					margin-top: 20px;
@@ -306,20 +374,25 @@
 		overflow: hidden;
 		width: 100%;
 
-		img {
-			height: 100%;
-			left: 50%;
-			max-width: none;
-			top: 50%;
-			@include translate(-50%,-50%);
-			position: absolute;
-			width: auto;
-		}
 
-		h3 {
-			bottom: 15px;
-			left: 15px;
-			position: absolute;
+		.post-thumbnail {
+			height: 100%;
+			
+			img {
+				height: 100%;
+				left: 50%;
+				max-width: none;
+				top: 50%;
+				@include translate(-50%,-50%);
+				position: absolute;
+				width: auto;
+			}
+
+			h3 {
+				bottom: 15px;
+				left: 15px;
+				position: absolute;
+			}
 		}
 
 		&:hover {
@@ -413,17 +486,53 @@
 }
 
 .featured_trailbazers {
-	img {
-		@include grayscale(100%);
-		@include transition(all 0.5s ease)
+	.trailblazer--name {
+		color: $rrskyblue !important;
 	}
-	&:hover img{
-		@include grayscale(0);
+
+	.post-thumbnail {
+		height: 350px;
+		margin-bottom: 17px;
+	}
+
+	img {
+		height: 470px;
+		@include grayscale(100%);
+		@include transition(all 0.5s ease);
+	}
+
+	&.featured_events,
+	.featured_trailbazers--img {	
+		&:hover img {
+			@include grayscale(0);
+		}
 	}
 }
 
 .featured_events {
+	.post-thumbnail {
+		height: 250px !important;
 
+		img {
+			height: 300px;
+		}
+
+		h3 {
+			font-weight: 700;
+			position: absolute;
+			bottom: 0;
+			left: 25px;
+			z-index: 1;
+		}
+	}
+}
+
+.featured--upcoming_event {
+	margin-bottom: 20px;
+
+	.post_date + p {
+		margin-bottom: 15px;
+	}
 }
 
 .post_date {
@@ -431,6 +540,10 @@
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 100%;
+
+	i {
+		margin-right: 5px;
+	}
 }
 
 

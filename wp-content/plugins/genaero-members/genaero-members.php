@@ -250,7 +250,7 @@ class GenAeroFacebook{
     	}
 
         // Button
-    	$html .= '<a href="'.$this->getLoginUrl().'" class=" " id="genaero-facebook-button"><i class="fal fa-facebook"></i>'.$button_label.'</a>';
+    	$html .= '<a href="'.$this->getLoginUrl().'" class=" " id="genaero-facebook-button">'.$button_label.'</a>';
 
     	$html .= '</div>';
 

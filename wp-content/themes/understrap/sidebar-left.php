@@ -3,7 +3,7 @@
  * The sidebar containing the main widget area.
  *
  * @package understrap
- */
+ */ 
 
 global $wpdb;
 $table = $wpdb->prefix.'genaero_members';
@@ -29,7 +29,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 <?php if ( 'both' === $sidebar_pos ) : ?>
 	<div class="col-md-3 widget-area profile_sidebar" id="left-sidebar" role="complementary">
 	<?php else : ?>
-		<div class="col-md-4 widget-area profile_sidebar" id="left-sidebar" role="complementary">
+		<div class="col-md-4 col-md-4 col-md-4 col-md-4 d-md-block d-sm-none d-none widget-area profile_sidebar" id="left-sidebar" role="complementary">
 		<?php endif; ?>
 
 		<div class="profil_pic">
