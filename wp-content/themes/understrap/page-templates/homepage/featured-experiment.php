@@ -15,10 +15,10 @@
 				<h1>Find An Experiment_</h1>
 				<div class="highlight"><?php echo get_field('featured_experiment_copy'); ?></div>
 				
-				<button class="arrowbtn btn--color">
+				<a href="<?php echo get_permalink( get_page_by_path( 'find-an-experiment' ) ); ?>" class="arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
-					<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
-				</button>
+					<div class="arrowbtn-wrapper"><span>See More Experiments</span></div>
+				</a>
 			</div>
 			<div class="col-xl-7 featured_experiment--keywords"><!-- offset-xl-1 -->
 				<div class="row">

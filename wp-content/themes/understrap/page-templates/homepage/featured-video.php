@@ -28,10 +28,10 @@ endif;
 			<div class="col-xl-4"><!-- offset-xl-1 -->
 				<h1>Featured Video_</h1>
 				<div class="highlight"><?php echo get_field('featured_video_copy'); ?></div>
-				<button class="arrowbtn btn--color">
+				<a href="<?php echo get_permalink( get_page_by_path( 'find-a-video' ) ); ?>" class="arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
 					<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
-				</button>
+				</a>
 			</div>
 			<div class="col-xl-6 "><!-- offset-xl-1 -->
 				<div class="featured_video--carousel_wrapper">
