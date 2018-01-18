@@ -627,14 +627,15 @@ class WPSEO_Frontend {
 	 */
 	public function get_debug_mark() {
 		return sprintf(
-			'<!-- This site is optimized with the %1$s %2$s - https://yoast.com/wordpress/plugins/seo/ -->',
+			'<!-- This site is optimized with the %1$s %2$s - %3$s -->',
 			esc_html( $this->head_product_name() ),
 			/**
 			 * Filter: 'wpseo_hide_version' - can be used to hide the Yoast SEO version in the debug marker (only available in Yoast SEO Premium).
 			 *
 			 * @api bool
 			 */
-			( ( apply_filters( 'wpseo_hide_version', false ) && $this->is_premium() ) ? '' : 'v' . WPSEO_VERSION )
+			( ( apply_filters( 'wpseo_hide_version', false ) && $this->is_premium() ) ? '' : 'v' . WPSEO_VERSION ),
+			esc_url( WPSEO_Shortlinker::get( 'https://yoa.st/1yg' ) )
 		);
 	}
 
@@ -1461,7 +1462,6 @@ class WPSEO_Frontend {
 
 		if ( ! is_object( $post ) || ! is_attachment() ) {
 			return false;
-<<<<<<< HEAD
 		}
 
 		$attachment = $post;
@@ -1471,17 +1471,6 @@ class WPSEO_Frontend {
 			return true;
 		}
 
-=======
-		}
-
-		$attachment = $post;
-
-		if ( (int) $attachment->post_parent !== 0 ) {
-			$this->redirect( get_permalink( $attachment->post_parent ), 301 );
-			return true;
-		}
-
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 		/**
 		 * Filter: 'wpseo_redirect_orphan_attachment' - Allows for orphaned attachment to be redirected.
 		 *
@@ -1994,7 +1983,6 @@ class WPSEO_Frontend {
 		);
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Returns an instance of the frontend page type.
 	 *
@@ -2008,8 +1996,6 @@ class WPSEO_Frontend {
 		return $this->frontend_page_type;
 	}
 
-=======
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 	/** Deprecated functions */
 	// @codeCoverageIgnoreStart
 	/**

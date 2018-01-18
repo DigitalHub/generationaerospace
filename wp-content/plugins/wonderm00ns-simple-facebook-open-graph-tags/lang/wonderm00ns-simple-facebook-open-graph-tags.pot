@@ -4,7 +4,7 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Facebook Open Graph, Google+ and Twitter Card Tags "
 "2.0.3\n"
-"POT-Creation-Date: 2017-12-29 13:59+0000\n"
+"POT-Creation-Date: 2018-01-05 19:15+0000\n"
 "PO-Revision-Date: 2016-09-26 14:52+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -180,8 +180,8 @@ msgid ""
 msgstr ""
 
 #: admin/options-page-3rdparty.php:85 admin/options-page-3rdparty.php:137
-#: admin/options-page-3rdparty.php:200 admin/options-page-3rdparty.php:249
-#: admin/options-page-3rdparty.php:287
+#: admin/options-page-3rdparty.php:202 admin/options-page-3rdparty.php:251
+#: admin/options-page-3rdparty.php:289
 #, php-format
 msgid "You don't have %s installed or activated."
 msgstr ""
@@ -250,33 +250,38 @@ msgid ""
 "use them as Open Graph Images on category listing pages"
 msgstr ""
 
-#: admin/options-page-3rdparty.php:220
+#: admin/options-page-3rdparty.php:193
+msgid ""
+"This setting also applies to brand pages if WooCommerce Brands is installed"
+msgstr ""
+
+#: admin/options-page-3rdparty.php:222
 msgid "Add SubHeading to Post/Page Title"
 msgstr ""
 
-#: admin/options-page-3rdparty.php:231
+#: admin/options-page-3rdparty.php:233
 msgid "SubHeading position"
 msgstr ""
 
-#: admin/options-page-3rdparty.php:234
+#: admin/options-page-3rdparty.php:236
 msgid "After"
 msgstr ""
 
-#: admin/options-page-3rdparty.php:235
+#: admin/options-page-3rdparty.php:237
 msgid "Before"
 msgstr ""
 
-#: admin/options-page-3rdparty.php:269
+#: admin/options-page-3rdparty.php:271
 msgid "Use listing details"
 msgstr ""
 
-#: admin/options-page-3rdparty.php:276
+#: admin/options-page-3rdparty.php:278
 msgid ""
 "Use Business Directory Plugin listing details (Title, URL, Description and "
 "Image) to populate tags"
 msgstr ""
 
-#: admin/options-page-3rdparty.php:278
+#: admin/options-page-3rdparty.php:280
 msgid ""
 "Setting \"Include URL\", \"Set Canonical URL\", \"Include Description\" and "
 "\"Include Image\" options is HIGHLY recommended"
@@ -331,6 +336,7 @@ msgid "Include Image Dimensions"
 msgstr ""
 
 #: admin/options-page-facebook.php:98 admin/options-page-facebook.php:161
+#: admin/options-page-schema.php:26 admin/options-page-schema.php:146
 msgid "and"
 msgstr ""
 
@@ -375,11 +381,12 @@ msgstr ""
 msgid "The user's Facebook URL must be filled in on his profile"
 msgstr ""
 
-#: admin/options-page-facebook.php:154
+#: admin/options-page-facebook.php:154 admin/options-page-schema.php:139
 msgid "Include Published/Modified Dates"
 msgstr ""
 
 #: admin/options-page-facebook.php:163 admin/options-page-facebook.php:177
+#: admin/options-page-schema.php:148
 msgid "For posts only"
 msgstr ""
 
@@ -391,7 +398,7 @@ msgstr ""
 msgid "from the categories names"
 msgstr ""
 
-#: admin/options-page-facebook.php:182 admin/options-page-schema.php:138
+#: admin/options-page-facebook.php:182 admin/options-page-schema.php:153
 #: admin/options-page-seo.php:77 admin/options-page-twitter.php:89
 msgid "Include Publisher"
 msgstr ""
@@ -882,19 +889,19 @@ msgstr ""
 msgid "The user's Google+ URL must be filled in on his profile"
 msgstr ""
 
-#: admin/options-page-schema.php:127
-msgid "Google doesn't use it anymore"
+#: admin/options-page-schema.php:134 admin/options-page-seo.php:72
+msgid "From the user Display name"
 msgstr ""
 
-#: admin/options-page-schema.php:147
+#: admin/options-page-schema.php:162
 msgid "The website's Google+ Page"
 msgstr ""
 
-#: admin/options-page-schema.php:152
+#: admin/options-page-schema.php:167
 msgid "Website's Google+ Page"
 msgstr ""
 
-#: admin/options-page-schema.php:159
+#: admin/options-page-schema.php:174
 msgid "Google+ Page URL (with https://)"
 msgstr ""
 
@@ -922,10 +929,6 @@ msgstr ""
 
 #: admin/options-page-seo.php:63
 msgid "Include Post/Page Author name"
-msgstr ""
-
-#: admin/options-page-seo.php:72
-msgid "From the user Display name"
 msgstr ""
 
 #: admin/options-page-tools.php:11
@@ -1031,17 +1034,17 @@ msgstr ""
 msgid "Tools"
 msgstr ""
 
-#: public/class-webdados-fb-open-graph-public.php:231
+#: public/class-webdados-fb-open-graph-public.php:230
 msgid "Price"
 msgstr ""
 
-#: public/class-webdados-fb-open-graph-public.php:311
+#: public/class-webdados-fb-open-graph-public.php:310
 msgid "Search for"
 msgstr ""
 
-#: public/class-webdados-fb-open-graph-public.php:320
-#: public/class-webdados-fb-open-graph-public.php:324
-#: public/class-webdados-fb-open-graph-public.php:328
+#: public/class-webdados-fb-open-graph-public.php:319
+#: public/class-webdados-fb-open-graph-public.php:323
+#: public/class-webdados-fb-open-graph-public.php:327
 msgid "Archives"
 msgstr ""
 

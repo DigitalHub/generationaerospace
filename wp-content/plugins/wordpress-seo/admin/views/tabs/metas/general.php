@@ -11,7 +11,6 @@ if ( ! defined( 'WPSEO_VERSION' ) ) {
 
 if ( ! current_theme_supports( 'title-tag' ) ) {
 	$yform->light_switch( 'forcerewritetitle', __( 'Force rewrite titles', 'wordpress-seo' ) );
-<<<<<<< HEAD
 	echo '<p class="description">';
 	printf(
 		/* translators: %1$s expands to Yoast SEO */
@@ -19,14 +18,6 @@ if ( ! current_theme_supports( 'title-tag' ) ) {
 		'Yoast SEO'
 	);
 	echo '</p>';
-=======
-	echo '<p class="description">',
-		sprintf(
-			/* translators: %1$s expands to Yoast SEO */
-			__( '%1$s has auto-detected whether it needs to force rewrite the titles for your pages, if you think it\'s wrong and you know what you\'re doing, you can change the setting here.', 'wordpress-seo' ),
-			'Yoast SEO'
-		) . '</p>';
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 }
 
 echo '<h2>' . esc_html__( 'Title Separator', 'wordpress-seo' ) . '</h2>';

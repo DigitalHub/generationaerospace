@@ -33,24 +33,14 @@ if ( ! $active ) {
 }
 
 ?>
-<<<<<<< HEAD
 <h3><span class="dashicons <?php echo esc_attr( 'dashicons-' . $dashicon ); ?>"></span> <?php echo $i18n_title; ?> (<?php echo $active_total; ?>)</h3>
 
 <div id="<?php echo esc_attr( 'yoast-' . $type ); ?>">
-=======
-<h3><span class="dashicons dashicons-<?php echo $dashicon; ?>"></span> <?php echo $i18n_title; ?> (<?php echo $active_total; ?>)</h3>
-
-<div id="yoast-<?php echo $type; ?>">
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 
 	<?php if ( $total ) : ?>
 		<p><?php echo ( ! $active ) ? $i18n_no_issues : $i18n_issues; ?></p>
 
-<<<<<<< HEAD
 		<div class="container" id="<?php echo esc_attr( 'yoast-' . $type . '-active' ); ?>">
-=======
-		<div class="container" id="yoast-<?php echo $type; ?>-active">
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 			<?php _yoast_display_alerts( $active, 'active' ); ?>
 		</div>
 
@@ -58,11 +48,7 @@ if ( ! $active ) {
 			<h4 class="yoast-muted-title"><?php echo esc_html( $i18n_muted_issues_title ); ?></h4>
 		<?php endif; ?>
 
-<<<<<<< HEAD
 		<div class="container" id="<?php echo esc_attr( 'yoast-' . $type . '-dismissed' ); ?>">
-=======
-		<div class="container" id="yoast-<?php echo $type; ?>-dismissed">
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 			<?php _yoast_display_alerts( $dismissed, 'dismissed' ); ?>
 		</div>
 

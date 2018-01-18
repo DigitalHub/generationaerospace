@@ -35,8 +35,7 @@ function create_members_db() {
     bio varchar(500) DEFAULT NULL,
     photo varchar(500) DEFAULT NULL,
     is_fb_user tinyint(1) DEFAULT 0,
-    create_date datetime DEFAULT CURRENT_TIMESTAMP,
-    update_date datetime DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
+    create_date timestamp DEFAULT CURRENT_TIMESTAMP,
     UNIQUE KEY id (id),
     UNIQUE KEY username (username)
 ) $charset_collate;";
@@ -47,7 +46,7 @@ dbDelta( $sql );
 // if ( version_compare( $version, '2.0' ) < 0 ) {
 // 	$sql = "CREATE TABLE $table_name (
 // 	id mediumint(9) NOT NULL AUTO_INCREMENT,
-// 	time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+// 	time timestamp DEFAULT '0000-00-00 00:00:00' NOT NULL,
 // 	views smallint(5) NOT NULL,
 // 	clicks smallint(5) NOT NULL,
 // 	blog_id smallint(5) NOT NULL,
@@ -79,8 +78,7 @@ function create_videos_db() {
     description varchar(500) DEFAULT NULL,
     youtube varchar(100) NOT NULL,
     favourite int(11) DEFAULT 0 NOT NULL,
-    create_date datetime DEFAULT CURRENT_TIMESTAMP,
-    update_date datetime DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
+    create_date timestamp DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (member_id) REFERENCES $members_table(id)
 ) $charset_collate;";
@@ -105,7 +103,7 @@ function create_favourite_videos_db() {
     id int(11) NOT NULL AUTO_INCREMENT,
     member_id int(11) NOT NULL,
     video_id int(11) NOT NULL,
-    create_date datetime DEFAULT CURRENT_TIMESTAMP,
+    create_date timestamp DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (member_id) REFERENCES $members_table(id),
     FOREIGN KEY (video_id) REFERENCES $videos_table(id)
@@ -130,7 +128,7 @@ function create_favourite_experiments_db() {
     id int(11) NOT NULL AUTO_INCREMENT,
     member_id int(11) NOT NULL,
     experiment_id int(11) NOT NULL,
-    create_date datetime DEFAULT CURRENT_TIMESTAMP,
+    create_date timestamp DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (member_id) REFERENCES $members_table(id),
 ) $charset_collate;";

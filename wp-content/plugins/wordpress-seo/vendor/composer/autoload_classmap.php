@@ -91,11 +91,6 @@ return array(
     'Composer\\Installers\\YawikInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/YawikInstaller.php',
     'Composer\\Installers\\ZendInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
     'Composer\\Installers\\ZikulaInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
-<<<<<<< HEAD
-=======
-    'Metabox_Add_Keyword_Tab' => $baseDir . '/admin/metabox/class-metabox-add-keyword-tab.php',
-    'Premium_Upsell_Admin_Block' => $baseDir . '/admin/class-premium-upsell-admin-block.php',
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
     'WPSEO_Abstract_Capability_Manager' => $baseDir . '/admin/capabilities/class-abstract-capability-manager.php',
     'WPSEO_Abstract_Post_Filter' => $baseDir . '/admin/filters/class-abstract-post-filter.php',
     'WPSEO_Abstract_Role_Manager' => $baseDir . '/admin/roles/class-abstract-role-manager.php',

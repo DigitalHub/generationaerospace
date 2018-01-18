@@ -300,11 +300,7 @@ class WPSEO_Metabox extends WPSEO_Meta {
 	 */
 	public function do_tab( $id, $heading, $content ) {
 		?>
-<<<<<<< HEAD
 		<div id="<?php echo esc_attr( 'wpseo_' . $id ); ?>" class="wpseotab <?php echo esc_attr( $id ); ?>">
-=======
-		<div id="wpseo_<?php echo esc_attr( $id ); ?>" class="wpseotab <?php echo esc_attr( $id ); ?>">
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 			<?php echo $content; ?>
 		</div>
 	<?php
@@ -316,7 +312,7 @@ class WPSEO_Metabox extends WPSEO_Meta {
 	public function meta_box() {
 		$content_sections = $this->get_content_sections();
 
-		$helpcenter_tab = new WPSEO_Option_Tab( 'metabox', 'Meta box',
+		$helpcenter_tab = new WPSEO_Option_Tab( 'metabox', __( 'Meta box', 'wordpress-seo' ),
 			array( 'video_url' => WPSEO_Shortlinker::get( 'https://yoa.st/metabox-screencast' ) ) );
 
 		$help_center = new WPSEO_Help_Center( '', $helpcenter_tab, WPSEO_Utils::is_yoast_seo_premium() );
