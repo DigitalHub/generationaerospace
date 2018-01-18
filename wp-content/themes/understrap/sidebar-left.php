@@ -3,7 +3,7 @@
  * The sidebar containing the main widget area.
  *
  * @package understrap
- */
+ */ 
 
 global $wpdb;
 $table = $wpdb->prefix.'genaero_members';
