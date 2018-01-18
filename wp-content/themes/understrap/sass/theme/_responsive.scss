@@ -40,6 +40,41 @@
 	.past_events .events_row--content div:not(:first-child) {
 		text-align: left;
 	}
+
+	.page-template-sign-up, .page-template-login, .page-template-dashboard, .page-template-profile, .page-template-videos-list, .page-template-add-video, .page-template-submit-idea, .page-template-fav-videos, .page-template-fav-experiments {
+		overflow-y: unset;
+
+		.site-title {
+			top: 0;
+		}
+
+		.sign-up-row, 
+		.login-row, 
+		.dashboard-row {
+			height: auto;
+			margin: 150px auto 100px;
+		}
+	}
+
+	a#genaero-facebook-button {
+		width: auto;
+	}
+
+	.HudOverlay {
+		background-attachment: fixed;
+		position: fixed;
+	}
+
+	.HudOverlay-dashboard {
+		display: none;
+	}
+
+	.dashboard_content {
+		background-color: transparent;
+		height: 100%;
+		overflow-y: initial;
+		padding: 15px;
+	}
 }
 
 @media (max-width: 680px) {

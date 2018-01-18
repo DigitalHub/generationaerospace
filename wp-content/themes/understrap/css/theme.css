@@ -11466,9 +11466,13 @@ a#genaero-facebook-button {
   text-align: center;
   vertical-align: middle;
   width: 50%; }
-  a#genaero-facebook-button i {
+  a#genaero-facebook-button:before {
     background-color: #354f88;
-    font-size: 30px;
+    background-image: url(../img/FaceBook-Icon.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: " ";
     left: 0;
     height: 100%;
     line-height: 40px;
@@ -11559,12 +11563,13 @@ a#genaero-facebook-button {
     z-index: 1; }
     .site-title a .logo_img {
       transition: opacity 200ms ease-in 1.2s;
-      width: 80%; }
+      width: 80%;
+      margin-top: -10px; }
     .site-title a .site-title-border {
       position: absolute;
       width: 16px;
       height: 42px;
-      top: 40%;
+      top: 30%;
       margin-top: -17px;
       stroke: #fff;
       fill: none;
@@ -13824,7 +13829,49 @@ ul#menu-members-only-menu {
 @media (max-width: 768px) {
   .ongoing_events .events_row--content div:not(:first-child),
   .past_events .events_row--content div:not(:first-child) {
-    text-align: left; } }
+    text-align: left; }
+
+  .page-template-sign-up, .page-template-login, .page-template-dashboard, .page-template-profile, .page-template-videos-list, .page-template-add-video, .page-template-submit-idea, .page-template-fav-videos, .page-template-fav-experiments {
+    overflow-y: unset; }
+    .page-template-sign-up .site-title, .page-template-login .site-title, .page-template-dashboard .site-title, .page-template-profile .site-title, .page-template-videos-list .site-title, .page-template-add-video .site-title, .page-template-submit-idea .site-title, .page-template-fav-videos .site-title, .page-template-fav-experiments .site-title {
+      top: 0; }
+    .page-template-sign-up .sign-up-row,
+    .page-template-sign-up .login-row,
+    .page-template-sign-up .dashboard-row, .page-template-login .sign-up-row,
+    .page-template-login .login-row,
+    .page-template-login .dashboard-row, .page-template-dashboard .sign-up-row,
+    .page-template-dashboard .login-row,
+    .page-template-dashboard .dashboard-row, .page-template-profile .sign-up-row,
+    .page-template-profile .login-row,
+    .page-template-profile .dashboard-row, .page-template-videos-list .sign-up-row,
+    .page-template-videos-list .login-row,
+    .page-template-videos-list .dashboard-row, .page-template-add-video .sign-up-row,
+    .page-template-add-video .login-row,
+    .page-template-add-video .dashboard-row, .page-template-submit-idea .sign-up-row,
+    .page-template-submit-idea .login-row,
+    .page-template-submit-idea .dashboard-row, .page-template-fav-videos .sign-up-row,
+    .page-template-fav-videos .login-row,
+    .page-template-fav-videos .dashboard-row, .page-template-fav-experiments .sign-up-row,
+    .page-template-fav-experiments .login-row,
+    .page-template-fav-experiments .dashboard-row {
+      height: auto;
+      margin: 150px auto 100px; }
+
+  a#genaero-facebook-button {
+    width: auto; }
+
+  .HudOverlay {
+    background-attachment: fixed;
+    position: fixed; }
+
+  .HudOverlay-dashboard {
+    display: none; }
+
+  .dashboard_content {
+    background-color: transparent;
+    height: 100%;
+    overflow-y: initial;
+    padding: 15px; } }
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

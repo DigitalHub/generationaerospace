@@ -4,10 +4,10 @@
  *
  * @package understrap
  */?>
- <div class="HudOverlay" style="background-image: url('<?php echo $bgimg; ?>');">
- 	<svg version="1.1" class="subHudOverlay" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
+ <div class="HudOverlay" style="background-image: url('<?php echo $bgimg; ?>');"> 
+ 	<svg class="HudOverlayme HudOverlay-dashboard" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
  		<filter height="120%" id="blurlayer" width="110%">
- 			<feGaussianBlur result="blur" stdDeviation="2"></feGaussianBlur>
+ 			<feGaussianBlur  result="blur" stdDeviation="2"></feGaussianBlur>
  		</filter>
  		<g>
  			<g class="HubOverlay--Blur">

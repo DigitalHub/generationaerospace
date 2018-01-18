@@ -624,9 +624,13 @@ a#genaero-facebook-button {
 	vertical-align: middle;
 	width: 50%;
 
-	i {
+	&:before {
 		background-color: #354f88;
-		font-size: 30px;
+		background-image: url(../img/FaceBook-Icon.png);
+		background-size: 80%;
+		background-repeat: no-repeat;
+		background-position: center;
+		content: " ";
 		left: 0;
 		height: 100%;
 		line-height: 40px;

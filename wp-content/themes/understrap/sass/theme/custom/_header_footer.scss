@@ -86,13 +86,14 @@
 			// @include opacity(0);
 			transition: opacity 200ms ease-in 1.2s;
 			width: 80%;
+			margin-top: -10px;
 		}
 
 		.site-title-border {
 			position: absolute;
 			width: 16px;
 			height: 42px;
-			top: 40%;
+			top: 30%;
 			margin-top: -17px;
 			stroke: $white;
 			fill: none;

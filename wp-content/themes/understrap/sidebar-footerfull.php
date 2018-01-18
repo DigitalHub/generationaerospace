@@ -30,7 +30,7 @@
 		<span>scroll</span>
 	</div>
 </a>
-<?php } elseif (is_page() && ! is_front_page()) { ?>
+<?php } elseif (is_singular( array( 'genaero_videos', 'genaero_experiments', 'genaero_events', 'genaero_vault' ) )) { ?>
 <a id="link" class="scrolling">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">
@@ -42,7 +42,7 @@
 		<span>scroll</span>
 	</div>
 </a>
-<?php } elseif ( is_singular() && !is_singular( 'genaero_videos' ) ) { ?>
+<?php } elseif (is_page_template( 'page-events.php' ) || is_page_template( 'page-experiments.php' ) || is_page_template( 'page-trailblazers.php' ) || is_page_template( 'page-vault.php' )) { ?>
 <a id="link" class="scrolling">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">
