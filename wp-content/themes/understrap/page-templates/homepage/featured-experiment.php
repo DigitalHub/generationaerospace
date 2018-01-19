@@ -14,7 +14,7 @@
 	<div class="container sub_content">
 		<div class="row">
 			<div class="col-xl-4 "><!-- offset-xl-1 -->
-				<h1>Find An Experiment_</h1>
+				<h1>TRY THIS AT HOME_</h1>
 				<div class="highlight"><?php echo get_field('featured_experiment_copy'); ?></div>
 				
 				<a href="<?php echo get_permalink( get_page_by_path( 'find-an-experiment' ) ); ?>" class="arrowbtn btn--color">

@@ -47,7 +47,7 @@
 	<div class="container sub_content">
 		<div class="row">
 			<div class="col-xl-10 offset-xl-1">
-				<h2 style="text-align: center;">Why be a Genaero Explorer</h2>
+				<h2 style="text-align: center;">BECOME A #GENAERO EXPLORER</h2>
 				<div class="genaero_explorer--carousel">
 					<?php
 					if(have_rows('explorer_slides')) :
