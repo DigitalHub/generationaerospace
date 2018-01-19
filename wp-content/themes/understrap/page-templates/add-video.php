@@ -115,7 +115,7 @@ if($_POST['video_submit']) {
 						</div><div class="clear"></div>
 						<?php echo $response; ?>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis, quam a ultrices iaculis, lorem lectus aliquet sem, et lobortis elit nunc eu nisi. Etiam luctus tellus dui, sit amet faucibus lacus dapibus eu. In fringilla, sem ut mattis sodales, quam est ultrices ipsum, nec efficitur velit augue nec felis.</p>
+						<p>Upload and share your experiment video with other GenAero Explorers! Upload your experiment on YouTube and share the details in the form below.</p>
 
 						<label for="title">Title</label>
 						<input type="text" name="video_title" id="video_title" value="<?=$title?>" required>

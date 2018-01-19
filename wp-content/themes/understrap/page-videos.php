@@ -99,7 +99,11 @@ $template = 'video';
 	<div class="subpage--content">
 		<div class="container">
 			<h1><?php the_title(); ?></h1>
-			<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
+			<?php 
+			if (have_posts()) : while (have_posts()) : the_post(); 
+				the_content();
+			endwhile; endif; 
+			?>
 			<div class="row">
 				<div class="col-xl-8 ">
 					<h3 class="text-left">Search for Videos</h3>
@@ -112,7 +116,7 @@ $template = 'video';
 				</div>
 				<div class="col-xl-4">
 					<div class="submit_register--btn">
-						<h3 class="text-left">Submit your videos here:</h3>
+						<h3 class="text-left">Submit your video(s):</h3>
 						<?php if($loggedin === '0') {?>
 						<a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>" class="arrowbtn btn--color">
 							<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>Sign up or Register Now</span></div>
@@ -221,7 +225,7 @@ $template = 'video';
 	<div class="juicer-wrapper"></div>
 	<div class="juicer-content container">
 		<h2 class="text-center">#GENAERO</h2>
-		<p class="highlight text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nemo modi fuga fugit cumque voluptas cum animi dolore accusamus.</p>
+		<p class="highlight text-center">Check out what other GenAero Explorers are doing!</p>
 		<ul class="juicer-feed" data-feed-id="harihasanah" data-per="11" data-columns="5"></ul>
 	</div>
 </section>

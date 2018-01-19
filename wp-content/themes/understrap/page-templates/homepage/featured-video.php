@@ -28,7 +28,7 @@ endif;
 	<div class="container sub_content">
 		<div class="row">
 			<div class="col-xl-4"><!-- offset-xl-1 -->
-				<h1>Featured Video_</h1>
+				<h1>Get Inspired_</h1>
 				<div class="highlight"><?php echo get_field('featured_video_copy'); ?></div>
 				<a href="<?php bloginfo('url') ?>/find-a-video/" class="arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>

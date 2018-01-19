@@ -34,7 +34,7 @@ if($trailblazer) :
 				</div>
 
 				<div class="col-xl-7">
-					<h2>Genaero Trailblazers</h2>
+					<h2>FOLLOW THE TRAILBLAZERS</h2>
 					<h2 class="trailblazer--name"><?php the_title(); ?></h2>
 					<p class="highlight"><?php echo get_field('job_title'); ?></p>
 					<?php the_excerpt(); ?>

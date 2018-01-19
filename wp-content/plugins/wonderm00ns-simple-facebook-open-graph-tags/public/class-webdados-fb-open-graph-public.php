@@ -1,7 +1,6 @@
 <?php
 /**
  * @package Facebook Open Graph, Google+ and Twitter Card Tags
- * @version 2.2.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -51,6 +50,8 @@ class Webdados_FB_Public {
 	/* Insert the tags on the header */
 	public function insert_meta_tags() {
 		global $webdados_fb, $wp_query;
+
+		$debug = array();
 
 		if ( !apply_filters( 'fb_og_disable', false ) ) {
 
@@ -109,6 +110,8 @@ class Webdados_FB_Public {
 				}
 
 				if ( is_singular() ) { //Including homepage if set as static page
+
+					$debug[] = 'is_singular';
 		
 					global $post;
 					// Title
@@ -216,6 +219,7 @@ class Webdados_FB_Public {
 						}
 					// WooCommerce
 						if ( $webdados_fb->is_woocommerce_active() && is_product() ) {
+							$debug[] = 'is_product';
 							$fb_type = 'product';
 							$product = new WC_Product( $post->ID );
 							//Price
@@ -277,6 +281,7 @@ class Webdados_FB_Public {
 		
 					//Category
 					if ( is_category() ) {
+						$debug[] = 'is_category';
 						$fb_title = wp_strip_all_tags( stripslashes( single_cat_title( '', false ) ), true );
 						$term = $wp_query->get_queried_object();
 						$fb_url = get_term_link( $term, $term->taxonomy );
@@ -284,6 +289,7 @@ class Webdados_FB_Public {
 						if ( trim($cat_desc)!='' ) $fb_desc = $cat_desc;
 					} else {
 						if ( is_tag() ) {
+							$debug[] = 'is_tag';
 							$fb_title = wp_strip_all_tags( stripslashes( single_tag_title( '', false ) ), true );
 							$term = $wp_query->get_queried_object();
 							$fb_url = get_term_link( $term, $term->taxonomy );
@@ -294,10 +300,12 @@ class Webdados_FB_Public {
 								$fb_title = wp_strip_all_tags( stripslashes( single_term_title( '', false ) ), true );
 								$term = $wp_query->get_queried_object();
 								$fb_url = get_term_link($term, $term->taxonomy);
+								$debug[] = 'is_tax: '.$term->taxonomy;
 								$tax_desc = trim( wp_strip_all_tags( stripslashes( term_description() ), true ) );
 								if ( trim($tax_desc)!='' ) $fb_desc = $tax_desc;
 								//WooCommerce
-								if ( $webdados_fb->is_woocommerce_active() && intval($this->options['fb_wc_usecategthumb'])==1 && is_product_category() ) {
+								if ( $webdados_fb->is_woocommerce_active() && intval($this->options['fb_wc_usecategthumb'])==1 && ( is_product_category() || is_tax('product_brand') ) ) {
+									if ( is_product_category() )  $debug[] = 'is_product_category';
 									if ( intval($this->options['fb_image_show'])==1 || intval($this->options['fb_image_show_schema'])==1 || intval($this->options['fb_image_show_twitter'])==1 ) {
 										if ( $thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true ) ) {
 											if ( $image = wp_get_attachment_url( $thumbnail_id ) ) {
@@ -308,23 +316,29 @@ class Webdados_FB_Public {
 								}
 							} else {
 								if ( is_search() ) {
+									$debug[] = 'is_search';
 									$fb_title = wp_strip_all_tags( stripslashes( __('Search for', 'wonderm00ns-simple-facebook-open-graph-tags').' "'.get_search_query().'"' ), true );
 									$fb_url = get_search_link();
 								} else {
 									if (is_author()) {
+										$debug[] = 'is_author';
 										$fb_title = wp_strip_all_tags( stripslashes( get_the_author_meta('display_name', get_query_var('author') ) ), true );
 										$fb_url = get_author_posts_url( get_query_var('author'), get_query_var('author_name') );
 									} else {
 										if ( is_archive() ) {
+											$debug[] = 'is_archive';
 											if ( is_day() ) {
+												$debug[] = 'is_day';
 												$fb_title = wp_strip_all_tags( stripslashes( get_query_var( 'day' ) . ' ' .single_month_title( ' ', false ) . ' ' . __( 'Archives', 'wonderm00ns-simple-facebook-open-graph-tags' ) ), true );
 												$fb_url = get_day_link( get_query_var( 'year' ), get_query_var( 'monthnum' ), get_query_var( 'day' ) );
 											} else {
 												if ( is_month() ) {
+													$debug[] = 'is_month';
 													$fb_title = wp_strip_all_tags( stripslashes( single_month_title( ' ', false ) . ' ' . __( 'Archives', 'wonderm00ns-simple-facebook-open-graph-tags' ) ), true );
 													$fb_url = get_month_link( get_query_var( 'year' ), get_query_var( 'monthnum' ) );
 												} else {
 													if ( is_year() ) {
+														$debug[] = 'is_year';
 														$fb_title = wp_strip_all_tags( stripslashes( get_query_var( 'year' ) . ' ' . __( 'Archives', 'wonderm00ns-simple-facebook-open-graph-tags' ) ), true );
 														$fb_url = get_year_link( get_query_var( 'year' ) );
 													}
@@ -332,11 +346,13 @@ class Webdados_FB_Public {
 											}
 										} else {
 											if ( is_front_page() ) { //Regular homepage
+												$debug[] = 'is_front_page';
 												$fb_url = get_option('home').(intval($this->options['fb_url_add_trailing'])==1 ? '/' : '');
 												$fb_type = trim( $this->options['fb_type_homepage']=='' ? 'website' : $this->options['fb_type_homepage'] );
 												$fb_desc = $fb_desc_homepage;
 											} else {
 												if ( is_home() ) { //Blog page (set as page)
+													$debug[] = 'is_home';
 													if ( 'page' === get_option( 'show_on_front' ) && $page_for_posts = get_option( 'page_for_posts' ) ) {
 														//$post = get_post( $page_for_posts ); //This is NOT the global $post and it's actually not needed because we'll use the post ID = $page_for_posts
 														//Blog page
@@ -406,6 +422,7 @@ class Webdados_FB_Public {
 				//YOAST SEO?
 				if ( $this->options['fb_show_wpseoyoast']==1 ) {
 					if ( $webdados_fb->is_yoast_seo_active() ) {
+						$debug[] = 'yoast_seo';
 						$wpseo = WPSEO_Frontend::get_instance();
 						//Title
 						$fb_title_temp = $wpseo->title(false);
@@ -432,6 +449,7 @@ class Webdados_FB_Public {
 				//All in One SEO Pack?
 				if ( $this->options['fb_show_aioseop']==1 ) {
 					if ( $webdados_fb->is_aioseop_active() ) {
+						$debug[] = 'aio_seo';
 						global $aiosp;
 						//Title - Why are we getting the first post title on archives and homepage...?!?
 						$fb_title_temp = $aiosp->orig_title;
@@ -507,6 +525,7 @@ class Webdados_FB_Public {
 		
 				//Image overlay - Single?
 				if ( intval($this->options['fb_image_show'])==1 && intval($this->options['fb_image_overlay'])==1 && apply_filters('fb_og_image_overlay', true, $fb_image) ) {
+					$debug[] = 'image overlay';
 					//Single
 					$temp_fb_image_overlay = $this->get_image_with_overlay($fb_image);
 					if ( $temp_fb_image_overlay['overlay'] ) {
@@ -695,12 +714,13 @@ class Webdados_FB_Public {
 					}
 			} else {
 	
-				$html.=' <!-- Removed by fb_og_enabled filter -->
-';
+				$debug[] = 'Removed by fb_og_enabled filter';
 	
 			}
 		
 			//Close tag
+			if ( apply_filters( 'fb_og_enable_debug', true ) ) $html.=' <!-- '.implode( ' | ', $debug ).' -->
+';
 			$html.='<!-- END - '.WEBDADOS_FB_PLUGIN_NAME.' '.WEBDADOS_FB_VERSION.' -->
 	
 ';

@@ -1,8 +1,4 @@
 <?php
-/**
- * @package Facebook Open Graph, Google+ and Twitter Card Tags
- * @version 2.1.2
- */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -453,7 +449,7 @@ class Webdados_FB_Admin {
 
 	/* Run tools */
 	public function run_tools( $value ) {
-		if ( is_array( $_POST['tools'] ) ) {
+		if ( isset( $_POST['tools'] ) && is_array( $_POST['tools'] ) ) {
 			foreach ( $_POST['tools'] as $tool ) {
 				$function = 'run_tool_'.$tool;
 				$this->$function();

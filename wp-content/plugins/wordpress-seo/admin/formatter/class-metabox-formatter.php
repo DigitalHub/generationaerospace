@@ -106,7 +106,6 @@ class WPSEO_Metabox_Formatter {
 	private function get_content_analysis_component_translations() {
 		// Esc_html is not needed because React already handles HTML in the (translations of) these strings.
 		return array(
-<<<<<<< HEAD
 			'locale'                                => WPSEO_Utils::get_user_locale(),
 			'content-analysis.language-notice-link' => __( 'Change language', 'wordpress-seo' ),
 			'content-analysis.errors'               => __( 'Errors', 'wordpress-seo' ),
@@ -119,26 +118,6 @@ class WPSEO_Metabox_Formatter {
 			'content-analysis.highlight'            => __( 'Highlight this result in the text', 'wordpress-seo' ),
 			'content-analysis.nohighlight'          => __( 'Remove highlight from the text', 'wordpress-seo' ),
 			'content-analysis.disabledButton'       => __( 'Marks are disabled in current view', 'wordpress-seo' ),
-=======
-			'locale'                                         => WPSEO_Utils::get_user_locale(),
-			'content-analysis.language-notice-link'          => __( 'Change language', 'wordpress-seo' ),
-			'content-analysis.errors'                        => __( 'Errors', 'wordpress-seo' ),
-			'content-analysis.problems'                      => __( 'Problems', 'wordpress-seo' ),
-			'content-analysis.improvements'                  => __( 'Improvements', 'wordpress-seo' ),
-			'content-analysis.considerations'                => __( 'Considerations', 'wordpress-seo' ),
-			'content-analysis.good'                          => __( 'Good', 'wordpress-seo' ),
-			'content-analysis.highlight'                     => __( 'Highlight this result in the text', 'wordpress-seo' ),
-			'content-analysis.language-notice'				 => sprintf(
-																	/* translators: %s expands to the site language. */
-																	__( 'Your site language is set to %s.', 'wordpress-seo' ),
-																	'{language}'
-																),
-			'content-analysis.language-notice-contact-admin' => sprintf(
-																	/* translators: %s expands to the site language. */
-																	__( 'Your site language is set to %s. If this is not correct, contact your site administrator.', 'wordpress-seo' ),
-																	'{language}'
-																),
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
 		);
 	}
 

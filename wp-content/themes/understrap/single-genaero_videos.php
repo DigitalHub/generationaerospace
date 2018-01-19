@@ -96,7 +96,7 @@ $featured_videos_count = $wpdb->num_rows;
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 			<hr>
-			<h3>Related Videos_</h3>
+			<h3>More Videos For You_</h3>
 			<?php
 			if($featured_videos_count > 0) {
 				$count = 0;

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8d3a545ad41415d26b40c72611f9788d
+class ComposerStaticInit76cfc7b06c72274c2d811e383db95e3e
 {
     public static $files = array (
         '995b589e693a50f54393aa31ee1c3763' => __DIR__ . '/..' . '/yoast/whip/src/facades/wordpress.php',
@@ -120,11 +120,6 @@ class ComposerStaticInit8d3a545ad41415d26b40c72611f9788d
         'Composer\\Installers\\YawikInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/YawikInstaller.php',
         'Composer\\Installers\\ZendInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
         'Composer\\Installers\\ZikulaInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
-<<<<<<< HEAD
-=======
-        'Metabox_Add_Keyword_Tab' => __DIR__ . '/../..' . '/admin/metabox/class-metabox-add-keyword-tab.php',
-        'Premium_Upsell_Admin_Block' => __DIR__ . '/../..' . '/admin/class-premium-upsell-admin-block.php',
->>>>>>> b018e5d61e0e77a36842a56fe9bce0a1d1aee5ae
         'WPSEO_Abstract_Capability_Manager' => __DIR__ . '/../..' . '/admin/capabilities/class-abstract-capability-manager.php',
         'WPSEO_Abstract_Post_Filter' => __DIR__ . '/../..' . '/admin/filters/class-abstract-post-filter.php',
         'WPSEO_Abstract_Role_Manager' => __DIR__ . '/../..' . '/admin/roles/class-abstract-role-manager.php',
@@ -445,10 +440,10 @@ class ComposerStaticInit8d3a545ad41415d26b40c72611f9788d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8d3a545ad41415d26b40c72611f9788d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8d3a545ad41415d26b40c72611f9788d::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit8d3a545ad41415d26b40c72611f9788d::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit8d3a545ad41415d26b40c72611f9788d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit76cfc7b06c72274c2d811e383db95e3e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit76cfc7b06c72274c2d811e383db95e3e::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit76cfc7b06c72274c2d811e383db95e3e::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit76cfc7b06c72274c2d811e383db95e3e::$classMap;
 
         }, null, ClassLoader::class);
     }
