@@ -265,6 +265,7 @@ ul#menu-members-only-menu {
 
 		span {
 			background-color: $white;
+			color: $black;
 			@include border-radius(5px);
 			cursor: pointer;
 			height: 20px;

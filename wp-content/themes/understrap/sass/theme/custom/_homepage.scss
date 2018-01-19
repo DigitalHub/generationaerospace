@@ -447,8 +447,15 @@
 }
 
 .featured_trailbazers {
+	.trailblazer--name {
+		color: $rrskyblue !important;
+	}
+}
+
+.animated_circles--wrapper {
 
 	.animated_circles {
+		left: 10px;
 		position: relative;
 
 		svg.circle {
@@ -457,7 +464,6 @@
 				stroke: $white;
 				stroke-width: 1px;
 			}
-
 
 			rect {
 				fill: none; 
@@ -480,16 +486,6 @@
 		}
 	}
 
-	&:hover .animated_circles .line rect {
-		transform: scaleX(1);
-	}
-}
-
-.featured_trailbazers {
-	.trailblazer--name {
-		color: $rrskyblue !important;
-	}
-
 	.post-thumbnail {
 		height: 350px;
 		margin-bottom: 17px;
@@ -501,15 +497,18 @@
 		@include transition(all 0.5s ease);
 	}
 
-	&.featured_events,
-	.featured_trailbazers--img {	
-		&:hover img {
+	&:hover {
+		.animated_circles .line rect {
+			transform: scaleX(1);
+		}
+		
+		img {
 			@include grayscale(0);
 		}
 	}
 }
 
-.featured_events {
+.featured_event {
 	.post-thumbnail {
 		height: 250px !important;
 

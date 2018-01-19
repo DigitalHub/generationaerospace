@@ -159,7 +159,10 @@
 }
 
 .menu-content {
-	background: rgba(1,8,18,0.93);
+	// background: rgba(1,8,18,0.93);
+	background-image: url(../img/imgbg_menu.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: 100%;
 	top: 0;
 	margin: 0;
