@@ -99,7 +99,11 @@ $template = 'video';
 	<div class="subpage--content">
 		<div class="container">
 			<h1><?php the_title(); ?></h1>
-			<p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium quisquam dignissimos, magni ea accusamus provident illo corporis, non cumque.</p>
+			<?php 
+			if (have_posts()) : while (have_posts()) : the_post(); 
+				the_content();
+			endwhile; endif; 
+			?>
 			<div class="row">
 				<div class="col-xl-8 ">
 					<h3 class="text-left">Search for Videos</h3>
