@@ -50,7 +50,7 @@
 .juicer-feed.slider  
 .juicer-feed.hip {
 	li.feed-item {
-		background-color: transparent;
+		background-color: $black;;
 		height: 170px;
 		margin-bottom: 30px !important;
 		max-height: 170px;
@@ -62,6 +62,15 @@
 				visibility: hidden !important;
 				opacity: 0 !important;
 			}
+		}
+
+		a {
+			position: absolute !important;
+			display: block;
+			width: 100% !important;
+			left: 50% !important;
+			top: 50% !important;
+			@include translate(-50%, -50%);
 		}
 	}
 }

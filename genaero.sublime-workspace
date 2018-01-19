@@ -400,55 +400,22 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/header.php",
+			"file": "wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
 			"settings":
 			{
-				"buffer_size": 1847,
+				"buffer_size": 3753,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"contents": "<?php\n/**\n * The base configuration for WordPress\n *\n * The wp-config.php creation script uses this file during the\n * installation. You don't have to use the web site, you can\n * copy this file to \"wp-config.php\" and fill in the values.\n *\n * This file contains the following configurations:\n *\n * * MySQL settings\n * * Secret keys\n * * Database table prefix\n * * ABSPATH\n *\n * @link https://codex.wordpress.org/Editing_wp-config.php\n *\n * @package WordPress\n */\n\n// ** MySQL settings - You can get this info from your web host ** //\n/** The name of the database for WordPress */\ndefine('DB_NAME', 'admin_generationaerospace');\n// define('DB_NAME', 'generationaerospace');\n\n/** MySQL database username */\ndefine('DB_USER', 'admin_admin');\n// define('DB_USER', 'root');\n\n/** MySQL database password */\ndefine('DB_PASSWORD', 'jQjmEK70');\n// define('DB_PASSWORD', '');\n\n/** MySQL hostname */\ndefine('DB_HOST', 'localhost');\n\n/** Database Charset to use in creating database tables. */\ndefine('DB_CHARSET', 'utf8mb4');\n\n/** The Database Collate type. Don't change this if in doubt. */\ndefine('DB_COLLATE', '');\n\n/**#@+\n * Authentication Unique Keys and Salts.\n *\n * Change these to different unique phrases!\n * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}\n * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.\n *\n * @since 2.6.0\n */\ndefine('AUTH_KEY',         'ommP4+Tl{nixkBiL1}B.cA#tFjcMdxSfFVgl/(Uavz>wSFs>XveT8}Go4sdtw+z8');\ndefine('SECURE_AUTH_KEY',  'sMO+`G.,P%<9v|y8=JD0]u:_l`Wt<&NFO.0uzny2Uw&{;]8CW#3B&=g}FCUAt<.,');\ndefine('LOGGED_IN_KEY',    '0jPi:;.hTL=JNV]A<it)07pWXj3WJ{F{`{qI+h`m}:PK..XgV9me]L(U}I5ew.83');\ndefine('NONCE_KEY',        'l)y]>vG$_Zdz;7&4hP|:}GlgF%0C|t>4,iq@j+]`CY_Q!;CV9eIu,>aMEt04aV3#');\ndefine('AUTH_SALT',        '`dzf?p+UA7!{U&Yb;m@<&#|TeFzyY&]q-k@7@FQhZ8}1&.?S/P3{<7(G}?(POL9?');\ndefine('SECURE_AUTH_SALT', 'GvELwi|oM 8+qlAz*&AHy$&juf,alGrp9G@3=5Ufs.4sSBVLbU~{X.BX2ebKg;d7');\ndefine('LOGGED_IN_SALT',   ' >}&zh[ewGtlH6|k%T7|iTt.E4)Kx[**xyflRalfx[(Qtro~LV&fG0Y^&Ahe-y]8');\ndefine('NONCE_SALT',       '9cF)<`0}!{El)Qa/@u7[>dS;a>0MpuLk#S6_LXCr{afr iLVy((:KPT<C62*sgzN');\n\n/**#@-*/\n\n/**\n * WordPress Database Table prefix.\n *\n * You can have multiple installations in one database if you give each\n * a unique prefix. Only numbers, letters, and underscores please!\n */\n$table_prefix  = 'wp_';\n\n/**\n * For developers: WordPress debugging mode.\n *\n * Change this to true to enable the display of notices during development.\n * It is strongly recommended that plugin and theme developers use WP_DEBUG\n * in their development environments.\n *\n * For information on other constants that can be used for debugging,\n * visit the Codex.\n *\n * @link https://codex.wordpress.org/Debugging_in_WordPress\n */\ndefine('WP_DEBUG', false);\n\n/* That's all, stop editing! Happy blogging. */\n\n/** Absolute path to the WordPress directory. */\nif ( !defined('ABSPATH') )\n\tdefine('ABSPATH', dirname(__FILE__) . '/');\n\n/** Sets up WordPress vars and included files. */\nrequire_once(ABSPATH . 'wp-settings.php');\n\n/** YouTube API Key */\ndefine(YOUTUBE_API_KEY, 'AIzaSyDmfdGOPcsVKZr1WoXFz2sym3fnN4YRgAc');\n\n/** YouTube API Key */\ndefine(GMAP_API_KEY, 'AIzaSyBlgkeNb2t9Vs5fhd4QjzqudI2doBwUTDs');",
 			"file": "/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/wp-config.php",
+			"file_size": 3445,
+			"file_write_time": 131607648874042000,
 			"settings":
 			{
 				"buffer_size": 3348,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/page-templates/navigation-top.php",
-			"settings":
-			{
-				"buffer_size": 1388,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/loop-templates/hub-base.php",
-			"settings":
-			{
-				"buffer_size": 2323,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/page-templates/dashboard.php",
-			"settings":
-			{
-				"buffer_size": 4422,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/sidebar-left.php",
-			"settings":
-			{
-				"buffer_size": 1236,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -470,15 +437,6 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
-			"settings":
-			{
-				"buffer_size": 3753,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"contents": "<?php\n/**\n * Template Name: Left and Right Sidebar Layout\n *\n * This template can be used to override the default template and sidebar setup\n *\n * @package understrap\n */\n?>\n<section class=\"section\" data-anchor=\"genaero_explorer\">\n\t<?php $bgimg = get_template_directory_uri() . \"/img/imgbg_homepage-why.jpg\";?>\n\t<div class=\"HudOverlay\" style=\"background-image: url('<?php echo $bgimg; ?>');\">\n\n\t\t<div class=\"tiny-stars\"><img src=\"<?php echo get_template_directory_uri(); ?>/img/stars2.svg\" alt=\"\"></div>\n\n\t\t<div class=\"tiny-stars middle-stars\"><img src=\"<?php echo get_template_directory_uri(); ?>/img/stars3.svg\" alt=\"\"></div>\n\n\t\t<div class=\"planet-big centered\"> <!-- ORBIT --> <span class=\"round round-1\"></span> <span class=\"round round-2\"></span> <span class=\"round round-3\"></span> <span class=\"round round-4\"></span> <span class=\"round round-5\"></span> <!-- END OF ORBIT --> </div>\n\n\t\t<svg class=\"HudOverlayme\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 653.6\" style=\"enable-background:new 0 0 1316 653.6;\" xml:space=\"preserve\" preserveAspectRatio=\"none\">\n\t\t\t<filter height=\"120%\" id=\"blurlayer\" width=\"110%\">\n\t\t\t\t<feGaussianBlur  result=\"blur\" stdDeviation=\"2\"></feGaussianBlur>\n\t\t\t</filter>\n\t\t\t<g>\n\t\t\t\t<g class=\"HubOverlay--Blur\">\n\t\t\t\t\t<image xlink:href=\"<?php echo $bgimg; ?>\"></image>\n\t\t\t\t</g>\n\t\t\t\t<defs>\n\t\t\t\t\t<path id=\"HubOutside\" d=\"M880.4,34c173.1,5,377.8,11.2,381.3,11.3c5.3,0,9.8,3.9,9.8,8.6c0.2,2.3,20.9,225.5,20.9,274.3\n\t\t\t\t\tc0,48.9-20.7,275.2-20.9,277.5c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6C39,604.6,24.9,484,19.7,387.5 c6.7-6.9,13.4-14.9,13.5-14.9l0.1-0.1l0.8-85.1l-0.1-0.1c0-0.1-7.9-8.1-14.6-14.3C24.1,175.8,39,55.2,39.1,54 c0-4.7,4.4-8.6,9.8-8.6c3.5-0.1,212.1-6.7,381.5-11.8L880.4,34z\"/>\n\n\t\t\t\t\t<path id=\"clip_path_bg\" d=\"M880.4,34c173.1,5,377.8,11.2,381.3,11.3c5.3,0,9.8,3.9,9.8,8.6c0.2,2.3,20.9,225.5,20.9,274.3\n\t\t\t\t\tc0,48.9-20.7,275.2-20.9,277.5c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6C39,604.6,24.9,484,19.7,387.5 c6.7-6.9,13.4-14.9,13.5-14.9l0.1-0.1l0.8-85.1l-0.1-0.1c0-0.1-7.9-8.1-14.6-14.3C24.1,175.8,39,55.2,39.1,54 c0-4.7,4.4-8.6,9.8-8.6c3.5-0.1,212.1-6.7,381.5-11.8L880.4,34z\"/>\n\t\t\t\t</defs>\n\t\t\t\t<clipPath id=\"HubOverlay--Blur\">\n\t\t\t\t\t<use xlink:href=\"#HubOutside\" style=\"overflow:visible;\"/>\n\t\t\t\t\t<use xlink:href=\"#clip_path_bg\" style=\"overflow:visible;\"/>\n\t\t\t\t</clipPath>\n\t\t\t\t<g class=\"HudOverlay-fullBorder\">\n\t\t\t\t\t<path class=\"path\" d=\"M880.4,34c173.1,5,377.8,11.2,381.3,11.3c5.3,0,9.8,3.9,9.8,8.6c0.2,2.3,20.9,225.5,20.9,274.3\n\t\t\t\t\tc0,48.9-20.7,275.2-20.9,277.5c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6C39,604.6,24.9,484,19.7,387.5 c6.7-6.9,13.4-14.9,13.5-14.9l0.1-0.1l0.8-85.1l-0.1-0.1c0-0.1-7.9-8.1-14.6-14.3C24.1,175.8,39,55.2,39.1,54 c0-4.7,4.4-8.6,9.8-8.6c3.5-0.1,212.1-6.7,381.5-11.8\"/>\n\t\t\t\t</g>\n\t\t\t\t<polygon class=\"polygon\" points=\"521.5,614.3 538.7,608.7 773.5,608.7 790.2,614.3 773.8,617.5 539,617.5\t\"/>\n\t\t\t</g>\n\t\t</svg>\n\t</div> \n\t<div class=\"container sub_content\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xl-10 offset-xl-1\">\n\t\t\t\t<h2 style=\"text-align: center;\">Why be a Genaero Explorer</h2>\n\t\t\t\t<div class=\"genaero_explorer--carousel\">\n\t\t\t\t\t<?php\n\t\t\t\t\tif(have_rows('explorer_slides')) :\n\t\t\t\t\t\twhile(have_rows('explorer_slides')) : the_row();\n\t\t\t\t\t\t\t$icon = get_sub_field('icon');\n\t\t\t\t\t\t\t$title = get_sub_field('title');\n\t\t\t\t\t\t\t$copy = get_sub_field('copy');\n\t\t\t\t\t\t\t?>\n\t\t\t\t\t\t\t<div class=\"explorer_slide\">\n\t\t\t\t\t\t\t\t<div class=\"post-thumbnail\">\n\t\t\t\t\t\t\t\t\t<img src=\"<?=$icon['url']?>\" />\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<h2><?=$title?></h2>\n\t\t\t\t\t\t\t\t<p class=\"highlight\"><?=$copy?></p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<?php\n\t\t\t\t\t\tendwhile;\n\t\t\t\t\tendif;\n\t\t\t\t\t?>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
 			"settings":
 			{
@@ -493,6 +451,15 @@
 				"buffer_size": 1568,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/css/theme.css",
+			"settings":
+			{
+				"buffer_size": 364783,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -621,8 +588,17 @@
 	],
 	"file_history":
 	[
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/sign-up.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/page-homepage.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/main.js",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/hub-base.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sidebar-left.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/dashboard.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/header.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/navigation-top.php",
+		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/wp-config.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/sign-up.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/login.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/profile.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/submit-idea.php",
@@ -631,13 +607,9 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/fav-videos.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/fav-experiments.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/empty.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/dashboard.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/home-hubbase.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/hub-base.php",
 		"/C/wamp64/www/generationaerospace/wp-content/plugins/genaero-members/genaero-members.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sidebar-footerfull.php",
-		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/wp-config.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-experiment.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-trailbazers.php",
 		"/C/Users/rachelle.quek/Desktop/generationaerospace.sql",
@@ -654,8 +626,6 @@
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/index.html",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_theme.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/footer.php",
-		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/header.php",
-		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/page-homepage.php",
 		"/C/wamp64/www/generationaerospace/database/20180115-generationaerospace.sql",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/footer.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/.htaccess",
@@ -723,7 +693,6 @@
 		"/C/Users/rachelle.quek/Desktop/clip.svg",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-page.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_form.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sidebar-left.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_mixins.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_variables.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_icons.scss",
@@ -741,18 +710,16 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/sass/modules/_clearings.scss",
 		"/C/wamp64/www/generationaerospace/database/20180105-generationaerospace.sql",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/page-videos.php",
-		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/main.js",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_type.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/assets/bootstrap4.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/bootstrap4/_variables.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/page-experiments.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/page-video.php",
-		"/C/wamp64/www/harihasanah/wp-content/themes/hasanah/header.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/navigation-top.php"
+		"/C/wamp64/www/harihasanah/wp-content/themes/hasanah/header.php"
 	],
 	"find":
 	{
-		"height": 52.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -774,6 +741,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"a#genaero-facebook-button",
 			"//",
 			"widget",
 			"8",
@@ -900,8 +868,7 @@
 			"month_experiment--content",
 			"experiment--fav_",
 			"primary",
-			"featured_experiment--card",
-			"36px"
+			"featured_experiment--card"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -951,27 +918,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 272.0,
+						"translation.y": 170.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "wp-content/themes/understrap/header.php",
+					"file": "wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1847,
+						"buffer_size": 3753,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1584,
-								1584
+								366,
+								366
 							]
 						],
 						"settings":
@@ -980,10 +947,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 462.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -999,8 +966,28 @@
 						"selection":
 						[
 							[
-								674,
-								674
+								610,
+								610
+							],
+							[
+								661,
+								661
+							],
+							[
+								723,
+								723
+							],
+							[
+								765,
+								765
+							],
+							[
+								814,
+								814
+							],
+							[
+								858,
+								858
 							]
 						],
 						"settings":
@@ -1016,121 +1003,6 @@
 				},
 				{
 					"buffer": 3,
-					"file": "wp-content/themes/understrap/page-templates/navigation-top.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1388,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								693,
-								631
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wp-content/themes/understrap/loop-templates/hub-base.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1380,
-								1380
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 51.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "wp-content/themes/understrap/page-templates/dashboard.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4422,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2281,
-								2281
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1020.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "wp-content/themes/understrap/sidebar-left.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1236,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								915,
-								921
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 102.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "wp-content/themes/understrap/page-templates/login.php",
 					"semi_transient": false,
 					"settings":
@@ -1155,11 +1027,11 @@
 						"translation.y": 918.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 4,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1170,8 +1042,8 @@
 						"selection":
 						[
 							[
-								0,
-								2529
+								504,
+								504
 							]
 						],
 						"settings":
@@ -1183,40 +1055,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3753,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3753,
-								3743
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1497.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
+					"buffer": 5,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1240,7 +1083,7 @@
 						"translation.y": 918.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1250,7 +1093,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 11,
+					"buffer": 6,
 					"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
 					"semi_transient": false,
 					"settings":
@@ -1262,8 +1105,8 @@
 						"selection":
 						[
 							[
-								999,
-								999
+								609,
+								1286
 							]
 						],
 						"settings":
@@ -1271,14 +1114,44 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 714.0,
+						"translation.y": 850.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 7,
+					"file": "wp-content/themes/understrap/css/theme.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 364783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364250,
+								362131
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 235360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "wp-content/themes/understrap/sass/theme/_animation.scss",
 					"semi_transient": false,
 					"settings":
@@ -1290,8 +1163,8 @@
 						"selection":
 						[
 							[
-								13644,
-								13644
+								1164,
+								1164
 							]
 						],
 						"settings":
@@ -1300,14 +1173,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 10319.0,
+						"translation.y": 85.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 9,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 					"semi_transient": false,
 					"settings":
@@ -1329,14 +1202,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7202.0,
+						"translation.y": 844.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 10,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 					"semi_transient": false,
 					"settings":
@@ -1361,11 +1234,11 @@
 						"translation.y": 1278.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 11,
 					"file": "wp-content/themes/understrap/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -1391,11 +1264,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 12,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
 					"semi_transient": false,
 					"settings":
@@ -1420,11 +1293,11 @@
 						"translation.y": 10492.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 13,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
 					"semi_transient": false,
 					"settings":
@@ -1449,7 +1322,7 @@
 						"translation.y": 421.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -1483,7 +1356,7 @@
 		"cols":
 		[
 			0.0,
-			0.61872718391,
+			0.540843275019,
 			1.0
 		],
 		"rows":

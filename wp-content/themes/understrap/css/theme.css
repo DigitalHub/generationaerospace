@@ -11619,7 +11619,9 @@ a#genaero-facebook-button {
   top: 55%; }
 
 .menu-content {
-  background: rgba(1, 8, 18, 0.93);
+  background-image: url(../img/imgbg_menu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   top: 0;
   margin: 0;
@@ -11914,7 +11916,7 @@ a#genaero-facebook-button {
   cursor: pointer;
   right: 2%;
   position: fixed; }
-  .scrolling .up--button .hexagon-icon {
+  .scrolling.up--button .headerbutt .hexagon-icon {
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -12367,21 +12369,25 @@ a#genaero-facebook-button {
     width: 80%;
     margin: auto; }
 
-.featured_trailbazers .animated_circles {
+.featured_trailbazers .trailblazer--name {
+  color: #00aed4 !important; }
+
+.animated_circles--wrapper .animated_circles {
+  left: 10px;
   position: relative; }
-  .featured_trailbazers .animated_circles svg.circle circle {
+  .animated_circles--wrapper .animated_circles svg.circle circle {
     fill: transparent;
     stroke: #fff;
     stroke-width: 1px; }
-  .featured_trailbazers .animated_circles svg.circle rect {
+  .animated_circles--wrapper .animated_circles svg.circle rect {
     fill: none;
     stroke: none; }
-  .featured_trailbazers .animated_circles svg.line {
+  .animated_circles--wrapper .animated_circles svg.line {
     position: absolute;
     top: 9px;
     left: -10px;
     width: 100%; }
-    .featured_trailbazers .animated_circles svg.line rect {
+    .animated_circles--wrapper .animated_circles svg.line rect {
       fill: none;
       stroke: #fff;
       -moz-transform: scaleX(0);
@@ -12393,15 +12399,10 @@ a#genaero-facebook-button {
       -o-transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; }
-.featured_trailbazers:hover .animated_circles .line rect {
-  transform: scaleX(1); }
-
-.featured_trailbazers .trailblazer--name {
-  color: #00aed4 !important; }
-.featured_trailbazers .post-thumbnail {
+.animated_circles--wrapper .post-thumbnail {
   height: 350px;
   margin-bottom: 17px; }
-.featured_trailbazers img {
+.animated_circles--wrapper img {
   height: 470px;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -12410,17 +12411,18 @@ a#genaero-facebook-button {
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-.featured_trailbazers.featured_events:hover img,
-.featured_trailbazers .featured_trailbazers--img:hover img {
+.animated_circles--wrapper:hover .animated_circles .line rect {
+  transform: scaleX(1); }
+.animated_circles--wrapper:hover img {
   -webkit-filter: grayscale(0);
   -moz-filter: grayscale(0);
   filter: grayscale(0); }
 
-.featured_events .post-thumbnail {
+.featured_event .post-thumbnail {
   height: 250px !important; }
-  .featured_events .post-thumbnail img {
+  .featured_event .post-thumbnail img {
     height: 300px; }
-  .featured_events .post-thumbnail h3 {
+  .featured_event .post-thumbnail h3 {
     font-weight: 700;
     position: absolute;
     bottom: 0;
@@ -12487,7 +12489,7 @@ a#genaero-facebook-button {
 .juicer-feed.image-grid li.feed-item,
 .juicer-feed.slider
 .juicer-feed.hip li.feed-item {
-  background-color: transparent;
+  background-color: #000;
   height: 170px;
   margin-bottom: 30px !important;
   max-height: 170px;
@@ -12498,6 +12500,19 @@ a#genaero-facebook-button {
   .juicer-feed.hip li.feed-item:hover .j-text {
     visibility: hidden !important;
     opacity: 0 !important; }
+  .juicer-feed.image-grid li.feed-item a,
+  .juicer-feed.slider
+  .juicer-feed.hip li.feed-item a {
+    position: absolute !important;
+    display: block;
+    width: 100% !important;
+    left: 50% !important;
+    top: 50% !important;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 .juicer-feed h1.referral,
 a.j-paginate.juicer-button {
@@ -13291,6 +13306,7 @@ ul#menu-members-only-menu {
     width: 80px; }
     .dashboard_content .hide-show span {
       background-color: #fff;
+      color: #000;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       -ms-border-radius: 5px;

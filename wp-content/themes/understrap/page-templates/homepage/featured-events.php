@@ -48,7 +48,7 @@ $second_query = new WP_Query($args2);
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">
-			<div class="col-xl-6 featured_trailbazers featured_events">
+			<div class="col-xl-6 animated_circles--wrapper featured_event">
 				<?php 
 				if($first_query->have_posts()) :
 					while($first_query->have_posts()) : $first_query->the_post();

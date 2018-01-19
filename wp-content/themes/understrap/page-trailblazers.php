@@ -27,7 +27,7 @@ $post_count = $the_query->post_count;
 ?>
 
 <section class="subpage--hud">
-	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findanexperiment.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-trailblizers.jpg";
 	include(locate_template('loop-templates/hub-base.php')); ?>
 	<div class="subpage--content">
 		<div class="container">
