@@ -132,7 +132,7 @@ if($_GET['keyword']) {
 					</main><!-- #main -->
 					<div class="clear"></div>
 					<?php if (  $the_query->max_num_pages > 1 ) {
-						echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
+						echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'"><div class="defaultbtn-wrapper"><span>See More Experiments</span></div></a></div>';
 					} ?>
 					<!-- TODO: STEF TO ADD LOAD MORE -->
 				</div><!-- #primary -->

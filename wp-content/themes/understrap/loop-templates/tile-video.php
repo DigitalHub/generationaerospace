@@ -5,7 +5,7 @@
  * @package understrap
  */
 
-global $video;
+// global $video;
 
 $posted_by = $video->posted_by;
 $video_id = $video->video_id;
