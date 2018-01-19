@@ -11914,7 +11914,7 @@ a#genaero-facebook-button {
   cursor: pointer;
   right: 2%;
   position: fixed; }
-  .scrolling .up--button .hexagon-icon {
+  .scrolling.up--button .headerbutt .hexagon-icon {
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);

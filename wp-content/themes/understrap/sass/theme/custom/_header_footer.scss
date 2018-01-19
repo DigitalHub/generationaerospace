@@ -473,7 +473,7 @@
 	right: 2%;
 	position: fixed;
 
-	.up--button .hexagon-icon {
+	&.up--button .headerbutt .hexagon-icon {
 		@include rotate(180);
 	}
 }
