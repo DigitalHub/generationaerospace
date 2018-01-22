@@ -268,7 +268,7 @@ $('.videos_loadmore').on('click', function(e) {
         success : function( data ){
             $('.ajax-loading').hide();
             if(data) {
-                $('section.all-videos-section').append(data);
+                $('.video-row').append(data);
                 $('.videos_loadmore').data('count',newcount);
             } else {
                 button.remove();

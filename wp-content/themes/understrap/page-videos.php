@@ -192,26 +192,20 @@ $template = 'video';
 					<hr>
 					<section class="all-videos-section">
 						<h3>All Videos_</h3>
-						<?php if($all_videos_count > 0) {
-							$count = 0;
-							foreach($all_videos_results as $key => $video) {
-								if($count % 3 == 0) :
-									echo $count > 0 ? '</div>' : '';
-									echo '<div class="row">';
-								endif;
-								include(locate_template('loop-templates/tile-video.php'));
-								$count++;
-								unset($all_videos_results[$key]);
+						<div class="row video-row">
+							<?php if($all_videos_count > 0) {
+								$count = 0;
+								foreach($all_videos_results as $key => $video) {
+									include(locate_template('loop-templates/tile-video.php'));
+									$count++;
+									unset($all_videos_results[$key]);
 
-								if($count === $posts_per_page) {
-									break;
+									if($count === $posts_per_page) {
+										break;
+									}
 								}
-							}
-
-							if($count % 3 !== 0) {
-								echo '</div>';
-							}
-						} ?>
+							} ?>
+						</div>
 						<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>./img/ajax-loader.gif" style="display:none">
 					</section>
 					<?php
