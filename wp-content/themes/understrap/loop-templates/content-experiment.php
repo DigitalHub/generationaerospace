@@ -20,15 +20,15 @@ $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 								<div class="experiment--carousel">
 									<?php $totalcount = 0;
 									if(have_rows('steps')) :
-										$totalcount = count(get_field('steps'));
-										$count = 1;
+										$totalcount = sprintf('%02d', count(get_field('steps')));
+										$count = sprintf('%02d', 1);
 										while(have_rows('steps')) : the_row();
 											$photo = get_sub_field('photo');
 											$step = get_sub_field('step'); ?>
 											<div class="experiment_slide">
 												<div class="post-thumbnail"><img src="<?=$photo['sizes']['medium']?>"></div><br>
 												<div class="experiment_counts">
-													<span class="counting">0<?=$count?></span><span class="totalcount">0<?=$totalcount?></span>
+													<span class="counting"><?=$count?></span><span class="totalcount"><?=$totalcount?></span>
 												</div>
 												<div class="experiment_steps"><?=$step?></div>
 											</div>
