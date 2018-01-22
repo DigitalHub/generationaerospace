@@ -112,23 +112,17 @@ if($_GET['keyword']) {
 				<div class="col-xl-12 content-area" id="primary">
 					<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>./img/ajax-loader.gif" style="display:none">
 					<main class="site-main" id="main" role="main">
+						<div class="row experiment-row">
 						<?php
 						if($the_query->have_posts()) :
 							$count = 0;
 							while($the_query->have_posts()) : $the_query->the_post();
-								if($count % $posts_per_page == 0) :
-									echo $count > 0 ? '</div>' : '';
-									echo '<div class="row">';
-								endif;
 								get_template_part( 'loop-templates/tile', $template );
 								$count++;
 							endwhile;
-
-							if($count % $posts_per_page !== 0) {
-								echo '</div>';
-							}
 						endif;
 						?>
+					</div>
 					</main><!-- #main -->
 					<div class="clear"></div>
 					<?php if (  $the_query->max_num_pages > 1 ) {
