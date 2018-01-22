@@ -96,6 +96,42 @@ function fav_this_experiment() {
 	echo 'success';
 }
 
+add_action( 'wp_ajax_nopriv_genaero_video_pagination', 'genaero_video_pagination' );
+add_action( 'wp_ajax_genaero_video_pagination', 'genaero_video_pagination' );
+
+// TODO: STEF TO RESOLVE ROW ISSUE
+function genaero_video_pagination() {
+	global $wpdb;
+	$members_table = $wpdb->prefix.'genaero_members';
+	$videos_table = $wpdb->prefix.'genaero_videos';
+
+	$id = $_POST['count'];
+	$posts_per_page = $_POST['posts_per_page'];
+
+	$sql = $wpdb->prepare("SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t1.create_date DESC LIMIT %d, %d", $id, $posts_per_page);
+
+	$results = $wpdb->get_results($sql);
+	$row_count = $wpdb->num_rows;
+
+	if($row_count > 0) {
+		$count = 0;
+		foreach($results as $video) {
+			if($count % 3 == 0) :
+				echo $count > 0 ? '</div>' : '';
+				echo '<div class="row">';
+			endif;
+			include(locate_template('loop-templates/tile-video.php'));
+			$count++;
+		}
+
+		if($count % 3 !== 0) {
+			echo '</div>';
+		}
+	}
+
+	wp_die();
+}
+
 add_action( 'wp_ajax_nopriv_genaero_ajax_pagination', 'genaero_ajax_pagination' );
 add_action( 'wp_ajax_genaero_ajax_pagination', 'genaero_ajax_pagination' );
 

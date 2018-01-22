@@ -10863,6 +10863,7 @@ svg.circlerotate {
 .polygon {
   fill: #fff; }
 
+.page-template-forgot-password,
 .page-template-sign-up,
 .page-template-login,
 .page-template-dashboard,
@@ -10874,6 +10875,7 @@ svg.circlerotate {
 .page-template-fav-experiments {
   overflow-y: hidden; }
 
+.page-template-forgot-password .HudOverlay,
 .page-template-login .HudOverlay,
 .page-template-sign-up .HudOverlay,
 .page-template-dashboard .HudOverlay,
@@ -11970,6 +11972,7 @@ a#genaero-facebook-button {
   .footer-nav-link a:hover {
     border: 1px solid #cad63e; }
 
+.page-template-forgot-password #wrapper-footer,
 .page-template-sign-up #wrapper-footer,
 .page-template-login #wrapper-footer,
 .page-template-dashboard #wrapper-footer,
@@ -13102,29 +13105,40 @@ a.j-paginate.juicer-button {
 
 .sign-up-row,
 .login-row,
-.dashboard-row {
+.dashboard-row,
+.forgot-row {
   align-items: center;
   justify-content: center;
   align-items: center;
   height: 100vh; }
   .sign-up-row h2,
   .login-row h2,
-  .dashboard-row h2 {
+  .dashboard-row h2,
+  .forgot-row h2 {
     color: white;
     margin: 20px auto;
     text-align: center; }
   .sign-up-row .error,
   .login-row .error,
-  .dashboard-row .error {
+  .dashboard-row .error,
+  .forgot-row .error {
     color: red;
     margin-bottom: 15px;
     text-align: center; }
   .sign-up-row .success,
   .login-row .success,
-  .dashboard-row .success {
+  .dashboard-row .success,
+  .forgot-row .success {
     color: #cad63e;
     margin-bottom: 15px; }
+  .sign-up-row p,
+  .login-row p,
+  .dashboard-row p,
+  .forgot-row p {
+    color: #fff; }
 
+#forgot_form input,
+#reset_form input,
 #signup_form input,
 #login_form input {
   background-color: #ffffff40 !important;
@@ -13136,9 +13150,19 @@ a.j-paginate.juicer-button {
   margin-bottom: 15px;
   padding: 15px 10px;
   width: 100%; }
+  #forgot_form input:focus,
+  #reset_form input:focus,
   #signup_form input:focus,
   #login_form input:focus {
     outline: 0; }
+#forgot_form input::-webkit-input-placeholder,
+#forgot_form input:-moz-placeholder,
+#forgot_form input::-moz-placeholder,
+#forgot_form input:-ms-input-placeholder,
+#reset_form input::-webkit-input-placeholder,
+#reset_form input:-moz-placeholder,
+#reset_form input::-moz-placeholder,
+#reset_form input:-ms-input-placeholder,
 #signup_form input::-webkit-input-placeholder,
 #signup_form input:-moz-placeholder,
 #signup_form input::-moz-placeholder,
@@ -13148,21 +13172,29 @@ a.j-paginate.juicer-button {
 #login_form input::-moz-placeholder,
 #login_form input:-ms-input-placeholder {
   color: #fff !important; }
+#forgot_form .login_submit--wrap,
+#reset_form .login_submit--wrap,
 #signup_form .login_submit--wrap,
 #login_form .login_submit--wrap {
   display: inline-block;
   vertical-align: middle; }
+#forgot_form .forgot_password--btn,
+#reset_form .forgot_password--btn,
 #signup_form .forgot_password--btn,
 #login_form .forgot_password--btn {
   display: inline-block;
   line-height: 47px;
   margin-left: 30px;
   vertical-align: middle; }
+#forgot_form .click_terms,
+#reset_form .click_terms,
 #signup_form .click_terms,
 #login_form .click_terms {
   color: #00aed4;
   margin: 15px 0 0;
   text-align: center; }
+  #forgot_form .click_terms a,
+  #reset_form .click_terms a,
   #signup_form .click_terms a,
   #login_form .click_terms a {
     text-decoration: underline; }
@@ -13293,30 +13325,32 @@ ul#menu-members-only-menu {
   .dashboard_content .profile_photo--wrapper input[type="file"] {
     background-color: transparent;
     width: calc(100% - 220px); }
-  .dashboard_content input#profile_password {
-    margin: 0;
-    width: calc(100% - 195px); }
-  .dashboard_content .hide-show {
-    background-color: #ffffff1f;
-    display: none;
-    float: right;
-    height: 40px;
-    padding: 10px 0;
+
+input#profile_password {
+  margin: 0;
+  width: calc(100% - 195px); }
+
+.hide-show {
+  background-color: #ffffff1f;
+  display: none;
+  float: right;
+  height: 40px;
+  padding: 10px 0;
+  text-align: center;
+  width: 80px; }
+  .hide-show span {
+    background-color: #fff;
+    color: #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 20px;
     text-align: center;
-    width: 80px; }
-    .dashboard_content .hide-show span {
-      background-color: #fff;
-      color: #000;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      height: 20px;
-      text-align: center;
-      padding: 5px;
-      text-transform: uppercase;
-      width: auto; }
+    padding: 5px;
+    text-transform: uppercase;
+    width: auto; }
 
 .announcement {
   background-color: #ffffff1f;

@@ -42,23 +42,24 @@ jQuery(document).ready(function($) {
         jQuery('.menu-content').removeClass('opened');
     });
 
-
-    jQuery('#fullpage').fullpage({
-        anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailbazers', 'featured_events'],
-        menu: '.chapter-selector',
-        css3: true,
+    if(jQuery('#fullpage').length) {
+        jQuery('#fullpage').fullpage({
+            anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailbazers', 'featured_events'],
+            menu: '.chapter-selector',
+            css3: true,
         // lockAnchors: true,
         fitToSectionDelay: 100,
         lazyLoading: true,
         afterLoad: function(anchorLink, index){
-           if(index == $('.section').length){
+         if(index == $('.section').length){
             jQuery('.down--button').hide();
             jQuery('.up--button').show();
         } else {
             jQuery('.down--button').show();
             jQuery('.up--button').hide();       }
+        }
+    });
     }
-});
 
     jQuery('.scrolling.down--button').click(function(){
         jQuery.fn.fullpage.moveSectionDown();
@@ -94,13 +95,15 @@ jQuery(document).ready(function($) {
         nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
     });
 
-    jQuery('.fullpopup').fancybox({
-        toolbar  : false,
-        smallBtn : true,
+    if(jQuery('.fullpopup').length) {
+        jQuery('.fullpopup').fancybox({
+            toolbar  : false,
+            smallBtn : true,
 // iframe : {
 //     preload : false
 // }
 });
+    }
 
     jQuery('.genaero_explorer--carousel').slick({
         autoplay: false,
@@ -240,6 +243,36 @@ $('#experiment_submit').on('click', function() {
         success: function(data) {
             $('.ajax-loading').hide();
             $('.site-main').html(data);
+        }
+    });
+});
+
+$('.videos_loadmore').on('click', function(e) {
+    e.preventDefault();
+    var button = $(this);
+    var count = button.data('count');
+    var posts_per_page = button.data('posts_per_page');
+    var newcount = count + posts_per_page;
+
+    $.ajax({
+        url: ajax.ajaxUrl,
+        type : 'post',
+        data: {
+            action: 'genaero_video_pagination',
+            count: count,
+            posts_per_page: posts_per_page,
+        },
+        beforeSend: function() {
+            $('.ajax-loading').show();
+        },
+        success : function( data ){
+            $('.ajax-loading').hide();
+            if(data) {
+                $('section.all-videos-section').append(data);
+                $('.videos_loadmore').data('count',newcount);
+            } else {
+                button.remove();
+            }
         }
     });
 });

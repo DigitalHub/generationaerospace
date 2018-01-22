@@ -138,6 +138,29 @@ dbDelta( $sql );
 
 }
 
+//create database for password change requests
+register_activation_hook( __FILE__, 'create_password_change_requests_db' );
+function create_password_change_requests_db() {
+    global $wpdb;
+
+    $version = get_option( 'my_plugin_version', '1.0' );
+    $charset_collate = $wpdb->get_charset_collate();
+    $table = $wpdb->prefix . 'genaero_password_change_requests';
+
+    if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table}'" ) != $table ) {
+        $sql = "CREATE TABLE $table (
+        id varchar(50) NOT NULL,
+        email varchar(254) NOT NULL,
+        create_date timestamp CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id)
+    ) $charset_collate;";
+}
+
+require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+dbDelta( $sql );
+
+}
+
 /*
  * Import the Facebook SDK and load all the classes
  */
@@ -565,6 +588,52 @@ function getDates($startdate, $enddate) {
     }
 
     return $date;
+}
+
+//sets email from plaintext to htmltext
+function wpse27856_set_content_type(){
+    return "text/html";
+}
+add_filter( 'wp_mail_content_type','wpse27856_set_content_type' );
+
+//send email for Forgot Password
+function emailForgotPassword($toEmail) {
+    global $wpdb;
+    $code = random_code(15);
+    $hash = wp_hash_password($code);
+    $link = get_bloginfo('url').'/reset-password?ID='.$code;
+
+    $table = $wpdb->prefix . 'genaero_password_change_requests';
+    $check_email = $wpdb->prepare("SELECT id FROM $table WHERE email=%s",$toEmail);
+    $check_results = $wpdb->get_results($check_email);
+
+    if($wpdb->num_rows > 0) {
+        $wpdb->query($wpdb->prepare("UPDATE $table SET id=%s",$hash));
+    } else {
+        $wpdb->query($wpdb->prepare("INSERT INTO $table (id,email) VALUES (%s,%s)", array($hash,$toEmail)));
+    }
+
+    $to      = $toEmail;
+    $subject = 'Generation Aerospace: Reset Password';
+    $message = 'This email was sent to you because you requested to reset the password for the Generation Aerospace\'s website.<br><br> To reset your password, please click on this link: '.$link.'<br><br>If you did not requset a password reset, please disregard this email.';
+    $headers = 'From: webmaster@generationaerospace.com' . "\r\n" .
+    'Reply-To: webmaster@generationaerospace.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+    $sent = wp_mail($to, $subject, $message, $headers);
+
+    if($sent) {
+        return 'Reset e-mail sent successfully. Please check your e-mail for the link.';
+    } else {
+        return 'Reset e-mail could not be sent. Please try again.';
+    }
+}
+
+//generate random alphanumeric string
+//random_code(8)
+function random_code($limit)
+{
+    return substr(base_convert(sha1(uniqid(mt_rand())), 16, 36), 0, $limit);
 }
 
 ?>
