@@ -69,3 +69,6 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
+// TODO: REMOVE BEFORE LIVE
+add_filter('show_admin_bar', '__return_false');
