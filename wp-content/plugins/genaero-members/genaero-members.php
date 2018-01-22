@@ -151,7 +151,7 @@ function create_password_change_requests_db() {
         $sql = "CREATE TABLE $table (
         id varchar(50) NOT NULL,
         email varchar(254) NOT NULL,
-        create_date timestamp DEFAULT CURRENT_TIMESTAMP,
+        create_date timestamp CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         PRIMARY KEY (id)
     ) $charset_collate;";
 }
@@ -608,8 +608,7 @@ function emailForgotPassword($toEmail) {
     $check_results = $wpdb->get_results($check_email);
 
     if($wpdb->num_rows > 0) {
-        $today = date('Y-m-d H:i:s');
-        $wpdb->query($wpdb->prepare("UPDATE $table SET id=%s,create_date=%s",$hash,$today));
+        $wpdb->query($wpdb->prepare("UPDATE $table SET id=%s",$hash));
     } else {
         $wpdb->query($wpdb->prepare("INSERT INTO $table (id,email) VALUES (%s,%s)", array($hash,$toEmail)));
     }

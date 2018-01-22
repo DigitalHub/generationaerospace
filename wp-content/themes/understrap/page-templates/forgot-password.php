@@ -25,21 +25,19 @@ function my_contact_form_generate_response($type, $message){
 
 //response messages
 $missing_content = "Please fill in your email.";
-$wrong_details = "No such email address exists in our database. Please try again.";
+$wrong_details = "Invalid email address. Please try using a different email address or try logging in using your Facebook account.";
 $succes = "An email with the reset password link has been sent to your email address.";
-
-//user posted variables
-$email = $wpdb->escape($_POST['forgot_email']);
 
 //validate empty content
 if ($_POST['forgot_submit']) {
 	$members_table = $wpdb->prefix.'genaero_members';
+	$email = $wpdb->escape($_POST['forgot_email']);
 
 	if(empty($email)) {
 		my_contact_form_generate_response("error", $missing_content);
 	} else {
 		//check email
-		$email_sql = $wpdb->prepare("SELECT * FROM $members_table WHERE email = %s", $email);
+		$email_sql = $wpdb->prepare("SELECT * FROM $members_table WHERE email = %s AND is_fb_user=0", $email);
 		$results = $wpdb->get_results($email_sql);
 		if($wpdb->num_rows > 0) {
 			//email
