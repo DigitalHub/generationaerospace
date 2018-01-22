@@ -92,9 +92,13 @@ $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 						?>
 						<a href="#" class="fav-experiment" data-id="<?php echo get_the_ID();?>" data-user="<?=$user_id?>"><i class="fal fa-heart"></i> Save Experiment</a>
 						<?php
-					}  } ?>
+					}  } 
 
-					<a href="<?php echo get_field('pdf_upload'); ?>" target="_blank"><i class="fal fa-print"></i> Print</a>
+					if(get_field('pdf_upload')) {
+						echo '<a href="'.get_field('pdf_upload').'" target="_blank"><i class="fal fa-print"></i> Print</a>';
+					}
+
+					?>
 				</div>
 				<div class="col-xl-2 col-lg-2 hidden-md-down" style="color: transparent;">Lorem</div><!-- this is to push video col to left  -->
 			</div>
