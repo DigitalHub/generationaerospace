@@ -54,7 +54,6 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
-
 <div class="wrapper" id="full-width-page-wrapper">
 
 	<main id="main" class="site-main container" role="main">
@@ -67,10 +66,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<a href="<?php bloginfo('url') ?>/sign-up" class="defaultbtn btn--color">
 							<div class="defaultbtn-wrapper"><span>New to GenAero?</span></div>
 						</a>
+						<h2>Forgot Password</h2>
+						<?php echo $response; ?>
+						<p class="text-center">Type in your email address below and we'll send you an email with instructions on how to create a new password.</p>
+						<br>
 					</div>
-					<h2>Forgot Password</h2>
-					<?php echo $response; ?>
-					<p>Type in your email address below and we’ll send you an email with instructions on how to create a new password.</p>
 					<form id="forgot_form" method="post" action="">
 						<input type="email" name="forgot_email" id="forgot_email" placeholder="Email" required><br>
 						<div class="clear"></div>

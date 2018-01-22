@@ -85,7 +85,6 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
-
 <div class="wrapper" id="full-width-page-wrapper">
 
 	<main id="main" class="site-main container" role="main">
@@ -104,7 +103,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php if(($expired === 0) && ($has_password === 1)) : ?>
 						<form id="reset_form" method="post" action="">
 							<div class="hide-show"><span>Show</span></div>
-							<input type="password" name="profile_password" id="profile_password" placeholder="Password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" autocomplete="new-password" required><br>
+							<input type="password" name="profile_password" id="profile_password" placeholder="Password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" autocomplete="new-password" required><br><br>
 							<p class="click_terms">Must be 6-14 characters long with alphabets and numbers.</p><br>
 							<div class="clear"></div>
 							<div class="reset_submit--wrap arrowbtn btn--color">

@@ -1,6 +1,7 @@
 .sign-up-row,
 .login-row,
-.dashboard-row {
+.dashboard-row,
+.forgot-row {
 	align-items: center;
 	justify-content: center;
 	align-items: center;
@@ -22,8 +23,14 @@
 		color: $rrlimegreen;
 		margin-bottom: 15px;
 	}
+
+	p {
+		color: $white;
+	}
 }
 
+#forgot_form,
+#reset_form ,
 #signup_form,
 #login_form {
 	input {
@@ -253,27 +260,38 @@ ul#menu-members-only-menu {
 		margin: 0;
 		width: calc(100% - 195px);
 	}
+}
+
+#reset_form {
+	input#profile_password {
+		margin: 0;
+		width: calc(100% - 80px);
+	}
 
 	.hide-show {
-		background-color: #ffffff1f;
-		display: none;
-		float: right;
-		height: 40px;
-		padding: 10px 0;
-		text-align: center;
-		width: 80px;
+		background-color: #ffffff40;
+	}
+}
 
-		span {
-			background-color: $white;
-			color: $black;
-			@include border-radius(5px);
-			cursor: pointer;
-			height: 20px;
-			text-align: center;
-			padding: 5px;
-			text-transform: uppercase;
-			width: auto;
-		}
+.hide-show {
+	background-color: #ffffff1f;
+	display: none;
+	float: right;
+	height: 40px;
+	padding: 10px 0;
+	text-align: center;
+	width: 80px;
+
+	span {
+		background-color: $white;
+		color: $black;
+		@include border-radius(5px);
+		cursor: pointer;
+		height: 20px;
+		text-align: center;
+		padding: 5px;
+		text-transform: uppercase;
+		width: auto;
 	}
 }
 
