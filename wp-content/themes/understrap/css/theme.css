@@ -10924,7 +10924,8 @@ svg.circlerotate {
 
 .content--overflow .singlepost--content {
   position: relative;
-  top: 30%; }
+  top: 30%;
+  z-index: 2; }
   .content--overflow .singlepost--content .content--overflow_wrapper {
     max-height: 520px;
     overflow: hidden;
@@ -10939,6 +10940,10 @@ svg.circlerotate {
 .singlepost--hud {
   height: 480px;
   width: 100%; }
+  .singlepost--hud.content--overflow {
+    background-color: #eeeeee; }
+    .singlepost--hud.content--overflow .HudOverlay {
+      z-index: 1; }
 
 .post-thumbnail {
   height: 262px;
@@ -13035,7 +13040,7 @@ a.j-paginate.juicer-button {
     display: inline-block;
     width: 150px; }
     .single-genaero_experiments .experiment-meta .meta-date i {
-      margin-left: 3px; }
+      margin-right: 3px; }
   .single-genaero_experiments .experiment-meta .meta-keywords {
     display: inline-block;
     width: calc(100% - 160px); }
