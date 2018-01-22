@@ -11288,7 +11288,7 @@ a {
       padding: 0 35px;
       width: 100%; }
     .arrowbtn .arrowbtn-wrapper input {
-      font-size: 0.9375rem;
+      font-size: 0.9375rem !important;
       height: 100% !important;
       padding: 0 30px !important;
       text-transform: uppercase; }
@@ -13059,7 +13059,8 @@ a.j-paginate.juicer-button {
 
 .single_experimentcaraousel--wrapper {
   height: 80%;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  width: 100%; }
   .single_experimentcaraousel--wrapper .experiment--carousel_wrapper {
     width: 85%;
     margin: auto; }
