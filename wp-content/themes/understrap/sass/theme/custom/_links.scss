@@ -377,8 +377,10 @@ a {
 		}
 
 		input {
-			padding: 0 30px !important;
+			font-size: 0.9375rem;
 			height: 100% !important;
+			padding: 0 30px !important;
+			text-transform: uppercase;
 
 			&.wpcf7-submit {
 				color: $white;

@@ -10863,6 +10863,7 @@ svg.circlerotate {
 .polygon {
   fill: #fff; }
 
+.page-template-reset-password,
 .page-template-forgot-password,
 .page-template-sign-up,
 .page-template-login,
@@ -10875,6 +10876,7 @@ svg.circlerotate {
 .page-template-fav-experiments {
   overflow-y: hidden; }
 
+.page-template-reset-password .HudOverlay,
 .page-template-forgot-password .HudOverlay,
 .page-template-login .HudOverlay,
 .page-template-sign-up .HudOverlay,
@@ -11286,8 +11288,10 @@ a {
       padding: 0 35px;
       width: 100%; }
     .arrowbtn .arrowbtn-wrapper input {
+      font-size: 0.9375rem;
+      height: 100% !important;
       padding: 0 30px !important;
-      height: 100% !important; }
+      text-transform: uppercase; }
       .arrowbtn .arrowbtn-wrapper input.wpcf7-submit {
         color: #fff; }
         .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:hover {
@@ -11972,6 +11976,7 @@ a#genaero-facebook-button {
   .footer-nav-link a:hover {
     border: 1px solid #cad63e; }
 
+.page-template-reset-password #wrapper-footer,
 .page-template-forgot-password #wrapper-footer,
 .page-template-sign-up #wrapper-footer,
 .page-template-login #wrapper-footer,
@@ -13325,10 +13330,15 @@ ul#menu-members-only-menu {
   .dashboard_content .profile_photo--wrapper input[type="file"] {
     background-color: transparent;
     width: calc(100% - 220px); }
+  .dashboard_content input#profile_password {
+    margin: 0;
+    width: calc(100% - 195px); }
 
-input#profile_password {
+#reset_form input#profile_password {
   margin: 0;
-  width: calc(100% - 195px); }
+  width: calc(100% - 80px); }
+#reset_form .hide-show {
+  background-color: #ffffff40; }
 
 .hide-show {
   background-color: #ffffff1f;

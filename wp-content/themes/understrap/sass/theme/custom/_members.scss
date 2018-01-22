@@ -255,11 +255,22 @@ ul#menu-members-only-menu {
 			width: calc(100% - 220px);
 		}
 	}
+
+	input#profile_password {
+		margin: 0;
+		width: calc(100% - 195px);
+	}
 }
 
-input#profile_password {
-	margin: 0;
-	width: calc(100% - 195px);
+#reset_form {
+	input#profile_password {
+		margin: 0;
+		width: calc(100% - 80px);
+	}
+
+	.hide-show {
+		background-color: #ffffff40;
+	}
 }
 
 .hide-show {
