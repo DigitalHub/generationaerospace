@@ -26,7 +26,7 @@ $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 											$photo = get_sub_field('photo');
 											$step = get_sub_field('step'); ?>
 											<div class="experiment_slide">
-												<div class="post-thumbnail"><img src="<?=$photo?>"></div><br>
+												<div class="post-thumbnail"><img src="<?=$photo['sizes']['medium']?>"></div><br>
 												<div class="experiment_counts">
 													<span class="counting">0<?=$count?></span><span class="totalcount">0<?=$totalcount?></span>
 												</div>
