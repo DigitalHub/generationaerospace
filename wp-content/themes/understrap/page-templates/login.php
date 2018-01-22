@@ -92,7 +92,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<input type="submit" name="login_submit" class="" id="login_submit" value="Login">
 							</div>	
 						</div>
-						<a class="forgot_password--btn" href="../forgot-passw1rd">Forgot password?</a>
+						<a class="forgot_password--btn" href="<?php bloginfo('url') ?>/forgot-password">Forgot password?</a>
 
 						<div class="separator">OR</div>
 

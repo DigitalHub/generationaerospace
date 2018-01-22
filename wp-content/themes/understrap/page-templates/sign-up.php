@@ -103,7 +103,7 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 								<input type="submit" name="signup_submit" id="signup_submit" value="Join Now">
 							</div>	
 						</div>
-						<p class="click_terms">By clicking Join Now, you agree to our Terms and Conditions <a href="../terms-and-conditions/" rel="noopener" target="_blank">here</a>.</p>
+						<p class="click_terms">By clicking Join Now, you agree to our Terms and Conditions <a href="<?php bloginfo('url') ?>/terms-and-conditions/" rel="noopener" target="_blank">here</a>.</p>
 						<div class="separator">OR</div>
 						<?php echo do_shortcode("[genaero_facebook]"); ?>
 					</form>
