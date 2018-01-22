@@ -99,7 +99,6 @@ function fav_this_experiment() {
 add_action( 'wp_ajax_nopriv_genaero_video_pagination', 'genaero_video_pagination' );
 add_action( 'wp_ajax_genaero_video_pagination', 'genaero_video_pagination' );
 
-// TODO: STEF TO RESOLVE ROW ISSUE
 function genaero_video_pagination() {
 	global $wpdb;
 	$members_table = $wpdb->prefix.'genaero_members';
@@ -114,18 +113,9 @@ function genaero_video_pagination() {
 	$row_count = $wpdb->num_rows;
 
 	if($row_count > 0) {
-		$count = 0;
 		foreach($results as $video) {
-			if($count % 3 == 0) :
-				echo $count > 0 ? '</div>' : '';
-				echo '<div class="row">';
-			endif;
 			include(locate_template('loop-templates/tile-video.php'));
 			$count++;
-		}
-
-		if($count % 3 !== 0) {
-			echo '</div>';
 		}
 	}
 
@@ -135,7 +125,6 @@ function genaero_video_pagination() {
 add_action( 'wp_ajax_nopriv_genaero_ajax_pagination', 'genaero_ajax_pagination' );
 add_action( 'wp_ajax_genaero_ajax_pagination', 'genaero_ajax_pagination' );
 
-// TODO: STEF TO RESOLVE ROW ISSUE
 function genaero_ajax_pagination() {
 	$paged = $_POST['page'];
 	$cpt = $_POST['cpt'];
