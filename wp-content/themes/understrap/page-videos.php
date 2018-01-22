@@ -206,7 +206,7 @@ $template = 'video';
 								}
 							} ?>
 						</div>
-						<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>./img/ajax-loader.gif" style="display:none">
+						<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
 					</section>
 					<?php
 					if($all_videos_count > $posts_per_page) {

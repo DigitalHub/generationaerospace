@@ -107,7 +107,7 @@ if($_GET['keyword']) {
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
 				<div class="col-xl-12 content-area" id="primary">
-					<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>./img/ajax-loader.gif" style="display:none">
+					<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
 					<main class="site-main" id="main" role="main">
 						<div class="row experiment-row">
 							<?php
