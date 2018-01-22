@@ -33,11 +33,9 @@ $post_count = $the_query->post_count;
 		<div class="container">
 			<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
 				<h1><?php the_title(); ?></h1>
-				<?php 
-				if (have_posts()) : while (have_posts()) : the_post(); 
-					the_content();
-				endwhile; endif; 
-				?>
+				<div class="text-center highlight">
+					<?php while (have_posts()) : the_post();  the_content(); endwhile;?>
+				</div>
 			</div>
 		</div>
 	</div>

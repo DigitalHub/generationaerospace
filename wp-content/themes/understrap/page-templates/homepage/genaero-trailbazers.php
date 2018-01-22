@@ -18,7 +18,7 @@ if($trailblazer) :
 		include(locate_template('loop-templates/home-hubbase.php')); ?>
 		<div class="container sub_content featured_trailbazers">
 			<div class="row">
-				<div class="col-xl-4 animated_circles--wrapper featured_trailbazers--img">
+				<div class="offset-xl-1 col-xl-4 animated_circles--wrapper featured_trailbazers--img">
 					<div class="animated_circles top_circles">
 						<svg class="circle" width="370" height="20" viewBox="0 0 370 20"><rect x="0" y="0" width="370" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="41" cy="10" r="5"></circle><circle cx="210" cy="10" r="5"></circle><circle cx="250" cy="10" r="5"></circle><circle cx="300" cy="10" r="5"></circle><circle cx="320" cy="10" r="5"></circle></g></svg>
 						<svg class="line" width="320" height="1" viewBox="0 0 320 1"><rect x="0" y="0" width="320" height="1"></rect><g><line x1="0" y1="1" x2="320" y2="1"></line></g></svg>
@@ -33,12 +33,12 @@ if($trailblazer) :
 					</div>
 				</div>
 
-				<div class="col-xl-7">
+				<div class="col-xl-6">
 					<h2>FOLLOW THE TRAILBLAZERS</h2>
 					<h2 class="trailblazer--name"><?php the_title(); ?></h2>
 					<p class="highlight"><?php echo get_field('job_title'); ?></p>
 					<?php the_excerpt(); ?>
-					<a  data-fancybox data-type="iframe" data-src="<?php the_permalink(); ?>" href="javascript:;" class="fullpopup arrowbtn btn--color">
+					<a data-fancybox data-type="iframe" data-src="<?php the_permalink(); ?>" href="javascript:;" class="fullpopup arrowbtn btn--color">
 						<span class="fas fa-long-arrow-alt-right icon-left"></span>
 						<div class="arrowbtn-wrapper"><span>Read More</span></div>
 					</a>

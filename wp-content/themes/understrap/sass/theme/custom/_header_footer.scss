@@ -4,6 +4,7 @@
 .hexagon {
 	cursor: pointer;
 	height: 55px;
+	margin: auto;
 	overflow: hidden;
 	@include rotate(120);
 	width: 50px;

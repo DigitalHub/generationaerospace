@@ -52,12 +52,9 @@ $old_query = new WP_Query($args2);
 	<div class="subpage--content">
 		<div class="container">
 			<h1><?php //the_title(); ?>What's Happening</h1>
-			<?php 
-			if (have_posts()) : while (have_posts()) : the_post(); 
-				the_content();
-			endwhile; endif; 
-			?>
-
+			<div class="text-center highlight">
+				<?php while (have_posts()) : the_post();  the_content(); endwhile;?>
+			</div>
 			<!-- TODO: STEF TO ADD FUNCTIONALITY -->
 			<a href="#" class="defaultbtn btn--color">
 				<div class="defaultbtn-wrapper"><span>All</span></div>

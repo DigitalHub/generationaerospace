@@ -10912,12 +10912,9 @@ svg.circlerotate {
   .subpage--hud p,
   .subpage--hud a {
     color: #fff !important; }
-  .singlepost--hud p,
-  .subpage--hud p {
-    text-align: left; }
-    .singlepost--hud p.highlight,
-    .subpage--hud p.highlight {
-      margin-bottom: 40px; }
+  .singlepost--hud p.highlight,
+  .subpage--hud p.highlight {
+    margin-bottom: 40px; }
   .singlepost--hud .search-form,
   .subpage--hud .search-form {
     margin-bottom: 15px; }
@@ -11497,6 +11494,7 @@ a#genaero-facebook-button {
 .hexagon {
   cursor: pointer;
   height: 55px;
+  margin: auto;
   overflow: hidden;
   -moz-transform: rotate(120deg);
   -o-transform: rotate(120deg);
@@ -12432,7 +12430,7 @@ a#genaero-facebook-button {
   filter: grayscale(0); }
 
 .featured_event .post-thumbnail {
-  height: 250px !important; }
+  height: 200px !important; }
   .featured_event .post-thumbnail img {
     height: 300px; }
   .featured_event .post-thumbnail h3 {
@@ -12720,6 +12718,7 @@ a.j-paginate.juicer-button {
     .featured_trailblazer--card:hover .post-thumbnail--wrapper .whitebg {
       background-color: transparent; }
 
+.page-template-page-homepage .fancybox-slide--iframe .fancybox-content,
 .single-genaero_experiments .fancybox-slide--iframe .fancybox-content,
 .page-template-page-trailblazers .fancybox-slide--iframe .fancybox-content {
   height: 100%;
@@ -12727,17 +12726,20 @@ a.j-paginate.juicer-button {
   max-height: 100%;
   margin: 0;
   width: 100%; }
+.page-template-page-homepage .fancybox-slide--iframe .fancybox-close-small,
 .single-genaero_experiments .fancybox-slide--iframe .fancybox-close-small,
 .page-template-page-trailblazers .fancybox-slide--iframe .fancybox-close-small {
   top: 0;
   right: 50px;
   width: 100px; }
+  .page-template-page-homepage .fancybox-slide--iframe .fancybox-close-small:before,
   .single-genaero_experiments .fancybox-slide--iframe .fancybox-close-small:before,
   .page-template-page-trailblazers .fancybox-slide--iframe .fancybox-close-small:before {
     content: "close";
     top: 7px;
     text-transform: uppercase;
     letter-spacing: 2px; }
+  .page-template-page-homepage .fancybox-slide--iframe .fancybox-close-small:after,
   .single-genaero_experiments .fancybox-slide--iframe .fancybox-close-small:after,
   .page-template-page-trailblazers .fancybox-slide--iframe .fancybox-close-small:after {
     color: #000;
@@ -13040,7 +13042,7 @@ a.j-paginate.juicer-button {
     display: inline-block;
     width: 150px; }
     .single-genaero_experiments .experiment-meta .meta-date i {
-      margin-right: 3px; }
+      margin-right: 5px; }
   .single-genaero_experiments .experiment-meta .meta-keywords {
     display: inline-block;
     width: calc(100% - 160px); }

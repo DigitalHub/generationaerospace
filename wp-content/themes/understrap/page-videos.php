@@ -99,11 +99,9 @@ $template = 'video';
 	<div class="subpage--content">
 		<div class="container">
 			<h1><?php the_title(); ?></h1>
-			<?php 
-			if (have_posts()) : while (have_posts()) : the_post(); 
-				the_content();
-			endwhile; endif; 
-			?>
+			<div class="text-center highlight">
+				<?php while (have_posts()) : the_post();  the_content(); endwhile;?>
+			</div>
 			<div class="row">
 				<div class="col-xl-8 ">
 					<h3 class="text-left">Search for Videos</h3>
@@ -216,11 +214,11 @@ $template = 'video';
 						} ?>
 						<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>./img/ajax-loader.gif" style="display:none">
 					</section>
-						<?php
-						if($all_videos_count > $posts_per_page) {
-							echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter videos_loadmore" data-count="'.$count.'" data-posts_per_page="'.$posts_per_page.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
-						}
-						?>
+					<?php
+					if($all_videos_count > $posts_per_page) {
+						echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter videos_loadmore" data-count="'.$count.'" data-posts_per_page="'.$posts_per_page.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
+					}
+					?>
 				</main><!-- #main -->
 			</div><!-- #primary -->
 		</div><!-- .row end -->

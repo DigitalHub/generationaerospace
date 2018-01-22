@@ -48,14 +48,14 @@ $second_query = new WP_Query($args2);
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">
-			<div class="col-xl-6 animated_circles--wrapper featured_event">
+			<div class="offset-xl-1 col-xl-5 animated_circles--wrapper featured_event">
 				<?php 
 				if($first_query->have_posts()) :
 					while($first_query->have_posts()) : $first_query->the_post();
 						?>
 						<h2><?php the_title(); ?></h2>
 						<div class="animated_circles top_circles">
-							<svg class="circle" width="500" height="20" viewBox="0 0 500 20"><rect x="0" y="0" width="500" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="41" cy="10" r="5"></circle><circle cx="310" cy="10" r="5"></circle><circle cx="350" cy="10" r="5"></circle><circle cx="460" cy="10" r="5"></circle><circle cx="490" cy="10" r="5"></circle></g></svg>
+							<svg class="circle" width="400" height="20" viewBox="0 0 400 20"><rect x="0" y="0" width="400" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="41" cy="10" r="5"></circle><circle cx="310" cy="10" r="5"></circle><circle cx="350" cy="10" r="5"></circle><circle cx="460" cy="10" r="5"></circle><circle cx="490" cy="10" r="5"></circle></g></svg>
 							<svg class="line" width="500" height="1" viewBox="0 0 500 1"><rect x="0" y="0" width="500" height="1"></rect><g><line x1="0" y1="1" x2="320" y2="1"></line></g></svg>
 						</div>
 						<div class="post-thumbnail">
