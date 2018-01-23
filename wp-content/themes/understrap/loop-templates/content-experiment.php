@@ -27,7 +27,7 @@ $totalcount = 0;
 									$photo = get_sub_field('photo');
 									$step = get_sub_field('step'); ?>
 									<div class="experiment_slide">
-										<div class="post-thumbnail"><img src="<?=$photo['sizes']['medium']?>"></div><br>
+										<div class="post-thumbnail"><img src="<?=$photo['sizes']['large']?>"></div><br>
 										<div class="experiment_counts">
 											<span class="counting"><?=$count?></span><span class="totalcount"><?=$totalcount?></span>
 										</div>
@@ -92,7 +92,7 @@ $totalcount = 0;
 							}  } 
 
 							if(get_field('pdf_upload')) {
-								echo '<a href="'.get_field('pdf_upload').'" target="_blank"><i class="fal fa-print"></i> Print</a>';
+								echo '<a href="'.get_field('pdf_upload').'" class="print" target="_blank"><i class="fal fa-print"></i> Print</a>';
 							}
 
 							?>

@@ -125,7 +125,7 @@ add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
 
 function custom_post_thumbnail() {
 	if ( '' !== get_the_post_thumbnail() ) : 
-		$image_arr = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'medium');
+		$image_arr = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
 		$image_url = $image_arr[0]; 
 		if ($image_arr[1] > $image_arr[2]) {
 			$getimagesize = "landscape";
@@ -133,7 +133,7 @@ function custom_post_thumbnail() {
 			$getimagesize = "portrait";
 		} 
 		echo "<div class='post-thumbnail ".$getimagesize."'>";
-		the_post_thumbnail( 'medium' );
+		the_post_thumbnail( 'large' );
 		// echo "<div class='bg-opaque'></div>";
 		echo "</div>";
 	endif;

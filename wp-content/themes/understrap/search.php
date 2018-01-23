@@ -11,66 +11,49 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<div class="wrapper" id="search-wrapper">
-
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
-		<div class="row">
-
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
-			<main class="site-main" id="main">
-
-				<?php if ( have_posts() ) : ?>
-
-					<header class="page-header">
-						
-							<h1 class="page-title"><?php printf(
-							/* translators:*/
-							 esc_html__( 'Search Results for: %s', 'understrap' ),
-								'<span>' . get_search_query() . '</span>' ); ?></h1>
-
-					</header><!-- .page-header -->
-
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php
-						/**
-						 * Run the loop for the search to output the results.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-search.php and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', 'search' );
+<section class="subpage--hud">
+	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findaVideo.jpg";
+	include(locate_template('loop-templates/hub-base.php')); ?>
+	<div class="subpage--content">
+		<div class="container">
+			<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
+				<h1><?php printf( esc_html__( 'Search Results for: %s', 'understrap' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<div class="search-form">
+					<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+						<div class="input-group">
+							<input class="field form-control" id="s" name="s" type="text" value="<?php the_search_query(); ?>">
+							<button type="submit" class="submit btn btn-primary" id="searchsubmit" name="submit" >
+								<i class="fal fa-search"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="sub_main">
+	<div class="wrapper" id="search-wrapper">
+		<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+			<div class="row">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
+					<main class="site-main" id="main">
+						<?php 
+						if ( have_posts() ) : 
+							while ( have_posts() ) : the_post();
+								get_template_part( 'loop-templates/content', 'search' );
+							endwhile;
+						else : 
+							get_template_part( 'loop-templates/content', 'none' ); 
+						endif;
 						?>
-
-					<?php endwhile; ?>
-
-				<?php else : ?>
-
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-
-				<?php endif; ?>
-
-			</main><!-- #main -->
-
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
-
-		</div><!-- #primary -->
-
-		<!-- Do the right sidebar check -->
-		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
-
-			<?php get_sidebar( 'right' ); ?>
-
-		<?php endif; ?>
-
-	</div><!-- .row -->
-
-</div><!-- Container end -->
-
-</div><!-- Wrapper end -->
+					</main><!-- #main -->
+					<!-- The pagination component -->
+					<?php understrap_pagination(); ?>
+				</div><!-- #primary -->
+			</div><!-- .row -->
+		</div><!-- Container end -->
+	</div><!-- Wrapper end -->
+</section>
 
 <?php get_footer(); ?>

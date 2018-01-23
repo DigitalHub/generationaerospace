@@ -11903,6 +11903,7 @@ a#genaero-facebook-button {
   .search-form input {
     background-color: #ffffff40 !important;
     border: none;
+    border-radius: 0;
     color: #fff;
     float: left;
     font-size: 1.333rem;
@@ -11910,16 +11911,20 @@ a#genaero-facebook-button {
     height: 50px !important;
     width: calc(100% - 60px); }
     .search-form input:focus {
+      border-color: #000;
+      box-shadow: none;
+      color: #fff;
       outline: 0; }
   .search-form button {
     background-color: #ffffff40 !important;
     border: 0;
+    border-radius: 0;
     color: #fff;
     cursor: pointer;
     font-size: 2rem;
     float: left;
     height: 50px;
-    padding-right: 20px;
+    padding: 0;
     vertical-align: top;
     width: 60px; }
     .search-form button:focus {
@@ -12265,7 +12270,7 @@ a#genaero-facebook-button {
   bottom: 16%;
   margin: 0;
   position: absolute;
-  right: 3%; }
+  right: 3.6%; }
 
 .fullpagecounter,
 .pagingInfo {
@@ -12775,7 +12780,7 @@ a.j-paginate.juicer-button {
 .page-template-page-homepage .fancybox-slide--iframe .fancybox-close-small,
 .single-genaero_experiments .fancybox-slide--iframe .fancybox-close-small,
 .page-template-page-trailblazers .fancybox-slide--iframe .fancybox-close-small {
-  top: 0;
+  top: 20px;
   right: 50px;
   width: 100px; }
   .page-template-page-homepage .fancybox-slide--iframe .fancybox-close-small:before,
@@ -12797,7 +12802,7 @@ a.j-paginate.juicer-button {
   padding: 0;
   width: 100%; }
   .single-genaero_experiments .fancybox-slide > * .fancybox-close-small {
-    top: 0;
+    top: 20px;
     right: 50px;
     width: 100px; }
     .single-genaero_experiments .fancybox-slide > * .fancybox-close-small:before {
@@ -12868,6 +12873,14 @@ a.j-paginate.juicer-button {
     .vault--card a .vault_card--content {
       background-color: #fff;
       padding: 25px; }
+
+a.videos_loadmore {
+  margin: 20px auto; }
+
+.video-main h4 {
+  color: #000;
+  font-weight: 600px;
+  text-transform: uppercase; }
 
 .entry-content {
   margin-bottom: 50px; }
@@ -12953,6 +12966,11 @@ a.j-paginate.juicer-button {
   height: 390px;
   margin: 20px 0;
   width: 100%; }
+
+.single_experiment .single_experiment--row .post-thumbnail {
+  height: 300px !important; }
+  .single_experiment .single_experiment--row .post-thumbnail img {
+    height: 300px !important; }
 
 .single_experiment .single_experiment--row,
 .single_experiment .single_trailblazers--row,
@@ -13076,17 +13094,18 @@ a.j-paginate.juicer-button {
     .single_trailblazers .single_trailblazers--video.single_experiment--materials a:hover {
       color: #cad63e;
       text-decoration: none; }
-    .single_experiment .single_experiment--materials.single_experiment--materials a:last-child,
-    .single_experiment .single_trailblazers--video.single_experiment--materials a:last-child,
-    .single_trailblazers .single_experiment--materials.single_experiment--materials a:last-child,
-    .single_trailblazers .single_trailblazers--video.single_experiment--materials a:last-child {
-      margin-left: 30px; }
+  .single_experiment .single_experiment--materials.single_experiment--materials a.print,
+  .single_experiment .single_trailblazers--video.single_experiment--materials a.print,
+  .single_trailblazers .single_experiment--materials.single_experiment--materials a.print,
+  .single_trailblazers .single_trailblazers--video.single_experiment--materials a.print {
+    margin-left: 30px; }
 
 .related--video h3 {
   color: #000; }
 
 .single_experiment h1 {
-  font-size: 50px; }
+  font-size: 50px;
+  width: 100%; }
 
 .single-genaero_experiments h2 {
   text-align: left;
@@ -13129,9 +13148,11 @@ a.j-paginate.juicer-button {
   width: calc(100% - 15px);
   overflow: hidden; }
   .single_experimentcaraousel--wrapper .experiment--wrapperhidbar {
+    height: 100%;
     overflow-y: scroll;
     width: calc(100% + 20px); }
     .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel {
+      height: 100%;
       width: 85%;
       margin: auto; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_left {
@@ -13225,7 +13246,7 @@ a.j-paginate.juicer-button {
   color: #fff;
   display: block;
   float: left;
-  font-size: 1.333rem;
+  font-size: 15px;
   margin-bottom: 15px;
   padding: 15px 10px;
   width: 100%; }
@@ -13282,7 +13303,7 @@ a.j-paginate.juicer-button {
   color: #fff;
   overflow: hidden;
   text-align: center;
-  margin: 15px auto; }
+  margin: 10px auto; }
   .separator:before, .separator:after {
     background-color: #fff;
     content: "";
@@ -13965,6 +13986,60 @@ ul#menu-members-only-menu {
     -ms-transform: rotate(0deg) translate(-437px) rotate(0deg);
     -webkit-transform: rotate(0deg) translate(-437px) rotate(0deg);
     transform: rotate(0deg) translate(-437px) rotate(0deg); } }
+@media (min-width: 1025px) {
+  .fullpagecounter {
+    display: none; }
+
+  .hidindesktopfortablet, .hidindesktop--inlinefortablet {
+    display: none !important; } }
+@media (max-width: 1024px) {
+  .pagingInfo,
+  .HudOverlay svg,
+  .chapter-selector,
+  .tiny-stars, .planet-big,
+  .animated_circles,
+  #wrapper-footer,
+  .featured_trailbazers a.arrowbtn:nth-last-child(2) {
+    display: none; }
+
+  .fullpagecounter {
+    display: block; }
+
+  .featured_video--carousel_wrapper {
+    width: 100%; }
+
+  .hidindesktopfortablet, .hidindesktop--inlinefortablet {
+    display: none !important; } }
+@media (min-width: 769px) {
+  .hidindesktop, .hidindesktop--inline {
+    display: none !important; }
+
+  .hidinmobile {
+    display: block !important; }
+
+  .hidinmobile--inline {
+    display: inline-block !important; } }
+@media (max-width: 768px) {
+  .hidinmobile, .hidinmobile--inline {
+    display: none !important; }
+
+  .hidindesktop {
+    display: block !important; }
+
+  .hidindesktop--inline {
+    display: inline-block !important; }
+
+  .featured_video--carousel_wrapper {
+    margin: 30px auto; }
+
+  .featured_experiment--keywordsslider-wrapp {
+    margin: auto;
+    width: 85%; }
+
+  .featured_experiment--keywordsslider {
+    width: 100%; }
+    .featured_experiment--keywordsslider a {
+      height: 350px; } }
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

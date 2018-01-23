@@ -57,7 +57,7 @@ endif;
 			</div>
 			<div class="pagingInfo"></div>
 
-			<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ); ?>" class="arrowbtn btn--color hidindesktop">
+			<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ); ?>" class="arrowbtn btn--color hidindesktop--inline">
 				<span class="fas fa-long-arrow-alt-right icon-left"></span>
 				<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
 			</a>

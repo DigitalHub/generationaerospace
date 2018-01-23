@@ -4,13 +4,15 @@
  *
  * @package basic
  */
-
+global $wpdb;
 global $loggedin;
+$table = $wpdb->prefix.'genaero_members';
+
 if($loggedin == 1) :
 	$username = $_SESSION['username'];
 	$sql = $wpdb->prepare("SELECT fullname,photo FROM $table WHERE username = %s", $username);
 	$results = $wpdb->get_results($sql);
-	if($results > 0) {
+	if($wpdb->num_rows > 0) {
 		foreach($results as $result) {
 			$fullname = $result->fullname;
 			$photo = $result->photo;

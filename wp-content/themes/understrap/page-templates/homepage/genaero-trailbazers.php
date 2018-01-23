@@ -38,11 +38,11 @@ if($trailblazer) :
 					<h2 class="trailblazer--name"><?php the_title(); ?></h2>
 					<p class="highlight"><?php echo get_field('job_title'); ?></p>
 					<?php the_excerpt(); ?>
-					<a data-fancybox data-type="iframe" data-src="<?php the_permalink(); ?>" href="javascript:;" class="fullpopup arrowbtn btn--color">
+					<a data-fancybox data-type="iframe" data-src="<?php the_permalink(); ?>" href="javascript:;" class="fullpopup arrowbtn btn--color" style="margin-top: 30px">
 						<span class="fas fa-long-arrow-alt-right icon-left"></span>
 						<div class="arrowbtn-wrapper"><span>Read More</span></div>
 					</a>
-					<a href="<?php echo get_permalink( get_page_by_path( 'follow-the-trailblazers' ) ) ?>" class="arrowbtn btn--color">
+					<a href="<?php echo get_permalink( get_page_by_path( 'follow-the-trailblazers' ) ) ?>" class="arrowbtn btn--color" style="margin-top: 30px">
 						<span class="fas fa-long-arrow-alt-right icon-left"></span>
 						<div class="arrowbtn-wrapper"><span>See More Trailblazers</span></div>
 					</a>

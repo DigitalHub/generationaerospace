@@ -185,22 +185,24 @@ class GenAeroFacebook{
      *
      * @var string
      */
-    private $app_id = '2039117876371944';
+    // private $app_id = '2039117876371944';
+    private $app_id = '1675559965844578';
 
     /**
      * Facebook APP Secret
      *
      * @var string
      */
-    private $app_secret = 'dfa4f9cfe8d93ead1783c4ec0d01a9e0';
+    // private $app_secret = 'dfa4f9cfe8d93ead1783c4ec0d01a9e0';
+    private $app_secret = '5e2c07d04fb95a216cb1b96111fca791';
 
     /**
      * Callback URL used by the API
      *
      * @var string
      */
-    // private $callback_url = __FILE__.'/wp-admin/admin-ajax.php?action=genaero_facebook';
-    private $callback_url = 'http://localhost/generationaerospace/wp-admin/admin-ajax.php?action=genaero_facebook';
+    // private $callback_url = 'http://localhost/generationaerospace/wp-admin/admin-ajax.php?action=genaero_facebook';
+    private $callback_url = 'http://text100dev.com/generationaerospace/wp-admin/admin-ajax.php?action=genaero_facebook';
 
     /**
      * Access token from Facebook
@@ -489,11 +491,11 @@ class GenAeroFacebook{
         $fblink = $this->facebook_details['link'];
 
         $this->wpdb->query($this->wpdb->prepare("INSERT INTO $table (username,email,password,fullname,photo,facebook,is_fb_user) VALUES (%s,%s,%s,%s,%s,%s,%s)", array($username,$email,$password,$fullname,$photo,$fblink,'1')));
-
+        
         //get generated ID
-        $members_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
-        $results = $wpdb->get_results($members_sql);
-        if(count($results) > 0) {
+        $members_sql = $this->wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
+        $results = $this->wpdb->get_results($members_sql);
+        if($this->wpdb->num_rows > 0) {
             $user_id = $results[0]->id;
         }
 

@@ -139,7 +139,14 @@ jQuery(document).ready(function($) {
         focusOnSelect: true
     });
 
-
+    jQuery('.featured_experiment--keywordsslider-wrapp').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        fade: true,
+        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
+        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+    });
 
     $(function(){
         $('.hide-show').show();

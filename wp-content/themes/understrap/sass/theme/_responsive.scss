@@ -2,22 +2,47 @@
 // Responsive: Utility classes
 // --------------------------------------------------
 
-@media (min-width: 1441px) {
+@media (min-width: 1441px) { //dekstop
 }
 
-@media (max-width: 1315px) {
-}
-
-@media only screen and (orientation: portrait) {
+@media (max-width: 1367px) {
 }
 
 @media (max-width: 1280px) {
 }
+@media (min-width: 1025px) {
+	.fullpagecounter {
+		display: none;
+	}
 
-@media (max-width: 1024px) {
+	.hidindesktopfortablet, .hidindesktop--inlinefortablet {
+		display: none !important;
+	}
 }
 
-@media (max-width: 1024px) and (orientation: landscape)  {
+@media (max-width: 1024px) {
+
+	.pagingInfo,
+	.HudOverlay svg,
+	.chapter-selector,
+	.tiny-stars, .planet-big,
+	.animated_circles, 
+	#wrapper-footer,
+	.featured_trailbazers a.arrowbtn:nth-last-child(2)  {
+		display: none;
+	}
+
+	.fullpagecounter {
+		display: block;
+	}
+
+	.featured_video--carousel_wrapper {
+		width: 100%;
+	}
+
+	.hidindesktopfortablet, .hidindesktop--inlinefortablet {
+		display: none !important;
+	}
 }
 
 @media (max-width: 950px) {
@@ -29,7 +54,51 @@
 @media (max-width: 895px) {
 }
 
+@media (min-width: 769px) {
+
+	.hidindesktop, .hidindesktop--inline {
+		display: none !important;
+	}
+
+	.hidinmobile {
+		display: block !important;
+	}
+
+	.hidinmobile--inline {
+		display: inline-block !important;
+	}
+}
+
+
 @media (max-width: 768px) {
+
+	.hidinmobile, .hidinmobile--inline {
+		display: none !important;
+	}
+
+	.hidindesktop {
+		display: block !important;
+	}
+
+	.hidindesktop--inline {
+		display: inline-block !important;
+	}
+
+	.featured_video--carousel_wrapper {
+		margin: 30px auto;
+	}
+
+	.featured_experiment--keywordsslider-wrapp {
+		margin: auto;
+		width: 85%;
+	}
+
+	.featured_experiment--keywordsslider {
+		width: 100%;
+		a {
+			height: 350px;
+		}
+	}
 }
 
 @media (max-width: 680px) {
