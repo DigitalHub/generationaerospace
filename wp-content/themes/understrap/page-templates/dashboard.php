@@ -34,7 +34,7 @@ foreach($results as $result) {
 	$total_favs = $result->total_favs;
 }
 
-if($video_results_count > 0) {
+if($total_videos > 0) {
 //get last video
 	$last_video_sql = $wpdb->prepare("SELECT * FROM $videos_table WHERE member_id = %s AND create_date = (SELECT MAX(create_date) FROM $videos_table WHERE member_id = %s)", $user_id, $user_id);
 	$results = $wpdb->get_results($last_video_sql);
@@ -81,7 +81,7 @@ if($video_results_count > 0) {
 							<p>Favourited Videos</p>
 						</div>
 					</div>
-					<?php if($video_results_count > 0) { ?>
+					<?php if($total_videos > 0) { ?>
 					<div class="row">
 						<h3>Recent Submitted Video:</h3>
 					</div>
@@ -105,11 +105,15 @@ if($video_results_count > 0) {
 					<?php } else { ?>
 					<div class="row recent_submitted_video">
 						<div class="row">
-							<h3>It looks like you haven't submitted any videos yet. Why don't you get started by clicking over here?</h3>
-							<a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>" class="arrowbtn btn--color">
-								<span class="fas fa-long-arrow-alt-right icon-left"></span>
-								<div class="arrowbtn-wrapper"><span>Submit a Video</span></div>
-							</a>
+							<div class="col-lg-12">
+								<p>It looks like you haven't submitted any videos yet. Why don't you get started by clicking the button below?</p>
+							</div>
+							<div class="offset-lg-3 col-lg-6">
+								<a href="<?php echo get_permalink( get_page_by_path( 'submit-a-video' ) ) ?>" class="arrowbtn btn--color">
+									<span class="fas fa-long-arrow-alt-right icon-left"></span>
+									<div class="arrowbtn-wrapper"><span>Submit a Video</span></div>
+								</a>
+							</div>
 						</div>
 					</div>
 					<?php } ?>
