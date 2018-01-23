@@ -43,7 +43,7 @@ endif;
 							$thumbnail = getYoutubeThumbnail($video[0]->youtube);
 							?>
 							<div class="video_slide">
-								<div class="post-thumbnail">
+								<div class="post-thumbnail" style="background-image:url('<?=$thumbnail?>');>
 									<img src="<?=$thumbnail?>" />
 								</div>
 								<h3><?=$video[0]->title?></h3>
