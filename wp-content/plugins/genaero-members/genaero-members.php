@@ -491,11 +491,11 @@ class GenAeroFacebook{
         $fblink = $this->facebook_details['link'];
 
         $this->wpdb->query($this->wpdb->prepare("INSERT INTO $table (username,email,password,fullname,photo,facebook,is_fb_user) VALUES (%s,%s,%s,%s,%s,%s,%s)", array($username,$email,$password,$fullname,$photo,$fblink,'1')));
-
+        
         //get generated ID
-        $members_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
-        $results = $wpdb->get_results($members_sql);
-        if(count($results) > 0) {
+        $members_sql = $this->wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
+        $results = $this->wpdb->get_results($members_sql);
+        if($this->wpdb->num_rows > 0) {
             $user_id = $results[0]->id;
         }
 
