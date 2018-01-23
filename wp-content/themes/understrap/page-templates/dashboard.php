@@ -26,7 +26,7 @@ $args = array(
 $announcement = new WP_Query( $args );
 
 //get total videos stats
-$videos_sql = $wpdb->prepare("SELECT COUNT(id) as total_videos, SUM(favourite) as total_favs FROM $videos_table WHERE member_id = %s", $user_id);
+$videos_sql = $wpdb->prepare("SELECT COUNT(id) as total_videos, COALESCE(SUM(favourite),0) as total_favs FROM $videos_table WHERE member_id = %s", $user_id);
 $results = $wpdb->get_results($videos_sql);
 $video_results_count = $wpdb->num_rows;
 foreach($results as $result) {
