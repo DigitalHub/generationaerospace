@@ -13284,10 +13284,14 @@ ul#menu-members-only-menu {
   padding: 30px 45px; }
   .dashboard_content .dashboard_content--title {
     float: left;
+    width: 100%; }
+  .dashboard_content .dashboard_content--title-half {
+    float: left;
     width: 50%; }
-    .dashboard_content .dashboard_content--title h4 {
-      color: #fff;
-      text-transform: uppercase; }
+  .dashboard_content .dashboard_content--title h4,
+  .dashboard_content .dashboard_content--title-half h4 {
+    color: #fff;
+    text-transform: uppercase; }
   .dashboard_content .dashboard_content--editlink input, .dashboard_content .dashboard_content--editlink a {
     background-color: transparent;
     border-bottom: 1px solid #fff;

@@ -26,7 +26,7 @@ $results_count = $wpdb->num_rows;
 			<?php get_sidebar( 'left' ); ?>
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
-					<div class="dashboard_content--title">
+					<div class="dashboard_content--title-half">
 						<h4>My Videos</h4>
 					</div>
 					<div class="dashboard_content--editlink">

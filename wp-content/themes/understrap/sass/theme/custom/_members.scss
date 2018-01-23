@@ -176,8 +176,16 @@ ul#menu-members-only-menu {
 
 	.dashboard_content--title {
 		float: left;
-		width: 50%;
+		width: 100%;
+	}
 
+	.dashboard_content--title-half {
+		float: left;
+		width: 50%;
+	}
+
+	.dashboard_content--title,
+	.dashboard_content--title-half {
 		h4 {
 			color: $white;
 			text-transform: uppercase;

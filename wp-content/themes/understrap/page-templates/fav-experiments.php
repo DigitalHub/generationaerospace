@@ -29,6 +29,7 @@ $results_count = $wpdb->num_rows;
 					<div class="dashboard_content--title">
 						<h4>My Favourite Experiments</h4>
 					</div>
+					<div class="clear"></div>
 					<div class="container">
 						<?php //TODO: STEF TO ADD PAGINATION
 						if($results_count > 0) {

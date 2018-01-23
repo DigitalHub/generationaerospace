@@ -31,6 +31,7 @@ $results_count = $wpdb->num_rows;
 					<div class="dashboard_content--title">
 						<h4>My Favourite Videos</h4>
 					</div>
+					<div class="clear"></div>
 
 					<div class="container">
 
