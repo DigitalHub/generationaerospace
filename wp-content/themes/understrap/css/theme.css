@@ -10943,6 +10943,7 @@ svg.circlerotate {
       z-index: 1; }
 
 .post-thumbnail {
+  background-size: cover;
   height: 262px;
   overflow: hidden;
   position: relative; }
@@ -10963,6 +10964,7 @@ svg.circlerotate {
     left: 0;
     z-index: 1; }
   .post-thumbnail img {
+    display: none;
     height: 262px;
     left: 50%;
     max-width: none;

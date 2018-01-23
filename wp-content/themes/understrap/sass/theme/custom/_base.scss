@@ -215,6 +215,8 @@ svg.circlerotate {
 }
 
 .post-thumbnail {
+	background-size:cover;
+
 	height: 262px;
 	overflow: hidden;
 	position: relative;
@@ -240,6 +242,7 @@ svg.circlerotate {
 	}
 
 	img {
+		display: none;
 		height: 262px;
 		left: 50%;
 		max-width: none;

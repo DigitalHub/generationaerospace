@@ -34,19 +34,14 @@ $youtube = $video->video_link;
 parse_str( parse_url( $youtube, PHP_URL_QUERY ), $my_array_of_vars );
 $youtube_id =  $my_array_of_vars['v'];
 
-$url_to_json = 'https://www.googleapis.com/youtube/v3/videos?key='.YOUTUBE_API_KEY.'&part=snippet&id='.$youtube_id;
-
-$data = file_get_contents($url_to_json);
-$json = json_decode($data);
-$thumbnail_url = $json->items[0]->snippet->thumbnails->high->url;
-
+$thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 ?>
 
 <div class="featured_experiment--card col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
 	<a href="<?=$permalink?>">
-		<div class="post-thumbnail">
+		<div class="post-thumbnail" style="background-image:url('<?=$thumbnail_url?>');">
 			<img src="<?=$thumbnail_url?>" />
-			<div class="bg-opaque"></div>
+			<!-- <div class="bg-opaque"></div> -->
 		</div>
 	</a>
 	<div class="experiment--fav_link" data-video-id="<?=$video_id?>"><i class="fas fa-heart"></i></div>

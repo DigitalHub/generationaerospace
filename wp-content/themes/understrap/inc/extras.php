@@ -89,20 +89,20 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 			return;
 		}
 		?>
-				<nav class="container navigation post-navigation">
-					<h2 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h2>
-					<div class="row nav-links justify-content-between">
-						<?php
+		<nav class="container navigation post-navigation">
+			<h2 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h2>
+			<div class="row nav-links justify-content-between">
+				<?php
 
-							if ( get_previous_post_link() ) {
-								previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
-							}
-							if ( get_next_post_link() ) {
-								next_post_link( '<span class="nav-next">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
-							}
-						?>
-					</div><!-- .nav-links -->
-				</nav><!-- .navigation -->
+				if ( get_previous_post_link() ) {
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+				}
+				if ( get_next_post_link() ) {
+					next_post_link( '<span class="nav-next">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+				}
+				?>
+			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
 
 		<?php
 	}
@@ -452,17 +452,13 @@ add_action( 'init', 'announcements_post_type', 0 );
 
 //adds Google Maps API Key to ACF
 add_filter('acf/settings/google_api_key', function () {
-    return GMAP_API_KEY;
+	return GMAP_API_KEY;
 });
 
 function getYoutubeThumbnail($youtube) {	
 	parse_str( parse_url( $youtube, PHP_URL_QUERY ), $my_array_of_vars );
 	$youtube_id =  $my_array_of_vars['v'];
 
-	$url_to_json = 'https://www.googleapis.com/youtube/v3/videos?key='.YOUTUBE_API_KEY.'&part=snippet&id='.$youtube_id;
-
-	$data = file_get_contents($url_to_json);
-	$json = json_decode($data);
-	$thumbnail_url = $json->items[0]->snippet->thumbnails->standard->url;
+	$thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 	return $thumbnail_url;
 }
