@@ -13,7 +13,7 @@ if($trailblazer) :
 	$post = $trailblazer;
 	setup_postdata($post);
 	?>
-	<section class="section" data-anchor="genaero_trailbazers">
+	<section class="section" data-anchor="genaero_trailblazers">
 		<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-trailblizers.jpg";
 		include(locate_template('loop-templates/home-hubbase.php')); ?>
 		<div class="container sub_content featured_trailbazers">
