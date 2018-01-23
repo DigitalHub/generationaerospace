@@ -12859,6 +12859,14 @@ a.j-paginate.juicer-button {
       background-color: #fff;
       padding: 25px; }
 
+a.videos_loadmore {
+  margin: 20px auto; }
+
+.video-main h4 {
+  color: #000;
+  font-weight: 600px;
+  text-transform: uppercase; }
+
 .entry-content {
   margin-bottom: 50px; }
   .entry-content h2, .entry-content h3, .entry-content h4 {

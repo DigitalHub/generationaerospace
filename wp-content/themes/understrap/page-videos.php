@@ -167,7 +167,7 @@ $template = 'video';
 			<div class="row">
 				<div class="col-xl-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
-						<h3>Featured_</h3>
+						<h4>Featured_</h4>
 						<?php
 						if($featured_videos_count > 0) {
 							$count = 0;
@@ -186,7 +186,7 @@ $template = 'video';
 						} ?>
 					<hr>
 					<section class="all-videos-section">
-						<h3>All Videos_</h3>
+						<h4>All Videos_</h4>
 						<div class="row video-row">
 							<?php if($all_videos_count > 0) {
 								$count = 0;
