@@ -64,4 +64,5 @@
 			</div>
 		</div>
 	</div>
+	<div class="fullpagecounter"><span class="counting">03</span><span class="totalcount">06</span></div>
 </section>

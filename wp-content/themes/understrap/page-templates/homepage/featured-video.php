@@ -28,17 +28,17 @@ endif;
 <section class="section" data-anchor="featured_video">
 	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-feature-video.jpg";
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
-	<div class="container sub_content">
+	<div class="container sub_content featured_videohomepage">
 		<div class="row">
-			<div class="offset-xl-1 col-xl-4">
+			<div class="offset-xl-1 col-xl-4 col-lg-5 col-md-12 col-sm-12 col-xs-12">
 				<h1>Get Inspired_</h1>
 				<div class="highlight"><?php echo get_field('featured_video_copy'); ?></div>
-				<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ); ?>" class="arrowbtn btn--color">
+				<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ); ?>" class="arrowbtn btn--color hidinmobile">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
 					<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
 				</a>
 			</div>
-			<div class="col-xl-6 "><!-- offset-xl-1 -->
+			<div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12">
 				<div class="featured_video--carousel_wrapper">
 					<div class="featured_video--carousel">
 						<?php
@@ -56,7 +56,13 @@ endif;
 				</div>
 			</div>
 			<div class="pagingInfo"></div>
+
+			<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ); ?>" class="arrowbtn btn--color hidindesktop">
+				<span class="fas fa-long-arrow-alt-right icon-left"></span>
+				<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
+			</a>
 		</div>
 	</div>
 </div>
+<div class="fullpagecounter"><span class="counting">02</span><span class="totalcount">06</span></div>
 </section>

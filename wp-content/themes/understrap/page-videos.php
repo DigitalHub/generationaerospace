@@ -167,52 +167,55 @@ $template = 'video';
 			<div class="row">
 				<div class="col-xl-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
-						<h3>Featured_</h3>
-						<?php
-						if($featured_videos_count > 0) {
-							$count = 0;
-							foreach($featured_videos_results as $video) {
-								if($count % 3 == 0) :
-									echo $count > 0 ? '</div>' : '';
-									echo '<div class="row">';
-								endif;
-								include(locate_template('loop-templates/tile-video.php'));
-								$count++;
-							}
-
-							if($count % 3 !== 0) {
-								echo '</div>';
-							}
-						} ?>
-					<hr>
-					<section class="all-videos-section">
-						<h3>All Videos_</h3>
-						<div class="row video-row">
-							<?php if($all_videos_count > 0) {
+						
+						<section class="featured-videos-section">
+							<h3>Featured_</h3>
+							<?php
+							if($featured_videos_count > 0) {
 								$count = 0;
-								foreach($all_videos_results as $key => $video) {
+								foreach($featured_videos_results as $video) {
+									if($count % 3 == 0) :
+										echo $count > 0 ? '</div>' : '';
+										echo '<div class="row">';
+									endif;
 									include(locate_template('loop-templates/tile-video.php'));
 									$count++;
-									unset($all_videos_results[$key]);
+								}
 
-									if($count === $posts_per_page) {
-										break;
-									}
+								if($count % 3 !== 0) {
+									echo '</div>';
 								}
 							} ?>
-						</div>
-						<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
-					</section>
-					<?php
-					if($all_videos_count > $posts_per_page) {
-						echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter videos_loadmore" data-count="'.$count.'" data-posts_per_page="'.$posts_per_page.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
-					}
-					?>
-				</main><!-- #main -->
-			</div><!-- #primary -->
-		</div><!-- .row end -->
-	</div><!-- .container end -->
-</div><!-- .wrapper end -->
+						</section>
+						<hr>
+						<section class="all-videos-section">
+							<h3>All Videos_</h3>
+							<div class="row video-row">
+								<?php if($all_videos_count > 0) {
+									$count = 0;
+									foreach($all_videos_results as $key => $video) {
+										include(locate_template('loop-templates/tile-video.php'));
+										$count++;
+										unset($all_videos_results[$key]);
+
+										if($count === $posts_per_page) {
+											break;
+										}
+									}
+								} ?>
+							</div>
+							<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
+						</section>
+						<?php
+						if($all_videos_count > $posts_per_page) {
+							echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter videos_loadmore" data-count="'.$count.'" data-posts_per_page="'.$posts_per_page.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
+						}
+						?>
+					</main><!-- #main -->
+				</div><!-- #primary -->
+			</div><!-- .row end -->
+		</div><!-- .container end -->
+	</div><!-- .wrapper end -->
 </section>
 
 <section class="juicer-section">

@@ -33,6 +33,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" type="image/x-icon">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -44,9 +46,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?>>
 	
-	<?php if ( ! is_home() && is_front_page() ) {
-		get_template_part( 'page-templates/homepage/loading', 'bay' ); 
-	} ?>
+	<?php //if ( ! is_home() && is_front_page() ) {
+		//get_template_part( 'page-templates/homepage/loading', 'bay' ); 
+	//} ?>
 	<div class="hfeed site" id="page">
 
 	<?php if ( is_singular( 'genaero_trailblazers' ) ) { //for fancybox  

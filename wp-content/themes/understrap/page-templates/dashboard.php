@@ -53,7 +53,7 @@ if($video_results_count > 0) {
 ?>
 
 <div class="wrapper" id="page-wrapper">
-	<?php $bgimg = get_template_directory_uri() . "/img/Dashboard_Bg.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findaVideo.jpg";
 	include(locate_template('loop-templates/hub-base.php')); ?>
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 

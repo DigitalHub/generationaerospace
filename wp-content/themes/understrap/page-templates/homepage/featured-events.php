@@ -48,15 +48,15 @@ $second_query = new WP_Query($args2);
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">
-			<div class="offset-xl-1 col-xl-9 animated_circles--wrapper featured_event">
+			<div class="offset-xl-3 col-xl-6 col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-xs-12 animated_circles--wrapper featured_event">
 				<?php if($first_query->have_posts()) : while($first_query->have_posts()) : $first_query->the_post(); ?>
-					<h2><?php the_title(); ?></h2>
+					<h2 class="text-center"><?php the_title(); ?></h2>
 					<div class="animated_circles top_circles">
-						<svg class="circle" width="100%" height="20" viewBox="0 0 1000 20"><rect x="0" y="0" width="100%" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="41" cy="10" r="5"></circle><circle cx="310" cy="10" r="5"></circle><circle cx="350" cy="10" r="5"></circle><circle cx="460" cy="10" r="5"></circle><circle cx="490" cy="10" r="5"></circle></g></svg>
-						<svg class="line" width="100%" height="1" viewBox="0 0 1000 1"><rect x="0" y="0" width="100%" height="1"></rect><g><line x1="0" y1="1" x2="320" y2="1"></line></g></svg>
+						<svg class="circle" width="100%" height="20" viewBox="0 0 500 20"><rect x="0" y="0" width="100%" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="41" cy="10" r="5"></circle><circle cx="310" cy="10" r="5"></circle><circle cx="350" cy="10" r="5"></circle><circle cx="460" cy="10" r="5"></circle><circle cx="490" cy="10" r="5"></circle></g></svg>
+						<svg class="line" width="100%" height="1" viewBox="0 0 500 1"><rect x="0" y="0" width="100%" height="1"></rect><g><line x1="0" y1="1" x2="320" y2="1"></line></g></svg>
 					</div>
 					<div class="post-thumbnail">
-						<?php the_post_thumbnail( 'full' ); ?>
+						<?php the_post_thumbnail( 'large' ); ?>
 
 						<?php $startdate = get_field('start_date');
 						$enddate = get_field('end_date');
@@ -101,4 +101,5 @@ $second_query = new WP_Query($args2);
 		</div> -->
 	</div>
 </div>
+<div class="fullpagecounter"><span class="counting">06</span><span class="totalcount">06</span></div>
 </section>
