@@ -41,7 +41,7 @@ if($featured_month) :
 	$post_id = get_the_ID();
 	wp_reset_postdata();
 endif;
-$featured_month_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.favourite, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t1.link_id = '%s'", $post_id);
+$featured_month_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.favourite, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t1.link_id = '%s' AND t3.post_status = 'publish'", $post_id);
 
 $featured_month_results = $wpdb->get_results($featured_month_sql);
 $featured_month_count = $wpdb->num_rows;
@@ -73,7 +73,7 @@ if($featured_month_count > 0) {
 }
 
 //featured videos loop
-$featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' ORDER BY t1.create_date DESC LIMIT 3";
+$featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id INNER JOIN $wpdb->posts t4 ON t4.id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' AND t4.post_status = 'publish' ORDER BY t1.create_date DESC LIMIT 3";
 
 $featured_videos_results = $wpdb->get_results($featured_videos_sql);
 $featured_videos_count = $wpdb->num_rows;
