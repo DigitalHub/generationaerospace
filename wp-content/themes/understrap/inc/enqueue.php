@@ -167,8 +167,7 @@ function search_video() {
 				echo $count > 0 ? '</div>' : '';
 				echo '<div class="row">';
 			endif;
-			global $video;
-			get_template_part( 'loop-templates/tile', 'video' );
+			include(locate_template('loop-templates/tile-video.php'));
 			$count++;
 		}
 
