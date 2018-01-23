@@ -134,7 +134,7 @@ function custom_post_thumbnail() {
 		} 
 		echo "<div class='post-thumbnail ".$getimagesize."'>";
 		the_post_thumbnail( 'medium' );
-		echo "<div class='bg-opaque'></div>";
+		// echo "<div class='bg-opaque'></div>";
 		echo "</div>";
 	endif;
 }

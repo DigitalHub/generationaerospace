@@ -11145,6 +11145,7 @@ a {
     width: 21px; }
 
 .double_arrow {
+  cursor: pointer;
   display: block;
   position: relative;
   -moz-transition: all 0.1s ease-in-out;
@@ -13071,6 +13072,9 @@ a.j-paginate.juicer-button {
 .related--video h3 {
   color: #000; }
 
+.single_experiment h1 {
+  font-size: 50px; }
+
 .single-genaero_experiments h2 {
   text-align: left;
   text-transform: uppercase; }
@@ -13079,11 +13083,14 @@ a.j-paginate.juicer-button {
   text-align: left; }
   .single-genaero_experiments .experiment-meta .meta-date {
     display: inline-block;
+    margin: 0 0 10px;
     width: 150px; }
     .single-genaero_experiments .experiment-meta .meta-date i {
       margin-right: 5px; }
   .single-genaero_experiments .experiment-meta .meta-keywords {
     display: inline-block;
+    height: 100%;
+    overflow: visible;
     vertical-align: top;
     width: calc(100% - 160px); }
     .single-genaero_experiments .experiment-meta .meta-keywords a {

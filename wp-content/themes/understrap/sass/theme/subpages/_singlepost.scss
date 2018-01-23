@@ -244,6 +244,12 @@
 	color: $black;
 }
 
+.single_experiment {
+	h1 {
+		font-size: 50px;
+	}
+}
+
 .single-genaero_experiments {
 	h2 {
 		text-align: left;
@@ -255,6 +261,7 @@
 
 		.meta-date {
 			display: inline-block;
+			margin: 0 0 10px;
 			width: 150px;
 
 			i {
@@ -264,6 +271,8 @@
 
 		.meta-keywords {
 			display: inline-block;
+			height: 100%;
+			overflow: visible;
 			vertical-align: top;
 			width: calc(100% - 160px);
 
