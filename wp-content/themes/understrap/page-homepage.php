@@ -17,8 +17,8 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<ul class="chapter-selector">
 			<li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li>
-			<li data-menuanchor="featured_video"><a href="#featured_video">Find A Video</a></li>
-			<li data-menuanchor="featured_experiment"><a href="#featured_experiment">Find An Experiment</a></li>
+			<li data-menuanchor="featured_video"><a href="#featured_video">Get Inspired</a></li>
+			<li data-menuanchor="featured_experiment"><a href="#featured_experiment">Try This at Home</a></li>
 			<li data-menuanchor="genaero_explorer"><a href="#genaero_explorer">Be A Genaero Explorer</a></li>
 			<li data-menuanchor="genaero_trailblazers"><a href="#genaero_trailblazers">Genaero Trailblazers</a></li>
 			<li data-menuanchor="featured_events"><a href="#featured_events">Events</a></li>
