@@ -40,7 +40,7 @@ if ( ! is_home() && is_front_page() ) { ?>
 		<span>scroll</span>
 	</div>
 </a> -->
-<?php } elseif (is_page_template( 'page-events.php' ) || is_page_template( 'page-experiments.php' ) || is_page_template( 'page-trailblazers.php' ) || is_page_template( 'page-vault.php' )) { ?>
+<?php } elseif (is_page_template( 'page-events.php' ) || is_page_template( 'page-experiments.php' ) || is_page_template( 'page-trailblazers.php' ) || is_page_template( 'page-vault.php' ) || is_page_template( 'page-videos.php' )) { ?>
 <a id="link" class="scrolling">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">
