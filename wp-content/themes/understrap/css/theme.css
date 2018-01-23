@@ -11903,6 +11903,7 @@ a#genaero-facebook-button {
   .search-form input {
     background-color: #ffffff40 !important;
     border: none;
+    border-radius: 0;
     color: #fff;
     float: left;
     font-size: 1.333rem;
@@ -11910,16 +11911,20 @@ a#genaero-facebook-button {
     height: 50px !important;
     width: calc(100% - 60px); }
     .search-form input:focus {
+      border-color: #000;
+      box-shadow: none;
+      color: #fff;
       outline: 0; }
   .search-form button {
     background-color: #ffffff40 !important;
     border: 0;
+    border-radius: 0;
     color: #fff;
     cursor: pointer;
     font-size: 2rem;
     float: left;
     height: 50px;
-    padding-right: 20px;
+    padding: 0;
     vertical-align: top;
     width: 60px; }
     .search-form button:focus {

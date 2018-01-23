@@ -14,8 +14,14 @@
 	<div class="container">
 		<div class="menu__wrapper">
 			<div class="search-form">
-				<input type="text" />
-				<button type="submit"><i class="fal fa-search"></i></button>
+				<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+					<div class="input-group">
+						<input class="field form-control" id="s" name="s" type="text" value="<?php the_search_query(); ?>">
+						<button type="submit" class="submit btn btn-primary" id="searchsubmit" name="submit" >
+							<i class="fal fa-search"></i>
+						</button>
+					</div>
+				</form>
 			</div>
 			<div class="menu-content__wrapper">
 				<nav class="menu-content__nav">
