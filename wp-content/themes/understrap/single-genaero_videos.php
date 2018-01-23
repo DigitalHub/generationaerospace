@@ -96,23 +96,24 @@ $featured_videos_count = $wpdb->num_rows;
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 			<hr>
-			<h3>More Videos For You_</h3>
-			<?php
-			if($featured_videos_count > 0) {
-				$count = 0;
-				foreach($featured_videos_results as $video) {
-					if($count % 3 == 0) :
-						echo $count > 0 ? '</div>' : '';
-						echo '<div class="row">';
-					endif;
-					include(locate_template('loop-templates/tile-video.php'));
-					$count++;
-				}
+			<div class="related--video">
+				<h3>More Videos For You_</h3>
+				<?php if($featured_videos_count > 0) {
+					$count = 0;
+					foreach($featured_videos_results as $video) {
+						if($count % 3 == 0) :
+							echo $count > 0 ? '</div>' : '';
+							echo '<div class="row">';
+						endif;
+						include(locate_template('loop-templates/tile-video.php'));
+						$count++;
+					}
 
-				if($count % 3 !== 0) {
-					echo '</div>';
-				}
-			} ?>
+					if($count % 3 !== 0) {
+						echo '</div>';
+					}
+				} ?>
+			</div><!-- .related-video end -->
 		</div><!-- Container end -->
 	</div><!-- Wrapper end -->
 </section>

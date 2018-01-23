@@ -185,12 +185,14 @@ svg.circlerotate {
 		z-index: 2;
 
 		.content--overflow_wrapper {
+			height: 520px;
 			max-height: 520px;
 			overflow: hidden;
 			width: 100%;
 		}
 
 		iframe, img {
+			height: 100%;
 			width: 100%;
 		}
 	}
@@ -198,7 +200,7 @@ svg.circlerotate {
 
 .content--overflow + .single_main {
 	background-color: #eeeeee;
-	padding-top: 200px;
+	padding-top: 175px;
 }
 
 .singlepost--hud {

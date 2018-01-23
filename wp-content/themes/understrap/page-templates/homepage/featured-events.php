@@ -52,8 +52,8 @@ $second_query = new WP_Query($args2);
 				<?php if($first_query->have_posts()) : while($first_query->have_posts()) : $first_query->the_post(); ?>
 					<h2><?php the_title(); ?></h2>
 					<div class="animated_circles top_circles">
-						<svg class="circle" width="400" height="20" viewBox="0 0 400 20"><rect x="0" y="0" width="400" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="41" cy="10" r="5"></circle><circle cx="310" cy="10" r="5"></circle><circle cx="350" cy="10" r="5"></circle><circle cx="460" cy="10" r="5"></circle><circle cx="490" cy="10" r="5"></circle></g></svg>
-						<svg class="line" width="500" height="1" viewBox="0 0 500 1"><rect x="0" y="0" width="500" height="1"></rect><g><line x1="0" y1="1" x2="320" y2="1"></line></g></svg>
+						<svg class="circle" width="100%" height="20" viewBox="0 0 1000 20"><rect x="0" y="0" width="100%" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="41" cy="10" r="5"></circle><circle cx="310" cy="10" r="5"></circle><circle cx="350" cy="10" r="5"></circle><circle cx="460" cy="10" r="5"></circle><circle cx="490" cy="10" r="5"></circle></g></svg>
+						<svg class="line" width="100%" height="1" viewBox="0 0 1000 1"><rect x="0" y="0" width="100%" height="1"></rect><g><line x1="0" y1="1" x2="320" y2="1"></line></g></svg>
 					</div>
 					<div class="post-thumbnail">
 						<?php the_post_thumbnail( 'full' ); ?>

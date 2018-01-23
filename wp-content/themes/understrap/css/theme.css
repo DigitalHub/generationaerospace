@@ -10924,15 +10924,17 @@ svg.circlerotate {
   top: 30%;
   z-index: 2; }
   .content--overflow .singlepost--content .content--overflow_wrapper {
+    height: 520px;
     max-height: 520px;
     overflow: hidden;
     width: 100%; }
   .content--overflow .singlepost--content iframe, .content--overflow .singlepost--content img {
+    height: 100%;
     width: 100%; }
 
 .content--overflow + .single_main {
   background-color: #eeeeee;
-  padding-top: 200px; }
+  padding-top: 175px; }
 
 .singlepost--hud {
   height: 480px;
@@ -11533,7 +11535,8 @@ a#genaero-facebook-button {
 .site-toplogin_btn {
   position: absolute;
   left: 6%;
-  top: 20px; }
+  top: 20px;
+  z-index: 3; }
   .site-toplogin_btn .hex {
     position: relative;
     width: 50px;
@@ -12358,15 +12361,16 @@ a#genaero-facebook-button {
   left: 50px; }
 
 .explorer_slide {
+  height: 225px;
   text-align: center; }
   .explorer_slide .post-thumbnail {
-    height: 185px;
+    height: 112px;
     margin: 0 auto 40px;
     overflow: hidden;
     position: relative;
-    width: 185px; }
+    width: 112px; }
     .explorer_slide .post-thumbnail img {
-      height: 185px;
+      height: 112px;
       left: 50%;
       max-width: none;
       top: 50%;
@@ -12377,9 +12381,36 @@ a#genaero-facebook-button {
       transform: translate(-50%, -50%);
       position: absolute;
       width: auto; }
+      .explorer_slide .post-thumbnail img.running_icon {
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .explorer_slide .post-thumbnail img.paused_icon {
+        opacity: 1;
+        filter: alpha(opacity=100); }
   .explorer_slide p {
     width: 80%;
     margin: auto; }
+  .explorer_slide.slick-center .post-thumbnail {
+    height: 185px;
+    width: 185px; }
+    .explorer_slide.slick-center .post-thumbnail img {
+      height: 185px; }
+      .explorer_slide.slick-center .post-thumbnail img.running_icon {
+        opacity: 1;
+        filter: alpha(opacity=100); }
+      .explorer_slide.slick-center .post-thumbnail img.paused_icon {
+        opacity: 0;
+        filter: alpha(opacity=0); }
+
+.explorer_slide.slick-active .post-thumbnail {
+  margin-left: 0; }
+
+.explorer_slide.slick-center.slick-current .post-thumbnail {
+  margin: 0 auto 40px; }
+
+.explorer_slide.slick-slide.slick-active[tabindex="0"]:not(.slick-current) .post-thumbnail {
+  margin-left: auto;
+  margin-right: 0; }
 
 .featured_trailbazers .trailblazer--name {
   color: #00aed4 !important; }
@@ -12430,16 +12461,14 @@ a#genaero-facebook-button {
   -moz-filter: grayscale(0);
   filter: grayscale(0); }
 
-.featured_event .post-thumbnail {
-  height: 200px !important; }
-  .featured_event .post-thumbnail img {
-    height: 300px; }
-  .featured_event .post-thumbnail h3 {
-    font-weight: 700;
-    position: absolute;
-    bottom: 0;
-    left: 25px;
-    z-index: 1; }
+.featured_event .post-thumbnail img {
+  height: 350px; }
+.featured_event .post-thumbnail h3 {
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  z-index: 1; }
 
 .featured--upcoming_event {
   margin-bottom: 20px; }
@@ -12864,7 +12893,9 @@ a.j-paginate.juicer-button {
   margin: 0 !important;
   width: 100%; }
   .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn span {
-    color: #000 !important; }
+    color: #000 !important;
+    font-family: "Barlow", Arial, sans-serif !important;
+    font-size: 14px !important; }
   .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn.at-svc-facebook svg {
     fill: #3b5998 !important; }
   .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn.at-svc-twitter svg {
@@ -13037,12 +13068,14 @@ a.j-paginate.juicer-button {
     .single_trailblazers .single_trailblazers--video.single_experiment--materials a:last-child {
       margin-left: 30px; }
 
+.related--video h3 {
+  color: #000; }
+
 .single-genaero_experiments h2 {
   text-align: left;
   text-transform: uppercase; }
 .single-genaero_experiments .experiment-meta {
   color: #00aed4;
-  margin-bottom: 30px;
   text-align: left; }
   .single-genaero_experiments .experiment-meta .meta-date {
     display: inline-block;
