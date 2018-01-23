@@ -15,8 +15,11 @@ $videos = array();
 if(have_rows('featured_video')) :
 	while(have_rows('featured_video')) : the_row();
 		$sql = $wpdb->prepare("SELECT t1.id, t1.link_id, t1.title, t1.youtube, t2.fullname FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE link_id = '%s' AND t3.post_status = 'publish'", get_sub_field('id'));
+		$results = $wpdb->get_results($sql);
 
-		$videos[] = $wpdb->get_results($sql);
+		if($wpdb->num_rows > 0) {
+			$videos[] = $results;
+		}
 	endwhile;
 endif;
 
@@ -44,16 +47,16 @@ endif;
 							?>
 							<div class="video_slide">
 								<div class="post-thumbnail" style="background-image:url('<?=$thumbnail?>');>
-									<img src="<?=$thumbnail?>" />
-								</div>
-								<h3><?=$video[0]->title?></h3>
-								<p><?=$video[0]->fullname?></p>
+								<img src="<?=$thumbnail?>" />
 							</div>
-						<?php endforeach; ?>
-					</div>
+							<h3><?=$video[0]->title?></h3>
+							<p><?=$video[0]->fullname?></p>
+						</div>
+					<?php endforeach; ?>
 				</div>
-				<div class="pagingInfo"></div>
 			</div>
+			<div class="pagingInfo"></div>
 		</div>
 	</div>
+</div>
 </section>
