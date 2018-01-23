@@ -46,29 +46,31 @@
 	</div> 
 	<div class="container sub_content">
 		<div class="row">
-			<div class="col-xl-10 offset-xl-1">
+			<div class="col-xl-8 offset-xl-2">
 				<h2 style="text-align: center;">BECOME A #GENAERO EXPLORER</h2>
-				<div class="genaero_explorer--carousel">
-					<?php
-					if(have_rows('explorer_slides')) :
-						while(have_rows('explorer_slides')) : the_row();
-							$icon = get_sub_field('icon');
-							$title = get_sub_field('title');
-							$copy = get_sub_field('copy');
-							?>
-							<div class="explorer_slide">
-								<div class="post-thumbnail">
-									<img src="<?=$icon['url']?>" />
-								</div>
-								<h2><?=$title?></h2>
-								<p class="highlight"><?=$copy?></p>
-							</div>
-							<?php
-						endwhile;
-					endif;
-					?>
-				</div>
+				<div class="genaero_explorer--navigation">
+					<?php while(have_rows('explorer_slides')) : the_row();
+					$icon = get_sub_field('icon');
+					$paused_icon = get_sub_field('paused_icon'); ?>
+					<div class="explorer_slide">
+						<div class="post-thumbnail">
+							<img class="running_icon" src="<?=$icon['url']?>" />
+							<img class="paused_icon" src="<?=$paused_icon['url']?>" />
+						</div>
+					</div>
+				<?php endwhile; ?>
 			</div>
+			<div class="genaero_explorer--carousel">
+				<?php while(have_rows('explorer_slides')) : the_row();
+				$title = get_sub_field('title');
+				$copy = get_sub_field('copy'); ?>
+				<div class="explorer_slide">
+					<h2><?=$title?></h2>
+					<p class="highlight"><?=$copy?></p>
+				</div>
+			<?php endwhile; ?>
 		</div>
 	</div>
+</div>
+</div>
 </section>

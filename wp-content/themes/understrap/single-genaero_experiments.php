@@ -54,12 +54,8 @@ $tags = get_the_tags();
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
 					<main class="site-main" id="main" role="main">
-						<div class="row">
-							<div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 col-md-10 col-sm-12 col-xs-12">
-								<div class="entry-content">
-									<p class="highlight"><?php echo get_field('summary'); ?></p>
-								</div>
-							</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 entry-content">
+							<p class="highlight"><?php echo get_field('summary'); ?></p>
 						</div>
 					</main><!-- #main -->
 				</div><!-- #primary -->

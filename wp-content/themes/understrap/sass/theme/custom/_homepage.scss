@@ -420,23 +420,32 @@
 }
 
 .explorer_slide {
+	height: 225px;
 	text-align: center;
 
 	.post-thumbnail {
-		height: 185px;
+		height: 112px;
 		margin: 0 auto 40px;
 		overflow: hidden;
 		position: relative;
-		width: 185px;
+		width: 112px;
 
 		img {
-			height: 185px;
+			height: 112px;
 			left: 50%;
 			max-width: none;
 			top: 50%;
 			@include translate(-50%,-50%);
 			position: absolute;
 			width: auto;
+
+			&.running_icon {
+				@include opacity(0);
+			}
+
+			&.paused_icon {
+				@include opacity(1);
+			}
 		}
 	}
 
@@ -444,7 +453,40 @@
 		width: 80%;
 		margin: auto;
 	}
+
+	&.slick-center {
+		.post-thumbnail {
+			height: 185px;
+			width: 185px;
+
+			img {
+				height: 185px;
+
+				&.running_icon {
+					@include opacity(1);
+				}
+
+				&.paused_icon {
+					@include opacity(0);
+				}
+			}
+		}
+	}
 }
+
+.explorer_slide.slick-active .post-thumbnail {
+	margin-left: 0;
+}
+
+.explorer_slide.slick-center.slick-current .post-thumbnail {
+    margin: 0 auto 40px;
+}
+
+.explorer_slide.slick-slide.slick-active[tabindex="0"]:not(.slick-current) .post-thumbnail {
+	margin-left: auto;
+	margin-right: 0;
+}
+
 
 .featured_trailbazers {
 	.trailblazer--name {
@@ -453,7 +495,6 @@
 }
 
 .animated_circles--wrapper {
-
 	.animated_circles {
 		left: 10px;
 		position: relative;
@@ -510,10 +551,10 @@
 
 .featured_event {
 	.post-thumbnail {
-		height: 200px !important;
+		// height: 200px !important;
 
 		img {
-			height: 300px;
+			height: 350px;
 		}
 
 		h3 {

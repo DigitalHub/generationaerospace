@@ -114,14 +114,32 @@ jQuery(document).ready(function($) {
         });
     }
 
+    // jQuery('.genaero_explorer--carousel').slick({
+    //     autoplay: false,
+    //     dots: false,
+    //     centerMode: true,
+    //     centerPadding: ($('.slider').find('>div').outerWidth() / 2) + 'px',
+    // });
+
     jQuery('.genaero_explorer--carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
         autoplay: false,
+        fade: true,
+        asNavFor: '.genaero_explorer--navigation',
+        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
+        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+    });
+    jQuery('.genaero_explorer--navigation').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.genaero_explorer--carousel',
         dots: false,
         centerMode: true,
-        centerPadding: ($('.slider').find('>div').outerWidth() / 2) + 'px',
-        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
-        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>',
+        focusOnSelect: true
     });
+
+
 
     $(function(){
         $('.hide-show').show();

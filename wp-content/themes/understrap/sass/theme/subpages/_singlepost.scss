@@ -46,6 +46,8 @@
 
 		span {
 			color: $black !important;
+			font-family: "Barlow", Arial, sans-serif !important;
+			font-size: 14px !important;
 		}
 
 		&.at-svc-facebook {
@@ -238,6 +240,10 @@
 	}
 }
 
+.related--video h3 {
+	color: $black;
+}
+
 .single_experiment {
 	h1 {
 		font-size: 50px;
@@ -251,7 +257,6 @@
 	}
 	.experiment-meta {
 		color: $rrskyblue;
-		margin-bottom: 30px; 
 		text-align: left;
 
 		.meta-date {
