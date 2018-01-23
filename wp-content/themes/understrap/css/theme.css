@@ -13044,11 +13044,14 @@ a.j-paginate.juicer-button {
   text-align: left; }
   .single-genaero_experiments .experiment-meta .meta-date {
     display: inline-block;
+    margin: 0 0 10px;
     width: 150px; }
     .single-genaero_experiments .experiment-meta .meta-date i {
       margin-right: 5px; }
   .single-genaero_experiments .experiment-meta .meta-keywords {
     display: inline-block;
+    height: 100%;
+    overflow: visible;
     width: calc(100% - 160px); }
     .single-genaero_experiments .experiment-meta .meta-keywords a {
       color: #00aed4 !important;
