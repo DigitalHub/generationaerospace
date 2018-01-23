@@ -7,17 +7,19 @@
 global $loggedin;
 $user_id = $_SESSION['user_id'];
 $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
+$count = 0;
+$totalcount = 0;
 ?>
 <div class="<?php echo $page_template ?> container-fluid single_experiment">
 	<div class="row">
 		<div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 single_experiment--methods">
 			<div class="col-xl-10 offset-xl-2 col-lg-11 offset-lg-1 col-md-12 col-sm-12 col-xs-12 single_experiment--methods_wrapper">
 				<div class="row single_experiment--row">
-					<h1>Methods_</h1><!-- What Just Happened --><br/>
+					<h1 class="single_experiment_header">Methods_</h1><!-- What Just Happened --><br/>
 					<div class="single_experimentcaraousel--wrapper">
 						<div class="experiment--wrapperhidbar">
 						<div class="experiment--carousel">
-							<?php $totalcount = 0;
+							<?php 
 							if(have_rows('steps')) :
 								$totalcount = sprintf('%02d', count(get_field('steps')));
 								$count = sprintf('%02d', 1);
@@ -32,7 +34,7 @@ $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 										<div class="experiment_steps"><?=$step?></div>
 									</div>
 									<?php $count = sprintf('%02d',$count+1); endwhile;endif;
-									if($count === $totalcount + 1) : ?>
+									// if($count === $totalcount + 1) : ?>
 									<div class="experiment_slide last_experiment--slide">
 										<?php echo get_field('lesson'); ?>
 
@@ -52,7 +54,7 @@ $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 											<?php } ?>
 										</div>
 									</div>
-								<?php endif; ?>
+								<?php //endif; ?>
 							</div> <!-- experiment-carousel -->
 						</div> <!-- experiment-carousel_wrapper -->
 						</div> <!-- experiment-wrapperhidbar -->

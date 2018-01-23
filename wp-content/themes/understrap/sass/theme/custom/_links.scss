@@ -235,6 +235,7 @@ a {
 }
 
 .double_arrow {
+	cursor: pointer;
 	display: block;
 	position: relative;
 	@include transition(all 0.1s ease-in-out);

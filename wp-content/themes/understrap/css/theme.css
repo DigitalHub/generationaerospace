@@ -11143,6 +11143,7 @@ a {
     width: 21px; }
 
 .double_arrow {
+  cursor: pointer;
   display: block;
   position: relative;
   -moz-transition: all 0.1s ease-in-out;
@@ -13036,6 +13037,9 @@ a.j-paginate.juicer-button {
     .single_trailblazers .single_experiment--materials.single_experiment--materials a:last-child,
     .single_trailblazers .single_trailblazers--video.single_experiment--materials a:last-child {
       margin-left: 30px; }
+
+.single_experiment h1 {
+  font-size: 50px; }
 
 .single-genaero_experiments h2 {
   text-align: left;

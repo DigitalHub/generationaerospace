@@ -44,7 +44,7 @@ $results_count = $wpdb->num_rows;
 							}
 						} else {
 							echo '<p>You have not liked any videos yet. Why not submit your own video here?</p>';
-							echo '<a href="'.get_permalink( get_page_by_path( 'submit-a-video' ) ).'">Submit New Video</a>';
+							echo '<a href="'.get_permalink( get_page_by_path( 'get-inspired' ) ).'">Submit New Video</a>';
 						}
 						?>
 

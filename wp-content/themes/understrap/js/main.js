@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
         fitToSectionDelay: 100,
         lazyLoading: true,
         afterLoad: function(anchorLink, index){
-           if(index == $('.section').length){
+         if(index == $('.section').length){
             jQuery('.down--button').hide();
             jQuery('.up--button').show();
         } else {
@@ -335,6 +335,18 @@ $('a.fav-experiment').on('click', function(e) {
         }
     });
 });
+
+if($('.last_experiment--slide').length) {
+    $('.double_arrow').on('click', function() {
+        if($('.last_experiment--slide').hasClass('slick-active')) {
+            console.log('active');
+            $('.single_experiment_header').text('What Just Happened_');
+        } else {
+            console.log('not active');
+            $('.single_experiment_header').text('Methods_');
+        }
+    });
+}
 
 // $('a[href$="#heart"]').on('click', function(e) {
 //   e.preventDefault();
