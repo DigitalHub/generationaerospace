@@ -13051,6 +13051,7 @@ a.j-paginate.juicer-button {
       margin-right: 5px; }
   .single-genaero_experiments .experiment-meta .meta-keywords {
     display: inline-block;
+    vertical-align: top;
     width: calc(100% - 160px); }
     .single-genaero_experiments .experiment-meta .meta-keywords a {
       color: #00aed4 !important;
@@ -13084,6 +13085,8 @@ a.j-paginate.juicer-button {
         left: -8%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
         right: -8%; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_slide {
+        width: 100%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts {
         display: inline-block;
         font-size: 24px;

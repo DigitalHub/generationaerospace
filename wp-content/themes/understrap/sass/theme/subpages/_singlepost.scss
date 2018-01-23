@@ -259,6 +259,7 @@
 
 		.meta-keywords {
 			display: inline-block;
+			vertical-align: top;
 			width: calc(100% - 160px);
 
 			a {
@@ -305,6 +306,10 @@
 
 			.double_arrow.small_arrow.arrow_right {
 				right: -8%;
+			}
+
+			.experiment_slide {
+				width: 100%;
 			}
 
 			.experiment_counts {
