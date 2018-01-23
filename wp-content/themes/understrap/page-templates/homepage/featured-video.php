@@ -14,7 +14,7 @@ $members_table = $wpdb->prefix.'genaero_members';
 $videos = array();
 if(have_rows('featured_video')) :
 	while(have_rows('featured_video')) : the_row();
-		$sql = $wpdb->prepare("SELECT t1.id, t1.link_id, t1.title, t1.youtube, t2.fullname FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id WHERE link_id = '%s'", get_sub_field('id'));
+		$sql = $wpdb->prepare("SELECT t1.id, t1.link_id, t1.title, t1.youtube, t2.fullname FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE link_id = '%s' AND t3.post_status = 'publish'", get_sub_field('id'));
 
 		$videos[] = $wpdb->get_results($sql);
 	endwhile;
