@@ -141,7 +141,7 @@ a.j-paginate.juicer-button {
 		color: $white;
 		vertical-align: middle;
 
-		&:hover, &.fav {
+		 &.fav { //&:hover,
 			color: $rrlimegreen;
 		}
 	}

@@ -12574,8 +12574,7 @@ a.j-paginate.juicer-button {
     text-align: center;
     color: #fff;
     vertical-align: middle; }
-    .experiment--fav_link i:hover, .experiment--fav_link i.fav,
-    .month_experiment--link i:hover,
+    .experiment--fav_link i.fav,
     .month_experiment--link i.fav {
       color: #cad63e; }
 
@@ -13066,50 +13065,51 @@ a.j-paginate.juicer-button {
 
 .single_experimentcaraousel--wrapper {
   height: 80%;
-  overflow-y: scroll;
-  width: 100%; }
-  .single_experimentcaraousel--wrapper .experiment--carousel_wrapper {
-    width: 85%;
-    margin: auto; }
-    .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .double_arrow.small_arrow.arrow_left {
-      left: -8%; }
-    .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .double_arrow.small_arrow.arrow_right {
-      right: -8%; }
-    .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .experiment_slide {
-      min-width: 550px; }
-    .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .experiment_counts {
-      float: left;
-      font-size: 24px;
-      font-weight: 400;
-      margin-right: 25px;
-      vertical-align: middle;
-      width: 25px; }
-      .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .experiment_counts .counting {
-        color: #cad63e;
-        -moz-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        -webkit-transition: all 500ms ease;
-        transition: all 500ms ease; }
-      .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .experiment_counts .totalcount:before {
-        border-top: 1px solid #cad63e;
-        content: "";
-        display: block;
-        margin: 10px 0;
+  width: calc(100% - 15px);
+  overflow: hidden; }
+  .single_experimentcaraousel--wrapper .experiment--wrapperhidbar {
+    overflow-y: scroll;
+    width: calc(100% + 20px); }
+    .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel {
+      width: 85%;
+      margin: auto; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_left {
+        left: -8%; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
+        right: -8%; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 400;
+        margin-right: 25px;
+        vertical-align: middle;
         width: 25px; }
-    .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .tried_experiement {
-      background-color: #0e3e66;
-      margin-top: 40px;
-      padding: 35px 55px; }
-      .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .tried_experiement h3 {
-        color: #fff; }
-    .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .experiment_steps {
-      border-left: 1px solid #fff;
-      float: left;
-      min-height: 100px;
-      padding-left: 25px;
-      width: calc(100% - 101px); }
-      .single_experimentcaraousel--wrapper .experiment--carousel_wrapper .experiment_steps p:last-child {
-        margin-bottom: 0; }
+        .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts .counting {
+          color: #cad63e;
+          -moz-transition: all 500ms ease;
+          -o-transition: all 500ms ease;
+          -webkit-transition: all 500ms ease;
+          transition: all 500ms ease; }
+        .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts .totalcount:before {
+          border-top: 1px solid #cad63e;
+          content: "";
+          display: block;
+          margin: 10px 0;
+          width: 25px; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .tried_experiement {
+        background-color: #0e3e66;
+        margin-top: 40px;
+        padding: 35px 55px; }
+        .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .tried_experiement h3 {
+          color: #fff; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_steps {
+        border-left: 1px solid #fff;
+        display: inline-block;
+        min-height: 100px;
+        padding-left: 25px;
+        width: calc(100% - 105px); }
+        .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_steps p:last-child {
+          margin-bottom: 0; }
 
 .faved {
   color: #cad63e; }

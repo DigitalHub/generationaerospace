@@ -20,7 +20,7 @@ get_header(); ?>
 			<li data-menuanchor="featured_video"><a href="#featured_video">Find A Video</a></li>
 			<li data-menuanchor="featured_experiment"><a href="#featured_experiment">Find An Experiment</a></li>
 			<li data-menuanchor="genaero_explorer"><a href="#genaero_explorer">Be A Genaero Explorer</a></li>
-			<li data-menuanchor="genaero_trailbazers"><a href="#genaero_trailbazers">Genaero Trailbazers</a></li>
+			<li data-menuanchor="genaero_trailblazers"><a href="#genaero_trailblazers">Genaero Trailblazers</a></li>
 			<li data-menuanchor="featured_events"><a href="#featured_events">Events</a></li>
 		</ul>
 

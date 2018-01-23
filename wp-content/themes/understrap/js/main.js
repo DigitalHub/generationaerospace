@@ -55,14 +55,14 @@ jQuery(document).ready(function($) {
 
     if(jQuery('#fullpage').length) {
         jQuery('#fullpage').fullpage({
-            anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailbazers', 'featured_events'],
+            anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailblazers', 'featured_events'],
             menu: '.chapter-selector',
             css3: true,
         // lockAnchors: true,
         fitToSectionDelay: 100,
         lazyLoading: true,
         afterLoad: function(anchorLink, index){
-         if(index == $('.section').length){
+           if(index == $('.section').length){
             jQuery('.down--button').hide();
             jQuery('.up--button').show();
         } else {
@@ -70,13 +70,13 @@ jQuery(document).ready(function($) {
             jQuery('.up--button').hide();       }
         }
     });
-    jQuery('.homescroll.down--button').click(function(){
-        jQuery.fn.fullpage.moveSectionDown();
-    });
+        jQuery('.homescroll.down--button').click(function(){
+            jQuery.fn.fullpage.moveSectionDown();
+        });
 
-    jQuery('.homescroll.up--button').click(function(){
-        jQuery.fn.fullpage.moveSectionUp();
-    });
+        jQuery('.homescroll.up--button').click(function(){
+            jQuery.fn.fullpage.moveSectionUp();
+        });
 
     }
 
