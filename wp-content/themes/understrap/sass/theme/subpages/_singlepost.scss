@@ -139,6 +139,18 @@
 	width: 100%;
 }
 
+.single_experiment {
+	.single_experiment--row {
+		.post-thumbnail {
+			height: 300px !important;
+
+			img {
+				height: 300px !important;
+			}
+		}
+	}
+}
+
 .single_experiment,
 .single_trailblazers {
 	.single_experiment--row,
@@ -247,6 +259,7 @@
 .single_experiment {
 	h1 {
 		font-size: 50px;
+		width: 100%;
 	}
 }
 
@@ -306,10 +319,12 @@
 	overflow: hidden;
 
 	.experiment--wrapperhidbar {
+		height: 100%;
 		overflow-y: scroll;
 		width: calc(100% + 20px);
 
 		.experiment--carousel {
+			height: 100%;
 			width: 85%;
 			margin: auto;
 

@@ -12957,6 +12957,11 @@ a.videos_loadmore {
   margin: 20px 0;
   width: 100%; }
 
+.single_experiment .single_experiment--row .post-thumbnail {
+  height: 300px !important; }
+  .single_experiment .single_experiment--row .post-thumbnail img {
+    height: 300px !important; }
+
 .single_experiment .single_experiment--row,
 .single_experiment .single_trailblazers--row,
 .single_trailblazers .single_experiment--row,
@@ -13089,7 +13094,8 @@ a.videos_loadmore {
   color: #000; }
 
 .single_experiment h1 {
-  font-size: 50px; }
+  font-size: 50px;
+  width: 100%; }
 
 .single-genaero_experiments h2 {
   text-align: left;
@@ -13132,9 +13138,11 @@ a.videos_loadmore {
   width: calc(100% - 15px);
   overflow: hidden; }
   .single_experimentcaraousel--wrapper .experiment--wrapperhidbar {
+    height: 100%;
     overflow-y: scroll;
     width: calc(100% + 20px); }
     .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel {
+      height: 100%;
       width: 85%;
       margin: auto; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_left {
