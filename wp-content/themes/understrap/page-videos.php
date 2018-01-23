@@ -183,8 +183,7 @@ $template = 'video';
 							if($count % 3 !== 0) {
 								echo '</div>';
 							}
-						}
-					echo "</div>"; ?>
+						} ?>
 					<hr>
 					<section class="all-videos-section">
 						<h3>All Videos_</h3>
@@ -221,7 +220,7 @@ $template = 'video';
 	<div class="juicer-content container">
 		<h2 class="text-center">#GENAERO</h2>
 		<p class="highlight text-center">Check out what other GenAero Explorers are doing!</p>
-		<ul class="juicer-feed" data-feed-id="harihasanah" data-per="11" data-columns="5"></ul>
+		<ul class="juicer-feed" data-feed-id="harihasanah" data-per="11" data-columns="6"></ul>
 	</div>
 </section>
 <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
