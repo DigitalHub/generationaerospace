@@ -12315,18 +12315,18 @@ a#genaero-facebook-button {
     background-color: #00aed4;
     top: -3rem;
     right: 15px;
-    -moz-transition: right 0.1s ease;
-    -o-transition: right 0.1s ease;
-    -webkit-transition: right 0.1s ease;
-    transition: right 0.1s ease; }
+    -moz-transition: right 0.3s ease-in-out;
+    -o-transition: right 0.3s ease-in-out;
+    -webkit-transition: right 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out; }
   .animate--box.bottombox {
     background-color: #cad63e;
     bottom: -3rem;
     left: -15px;
-    -moz-transition: left 0.1s ease;
-    -o-transition: left 0.1s ease;
-    -webkit-transition: left 0.1s ease;
-    transition: left 0.1s ease; }
+    -moz-transition: left 0.3s ease-in-out;
+    -o-transition: left 0.3s ease-in-out;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out; }
 
 .featured_experiment--keywords a {
   display: block;
@@ -12463,7 +12463,10 @@ a#genaero-facebook-button {
   filter: grayscale(0); }
 
 .featured_event .post-thumbnail img {
-  height: 350px; }
+  height: 350px;
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  filter: grayscale(0); }
 .featured_event .post-thumbnail h3 {
   font-weight: 700;
   position: absolute;

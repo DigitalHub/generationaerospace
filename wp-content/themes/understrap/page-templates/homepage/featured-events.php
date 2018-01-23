@@ -55,7 +55,7 @@ $second_query = new WP_Query($args2);
 						<svg class="circle" width="100%" height="20" viewBox="0 0 1000 20"><rect x="0" y="0" width="100%" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="41" cy="10" r="5"></circle><circle cx="310" cy="10" r="5"></circle><circle cx="350" cy="10" r="5"></circle><circle cx="460" cy="10" r="5"></circle><circle cx="490" cy="10" r="5"></circle></g></svg>
 						<svg class="line" width="100%" height="1" viewBox="0 0 1000 1"><rect x="0" y="0" width="100%" height="1"></rect><g><line x1="0" y1="1" x2="320" y2="1"></line></g></svg>
 					</div>
-					<div class="post-thumbnail">
+					<div class="post-thumbnail event-img">
 						<?php the_post_thumbnail( 'full' ); ?>
 
 						<?php $startdate = get_field('start_date');

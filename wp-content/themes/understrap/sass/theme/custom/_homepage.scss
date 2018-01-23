@@ -354,14 +354,14 @@
 		background-color: $rrskyblue;
 		top: -3rem;
 		right: 15px;
-		@include transition(right .1s ease);
+		@include transition(right .3s ease-in-out);
 	}
 
 	&.bottombox {
 		background-color: $rrlimegreen;
 		bottom: -3rem;
 		left: -15px;
-		@include transition(left .1s ease);
+		@include transition(left .3s ease-in-out);
 	}
 }
 
@@ -479,7 +479,7 @@
 }
 
 .explorer_slide.slick-center.slick-current .post-thumbnail {
-    margin: 0 auto 40px;
+	margin: 0 auto 40px;
 }
 
 .explorer_slide.slick-slide.slick-active[tabindex="0"]:not(.slick-current) .post-thumbnail {
@@ -555,6 +555,7 @@
 
 		img {
 			height: 350px;
+			@include grayscale(0);
 		}
 
 		h3 {
