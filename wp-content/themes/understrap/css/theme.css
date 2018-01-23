@@ -13212,7 +13212,7 @@ a.j-paginate.juicer-button {
   color: #fff;
   display: block;
   float: left;
-  font-size: 1.333rem;
+  font-size: 15px;
   margin-bottom: 15px;
   padding: 15px 10px;
   width: 100%; }
@@ -13269,7 +13269,7 @@ a.j-paginate.juicer-button {
   color: #fff;
   overflow: hidden;
   text-align: center;
-  margin: 15px auto; }
+  margin: 10px auto; }
   .separator:before, .separator:after {
     background-color: #fff;
     content: "";

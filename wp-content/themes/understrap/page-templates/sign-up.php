@@ -81,7 +81,7 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 		include(locate_template('loop-templates/hub-base.php')); ?>
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row sign-up-row">
-				<div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-xs-12 content-area" id="primary">
+				<div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-xs-12 content-area" id="primary" style="z-index:99">
 					<div class="text-center">
 						<a href="<?php bloginfo('url') ?>/login" class="defaultbtn btn--color">
 							<div class="defaultbtn-wrapper"><span>Already Registered?</span></div>
@@ -90,12 +90,9 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 					<h2>Sign Up Here</h2>
 					<?php echo $response; ?>
 					<form id="signup_form" method="post" action="">
-						<!-- <label for="signup_email">Email</label> -->
-						<input type="email" name="signup_email" id="signup_email" placeholder="Email" required><br>
-						<!-- <label for="signup_username">Username</label> -->
-						<input type="text" name="signup_username" id="signup_username" placeholder="Username" minlength="4" maxlength="20" required><br>
-						<!-- <label for="signup_password">Password</label> -->
-						<input type="password" name="signup_password" id="signup_password" placeholder="Password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" autocomplete="new-password" required><br><br>
+						<input type="email" name="signup_email" id="signup_email" placeholder="Email" required>
+						<input type="text" name="signup_username" id="signup_username" placeholder="Username" minlength="4" maxlength="20" required>
+						<input type="password" name="signup_password" id="signup_password" placeholder="Password" title="Password must be between 6-14 characters long with alphabets and numbers." minlength="6" maxlength="14" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*\s).*$" autocomplete="new-password" required>
 						<div class="clear"></div>
 						<div class="login_submit--wrap arrowbtn btn--color">
 							<span class="fas fa-long-arrow-alt-right icon-left"></span>	
