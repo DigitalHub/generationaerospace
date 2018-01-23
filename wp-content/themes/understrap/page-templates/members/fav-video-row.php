@@ -17,11 +17,7 @@ $youtube = $result->youtube;
 parse_str( parse_url( $youtube, PHP_URL_QUERY ), $my_array_of_vars );
 $youtube_id =  $my_array_of_vars['v'];
 
-$url_to_json = 'https://www.googleapis.com/youtube/v3/videos?key='.YOUTUBE_API_KEY.'&part=snippet&id='.$youtube_id;
-
-$data = file_get_contents($url_to_json);
-$json = json_decode($data);
-$thumbnail_url = $json->items[0]->snippet->thumbnails->default->url;
+$thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 ?>
 
 <div class="row videopost--row">
