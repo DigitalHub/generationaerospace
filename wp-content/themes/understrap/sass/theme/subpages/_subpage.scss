@@ -95,7 +95,9 @@ a.j-paginate.juicer-button {
 }
 
 .meta-keywords {
+	height: 45px;
 	margin: 0 0 10px;
+	overflow: hidden;
 	padding: 0;
 
 	li {
@@ -105,6 +107,7 @@ a.j-paginate.juicer-button {
 		a {
 			color: $rrskyblue;
 			display: inline-block;
+			font-size: 13px;
 			font-style: italic;
 			padding: 0;
 			text-decoration: underline;

@@ -9,6 +9,7 @@ global $wpdb;
 $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 
 $tags = get_the_tags();
+// $tags = array_slice($tags,0,3,true); //display maximum 3 tags
 $experiment_id = get_the_ID();
 
 $experiments_sql = $wpdb->prepare("SELECT * FROM $fav_experiments_table WHERE experiment_id = %s", $experiment_id);

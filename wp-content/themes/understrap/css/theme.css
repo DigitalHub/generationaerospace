@@ -12542,7 +12542,9 @@ a.j-paginate.juicer-button {
     color: #000; }
 
 .meta-keywords {
+  height: 45px;
   margin: 0 0 10px;
+  overflow: hidden;
   padding: 0; }
   .meta-keywords li {
     color: #00aed4;
@@ -12550,6 +12552,7 @@ a.j-paginate.juicer-button {
     .meta-keywords li a {
       color: #00aed4;
       display: inline-block;
+      font-size: 13px;
       font-style: italic;
       padding: 0;
       text-decoration: underline; }
