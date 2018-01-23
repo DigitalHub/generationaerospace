@@ -71,7 +71,7 @@ if($wpdb->num_rows > 0) {
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
 					<form id="profile_form" method="post" action="">
-						<div class="dashboard_content--title">
+						<div class="dashboard_content--title-half">
 							<h4>My Profile</h4>
 						</div>
 						<div class="dashboard_content--editlink">

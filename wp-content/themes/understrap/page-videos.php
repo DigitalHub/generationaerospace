@@ -132,7 +132,7 @@ $template = 'video';
 			<div class="row">
 				<div class="month_experiment--card col-xl-8 col-xl-8 col-md-6 col-sm-12 col-xs-12">
 					<a data-fancybox href="<?=$youtube?>">
-						<div class="post-thumbnail">
+						<div class="post-thumbnail" style="background-image:url('<?=$thumbnail_url?>');">
 							<i class="fas fa-play"></i>
 							<img src="<?=$thumbnail_url?>" />
 						</div>
