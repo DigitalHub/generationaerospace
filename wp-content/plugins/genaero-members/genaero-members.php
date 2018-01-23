@@ -199,7 +199,8 @@ class GenAeroFacebook{
      *
      * @var string
      */
-    private $callback_url = get_bloginfo('url').'/wp-admin/admin-ajax.php?action=genaero_facebook';
+    private $callback_url = __FILE__.'/wp-admin/admin-ajax.php?action=genaero_facebook';
+    // private $callback_url = 'http://localhost/generationaerospace/wp-admin/admin-ajax.php?action=genaero_facebook';
 
     /**
      * Access token from Facebook
