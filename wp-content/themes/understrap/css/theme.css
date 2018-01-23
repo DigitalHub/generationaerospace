@@ -10964,7 +10964,6 @@ svg.circlerotate {
     left: 0;
     z-index: 1; }
   .post-thumbnail img {
-    display: none;
     height: 262px;
     left: 50%;
     max-width: none;
@@ -12764,8 +12763,11 @@ a.j-paginate.juicer-button {
       text-transform: uppercase;
       letter-spacing: 2px; }
     .single-genaero_experiments .fancybox-slide > * .fancybox-close-small:after {
+      background: transparent;
       color: #000;
       right: 80px !important; }
+    .single-genaero_experiments .fancybox-slide > * .fancybox-close-small:focus:after {
+      outline: none; }
 
 .ongoing_events,
 .past_events {
@@ -13052,6 +13054,7 @@ a.j-paginate.juicer-button {
     display: inline-block;
     height: 100%;
     overflow: visible;
+    vertical-align: top;
     width: calc(100% - 160px); }
     .single-genaero_experiments .experiment-meta .meta-keywords a {
       color: #00aed4 !important;
@@ -13085,12 +13088,15 @@ a.j-paginate.juicer-button {
         left: -8%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
         right: -8%; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_slide {
+        min-width: 500px;
+        width: 100%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts {
         display: inline-block;
         font-size: 24px;
         font-weight: 400;
         margin-right: 25px;
-        vertical-align: middle;
+        vertical-align: top;
         width: 25px; }
         .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts .counting {
           color: #cad63e;
@@ -13115,6 +13121,7 @@ a.j-paginate.juicer-button {
         display: inline-block;
         min-height: 100px;
         padding-left: 25px;
+        vertical-align: top;
         width: calc(100% - 105px); }
         .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_steps p:last-child {
           margin-bottom: 0; }

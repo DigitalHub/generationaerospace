@@ -31,7 +31,7 @@ $fav_experiments_table = $wpdb->prefix . 'genaero_favourite_experiments';
 										</div>
 										<div class="experiment_steps"><?=$step?></div>
 									</div>
-									<?php $count++; endwhile; endif;
+									<?php $count = sprintf('%02d',$count+1); endwhile;endif;
 									if($count === $totalcount + 1) : ?>
 									<div class="experiment_slide last_experiment--slide">
 										<?php echo get_field('lesson'); ?>
