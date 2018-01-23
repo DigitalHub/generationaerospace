@@ -42,7 +42,7 @@ if($trailblazer) :
 						<span class="fas fa-long-arrow-alt-right icon-left"></span>
 						<div class="arrowbtn-wrapper"><span>Read More</span></div>
 					</a>
-					<a href="<?php echo get_permalink( get_page_by_path( 'genaero-trailblazers' ) ) ?>" class="arrowbtn btn--color">
+					<a href="<?php echo get_permalink( get_page_by_path( 'follow-the-trailblazers' ) ) ?>" class="arrowbtn btn--color">
 						<span class="fas fa-long-arrow-alt-right icon-left"></span>
 						<div class="arrowbtn-wrapper"><span>See More Trailblazers</span></div>
 					</a>

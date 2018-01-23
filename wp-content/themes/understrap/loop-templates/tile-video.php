@@ -44,8 +44,7 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->high->url;
 
 <div class="featured_experiment--card col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
 	<a href="<?=$permalink?>">
-		<div class="post-thumbnail">
-			<img src="<?=$thumbnail_url?>" />
+		<div class="post-thumbnail" style="background-image:url('<?=$thumbnail_url?>');">
 			<div class="bg-opaque"></div>
 		</div>
 	</a>

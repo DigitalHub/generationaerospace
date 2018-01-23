@@ -10943,6 +10943,7 @@ svg.circlerotate {
       z-index: 1; }
 
 .post-thumbnail {
+  background-size: cover;
   height: 262px;
   overflow: hidden;
   position: relative; }
@@ -12759,8 +12760,11 @@ a.j-paginate.juicer-button {
       text-transform: uppercase;
       letter-spacing: 2px; }
     .single-genaero_experiments .fancybox-slide > * .fancybox-close-small:after {
+      background: transparent;
       color: #000;
       right: 80px !important; }
+    .single-genaero_experiments .fancybox-slide > * .fancybox-close-small:focus:after {
+      outline: none; }
 
 .ongoing_events,
 .past_events {
@@ -13082,7 +13086,7 @@ a.j-paginate.juicer-button {
         font-size: 24px;
         font-weight: 400;
         margin-right: 25px;
-        vertical-align: middle;
+        vertical-align: top;
         width: 25px; }
         .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts .counting {
           color: #cad63e;
@@ -13107,6 +13111,7 @@ a.j-paginate.juicer-button {
         display: inline-block;
         min-height: 100px;
         padding-left: 25px;
+        vertical-align: top;
         width: calc(100% - 105px); }
         .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_steps p:last-child {
           margin-bottom: 0; }

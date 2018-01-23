@@ -286,14 +286,14 @@
 }
 
 .single_experimentcaraousel--wrapper {
-    height: 80%;
-    width: calc(100% - 15px);
-    overflow: hidden;
+	height: 80%;
+	width: calc(100% - 15px);
+	overflow: hidden;
 
 	.experiment--wrapperhidbar {
 		overflow-y: scroll;
 		width: calc(100% + 20px);
-		
+
 		.experiment--carousel {
 			width: 85%;
 			margin: auto;
@@ -311,8 +311,8 @@
 				display: inline-block;
 				font-size: 24px;
 				font-weight: 400;
-				margin-right: 25px;
-				vertical-align: middle;
+				margin-right: 25px;  
+				vertical-align: top;
 				width: 25px;
 
 				.counting {
@@ -346,6 +346,7 @@
 				display: inline-block;
 				min-height: 100px;
 				padding-left: 25px;
+				vertical-align: top;
 				width: calc(100% - 105px);
 
 				p:last-child {

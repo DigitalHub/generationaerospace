@@ -17,7 +17,7 @@
 				<h1>TRY THIS AT HOME_</h1>
 				<div class="highlight"><?php echo get_field('featured_experiment_copy'); ?></div>
 				
-				<a href="<?php echo get_permalink( get_page_by_path( 'find-an-experiment' ) ); ?>" class="arrowbtn btn--color">
+				<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ); ?>" class="arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
 					<div class="arrowbtn-wrapper"><span>See More Experiments</span></div>
 				</a>
@@ -40,7 +40,7 @@
 							endif;
 							?>
 							<div class="col-xl-6 <?php echo $toporbottom; ?>">
-								<a href="<?php echo get_permalink( get_page_by_path( 'find-an-experiment' ) ).'?keyword='.$tag->name; ?>">
+								<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ).'?keyword='.$tag->name; ?>">
 									<div class="post-thumbnail">
 										<img src="<?=$image_url?>" />
 										<div class="bg-opaque"></div>
