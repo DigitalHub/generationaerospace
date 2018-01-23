@@ -76,20 +76,17 @@ if($_GET['keyword']) {
 			<div class="row">
 				<div class="col-xl-8 offset-xl-2">
 					<h1><?php the_title(); ?></h1>
-					<?php 
-					if (have_posts()) : while (have_posts()) : the_post(); 
-						the_content();
-					endwhile; endif; 
-					?>
+					<div class="text-center highlight">
+						<?php while (have_posts()) : the_post();  the_content(); endwhile;?>
+					</div>
 					<div class="search-form">
 						<input type="text" id="experiment_search" name="experiment_search" value="<?=$keyword?>" />
 						<button type="submit" id="experiment_submit" name="experiment_submit" data-cpt="<?=$cpt?>" data-posts_per_page="<?=$posts_per_page?>" data-template="<?=$template?>">
 							<i class="fal fa-search"></i>
 						</button>
 					</div>
-					<p>Suggestion search: 
-						<?php
-						if($tags) {
+					<p style="text-align: left;">Suggestion search: 
+						<?php if($tags) {
 							$count = 0;
 							foreach($tags as $tag) {
 								echo '<a href="'.get_term_link( $tag ).'">'.$tag->name.'</a>';
@@ -110,19 +107,19 @@ if($_GET['keyword']) {
 		<div class="<?php echo esc_attr( $container ); ?>" id="content">
 			<div class="row">
 				<div class="col-xl-12 content-area" id="primary">
-					<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>./img/ajax-loader.gif" style="display:none">
+					<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
 					<main class="site-main" id="main" role="main">
 						<div class="row experiment-row">
-						<?php
-						if($the_query->have_posts()) :
-							$count = 0;
-							while($the_query->have_posts()) : $the_query->the_post();
-								get_template_part( 'loop-templates/tile', $template );
-								$count++;
-							endwhile;
-						endif;
-						?>
-					</div>
+							<?php
+							if($the_query->have_posts()) :
+								$count = 0;
+								while($the_query->have_posts()) : $the_query->the_post();
+									get_template_part( 'loop-templates/tile', $template );
+									$count++;
+								endwhile;
+							endif;
+							?>
+						</div>
 					</main><!-- #main -->
 					<div class="clear"></div>
 					<?php if (  $the_query->max_num_pages > 1 ) {

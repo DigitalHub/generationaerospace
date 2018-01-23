@@ -20,7 +20,18 @@ jQuery(window).load(function(){
     }, 4000);
 });
 
+
 jQuery(document).ready(function($) {
+    jQuery(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            jQuery('#link').addClass('up--button');
+            jQuery('#link').removeClass('down--button');
+        } else {
+            jQuery('#link').removeClass('up--button');
+            jQuery('#link').addClass('down--button');
+        }
+    });
+
     jQuery('html, body').animate({scrollTop: '0'}, 500);
     jQuery('#link').click(function(){
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
@@ -59,17 +70,15 @@ jQuery(document).ready(function($) {
             jQuery('.up--button').hide();       }
         }
     });
-    }
-
-    jQuery('.scrolling.down--button').click(function(){
+    jQuery('.homescroll.down--button').click(function(){
         jQuery.fn.fullpage.moveSectionDown();
     });
 
-    jQuery('.scrolling.up--button').click(function(){
+    jQuery('.homescroll.up--button').click(function(){
         jQuery.fn.fullpage.moveSectionUp();
     });
 
-
+    }
 
     var $status = jQuery('.pagingInfo');
     var $slickElement = jQuery('.featured_video--carousel');
@@ -99,10 +108,10 @@ jQuery(document).ready(function($) {
         jQuery('.fullpopup').fancybox({
             toolbar  : false,
             smallBtn : true,
-// iframe : {
-//     preload : false
-// }
-});
+            // iframe : {
+            //     preload : false
+            // }
+        });
     }
 
     jQuery('.genaero_explorer--carousel').slick({

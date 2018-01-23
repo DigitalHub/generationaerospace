@@ -12,7 +12,7 @@
 	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-welcome.jpg";
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container welcome_content">
-		<div class="col-lg-10 offset-lg-1">
+		<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2">
 			<h1 class="welcome_text">Welcome</h1>
 			<div class="highlight"><?php echo get_field('welcome_copy'); ?></div>
 

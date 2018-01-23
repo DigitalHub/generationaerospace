@@ -27,7 +27,7 @@ endif;
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">
-			<div class="col-xl-4"><!-- offset-xl-1 -->
+			<div class="offset-xl-1 col-xl-4">
 				<h1>Get Inspired_</h1>
 				<div class="highlight"><?php echo get_field('featured_video_copy'); ?></div>
 				<a href="<?php bloginfo('url') ?>/find-a-video/" class="arrowbtn btn--color">

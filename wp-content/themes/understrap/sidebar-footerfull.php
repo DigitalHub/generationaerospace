@@ -5,10 +5,8 @@
  * @package understrap
  */
 
-?>
-
-<?php if(is_front_page() ) { ?>
-<a class="scrolling down--button text--left">
+if ( ! is_home() && is_front_page() ) { ?>
+<a class="homescroll scrolling down--button text--left">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewbox="0 0 173.20508075688772 200" stroke="#fff" fill="#000" stroke-width="5">
@@ -19,7 +17,7 @@
 		<span>scroll</span>
 	</div>
 </a>
-<a class="scrolling up--button text--left">
+<a class="homescroll scrolling up--button text--left">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewbox="0 0 173.20508075688772 200" stroke="#fff" fill="#000" stroke-width="5">
@@ -30,8 +28,8 @@
 		<span>scroll</span>
 	</div>
 </a>
-<?php } elseif (is_singular( array( 'genaero_videos', 'genaero_experiments', 'genaero_events', 'genaero_vault' ) )) { ?>
-<a id="link" class="scrolling">
+<?php //} elseif (is_singular( array( 'genaero_videos', 'genaero_experiments', 'genaero_events', 'genaero_vault' ) )) { ?>
+<!-- <a id="link" class="scrolling">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewbox="0 0 173.20508075688772 200" stroke="#000" fill="transparent" stroke-width="5">
@@ -41,7 +39,7 @@
 		</div>
 		<span>scroll</span>
 	</div>
-</a>
+</a> -->
 <?php } elseif (is_page_template( 'page-events.php' ) || is_page_template( 'page-experiments.php' ) || is_page_template( 'page-trailblazers.php' ) || is_page_template( 'page-vault.php' )) { ?>
 <a id="link" class="scrolling">
 	<div class="headerbutt scroll_butt">
