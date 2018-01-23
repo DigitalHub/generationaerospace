@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="offset-xl-1 col-xl-4 ">
 				<h1>TRY THIS AT HOME_</h1>
-				<div class="highlight"><?php echo get_field('featured_experiment_copy'); ?></div>
+				<div class="highlight" style="margin-bottom: 30px"><?php echo get_field('featured_experiment_copy'); ?></div>
 				
 				<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ); ?>" class="arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
