@@ -13135,7 +13135,8 @@ a.j-paginate.juicer-button {
   .forgot-row h2 {
     color: white;
     margin: 20px auto;
-    text-align: center; }
+    text-align: center;
+    text-transform: uppercase; }
   .sign-up-row .error,
   .login-row .error,
   .dashboard-row .error,
@@ -13285,7 +13286,8 @@ ul#menu-members-only-menu {
     float: left;
     width: 50%; }
     .dashboard_content .dashboard_content--title h4 {
-      color: #fff; }
+      color: #fff;
+      text-transform: uppercase; }
   .dashboard_content .dashboard_content--editlink input, .dashboard_content .dashboard_content--editlink a {
     background-color: transparent;
     border-bottom: 1px solid #fff;

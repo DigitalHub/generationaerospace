@@ -28,7 +28,9 @@ $results_count = $wpdb->num_rows;
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
 
-					<h4>My Favourite Videos</h4>
+					<div class="dashboard_content--title">
+						<h4>My Favourite Videos</h4>
+					</div>
 
 					<div class="container">
 
