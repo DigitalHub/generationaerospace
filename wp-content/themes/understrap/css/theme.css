@@ -12765,7 +12765,7 @@ a.j-paginate.juicer-button {
 .page-template-page-homepage .fancybox-slide--iframe .fancybox-close-small,
 .single-genaero_experiments .fancybox-slide--iframe .fancybox-close-small,
 .page-template-page-trailblazers .fancybox-slide--iframe .fancybox-close-small {
-  top: 0;
+  top: 20px;
   right: 50px;
   width: 100px; }
   .page-template-page-homepage .fancybox-slide--iframe .fancybox-close-small:before,
@@ -12787,7 +12787,7 @@ a.j-paginate.juicer-button {
   padding: 0;
   width: 100%; }
   .single-genaero_experiments .fancybox-slide > * .fancybox-close-small {
-    top: 0;
+    top: 20px;
     right: 50px;
     width: 100px; }
     .single-genaero_experiments .fancybox-slide > * .fancybox-close-small:before {
@@ -13066,11 +13066,11 @@ a.j-paginate.juicer-button {
     .single_trailblazers .single_trailblazers--video.single_experiment--materials a:hover {
       color: #cad63e;
       text-decoration: none; }
-    .single_experiment .single_experiment--materials.single_experiment--materials a:last-child,
-    .single_experiment .single_trailblazers--video.single_experiment--materials a:last-child,
-    .single_trailblazers .single_experiment--materials.single_experiment--materials a:last-child,
-    .single_trailblazers .single_trailblazers--video.single_experiment--materials a:last-child {
-      margin-left: 30px; }
+  .single_experiment .single_experiment--materials.single_experiment--materials a.print,
+  .single_experiment .single_trailblazers--video.single_experiment--materials a.print,
+  .single_trailblazers .single_experiment--materials.single_experiment--materials a.print,
+  .single_trailblazers .single_trailblazers--video.single_experiment--materials a.print {
+    margin-left: 30px; }
 
 .related--video h3 {
   color: #000; }

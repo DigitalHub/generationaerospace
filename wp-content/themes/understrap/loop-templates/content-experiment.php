@@ -92,7 +92,7 @@ $totalcount = 0;
 							}  } 
 
 							if(get_field('pdf_upload')) {
-								echo '<a href="'.get_field('pdf_upload').'" target="_blank"><i class="fal fa-print"></i> Print</a>';
+								echo '<a href="'.get_field('pdf_upload').'" class="print" target="_blank"><i class="fal fa-print"></i> Print</a>';
 							}
 
 							?>
