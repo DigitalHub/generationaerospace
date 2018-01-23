@@ -13086,6 +13086,7 @@ a.j-paginate.juicer-button {
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
         right: -8%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_slide {
+        min-width: 500px;
         width: 100%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts {
         display: inline-block;
