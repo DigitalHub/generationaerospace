@@ -74,8 +74,7 @@ $second_query = new WP_Query($args2);
 								Time: <?=$time?><br/>
 								Venue: <?=$venue?></h3>
 							</div>
-							<?php $summary = get_field('pre_event_summary');
-							echo substr($summary, 0, 200); ?>
+							<?php echo get_field('homepage_description'); ?>
 							<div class="clear"></div>
 							<a href="<?php the_permalink(); ?>" class="arrowbtn btn--color">
 								<span class="fas fa-long-arrow-alt-right icon-left"></span>

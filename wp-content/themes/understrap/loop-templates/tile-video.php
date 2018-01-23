@@ -7,7 +7,15 @@
 
 // global $video;
 
+$posted_by_username = $video->posted_by_username;
 $posted_by = $video->posted_by;
+
+if($posted_by === '' || $posted_by === NULL) {
+	$name = $posted_by_username;
+} else {
+	$name = $posted_by;
+}
+
 $video_id = $video->video_id;
 $title = $video->video_title;
 $favourite = $video->favourite;
@@ -51,7 +59,7 @@ $thumbnail_url = $json->items[0]->snippet->thumbnails->high->url;
 				</div>
 			</div>
 			<div class="alignleft">
-				<div class="meta-posted">Posted by <span class="meta-student"><?=$posted_by?></span></div>
+				<div class="meta-posted">Posted by <span class="meta-student"><?=$name?></span></div>
 				<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
 				<!-- <div class="meta-comment"><i class="fas fa-comment"></i>200</div> -->
 				<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
