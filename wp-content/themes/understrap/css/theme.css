@@ -14096,15 +14096,37 @@ ul#menu-members-only-menu {
 
   .featured_video--carousel_wrapper {
     margin: 0 0 30px; }
+    .featured_video--carousel_wrapper .featured_video--carousel .double_arrow {
+      vertical-align: 110px; }
+    .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
+      margin: 0;
+      vertical-align: unset; }
+    .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
+      width: 70%; }
+      .featured_video--carousel_wrapper .featured_video--carousel .slick-list .post-thumbnail {
+        height: 130px; }
 
-  .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
-    margin: 0;
-    vertical-align: unset; }
+  .double_arrow.big_arrow.arrow_left {
+    left: -10%; }
 
-  .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
-    width: 70%; }
-    .featured_video--carousel_wrapper .featured_video--carousel .slick-list .post-thumbnail {
-      height: 130px; } }
+  .double_arrow.big_arrow.arrow_right {
+    right: -10%; }
+
+  .genaero_explorer--carousel {
+    margin: auto;
+    width: 90%; }
+
+  .menu__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: calc(100% - 30px);
+    transform: translate(0, -45%); }
+
+  .menu-content.opened .menu-content__wrapper {
+    width: 100%; }
+    .menu-content.opened .menu-content__wrapper .menu-content__nav .menu-content__list ol li a {
+      font-size: 1.5rem; } }
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

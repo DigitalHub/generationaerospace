@@ -58,7 +58,7 @@
 						endwhile;?>
 					</div>
 				</div>
-				<div class="d-none d-md-block d-lg-none col-md-12 col-sm-12 col-xs-12 featured_experiment--keywords">
+				<div class="d-sm-block d-md-block d-lg-none col-md-12 col-sm-12 col-xs-12 featured_experiment--keywords">
 					<div class="row featured_experiment--keywordsslider-wrapp">
 						<?php
 						while(have_rows('featured_tags')) : the_row();

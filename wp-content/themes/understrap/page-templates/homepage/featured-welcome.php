@@ -17,7 +17,7 @@
 			<div class="highlight"><?php echo get_field('welcome_copy'); ?></div>
 
 			<!-- TODO: STEF TO ADD BACKGROUND VIDEO -->
-			<!-- <a data-fancybox href="https://www.youtube.com/watch?v=l4LHKJkco7U">
+			<a data-fancybox href="https://www.youtube.com/watch?v=l4LHKJkco7U">
 				<div class="watch_video--typewriter">
 					<div class="watch_video--button">
 						<div class="watch_video--play">
@@ -30,7 +30,7 @@
 						<p><span>Watch Video</span></p>
 					</div>
 				</div>
-			</a> -->
+			</a>
 		</div>
 		<div class="clear"></div>
 	</div>
