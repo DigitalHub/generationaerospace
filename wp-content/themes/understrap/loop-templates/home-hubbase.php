@@ -8,16 +8,16 @@
 
  	<svg class="lines">
  		<line x1="220" x2="220" y1="0" y2="100%">
- 			<animate attributeName="opacity" values="0;0.5;0" dur="10s" repeatCount="indefinite"/>
+ 			<animate attributeName="opacity" values="0.1;0.5;0.1" dur="55s" repeatCount="indefinite"/>
  		</line>
  		<line x1="500" x2="500" y1="0" y2="100%">
- 			<animate attributeName="opacity" values="1.2;0;0" dur="15s" repeatCount="indefinite"/>
+ 			<animate attributeName="opacity" values="0.9;0.1;0.9" dur="23s" repeatCount="indefinite"/>
  		</line>
  		<line x1="550" x2="550" y1="0" y2="100%">
- 			<animate attributeName="opacity" values="0;0.4;0" dur="30s" repeatCount="indefinite"/>
+ 			<animate attributeName="opacity" values="0.1;0.4;0.1" dur="50s" repeatCount="indefinite"/>
  		</line>
  		<line x1="1200" x2="1200" y1="0" y2="100%">
- 			<animate attributeName="opacity" values="1.4;0;1.3" dur="15s" repeatCount="indefinite"/>
+ 			<animate attributeName="opacity" values="0.9;0.1;0.9" dur="34s" repeatCount="indefinite"/>
  		</line>
  	</svg>
 

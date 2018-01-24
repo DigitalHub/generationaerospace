@@ -33,7 +33,7 @@ endif;
 			<div class="offset-xl-1 col-xl-4 col-lg-5 col-md-12 col-sm-12 col-xs-12">
 				<h1>Get Inspired_</h1>
 				<div class="highlight"><?php echo get_field('featured_video_copy'); ?></div>
-				<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ); ?>" class="arrowbtn btn--color hidinmobile">
+				<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ); ?>" class="arrowbtn btn--color hidinmobile--inline">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
 					<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
 				</a>

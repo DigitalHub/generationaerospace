@@ -385,10 +385,16 @@ a {
 			text-transform: uppercase;
 
 			&.wpcf7-submit {
+				border: none !important;
 				color: $white;
 
+				&:active,
+				&:focus,
 				&:hover {
-					background-color: transparent;
+					color: $white !important;
+					background-color: transparent  !important;
+					border: none  !important;
+					box-shadow: none  !important;
 				}
 			}
 		}

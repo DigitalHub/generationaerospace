@@ -489,7 +489,7 @@
 }
 
 .explorer_slide.slick-center.slick-current .post-thumbnail {
-    margin: 0 auto 40px;
+	margin: 0 auto 40px;
 }
 
 .explorer_slide.slick-slide.slick-active[tabindex="0"]:not(.slick-current) .post-thumbnail {
@@ -499,8 +499,14 @@
 
 
 .featured_trailbazers {
+
+	.trailblazer--title {
+		font-weight: 600;
+	}
+	
 	.trailblazer--name {
 		color: $rrskyblue !important;
+		font-weight: 600;
 	}
 }
 

@@ -20,6 +20,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
+					<div class="dashboard_content--title">
+						<h4>Got an Idea or Feedback? Tell us!</h4>
+					</div>
 					<?php while ( have_posts() ) : the_post();
 					the_content();
 					endwhile; ?>

@@ -11299,9 +11299,13 @@ a {
       padding: 0 30px !important;
       text-transform: uppercase; }
       .arrowbtn .arrowbtn-wrapper input.wpcf7-submit {
+        border: none !important;
         color: #fff; }
-        .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:hover {
-          background-color: transparent; }
+        .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:active, .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:focus, .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:hover {
+          color: #fff !important;
+          background-color: transparent  !important;
+          border: none  !important;
+          box-shadow: none  !important; }
   .arrowbtn:hover {
     cursor: pointer;
     text-decoration: none; }
@@ -11536,7 +11540,7 @@ a#genaero-facebook-button {
 .site-toplogin_btn {
   position: absolute;
   left: 6%;
-  top: 20px;
+  top: 10px;
   z-index: 3; }
   .site-toplogin_btn .hex {
     position: relative;
@@ -11567,7 +11571,7 @@ a#genaero-facebook-button {
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  z-index: 502; }
+  z-index: 502 !important; }
   .site-title a {
     display: block;
     margin: auto;
@@ -11618,7 +11622,7 @@ a#genaero-facebook-button {
 .menu_butt__close {
   position: fixed;
   right: 7%;
-  top: 5%; }
+  top: 3%; }
   .menu_butt__close:hover {
     text-decoration: none; }
 
@@ -12429,8 +12433,11 @@ a#genaero-facebook-button {
   margin-left: auto;
   margin-right: 0; }
 
+.featured_trailbazers .trailblazer--title {
+  font-weight: 600; }
 .featured_trailbazers .trailblazer--name {
-  color: #00aed4 !important; }
+  color: #00aed4 !important;
+  font-weight: 600; }
 
 .animated_circles--wrapper .animated_circles {
   left: 10px;
@@ -13390,6 +13397,11 @@ ul#menu-members-only-menu {
     float: left;
     padding: 10px 0;
     width: 110px; }
+  .dashboard_content .wpcf7 .wpcf7-form label {
+    width: 110px; }
+  .dashboard_content .wpcf7 .wpcf7-validation-errors {
+    border: none !important;
+    background: transparent !important; }
   .dashboard_content input[type="text"],
   .dashboard_content input[type="password"],
   .dashboard_content input[type="file"],
@@ -14121,8 +14133,11 @@ ul#menu-members-only-menu {
     .site-title a .logo_img {
       width: 70%; }
 
-  .watch_video--typewriter {
+  a#genaero-facebook-button {
     width: 100%; }
+
+  .watch_video--typewriter {
+    width: 250px; }
 
   .featured_experiment--keywordsslider a {
     height: 150px; }
