@@ -13,7 +13,7 @@
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<div class="container sub_content">
 		<div class="row">
-			<div class="offset-xl-1 col-xl-4 offset-lg-1 col-lg-4 ">
+			<div class="offset-xl-1 col-xl-4 offset-lg-1 col-lg-4 col-md-10 offset-md-1 col-sm-12 col-xs-12">
 				<h1>TRY THIS AT HOME_</h1>
 				<div class="highlight" style="margin-bottom: 30px"><?php echo get_field('featured_experiment_copy'); ?></div>
 				
@@ -78,7 +78,7 @@
 						<?php endwhile;?>
 					</div>
 				</div>
-				
+
 				<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ); ?>" class="d-none d-md-block d-lg-none arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
 					<div class="arrowbtn-wrapper"><span>See More Experiments</span></div>

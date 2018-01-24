@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
         fitToSectionDelay: 100,
         lazyLoading: true,
         afterLoad: function(anchorLink, index){
-         if(index == $('.section').length){
+           if(index == $('.section').length){
             jQuery('.down--button').hide();
             jQuery('.up--button').show();
         } else {
@@ -136,8 +136,16 @@ jQuery(document).ready(function($) {
         asNavFor: '.genaero_explorer--carousel',
         dots: false,
         centerMode: true,
-        focusOnSelect: true
-    });
+        focusOnSelect: true,
+
+        responsive: [{
+          breakpoint: 578,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    }]
+});
 
     jQuery('.featured_experiment--keywordsslider-wrapp').slick({
         slidesToShow: 1,

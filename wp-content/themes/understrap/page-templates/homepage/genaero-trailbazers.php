@@ -33,7 +33,7 @@ if($trailblazer) :
 					</div>
 				</div>
 
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-sm-12">
+				<div class="col-xl-6 col-lg-6 offset-md-1 col-md-10 col-sm-12 col-sm-12">
 					<h2>FOLLOW THE TRAILBLAZERS</h2>
 					<h2 class="trailblazer--name"><?php the_title(); ?></h2>
 					<p class="highlight"><?php echo get_field('job_title'); ?></p>

@@ -14030,7 +14030,25 @@ ul#menu-members-only-menu {
     display: inline-block !important; }
 
   .featured_video--carousel_wrapper {
-    margin: 30px auto; }
+    margin: 30px auto;
+    width: 100%; }
+    .featured_video--carousel_wrapper .featured_video--carousel .double_arrow {
+      display: inline-block !important;
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
+      .featured_video--carousel_wrapper .featured_video--carousel .double_arrow.arrow_down {
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg); }
+    .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
+      display: inline-block !important;
+      vertical-align: middle;
+      width: 80%; }
 
   .featured_experiment--keywordsslider-wrapp {
     margin: auto;
@@ -14040,6 +14058,53 @@ ul#menu-members-only-menu {
     width: 100%; }
     .featured_experiment--keywordsslider a {
       height: 350px; } }
+@media (max-width: 580px) {
+  .fullpagecounter {
+    bottom: 15%;
+    right: 3.6%; }
+
+  .scrolling {
+    bottom: 1%;
+    right: 0; }
+    .scrolling .headerbutt span,
+    .scrolling .headerbutt .hexagon-icon svg {
+      display: none; }
+
+  h1 {
+    font-size: 2.5rem !important; }
+
+  h2 {
+    font-size: 2rem; }
+
+  .highlight {
+    font-size: 1rem; }
+
+  .site-menu {
+    right: 1%;
+    top: 1%; }
+
+  .site-toplogin_btn {
+    left: 1%;
+    top: 1%; }
+
+  .site-title a .site-title-border--left {
+    left: 80px; }
+  .site-title a .site-title-border--right {
+    right: 80px; }
+  .site-title a .logo_img {
+    width: 50%; }
+
+  .featured_video--carousel_wrapper {
+    margin: 0 0 30px; }
+
+  .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
+    margin: 0;
+    vertical-align: unset; }
+
+  .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
+    width: 70%; }
+    .featured_video--carousel_wrapper .featured_video--carousel .slick-list .post-thumbnail {
+      height: 130px; } }
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
