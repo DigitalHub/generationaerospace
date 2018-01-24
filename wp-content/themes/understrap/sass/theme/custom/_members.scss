@@ -124,44 +124,80 @@
 	}
 }
 
-// member dashboard 
-ul#menu-members-only-menu {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.memberdashboard--menu {
+	position: absolute;
+	bottom: 0;
 
-	> li {
-		background-color: #ffffff1f;
-		letter-spacing: 2px;
-		margin: 0 0 7px;
+	.memberdashboard--menuwrap {
+		background-color: $black;
+		bottom: -500px;
+		padding-top: 10px;
+		position: absolute;
+		left: 15px;
+		width: calc(100% - 30px);
+		@include transition(bottom 500ms ease-in-out);
+
+		&.opened {
+			bottom: 48px;
+			z-index: 2;
+		}
+	}
+
+	a.memberdashboard--btn {
+		background: $rrskyblue;
+		bottom: 0;
+		color: $black;
+		display: block;
+		font-weight: 600;
+		left: 15px;
+		padding: 10px;
+		position: absolute;
+		text-decoration: none;
+		text-align: center;
 		text-transform: uppercase;
-		
+		width: calc(100% - 30px);
+	}
+}
 
-		a {
-			display: block;
-			height: 100%;
-			padding: 10px;
+// member dashboard 
+.menu-members-only-menu-container {
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
 
-			&:hover {
-				text-decoration: none;
+		> li {
+			background-color: #ffffff1f;
+			letter-spacing: 2px;
+			margin: 0 0 7px;
+			text-transform: uppercase;
+
+			a {
+				display: block;
+				height: 100%;
+				padding: 10px;
+
+				&:hover {
+					text-decoration: none;
+					color: $rrlimegreen;
+				}
+			}
+
+			&.current-menu-item > a {
 				color: $rrlimegreen;
 			}
-		}
 
-		&.current-menu-item > a {
-			color: $rrlimegreen;
-		}
+			ul.sub-menu {
+				margin: 0;
+				padding: 0;
+				li {
+					a {
+						padding: 0 0 10px 40px;
+					}
 
-		ul.sub-menu {
-			margin: 0;
-			padding: 0;
-			li {
-				a {
-					padding: 0 0 10px 40px;
-				}
-
-				&.current-menu-item > a {
-					color: $rrlimegreen;
+					&.current-menu-item > a {
+						color: $rrlimegreen;
+					}
 				}
 			}
 		}

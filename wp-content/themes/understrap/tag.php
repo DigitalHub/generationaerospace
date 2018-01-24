@@ -61,7 +61,6 @@ $post_count = $the_query->post_count;
 			<div class="row">
 				<div class="col-xl-8 offset-xl-2">
 					<h1>Tag: <?php single_tag_title(); ?></h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum repellendus esse corporis nulla tenetur iure inventore architecto deleniti omnis harum blanditiis fugit explicabo sapiente repudiandae magni magnam natus sed ullam animi obcaecati iste, consequuntur necessitatibus.</p>
 				</div>
 			</div>
 		</div>

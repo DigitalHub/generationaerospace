@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
         fitToSectionDelay: 100,
         lazyLoading: true,
         afterLoad: function(anchorLink, index){
-           if(index == $('.section').length){
+         if(index == $('.section').length){
             jQuery('.down--button').hide();
             jQuery('.up--button').show();
         } else {
@@ -154,6 +154,11 @@ jQuery(document).ready(function($) {
         fade: true,
         prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
         nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+    });
+
+    jQuery('.memberdashboard--btn').click(function(event){
+        event.preventDefault();
+        jQuery('.memberdashboard--menuwrap').toggleClass('opened');
     });
 
     $(function(){

@@ -37,7 +37,7 @@ $youtube_id =  $my_array_of_vars['v'];
 $thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 ?>
 
-<div class="featured_experiment--card col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+<div class="featured_experiment--card col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6">
 	<a href="<?=$permalink?>">
 		<div class="post-thumbnail" style="background-image:url('<?=$thumbnail_url?>');">
 			<!-- <div class="bg-opaque"></div> -->

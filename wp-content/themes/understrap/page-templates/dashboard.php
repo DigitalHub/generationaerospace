@@ -49,8 +49,7 @@ if($total_videos > 0) {
 
 		$thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 	}	
-} 
-?>
+} ?>
 
 <div class="wrapper" id="page-wrapper">
 	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findaVideo.jpg";
@@ -121,10 +120,13 @@ if($total_videos > 0) {
 
 			</div><!-- #primary -->
 
+			<menu class="d-block d-md-none col-sm-12 col-xs-12 memberdashboard--menu">
+				<div class="memberdashboard--menuwrap">
+					<?php dynamic_sidebar( 'left-sidebar' ); ?>
+				</div>
+				<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
+			</menu>
 		</div><!-- .row -->
-
 	</div><!-- Container end -->
-
 </div><!-- Wrapper end -->
-
 <?php get_footer(); ?>

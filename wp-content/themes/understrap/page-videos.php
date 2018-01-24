@@ -99,7 +99,7 @@ $template = 'video';
 				<?php while (have_posts()) : the_post();  the_content(); endwhile;?>
 			</div>
 			<div class="row">
-				<div class="col-xl-8 ">
+				<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
 					<h3 class="text-left">Search for Videos</h3>
 					<div class="search-form">
 						<input type="text" id="video_search" name="video_search"/>
@@ -108,9 +108,9 @@ $template = 'video';
 						</button>
 					</div>
 				</div>
-				<div class="col-xl-4">
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
 					<div class="submit_register--btn">
-						<h3 class="text-left">Submit your video(s):</h3>
+						<h3>Submit your video(s):</h3>
 						<?php if($loggedin === '0') {?>
 						<a href="<?php echo get_permalink( get_page_by_path( 'login' ) ) ?>" class="arrowbtn btn--color">
 							<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>Sign up or Register Now</span></div>

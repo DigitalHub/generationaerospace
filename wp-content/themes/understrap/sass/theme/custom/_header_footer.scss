@@ -38,6 +38,7 @@
 .site-toplogin_btn {
 	position: absolute;
 	left: 6%;
+	max-width: 120px;
 	top: 10px;
 	z-index: 3;
 
@@ -139,14 +140,14 @@
 .site-menu {
 	position: absolute;
 	right: 7%;
-	top: 3%;
+	top: 10px;
 	z-index: 500;
 }
 
 .menu_butt__close {
 	position: fixed;
 	right: 7%;
-	top: 3%;
+	top: 10px;
 
 	&:hover {
 		text-decoration: none;
