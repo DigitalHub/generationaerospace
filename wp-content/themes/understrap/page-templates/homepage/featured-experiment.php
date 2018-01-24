@@ -58,7 +58,7 @@
 						endwhile;?>
 					</div>
 				</div>
-				<div class="d-sm-block d-md-block d-lg-none col-md-12 col-sm-12 col-xs-12 featured_experiment--keywords">
+				<div class="d-md-block d-md-block d-lg-none col-md-12 col-sm-12 col-xs-12 featured_experiment--keywords">
 					<div class="row featured_experiment--keywordsslider-wrapp">
 						<?php
 						while(have_rows('featured_tags')) : the_row();
@@ -79,7 +79,7 @@
 					</div>
 				</div>
 
-				<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ); ?>" class="d-none d-md-block d-lg-none arrowbtn btn--color">
+				<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ); ?>" class="d-md-block d-lg-none arrowbtn btn--color">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
 					<div class="arrowbtn-wrapper"><span>See More Experiments</span></div>
 				</a>

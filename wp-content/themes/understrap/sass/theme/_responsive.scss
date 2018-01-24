@@ -84,8 +84,6 @@
 		display: inline-block !important;
 	}
 
-
-
 	.featured_video--carousel_wrapper {
 		margin: 30px auto;
 		width: 100%;
@@ -120,10 +118,7 @@
 	}
 }
 
-@media (max-width: 680px) {
-}
-
-@media (max-width: 769px) and (orientation: landscape) {
+@media (max-width: 767px) and (orientation: landscape) {
 
 	body.home:before {
 		content: "PLEASE VIEW IN PORTRAIT";
@@ -138,8 +133,16 @@
 		height: 100%;
 	}
 }
-@media (max-width: 580px) {
 
+@media (max-width: 680px) {
+}
+
+@media (max-width: 580px) {
+	a.menu_butt__close.headerbutt.close_butt {
+		span {
+			display: none;
+		}
+	}
 	.fullpagecounter {
 		bottom: 15%;
 		right: 3.6%;
@@ -168,6 +171,7 @@
 		font-size: 1rem;
 	}
 
+	.menu_butt__close,
 	.site-menu {
 		right: 1%;
 		top: 3%;
@@ -197,7 +201,11 @@
 		}
 	}
 
-	.featured_video--carousel_wrapper{
+	.featured_experiment--keywordsslider a {
+		height: 200px;
+	}
+
+	.featured_video--carousel_wrapper {
 		margin: 0 0 30px;
 
 		.featured_video--carousel .double_arrow {
@@ -209,6 +217,7 @@
 			vertical-align: unset;
 		}
 
+		.genaero_explorer--carousel .slick-list,
 		.featured_video--carousel .slick-list {
 			width: 70%;
 
@@ -226,9 +235,23 @@
 		right: -10%;
 	}
 
+	.genaero_explorer--navigation {
+		height: 160px;
+	}
 	.genaero_explorer--carousel {
 		margin: auto;
-		width: 90%;
+		width: 80%;
+	}
+
+	.explorer_slide.slick-center.slick-current .post-thumbnail {
+		margin: 0 auto;
+		height: 150px;
+		width: 150px;
+
+		img {
+			height: 150px;
+			width: 150px;
+		}
 	}
 
 	.menu__wrapper {
@@ -247,6 +270,23 @@
 		}
 	}
 
+	.featured_trailbazers {
+		width: 80%;
+		margin: auto;
+
+		.animated_circles--wrapper .post-thumbnail {
+			height: 150px;
+
+			img{
+				height: 150px;
+			}
+		}
+
+		h2.trailblazer--name {
+			font-size: 1.5rem;
+			margin: 0;
+		}
+	}
 }
 
 @media (max-width: 480px) {
