@@ -37,7 +37,7 @@ $tags = get_the_tags();
 						<?php the_post_thumbnail( 'large' ); ?>
 						<a data-fancybox data-src="#singleexperiement" href="javascript:;" class="arrowbtn btn--invert fullpopup">
 							<span class="fas fa-long-arrow-alt-right icon-left"></span>
-							<div class="arrowbtn-wrapper"><span style="font-size:30px">Try It Now</span></div>
+							<div class="arrowbtn-wrapper"><span style="width: 180px;">Try It Now</span></div>
 						</a>
 					</div>
 				</div>

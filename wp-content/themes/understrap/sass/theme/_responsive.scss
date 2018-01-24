@@ -146,10 +146,24 @@
 		margin-left: 0;
 		text-align: center;
 	}
+
+	.singlepost--hud, .subpage--hud {
+		padding: 100px 0 50px;
+		height: auto;
+	}
+
+	.content--overflow + .single_main {
+		padding-top: 0;
+	}
 }
 
 @media (max-width: 576px) {
 
+	.row.dashboard_user--stats {
+		.total_favs, .total_videos {
+			margin: 10px auto 0;
+		}
+	}
 
 	a.menu_butt__close.headerbutt.close_butt {
 		span {
@@ -158,7 +172,7 @@
 	}
 
 	.fullpagecounter {
-		bottom: 15%;
+		bottom: 10%;
 		font-size: 15px;
 		right: 3.6%;
 
@@ -307,7 +321,7 @@
 		width: 100%;
 
 		.menu-content__nav .menu-content__list ol li a {
-			font-size: 1.5rem;
+			font-size: 1rem;
 		}
 	}
 

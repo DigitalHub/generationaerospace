@@ -142,6 +142,13 @@ if($_POST['video_submit']) {
 
 			</div><!-- #primary -->
 
+			<menu class="d-block d-md-none col-sm-12 col-xs-12 memberdashboard--menu">
+				<div class="memberdashboard--menuwrap">
+					<?php dynamic_sidebar( 'left-sidebar' ); ?>
+				</div>
+				<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
+			</menu>
+
 		</div><!-- .row -->
 
 	</div><!-- Container end -->

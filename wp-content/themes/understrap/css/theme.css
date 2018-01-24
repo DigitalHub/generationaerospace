@@ -10930,10 +10930,19 @@ svg.circlerotate {
     height: 520px;
     max-height: 520px;
     overflow: hidden;
+    position: relative;
     width: 100%; }
   .content--overflow .singlepost--content iframe, .content--overflow .singlepost--content img {
     height: 100%;
-    width: 100%; }
+    left: 50%;
+    max-width: none;
+    position: absolute;
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: auto; }
 
 .content--overflow + .single_main {
   background-color: #eeeeee;
@@ -12210,6 +12219,7 @@ a#genaero-facebook-button {
   cursor: pointer;
   margin: 50px auto 0;
   overflow: hidden;
+  padding-bottom: 5px;
   width: 250px; }
   .watch_video--typewriter .watch_video--button {
     float: left;
@@ -13343,7 +13353,7 @@ a.videos_loadmore {
 
 .memberdashboard--menu {
   position: absolute;
-  bottom: 0; }
+  bottom: 30px; }
   .memberdashboard--menu .memberdashboard--menuwrap {
     background-color: #000;
     bottom: -500px;
@@ -14124,13 +14134,23 @@ a.videos_loadmore {
     border-left: none;
     padding-left: 0;
     margin-left: 0;
-    text-align: center; } }
+    text-align: center; }
+
+  .singlepost--hud, .subpage--hud {
+    padding: 100px 0 50px;
+    height: auto; }
+
+  .content--overflow + .single_main {
+    padding-top: 0; } }
 @media (max-width: 576px) {
+  .row.dashboard_user--stats .total_favs, .row.dashboard_user--stats .total_videos {
+    margin: 10px auto 0; }
+
   a.menu_butt__close.headerbutt.close_butt span {
     display: none; }
 
   .fullpagecounter {
-    bottom: 15%;
+    bottom: 10%;
     font-size: 15px;
     right: 3.6%; }
     .fullpagecounter .totalcount:before {
@@ -14236,7 +14256,7 @@ a.videos_loadmore {
   .menu-content.opened .menu-content__wrapper {
     width: 100%; }
     .menu-content.opened .menu-content__wrapper .menu-content__nav .menu-content__list ol li a {
-      font-size: 1.5rem; }
+      font-size: 1rem; }
 
   .featured_trailbazers {
     width: 80%;

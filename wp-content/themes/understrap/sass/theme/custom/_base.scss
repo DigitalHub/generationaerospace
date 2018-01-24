@@ -191,12 +191,17 @@ svg.circlerotate {
 			height: 520px;
 			max-height: 520px;
 			overflow: hidden;
+			position: relative;
 			width: 100%;
 		}
 
 		iframe, img {
 			height: 100%;
-			width: 100%;
+			left: 50%;
+			max-width: none;
+			position: absolute;
+			@include translate(-50%, 0);
+			width: auto;
 		}
 	}
 }
