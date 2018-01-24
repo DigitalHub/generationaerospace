@@ -145,7 +145,12 @@
 	}
 	.fullpagecounter {
 		bottom: 15%;
+		font-size: 15px;
 		right: 3.6%;
+
+		.totalcount:before {
+			width: 15px;
+		}
 	}
 
 	.scrolling { 
@@ -164,7 +169,11 @@
 	}
 
 	h2 {
-		font-size: 2rem;
+		font-size: 1.8rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
 	}
 
 	.highlight {
@@ -201,8 +210,12 @@
 		}
 	}
 
+	.watch_video--typewriter {
+		width: 100%;
+	}
+
 	.featured_experiment--keywordsslider a {
-		height: 200px;
+		height: 150px;
 	}
 
 	.featured_video--carousel_wrapper {
@@ -215,6 +228,11 @@
 		.featured_video--carousel .slick-list {
 			margin: 0;
 			vertical-align: unset;
+
+			.video_slide h3 {
+				margin-bottom: 0;
+				margin-top: 0;
+			}
 		}
 
 		.genaero_explorer--carousel .slick-list,
@@ -227,6 +245,10 @@
 		}
 	}
 
+	.featured_video--carousel_wrapper {
+		vertical-align: unset;
+	}
+
 	.double_arrow.big_arrow.arrow_left {
 		left: -10%;
 	}
@@ -236,8 +258,9 @@
 	}
 
 	.genaero_explorer--navigation {
-		height: 160px;
+		height: 110px;
 	}
+
 	.genaero_explorer--carousel {
 		margin: auto;
 		width: 80%;
@@ -245,12 +268,12 @@
 
 	.explorer_slide.slick-center.slick-current .post-thumbnail {
 		margin: 0 auto;
-		height: 150px;
-		width: 150px;
+		height: 100px;
+		width: 100px;
 
 		img {
-			height: 150px;
-			width: 150px;
+			height: 100px;
+			width: 100px;
 		}
 	}
 
