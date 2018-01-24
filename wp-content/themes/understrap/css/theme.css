@@ -14058,6 +14058,18 @@ ul#menu-members-only-menu {
     width: 100%; }
     .featured_experiment--keywordsslider a {
       height: 350px; } }
+@media (max-width: 769px) and (orientation: landscape) {
+  body.home:before {
+    content: "PLEASE VIEW IN PORTRAIT";
+    background-color: black;
+    color: white;
+    z-index: 1000000;
+    line-height: 100%;
+    position: fixed;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height: 100%; } }
 @media (max-width: 580px) {
   .fullpagecounter {
     bottom: 15%;
@@ -14081,18 +14093,23 @@ ul#menu-members-only-menu {
 
   .site-menu {
     right: 1%;
-    top: 1%; }
+    top: 3%; }
+
+  .site-title {
+    top: 3%; }
 
   .site-toplogin_btn {
     left: 1%;
-    top: 1%; }
+    top: 3%; }
 
-  .site-title a .site-title-border--left {
-    left: 80px; }
-  .site-title a .site-title-border--right {
-    right: 80px; }
-  .site-title a .logo_img {
-    width: 50%; }
+  .site-title a {
+    width: 270px; }
+    .site-title a .site-title-border--left {
+      left: 40px; }
+    .site-title a .site-title-border--right {
+      right: 40px; }
+    .site-title a .logo_img {
+      width: 70%; }
 
   .featured_video--carousel_wrapper {
     margin: 0 0 30px; }
