@@ -130,17 +130,14 @@
 
 	.memberdashboard--menuwrap {
 		background-color: $black;
-		bottom: -500px;
+		bottom: 48px;
+		display: none;
 		padding-top: 10px;
 		position: absolute;
 		left: 15px;
 		width: calc(100% - 30px);
 		@include transition(bottom 500ms ease-in-out);
-
-		&.opened {
-			bottom: 48px;
-			z-index: 2;
-		}
+		z-index: 2;
 	}
 
 	a.memberdashboard--btn {

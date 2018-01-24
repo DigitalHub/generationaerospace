@@ -1,6 +1,4 @@
 jQuery.noConflict();
-
-
 jQuery(window).load(function(){
     jQuery('.count').each(function() {
         jQuery(this).prop('Counter', 0).animate({
@@ -19,7 +17,6 @@ jQuery(window).load(function(){
         });
     }, 4000);
 });
-
 
 jQuery(document).ready(function($) {
     jQuery(window).scroll(function() {
@@ -58,18 +55,20 @@ jQuery(document).ready(function($) {
             anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailblazers', 'featured_events'],
             menu: '.chapter-selector',
             css3: true,
-        // lockAnchors: true,
-        fitToSectionDelay: 100,
-        lazyLoading: true,
-        afterLoad: function(anchorLink, index){
-         if(index == $('.section').length){
-            jQuery('.down--button').hide();
-            jQuery('.up--button').show();
-        } else {
-            jQuery('.down--button').show();
-            jQuery('.up--button').hide();       }
-        }
-    });
+            // lockAnchors: true,
+            fitToSectionDelay: 100,
+            lazyLoading: true,
+            afterLoad: function(anchorLink, index){
+                if(index == $('.section').length){
+                    jQuery('.down--button').hide();
+                    jQuery('.up--button').show();
+                } else {
+                    jQuery('.down--button').show();
+                    jQuery('.up--button').hide();       
+                }
+            }
+        });
+        
         jQuery('.homescroll.down--button').click(function(){
             jQuery.fn.fullpage.moveSectionDown();
         });
@@ -77,7 +76,6 @@ jQuery(document).ready(function($) {
         jQuery('.homescroll.up--button').click(function(){
             jQuery.fn.fullpage.moveSectionUp();
         });
-
     }
 
     var $status = jQuery('.pagingInfo');
@@ -113,13 +111,6 @@ jQuery(document).ready(function($) {
             // }
         });
     }
-
-    // jQuery('.genaero_explorer--carousel').slick({
-    //     autoplay: false,
-    //     dots: false,
-    //     centerMode: true,
-    //     centerPadding: ($('.slider').find('>div').outerWidth() / 2) + 'px',
-    // });
 
     jQuery('.genaero_explorer--carousel').slick({
         slidesToShow: 1,
@@ -158,7 +149,7 @@ jQuery(document).ready(function($) {
 
     jQuery('.memberdashboard--btn').click(function(event){
         event.preventDefault();
-        jQuery('.memberdashboard--menuwrap').toggleClass('opened');
+        jQuery('.memberdashboard--menuwrap').slideToggle();
     });
 
     $(function(){

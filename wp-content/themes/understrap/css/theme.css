@@ -13356,7 +13356,8 @@ a.videos_loadmore {
   bottom: 30px; }
   .memberdashboard--menu .memberdashboard--menuwrap {
     background-color: #000;
-    bottom: -500px;
+    bottom: 48px;
+    display: none;
     padding-top: 10px;
     position: absolute;
     left: 15px;
@@ -13364,10 +13365,8 @@ a.videos_loadmore {
     -moz-transition: bottom 500ms ease-in-out;
     -o-transition: bottom 500ms ease-in-out;
     -webkit-transition: bottom 500ms ease-in-out;
-    transition: bottom 500ms ease-in-out; }
-    .memberdashboard--menu .memberdashboard--menuwrap.opened {
-      bottom: 48px;
-      z-index: 2; }
+    transition: bottom 500ms ease-in-out;
+    z-index: 2; }
   .memberdashboard--menu a.memberdashboard--btn {
     background: #00aed4;
     bottom: 0;
