@@ -27,6 +27,70 @@ jQuery(document).ready(function($) {
             jQuery('#link').removeClass('up--button');
             jQuery('#link').addClass('down--button');
         }
+
+        //loadmore function for experiments, trailblazers and vault
+        //TODO: STEF TO DISCUSS WITH RACH
+        // if($('.videos_loadmore').length && ($('.videos_loadmore').offset().top - $(window).scrollTop()) < ($(window).height()/2)) {
+        //     var button = $('.videos_loadmore');
+        //     var count = button.data('count');
+        //     var posts_per_page = button.data('posts_per_page');
+        //     var newcount = count + posts_per_page;
+
+        //     $.ajax({
+        //         url: ajax.ajaxUrl,
+        //         type : 'post',
+        //         data: {
+        //             action: 'genaero_video_pagination',
+        //             count: count,
+        //             posts_per_page: posts_per_page,
+        //         },
+        //         beforeSend: function() {
+        //             $('#ajax-loading1').show();
+        //         },
+        //         success : function( data ){
+        //             $('#ajax-loading1').hide();
+        //             if(data) {
+        //                 $('.video-row').append(data);
+        //                 $('.videos_loadmore').data('count',newcount);
+        //             } else {
+        //                 button.remove();
+        //             }
+        //         }
+        //     });
+        // }
+
+        //loadmore function for experiments, trailblazers and vault
+        if($('.genaero_loadmore').length && ($(window).scrollTop() === $(document).height() - $(window).height())) {
+            var button = $('.genaero_loadmore');
+            var cpt = button.data('cpt');
+            var posts_per_page = button.data('posts_per_page');
+            var template = button.data('template');
+
+            $.ajax({
+                url: ajaxpagination.ajaxUrl,
+                type : 'post',
+                data: {
+                    action: 'genaero_ajax_pagination',
+                    cpt: cpt,
+                    posts_per_page: posts_per_page,
+                    template: template,
+                    query: ajaxpagination.posts,
+                    page: ajaxpagination.current_page,
+                },
+                beforeSend: function() {
+                    $('#ajax-loading1').show();
+                },
+                success : function( data ){
+                    $('#ajax-loading1').hide();
+                    if(data) {
+                        $('.loadmore-row').append(data);
+                        ajaxpagination.current_page++;
+                    } else {
+                        button.remove();
+                    }
+                }
+            });
+        }
     });
 
     jQuery('html, body').animate({scrollTop: '0'}, 500);
@@ -327,35 +391,6 @@ $('.videos_loadmore').on('click', function(e) {
     });
 });
 
-$('.genaero_loadmore').on('click', function(e) {
-    e.preventDefault();
-    var button = $(this);
-    var cpt = button.data('cpt');
-    var posts_per_page = button.data('posts_per_page');
-    var template = button.data('template');
-
-    $.ajax({
-        url: ajaxpagination.ajaxUrl,
-        type : 'post',
-        data: {
-            action: 'genaero_ajax_pagination',
-            cpt: cpt,
-            posts_per_page: posts_per_page,
-            template: template,
-            query: ajaxpagination.posts,
-            page: ajaxpagination.current_page,
-        },
-        success : function( data ){
-            if(data) {
-                $('.experiment-row').append(data);
-                ajaxpagination.current_page++;
-            } else {
-                button.remove();
-            }
-        }
-    });
-});
-
 $('a.fav-experiment').on('click', function(e) {
     e.preventDefault();
     expID = $(this).data('id');
@@ -536,4 +571,14 @@ var map = null;
 $('.acf-map').each(function(){
     map = new_map( $(this) );
 });
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
 });

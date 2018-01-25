@@ -36,36 +36,35 @@ $tags = get_the_tags();
 					<div class="experiment--link">
 						<div class="content--overflow_wrapper">
 							<?php the_post_thumbnail( 'large' ); ?>
-							<!-- <a data-fancybox data-src="#singleexperiement" href="javascript:;" class="arrowbtn btn--invert fullpopup"> -->
-								<a href="#" class="arrowbtn btn--invert single-experiment-btn">
-									<span class="fas fa-long-arrow-alt-right icon-left"></span>
-									<div class="arrowbtn-wrapper"><span style="width: 180px;">Try It Now</span></div>
-								</a>
-							</div>
+							<a href="#" class="arrowbtn btn--invert single-experiment-btn">
+								<span class="fas fa-long-arrow-alt-right icon-left"></span>
+								<div class="arrowbtn-wrapper"><span style="width: 180px;">Try It Now</span></div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="single_main">
-			<div class="wrapper" id="single-wrapper">
-				<div class="container" id="content">
-					<div class="row">
-						<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
-							<main class="site-main" id="main" role="main">
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 entry-content">
-									<p class="highlight"><?php echo get_field('summary'); ?></p>
-								</div>
-							</main><!-- #main -->
-						</div><!-- #primary -->
-					</div><!-- .row end -->
-				</div><!-- Container end -->
-			</div><!-- Wrapper end -->
-		</section>
-	</div>
+		</div>
+	</section>
+	<section class="single_main">
+		<div class="wrapper" id="single-wrapper">
+			<div class="container" id="content">
+				<div class="row">
+					<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
+						<main class="site-main" id="main" role="main">
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 entry-content">
+								<p class="highlight"><?php echo get_field('summary'); ?></p>
+							</div>
+						</main><!-- #main -->
+					</div><!-- #primary -->
+				</div><!-- .row end -->
+			</div><!-- Container end -->
+		</div><!-- Wrapper end -->
+	</section>
+</div>
 
-	<div id="single-experiment-content">
-		<?php get_template_part( 'loop-templates/content', 'experiment' ); ?>
-	</div>
+<div id="single-experiment-content">
+	<?php get_template_part( 'loop-templates/content', 'experiment' ); ?>
+</div>
 
-	<?php get_footer(); ?>
+<?php get_footer(); ?>

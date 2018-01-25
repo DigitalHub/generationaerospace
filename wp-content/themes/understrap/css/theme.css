@@ -12905,6 +12905,11 @@ a.videos_loadmore {
   font-weight: 600px;
   text-transform: uppercase; }
 
+.ajax-loading {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 .entry-content {
   margin-bottom: 50px; }
   .entry-content h2, .entry-content h3, .entry-content h4 {

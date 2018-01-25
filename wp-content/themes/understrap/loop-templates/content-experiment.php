@@ -42,7 +42,7 @@ $totalcount = 0;
 								<?php echo get_field('lesson'); ?>
 
 								<div class="tried_experiement">
-									<h3>Tried the experiment?<br>Submit your experiemnt video here: </h3>
+									<h3>Tried the experiment?<br>Submit your experiment video here: </h3>
 									<?php 
 									if($loggedin === '0') {
 										?>

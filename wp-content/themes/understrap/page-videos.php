@@ -129,6 +129,7 @@ $template = 'video';
 <section class="sub_main">
 	<div class="wrapper">
 		<div class="video-main <?php echo esc_attr( $container ); ?>" id="content">
+			<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
 			<div class="row">
 				<div class="month_experiment--card col-xl-8 col-xl-8 col-md-6 col-sm-12 col-xs-12">
 					<a data-fancybox href="<?=$youtube?>">
@@ -202,6 +203,7 @@ $template = 'video';
 									echo '</div>';
 								}
 							} ?>
+							<img class="ajax-loading" id="ajax-loading1" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
 						</section>
 						<?php if($all_videos_count > $posts_per_page) {
 							echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter videos_loadmore" data-count="'.$count.'" data-posts_per_page="'.$posts_per_page.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';

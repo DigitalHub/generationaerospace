@@ -109,7 +109,7 @@ if($_GET['keyword']) {
 				<div class="col-xl-12 content-area" id="primary">
 					<img class="ajax-loading" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
 					<main class="site-main" id="main" role="main">
-						<div class="row experiment-row">
+						<div class="row loadmore-row">
 							<?php
 							if($the_query->have_posts()) :
 								$count = 0;
@@ -120,6 +120,7 @@ if($_GET['keyword']) {
 							endif;
 							?>
 						</div>
+						<img class="ajax-loading" id="ajax-loading1" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
 					</main><!-- #main -->
 					<div class="clear"></div>
 					<?php if (  $the_query->max_num_pages > 1 ) {
