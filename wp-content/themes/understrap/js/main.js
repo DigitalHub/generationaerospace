@@ -94,14 +94,6 @@ jQuery(document).ready(function($) {
         nextArrow: '<div class="double_arrow small_arrow arrow_down"></div>',
     });
 
-    jQuery('.experiment--carousel').slick({
-        autoplay: false,
-        dots: false,
-        fade: true,
-        prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
-        nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
-    });
-
     if(jQuery('.fullpopup').length) {
         jQuery('.fullpopup').fancybox({
             toolbar  : false,
@@ -111,6 +103,26 @@ jQuery(document).ready(function($) {
             // }
         });
     }
+
+    jQuery('.single-experiment-btn').on('click', function(event) {
+        event.preventDefault();
+        $('#single-experiment-summary').hide();
+        $('#single-experiment-content').show();
+
+        jQuery('.experiment--carousel').slick({
+            autoplay: false,
+            dots: false,
+            fade: true,
+            prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
+            nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
+        });
+    });
+
+    jQuery('.close-single-experiment').on('click', function(event) {
+        event.preventDefault();
+        $('#single-experiment-content').hide();
+        $('#single-experiment-summary').show();
+    });
 
     jQuery('.genaero_explorer--carousel').slick({
         slidesToShow: 1,
@@ -372,7 +384,7 @@ if($('.last_experiment--slide').length) {
             $('.single_experiment_header').text('What Just Happened_');
         } else {
             console.log('not active');
-            $('.single_experiment_header').text('Methods_');
+            $('.single_experiment_header').text('Steps_');
         }
     });
 }

@@ -13126,8 +13126,51 @@ a.videos_loadmore {
 .related--video h3 {
   color: #000; }
 
+#single-experiment-content {
+  display: block; }
+
+#single-experiment-content {
+  display: none;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99999; }
+  #single-experiment-content .close-single-experiment {
+    color: #000;
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+    top: 20px;
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    z-index: 99999; }
+    #single-experiment-content .close-single-experiment:before {
+      content: "close";
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      top: 7px; }
+    #single-experiment-content .close-single-experiment:after {
+      content: "\00d7";
+      font-size: 35px;
+      font-weight: 700;
+      height: 30px;
+      position: absolute;
+      top: -15px;
+      right: 70px;
+      width: 30px; }
+    #single-experiment-content .close-single-experiment:hover:after {
+      color: #fff; }
+  #single-experiment-content .single_experiment .single_experiment--row {
+    align-items: normal !important; }
+
 .single_experiment h1 {
   font-size: 50px;
+  margin-top: 50px;
   width: 100%; }
 
 .single-genaero_experiments h2 {
@@ -13183,7 +13226,6 @@ a.videos_loadmore {
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
         right: -8%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_slide {
-        min-width: 500px;
         width: 100%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .experiment_counts {
         display: inline-block;
