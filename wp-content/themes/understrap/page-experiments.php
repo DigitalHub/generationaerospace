@@ -69,7 +69,7 @@ if($_GET['keyword']) {
 ?>
 
 <section class="subpage--hud">
-	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findanexperiment.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-findanexperiment.jpg";
 	include(locate_template('loop-templates/hub-base.php')); ?>
 	<div class="subpage--content">
 		<div class="container">

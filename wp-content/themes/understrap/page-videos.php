@@ -90,7 +90,7 @@ $template = 'video';
 ?>
 
 <section class="subpage--hud">
-	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findaVideo.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-feature-video.jpg";
 	include(locate_template('loop-templates/hub-base.php')); ?>
 	<div class="subpage--content">
 		<div class="container">
