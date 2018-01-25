@@ -10783,6 +10783,9 @@ readers do not read off random characters that represent icons */
 .clear:after {
   clear: both; }
 
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
+
 .page-template-page-videos #page {
   position: relative; }
 
