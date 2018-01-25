@@ -46,7 +46,7 @@ $featured_videos_count = $wpdb->num_rows;
 ?>
 
 <section class="singlepost--hud content--overflow">
-	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findaVideo.jpg";
+	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-feature-video.jpg";
 	include(locate_template('loop-templates/single-hubbase.php')); ?>
 
 	<div class="singlepost--content content--overflow">
