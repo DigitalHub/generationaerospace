@@ -47,27 +47,20 @@
  			<div class="row">
  				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
  					<main class="site-main" id="main" role="main">
- 						<?php
- 						if($the_query->have_posts()) :
- 							$count = 0;
- 							while($the_query->have_posts()) : $the_query->the_post();
- 								if($count % $posts_per_page == 0) :
- 									echo $count > 0 ? '</div>' : '';
- 									echo '<div class="row">';
- 								endif;
- 								get_template_part( 'loop-templates/tile', $template );
- 								$count++;
- 							endwhile;
-
- 							if($count % $posts_per_page !== 0) {
- 								echo '</div>';
- 							}
- 						endif;
- 						?>
+ 						<div class="row loadmore-row">
+ 							<?php
+ 							if($the_query->have_posts()) :
+ 								while($the_query->have_posts()) : $the_query->the_post();
+ 									get_template_part( 'loop-templates/tile', $template );
+ 								endwhile;
+ 							endif;
+ 							?>
+ 						</div>
+ 						<img class="ajax-loading" id="ajax-loading1" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
  					</main><!-- #main -->
  					<?php 
  					if (  $the_query->max_num_pages > 1 ) {
- 						echo '<div class="row"><a href="#" class="genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'">More posts</a></div>';
+ 						echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter genaero_loadmore" data-cpt="'.$cpt.'" data-posts_per_page="'.$posts_per_page.'" data-template="'.$template.'"><div class="defaultbtn-wrapper"><span>See More Articles</span></div></a></div>';
  					}
  					?>
  				</div><!-- #primary -->

@@ -18,7 +18,7 @@ if ( is_singular( 'genaero_trailblazers' ) ) { //for fancybox
 <div class="wrapper" id="wrapper-footer">
 	<footer class="site-footer" id="colophon">
 		<div class="site-info">
-			<p>Copyright <?php echo date(Y); ?>. Powered by Rolls-Royce.</p>
+			<p>Copyright <?php echo date(Y); ?>. <a href="http://www.rolls-royce.com/country-sites/sea.aspx">Powered by Rolls-Royce.</a></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- wrapper end -->
