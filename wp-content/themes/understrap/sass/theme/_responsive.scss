@@ -419,6 +419,30 @@
 			}
 		}
 	}
+
+	.single_experimentcaraousel--wrapper {
+		width: 100%;
+
+		.experiment--wrapperhidbar {
+			overflow-y: scroll;
+			width: calc(100% + 20px);
+
+			.experiment--carousel {
+
+				.double_arrow.small_arrow.arrow_left {
+					left: -2%;
+				}
+
+				.double_arrow.small_arrow.arrow_right {
+					right: 4%;
+				}
+			}
+			.slick-list {    
+				margin: 0 30px;
+				width: 80%;
+			}
+		}
+	}
 }
 
 @media (max-width: 480px) {

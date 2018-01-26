@@ -10932,7 +10932,7 @@ svg.circlerotate {
     overflow: hidden;
     position: relative;
     width: 100%; }
-  .content--overflow .singlepost--content iframe, .content--overflow .singlepost--content img {
+  .content--overflow .singlepost--content img {
     height: 100%;
     left: 50%;
     max-width: none;
@@ -10943,6 +10943,9 @@ svg.circlerotate {
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     width: auto; }
+  .content--overflow .singlepost--content iframe {
+    height: 100%;
+    width: 100%; }
 
 .content--overflow + .single_main {
   background-color: #eeeeee;
@@ -14318,7 +14321,20 @@ a.videos_loadmore {
       margin: 10px auto; }
       .entry-share .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn {
         border-bottom: none !important;
-        width: auto; } }
+        width: auto; }
+
+  .single_experimentcaraousel--wrapper {
+    width: 100%; }
+    .single_experimentcaraousel--wrapper .experiment--wrapperhidbar {
+      overflow-y: scroll;
+      width: calc(100% + 20px); }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_left {
+        left: -2%; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
+        right: 4%; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .slick-list {
+        margin: 0 30px;
+        width: 80%; } }
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
