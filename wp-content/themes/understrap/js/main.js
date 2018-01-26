@@ -19,6 +19,9 @@ jQuery(window).load(function(){
 });
 
 jQuery(document).ready(function($) {
+    var scrollLock = false;
+    var videoScrollLock = false;
+
     jQuery(window).scroll(function() {
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
             jQuery('#link').addClass('up--button');
@@ -28,36 +31,42 @@ jQuery(document).ready(function($) {
             jQuery('#link').addClass('down--button');
         }
 
-        //loadmore function for experiments, trailblazers and vault
-        //TODO: STEF TO DISCUSS WITH RACH
-        // if($('.videos_loadmore').length && ($('.videos_loadmore').offset().top - $(window).scrollTop()) < ($(window).height()/2)) {
-        //     var button = $('.videos_loadmore');
-        //     var count = button.data('count');
-        //     var posts_per_page = button.data('posts_per_page');
-        //     var newcount = count + posts_per_page;
+        //loadmore function for videos page
+        if($('.videos_loadmore').length && ($('.videos_loadmore').offset().top - $(window).scrollTop()) < ($(window).height()/1.5)) {
+            var button = $('.videos_loadmore');
+            var count = button.data('count');
+            var posts_per_page = button.data('posts_per_page');
 
-        //     $.ajax({
-        //         url: ajax.ajaxUrl,
-        //         type : 'post',
-        //         data: {
-        //             action: 'genaero_video_pagination',
-        //             count: count,
-        //             posts_per_page: posts_per_page,
-        //         },
-        //         beforeSend: function() {
-        //             $('#ajax-loading1').show();
-        //         },
-        //         success : function( data ){
-        //             $('#ajax-loading1').hide();
-        //             if(data) {
-        //                 $('.video-row').append(data);
-        //                 $('.videos_loadmore').data('count',newcount);
-        //             } else {
-        //                 button.remove();
-        //             }
-        //         }
-        //     });
-        // }
+            if(videoScrollLock === false) {
+                newcount = count + posts_per_page;
+                $.ajax({
+                    url: ajax.ajaxUrl,
+                    type : 'post',
+                    data: {
+                        action: 'genaero_video_pagination',
+                        count: count,
+                        posts_per_page: posts_per_page,
+                    },
+                    beforeSend: function() {
+                        $('#ajax-loading1').show();
+
+                        if(videoScrollLock === false) {
+                            videoScrollLock = true;
+                        }
+                    },
+                    success : function( data ){
+                        $('#ajax-loading1').hide();
+                        if(data) {
+                            $('.video-row').append(data);
+                            $('.videos_loadmore').data('count',newcount);
+                        } else {
+                            button.remove();
+                        }
+                        videoScrollLock = false;
+                    }
+                });
+            }
+        }
 
         //loadmore function for experiments, trailblazers and vault
         if($('.genaero_loadmore').length && ($(window).scrollTop() === $(document).height() - $(window).height())) {
@@ -66,30 +75,37 @@ jQuery(document).ready(function($) {
             var posts_per_page = button.data('posts_per_page');
             var template = button.data('template');
 
-            $.ajax({
-                url: ajaxpagination.ajaxUrl,
-                type : 'post',
-                data: {
-                    action: 'genaero_ajax_pagination',
-                    cpt: cpt,
-                    posts_per_page: posts_per_page,
-                    template: template,
-                    query: ajaxpagination.posts,
-                    page: ajaxpagination.current_page,
-                },
-                beforeSend: function() {
-                    $('#ajax-loading1').show();
-                },
-                success : function( data ){
-                    $('#ajax-loading1').hide();
-                    if(data) {
-                        $('.loadmore-row').append(data);
-                        ajaxpagination.current_page++;
-                    } else {
-                        button.remove();
+            if(scrollLock === false) {
+                $.ajax({
+                    url: ajaxpagination.ajaxUrl,
+                    type : 'post',
+                    data: {
+                        action: 'genaero_ajax_pagination',
+                        cpt: cpt,
+                        posts_per_page: posts_per_page,
+                        template: template,
+                        query: ajaxpagination.posts,
+                        page: ajaxpagination.current_page,
+                    },
+                    beforeSend: function() {
+                        $('#ajax-loading1').show();
+
+                        if(scrollLock === false) {
+                            scrollLock = true;
+                        }
+                    },
+                    success : function( data ){
+                        $('#ajax-loading1').hide();
+                        if(data) {
+                            $('.loadmore-row').append(data);
+                            ajaxpagination.current_page++;
+                        } else {
+                            button.remove();
+                        }
+                        scrollLock = false;
                     }
-                }
-            });
+                });
+            }
         }
     });
 

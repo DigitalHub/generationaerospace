@@ -79,14 +79,17 @@ $featured_videos_results = $wpdb->get_results($featured_videos_sql);
 $featured_videos_count = $wpdb->num_rows;
 
 //all (approved) videos loop
-$all_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.username as posted_by_username, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t1.create_date DESC";
+$posts_per_page = 3;
+
+$total_count_sql = "SELECT COUNT(*) AS totalcount FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish'";
+$total_count_result = $wpdb->get_results($total_count_sql);
+$totalcount = $total_count_result[0]->totalcount;
+
+$all_videos_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.username as posted_by_username, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t1.create_date DESC LIMIT %d",$posts_per_page);
 
 $all_videos_results = $wpdb->get_results($all_videos_sql);
 $all_videos_count = $wpdb->num_rows;
 
-$cpt = 'genaero_videos';
-$posts_per_page = 3;
-$template = 'video';
 ?>
 
 <section class="subpage--hud">
@@ -188,24 +191,16 @@ $template = 'video';
 						<hr>
 						<section class="all-videos-section">
 							<h4>All Videos_</h4>
-							<?php if($all_videos_count > 0) {
-								$count = 0;
-								foreach($featured_videos_results as $video) {
-									if($count % 3 == 0) :
-										echo $count > 0 ? '</div>' : '';
-										echo '<div class="row  video-row">';
-									endif;
-									include(locate_template('loop-templates/tile-video.php'));
-									$count++;
-								}
-
-								if($count % 3 !== 0) {
-									echo '</div>';
-								}
-							} ?>
+							<div class="row video-row">
+								<?php if($all_videos_count > 0) {
+									foreach($all_videos_results as $video) {
+										include(locate_template('loop-templates/tile-video.php'));
+									}
+								} ?>
+							</div>
 							<img class="ajax-loading" id="ajax-loading1" src="<?php echo get_template_directory_uri();?>/img/ajax-loader.gif" style="display:none">
 						</section>
-						<?php if($all_videos_count > $posts_per_page) {
+						<?php if($totalcount > $posts_per_page) {
 							echo '<div class="row"><a href="#" class="defaultbtn btn--default aligncenter videos_loadmore" data-count="'.$count.'" data-posts_per_page="'.$posts_per_page.'"><div class="defaultbtn-wrapper"><span>See More Videos</span></div></a></div>';
 						} ?>
 					</main><!-- #main -->
