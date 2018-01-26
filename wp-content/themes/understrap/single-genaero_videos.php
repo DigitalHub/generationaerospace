@@ -114,6 +114,14 @@ $featured_videos_count = $wpdb->num_rows;
 					}
 				} ?>
 			</div><!-- .related-video end -->
+			<hr>
+			<div class="row">
+				<div class="back-to-main">
+					<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ) ?>" class="arrowbtn btn--color">
+						<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>Back to Get Inspired Page</span></div>
+					</a>
+				</div>
+			</div>
 		</div><!-- Container end -->
 	</div><!-- Wrapper end -->
 </section>

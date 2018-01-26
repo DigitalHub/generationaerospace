@@ -37,6 +37,13 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .row end -->
+			<div class="row">
+				<div class="back-to-main">
+					<a href="<?php echo get_permalink( get_page_by_path( 'explore-the-vault' ) ) ?>" class="arrowbtn btn--color">
+						<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>Back to Explore the Vault Page</span></div>
+					</a>
+				</div>
+			</div>
 		</div><!-- Container end -->
 	</div><!-- Wrapper end -->
 </section>
