@@ -109,9 +109,8 @@ if($wpdb->num_rows > 0) {
 							</select>
 							<div class="clear"></div>
 							<label for="birthdate">Date of Birth</label>
-							<input type="text" name="profile_birthdate" id="profile_birthdate" value="<?=$birthdate?>">
+							<input type="date" name="profile_birthdate" id="profile_birthdate" value="<?=$birthdate?>">
 							<div class="clear"></div>
-							<!-- TODO: STEF TO CHANGE TO DATESELECT -->
 							<label for="facebook">Social Media</label>
 							<input type="text" name="profile_facebook" id="profile_facebook" value="<?=$facebook?>" placeholder="Facebook">
 							<div class="clear"></div>
