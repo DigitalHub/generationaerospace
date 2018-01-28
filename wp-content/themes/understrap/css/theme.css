@@ -10935,6 +10935,24 @@ svg.circlerotate {
     overflow: hidden;
     position: relative;
     width: 100%; }
+  .content--overflow .singlepost--content .youtube-player img {
+    bottom: 0;
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: auto;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    transform: unset;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
   .content--overflow .singlepost--content img {
     height: 100%;
     left: 50%;
@@ -12503,6 +12521,9 @@ a#genaero-facebook-button {
   -moz-filter: grayscale(0);
   filter: grayscale(0); }
 
+.featured_trailbazers--img .post-thumbnail img {
+  height: 120%; }
+
 .featured_event .post-thumbnail {
   height: 250px !important; }
   .featured_event .post-thumbnail img {
@@ -12912,6 +12933,64 @@ a.videos_loadmore {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.youtube-player {
+  position: relative;
+  padding-bottom: 56.23%;
+  /* Use 75% for 4:3 videos */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 5px; }
+  .youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent; }
+  .youtube-player img {
+    bottom: 0;
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: auto;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    .youtube-player img:hover {
+      -webkit-filter: brightness(75%); }
+  .youtube-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    cursor: pointer; }
+    .youtube-player .play i {
+      color: #fff;
+      position: absolute;
+      font-size: 55px;
+      left: 50%;
+      top: 50%;
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: 1; }
 
 .entry-content {
   margin-bottom: 50px; }

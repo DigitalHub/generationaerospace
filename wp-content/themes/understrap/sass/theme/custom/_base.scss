@@ -198,6 +198,24 @@ svg.circlerotate {
 			width: 100%;
 		}
 
+
+		.youtube-player img {
+			bottom: 0;
+			border: none;
+			cursor: pointer;
+			display: block;
+			height: auto;
+			left: 0;
+			margin: auto;
+			max-width: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100%;
+			transform: unset;
+			@include transition(all 0.4s ease);
+		}
+		
 		img {
 			height: 100%;
 			left: 50%;

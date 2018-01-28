@@ -515,10 +515,10 @@ new GenAeroFacebook();
 /*
  * Generate YouTube embed from YouTube URL
  */
-function youtubeEmbedFromUrl($youtube_url, $width, $height){
-    $vid_id = extractUTubeVidId($youtube_url);
-    return generateYoutubeEmbedCode($vid_id, $width, $height);
-}
+// function youtubeEmbedFromUrl($youtube_url, $width, $height){
+//     $vid_id = extractUTubeVidId($youtube_url);
+//     return generateYoutubeEmbedCode($vid_id, $width, $height);
+// }
 
 function extractUTubeVidId($url){
     /*

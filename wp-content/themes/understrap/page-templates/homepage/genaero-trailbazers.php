@@ -24,7 +24,7 @@ if($trailblazer) :
 						<svg class="line" width="320" height="1" viewBox="0 0 320 1"><rect x="0" y="0" width="320" height="1"></rect><g><line x1="0" y1="1" x2="320" y2="1"></line></g></svg>
 					</div>
 					<div class="post-thumbnail">
-						<?php the_post_thumbnail( 'large' ); ?>
+						<?php the_post_thumbnail( 'full' ); ?>
 					</div>
 					<div class="animated_circles bottom_circles">
 						<svg class="circle" width="370" height="20" viewBox="0 0 370 20"><rect x="0" y="0" width="370" height="20"></rect><g><circle cx="17" cy="10" r="5"></circle><circle cx="40" cy="10" r="5"></circle><circle cx="110" cy="10" r="5"></circle><circle cx="150" cy="10" r="5"></circle><circle cx="300" cy="10" r="5"></circle><circle cx="320" cy="10" r="5"></circle></g>
