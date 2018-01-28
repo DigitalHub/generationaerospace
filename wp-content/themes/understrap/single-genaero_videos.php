@@ -42,8 +42,7 @@ $embed_code = extractUTubeVidId($youtube);
 $featured_videos_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' AND NOT t1.id = '%s' ORDER BY t1.create_date DESC LIMIT 3", $video_id);
 
 $featured_videos_results = $wpdb->get_results($featured_videos_sql);
-$featured_videos_count = $wpdb->num_rows;
-?>
+$featured_videos_count = $wpdb->num_rows;?>
 
 <section class="singlepost--hud content--overflow">
 	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-feature-video.jpg";
@@ -115,6 +114,14 @@ $featured_videos_count = $wpdb->num_rows;
 						}
 					} ?>
 				</div><!-- .related-video end -->
+				<hr>
+				<div class="row">
+					<div class="back-to-main">
+						<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ) ?>" class="arrowbtn btn--color">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>Back to Get Inspired Page</span></div>
+						</a>
+					</div>
+				</div>
 			</div><!-- Container end -->
 		</div><!-- Wrapper end -->
 	</section>

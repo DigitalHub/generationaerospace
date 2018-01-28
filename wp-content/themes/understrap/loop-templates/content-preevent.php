@@ -51,6 +51,13 @@ $summary = get_field('pre_event_summary');
 						</main><!-- #main -->
 					</div><!-- #primary -->
 				</div><!-- .row end -->
+				<div class="row">
+					<div class="back-to-main">
+						<a href="<?php echo get_permalink( get_page_by_path( 'find-an-event' ) ) ?>" class="arrowbtn btn--color">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span><div class="arrowbtn-wrapper"><span>Back to Events Page</span></div>
+						</a>
+					</div>
+				</div>
 			</div><!-- Container end -->
 		</div><!-- Wrapper end -->
 	</section>

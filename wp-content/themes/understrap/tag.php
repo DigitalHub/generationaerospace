@@ -60,7 +60,14 @@ $post_count = $the_query->post_count;
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-8 offset-xl-2">
-					<h1>Tag: <?php single_tag_title(); ?></h1>
+					<h1>Try This At Home</h1>
+					<h3>Tag: <?php single_tag_title(); ?></h3>
+					<div class="search-form">
+						<input type="text" id="experiment_search" name="experiment_search" value="<?=$keyword?>" />
+						<button type="submit" id="experiment_submit" name="experiment_submit" data-cpt="<?=$cpt?>" data-posts_per_page="<?=$posts_per_page?>" data-template="<?=$template?>">
+							<i class="fal fa-search"></i>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
