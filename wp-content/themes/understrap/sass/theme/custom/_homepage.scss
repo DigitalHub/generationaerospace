@@ -582,8 +582,27 @@
 			}
 		}
 
+<<<<<<< HEAD
 		.featured--upcoming_event {
 			margin-bottom: 20px;
+=======
+.featured_trailbazers--img {
+
+	.post-thumbnail {
+		img {
+			height: 120%;;
+		}
+	}
+}
+
+.featured_event {
+	.post-thumbnail {
+		height: 250px !important;
+
+		img {
+			height: 300px;
+		}
+>>>>>>> f518df8b00f4f8cf53197e2c35b10eb914b38511
 
 			.post_date + p {
 				margin-bottom: 15px;
