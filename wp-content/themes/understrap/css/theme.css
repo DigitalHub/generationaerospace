@@ -12533,6 +12533,15 @@ a#genaero-facebook-button {
   font-weight: 400;
   text-transform: uppercase; }
 
+#welcome-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1; }
+
 .sub_main {
   background-color: #eee; }
   .sub_main .wrapper {
