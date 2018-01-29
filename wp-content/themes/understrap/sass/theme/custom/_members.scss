@@ -263,6 +263,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="file"],
+	select,
 	textarea {
 		background-color: #ffffff1f;
 		color: $white;
@@ -278,6 +279,13 @@
 			border: none;
 			color: $white;
 			outline: none;
+		}
+	}
+
+	select {
+		padding: 10px;
+		option {
+			color: $black;
 		}
 	}
 

@@ -572,3 +572,20 @@ a.videos_loadmore {
 		text-align: center;
 	}
 }
+
+.error-404.not-found {
+	margin: 100px auto;
+
+	.assistive-text {
+		display: none;
+	}
+	
+	input#searchsubmit {
+		background-color: $rrblue;
+		@include border-radius(0);
+	}
+
+	input#s {
+		@include border-radius(0);
+	}
+}

@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"pad",
+				"padding"
+			],
+			[
+				"rr",
+				"rrblue"
+			],
+			[
+				"mar",
+				"mr:a\tmargin-right:auto"
+			],
+			[
 				"d",
 				"d-n\tdisplay: none;"
 			],
@@ -20,10 +32,6 @@
 				"absolute"
 			],
 			[
-				"rr",
-				"rrskyblue"
-			],
-			[
 				"f",
 				"fw\tfont-weight"
 			],
@@ -38,10 +46,6 @@
 			[
 				"ma",
 				"m:a\tmargin:auto"
-			],
-			[
-				"mar",
-				"margin-bottom"
 			],
 			[
 				"back",
@@ -416,19 +420,27 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/single-genaero_videos.php",
+			"file": "wp-content/themes/understrap/404.php",
 			"settings":
 			{
-				"buffer_size": 4857,
+				"buffer_size": 1583,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
+			"file": "wp-content/themes/understrap/searchform.php",
 			"settings":
 			{
-				"buffer_size": 272714,
+				"buffer_size": 707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n/**\n * The template for displaying single genaero_videos posts.\n *\n * @package understrap\n */\n\nget_header();\n$container = get_theme_mod( 'understrap_container_type' ); \n\nglobal $loggedin;\n$user_id = $_SESSION['user_id'];\n\nglobal $wpdb;\n$members_table = $wpdb->prefix.'genaero_members';\n$videos_table = $wpdb->prefix.'genaero_videos';\n\n$sql = $wpdb->prepare(\"SELECT t1.id as video_id, t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id WHERE t1.link_id = '%s'\", get_the_ID());\n\n$results = $wpdb->get_results($sql);\nif($wpdb->num_rows > 0) { \n\tforeach($results as $result) {\n\t\t$video_id = $result->video_id;\n\t\t$title = $result->video_title;\n\t\t$desc = stripslashes(stripslashes($result->video_desc));\n\t\t$youtube = $result->video_link;\n\t\t$favourite = $result->favourite;\n\t\t$posted_by = $result->posted_by;\n\t\t$profile_pic = $result->profile_pic;\n\t\tif($profile_pic === '' || $profile_pic === NULL) {\n\t\t\t$profile_pic = get_template_directory_uri().'/img/default-photo.png';\n\t\t}\n\n\t\t$posted_date = date_create($result->posted_date);\n\t\t$posted_date = date_format($posted_date, 'd M Y');\n\t}\n}\n\n$embed_code = youtubeEmbedFromUrl($youtube, 720, 540);\n\n//featured videos loop\n$featured_videos_sql = $wpdb->prepare(\"SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' AND NOT t1.id = '%s' ORDER BY t1.create_date DESC LIMIT 3\", $video_id);\n\n$featured_videos_results = $wpdb->get_results($featured_videos_sql);\n$featured_videos_count = $wpdb->num_rows;?>\n\n<section class=\"singlepost--hud content--overflow\">\n\t<?php $bgimg = get_template_directory_uri() . \"/img/imgbg_homepage-feature-video.jpg\";\n\tinclude(locate_template('loop-templates/single-hubbase.php')); ?>\n\n\t<div class=\"singlepost--content content--overflow\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"col-xl-10 offset-xl-1 col-lg-10 offset-xl-1 col-md-10 offset-md-1 col-sm-12 col-xs-12\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"content--overflow_wrapper\"><?php echo $embed_code; ?></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<section class=\"single_main\">\n\t<div class=\"wrapper\" id=\"single-wrapper\">\n\t\t<div class=\"<?php echo esc_attr( $container ); ?>\" id=\"content\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 content-area\" id=\"primary\">\n\t\t\t\t\t<main class=\"site-main\" id=\"main\" role=\"main\">\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col-xl-2 col-lg-2 col-md-2 col-sm- col-xs- entry-share\"><div class=\"row\"><div class=\"addthis_inline_share_toolbox\"></div></div></div>\n\t\t\t\t\t\t\t<div class=\"col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12\">\n\t\t\t\t\t\t\t\t<div class=\"entry-content\">\n\t\t\t\t\t\t\t\t\t<h2><?=$title?></h2>\n\t\t\t\t\t\t\t\t\t<div class=\"meta-date_fav\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"alignleft\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta-profile_pic\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"<?=$profile_pic?>\" class=\"profile_photo\" alt=\"<?=$fullname?>'s Profile Photo\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"alignleft\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta-posted\">Posted by <span class=\"meta-student\"><?=$posted_by?></span></div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta-date\"><i class=\"fas fa-clock\"></i><?=$posted_date?></div>\n\t\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"meta-comment\"><i class=\"fas fa-comment\"></i>200</div> -->\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta-fav\"><i class=\"fas fa-heart\"></i><?=$favourite?></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<?=$desc?>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"entry-comments\">\n\t\t\t\t\t\t\t\t\t<h4>Add Comment</h4>\n\t\t\t\t\t\t\t\t\t<hr style=\"border-top: 1px solid #00000047;\">\n\t\t\t\t\t\t\t\t\t<?php comments_template('', true); ?>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</main><!-- #main -->\n\t\t\t\t</div><!-- #primary -->\n\t\t\t</div><!-- .row end -->\n\t\t\t<hr>\n\t\t\t<div class=\"related--video\">\n\t\t\t\t<h3>More Videos For You_</h3>\n\t\t\t\t<?php if($featured_videos_count > 0) {\n\t\t\t\t\t$count = 0;\n\t\t\t\t\tforeach($featured_videos_results as $video) {\n\t\t\t\t\t\tif($count % 3 == 0) :\n\t\t\t\t\t\t\techo $count > 0 ? '</div>' : '';\n\t\t\t\t\t\t\techo '<div class=\"row\">';\n\t\t\t\t\t\tendif;\n\t\t\t\t\t\tinclude(locate_template('loop-templates/tile-video.php'));\n\t\t\t\t\t\t$count++;\n\t\t\t\t\t}\n\n\t\t\t\t\tif($count % 3 !== 0) {\n\t\t\t\t\t\techo '</div>';\n\t\t\t\t\t}\n\t\t\t\t} ?>\n\t\t\t</div><!-- .related-video end -->\n\t\t\t<hr>\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"back-to-main\">\n\t\t\t\t\t<a href=\"<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ) ?>\" class=\"arrowbtn btn--color\">\n\t\t\t\t\t\t<span class=\"fas fa-long-arrow-alt-right icon-left\"></span><div class=\"arrowbtn-wrapper\"><span>Back to Get Inspired Page</span></div>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div><!-- Container end -->\n\t</div><!-- Wrapper end -->\n</section>\n<?php get_footer(); ?>",
+			"settings":
+			{
+				"buffer_size": 5099,
 				"line_ending": "Windows"
 			}
 		},
@@ -436,7 +448,7 @@
 			"file": "wp-content/themes/understrap/js/main.js",
 			"settings":
 			{
-				"buffer_size": 19756,
+				"buffer_size": 19181,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -454,7 +466,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_members.scss",
 			"settings":
 			{
-				"buffer_size": 6567,
+				"buffer_size": 6640,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -463,7 +475,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
 			"settings":
 			{
-				"buffer_size": 7988,
+				"buffer_size": 8265,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -472,7 +484,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 			"settings":
 			{
-				"buffer_size": 9583,
+				"buffer_size": 10092,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -481,25 +493,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
 			"settings":
 			{
-				"buffer_size": 9916,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
-			"settings":
-			{
-				"buffer_size": 10511,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
-			"settings":
-			{
-				"buffer_size": 4325,
+				"buffer_size": 10014,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -510,6 +504,31 @@
 			{
 				"buffer_size": 3391,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
+			"settings":
+			{
+				"buffer_size": 4324,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/css/theme.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/header.php",
+			"settings":
+			{
+				"buffer_size": 1957,
 				"line_ending": "Windows"
 			}
 		}
@@ -579,6 +598,7 @@
 		"/C/wamp64/www/generationaerospace/wp-content",
 		"/C/wamp64/www/generationaerospace/wp-content/themes",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/members",
@@ -590,6 +610,10 @@
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_videos.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/index.php",
 		"/C/wamp64/www/generationaerospace/wp-content/plugins/genaero-members/genaero-members.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-trailbazers.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/header.php",
@@ -603,7 +627,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/members/fav-experiment-row.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-none.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/theme.css",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/content-experiment.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_experiments.php",
@@ -637,12 +660,10 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/login.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/reset-password.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/sign-up.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_videos.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
 		"/C/wamp64/www/generationaerospace/wp-config.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/hub-base.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
@@ -716,12 +737,11 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_form.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_mixins.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_variables.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_icons.scss",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_path.scss"
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/src/sass/fontawesome/_icons.scss"
 	],
 	"find":
 	{
-		"height": 52.0
+		"height": 63.0
 	},
 	"find_in_files":
 	{
@@ -746,6 +766,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}\n",
+			"1",
+			"10",
+			"324",
 			"youtube-player ",
 			"youtube-player",
 			"featured_trailbazers--img",
@@ -869,11 +893,7 @@
 			"\t\t",
 			".site-title a ",
 			"8",
-			"6",
-			".6",
-			"4",
-			"scrolling",
-			"W3TC Browser Cache"
+			"6"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -901,7 +921,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -926,27 +946,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1955.0,
+						"translation.y": 396.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "wp-content/themes/understrap/single-genaero_videos.php",
+					"file": "wp-content/themes/understrap/404.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4857,
+						"buffer_size": 1583,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1928,
-								1928
+								1358,
+								1358
 							]
 						],
 						"settings":
@@ -955,27 +975,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 408.0,
+						"translation.y": 243.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
-					"semi_transient": false,
+					"file": "wp-content/themes/understrap/searchform.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 272714,
+						"buffer_size": 707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								272594,
-								272598
+								706,
+								105
 							]
 						],
 						"settings":
@@ -983,33 +1003,61 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 60771.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 7,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 3,
-					"file": "wp-content/themes/understrap/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19756,
+						"buffer_size": 5099,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1131,
-								1131
+								3061,
+								3061
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1314.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/understrap/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1903,
+								1903
 							]
 						],
 						"settings":
@@ -1019,14 +1067,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 102.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
 					"semi_transient": false,
 					"settings":
@@ -1048,56 +1096,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 549.0,
+						"translation.y": 41.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_members.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6567,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1906,
-								1906
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 283.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
+					"file": "wp-content/themes/understrap/sass/theme/custom/_members.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7988,
+						"buffer_size": 6640,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7403,
-								7628
+								4342,
+								4342
 							]
 						],
 						"settings":
@@ -1106,19 +1125,48 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 8526.0,
+						"translation.y": 4540.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
+					"file": "wp-content/themes/understrap/sass/theme/subpages/_subpage.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8095,
+								8095
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 10099.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9583,
+						"buffer_size": 10092,
 						"regions":
 						{
 						},
@@ -1135,56 +1183,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 9244.0,
+						"translation.y": 9783.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9916,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5835,
-								5835
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 708.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
+					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10511,
+						"buffer_size": 10014,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								607,
-								607
+								7475,
+								7475
 							]
 						],
 						"settings":
@@ -1193,43 +1212,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 368.0,
+						"translation.y": 9948.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 10,
-					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3233,
-								3233
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3073.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
 					"file": "wp-config.php",
 					"semi_transient": false,
 					"settings":
@@ -1241,28 +1231,8 @@
 						"selection":
 						[
 							[
-								608,
-								608
-							],
-							[
-								658,
-								658
-							],
-							[
-								728,
-								728
-							],
-							[
-								763,
-								763
-							],
-							[
-								823,
-								823
-							],
-							[
-								859,
-								859
+								372,
+								372
 							]
 						],
 						"settings":
@@ -1270,10 +1240,98 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2989,
+								2989
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4567.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "wp-content/themes/understrap/css/theme.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "wp-content/themes/understrap/header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1957,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1503,
+								1503
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 558.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
@@ -1281,7 +1339,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -1307,7 +1365,7 @@
 		"cols":
 		[
 			0.0,
-			0.48681111107,
+			0.554208714313,
 			1.0
 		],
 		"rows":
@@ -1775,7 +1833,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

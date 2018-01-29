@@ -11272,6 +11272,7 @@ a {
       transform: rotate(90deg); }
 
 .arrowbtn {
+  cursor: pointer;
   letter-spacing: 2px;
   position: relative;
   display: inline-block;
@@ -11306,6 +11307,7 @@ a {
       position: relative;
       transform: translate3D(0, -50%, 0); }
   .arrowbtn .arrowbtn-wrapper {
+    cursor: pointer;
     height: 100%;
     left: 0;
     line-height: 45px;
@@ -11330,6 +11332,7 @@ a {
       padding: 0 35px;
       width: 100%; }
     .arrowbtn .arrowbtn-wrapper input {
+      cursor: pointer;
       font-size: 0.9375rem !important;
       height: 100% !important;
       padding: 0 30px !important;
@@ -11338,6 +11341,7 @@ a {
         border: none !important;
         color: #fff; }
         .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:active, .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:focus, .arrowbtn .arrowbtn-wrapper input.wpcf7-submit:hover {
+          cursor: pointer;
           color: #fff !important;
           background-color: transparent  !important;
           border: none  !important;
@@ -11412,6 +11416,7 @@ a {
       position: relative;
       transform: translate3D(0, -50%, 0); }
   .defaultbtn .defaultbtn-wrapper {
+    cursor: pointer;
     height: 100%;
     left: 0;
     line-height: 45px;
@@ -12521,9 +12526,6 @@ a#genaero-facebook-button {
   -moz-filter: grayscale(0);
   filter: grayscale(0); }
 
-.featured_trailbazers--img .post-thumbnail img {
-  height: 120%; }
-
 .featured_event .post-thumbnail {
   height: 250px !important; }
   .featured_event .post-thumbnail img {
@@ -12537,15 +12539,22 @@ a#genaero-facebook-button {
 
 .featured--upcoming_event {
   margin-bottom: 20px; }
-  .featured--upcoming_event .post_date + p {
-    margin-bottom: 15px; }
 
-.post_date {
+.featured_trailbazers--img .post-thumbnail img {
+  height: 120%; }
+
+.featured_event .post-thumbnail {
+  height: 250px !important; }
+  .featured_event .post-thumbnail img {
+    height: 300px; }
+  .featured_event .post-thumbnail .post_date + p {
+    margin-bottom: 15px; }
+.featured_event .post_date {
   color: #00aed4;
   font-size: 14px;
   font-weight: 400;
   line-height: 100%; }
-  .post_date i {
+  .featured_event .post_date i {
     margin-right: 5px; }
 
 .typewriter {
@@ -12553,6 +12562,11 @@ a#genaero-facebook-button {
   font-size: 1.6rem;
   font-weight: 400;
   text-transform: uppercase; }
+
+#video {
+  z-index: -1;
+  width: 100%;
+  height: 90%; }
 
 .sub_main {
   background-color: #eee; }
@@ -12994,6 +13008,22 @@ a.videos_loadmore {
   .youtube-player .back-to-main {
     margin: 0 auto;
     text-align: center; }
+
+.error-404.not-found {
+  margin: 100px auto; }
+  .error-404.not-found .assistive-text {
+    display: none; }
+  .error-404.not-found input#searchsubmit {
+    background-color: #004890;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0; }
+  .error-404.not-found input#s {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0; }
 
 .entry-content {
   margin-bottom: 50px; }
@@ -13583,6 +13613,7 @@ a.videos_loadmore {
   .dashboard_content input[type="text"],
   .dashboard_content input[type="password"],
   .dashboard_content input[type="file"],
+  .dashboard_content select,
   .dashboard_content textarea {
     background-color: #ffffff1f;
     color: #fff;
@@ -13598,11 +13629,16 @@ a.videos_loadmore {
     .dashboard_content input[type="text"]:focus,
     .dashboard_content input[type="password"]:focus,
     .dashboard_content input[type="file"]:focus,
+    .dashboard_content select:focus,
     .dashboard_content textarea:focus {
       background-color: #ffffff1f;
       border: none;
       color: #fff;
       outline: none; }
+  .dashboard_content select {
+    padding: 10px; }
+    .dashboard_content select option {
+      color: #000; }
   .dashboard_content textarea {
     border: none;
     color: #fff;
