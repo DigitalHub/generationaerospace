@@ -10,12 +10,13 @@ $table = $wpdb->prefix.'genaero_members';
 
 if($loggedin == 1) :
 	$username = $_SESSION['username'];
-	$sql = $wpdb->prepare("SELECT fullname,photo FROM $table WHERE username = %s", $username);
+	$sql = $wpdb->prepare("SELECT fullname,photo,is_fb_user FROM $table WHERE username = %s", $username);
 	$results = $wpdb->get_results($sql);
 	if($wpdb->num_rows > 0) {
 		foreach($results as $result) {
 			$fullname = $result->fullname;
 			$photo = $result->photo;
+			$is_fb_user = $result->is_fb_user;
 		}
 	}
 
@@ -25,8 +26,10 @@ if($loggedin == 1) :
 	if($photo === '' || $photo === NULL) {
 		$photo = get_template_directory_uri().'/img/default-photo.png';
 	} else {
-		$wordpress_upload_dir = wp_upload_dir();
-		$photo = $wordpress_upload_dir['baseurl'] . '/genaero-members/' . $photo;
+		if($is_fb_user == 0) {
+			$wordpress_upload_dir = wp_upload_dir();
+			$photo = $wordpress_upload_dir['baseurl'] . '/genaero-members/' . $photo;
+		}
 	}
 	?>
 	<div class="site-toplogin_btn">
