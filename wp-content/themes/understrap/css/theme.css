@@ -12890,6 +12890,9 @@ a.j-paginate.juicer-button {
     .single-genaero_experiments .fancybox-slide > * .fancybox-close-small:focus:after {
       outline: none; }
 
+.past_events {
+  display: none; }
+
 .ongoing_events,
 .past_events {
   margin-bottom: 25px; }
