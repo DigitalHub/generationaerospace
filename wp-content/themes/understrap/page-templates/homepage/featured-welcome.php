@@ -12,7 +12,7 @@
 	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-welcome.jpg";
 	include(locate_template('loop-templates/home-hubbase.php')); ?>
 	<!-- <video preload="none" playsinline autoplay muted loop id="video">
-		<source src="<?php echo get_template_directory_uri(); ?>/img/GenAero-welcome.mp4" type="video/mp4">
+		<source src="<?php //echo get_template_directory_uri(); ?>/img/GenAero-welcome.mp4" type="video/mp4">
 		</video> -->
 		<div class="container welcome_content">
 			<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">

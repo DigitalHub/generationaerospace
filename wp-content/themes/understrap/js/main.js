@@ -49,18 +49,18 @@ jQuery(document).ready(function($) {
     var scrollLock = false;
     var videoScrollLock = false;
 
-    var playPromise = $('#video').play();
+  //   var playPromise = $('#video').play();
 
-    if (playPromise !== undefined) {
-        playPromise.then(_ => {
-      // Automatic playback started!
-      // Show playing UI.
-  })
-        .catch(error => {
-      // Auto-play was prevented
-      // Show paused UI.
-  });
-    }
+  //   if (playPromise !== undefined) {
+  //       playPromise.then(_ => {
+  //     // Automatic playback started!
+  //     // Show playing UI.
+  // })
+  //       .catch(error => {
+  //     // Auto-play was prevented
+  //     // Show paused UI.
+  // });
+  //   }
 
     jQuery(window).scroll(function() {
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
