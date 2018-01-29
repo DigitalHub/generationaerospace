@@ -13,7 +13,7 @@ if ( ! is_home() && is_front_page() ) { ?>
 				<path d="M82.27241335952166 2.4999999999999996Q86.60254037844386 0 90.93266739736606 2.4999999999999996L168.87495373796554 47.5Q173.20508075688772 50 173.20508075688772 55L173.20508075688772 145Q173.20508075688772 150 168.87495373796554 152.5L90.93266739736606 197.5Q86.60254037844386 200 82.27241335952166 197.5L4.330127018922194 152.5Q0 150 0 145L0 55Q0 50 4.330127018922194 47.5Z"></path>
 			</svg>
 			<i class="fal bounce"></i>
-		</div>
+		</div> 
 		<span>scroll</span>
 	</div>
 </a>
@@ -40,7 +40,7 @@ if ( ! is_home() && is_front_page() ) { ?>
 		<span>scroll</span>
 	</div>
 </a> -->
-<?php } elseif (is_page_template( 'page-events.php' ) || is_page_template( 'page-experiments.php' ) || is_page_template( 'page-trailblazers.php' ) || is_page_template( 'page-vault.php' ) || is_page_template( 'page-videos.php' )) { ?>
+<?php } elseif (is_page_template( 'page-events.php' ) || is_page_template( 'page-experiments.php' ) || is_page_template( 'page-trailblazers.php' ) || is_page_template( 'page-vault.php' ) || is_page_template( 'page-videos.php' ) || is_singular( array( 'genaero_videos', 'genaero_experiments', 'genaero_events', 'genaero_vault' ) )) { ?>
 <a id="link" class="scrolling">
 	<div class="headerbutt scroll_butt">
 		<div class="hexagon-icon">

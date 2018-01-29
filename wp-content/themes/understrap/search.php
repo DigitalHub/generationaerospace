@@ -38,15 +38,17 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 content-area" id="primary">
 					<main class="site-main" id="main">
-						<?php 
-						if ( have_posts() ) : 
-							while ( have_posts() ) : the_post();
-								get_template_part( 'loop-templates/content', 'search' );
-							endwhile;
-						else : 
-							get_template_part( 'loop-templates/content', 'none' ); 
-						endif;
-						?>
+						<div class="row">
+							<?php 
+							if ( have_posts() ) : 
+								while ( have_posts() ) : the_post();
+									get_template_part( 'loop-templates/content', 'search' );
+								endwhile;
+							else : 
+								get_template_part( 'loop-templates/content', 'none' ); 
+							endif;
+							?>
+						</div>
 					</main><!-- #main -->
 					<!-- The pagination component -->
 					<?php understrap_pagination(); ?>

@@ -11540,6 +11540,17 @@ a#genaero-facebook-button {
   a#genaero-facebook-button:hover {
     text-decoration: none; }
 
+.pagination {
+  justify-content: center; }
+  .pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: #004890;
+    border-color: #004890; }
+  .pagination .page-item .page-link {
+    color: #004890; }
+    .pagination .page-item .page-link:focus, .pagination .page-item .page-link:hover {
+      color: #004890; }
+
 .hexagon {
   cursor: pointer;
   height: 55px;
@@ -13635,6 +13646,7 @@ a.videos_loadmore {
       outline: none; }
   .dashboard_content input[type="date"] {
     background: #ffffff1f;
+    color: #fff;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
