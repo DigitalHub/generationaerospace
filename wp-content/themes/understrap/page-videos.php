@@ -41,7 +41,7 @@ if($featured_month) :
 	$post_id = get_the_ID();
 	wp_reset_postdata();
 endif;
-$featured_month_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.favourite, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t1.link_id = '%s' AND t3.post_status = 'publish'", $post_id);
+$featured_month_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.title as video_title, t1.description as video_desc, t1.youtube as video_link, t1.favourite, t3.post_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t2.is_fb_user as is_fb_user FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t1.link_id = '%s' AND t3.post_status = 'publish'", $post_id);
 
 $featured_month_results = $wpdb->get_results($featured_month_sql);
 $featured_month_count = $wpdb->num_rows;
@@ -62,9 +62,6 @@ if($featured_month_count > 0) {
 		$profile_pic = $video->profile_pic;
 		if($profile_pic === '' || $profile_pic === NULL) {
 			$profile_pic = get_template_directory_uri().'/img/default-photo.png';
-		} else {
-			$wordpress_upload_dir = wp_upload_dir();
-			$profile_pic = $wordpress_upload_dir['baseurl'] . '/genaero-members/' . $profile_pic;
 		}
 
 		$youtube = $video->video_link;
@@ -76,7 +73,7 @@ if($featured_month_count > 0) {
 }
 
 //featured videos loop
-$featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id INNER JOIN $wpdb->posts t4 ON t4.id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' AND t4.post_status = 'publish' ORDER BY t1.create_date DESC LIMIT 3";
+$featured_videos_sql = "SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.fullname as posted_by, t2.photo as profile_pic, t3.meta_value as featured, t2.is_fb_user as is_fb_user FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->postmeta t3 ON t3.post_id = t1.link_id INNER JOIN $wpdb->posts t4 ON t4.id = t1.link_id WHERE t3.meta_key = 'featured' AND t3.meta_value = '1' AND t4.post_status = 'publish' ORDER BY t1.create_date DESC LIMIT 3";
 
 $featured_videos_results = $wpdb->get_results($featured_videos_sql);
 $featured_videos_count = $wpdb->num_rows;
@@ -88,7 +85,7 @@ $total_count_sql = "SELECT COUNT(*) AS totalcount FROM $videos_table t1 INNER JO
 $total_count_result = $wpdb->get_results($total_count_sql);
 $totalcount = $total_count_result[0]->totalcount;
 
-$all_videos_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.username as posted_by_username, t2.fullname as posted_by, t2.photo as profile_pic FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t1.create_date DESC LIMIT %d",$posts_per_page);
+$all_videos_sql = $wpdb->prepare("SELECT t1.id as video_id, t1.link_id, t1.title as video_title, t1.youtube as video_link, t1.favourite, t1.create_date as posted_date, t2.username as posted_by_username, t2.fullname as posted_by, t2.photo as profile_pic, t2.is_fb_user as is_fb_user FROM $videos_table t1 INNER JOIN $members_table t2 ON t1.member_id = t2.id INNER JOIN $wpdb->posts t3 ON t1.link_id = t3.id WHERE t3.post_status = 'publish' ORDER BY t1.create_date DESC LIMIT %d",$posts_per_page);
 
 $all_videos_results = $wpdb->get_results($all_videos_sql);
 $all_videos_count = $wpdb->num_rows;

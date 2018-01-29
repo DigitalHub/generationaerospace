@@ -14,12 +14,10 @@ $results = $wpdb->get_results($sql);
 if($wpdb->num_rows > 0) {
 	$fullname = $results[0]->fullname;
 	$photo = $results[0]->photo;
+	$is_fb_user = $results[0]->is_fb_user;
 
 	if($photo === '' || $photo === NULL) {
 		$photo = get_template_directory_uri().'/img/default-photo.png';
-	} else {
-		$wordpress_upload_dir = wp_upload_dir();
-		$photo = $wordpress_upload_dir['baseurl'] . '/genaero-members/' . $photo;
 	}
 }
 
