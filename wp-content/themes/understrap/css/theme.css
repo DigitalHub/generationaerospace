@@ -12417,7 +12417,8 @@ a#genaero-facebook-button {
     .featured_experiment--keywords a .post-thumbnail h3 {
       bottom: 15px;
       left: 15px;
-      position: absolute; }
+      position: absolute;
+      width: calc(100% - 30px); }
   .featured_experiment--keywords a:hover .bg-opaque {
     opacity: 0;
     filter: alpha(opacity=0); }
@@ -13617,10 +13618,6 @@ a.videos_loadmore {
   .dashboard_content textarea {
     background-color: #ffffff1f;
     color: #fff;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
     border: none;
     display: block;
     float: right;
@@ -13635,6 +13632,16 @@ a.videos_loadmore {
       border: none;
       color: #fff;
       outline: none; }
+  .dashboard_content input[type="date"] {
+    background: #ffffff1f;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    display: block;
+    float: right;
+    padding: 0 10px;
+    width: calc(100% - 115px); }
   .dashboard_content select {
     padding: 10px; }
     .dashboard_content select option {

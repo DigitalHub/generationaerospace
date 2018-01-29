@@ -267,7 +267,6 @@
 	textarea {
 		background-color: #ffffff1f;
 		color: $white;
-		@include border-radius(0);
 		border: none;
 		display: block;
 		float: right;
@@ -280,6 +279,17 @@
 			color: $white;
 			outline: none;
 		}
+	}
+	
+	input[type="date"] {
+		background: #ffffff1f;
+		color: $white;
+		@include border-radius(0);
+		display: block;
+		float: right;
+		padding: 0 10px;
+		width: calc(100% - 115px);
+
 	}
 
 	select {

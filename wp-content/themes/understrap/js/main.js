@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
     var scrollLock = false;
     var videoScrollLock = false;
 
-  //   var playPromise = jQuery('#video').play();
+  //   var playPromise = $('#video').play();
 
   //   if (playPromise !== undefined) {
   //       playPromise.then(_ => {
@@ -59,8 +59,8 @@ jQuery(document).ready(function($) {
   //       .catch(error => {
   //     // Auto-play was prevented
   //     // Show paused UI.
-  // }); 
-    // }
+  // });
+  //   }
 
     jQuery(window).scroll(function() {
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
