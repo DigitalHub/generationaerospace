@@ -113,6 +113,7 @@
 .profile_sidebar {
 	.profil_pic {
 		@include border-radius(100px);
+		height: 100px;
 		margin: 0 auto 10px;
 		overflow: hidden;
 		width: 100px;
@@ -304,7 +305,7 @@
 
 		input[type="file"] {
 			background-color: transparent;
-			width: calc(100% - 220px);
+			// width: calc(100% - 220px);
 		}
 	}
 

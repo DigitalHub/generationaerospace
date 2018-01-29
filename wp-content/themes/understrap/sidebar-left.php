@@ -17,6 +17,9 @@ if($wpdb->num_rows > 0) {
 
 	if($photo === '' || $photo === NULL) {
 		$photo = get_template_directory_uri().'/img/default-photo.png';
+	} else {
+		$wordpress_upload_dir = wp_upload_dir();
+		$photo = $wordpress_upload_dir['baseurl'] . '/genaero-members/' . $photo;
 	}
 }
 
@@ -33,7 +36,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		<?php endif; ?>
 
 		<div class="profil_pic">
-			<img src="<?=$photo?>" id="profile_photo" alt="<?=$fullname?>'s Profile Photo" width="100px">
+			<img src="<?=$photo?>" id="profile_photo" alt="<?=$fullname?>'s Profile Photo" width="100px" height="100px">
 		</div>
 		<h3><?=$fullname?></h3>
 		<?php dynamic_sidebar( 'left-sidebar' ); ?>

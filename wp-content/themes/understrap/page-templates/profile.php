@@ -14,6 +14,21 @@ global $wpdb;
 $table = $wpdb->prefix.'genaero_members';
 $username = $_SESSION['username'];
 
+//function to generate response
+function my_contact_form_generate_response($type, $message){
+	global $response;
+	if($type === 'error')
+		$response = "<div class='error'>{$message}</div>";
+	if($type === 'success')
+		$response = "<div class='success'>{$message}</div>";
+}
+
+//response messages
+$large_file = "File size is too large. Please upload a photo that is less than 1MB in size";
+$wrong_type = "Wrong file type. Please upload image files with extension gif, jpg, jpeg and png only.";
+$try_again = "There was an error in uploading your profile photo. Please try again.";
+$success = "Your profile has been updated.";
+
 if($_POST['profile_submit']) {
 	$fullname = $wpdb->escape($_POST['profile_fullname']);
 	$school = $wpdb->escape($_POST['profile_school']);
@@ -24,20 +39,60 @@ if($_POST['profile_submit']) {
 	$facebook = $wpdb->escape($_POST['profile_facebook']);
 	$instagram = $wpdb->escape($_POST['profile_instagram']);
 	$bio = $wpdb->escape($_POST['profile_bio']);
-	// $photo = $wpdb->escape($_POST['profile_photo']);
+	// $photo = $wpdb->escape($_POST['profile_photo_file']);
+	$photo = $_FILES['profile_photo_file']['name'];
 	$email = $wpdb->escape($_POST['profile_email']);
 	$password = $wpdb->escape($_POST['profile_password']);
 	$is_fb_user = $wpdb->escape($_POST['profile_is_fb_user']);
 
-	//if is not fb user and password field is not empty, save password
-	if(!$is_fb_user && $password !== NULL && $password !== '') {
-		$password = wp_hash_password($password);
-		$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,email=%s,password=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$email,$password,$username));
-		$wpdb->query($sql);
+	if($_FILES['profile_photo_file']['name']) {
+		$allowedExts = array("gif", "jpeg", "jpg", "png");
+		$temp = explode(".", $_FILES["profile_photo_file"]["name"]);
+		$extension = end($temp);
+		if ((($_FILES["profile_photo_file"]["type"] == "image/gif") || ($_FILES["profile_photo_file"]["type"] == "image/jpeg") || ($_FILES["profile_photo_file"]["type"] == "image/jpg") || ($_FILES["profile_photo_file"]["type"] == "image/pjpeg") || ($_FILES["profile_photo_file"]["type"] == "image/x-png") || ($_FILES["profile_photo_file"]["type"] == "image/png")) && in_array($extension, $allowedExts)) {
+
+			$filename = $_FILES['profile_photo_file']['name'];
+			$filetemp = $_FILES['profile_photo_file']['tmp_name'];
+			$filetype = $_FILES['profile_photo_file']['type'];
+			$filesize = $_FILES['profile_photo_file']['size'];
+
+			if($filesize > (1024000)) {
+				my_contact_form_generate_response("error", $large_file);
+			} else {
+				$wordpress_upload_dir = wp_upload_dir();
+				$newfilename = $username.'-profile.'.end($temp);
+				$new_file_path = $wordpress_upload_dir['basedir'] . '/genaero-members/' . $newfilename;
+
+				if(move_uploaded_file($filetemp, $new_file_path)) {
+					my_contact_form_generate_response("success", $success);
+
+					if(!$is_fb_user && $password !== NULL && $password !== '') {
+						$password = wp_hash_password($password);
+						$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,photo=%s,email=%s,password=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$newfilename,$email,$password,$username));
+						$wpdb->query($sql);
+					} else {
+						$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,photo=%s,email=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$newfilename,$email,$username));
+						$wpdb->query($sql);
+					}					
+				} else {
+					my_contact_form_generate_response("error", $try_again);
+				}
+			}
+		} else {
+			my_contact_form_generate_response("error", $wrong_type);
+		}
 	} else {
-		$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,email=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$email,$username));
-		$wpdb->query($sql);
+	//if is not fb user and password field is not empty, save password
+		if(!$is_fb_user && $password !== NULL && $password !== '') {
+			$password = wp_hash_password($password);
+			$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,email=%s,password=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$email,$password,$username));
+			$wpdb->query($sql);
+		} else {
+			$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,email=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$email,$username));
+			$wpdb->query($sql);
+		}
 	}
+
 }
 
 $sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
@@ -72,7 +127,7 @@ if($wpdb->num_rows > 0) {
 			<?php get_sidebar( 'left' ); ?>
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
-					<form id="profile_form" method="post" action="">
+					<form id="profile_form" method="post" action="" enctype="multipart/form-data">
 						<div class="dashboard_content--title-half">
 							<h4>My Profile</h4>
 						</div>
@@ -81,6 +136,9 @@ if($wpdb->num_rows > 0) {
 						</div>
 						<div class="clear"></div>
 						<div class="profile_form--wrapper">
+							<?php echo $response; ?>
+							<div class="clear"></div>
+
 							<label for="fullname">Full Name*</label>
 							<input type="text" name="profile_fullname" id="profile_fullname" value="<?=$fullname?>" required>
 							<div class="clear"></div>
@@ -123,8 +181,8 @@ if($wpdb->num_rows > 0) {
 							<div class="clear"></div>
 							<div class="profile_photo--wrapper">
 								<label for="profile_photo">Profile Photo</label>
-								<img src="<?=$photo?>" id="profile_photo" alt="<?=$fullname?>'s Profile Photo" width="100px">
-								<input type="file" name="profile_photo" accept="image/*">
+								<!-- <img src="<?=$photo?>" id="profile_photo" alt="<?=$fullname?>'s Profile Photo" width="100px"> -->
+								<input type="file" name="profile_photo_file" id="profile_photo_file" accept="image/*">
 								<!-- TODO: STEF TO ADD PHOTO PREVIEW AND UPLOAD FUNCTION -->
 							</div>
 							<div class="clear"></div><br>
