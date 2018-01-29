@@ -158,21 +158,12 @@ function search_video() {
 	$results = $wpdb->get_results($sql);
 	$results_count = $wpdb->num_rows;
 
-	// TODO: STEF TO FIX LOAD MORE ISSUE
 	if($results_count > 0) {
-		$count = 0;
+		echo '<div class="row video-row">';
 		foreach($results as $video) {
-			if($count % 3 == 0) :
-				echo $count > 0 ? '</div>' : '';
-				echo '<div class="row">';
-			endif;
 			include(locate_template('loop-templates/tile-video.php'));
-			$count++;
 		}
-
-		if($count % 3 !== 0) {
-			echo '</div>';
-		}
+		echo '</div>';
 	} else {
 		echo 'No results found.';
 	}
@@ -213,21 +204,12 @@ function search_experiment() {
 
 	$post_count = $the_query->post_count;
 
-	// TODO: STEF TO FIX LOAD MORE ISSUE
 	if($the_query->have_posts()) {
-		$count = 0;
+		echo '<div class="row loadmore-row">';
 		while($the_query->have_posts()) : $the_query->the_post();
-			if($count % $posts_per_page == 0) :
-				echo $count > 0 ? '</div>' : '';
-				echo '<div class="row">';
-			endif;
 			get_template_part( 'loop-templates/tile', $template );
-			$count++;
 		endwhile;
-
-		if($count % $posts_per_page !== 0) {
-			echo '</div>';
-		}
+		echo '</div>';
 	} else {
 		echo 'No results found.';
 	}
