@@ -660,5 +660,26 @@ a#genaero-facebook-button {
 	}
 }
 
+.pagination {
+	justify-content: center;
+	.page-item {
+		&.active {
+			.page-link {
+				color: #fff;
+				background-color: $rrblue;
+				border-color: $rrblue;
+			}
+		}
+
+		.page-link {
+			color: $rrblue;
+
+			&:focus, &:hover {
+				color: $rrblue;
+			}
+		}
+	}
+}
+
 //*******************************************//
 //** Base Buttons Ends **//
