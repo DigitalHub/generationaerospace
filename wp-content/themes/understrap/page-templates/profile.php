@@ -39,8 +39,6 @@ if($_POST['profile_submit']) {
 	$facebook = $wpdb->escape($_POST['profile_facebook']);
 	$instagram = $wpdb->escape($_POST['profile_instagram']);
 	$bio = $wpdb->escape($_POST['profile_bio']);
-	// $photo = $wpdb->escape($_POST['profile_photo_file']);
-	$photo = $_FILES['profile_photo_file']['name'];
 	$email = $wpdb->escape($_POST['profile_email']);
 	$password = $wpdb->escape($_POST['profile_password']);
 	$is_fb_user = $wpdb->escape($_POST['profile_is_fb_user']);
@@ -61,19 +59,32 @@ if($_POST['profile_submit']) {
 			} else {
 				$wordpress_upload_dir = wp_upload_dir();
 				$newfilename = $username.'-profile.'.end($temp);
-				$new_file_path = $wordpress_upload_dir['basedir'] . '/genaero-members/' . $newfilename;
+				$new_file_path = $wordpress_upload_dir['path'] . '/' . $newfilename;
+				$new_file_url = $wordpress_upload_dir['url'] . '/' . $newfilename;
 
 				if(move_uploaded_file($filetemp, $new_file_path)) {
 					my_contact_form_generate_response("success", $success);
 
+					$upload_id = wp_insert_attachment( array(
+						'guid'           => $new_file_path, 
+						'post_mime_type' => $filetype,
+						'post_title'     => $username.'\'s Profile Photo',
+						'post_content'   => '',
+						'post_status'    => 'inherit'
+					), $new_file_path );
+
+					require_once( ABSPATH . 'wp-admin/includes/image.php' );
+
+					wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
+
 					if(!$is_fb_user && $password !== NULL && $password !== '') {
 						$password = wp_hash_password($password);
-						$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,photo=%s,email=%s,password=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$newfilename,$email,$password,$username));
+						$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,photo=%s,email=%s,password=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$new_file_url,$email,$password,$username));
 						$wpdb->query($sql);
 					} else {
-						$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,photo=%s,email=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$newfilename,$email,$username));
+						$sql = $wpdb->prepare("UPDATE $table SET fullname=%s,school=%s,phone=%s,address=%s,country=%s,birthdate=%s,facebook=%s,instagram=%s,bio=%s,photo=%s,email=%s WHERE username=%s", array($fullname,$school,$phone,$address,$country,$birthdate,$facebook,$instagram,$bio,$new_file_url,$email,$username));
 						$wpdb->query($sql);
-					}					
+					}	
 				} else {
 					my_contact_form_generate_response("error", $try_again);
 				}

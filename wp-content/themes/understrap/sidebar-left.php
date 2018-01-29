@@ -18,11 +18,6 @@ if($wpdb->num_rows > 0) {
 
 	if($photo === '' || $photo === NULL) {
 		$photo = get_template_directory_uri().'/img/default-photo.png';
-	} else {
-		if($is_fb_user == 0) {
-			$wordpress_upload_dir = wp_upload_dir();
-			$photo = $wordpress_upload_dir['baseurl'] . '/genaero-members/' . $photo;
-		}
 	}
 }
 

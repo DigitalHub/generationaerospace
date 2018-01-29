@@ -639,17 +639,4 @@ function random_code($limit)
     return substr(base_convert(sha1(uniqid(mt_rand())), 16, 36), 0, $limit);
 }
 
-function create_member_photos_dir() {
- 
-    $upload = wp_upload_dir();
-    $upload_dir = $upload['basedir'];
-    $upload_dir = $upload_dir . '/genaero-members';
-    if (! is_dir($upload_dir)) {
-       mkdir( $upload_dir, 0700 );
-    }
-}
- 
-register_activation_hook( __FILE__, 'create_member_photos_dir' );
-
-
 ?>
