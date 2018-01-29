@@ -306,6 +306,13 @@ jQuery(document).ready(function($) {
         }); 
     });
 
+    // $('#profile_photo_file').change(function() {
+    //     var file = $(this).val();
+    //     if(file.length !== 0) {
+    //         $('#profile_photo').attr('src', file);
+    //     }
+    // });
+
     $('.delete-fav-video').on('click', function() {
         var favID = $(this).data('fav-id');
         $.ajax({

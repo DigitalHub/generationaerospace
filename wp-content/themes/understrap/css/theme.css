@@ -13510,6 +13510,7 @@ a.videos_loadmore {
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
   border-radius: 100px;
+  height: 100px;
   margin: 0 auto 10px;
   overflow: hidden;
   width: 100px; }
@@ -13661,8 +13662,7 @@ a.videos_loadmore {
     float: left;
     margin-left: 6px; }
   .dashboard_content .profile_photo--wrapper input[type="file"] {
-    background-color: transparent;
-    width: calc(100% - 220px); }
+    background-color: transparent; }
   .dashboard_content input#profile_password {
     margin: 0;
     width: calc(100% - 195px); }

@@ -24,6 +24,9 @@ if($loggedin == 1) :
 	}
 	if($photo === '' || $photo === NULL) {
 		$photo = get_template_directory_uri().'/img/default-photo.png';
+	} else {
+		$wordpress_upload_dir = wp_upload_dir();
+		$photo = $wordpress_upload_dir['baseurl'] . '/genaero-members/' . $photo;
 	}
 	?>
 	<div class="site-toplogin_btn">

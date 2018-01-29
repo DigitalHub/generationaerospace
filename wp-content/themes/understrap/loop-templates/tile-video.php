@@ -28,6 +28,9 @@ $permalink = get_permalink($video->link_id);
 $profile_pic = $video->profile_pic;
 if($profile_pic === '' || $profile_pic === NULL) {
 	$profile_pic = get_template_directory_uri().'/img/default-photo.png';
+} else {
+	$wordpress_upload_dir = wp_upload_dir();
+	$profile_pic = $wordpress_upload_dir['baseurl'] . '/genaero-members/' . $profile_pic;
 }
 
 $youtube = $video->video_link;
