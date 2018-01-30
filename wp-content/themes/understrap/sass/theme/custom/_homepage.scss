@@ -16,7 +16,7 @@
 	z-index: 1000000;
 }
 
-#lottie{
+#lottie {
 	background-color: $black;
 	width: 120%;
 	height: 120%;
@@ -629,12 +629,12 @@
 		}
 
 		#video {
-			// position: fixed;
-			// top: 0;
-			// left: 0;
-			// bottom: 0;
-			// right: 0;
-			// overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			overflow: hidden;
 			z-index: -1;
 			width: 100%;
 			height: 90%;

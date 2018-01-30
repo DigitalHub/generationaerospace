@@ -13,7 +13,7 @@ $totalcount = 0;
 <button class="close-single-experiment"></button>
 <div class="<?php echo $page_template ?> container-fluid single_experiment">
 	<div class="row">
-		<div class="order-xl-1 col-xl-7 order-lg-1 col-lg-7 order-md-1 col-md-7 order-sm-2 col-sm-12 order-xs-2 col-xs-12 single_experiment--methods">
+		<div class="order-xl-1 col-xl-7 order-lg-1 col-lg-7 order-md-1 col-md-7 order-sm-2 col-sm-12 order-2 col-xs-12 single_experiment--methods">
 			<div class="col-xl-10 offset-xl-1 col-lg-11 offset-lg-1 col-md-12 col-sm-12 col-xs-12 single_experiment--methods_wrapper">
 				<div class="row single_experiment--row">
 					<h1 class="single_experiment_header">STEPS_</h1><br/>
@@ -65,7 +65,7 @@ $totalcount = 0;
 			</div> <!-- single_experiment--row -->
 		</div><!-- single_experiment--methods_wrapper -->
 	</div><!-- single_experiment--methods -->
-	<div class="order-xl-2 col-xl-5 order-lg-2 col-lg-5 order-md-2 col-md-5 order-sm-1 col-sm-12 order-xs-1 col-xs-12 single_experiment--materials">
+	<div class="order-xl-2 col-xl-5 order-lg-2 col-lg-5 order-md-2 col-md-5 order-sm-1 col-sm-12 order-1 col-xs-12 single_experiment--materials">
 		<div class="row single_experiment--row">
 			<div class="single_experiment--col col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
 
