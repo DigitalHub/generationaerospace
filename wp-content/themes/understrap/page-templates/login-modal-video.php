@@ -42,10 +42,16 @@ if ($_POST['login_submit']) {
 				session_start();
 				$_SESSION['username'] = $username;
 				$_SESSION['user_id'] = $user_id;
-				$exp_ID = get_the_ID();
 
-				$fav_exp_table = $wpdb->prefix.'genaero_favourite_experiments';
-				$wpdb->query($wpdb->prepare("INSERT INTO $fav_exp_table (member_id, experiment_id) VALUES (%d, %d)",$user_id, $exp_ID));
+				$videos_table = $wpdb->prefix.'genaero_videos';
+				$sql = $wpdb->prepare("SELECT id as video_id FROM $videos_table WHERE link_id = '%s'", get_the_ID());
+				$results = $wpdb->get_results($sql);
+				if($wpdb->num_rows > 0) { 
+					$video_id = $results[0]->video_id;
+				}
+
+				$fav_vid_table = $wpdb->prefix.'genaero_favourite_videos';
+				$wpdb->query($wpdb->prepare("INSERT INTO $fav_vid_table (member_id, video_id) VALUES (%d, %d)",$user_id, $video_id));
 
 				echo '<script>window.location="'.get_permalink().'"</script>';
 				exit; 
@@ -59,6 +65,7 @@ if ($_POST['login_submit']) {
 	}				
 }
 
+echo 'vid id: '.$video_id;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
@@ -71,7 +78,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row login-row">
 				<div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-xs-12 content-area" id="primary">
 					<div class="text-center">
-						<!-- TODO: STEF TO ADD REGISTER FANCYBOX -->
 						<a href="<?php bloginfo('url') ?>/sign-up" class="defaultbtn btn--color">
 							<div class="defaultbtn-wrapper"><span>New to GenAero?</span></div>
 						</a>
@@ -82,6 +88,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<form id="login_form" method="post" action="">
 						<input type="text" name="login_username" id="login_username" placeholder="Username" minlength="4" maxlength="20" required><br>
 						<input type="password" name="login_password" id="login_password" placeholder="Password" title="Password" minlength="6" maxlength="14" autocomplete="new-password" required><br><br>
+						<input type="hidden" value="<?=$video_id?>">
 						<div class="clear"></div>
 						<div class="login_submit--wrap arrowbtn btn--color">
 							<span class="fas fa-long-arrow-alt-right icon-left"></span>	

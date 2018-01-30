@@ -78,9 +78,29 @@ add_action("wp_ajax_nopriv_fav_this_video", "fav_this_video");
 
 function fav_this_video() {
 	global $wpdb;
-	// $video_id = $_POST['video_id'];
-	// $fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
-	// $wpdb->delete($fav_videos_table,array('id' => $favID));
+	$vidID = $_POST['vidID'];
+	$userID = $_POST['userID'];
+	$fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
+	$sql = $wpdb->prepare("INSERT INTO $fav_videos_table (member_id, video_id) VALUES (%s,%s)", $userID, $vidID);
+	$wpdb->query($sql);
+	echo 'success';
+
+	wp_die();
+}
+
+add_action("wp_ajax_unfav_this_video", "unfav_this_video");
+add_action("wp_ajax_nopriv_unfav_this_video", "unfav_this_video");
+
+function unfav_this_video() {
+	global $wpdb;
+	$vidID = $_POST['vidID'];
+	$userID = $_POST['userID'];
+	$fav_videos_table = $wpdb->prefix . 'genaero_favourite_videos';
+	$sql = $wpdb->prepare("DELETE FROM $fav_videos_table WHERE member_id='%s' AND video_id='%s'", $userID, $vidID);
+	$wpdb->query($sql);
+	echo 'success';
+
+	wp_die();
 }
 
 add_action("wp_ajax_fav_this_experiment", "fav_this_experiment");
