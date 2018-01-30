@@ -7,22 +7,8 @@ jQuery(window).load(function(){
     if(elem.length) {
         console.log('loaded');
         jQuery('.pre--imgload').remove(); 
+        anim.playSegments(true);
     }
-
-
-    // // detect first layer before svg loaded
-    // var elem = jQuery('#lottie');
-    // if (!elem.prop('complete')) {
-    //     console.log("Waiting to be loaded!");
-    //     elem.on('load', function() {
-    //         jQuery('.pre--imgload').remove();
-    //         console.log("Loaded!");
-    //         console.log(this.complete);
-    //     });
-    // } else {
-    //     jQuery('.pre--imgload').remove(); 
-    //     console.log("Already loaded!");
-    // }
 
     // load progression percentage
     jQuery('.count').each(function() {
@@ -38,11 +24,11 @@ jQuery(window).load(function(){
     });
 
     // to remove loading svg after loaded 
-    // setInterval(function(){
-    //     jQuery('#loadingbay').fadeOut(function(){ 
-    //         jQuery(this).remove();
-    //     });
-    // }, 4000);
+    setInterval(function(){
+        jQuery('#loadingbay').fadeOut(function(){ 
+            jQuery(this).remove();
+        });
+    }, 4000);
 });
 
 document.addEventListener("DOMContentLoaded", function() {

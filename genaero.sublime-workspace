@@ -431,19 +431,36 @@
 			"file": "wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
 			"settings":
 			{
-				"buffer_size": 272852,
+				"buffer_size": 272739,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "jQuery.noConflict();\n\n\njQuery(window).load(function(){\n    var images = jQuery(\"#lo\n\n    jQuery('.count').each(function() {\n        jQuery(this).prop('Counter', 0).animate({\n            Counter: 100\n        }, {\n            duration: 3500,\n            easing: 'swing',\n            step: function(now) {\n                jQuery(this).text(Math.ceil(now));\n            }\n        });\n    });\n    // setInterval(function(){\n    //     jQuery('#loadingbay').fadeOut(function(){ \n    //         jQuery(this).remove();\n    //     });\n    // }, 4000);\n});\n\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n    //Light YouTube Embed\n    var div, n, v = document.getElementsByClassName(\"youtube-player\");\n    for (n = 0; n < v.length; n++) {\n        div = document.createElement(\"div\");\n        div.setAttribute(\"data-id\", v[n].dataset.id);\n        div.innerHTML = labnolThumb(v[n].dataset.id);\n        div.onclick = labnolIframe;\n        v[n].appendChild(div);\n    }\n});\n\nfunction labnolThumb(id) {\n    var thumb = '<img src=\"https://i.ytimg.com/vi/ID/hqdefault.jpg\">',\n    play = '<div class=\"play\"><i class=\"fas fa-play\"></i></div>';\n    return thumb.replace(\"ID\", id) + play;\n}\n\nfunction labnolIframe() {\n    var iframe = document.createElement(\"iframe\");\n    var embed = \"https://www.youtube.com/embed/ID?autoplay=1\";\n    iframe.setAttribute(\"src\", embed.replace(\"ID\", this.dataset.id));\n    iframe.setAttribute(\"frameborder\", \"0\");\n    iframe.setAttribute(\"allowfullscreen\", \"1\");\n    this.parentNode.replaceChild(iframe, this);\n}\n\njQuery(document).ready(function($) {\n    var scrollLock = false;\n    var videoScrollLock = false;\n\n  //   var playPromise = $('#video').play();\n\n  //   if (playPromise !== undefined) {\n  //       playPromise.then(_ => {\n  //     // Automatic playback started!\n  //     // Show playing UI.\n  // })\n  //       .catch(error => {\n  //     // Auto-play was prevented\n  //     // Show paused UI.\n  // });\n  //   }\n\n  jQuery(window).scroll(function() {\n    if($(window).scrollTop() + $(window).height() == $(document).height()) {\n        jQuery('#link').addClass('up--button');\n        jQuery('#link').removeClass('down--button');\n    } else {\n        jQuery('#link').removeClass('up--button');\n        jQuery('#link').addClass('down--button');\n    }\n\n    if($('.videos_loadmore').length && ($('.videos_loadmore').offset().top - $(window).scrollTop()) < ($(window).height()/1.5)) {\n        //loadmore function for videos page\n        var button = $('.videos_loadmore');\n        var count = button.data('count');\n        var posts_per_page = button.data('posts_per_page');\n\n        if(videoScrollLock === false) {\n            newcount = count + posts_per_page;\n            $.ajax({\n                url: ajax.ajaxUrl,\n                type : 'post',\n                data: {\n                    action: 'genaero_video_pagination',\n                    count: count,\n                    posts_per_page: posts_per_page,\n                },\n                beforeSend: function() {\n                    $('#ajax-loading1').show();\n\n                    if(videoScrollLock === false) {\n                        videoScrollLock = true;\n                    }\n                },\n                success : function( data ){\n                    $('#ajax-loading1').hide();\n                    if(data) {\n                        $('.video-row').append(data);\n                        $('.videos_loadmore').data('count',newcount);\n                    } else {\n                        button.remove();\n                    }\n                    videoScrollLock = false;\n                }\n            });\n        }\n    }\n\n        //loadmore function for experiments, trailblazers and vault\n        if($('.genaero_loadmore').length && ($(window).scrollTop() === $(document).height() - $(window).height())) {\n            var button = $('.genaero_loadmore');\n            var cpt = button.data('cpt');\n            var posts_per_page = button.data('posts_per_page');\n            var template = button.data('template');\n\n            if(scrollLock === false) {\n                $.ajax({\n                    url: ajaxpagination.ajaxUrl,\n                    type : 'post',\n                    data: {\n                        action: 'genaero_ajax_pagination',\n                        cpt: cpt,\n                        posts_per_page: posts_per_page,\n                        template: template,\n                        query: ajaxpagination.posts,\n                        page: ajaxpagination.current_page,\n                    },\n                    beforeSend: function() {\n                        $('#ajax-loading1').show();\n\n                        if(scrollLock === false) {\n                            scrollLock = true;\n                        }\n                    },\n                    success : function( data ){\n                        $('#ajax-loading1').hide();\n                        if(data) {\n                            $('.loadmore-row').append(data);\n                            ajaxpagination.current_page++;\n                        } else {\n                            button.remove();\n                        }\n                        scrollLock = false;\n                    }\n                });\n            }\n        }\n    });\n\n  jQuery('html, body').animate({scrollTop: '0'}, 500);\n  jQuery('#link').click(function(){\n    if($(window).scrollTop() + $(window).height() == $(document).height()) {\n        jQuery('html, body').animate({scrollTop: '0'}, 500);\n    } else {\n        jQuery('html, body').animate({scrollTop: '+=300'}, 500);\n    }\n});\n\n  jQuery('.menu_butt').click(function(event){\n    event.preventDefault();\n    jQuery(this).toggleClass('opened');\n    jQuery('.menu-content').toggleClass('opened');\n});\n\n  jQuery('.menu_butt__close').click(function(event){\n    event.preventDefault();\n    jQuery('.menu_butt').removeClass('opened');\n    jQuery('.menu-content').removeClass('opened');\n});\n\n  if(jQuery('#fullpage').length) {\n    jQuery('#fullpage').fullpage({\n        anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailblazers', 'featured_events'],\n        menu: '.chapter-selector',\n        css3: true,\n            // lockAnchors: true,\n            fitToSectionDelay: 100,\n            lazyLoading: true,\n            afterLoad: function(anchorLink, index){\n                if(index == $('.section').length){\n                    jQuery('.down--button').hide();\n                    jQuery('.up--button').show();\n                } else {\n                    jQuery('.down--button').show();\n                    jQuery('.up--button').hide();       \n                }\n            }\n        });\n\n    jQuery('.homescroll.down--button').click(function(){\n        jQuery.fn.fullpage.moveSectionDown();\n    });\n\n    jQuery('.homescroll.up--button').click(function(){\n        jQuery.fn.fullpage.moveSectionUp();\n    });\n}\n\nvar $status = jQuery('.pagingInfo');\nvar $slickElement = jQuery('.featured_video--carousel');\n\n$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {\n    var i = (currentSlide ? currentSlide : 0) + 1;\n    $status.html('<span class=\"counting\">0'+i+'</span><span class=\"totalcount\">0'+ slick.slideCount +'</span>')\n});\n\n$slickElement.slick({\n    autoplay: false,\n    dots: false,\n    fade: true,\n    prevArrow: '<div class=\"double_arrow small_arrow arrow_up\"></div>',\n    nextArrow: '<div class=\"double_arrow small_arrow arrow_down\"></div>',\n});\n\nif(jQuery('.fullpopup').length) {\n    jQuery('.fullpopup').fancybox({\n        toolbar  : false,\n        smallBtn : true,\n            // iframe : {\n            //     preload : false\n            // }\n        });\n}\n\njQuery('.single-experiment-btn').on('click', function(event) {\n    event.preventDefault();\n    $('#single-experiment-summary').hide();\n    $('#single-experiment-content').show();\n\n    jQuery('.experiment--carousel').slick({\n        autoplay: false,\n        dots: false,\n        fade: true,\n        prevArrow: '<div class=\"double_arrow small_arrow arrow_left\"></div>',\n        nextArrow: '<div class=\"double_arrow small_arrow arrow_right\"></div>',\n\n    });\n\n    jQuery('.experiment--carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){\n        if($('.last_experiment--slide').hasClass('slick-active')) {\n            jQuery('.single_experiment_header').text('What Just Happened_');\n        } else {\n            jQuery('.single_experiment_header').text('STEPS_');\n        }\n    });\n});\n\njQuery('.close-single-experiment').on('click', function(event) {\n    event.preventDefault();\n    $('#single-experiment-content').hide();\n    $('#single-experiment-summary').show();\n});\n\njQuery('.genaero_explorer--carousel').slick({\n    slidesToShow: 1,\n    slidesToScroll: 1,\n    autoplay: false,\n    fade: true,\n    asNavFor: '.genaero_explorer--navigation',\n    prevArrow: '<div class=\"double_arrow big_arrow arrow_left\"></div>',\n    nextArrow: '<div class=\"double_arrow big_arrow arrow_right\"></div>'\n});\njQuery('.genaero_explorer--navigation').slick({\n    slidesToShow: 3,\n    slidesToScroll: 1,\n    asNavFor: '.genaero_explorer--carousel',\n    dots: false,\n    centerMode: true,\n    focusOnSelect: true,\n\n    responsive: [{\n      breakpoint: 578,\n      settings: {\n        slidesToShow: 1,\n        slidesToScroll: 1\n    }\n}]\n});\n\njQuery('.featured_experiment--keywordsslider-wrapp').slick({\n    slidesToShow: 1,\n    slidesToScroll: 1,\n    autoplay: false,\n    fade: true,\n    prevArrow: '<div class=\"double_arrow big_arrow arrow_left\"></div>',\n    nextArrow: '<div class=\"double_arrow big_arrow arrow_right\"></div>'\n});\n\njQuery('#all-events').on('click', function(event) {\n    event.preventDefault();\n    $('.past_events').show();\n    $('html, body').animate({\n        scrollTop: $('.past_events').offset().top\n    }, 1000);\n});\n\njQuery('#upcoming-events').on('click', function(event) {\n    event.preventDefault();\n    $('.past_events').hide();\n    $('html, body').animate({\n        scrollTop: $('.ongoing_events').offset().top\n    }, 1000);\n});\n\njQuery('.memberdashboard--btn').click(function(event){\n    event.preventDefault();\n    jQuery('.memberdashboard--menuwrap').slideToggle();\n});\n\n$(function(){\n    $('.hide-show').show();\n    $('.hide-show span').addClass('show')\n\n    $('.hide-show span').click(function(){\n        if( $(this).hasClass('show') ) {\n            $(this).text('Hide');\n            $('input[name=\"profile_password\"]').attr('type','text');\n            $(this).removeClass('show');\n        } else {\n            $(this).text('Show');\n            $('input[name=\"profile_password\"]').attr('type','password');\n            $(this).addClass('show');\n        }\n    });\n\n    $('form button[type=\"submit\"]').on('click', function(){\n        $('.hide-show span').text('Show').addClass('show');\n        $('.hide-show').parent().find('input[name=\"profile_password\"]').attr('type','password');\n    }); \n});\n\n    // $('#profile_photo_file').change(function() {\n    //     var file = $(this).val();\n    //     if(file.length !== 0) {\n    //         $('#profile_photo').attr('src', file);\n    //     }\n    // });\n\n    $('.delete-fav-video').on('click', function() {\n        var favID = $(this).data('fav-id');\n        $.ajax({\n            url: ajax.ajaxUrl,\n            type: 'post',\n            data: {\n                action: 'delete_fav_video',\n                favID: favID\n            },\n            success: function(data) {\n                location.reload();\n            },\n            error: function(errorThrown){\n                console.log(errorThrown);\n            }\n        })\n    });\n\n    $('.delete-fav-experiment').on('click', function() {\n        var favID = $(this).data('fav-id');\n        $.ajax({\n            url: ajax.ajaxUrl,\n            type: 'post',\n            data: {\n                action: 'delete_fav_experiment',\n                favID: favID\n            },\n            success: function(data) {\n                location.reload();\n            },\n            error: function(errorThrown){\n                console.log(errorThrown);\n            }\n        })\n    });\n\n    if($('#member_username').length) {\n        $('#member_username').val($('#username').data('user-id'));\n    }\n\n//if favourite videos found, toggle heart\nif(typeof fav_ids !== 'undefined' && fav_ids.length > 0) {\n    $.each(fav_ids, function(key, value) {\n        addFavouriteVideos(value);\n    });\n}\nfunction addFavouriteVideos(value) {\n    var selector = '.experiment--fav_link[data-video-id=\"' + value + '\"] > i';\n    if(!$(selector).hasClass('fav')) {\n        $(selector).addClass('fav');\n    }\n}\n\n//if favourite experiments found, toggle heart\nif(typeof fav_exp_ids !== 'undefined' && fav_exp_ids.length > 0) {\n    $.each(fav_exp_ids, function(key, value) {\n        addFavouriteExperiments(value);\n    });\n}\nfunction addFavouriteExperiments(value) {\n    var selector = '.experiment--fav_link[data-experiment-id=\"' + value + '\"] > i';\n    if(!$(selector).hasClass('fav')) {\n        $(selector).addClass('fav');\n    }\n}\n\n$('#video_submit').on('click', function() {\n    $.ajax({\n        url: ajax.ajaxUrl,\n        type: 'post',\n        data: {\n            action: 'search_video',\n            search: $('#video_search').val(),\n        },\n        beforeSend: function() {\n            $('.video-main').html('');\n            $('.ajax-loading').show();\n        },\n        success: function(data) {\n            $('.ajax-loading').hide();\n            $('.video-main').html(data);\n        }\n    });\n});\n\n$('#experiment_submit').on('click', function() {\n    var cpt = $(this).data('cpt');\n    var posts_per_page = $(this).data('posts_per_page');\n    var template = $(this).data('template');\n\n    $.ajax({\n        url: ajax.ajaxUrl,\n        type: 'post',\n        data: {\n            action: 'search_experiment',\n            cpt: cpt,\n            posts_per_page: posts_per_page,\n            template: template,\n            search: $('#experiment_search').val(),\n        },\n        beforeSend: function() {\n            $('.site-main').html('');\n            $('.ajax-loading').show();\n        },\n        success: function(data) {\n            $('.ajax-loading').hide();\n            $('.site-main').html(data);\n        }\n    });\n});\n\n$('.videos_loadmore').on('click', function(e) {\n    e.preventDefault();\n    var button = $(this);\n    var count = button.data('count');\n    var posts_per_page = button.data('posts_per_page');\n    var newcount = count + posts_per_page;\n\n    $.ajax({\n        url: ajax.ajaxUrl,\n        type : 'post',\n        data: {\n            action: 'genaero_video_pagination',\n            count: count,\n            posts_per_page: posts_per_page,\n        },\n        beforeSend: function() {\n            $('.ajax-loading').show();\n        },\n        success : function( data ){\n            $('.ajax-loading').hide();\n            if(data) {\n                $('.video-row').append(data);\n                $('.videos_loadmore').data('count',newcount);\n            } else {\n                button.remove();\n            }\n        }\n    });\n});\n\n$('a.fav-experiment').on('click', function(e) {\n    e.preventDefault();\n    expID = $(this).data('id');\n    userID = $(this).data('user');\n    var button = $(this);\n    console.log('test: '+expID+' '+userID);\n\n    $.ajax({\n        url: ajax.ajaxUrl,\n        type : 'post',\n        data: {\n            action: 'fav_this_experiment',\n            userID: userID,\n            expID: expID,\n        },\n        success : function( data ){\n            button.addClass('faved');\n        }\n    });\n});\n\n// $('a[href$=\"#heart\"]').on('click', function(e) {\n//   e.preventDefault();\n//   var video_id = $(this).data('video-id');\n\n//   $.ajax({\n//     url: ajax.ajaxUrl,\n//     type: 'post',\n//     data: {\n//       action: 'fav_this_video',\n//       video_id: video_id\n//     },\n//     success: function(data) {\n//       // location.reload();\n//     },\n//     error: function(errorThrown){\n//      console.log(errorThrown);\n//    }\n//  })\n// });\n\nfunction new_map( $el ) {\n    var $markers = $el.find('.marker');\n    var args = {\n        zoom    : 16,\n        center    : new google.maps.LatLng(0, 0),\n        mapTypeId : google.maps.MapTypeId.ROADMAP,\n        styles: [\n        {\n            \"featureType\": \"all\",\n            \"elementType\": \"all\",\n            \"stylers\": [\n            {\n                \"hue\": \"#ff0000\"\n            },\n            {\n                \"saturation\": -100\n            },\n            {\n                \"lightness\": -30\n            }\n            ]\n        },\n        {\n            \"featureType\": \"all\",\n            \"elementType\": \"labels.text.fill\",\n            \"stylers\": [\n            {\n                \"color\": \"#ffffff\"\n            }\n            ]\n        },\n        {\n            \"featureType\": \"all\",\n            \"elementType\": \"labels.text.stroke\",\n            \"stylers\": [\n            {\n                \"color\": \"#353535\"\n            }\n            ]\n        },\n        {\n            \"featureType\": \"landscape\",\n            \"elementType\": \"geometry\",\n            \"stylers\": [\n            {\n                \"color\": \"#656565\"\n            }\n            ]\n        },\n        {\n            \"featureType\": \"poi\",\n            \"elementType\": \"geometry.fill\",\n            \"stylers\": [\n            {\n                \"color\": \"#505050\"\n            }\n            ]\n        },\n        {\n            \"featureType\": \"poi\",\n            \"elementType\": \"geometry.stroke\",\n            \"stylers\": [\n            {\n                \"color\": \"#808080\"\n            }\n            ]\n        },\n        {\n            \"featureType\": \"road\",\n            \"elementType\": \"geometry\",\n            \"stylers\": [\n            {\n                \"color\": \"#454545\"\n            }\n            ]\n        }\n        ]\n    };\n\n    var map = new google.maps.Map( $el[0], args);\n    map.markers = [];\n    $markers.each(function(){\n        add_marker( $(this), map );\n    });\n    center_map( map );\n    return map;\n}\n\nfunction add_marker( $marker, map ) {\n    var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );\n    var marker = new google.maps.Marker({\n        position  : latlng,\n        map     : map\n    });\n    map.markers.push( marker );\n    if( $marker.html() )\n    {\n        var infowindow = new google.maps.InfoWindow({\n            content   : $marker.html()\n        });\n        google.maps.event.addListener(marker, 'click', function() {\n            infowindow.open( map, marker );\n        });\n    }\n\n}\n\nfunction center_map( map ) {\n    var bounds = new google.maps.LatLngBounds();\n    $.each( map.markers, function( i, marker ){\n        var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );\n        bounds.extend( latlng );\n    });\n    if( map.markers.length == 1 ) {\n        map.setCenter( bounds.getCenter() );\n        map.setZoom( 15 );\n    }\n    else {\n        map.fitBounds( bounds );\n    }\n}\n\nvar map = null;\n\n$('.acf-map').each(function(){\n    map = new_map( $(this) );\n});\n\n$.fn.isInViewport = function() {\n    var elementTop = $(this).offset().top;\n    var elementBottom = elementTop + $(this).outerHeight();\n\n    var viewportTop = $(window).scrollTop();\n    var viewportBottom = viewportTop + $(window).height();\n\n    return elementBottom > viewportTop && elementTop < viewportBottom;\n};\n});",
-			"file": "wp-content/themes/understrap/js/main.js",
-			"file_size": 20004,
-			"file_write_time": 131617970091574000,
+			"contents": "<?php\n/**\n * Template Name: Left and Right Sidebar Layout\n *\n * This template can be used to override the default template and sidebar setup\n *\n * @package understrap\n */\n\n?>\n<section class=\"section\" data-anchor=\"welcome\">\n\t<?php $bgimg = get_template_directory_uri() . \"/img/imgbg_homepage-welcome.jpg\"; ?>\n\t<vide  playsinline autoplay muted loop id=\"video\"><source src=\"<?php echo get_template_directory_uri(); ?>/img/GenAero-welcome.mp4\" type=\"video/mp4\"></video>\n\t\t \n\t\t<div class=\"HudOverlay\" style=\"background-image: url('<?php echo $bgimg; ?>');\">\n\t\t\t<svg class=\"homeHudOverlay\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1316 653.6\" style=\"enable-background:new 0 0 1316 653.6;\" xml:space=\"preserve\" preserveAspectRatio=\"none\">\n\t\t\t\t<path class=\"outsideHudOverlay\" d=\"M0,0v653.6h1316V0H0z M1271.5,605.7c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6\n\t\t\t\tC39,604.6,24.9,484,19.7,387.5c6.7-6.9,13.4-14.9,13.5-14.9l0.1-0.1l0.8-85.1l-0.1-0.1c0-0.1-7.9-8.1-14.6-14.3\n\t\t\t\tC24.1,175.8,39,55.2,39.1,54c0-4.7,4.4-8.6,9.8-8.6c3.5-0.1,212.1-6.7,381.5-11.8l450,0.4c173.1,5,377.8,11.2,381.3,11.3\n\t\t\t\tc5.3,0,9.8,3.9,9.8,8.6c0.2,2.3,20.9,225.5,20.9,274.3C1292.4,377.1,1271.7,603.4,1271.5,605.7z\"/>\n\t\t\t\t<g>\n\t\t\t\t\t<defs>\n\t\t\t\t\t\t<path id=\"SVGID_1_\" d=\"M880.4,34c173.1,5,377.8,11.2,381.3,11.3c5.3,0,9.8,3.9,9.8,8.6c0.2,2.3,20.9,225.5,20.9,274.3\n\t\t\t\t\t\tc0,48.9-20.7,275.2-20.9,277.5c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6C39,604.6,24.9,484,19.7,387.5\n\t\t\t\t\t\tc6.7-6.9,13.4-14.9,13.5-14.9l0.1-0.1l0.8-85.1l-0.1-0.1c0-0.1-7.9-8.1-14.6-14.3C24.1,175.8,39,55.2,39.1,54\n\t\t\t\t\t\tc0-4.7,4.4-8.6,9.8-8.6c3.5-0.1,212.1-6.7,381.5-11.8L880.4,34z\"/>\n\t\t\t\t\t</defs>\n\t\t\t\t\t<g>\n\t\t\t\t\t\t<path class=\"HudOverlay-fill\" d=\"M880.4,33.9c173.1,5,377.8,11.2,381.3,11.3c5.3,0,9.8,3.9,9.8,8.6c0.2,2.3,20.9,225.5,20.9,274.3\n\t\t\t\t\t\tc0,48.9-20.7,275.2-20.9,277.5c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6c-0.1-1.1-14.2-121.7-19.4-218.2\n\t\t\t\t\t\tc6.7-6.9,13.4-14.9,13.5-14.9l0.1-0.1l0.8-85.1l-0.1-0.1c0-0.1-7.9-8.1-14.6-14.3c4.7-97.2,19.6-217.8,19.7-219\n\t\t\t\t\t\tc0-4.7,4.4-8.6,9.8-8.6c3.5-0.1,212.1-6.7,381.5-11.8\"/>\n\t\t\t\t\t\t<path class=\"HudOverlay-fullBorder\" d=\"M880.4,33.9c173.1,5,377.8,11.2,381.3,11.3c5.3,0,9.8,3.9,9.8,8.6c0.2,2.3,20.9,225.5,20.9,274.3\n\t\t\t\t\t\tc0,48.9-20.7,275.2-20.9,277.5c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6c-0.1-1.1-14.2-121.7-19.4-218.2\n\t\t\t\t\t\tc6.7-6.9,13.4-14.9,13.5-14.9l0.1-0.1l0.8-85.1l-0.1-0.1c0-0.1-7.9-8.1-14.6-14.3c4.7-97.2,19.6-217.8,19.7-219\n\t\t\t\t\t\tc0-4.7,4.4-8.6,9.8-8.6c3.5-0.1,212.1-6.7,381.5-11.8\"/>\n\t\t\t\t\t</g>\n\t\t\t\t</g>\n\t\t\t\t<polygon class=\"polygon\" points=\"521.5,614.2 538.7,608.6 773.5,608.6 790.2,614.2 773.8,617.4 539,617.4\"/>\n\t\t\t</svg>\n\t\t</div> \n\t\t<!--  -->\n\t\t<div class=\"container welcome_content\">\n\t\t\t<div class=\"col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12\">\n\t\t\t\t<h1 class=\"welcome_text\">Welcome</h1>\n\t\t\t\t<div class=\"highlight\"><?php echo get_field('welcome_copy'); ?></div>\n\n\t\t\t\t<!-- TODO: STEF TO ADD BACKGROUND VIDEO -->\n\t\t\t\t<a data-fancybox href=\"https://www.youtube.com/watch?v=l4LHKJkco7U\">\n\t\t\t\t\t<div class=\"watch_video--typewriter\">\n\t\t\t\t\t\t<div class=\"watch_video--button\">\n\t\t\t\t\t\t\t<div class=\"watch_video--play\">\n\t\t\t\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0\" y=\"0\" height=\"100px\" width=\"100px\"\n\t\t\t\t\t\t\t\tviewBox=\"0 0 100 100\" enable-background=\"new 0 0 100 100\" xml:space=\"preserve\"><path class=\"stroke-solid\" d=\"M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7\n\t\t\t\t\t\t\t\tC97.3,23.7,75.7,2.3,49.9,2.5\"/><path class=\"pathicon\" d=\"M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z\"/></svg>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"watch_video--text\">\n\t\t\t\t\t\t\t<p><span>Watch Video</span></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t\t<div class=\"clear\"></div>\n\t\t</div>\n\t\t<div class=\"fullpagecounter\"><span class=\"counting\">01</span><span class=\"totalcount\">06</span></div>\n\t</section>",
+			"file": "wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+			"file_size": 4086,
+			"file_write_time": 131618021858938000,
 			"settings":
 			{
-				"buffer_size": 19299,
+				"buffer_size": 4081,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/page-templates/add-video.php",
+			"settings":
+			{
+				"buffer_size": 5568,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/js/main.js",
+			"settings":
+			{
+				"buffer_size": 21438,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -452,7 +469,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 			"settings":
 			{
-				"buffer_size": 10201,
+				"buffer_size": 9640,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -470,7 +487,7 @@
 			"file": "wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
 			"settings":
 			{
-				"buffer_size": 6868,
+				"buffer_size": 7133,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -730,6 +747,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"[[0,1000]]",
+			"5",
+			"10",
+			"5",
+			"20",
+			"[[0,20]]",
+			"lottie",
+			"<<<",
+			"===",
+			"single-experiment-btn",
+			"close-single-experiment",
+			"genaero_explorer--carousel",
+			"console",
+			"this",
 			"document",
 			"\"><",
 			"st5",
@@ -843,21 +874,7 @@
 			" echo $video->video_title;",
 			"a#genaero-facebook-button",
 			"//",
-			"widget",
-			"8",
-			";\n",
-			"fal fa-facebook",
-			"genaero_facebook",
-			" && !",
-			" || ",
-			"//",
-			" //",
-			"deg",
-			"@include opacity(",
-			" @include opacity(",
-			"opacity: ",
-			"e, natus, debitis repudiandae quaerat rem tempora soluta voluptates non quis commodi. Placeat corporis odio expedita aut, culpa sint, ad tempore sed neque doloremque ab dolores et dicta? Ut laudantium illo soluta ullam excepturi corporis id sit quidem repellendus nam vel inciduntdebitis",
-			"localhost/"
+			"widget"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -885,7 +902,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -910,10 +927,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 990.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -922,15 +939,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 272852,
+						"buffer_size": 272739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								251276,
-								251276
+								250980,
+								250980
 							]
 						],
 						"settings":
@@ -938,10 +955,68 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 78544.0,
+						"translation.y": 78453.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/understrap/page-templates/add-video.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								494,
+								494
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -951,20 +1026,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "wp-content/themes/understrap/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19299,
+						"buffer_size": 21438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								152,
-								152
+								396,
+								424
 							]
 						],
 						"settings":
@@ -977,28 +1052,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10201,
+						"buffer_size": 9640,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								642,
-								642
-							],
-							[
-								835,
-								835
+								2491,
+								2491
 							]
 						],
 						"settings":
@@ -1007,14 +1078,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 2266.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
 					"semi_transient": false,
 					"settings":
@@ -1039,16 +1110,16 @@
 						"translation.y": 918.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6868,
+						"buffer_size": 7133,
 						"regions":
 						{
 						},
@@ -1068,11 +1139,11 @@
 						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
 					"semi_transient": false,
 					"settings":
@@ -1101,7 +1172,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "wp-config.php",
 					"semi_transient": false,
 					"settings":
@@ -1113,8 +1184,28 @@
 						"selection":
 						[
 							[
-								295,
-								295
+								615,
+								615
+							],
+							[
+								666,
+								666
+							],
+							[
+								733,
+								733
+							],
+							[
+								764,
+								764
+							],
+							[
+								819,
+								819
+							],
+							[
+								857,
+								857
 							]
 						],
 						"settings":
@@ -1125,7 +1216,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1133,7 +1224,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 50.0
 	},
 	"input":
 	{
@@ -1627,7 +1718,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
