@@ -3,19 +3,26 @@ jQuery.noConflict();
 
 jQuery(window).load(function(){
 
-    // detect first layer before svg loaded
-    var image = jQuery('img');
-    if (!image.prop('complete')) {
-        console.log("Waiting to be loaded!");
-        image.on('load', function() {
-            jQuery('.pre--imgload').remove();
-            console.log("Loaded!");
-            console.log(this.complete);
-        });
-    } else {
+    var elem = jQuery('svg');
+    if(elem.length) {
+        console.log('loaded');
         jQuery('.pre--imgload').remove(); 
-        console.log("Already loaded!");
     }
+
+
+    // // detect first layer before svg loaded
+    // var elem = jQuery('#lottie');
+    // if (!elem.prop('complete')) {
+    //     console.log("Waiting to be loaded!");
+    //     elem.on('load', function() {
+    //         jQuery('.pre--imgload').remove();
+    //         console.log("Loaded!");
+    //         console.log(this.complete);
+    //     });
+    // } else {
+    //     jQuery('.pre--imgload').remove(); 
+    //     console.log("Already loaded!");
+    // }
 
     // load progression percentage
     jQuery('.count').each(function() {
