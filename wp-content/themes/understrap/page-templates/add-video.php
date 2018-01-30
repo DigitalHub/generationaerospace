@@ -80,7 +80,7 @@ if($_POST['video_submit']) {
 				}
 				
 			} else if($new_video === '0') {
-				$sql = $wpdb->prepare("UPDATE $videos_table SET title=%s,description=%s,youtube=%s WHERE member_id=%s", array($title,$desc,$youtube,$user_id));
+				$sql = $wpdb->prepare("UPDATE $videos_table SET title=%s,description=%s,youtube=%s WHERE member_id=%s AND id=%s", array($title,$desc,$youtube,$user_id,$video_id));
 				$wpdb->query($sql);
 
 				$video_cpt_post = array(

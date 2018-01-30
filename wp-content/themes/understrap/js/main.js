@@ -3,17 +3,10 @@ jQuery.noConflict();
 
 jQuery(window).load(function(){
 
-    // detect first layer before svg loaded
-    var image = jQuery('svg');
-    if (!image.prop('complete')) {
-        // console.log("Waiting to be loaded!");
-        image.on('load', function() {
-            console.log("Loaded!");
-            console.log(this.complete);
-            anim.playSegments(true);
-        });
-    } else {
-        console.log("Already loaded!");  
+    var elem = jQuery('svg');
+    if(elem.length) {
+        console.log('loaded');
+        jQuery('.pre--imgload').remove(); 
         anim.playSegments(true);
     }
 
