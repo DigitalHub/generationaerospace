@@ -36,6 +36,12 @@
 	}
 }
 
+.single-genaero_vault {
+	iframe {
+		border: none;
+	}
+}
+
 //social media has icon and name
 .addthis_inline_share_toolbox {
 	.at-icon-wrapper.at-share-btn {
@@ -271,6 +277,7 @@
 	.close-single-experiment {
 		color: $black;
 		cursor: pointer;
+		outline: none;
 		position: absolute;
 		right: 100px;
 		top: 20px;

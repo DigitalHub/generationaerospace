@@ -53,10 +53,17 @@ svg.circlerotate {
 	}
 }
 
-.HudOverlayme {
+.homeHudOverlay {
+	height: 100%;
 	position: absolute;
 	top: 0;
-	height: 99%;
+	width: 100%;
+}
+
+.subHudOverlay {
+	height: 480px;
+	position: absolute;
+	top: 0;
 	width: 100%;
 }
 
@@ -73,45 +80,21 @@ svg.circlerotate {
 	width: 100%;
 	z-index: -1;
 
-	.subHudOverlay {
-		height: 480px;
-		width: 100%;
+	.outsideHudOverlay {
+		@include opacity(0.6);
 	}
 
 	.HudOverlay-fullBorder {
+		fill: none;
 		height: 100%;
-		width: 100%;
 		stroke-width: 1px;
 		stroke: #c9c9c9;
+		width: 100%;
 	}
 
 	.HudOverlay-fill {
-		clip-path:url(#SVGID_4_);
-		opacity: 0.50;
-	}
-
-	.path {
-		fill: #00000080;
-	}
-
-	.HubOverlay--Blur {
-		clip-path:url(#HubOverlay--Blur);
-		filter:url(#blurlayer);
-	}
-
-	&:before {
-		content: "";
-		height: 100%;
-		width: 100%;
-		background-color: rgba(0, 0, 0, 0.80);
-		position: absolute;
-		z-index: -1;
-	}
-
-	image {
-		height: 110%;
-		overflow: visible;
-		width: 100%;
+		fill: #565656;
+		@include opacity(0.8);
 	}
 }
 

@@ -222,7 +222,34 @@ if(jQuery('.fullpopup').length) {
             //     preload : false
             // }
         });
+<<<<<<< HEAD
 }
+=======
+    }
+
+    jQuery('.single-experiment-btn').on('click', function(event) {
+        event.preventDefault();
+        $('#single-experiment-summary').hide();
+        $('#single-experiment-content').show();
+
+        jQuery('.experiment--carousel').slick({
+            autoplay: false,
+            dots: false,
+            fade: true,
+            prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
+            nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
+
+        });
+
+        jQuery('.experiment--carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            if($('.last_experiment--slide').hasClass('slick-active')) {
+                jQuery('.single_experiment_header').text('What Just Happened_');
+            } else {
+                jQuery('.single_experiment_header').text('STEPS_');
+            }
+      });
+    });
+>>>>>>> b32786a380a24d1568ebb1077b9955758d096ee7
 
 jQuery('.single-experiment-btn').on('click', function(event) {
     event.preventDefault();
@@ -510,18 +537,6 @@ $('a.fav-experiment').on('click', function(e) {
         });
     }
 });
-
-if($('.last_experiment--slide').length) {
-    $('.double_arrow').on('click', function() {
-        if($('.last_experiment--slide').hasClass('slick-active')) {
-            console.log('active');
-            $('.single_experiment_header').text('What Just Happened_');
-        } else {
-            console.log('not active');
-            $('.single_experiment_header').text('Steps_');
-        }
-    });
-}
 
 // $('a[href$="#heart"]').on('click', function(e) {
 //   e.preventDefault();
