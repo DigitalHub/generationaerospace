@@ -12962,6 +12962,10 @@ a.videos_loadmore {
   font-weight: 600px;
   text-transform: uppercase; }
 
+a.fav-video {
+  font-size: 1.24688rem;
+  margin-bottom: 20px; }
+
 .ajax-loading {
   display: block;
   margin-left: auto;
@@ -13024,9 +13028,10 @@ a.videos_loadmore {
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       z-index: 1; }
-  .youtube-player .back-to-main {
-    margin: 0 auto;
-    text-align: center; }
+
+.back-to-main {
+  margin: 0 auto;
+  text-align: center; }
 
 .error-404.not-found {
   margin: 100px auto; }
@@ -13277,7 +13282,7 @@ a.videos_loadmore {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 99999; }
+  z-index: 9999; }
   #single-experiment-content .close-single-experiment {
     color: #000;
     cursor: pointer;
@@ -13409,6 +13414,17 @@ a.videos_loadmore {
   color: #cad63e; }
   .faved i {
     color: #cad63e; }
+
+.fav-fancybox-modal {
+  background: transparent !important;
+  padding: 30px !important;
+  width: 80% !important; }
+  .fav-fancybox-modal .HudOverlay {
+    height: 100%; }
+  .fav-fancybox-modal .login-row {
+    height: auto; }
+  .fav-fancybox-modal .fancybox-close-small:before, .fav-fancybox-modal .fancybox-close-small:after {
+    color: #fff !important; }
 
 .sign-up-row,
 .login-row,

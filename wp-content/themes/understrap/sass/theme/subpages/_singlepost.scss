@@ -272,7 +272,7 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 99999;
+	z-index: 9999;
 
 	.close-single-experiment {
 		color: $black;
@@ -461,5 +461,26 @@
 	color: $rrlimegreen;
 	i {
 		color: $rrlimegreen;
+	}
+}
+
+.fav-fancybox-modal {
+	background: transparent !important;
+	padding: 30px !important;
+	width: 80% !important;
+
+	.HudOverlay {
+		height: 100%;
+	}
+
+	.login-row {
+		height: auto;
+	}
+
+	.fancybox-close-small {
+		&:before,
+		&:after {
+			color: #fff !important;
+		}
 	}
 }

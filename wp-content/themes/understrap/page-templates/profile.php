@@ -192,9 +192,7 @@ if($wpdb->num_rows > 0) {
 							<div class="clear"></div>
 							<div class="profile_photo--wrapper">
 								<label for="profile_photo">Profile Photo</label>
-								<!-- <img src="<?=$photo?>" id="profile_photo" alt="<?=$fullname?>'s Profile Photo" width="100px"> -->
 								<input type="file" name="profile_photo_file" id="profile_photo_file" accept="image/*">
-								<!-- TODO: STEF TO ADD PHOTO PREVIEW AND UPLOAD FUNCTION -->
 							</div>
 							<div class="clear"></div><br>
 							<h5>Login Information</h5>

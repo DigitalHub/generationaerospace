@@ -75,26 +75,22 @@ $totalcount = 0;
 				</div><br>
 				<div class="addthis_inline_share_toolbox_dznu"></div><br>
 
-				<!-- TODO: STEF TO DO LOGIN FUNCTION IN FANCYBOX -->
 				<?php 
 				if($loggedin === '0') { 
 					?>
-
-					<a href="javascript:;" data-fancybox="modal" data-src="#login-modal"><i class="fal fa-heart"></i> Save Experiment</a>
-					<div id="login-modal" style="display:none; max-width:300px; padding:20px"><span>You need to be logged in to save the experiment. Login here now.</span></div>
-
+					<a href="javascript:;" data-fancybox="modal" data-src="#login"><i class="fal fa-heart"></i> Save Experiment</a>
 					<?php 
 				} elseif($loggedin === '1') {
-					$favs_sql = $wpdb->prepare("SELECT experiment_id FROM $fav_experiments_table WHERE member_id = '%s'", $user_id);
+					$favs_sql = $wpdb->prepare("SELECT * FROM $fav_experiments_table WHERE member_id = '%s' AND experiment_id='%s'", $user_id, get_the_ID());
 					$favs_results = $wpdb->get_results($favs_sql);
 					$favs_count = $wpdb->num_rows;
 					if($favs_count > 0) {
 						?>
-						<a href="#" class="faved"><i class="fas fa-heart"></i> Save Experiment</a>
+						<a id="favexp" href="#" class="faved fav-experiment" data-id="<?php echo get_the_ID();?>" data-user="<?=$user_id?>"><i class="fas fa-heart"></i> Saved Experiment</a>
 						<?php
 					} else {
 						?>
-						<a href="#" class="fav-experiment" data-id="<?php echo get_the_ID();?>" data-user="<?=$user_id?>"><i class="fal fa-heart"></i> Save Experiment</a>
+						<a id="favexp" href="#" class="fav-experiment" data-id="<?php echo get_the_ID();?>" data-user="<?=$user_id?>"><i class="fal fa-heart"></i> Save Experiment</a>
 						<?php
 					}  
 				} 
@@ -109,3 +105,7 @@ $totalcount = 0;
 	</div>
 </div><!-- .row -->
 </div><!-- single_experiment -->
+
+<div id="login" class="fav-fancybox-modal" style="display:none">
+	<?php get_template_part('page-templates/login','modal-experiment'); ?>
+</div>

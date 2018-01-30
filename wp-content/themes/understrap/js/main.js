@@ -119,6 +119,7 @@ jQuery(document).ready(function($) {
                     if(data) {
                         $('.video-row').append(data);
                         $('.videos_loadmore').data('count',newcount);
+                        addFavouriteVideos();
                     } else {
                         button.remove();
                     }
@@ -159,6 +160,7 @@ jQuery(document).ready(function($) {
                         if(data) {
                             $('.loadmore-row').append(data);
                             ajaxpagination.current_page++;
+                            addFavouriteExperiments();
                         } else {
                             button.remove();
                         }
@@ -195,19 +197,19 @@ jQuery(document).ready(function($) {
         anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailblazers', 'featured_events'],
         menu: '.chapter-selector',
         css3: true,
-            // lockAnchors: true,
-            fitToSectionDelay: 100,
-            lazyLoading: true,
-            afterLoad: function(anchorLink, index){
-                if(index == $('.section').length){
-                    jQuery('.down--button').hide();
-                    jQuery('.up--button').show();
-                } else {
-                    jQuery('.down--button').show();
-                    jQuery('.up--button').hide();       
-                }
+        // lockAnchors: true,
+        fitToSectionDelay: 100,
+        lazyLoading: true,
+        afterLoad: function(anchorLink, index){
+            if(index == $('.section').length){
+                jQuery('.down--button').hide();
+                jQuery('.up--button').show();
+            } else {
+                jQuery('.down--button').show();
+                jQuery('.up--button').hide();       
             }
-        });
+        }
+    });
 
     jQuery('.homescroll.down--button').click(function(){
         jQuery.fn.fullpage.moveSectionDown();
@@ -272,6 +274,7 @@ jQuery('.close-single-experiment').on('click', function(event) {
     $('#single-experiment-content').hide();
     $('#single-experiment-summary').show();
 });
+
 
 jQuery('.genaero_explorer--carousel').slick({
     slidesToShow: 1,
@@ -399,28 +402,30 @@ $(function(){
     }
 
 //if favourite videos found, toggle heart
-if(typeof fav_ids !== 'undefined' && fav_ids.length > 0) {
-    $.each(fav_ids, function(key, value) {
-        addFavouriteVideos(value);
-    });
-}
-function addFavouriteVideos(value) {
-    var selector = '.experiment--fav_link[data-video-id="' + value + '"] > i';
-    if(!$(selector).hasClass('fav')) {
-        $(selector).addClass('fav');
+function addFavouriteVideos() {
+    if(typeof fav_ids !== 'undefined' && fav_ids.length > 0) {
+        $.each(fav_ids, function(key, value) {
+            var selector = '.month_experiment--link[data-video-id="' + value + '"] > i';
+            if(!$(selector).hasClass('fav')) {
+                $(selector).addClass('fav');
+            }
+            var selector1 = '.experiment--fav_link[data-video-id="' + value + '"] > i';
+            if(!$(selector1).hasClass('fav')) {
+                $(selector1).addClass('fav');
+            }
+        });
     }
 }
 
 //if favourite experiments found, toggle heart
-if(typeof fav_exp_ids !== 'undefined' && fav_exp_ids.length > 0) {
-    $.each(fav_exp_ids, function(key, value) {
-        addFavouriteExperiments(value);
-    });
-}
-function addFavouriteExperiments(value) {
-    var selector = '.experiment--fav_link[data-experiment-id="' + value + '"] > i';
-    if(!$(selector).hasClass('fav')) {
-        $(selector).addClass('fav');
+function addFavouriteExperiments() {
+    if(typeof fav_exp_ids !== 'undefined' && fav_exp_ids.length > 0) {
+        $.each(fav_exp_ids, function(key, value) {
+            var selector = '.experiment--fav_link[data-experiment-id="' + value + '"] > i';
+            if(!$(selector).hasClass('fav')) {
+                $(selector).addClass('fav');
+            }
+        });
     }
 }
 
@@ -439,6 +444,7 @@ $('#video_submit').on('click', function() {
         success: function(data) {
             $('.ajax-loading').hide();
             $('.video-main').html(data);
+            addFavouriteVideos();
         }
     });
 });
@@ -465,6 +471,7 @@ $('#experiment_submit').on('click', function() {
         success: function(data) {
             $('.ajax-loading').hide();
             $('.site-main').html(data);
+            addFavouriteExperiments();
         }
     });
 });
@@ -499,46 +506,87 @@ $('.videos_loadmore').on('click', function(e) {
     });
 });
 
+$('a.fav-video').on('click', function(e) {
+    e.preventDefault();
+    vidID = $(this).data('id');
+    userID = $(this).data('user');
+    var button = $(this);
+
+    if(button.hasClass('faved')) {
+        $.ajax({
+            url: ajax.ajaxUrl,
+            type : 'post',
+            data: {
+                action: 'unfav_this_video',
+                userID: userID,
+                vidID: vidID,
+            },
+            success : function( data ){
+                if(data) {
+                    button.removeClass('faved');
+                    button.html('<i class="fal fa-heart"></i> Save Video</a>');
+                }
+            }
+        });
+    } else {
+        $.ajax({
+            url: ajax.ajaxUrl,
+            type : 'post',
+            data: {
+                action: 'fav_this_video',
+                userID: userID,
+                vidID: vidID,
+            },
+            success : function( data ){
+                if(data) {
+                    button.addClass('faved');
+                    button.html('<i class="fas fa-heart"></i> Saved Video</a>');
+                }
+            }
+        });
+    }
+});
+
 $('a.fav-experiment').on('click', function(e) {
     e.preventDefault();
     expID = $(this).data('id');
     userID = $(this).data('user');
     var button = $(this);
-    console.log('test: '+expID+' '+userID);
 
-    $.ajax({
-        url: ajax.ajaxUrl,
-        type : 'post',
-        data: {
-            action: 'fav_this_experiment',
-            userID: userID,
-            expID: expID,
-        },
-        success : function( data ){
-            button.addClass('faved');
-        }
-    });
+    if(button.hasClass('faved')) {
+        $.ajax({
+            url: ajax.ajaxUrl,
+            type : 'post',
+            data: {
+                action: 'unfav_this_experiment',
+                userID: userID,
+                expID: expID,
+            },
+            success : function( data ){
+                if(data) {
+                    button.removeClass('faved');
+                    button.html('<i class="fal fa-heart"></i> Save Experiment</a>');
+                }
+            }
+        });
+    } else {
+        $.ajax({
+            url: ajax.ajaxUrl,
+            type : 'post',
+            data: {
+                action: 'fav_this_experiment',
+                userID: userID,
+                expID: expID,
+            },
+            success : function( data ){
+                if(data) {
+                    button.addClass('faved');
+                    button.html('<i class="fas fa-heart"></i> Saved Experiment</a>');
+                }
+            }
+        });
+    }
 });
-
-// $('a[href$="#heart"]').on('click', function(e) {
-//   e.preventDefault();
-//   var video_id = $(this).data('video-id');
-
-//   $.ajax({
-//     url: ajax.ajaxUrl,
-//     type: 'post',
-//     data: {
-//       action: 'fav_this_video',
-//       video_id: video_id
-//     },
-//     success: function(data) {
-//       // location.reload();
-//     },
-//     error: function(errorThrown){
-//      console.log(errorThrown);
-//    }
-//  })
-// });
 
 function new_map( $el ) {
     var $markers = $el.find('.marker');
