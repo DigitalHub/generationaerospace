@@ -1,5 +1,23 @@
 jQuery.noConflict();
+
+
 jQuery(window).load(function(){
+
+    // detect first layer before svg loaded
+    var image = jQuery('img');
+    if (!image.prop('complete')) {
+        console.log("Waiting to be loaded!");
+        image.on('load', function() {
+            jQuery('.pre--imgload').remove();
+            console.log("Loaded!");
+            console.log(this.complete);
+        });
+    } else {
+        jQuery('.pre--imgload').remove(); 
+        console.log("Already loaded!");
+    }
+
+    // load progression percentage
     jQuery('.count').each(function() {
         jQuery(this).prop('Counter', 0).animate({
             Counter: 100
@@ -11,11 +29,13 @@ jQuery(window).load(function(){
             }
         });
     });
-    setInterval(function(){
-        jQuery('#loadingbay').fadeOut(function(){ 
-            jQuery(this).remove();
-        });
-    }, 4000);
+
+    // to remove loading svg after loaded 
+    // setInterval(function(){
+    //     jQuery('#loadingbay').fadeOut(function(){ 
+    //         jQuery(this).remove();
+    //     });
+    // }, 4000);
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -62,16 +82,16 @@ jQuery(document).ready(function($) {
   // });
   //   }
 
-    jQuery(window).scroll(function() {
-        if($(window).scrollTop() + $(window).height() == $(document).height()) {
-            jQuery('#link').addClass('up--button');
-            jQuery('#link').removeClass('down--button');
-        } else {
-            jQuery('#link').removeClass('up--button');
-            jQuery('#link').addClass('down--button');
-        }
+  jQuery(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        jQuery('#link').addClass('up--button');
+        jQuery('#link').removeClass('down--button');
+    } else {
+        jQuery('#link').removeClass('up--button');
+        jQuery('#link').addClass('down--button');
+    }
 
-        if($('.videos_loadmore').length && ($('.videos_loadmore').offset().top - $(window).scrollTop()) < ($(window).height()/1.5)) {
+    if($('.videos_loadmore').length && ($('.videos_loadmore').offset().top - $(window).scrollTop()) < ($(window).height()/1.5)) {
         //loadmore function for videos page
         var button = $('.videos_loadmore');
         var count = button.data('count');
@@ -149,32 +169,32 @@ jQuery(document).ready(function($) {
         }
     });
 
-    jQuery('html, body').animate({scrollTop: '0'}, 500);
-    jQuery('#link').click(function(){
-        if($(window).scrollTop() + $(window).height() == $(document).height()) {
-            jQuery('html, body').animate({scrollTop: '0'}, 500);
-        } else {
-            jQuery('html, body').animate({scrollTop: '+=300'}, 500);
-        }
-    });
+  jQuery('html, body').animate({scrollTop: '0'}, 500);
+  jQuery('#link').click(function(){
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        jQuery('html, body').animate({scrollTop: '0'}, 500);
+    } else {
+        jQuery('html, body').animate({scrollTop: '+=300'}, 500);
+    }
+});
 
-    jQuery('.menu_butt').click(function(event){
-        event.preventDefault();
-        jQuery(this).toggleClass('opened');
-        jQuery('.menu-content').toggleClass('opened');
-    });
+  jQuery('.menu_butt').click(function(event){
+    event.preventDefault();
+    jQuery(this).toggleClass('opened');
+    jQuery('.menu-content').toggleClass('opened');
+});
 
-    jQuery('.menu_butt__close').click(function(event){
-        event.preventDefault();
-        jQuery('.menu_butt').removeClass('opened');
-        jQuery('.menu-content').removeClass('opened');
-    });
+  jQuery('.menu_butt__close').click(function(event){
+    event.preventDefault();
+    jQuery('.menu_butt').removeClass('opened');
+    jQuery('.menu-content').removeClass('opened');
+});
 
-    if(jQuery('#fullpage').length) {
-        jQuery('#fullpage').fullpage({
-            anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailblazers', 'featured_events'],
-            menu: '.chapter-selector',
-            css3: true,
+  if(jQuery('#fullpage').length) {
+    jQuery('#fullpage').fullpage({
+        anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailblazers', 'featured_events'],
+        menu: '.chapter-selector',
+        css3: true,
             // lockAnchors: true,
             fitToSectionDelay: 100,
             lazyLoading: true,
@@ -189,147 +209,147 @@ jQuery(document).ready(function($) {
             }
         });
 
-        jQuery('.homescroll.down--button').click(function(){
-            jQuery.fn.fullpage.moveSectionDown();
-        });
-
-        jQuery('.homescroll.up--button').click(function(){
-            jQuery.fn.fullpage.moveSectionUp();
-        });
-    }
-
-    var $status = jQuery('.pagingInfo');
-    var $slickElement = jQuery('.featured_video--carousel');
-
-    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-        var i = (currentSlide ? currentSlide : 0) + 1;
-        $status.html('<span class="counting">0'+i+'</span><span class="totalcount">0'+ slick.slideCount +'</span>')
+    jQuery('.homescroll.down--button').click(function(){
+        jQuery.fn.fullpage.moveSectionDown();
     });
 
-    $slickElement.slick({
-        autoplay: false,
-        dots: false,
-        fade: true,
-        prevArrow: '<div class="double_arrow small_arrow arrow_up"></div>',
-        nextArrow: '<div class="double_arrow small_arrow arrow_down"></div>',
+    jQuery('.homescroll.up--button').click(function(){
+        jQuery.fn.fullpage.moveSectionUp();
     });
+}
 
-    if(jQuery('.fullpopup').length) {
-        jQuery('.fullpopup').fancybox({
-            toolbar  : false,
-            smallBtn : true,
+var $status = jQuery('.pagingInfo');
+var $slickElement = jQuery('.featured_video--carousel');
+
+$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $status.html('<span class="counting">0'+i+'</span><span class="totalcount">0'+ slick.slideCount +'</span>')
+});
+
+$slickElement.slick({
+    autoplay: false,
+    dots: false,
+    fade: true,
+    prevArrow: '<div class="double_arrow small_arrow arrow_up"></div>',
+    nextArrow: '<div class="double_arrow small_arrow arrow_down"></div>',
+});
+
+if(jQuery('.fullpopup').length) {
+    jQuery('.fullpopup').fancybox({
+        toolbar  : false,
+        smallBtn : true,
             // iframe : {
             //     preload : false
             // }
         });
-    }
+}
 
-    jQuery('.single-experiment-btn').on('click', function(event) {
-        event.preventDefault();
-        $('#single-experiment-summary').hide();
-        $('#single-experiment-content').show();
+jQuery('.single-experiment-btn').on('click', function(event) {
+    event.preventDefault();
+    $('#single-experiment-summary').hide();
+    $('#single-experiment-content').show();
 
-        jQuery('.experiment--carousel').slick({
-            autoplay: false,
-            dots: false,
-            fade: true,
-            prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
-            nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
-
-        });
-
-        jQuery('.experiment--carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
-            if($('.last_experiment--slide').hasClass('slick-active')) {
-                jQuery('.single_experiment_header').text('What Just Happened_');
-            } else {
-                jQuery('.single_experiment_header').text('STEPS_');
-            }
-      });
-    });
-
-    jQuery('.close-single-experiment').on('click', function(event) {
-        event.preventDefault();
-        $('#single-experiment-content').hide();
-        $('#single-experiment-summary').show();
-    });
-
-    jQuery('.genaero_explorer--carousel').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
+    jQuery('.experiment--carousel').slick({
         autoplay: false,
-        fade: true,
-        asNavFor: '.genaero_explorer--navigation',
-        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
-        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
-    });
-    jQuery('.genaero_explorer--navigation').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.genaero_explorer--carousel',
         dots: false,
-        centerMode: true,
-        focusOnSelect: true,
+        fade: true,
+        prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
+        nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
 
-        responsive: [{
-          breakpoint: 578,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+    });
+
+    jQuery('.experiment--carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        if($('.last_experiment--slide').hasClass('slick-active')) {
+            jQuery('.single_experiment_header').text('What Just Happened_');
+        } else {
+            jQuery('.single_experiment_header').text('STEPS_');
         }
-    }]
+    });
 });
 
-    jQuery('.featured_experiment--keywordsslider-wrapp').slick({
+jQuery('.close-single-experiment').on('click', function(event) {
+    event.preventDefault();
+    $('#single-experiment-content').hide();
+    $('#single-experiment-summary').show();
+});
+
+jQuery('.genaero_explorer--carousel').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    fade: true,
+    asNavFor: '.genaero_explorer--navigation',
+    prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
+    nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+});
+jQuery('.genaero_explorer--navigation').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.genaero_explorer--carousel',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true,
+
+    responsive: [{
+      breakpoint: 578,
+      settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        fade: true,
-        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
-        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+        slidesToScroll: 1
+    }
+}]
+});
+
+jQuery('.featured_experiment--keywordsslider-wrapp').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    fade: true,
+    prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
+    nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+});
+
+jQuery('#all-events').on('click', function(event) {
+    event.preventDefault();
+    $('.past_events').show();
+    $('html, body').animate({
+        scrollTop: $('.past_events').offset().top
+    }, 1000);
+});
+
+jQuery('#upcoming-events').on('click', function(event) {
+    event.preventDefault();
+    $('.past_events').hide();
+    $('html, body').animate({
+        scrollTop: $('.ongoing_events').offset().top
+    }, 1000);
+});
+
+jQuery('.memberdashboard--btn').click(function(event){
+    event.preventDefault();
+    jQuery('.memberdashboard--menuwrap').slideToggle();
+});
+
+$(function(){
+    $('.hide-show').show();
+    $('.hide-show span').addClass('show')
+
+    $('.hide-show span').click(function(){
+        if( $(this).hasClass('show') ) {
+            $(this).text('Hide');
+            $('input[name="profile_password"]').attr('type','text');
+            $(this).removeClass('show');
+        } else {
+            $(this).text('Show');
+            $('input[name="profile_password"]').attr('type','password');
+            $(this).addClass('show');
+        }
     });
 
-    jQuery('#all-events').on('click', function(event) {
-        event.preventDefault();
-        $('.past_events').show();
-        $('html, body').animate({
-            scrollTop: $('.past_events').offset().top
-        }, 1000);
-    });
-
-    jQuery('#upcoming-events').on('click', function(event) {
-        event.preventDefault();
-        $('.past_events').hide();
-        $('html, body').animate({
-            scrollTop: $('.ongoing_events').offset().top
-        }, 1000);
-    });
-
-    jQuery('.memberdashboard--btn').click(function(event){
-        event.preventDefault();
-        jQuery('.memberdashboard--menuwrap').slideToggle();
-    });
-
-    $(function(){
-        $('.hide-show').show();
-        $('.hide-show span').addClass('show')
-
-        $('.hide-show span').click(function(){
-            if( $(this).hasClass('show') ) {
-                $(this).text('Hide');
-                $('input[name="profile_password"]').attr('type','text');
-                $(this).removeClass('show');
-            } else {
-                $(this).text('Show');
-                $('input[name="profile_password"]').attr('type','password');
-                $(this).addClass('show');
-            }
-        });
-
-        $('form button[type="submit"]').on('click', function(){
-            $('.hide-show span').text('Show').addClass('show');
-            $('.hide-show').parent().find('input[name="profile_password"]').attr('type','password');
-        }); 
-    });
+    $('form button[type="submit"]').on('click', function(){
+        $('.hide-show span').text('Show').addClass('show');
+        $('.hide-show').parent().find('input[name="profile_password"]').attr('type','password');
+    }); 
+});
 
     // $('#profile_photo_file').change(function() {
     //     var file = $(this).val();
