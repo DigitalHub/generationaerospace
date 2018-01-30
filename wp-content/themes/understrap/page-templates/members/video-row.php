@@ -29,7 +29,7 @@ $thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 	<div class="col-lg-8">
 		<p class="highlight">
 			<?php echo $title;
-			if($approved === 'pending') { echo '<span>(Pending Approval)<span>'; } 
+			if($approved === 'pending' || $approved === 'draft') { echo '<span>(Pending Approval)<span>'; } 
 			?>
 		</p>
 		<span><?=$desc?>...</span>
