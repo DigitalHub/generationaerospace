@@ -4,17 +4,17 @@ jQuery.noConflict();
 jQuery(window).load(function(){
 
     // detect first layer before svg loaded
-    var image = jQuery('img');
+    var image = jQuery('svg');
     if (!image.prop('complete')) {
-        console.log("Waiting to be loaded!");
+        // console.log("Waiting to be loaded!");
         image.on('load', function() {
-            jQuery('.pre--imgload').remove();
             console.log("Loaded!");
             console.log(this.complete);
+            anim.playSegments(true);
         });
     } else {
-        jQuery('.pre--imgload').remove(); 
-        console.log("Already loaded!");
+        console.log("Already loaded!");  
+        anim.playSegments(true);
     }
 
     // load progression percentage
@@ -31,11 +31,11 @@ jQuery(window).load(function(){
     });
 
     // to remove loading svg after loaded 
-    // setInterval(function(){
-    //     jQuery('#loadingbay').fadeOut(function(){ 
-    //         jQuery(this).remove();
-    //     });
-    // }, 4000);
+    setInterval(function(){
+        jQuery('#loadingbay').fadeOut(function(){ 
+            jQuery(this).remove();
+        });
+    }, 4000);
 });
 
 document.addEventListener("DOMContentLoaded", function() {

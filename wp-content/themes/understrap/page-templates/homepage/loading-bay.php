@@ -21,9 +21,6 @@
  	<div class="progress--logo">	
  		<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="logo_img" alt="Generation Aerospace">
  	</div>
- 	<div class="pre--imgload">
- 		<img src="<?php echo get_template_directory_uri(); ?>/img/img_4.png" alt="loading Blueprint">
- 	</div>
  	<div class="progress--wrap">
  		<div class="progression count-wrap"><span class="count">0</span></div><div class="progression"><span class="divider">|</span>100</div>
  	</div>
@@ -33,7 +30,7 @@
  			container: document.getElementById('lottie'),
  			renderer: 'svg',
  			loop: true,
- 			autoplay: true,
+ 			autoplay: false,
  			prerender: true,
  			animationData: animationData
  		};
