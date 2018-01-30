@@ -284,7 +284,7 @@ jQuery(document).ready(function($) {
         $('.past_events').show();
         $('html, body').animate({
             scrollTop: $('.past_events').offset().top
-        }, 2000);
+        }, 1000);
     });
 
     jQuery('#upcoming-events').on('click', function(event) {
@@ -292,7 +292,7 @@ jQuery(document).ready(function($) {
         $('.past_events').hide();
         $('html, body').animate({
             scrollTop: $('.ongoing_events').offset().top
-        }, 2000);
+        }, 1000);
     });
 
     jQuery('.memberdashboard--btn').click(function(event){
