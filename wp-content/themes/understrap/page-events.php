@@ -55,12 +55,11 @@ $old_query = new WP_Query($args2);
 			<div class="text-center highlight">
 				<?php while (have_posts()) : the_post();  the_content(); endwhile;?>
 			</div>
-			<!-- TODO: STEF TO ADD FUNCTIONALITY -->
-			<a href="#" class="defaultbtn btn--color">
+			<a href="#" id="all-events" class="defaultbtn btn--color">
 				<div class="defaultbtn-wrapper"><span>All</span></div>
 			</a>
 
-			<a href="#" class="defaultbtn btn--color">
+			<a href="#" id="upcoming-events" class="defaultbtn btn--color">
 				<div class="defaultbtn-wrapper"><span>Upcoming</span></div>
 			</a>
 		</div>

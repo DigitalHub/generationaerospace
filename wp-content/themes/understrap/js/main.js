@@ -288,6 +288,22 @@ jQuery(document).ready(function($) {
         nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
     });
 
+    jQuery('#all-events').on('click', function(event) {
+        event.preventDefault();
+        $('.past_events').show();
+        $('html, body').animate({
+            scrollTop: $('.past_events').offset().top
+        }, 1000);
+    });
+
+    jQuery('#upcoming-events').on('click', function(event) {
+        event.preventDefault();
+        $('.past_events').hide();
+        $('html, body').animate({
+            scrollTop: $('.ongoing_events').offset().top
+        }, 1000);
+    });
+
     jQuery('.memberdashboard--btn').click(function(event){
         event.preventDefault();
         jQuery('.memberdashboard--menuwrap').slideToggle();
