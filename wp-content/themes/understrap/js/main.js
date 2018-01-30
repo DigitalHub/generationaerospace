@@ -235,7 +235,16 @@ jQuery(document).ready(function($) {
             fade: true,
             prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
             nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
+
         });
+
+        jQuery('.experiment--carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            if($('.last_experiment--slide').hasClass('slick-active')) {
+                jQuery('.single_experiment_header').text('What Just Happened_');
+            } else {
+                jQuery('.single_experiment_header').text('STEPS_');
+            }
+      });
     });
 
     jQuery('.close-single-experiment').on('click', function(event) {
@@ -474,18 +483,6 @@ $('a.fav-experiment').on('click', function(e) {
         }
     });
 });
-
-if($('.last_experiment--slide').length) {
-    $('.double_arrow').on('click', function() {
-        if($('.last_experiment--slide').hasClass('slick-active')) {
-            console.log('active');
-            $('.single_experiment_header').text('What Just Happened_');
-        } else {
-            console.log('not active');
-            $('.single_experiment_header').text('Steps_');
-        }
-    });
-}
 
 // $('a[href$="#heart"]').on('click', function(e) {
 //   e.preventDefault();
