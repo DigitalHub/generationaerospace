@@ -13,6 +13,10 @@ global $loggedin;
 
 if(isset($_SESSION['username'])) {
 	$loggedin = '1';
+	if(is_page('login') || is_page('sign-up')) {
+		wp_redirect('member-dashboard', 301);
+	}
+
 } else {
 	$loggedin = '0';
 
