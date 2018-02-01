@@ -26,7 +26,9 @@ jQuery(window).load(function(){
     setInterval(function(){
         jQuery('#loadingbay').fadeOut(function(){ 
             jQuery(this).remove();
-            jQuery('video').get(0).play();
+            if(jQuery('video').length) {
+                jQuery('video').get(0).play();
+            }
         });
     }, 4000);
 });
@@ -61,6 +63,10 @@ function labnolIframe() {
 jQuery(document).ready(function($) {
     var scrollLock = false;
     var videoScrollLock = false;
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $('video').length) {
+        $('video').remove();
+    }
 
     $('a[href=#welcome]').on('click', function() {
         $('video').get(0).play(); //play video on clicking 'welcome' link on homepage
@@ -194,7 +200,9 @@ jQuery(document).ready(function($) {
             }
 
             if(anchorLink == 'welcome') {
-                $('video').get(0).play();
+                if($('video').length) {
+                    $('video').get(0).play();
+                }
             }
         }
     });
