@@ -9,6 +9,7 @@
 global $result;
 
 $video_id = $result->id;
+$link_id = $result->link_id;
 $title = $result->title;
 $desc = substr($result->description,0,120);
 $approved = $result->post_status;
@@ -26,7 +27,7 @@ $thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 			<img src="<?=$thumbnail_url?>" alt="<?=$title?>">
 		</a>
 	</div>
-	<div class="col-lg-8">
+	<div class="col-lg-7">
 		<p class="highlight">
 			<?php echo $title;
 			if($approved === 'pending' || $approved === 'draft') { echo '<span>(Pending Approval)<span>'; } 
@@ -36,6 +37,9 @@ $thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 	</div>
 	<div class="col-lg-1">
 		<a class="edit_videopost--btn" href="<?php echo get_permalink( get_page_by_path( 'edit-a-video' ) ) ?>?id=<?=$video_id?>"><i class="fal fa-pencil"></i></a>
+	</div>
+	<div class="col-lg-1">
+		<a href="#" class="delete-video edit_videopost--btn" data-video-id="<?=$video_id?>" data-link-id="<?=$link_id?>"><i class="fal fa-trash"></i></a>
 	</div>
 </div>
 

@@ -49,6 +49,18 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
 
+add_action("wp_ajax_delete_my_video", "delete_my_video");
+add_action("wp_ajax_nopriv_delete_my_video", "delete_my_video");
+
+function delete_my_video() {
+	global $wpdb;
+	$videoID = $_POST['videoID'];
+	$linkID = $_POST['linkID'];
+	$videos_table = $wpdb->prefix . 'genaero_videos';
+	$wpdb->delete($videos_table,array('id' => $videoID));
+
+	wp_delete_post($linkID, true);
+}
 
 add_action("wp_ajax_delete_fav_video", "delete_fav_video");
 add_action("wp_ajax_nopriv_delete_fav_video", "delete_fav_video");

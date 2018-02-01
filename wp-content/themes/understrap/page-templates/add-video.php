@@ -95,10 +95,6 @@ if($_POST['video_submit']) {
 		}
 	}
 } 
-
-if($_POST['video_delete']) {
-	//TODO
-}
 ?>
 
 <div class="wrapper" id="page-wrapper">
@@ -140,18 +136,6 @@ if($_POST['video_delete']) {
 								<input type="submit" name="video_submit" id="video_submit" value="Submit">
 							</div>	
 						</div>
-						<?php if($is_new_video === '0') {
-							?>
-							<div class="arrowbtn btn--color">
-								<span class="fas fa-long-arrow-alt-right icon-left"></span>	
-								<div class="arrowbtn-wrapper">
-									<input type="submit" name="video_delete" id="video_delete" value="Delete">
-								</div>	
-							</div>
-							<?php
-						}
-						?>
-
 					</form>
 
 				</main><!-- #main -->
