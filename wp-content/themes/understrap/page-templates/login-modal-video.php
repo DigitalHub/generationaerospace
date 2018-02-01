@@ -23,6 +23,13 @@ $wrong_login_details = "Wrong username or password. Please try again.";
 $username = $wpdb->escape($_POST['login_username']);
 $password = $wpdb->escape($_POST['login_password']);
 
+$videos_table = $wpdb->prefix.'genaero_videos';
+$sql = $wpdb->prepare("SELECT id as video_id FROM $videos_table WHERE link_id = '%s'", get_the_ID());
+$results = $wpdb->get_results($sql);
+if($wpdb->num_rows > 0) { 
+	$video_id = $results[0]->video_id;
+}
+
 //validate empty content
 if ($_POST['login_submit']) {
 	$table = $wpdb->prefix.'genaero_members';
@@ -43,13 +50,6 @@ if ($_POST['login_submit']) {
 				$_SESSION['username'] = $username;
 				$_SESSION['user_id'] = $user_id;
 
-				$videos_table = $wpdb->prefix.'genaero_videos';
-				$sql = $wpdb->prepare("SELECT id as video_id FROM $videos_table WHERE link_id = '%s'", get_the_ID());
-				$results = $wpdb->get_results($sql);
-				if($wpdb->num_rows > 0) { 
-					$video_id = $results[0]->video_id;
-				}
-
 				$fav_vid_table = $wpdb->prefix.'genaero_favourite_videos';
 				$wpdb->query($wpdb->prepare("INSERT INTO $fav_vid_table (member_id, video_id) VALUES (%d, %d)",$user_id, $video_id));
 
@@ -65,7 +65,6 @@ if ($_POST['login_submit']) {
 	}				
 }
 
-echo 'vid id: '.$video_id;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
@@ -100,8 +99,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<div class="separator">OR</div>
 
-						<!-- TODO: STEF TO FIX FOR FACEBOOK LOGIN -->
-						<?php echo do_shortcode("[genaero_facebook]"); ?>
+						<?php echo do_shortcode("[genaero_facebook post_type='video' post_id='".get_the_ID()."' video_id='".$video_id."']"); ?>
 					</form>
 
 				</div><!-- #primary -->

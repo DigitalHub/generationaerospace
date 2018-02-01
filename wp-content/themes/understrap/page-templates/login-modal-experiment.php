@@ -92,8 +92,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<div class="separator">OR</div>
 
-						<!-- TODO: STEF TO FIX FOR FACEBOOK LOGIN -->
-						<?php echo do_shortcode("[genaero_facebook]"); ?>
+						<?php echo do_shortcode("[genaero_facebook post_type='experiment' post_id='".get_the_ID()."']"); ?>
 					</form>
 
 				</div><!-- #primary -->

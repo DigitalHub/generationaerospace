@@ -42,22 +42,6 @@ function create_members_db() {
 
 require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 dbDelta( $sql );
-
-// if ( version_compare( $version, '2.0' ) < 0 ) {
-// 	$sql = "CREATE TABLE $table_name (
-// 	id mediumint(9) NOT NULL AUTO_INCREMENT,
-// 	time timestamp DEFAULT '0000-00-00 00:00:00' NOT NULL,
-// 	views smallint(5) NOT NULL,
-// 	clicks smallint(5) NOT NULL,
-// 	blog_id smallint(5) NOT NULL,
-// 	UNIQUE KEY id (id)
-// ) $charset_collate;";
-// dbDelta( $sql );
-
-// update_option( 'my_plugin_version', '2.0' );
-
-// }
-
 }
 
 //create database for videos list
@@ -185,7 +169,7 @@ class GenAeroFacebook{
      *
      * @var string
      */
-    // private $app_id = '2039117876371944';
+    // private $app_id = '381256678999175';
     private $app_id = '1675559965844578';
 
     /**
@@ -193,7 +177,7 @@ class GenAeroFacebook{
      *
      * @var string
      */
-    // private $app_secret = 'dfa4f9cfe8d93ead1783c4ec0d01a9e0';
+    // private $app_secret = 'a3343888ed15f157da70d60979c0c5b8';
     private $app_secret = '5e2c07d04fb95a216cb1b96111fca791';
 
     /**
@@ -224,6 +208,12 @@ class GenAeroFacebook{
     private $facebook_details;
 
     /**
+     * Post type and Post ID
+     */
+    private $post_type;
+    private $post_id;
+
+    /**
      * GenAeroFacebook constructor.
      */
     public function __construct()
@@ -245,43 +235,48 @@ class GenAeroFacebook{
      *
      * It displays our Login / Register button
      */
-    public function renderShortcode() {
+    public function renderShortcode($atts) {
+        extract(shortcode_atts(array(
+            'post_type' => 'post_type',
+            'post_id' => 'post_id',
+            'video_id' => 'video_id'
+        ), $atts));
 
         // Start the session
-    	if(!session_id()) {
-    		session_start();
-    	}
+        if(!session_id()) {
+          session_start();
+      }
 
-        // No need for the button is the user is already logged
-        // if(is_user_logged_in())
-        //     return;
+      $_SESSION['post_type'] = $post_type;
+      $_SESSION['post_id'] = $post_id;
+      $_SESSION['video_id'] = $video_id;
 
         // We save the URL for the redirection:
-    	if(!isset($_SESSION['genaero_facebook_url']))
-    		$_SESSION['genaero_facebook_url'] = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+      if(!isset($_SESSION['genaero_facebook_url']))
+          $_SESSION['genaero_facebook_url'] = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
-    	$button_label = __('Login with Facebook', 'genaeroweb');
+      $button_label = __('Login with Facebook', 'genaeroweb');
 
         // HTML markup
-    	$html = '<div id="genaero-facebook-wrapper">';
+      $html = '<div id="genaero-facebook-wrapper">';
 
         // Messages
-    	if(isset($_SESSION['genaero_facebook_message'])) {
-    		$message = $_SESSION['genaero_facebook_message'];
-    		$html .= '<div id="genaero-facebook-message" class="alert alert-danger">'.$message.'</div>';
+      if(isset($_SESSION['genaero_facebook_message'])) {
+          $message = $_SESSION['genaero_facebook_message'];
+          $html .= '<div id="genaero-facebook-message" class="alert alert-danger">'.$message.'</div>';
             // We remove them from the session
-    		unset($_SESSION['genaero_facebook_message']);
-    	}
+          unset($_SESSION['genaero_facebook_message']);
+      }
 
         // Button
-    	$html .= '<a href="'.$this->getLoginUrl().'" class=" " id="genaero-facebook-button">'.$button_label.'</a>';
+      $html .= '<a href="'.$this->getLoginUrl().'" id="genaero-facebook-button">'.$button_label.'</a>';
 
-    	$html .= '</div>';
+      $html .= '</div>';
 
         // Write it down
-    	return $html;
+      return $html;
 
-    }
+  }
 
     /**
      * Init the API Connection
@@ -298,7 +293,6 @@ class GenAeroFacebook{
     	]);
 
     	return $facebook;
-
     }
 
     /**
@@ -327,7 +321,7 @@ class GenAeroFacebook{
 
     /**
      * API call back running whenever we hit /wp-admin/admin-ajax.php?action=genaero_facebook
-     * This code handles the Login / Regsitration part
+     * This code handles the Login / Registration part
      */
     public function apiCallback() {
 
@@ -350,10 +344,10 @@ class GenAeroFacebook{
     	$fb_user = $this->facebook_details;
 
         // We first try to login the user
-    	$this->loginUser();
+        $this->loginUser();
 
         // Otherwise, we create a new account
-    	$this->createUser();
+        $this->createUser();
     }
 
     /**
@@ -452,27 +446,68 @@ class GenAeroFacebook{
      */
     private function loginUser() {
     	$table = $this->wpdb->prefix.'genaero_members';
+        $fav_videos_table = $this->wpdb->prefix . 'genaero_favourite_videos';
+        $fav_experiments_table = $this->wpdb->prefix . 'genaero_favourite_experiments';
 
-    	$fb_user = $this->facebook_details;
+        $fb_user = $this->facebook_details;
 
-    	$username = sanitize_user(str_replace(' ', '_', strtolower($this->facebook_details['name'])));
-    	$password = $this->facebook_details['id'];
+        $username = sanitize_user(str_replace(' ', '_', strtolower($this->facebook_details['name'])));
+        $password = $this->facebook_details['id'];
 
-    	$username_sql = $this->wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
-    	$results = $this->wpdb->get_results($username_sql);
-    	if(count($results) > 0) {
-    		$hashed_password = $results[0]->password;
-    		if(wp_check_password($password, $hashed_password)) {
-                $user_id = $results[0]->id;
+        $username_sql = $this->wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
+        $results = $this->wpdb->get_results($username_sql);
+        if(count($results) > 0) {
+          $hashed_password = $results[0]->password;
+          if(wp_check_password($password, $hashed_password)) {
+            $user_id = $results[0]->id;
 
-                $_SESSION['username'] = $username;
-                $_SESSION['user_id'] = $user_id;
-                wp_redirect( 'member-dashboard', 301 );
-                exit; 
+            $_SESSION['username'] = $username;
+            $_SESSION['user_id'] = $user_id;
+
+            if(isset($_SESSION['post_type'])) {
+                $this->post_type = $_SESSION['post_type'];
+                $this->post_id = $_SESSION['post_id'];
+                $this->video_id = $_SESSION['video_id'];
+                unset($_SESSION['post_type']);
+                unset($_SESSION['post_id']);
+                unset($_SESSION['video_id']);
             }
-        }
+            switch ($this->post_type) {
+                case 'video':
+                $check_if_fav_sql = $this->wpdb->prepare("SELECT id FROM $fav_videos_table WHERE member_id = %s AND video_id = %s", $user_id, $this->video_id);
+                $results = $this->wpdb->get_results($check_if_fav_sql);
+                if($this->wpdb->num_rows > 0) {
+                    $delete_sql = $this->wpdb->prepare("DELETE FROM $fav_videos_table WHERE member_id='%s' AND video_id='%s'", $user_id, $this->video_id);
+                    $this->wpdb->query($delete_sql);
+                } else {
+                    $insert_sql = $this->wpdb->prepare("INSERT INTO $fav_videos_table (member_id, video_id) VALUES (%s,%s)", $user_id, $this->video_id);
+                    $this->wpdb->query($insert_sql);
+                }
+                wp_redirect(get_permalink($this->post_id), 301);
+                break;
 
+                case 'experiment':
+                $check_if_fav_sql = $this->wpdb->prepare("SELECT id FROM $fav_experiments_table WHERE member_id = %s AND experiment_id = %s", $user_id, $this->post_id);
+                $results = $this->wpdb->get_results($check_if_fav_sql);
+                if($this->wpdb->num_rows > 0) {
+                    $delete_sql = $this->wpdb->prepare("DELETE FROM $fav_experiments_table WHERE member_id='%s' AND experiment_id='%s'", $user_id, $this->post_id);
+                    $this->wpdb->query($delete_sql);
+                } else {
+                    $insert_sql = $this->wpdb->prepare("INSERT INTO $fav_experiments_table (member_id, experiment_id) VALUES (%s,%s)", $user_id, $this->post_id);
+                    $this->wpdb->query($insert_sql);
+                }
+                wp_redirect(get_permalink($this->post_id), 301);
+                break;
+
+                default:
+                wp_redirect( 'member-dashboard', 301 );
+                break;
+            }
+            exit; 
+        }
     }
+
+}
 
     /**
      * Create a new WordPress account using Facebook Details
