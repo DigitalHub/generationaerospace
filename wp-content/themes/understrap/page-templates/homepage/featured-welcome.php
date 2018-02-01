@@ -9,7 +9,6 @@
 
 ?>
 <section class="section" data-anchor="welcome">
-	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-welcome.jpg"; ?>
 	<video loop muted preload="auto" id="video"><source src="<?php echo get_template_directory_uri(); ?>/img/GenAero-welcome.mp4" type="video/mp4"></video>
 		<div class="HudOverlay">
 			<svg class="homeHudOverlay" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
