@@ -347,21 +347,18 @@ $(function(){
     }); 
 });
 
-    // $('#profile_photo_file').change(function() {
-    //     var file = $(this).val();
-    //     if(file.length !== 0) {
-    //         $('#profile_photo').attr('src', file);
-    //     }
-    // });
-
-    $('.delete-fav-video').on('click', function() {
-        var favID = $(this).data('fav-id');
+$('.delete-video').on('click', function() {
+    var result = confirm("Are you sure you want to delete your video?");
+    if(result) {
+        var videoID = $(this).data('video-id');
+        var linkID = $(this).data('link-id');
         $.ajax({
             url: ajax.ajaxUrl,
             type: 'post',
             data: {
-                action: 'delete_fav_video',
-                favID: favID
+                action: 'delete_my_video',
+                videoID: videoID,
+                linkID: linkID,
             },
             success: function(data) {
                 location.reload();
@@ -370,29 +367,48 @@ $(function(){
                 console.log(errorThrown);
             }
         })
-    });
-
-    $('.delete-fav-experiment').on('click', function() {
-        var favID = $(this).data('fav-id');
-        $.ajax({
-            url: ajax.ajaxUrl,
-            type: 'post',
-            data: {
-                action: 'delete_fav_experiment',
-                favID: favID
-            },
-            success: function(data) {
-                location.reload();
-            },
-            error: function(errorThrown){
-                console.log(errorThrown);
-            }
-        })
-    });
-
-    if($('#member_username').length) {
-        $('#member_username').val($('#username').data('user-id'));
     }
+});
+
+$('.delete-fav-video').on('click', function() {
+    var favID = $(this).data('fav-id');
+    $.ajax({
+        url: ajax.ajaxUrl,
+        type: 'post',
+        data: {
+            action: 'delete_fav_video',
+            favID: favID
+        },
+        success: function(data) {
+            location.reload();
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    })
+});
+
+$('.delete-fav-experiment').on('click', function() {
+    var favID = $(this).data('fav-id');
+    $.ajax({
+        url: ajax.ajaxUrl,
+        type: 'post',
+        data: {
+            action: 'delete_fav_experiment',
+            favID: favID
+        },
+        success: function(data) {
+            location.reload();
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    })
+});
+
+if($('#member_username').length) {
+    $('#member_username').val($('#username').data('user-id'));
+}
 
 //if favourite videos found, toggle heart
 function addFavouriteVideos() {

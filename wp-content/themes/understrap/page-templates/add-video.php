@@ -94,7 +94,8 @@ if($_POST['video_submit']) {
 			}
 		}
 	}
-} ?>
+} 
+?>
 
 <div class="wrapper" id="page-wrapper">
 	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findaVideo.jpg";
@@ -135,7 +136,6 @@ if($_POST['video_submit']) {
 								<input type="submit" name="video_submit" id="video_submit" value="Submit">
 							</div>	
 						</div>
-
 					</form>
 
 				</main><!-- #main -->
