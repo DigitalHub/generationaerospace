@@ -428,10 +428,10 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+			"file": "wp-content/themes/understrap/single-genaero_trailblazers.php",
 			"settings":
 			{
-				"buffer_size": 4024,
+				"buffer_size": 3783,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -440,7 +440,7 @@
 			"file": "wp-content/themes/understrap/js/main.js",
 			"settings":
 			{
-				"buffer_size": 21178,
+				"buffer_size": 22562,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -458,7 +458,16 @@
 			"file": "wp-content/themes/understrap/sass/theme/custom/_base.scss",
 			"settings":
 			{
-				"buffer_size": 4091,
+				"buffer_size": 4088,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
+			"settings":
+			{
+				"buffer_size": 10291,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -473,19 +482,28 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
-			"settings":
-			{
-				"buffer_size": 6988,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "wp-config.php",
 			"settings":
 			{
 				"buffer_size": 3391,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
+			"settings":
+			{
+				"buffer_size": 7152,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/understrap/sass/theme/custom/_members.scss",
+			"settings":
+			{
+				"buffer_size": 6681,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -499,7 +517,7 @@
 	"command_palette":
 	{
 		"height": 490.0,
-		"last_filter": "Package Control: ",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -535,7 +553,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 565.0
+		"width": 589.0
 	},
 	"console":
 	{
@@ -563,20 +581,23 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/subpages",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/subpages"
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/ajph/wp-content/themes/ajph/js/main.js",
+		"/C/wamp64/www/plantronics/wp-content/themes/plantronics/js/main.js",
+		"/C/wamp64/www/generationaerospace/wp-content/plugins/genaero-members/genaero-members.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_videos.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/hub-base.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/single-hubbase.php",
+		"/C/wamp64/www/generationaerospace/wp-config.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/loading-bay.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/header.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/home-hubbase.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/hub-base.php",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/single-hubbase.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/featured-events.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/page-templates/homepage/genaero-explorer.php",
 		"/C/Users/rachelle.quek/AppData/Roaming/Skype/My Skype Received Files/wh-clip4-01.svg",
@@ -585,7 +606,6 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/css/theme.css",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/_responsive.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_base.scss",
-		"/C/wamp64/www/generationaerospace/wp-config.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_links.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_members.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_homepage.scss",
@@ -598,10 +618,8 @@
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/loop-templates/content-search.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/basic/inc/template-tags.php",
 		"/C/Users/rachelle.quek/Desktop/wh-clip3-01(2).svg",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-genaero_videos.php",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/sass/theme/custom/_header_footer.scss",
 		"/C/wamp64/www/generationaerospace/wp-content/themes/index.php",
-		"/C/wamp64/www/generationaerospace/wp-content/plugins/genaero-members/genaero-members.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/header.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/footer.php",
 		"/C/Users/rachelle.quek/AppData/Local/Temp/fz3temp-2/fixto.js",
@@ -696,13 +714,11 @@
 		"/C/Users/rachelle.quek/AppData/Roaming/Skype/My Skype Received Files/wh-clip3-01(1).svg",
 		"/C/Users/rachelle.quek/AppData/Roaming/Skype/My Skype Received Files/wh-clip3.svg",
 		"/C/Users/rachelle.quek/AppData/Roaming/Skype/My Skype Received Files/wh-clip2-01.svg",
-		"/C/Users/rachelle.quek/AppData/Roaming/Skype/My Skype Received Files/wh-clip1-01.svg",
-		"/C/Users/rachelle.quek/AppData/Roaming/Skype/My Skype Received Files/wh-clip3-01.svg",
-		"/C/wamp64/www/generationaerospace/wp-content/themes/understrap/single-vault.php"
+		"/C/Users/rachelle.quek/AppData/Roaming/Skype/My Skype Received Files/wh-clip1-01.svg"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
@@ -727,6 +743,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"embed_code",
+			"input",
 			"[[0,1000]]",
 			"5",
 			"10",
@@ -852,9 +870,7 @@
 			"//",
 			"fade",
 			" echo $video->video_title;",
-			"a#genaero-facebook-button",
-			"//",
-			"widget"
+			"a#genaero-facebook-button"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -907,27 +923,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 306.0,
+						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "wp-content/themes/understrap/page-templates/homepage/featured-welcome.php",
+					"file": "wp-content/themes/understrap/single-genaero_trailblazers.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4024,
+						"buffer_size": 3783,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								561,
-								561
+								520,
+								520
 							]
 						],
 						"settings":
@@ -939,13 +955,13 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -954,15 +970,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21178,
+						"buffer_size": 22562,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1151,
-								1151
+								643,
+								643
 							]
 						],
 						"settings":
@@ -972,10 +988,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1001,10 +1017,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2266.0,
+						"translation.y": 2158.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1013,15 +1029,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4091,
+						"buffer_size": 4088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								809,
-								809
+								775,
+								775
 							]
 						],
 						"settings":
@@ -1030,14 +1046,43 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 918.0,
+						"translation.y": 698.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_links.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								458,
+								458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 148.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "wp-content/themes/understrap/sass/theme/subpages/_singlepost.scss",
 					"semi_transient": false,
 					"settings":
@@ -1059,39 +1104,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 1188.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								888,
-								888
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 276.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1107,28 +1123,28 @@
 						"selection":
 						[
 							[
-								615,
-								615
+								612,
+								612
 							],
 							[
-								666,
-								666
+								662,
+								662
 							],
 							[
-								733,
-								733
+								729,
+								729
 							],
 							[
-								764,
-								764
+								765,
+								765
 							],
 							[
-								819,
-								819
+								823,
+								823
 							],
 							[
-								857,
-								857
+								860,
+								860
 							]
 						],
 						"settings":
@@ -1139,7 +1155,65 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "wp-content/themes/understrap/sass/theme/_responsive.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								836,
+								837
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 6.0,
+						"translation.y": 384.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "wp-content/themes/understrap/sass/theme/custom/_members.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6681,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								732,
+								732
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 616.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1204,6 +1278,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gen",
+				"wp-content\\plugins\\genaero-members\\genaero-members.php"
+			],
 			[
 				"genaero-members.php",
 				"wp-content\\plugins\\genaero-members\\genaero-members.php"
@@ -1641,7 +1719,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

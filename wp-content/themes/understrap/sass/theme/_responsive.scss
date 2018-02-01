@@ -32,6 +32,12 @@
 		display: none;
 	}
 
+	.section[data-anchor="welcome"] {
+		.HudOverlay {
+			background-image: url("../img/imgbg_homepage-welcome.jpg");
+		}
+	}
+
 	.section[data-anchor="featured_events"],
 	.section[data-anchor="genaero_trailblazers"] {
 		.HudOverlay:before {
@@ -46,7 +52,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #0000004f;
+		background-color: rgba(0, 0, 0, 0.51);
 	}
 
 	.fullpagecounter {
