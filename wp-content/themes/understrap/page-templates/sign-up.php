@@ -12,8 +12,6 @@ global $wpdb;
 $response = "";
 
 //function to generate response
-//RACH: DON'T STYLE THIS FIRST. WILL DISCUSS WITH YOU WHEN YOU REACH HERE
-//TODO: STEF TO MOVE THIS TO FUNCTIONS.PHP
 function my_contact_form_generate_response($type, $message){
 	global $response;
 	$response = "<div class='error'>{$message}</div>";
