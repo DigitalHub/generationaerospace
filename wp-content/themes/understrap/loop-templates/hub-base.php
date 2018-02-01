@@ -5,7 +5,7 @@
  * @package understrap
  */?>
  <div class="HudOverlay" style="background-image: url('<?php echo $bgimg; ?>');"> 
- 	<svg class="subHudOverlay" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
+ 	<svg class="homeHudOverlay" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
  		<path class="outsideHudOverlay" d="M0,0v653.6h1316V0H0z M1271.5,605.7c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6
  		C39,604.6,24.9,484,19.7,387.5c6.7-6.9,13.4-14.9,13.5-14.9l0.1-0.1l0.8-85.1l-0.1-0.1c0-0.1-7.9-8.1-14.6-14.3
  		C24.1,175.8,39,55.2,39.1,54c0-4.7,4.4-8.6,9.8-8.6c3.5-0.1,212.1-6.7,381.5-11.8l450,0.4c173.1,5,377.8,11.2,381.3,11.3

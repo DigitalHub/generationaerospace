@@ -13590,6 +13590,7 @@ a.fav-video {
     margin: 0 0 7px;
     text-transform: uppercase; }
     .menu-members-only-menu-container .menu > li a {
+      color: #fff;
       display: block;
       height: 100%;
       padding: 10px; }
