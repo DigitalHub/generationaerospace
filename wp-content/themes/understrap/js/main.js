@@ -5,7 +5,6 @@ jQuery(window).load(function(){
 
     var elem = jQuery('svg');
     if(elem.length) {
-        console.log('loaded');
         jQuery('.pre--imgload').remove(); 
         anim.playSegments(true);
     }
@@ -27,6 +26,9 @@ jQuery(window).load(function(){
     setInterval(function(){
         jQuery('#loadingbay').fadeOut(function(){ 
             jQuery(this).remove();
+            if(jQuery('video').length) {
+                jQuery('video').get(0).play();
+            }
         });
     }, 4000);
 });
@@ -62,29 +64,24 @@ jQuery(document).ready(function($) {
     var scrollLock = false;
     var videoScrollLock = false;
 
-  //   var playPromise = $('#video').play();
-
-  //   if (playPromise !== undefined) {
-  //       playPromise.then(_ => {
-  //     // Automatic playback started!
-  //     // Show playing UI.
-  // })
-  //       .catch(error => {
-  //     // Auto-play was prevented
-  //     // Show paused UI.
-  // });
-  //   }
-
-  jQuery(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-        jQuery('#link').addClass('up--button');
-        jQuery('#link').removeClass('down--button');
-    } else {
-        jQuery('#link').removeClass('up--button');
-        jQuery('#link').addClass('down--button');
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $('video').length) {
+        $('video').remove();
     }
 
-    if($('.videos_loadmore').length && ($('.videos_loadmore').offset().top - $(window).scrollTop()) < ($(window).height()/1.5)) {
+    $('a[href=#welcome]').on('click', function() {
+        $('video').get(0).play(); //play video on clicking 'welcome' link on homepage
+    });
+
+    jQuery(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            $('#link').addClass('up--button');
+            $('#link').removeClass('down--button');
+        } else {
+            $('#link').removeClass('up--button');
+            $('#link').addClass('down--button');
+        }
+
+        if($('.videos_loadmore').length && ($('.videos_loadmore').offset().top - $(window).scrollTop()) < ($(window).height()/1.5)) {
         //loadmore function for videos page
         var button = $('.videos_loadmore');
         var count = button.data('count');
@@ -164,32 +161,32 @@ jQuery(document).ready(function($) {
         }
     });
 
-  jQuery('html, body').animate({scrollTop: '0'}, 500);
-  jQuery('#link').click(function(){
-    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-        jQuery('html, body').animate({scrollTop: '0'}, 500);
-    } else {
-        jQuery('html, body').animate({scrollTop: '+=300'}, 500);
-    }
-});
+    jQuery('html, body').animate({scrollTop: '0'}, 500);
+    jQuery('#link').click(function(){
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            jQuery('html, body').animate({scrollTop: '0'}, 500);
+        } else {
+            jQuery('html, body').animate({scrollTop: '+=300'}, 500);
+        }
+    });
 
-  jQuery('.menu_butt').click(function(event){
-    event.preventDefault();
-    jQuery(this).toggleClass('opened');
-    jQuery('.menu-content').toggleClass('opened');
-});
+    jQuery('.menu_butt').click(function(event){
+        event.preventDefault();
+        jQuery(this).toggleClass('opened');
+        jQuery('.menu-content').toggleClass('opened');
+    });
 
-  jQuery('.menu_butt__close').click(function(event){
-    event.preventDefault();
-    jQuery('.menu_butt').removeClass('opened');
-    jQuery('.menu-content').removeClass('opened');
-});
+    jQuery('.menu_butt__close').click(function(event){
+        event.preventDefault();
+        jQuery('.menu_butt').removeClass('opened');
+        jQuery('.menu-content').removeClass('opened');
+    });
 
-  if(jQuery('#fullpage').length) {
-    jQuery('#fullpage').fullpage({
-        anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailblazers', 'featured_events'],
-        menu: '.chapter-selector',
-        css3: true,
+    if(jQuery('#fullpage').length) {
+        jQuery('#fullpage').fullpage({
+            anchors: ['welcome', 'featured_video', 'featured_experiment', 'genaero_explorer', 'genaero_trailblazers', 'featured_events'],
+            menu: '.chapter-selector',
+            css3: true,
         // lockAnchors: true,
         fitToSectionDelay: 100,
         lazyLoading: true,
@@ -201,164 +198,189 @@ jQuery(document).ready(function($) {
                 jQuery('.down--button').show();
                 jQuery('.up--button').hide();       
             }
+
+            if(anchorLink == 'welcome') {
+                if($('video').length) {
+                    $('video').get(0).play();
+                }
+            }
         }
     });
 
-    jQuery('.homescroll.down--button').click(function(){
-        jQuery.fn.fullpage.moveSectionDown();
+        jQuery('.homescroll.down--button').click(function(){
+            jQuery.fn.fullpage.moveSectionDown();
+        });
+
+        jQuery('.homescroll.up--button').click(function(){
+            jQuery.fn.fullpage.moveSectionUp();
+        });
+    }
+
+    var $status = jQuery('.pagingInfo');
+    var $slickElement = jQuery('.featured_video--carousel');
+
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $status.html('<span class="counting">0'+i+'</span><span class="totalcount">0'+ slick.slideCount +'</span>')
     });
 
-    jQuery('.homescroll.up--button').click(function(){
-        jQuery.fn.fullpage.moveSectionUp();
+    $slickElement.slick({
+        autoplay: false,
+        dots: false,
+        fade: true,
+        prevArrow: '<div class="double_arrow small_arrow arrow_up"></div>',
+        nextArrow: '<div class="double_arrow small_arrow arrow_down"></div>',
     });
-}
 
-var $status = jQuery('.pagingInfo');
-var $slickElement = jQuery('.featured_video--carousel');
-
-$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-    var i = (currentSlide ? currentSlide : 0) + 1;
-    $status.html('<span class="counting">0'+i+'</span><span class="totalcount">0'+ slick.slideCount +'</span>')
-});
-
-$slickElement.slick({
-    autoplay: false,
-    dots: false,
-    fade: true,
-    prevArrow: '<div class="double_arrow small_arrow arrow_up"></div>',
-    nextArrow: '<div class="double_arrow small_arrow arrow_down"></div>',
-});
-
-if(jQuery('.fullpopup').length) {
-    jQuery('.fullpopup').fancybox({
-        toolbar  : false,
-        smallBtn : true,
+    if(jQuery('.fullpopup').length) {
+        jQuery('.fullpopup').fancybox({
+            toolbar  : false,
+            smallBtn : true,
             // iframe : {
             //     preload : false
             // }
         });
-}
-
-jQuery('.single-experiment-btn').on('click', function(event) {
-    event.preventDefault();
-    $('#single-experiment-summary').hide();
-    $('#single-experiment-content').show();
-
-    jQuery('.experiment--carousel').slick({
-        autoplay: false,
-        dots: false,
-        fade: true,
-        prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
-        nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
-
-    });
-
-    jQuery('.experiment--carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        if($('.last_experiment--slide').hasClass('slick-active')) {
-            jQuery('.single_experiment_header').text('What Just Happened_');
-        } else {
-            jQuery('.single_experiment_header').text('STEPS_');
-        }
-    });
-});
-
-jQuery('.close-single-experiment').on('click', function(event) {
-    event.preventDefault();
-    $('#single-experiment-content').hide();
-    $('#single-experiment-summary').show();
-});
-
-
-jQuery('.genaero_explorer--carousel').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    fade: true,
-    asNavFor: '.genaero_explorer--navigation',
-    prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
-    nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
-});
-jQuery('.genaero_explorer--navigation').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.genaero_explorer--carousel',
-    dots: false,
-    centerMode: true,
-    focusOnSelect: true,
-
-    responsive: [{
-      breakpoint: 578,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
     }
-}]
+
+    jQuery('.single-experiment-btn').on('click', function(event) {
+        event.preventDefault();
+        $('#single-experiment-summary').hide();
+        $('#single-experiment-content').show();
+
+        jQuery('.experiment--carousel').slick({
+            autoplay: false,
+            dots: false,
+            fade: true,
+            prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
+            nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
+
+        });
+
+        jQuery('.experiment--carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            if($('.last_experiment--slide').hasClass('slick-active')) {
+                jQuery('.single_experiment_header').text('What Just Happened_');
+            } else {
+                jQuery('.single_experiment_header').text('STEPS_');
+            }
+        });
+    });
+
+    jQuery('.close-single-experiment').on('click', function(event) {
+        event.preventDefault();
+        $('#single-experiment-content').hide();
+        $('#single-experiment-summary').show();
+    });
+
+
+    jQuery('.genaero_explorer--carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        fade: true,
+        asNavFor: '.genaero_explorer--navigation',
+        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
+        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+    });
+    jQuery('.genaero_explorer--navigation').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.genaero_explorer--carousel',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+
+        responsive: [{
+          breakpoint: 578,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    }]
 });
 
-jQuery('.featured_experiment--keywordsslider-wrapp').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    fade: true,
-    prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
-    nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
-});
+    jQuery('.featured_experiment--keywordsslider-wrapp').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        fade: true,
+        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
+        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+    });
 
-jQuery('#all-events').on('click', function(event) {
-    event.preventDefault();
-    $('.past_events').show();
-    $('html, body').animate({
-        scrollTop: $('.past_events').offset().top
-    }, 1000);
-});
+    jQuery('#all-events').on('click', function(event) {
+        event.preventDefault();
+        $('.past_events').show();
+        $('html, body').animate({
+            scrollTop: $('.past_events').offset().top
+        }, 1000);
+    });
 
-jQuery('#upcoming-events').on('click', function(event) {
-    event.preventDefault();
-    $('.past_events').hide();
-    $('html, body').animate({
-        scrollTop: $('.ongoing_events').offset().top
-    }, 1000);
-});
+    jQuery('#upcoming-events').on('click', function(event) {
+        event.preventDefault();
+        $('.past_events').hide();
+        $('html, body').animate({
+            scrollTop: $('.ongoing_events').offset().top
+        }, 1000);
+    });
 
-jQuery('.memberdashboard--btn').click(function(event){
-    event.preventDefault();
-    jQuery('.memberdashboard--menuwrap').slideToggle();
-});
+    jQuery('.memberdashboard--btn').click(function(event){
+        event.preventDefault();
+        jQuery('.memberdashboard--menuwrap').slideToggle();
+    });
 
-$(function(){
-    $('.hide-show').show();
-    $('.hide-show span').addClass('show')
+    $(function(){
+        $('.hide-show').show();
+        $('.hide-show span').addClass('show')
 
-    $('.hide-show span').click(function(){
-        if( $(this).hasClass('show') ) {
-            $(this).text('Hide');
-            $('input[name="profile_password"]').attr('type','text');
-            $(this).removeClass('show');
-        } else {
-            $(this).text('Show');
-            $('input[name="profile_password"]').attr('type','password');
-            $(this).addClass('show');
+        $('.hide-show span').click(function(){
+            if( $(this).hasClass('show') ) {
+                $(this).text('Hide');
+                $('input[name="profile_password"]').attr('type','text');
+                $(this).removeClass('show');
+            } else {
+                $(this).text('Show');
+                $('input[name="profile_password"]').attr('type','password');
+                $(this).addClass('show');
+            }
+        });
+
+        $('form button[type="submit"]').on('click', function(){
+            $('.hide-show span').text('Show').addClass('show');
+            $('.hide-show').parent().find('input[name="profile_password"]').attr('type','password');
+        }); 
+    });
+
+    $('.delete-video').on('click', function() {
+        var result = confirm("Are you sure you want to delete your video?");
+        if(result) {
+            var videoID = $(this).data('video-id');
+            var linkID = $(this).data('link-id');
+            $.ajax({
+                url: ajax.ajaxUrl,
+                type: 'post',
+                data: {
+                    action: 'delete_my_video',
+                    videoID: videoID,
+                    linkID: linkID,
+                },
+                success: function(data) {
+                    location.reload();
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            })
         }
     });
 
-    $('form button[type="submit"]').on('click', function(){
-        $('.hide-show span').text('Show').addClass('show');
-        $('.hide-show').parent().find('input[name="profile_password"]').attr('type','password');
-    }); 
-});
-
-$('.delete-video').on('click', function() {
-    var result = confirm("Are you sure you want to delete your video?");
-    if(result) {
-        var videoID = $(this).data('video-id');
-        var linkID = $(this).data('link-id');
+    $('.delete-fav-video').on('click', function() {
+        var favID = $(this).data('fav-id');
         $.ajax({
             url: ajax.ajaxUrl,
             type: 'post',
             data: {
-                action: 'delete_my_video',
-                videoID: videoID,
-                linkID: linkID,
+                action: 'delete_fav_video',
+                favID: favID
             },
             success: function(data) {
                 location.reload();
@@ -367,48 +389,29 @@ $('.delete-video').on('click', function() {
                 console.log(errorThrown);
             }
         })
+    });
+
+    $('.delete-fav-experiment').on('click', function() {
+        var favID = $(this).data('fav-id');
+        $.ajax({
+            url: ajax.ajaxUrl,
+            type: 'post',
+            data: {
+                action: 'delete_fav_experiment',
+                favID: favID
+            },
+            success: function(data) {
+                location.reload();
+            },
+            error: function(errorThrown){
+                console.log(errorThrown);
+            }
+        })
+    });
+
+    if($('#member_username').length) {
+        $('#member_username').val($('#username').data('user-id'));
     }
-});
-
-$('.delete-fav-video').on('click', function() {
-    var favID = $(this).data('fav-id');
-    $.ajax({
-        url: ajax.ajaxUrl,
-        type: 'post',
-        data: {
-            action: 'delete_fav_video',
-            favID: favID
-        },
-        success: function(data) {
-            location.reload();
-        },
-        error: function(errorThrown){
-            console.log(errorThrown);
-        }
-    })
-});
-
-$('.delete-fav-experiment').on('click', function() {
-    var favID = $(this).data('fav-id');
-    $.ajax({
-        url: ajax.ajaxUrl,
-        type: 'post',
-        data: {
-            action: 'delete_fav_experiment',
-            favID: favID
-        },
-        success: function(data) {
-            location.reload();
-        },
-        error: function(errorThrown){
-            console.log(errorThrown);
-        }
-    })
-});
-
-if($('#member_username').length) {
-    $('#member_username').val($('#username').data('user-id'));
-}
 
 //if favourite videos found, toggle heart
 function addFavouriteVideos() {

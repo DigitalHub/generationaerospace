@@ -10,7 +10,7 @@
 ?>
 <section class="section" data-anchor="welcome">
 	<?php $bgimg = get_template_directory_uri() . "/img/imgbg_homepage-welcome.jpg"; ?>
-	<video autoplay loop muted preload="auto" id="video"><source src="<?php echo get_template_directory_uri(); ?>/img/GenAero-welcome.mp4" type="video/mp4"></video>
+	<video loop muted preload="auto" id="video"><source src="<?php echo get_template_directory_uri(); ?>/img/GenAero-welcome.mp4" type="video/mp4"></video>
 		<div class="HudOverlay">
 			<svg class="homeHudOverlay" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
 				<path class="outsideHudOverlay" d="M0,0v653.6h1316V0H0z M1271.5,605.7c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6
@@ -45,7 +45,7 @@
 				<div class="highlight"><?php echo get_field('welcome_copy'); ?></div>
 
 				<!-- TODO: STEF TO ADD BACKGROUND VIDEO -->
-				<a data-fancybox href="https://www.youtube.com/watch?v=l4LHKJkco7U">
+				<a data-fancybox href="https://www.youtube.com/watch?v=ulBQ9ryWBdg">
 					<div class="watch_video--typewriter">
 						<div class="watch_video--button">
 							<div class="watch_video--play">
