@@ -11,8 +11,6 @@
 global $wpdb;
 $response = "";
 
-//RACH: DON'T STYLE THIS FIRST. WILL DISCUSS WITH YOU WHEN YOU REACH HERE
-//
 //function to generate response
 function my_contact_form_generate_response($type, $message){
 	global $response;
@@ -21,13 +19,11 @@ function my_contact_form_generate_response($type, $message){
 
 //response messages
 $missing_content = "Please fill in all fields.";
-$wrong_login_details = "Wrong username or password. Please try again.";
+$wrong_login_details = "Wrong username or password. Please try again. Alternatively, try logging in with your Facebook account.";
 
 //user posted variables
 $username = $wpdb->escape($_POST['login_username']);
 $password = $wpdb->escape($_POST['login_password']);
-
-// TODO: STEF TO ADD 'USERNAME IS TAKEN' IF USER IS TRYING TO LOGIN WITH A FB USERNAME MANUALLY
 
 //validate empty content
 if ($_POST['login_submit']) {
@@ -37,7 +33,7 @@ if ($_POST['login_submit']) {
 		my_contact_form_generate_response("error", $missing_content);
 	} else {
 		//check username
-		$username_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s", $username);
+		$username_sql = $wpdb->prepare("SELECT * FROM $table WHERE username = %s AND is_fb_user = 0", $username);
 		$results = $wpdb->get_results($username_sql);
 		if($wpdb->num_rows > 0) {
 			//check password
