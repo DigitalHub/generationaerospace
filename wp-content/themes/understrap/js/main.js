@@ -1,13 +1,12 @@
 jQuery.noConflict();
 
-
 jQuery(window).load(function(){
-
-    var elem = jQuery('svg');
-    if(elem.length) {
-        jQuery('.pre--imgload').remove(); 
-        anim.playSegments(true);
-    }
+    if(jQuery('.home ').length > 0 ){
+        var elem = jQuery('svg');
+        if(elem.length) {
+            jQuery('.pre--imgload').remove(); 
+            anim.playSegments(true);
+        }
 
     // load progression percentage
     jQuery('.count').each(function() {
@@ -31,6 +30,7 @@ jQuery(window).load(function(){
             }
         });
     }, 4000);
+}
 });
 
 document.addEventListener("DOMContentLoaded", function() {
