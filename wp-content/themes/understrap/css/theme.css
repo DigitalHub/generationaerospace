@@ -13473,23 +13473,11 @@ a.fav-video {
   #signup_form input:focus,
   #login_form input:focus {
     outline: 0; }
-#forgot_form input::-webkit-input-placeholder,
-#forgot_form input:-moz-placeholder,
-#forgot_form input::-moz-placeholder,
-#forgot_form input:-ms-input-placeholder,
-#reset_form input::-webkit-input-placeholder,
-#reset_form input:-moz-placeholder,
-#reset_form input::-moz-placeholder,
-#reset_form input:-ms-input-placeholder,
-#signup_form input::-webkit-input-placeholder,
-#signup_form input:-moz-placeholder,
-#signup_form input::-moz-placeholder,
-#signup_form input:-ms-input-placeholder,
-#login_form input::-webkit-input-placeholder,
-#login_form input:-moz-placeholder,
-#login_form input::-moz-placeholder,
-#login_form input:-ms-input-placeholder {
-  color: #fff !important; }
+#forgot_form ::placeholder,
+#reset_form ::placeholder,
+#signup_form ::placeholder,
+#login_form ::placeholder {
+  color: #fff; }
 #forgot_form .login_submit--wrap,
 #reset_form .login_submit--wrap,
 #signup_form .login_submit--wrap,

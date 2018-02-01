@@ -51,11 +51,8 @@
 		}
 	}
 
-	input::-webkit-input-placeholder,
-	input:-moz-placeholder, /* Firefox 18- */
-	input::-moz-placeholder ,  /* Firefox 19+ */
-	input:-ms-input-placeholder {  
-		color: $white !important;  
+	::placeholder {  
+		color: $white;  
 	}
 
 	.login_submit--wrap {
