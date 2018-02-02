@@ -212,15 +212,15 @@ a.j-paginate.juicer-button {
 		display: block;
 		padding: 25px 0;
 
-		&.inline-link {
-			display: inline;
-			padding: 0;
-		}
-
 		&:hover {
 			color: $rrskyblue;
 			text-decoration: none;
 		}
+	}
+
+	a.inline-link {
+		display: inline;
+		padding: 0;
 	}
 }
 
