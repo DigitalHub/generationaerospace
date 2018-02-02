@@ -46,16 +46,19 @@ endif;
 							$thumbnail = getYoutubeThumbnail($video[0]->youtube);
 							?>
 							<div class="video_slide">
-								<div class="post-thumbnail" style="background-image:url('<?=$thumbnail?>');>
-								<img src="<?=$thumbnail?>" />
+								<a data-fancybox href="<?php echo $video[0]->youtube; ?>">
+									<div class="post-thumbnail" style="background-image:url('<?=$thumbnail?>')";>
+										<div class="bg-opaque"></div>
+										<i class="fas fa-play"></i>
+									</div>
+									<h3><?=$video[0]->title?></h3>
+									<p><?=$video[0]->fullname?></p>
+								</a>
 							</div>
-							<h3><?=$video[0]->title?></h3>
-							<p><?=$video[0]->fullname?></p>
-						</div>
-					<?php endforeach; ?>
+						<?php endforeach; ?>
+					</div>
 				</div>
-			</div>
-			<div class="pagingInfo"></div>
+				<div class="pagingInfo"></div>
 
 			<div class="center">
 				<a href="<?php echo get_permalink( get_page_by_path( 'get-inspired' ) ); ?>" class="arrowbtn btn--color hidindesktop--inline">
@@ -65,6 +68,5 @@ endif;
 			</div>
 		</div>
 	</div>
-</div>
-<div class="fullpagecounter"><span class="counting">02</span><span class="totalcount">06</span></div>
+	<div class="fullpagecounter"><span class="counting">02</span><span class="totalcount">06</span></div>
 </section>
