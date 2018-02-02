@@ -14384,7 +14384,8 @@ a.fav-video {
 @media (max-width: 767px) {
   .featured_trailbazers .post-thumbnail {
     height: 150px; }
-  .featured_trailbazers .mobileexcerpt {
+
+  .mobileexcerpt {
     display: none; }
 
   .juicer-feed.image-grid li.feed-item, .juicer-feed.slider .juicer-feed.hip li.feed-item {
