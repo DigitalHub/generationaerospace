@@ -256,7 +256,7 @@
 	}
 
 	h1 {
-		font-size: 2.5rem !important;
+		font-size: 2rem !important;
 	}
 
 	h2 {
@@ -316,7 +316,7 @@
 	}
 
 	.featured_video--carousel_wrapper {
-		margin: 0 0 30px;
+		// margin: 0 0 30px;
 
 		.featured_video--carousel .double_arrow {
 			vertical-align: 110px;
@@ -524,6 +524,11 @@
 		}
 	}
 
+	.welcome_content, 
+	.sub_content {
+		margin-top: 60px !important;
+	}
+
 	.featured_video--carousel_wrapper {
 		.featured_video--carousel {
 			.slick-list {
@@ -549,6 +554,12 @@
 				width: 80px;
 				padding: 0;
 			}
+		}
+	}
+
+	.featured_event {
+		.post-thumbnail {
+			height: 150px !important;
 		}
 	}
 }

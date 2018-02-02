@@ -12582,17 +12582,6 @@ a#genaero-facebook-button {
     bottom: 0;
     left: 25px;
     z-index: 1; }
-
-.featured--upcoming_event {
-  margin-bottom: 20px; }
-
-.featured_trailbazers--img .post-thumbnail img {
-  height: 120%; }
-
-.featured_event .post-thumbnail {
-  height: 250px !important; }
-  .featured_event .post-thumbnail img {
-    height: 300px; }
   .featured_event .post-thumbnail .post_date + p {
     margin-bottom: 15px; }
 .featured_event .post_date {
@@ -12602,6 +12591,12 @@ a#genaero-facebook-button {
   line-height: 100%; }
   .featured_event .post_date i {
     margin-right: 5px; }
+
+.featured--upcoming_event {
+  margin-bottom: 20px; }
+
+.featured_trailbazers--img .post-thumbnail img {
+  height: 120%; }
 
 .typewriter {
   color: #cad63e;
@@ -14435,7 +14430,7 @@ a.fav-video {
       display: none; }
 
   h1 {
-    font-size: 2.5rem !important; }
+    font-size: 2rem !important; }
 
   h2 {
     font-size: 1.6rem; }
@@ -14478,22 +14473,20 @@ a.fav-video {
     height: 150px;
     width: 80%; }
 
-  .featured_video--carousel_wrapper {
-    margin: 0 0 30px; }
-    .featured_video--carousel_wrapper .featured_video--carousel .double_arrow {
-      vertical-align: 110px; }
-    .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
-      margin: 0;
-      vertical-align: unset; }
-      .featured_video--carousel_wrapper .featured_video--carousel .slick-list .video_slide h3 {
-        margin-bottom: 0;
-        margin-top: 0; }
-    .featured_video--carousel_wrapper .genaero_explorer--carousel .slick-list,
-    .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
-      width: 70%; }
-      .featured_video--carousel_wrapper .genaero_explorer--carousel .slick-list .post-thumbnail,
-      .featured_video--carousel_wrapper .featured_video--carousel .slick-list .post-thumbnail {
-        height: 130px; }
+  .featured_video--carousel_wrapper .featured_video--carousel .double_arrow {
+    vertical-align: 110px; }
+  .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
+    margin: 0;
+    vertical-align: unset; }
+    .featured_video--carousel_wrapper .featured_video--carousel .slick-list .video_slide h3 {
+      margin-bottom: 0;
+      margin-top: 0; }
+  .featured_video--carousel_wrapper .genaero_explorer--carousel .slick-list,
+  .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
+    width: 70%; }
+    .featured_video--carousel_wrapper .genaero_explorer--carousel .slick-list .post-thumbnail,
+    .featured_video--carousel_wrapper .featured_video--carousel .slick-list .post-thumbnail {
+      height: 130px; }
 
   .featured_video--carousel_wrapper {
     vertical-align: unset; }
@@ -14610,6 +14603,10 @@ a.fav-video {
   .site-title a {
     width: 250px; }
 
+  .welcome_content,
+  .sub_content {
+    margin-top: 60px !important; }
+
   .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
     width: 60%; }
 
@@ -14623,7 +14620,10 @@ a.fav-video {
     .explorer_slide.slick-center.slick-current .post-thumbnail img {
       height: 80px;
       width: 80px;
-      padding: 0; } }
+      padding: 0; }
+
+  .featured_event .post-thumbnail {
+    height: 150px !important; } }
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
