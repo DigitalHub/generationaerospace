@@ -12323,7 +12323,7 @@ a#genaero-facebook-button {
       margin-bottom: 0; }
 
 .fullpagecounter {
-  bottom: 16%;
+  bottom: 20%;
   margin: 0;
   position: absolute;
   right: 3.6%; }
@@ -12584,6 +12584,11 @@ a#genaero-facebook-button {
   font-size: 1.6rem;
   font-weight: 400;
   text-transform: uppercase; }
+
+.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
 
 .sub_main {
   background-color: #eee; }
@@ -14300,7 +14305,8 @@ a.fav-video {
     display: inline-block !important; }
 
   .featured_video--carousel_wrapper {
-    margin: 30px auto;
+    margin: 0;
+    vertical-align: 0;
     width: 100%; }
     .featured_video--carousel_wrapper .featured_video--carousel .double_arrow {
       display: inline-block !important;
@@ -14317,17 +14323,24 @@ a.fav-video {
         transform: rotate(90deg); }
     .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
       display: inline-block !important;
+      margin: 0 !important;
       vertical-align: middle;
       width: 80%; }
 
   .featured_experiment--keywordsslider-wrapp {
     margin: auto;
-    width: 85%; }
+    width: 70%; }
 
   .featured_experiment--keywordsslider {
     width: 100%; }
     .featured_experiment--keywordsslider a {
-      height: 350px; } }
+      height: 350px;
+      margin: 0 auto 30px;
+      text-align: center;
+      width: 50%; }
+
+  .trailblazer--title {
+    margin-bottom: 30px; } }
 @media (max-width: 767px) and (orientation: landscape) {
   body.home:before {
     content: "PLEASE VIEW IN PORTRAIT";

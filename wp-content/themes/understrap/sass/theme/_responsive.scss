@@ -111,7 +111,9 @@
 	}
 
 	.featured_video--carousel_wrapper {
-		margin: 30px auto;
+		// margin: 30px auto;
+		margin: 0;
+		vertical-align: 0;
 		width: 100%;
 		.featured_video--carousel {
 			.double_arrow {
@@ -125,6 +127,7 @@
 
 			.slick-list {
 				display: inline-block !important;
+				margin: 0 !important;
 				vertical-align: middle;
 				width: 80%;
 			}
@@ -133,14 +136,21 @@
 
 	.featured_experiment--keywordsslider-wrapp {
 		margin: auto;
-		width: 85%;
+		width: 70%;
 	}
 
 	.featured_experiment--keywordsslider {
 		width: 100%;
 		a {
 			height: 350px;
+			margin: 0 auto 30px;
+			text-align: center;
+			width: 50%;
 		}
+	}
+
+	.trailblazer--title {
+		margin-bottom: 30px;
 	}
 }
 

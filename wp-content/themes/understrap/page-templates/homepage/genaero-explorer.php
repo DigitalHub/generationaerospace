@@ -64,7 +64,7 @@
 				$title = get_sub_field('title');
 				$copy = get_sub_field('copy'); ?>
 				<div class="explorer_slide">
-					<h2><?=$title?></h2>
+					<h3><?=$title?></h3>
 					<p class="highlight"><?=$copy?></p>
 				</div>
 			<?php endwhile; ?>

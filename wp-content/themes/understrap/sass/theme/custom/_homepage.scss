@@ -319,7 +319,7 @@
 
 
 .fullpagecounter {
-	bottom: 16%;
+	bottom: 20%;
 	margin: 0;
 	position: absolute;
 	right: 3.6%;
@@ -644,4 +644,10 @@
 	font-size: 1.6rem;
 	font-weight: 400;
 	text-transform: uppercase;
+}
+
+.center {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
 }

@@ -73,10 +73,12 @@ $second_query = new WP_Query($args2);
 					</div>
 					<?php echo get_field('homepage_description'); ?>
 					<div class="clear"></div>
-					<a href="<?php the_permalink(); ?>" class="arrowbtn btn--color">
-						<span class="fas fa-long-arrow-alt-right icon-left"></span>
-						<div class="arrowbtn-wrapper"><span>Read More</span></div>
-					</a>
+					<div class="center">
+						<a href="<?php the_permalink(); ?>" class="arrowbtn btn--color">
+							<span class="fas fa-long-arrow-alt-right icon-left"></span>
+							<div class="arrowbtn-wrapper"><span>Read More</span></div>
+						</a>
+					</div>
 				<?php endwhile; endif; ?>
 			</div>
 <!-- 
