@@ -14455,7 +14455,8 @@ a.fav-video {
 
   .site-toplogin_btn {
     left: 2%;
-    top: 10px; }
+    top: 10px;
+    width: 80px; }
 
   .site-title a {
     width: 270px; }
@@ -14473,7 +14474,8 @@ a.fav-video {
     width: 250px; }
 
   .featured_experiment--keywordsslider a {
-    height: 150px; }
+    height: 150px;
+    width: 80%; }
 
   .featured_video--carousel_wrapper {
     margin: 0 0 30px; }
@@ -14604,6 +14606,12 @@ a.fav-video {
         margin: 0 30px;
         width: 80%; } }
 @media (max-width: 375px) {
+  .site-title a {
+    width: 250px; }
+
+  .highlight {
+    font-size: 0.95rem; }
+
   .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
     width: 60%; } }
 /*

@@ -283,6 +283,7 @@
 	.site-toplogin_btn {
 		left: 2%;
 		top: 10px;
+		width: 80px;
 	}
 
 	.site-title a {
@@ -310,6 +311,7 @@
 
 	.featured_experiment--keywordsslider a {
 		height: 150px;
+		width: 80%;
 	}
 
 	.featured_video--carousel_wrapper {
@@ -514,6 +516,17 @@
 }
 
 @media (max-width: 375px) {
+
+	.site-title {
+		a {
+			width: 250px;
+		}
+	}
+
+	.highlight {
+		font-size: 0.95rem;
+	}
+
 	.featured_video--carousel_wrapper {
 		.featured_video--carousel {
 			.slick-list {
