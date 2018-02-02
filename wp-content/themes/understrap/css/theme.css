@@ -14328,6 +14328,10 @@ a.fav-video {
   .hidindesktop--inline {
     display: inline-block !important; }
 
+  .featured_videohomepage h1,
+  .sub_content h1 {
+    text-align: center; }
+
   .featured_video--carousel_wrapper {
     margin: 0;
     vertical-align: 0;
@@ -14378,6 +14382,11 @@ a.fav-video {
     width: 100%;
     height: 100%; } }
 @media (max-width: 767px) {
+  .featured_trailbazers .post-thumbnail {
+    height: 150px; }
+  .featured_trailbazers .mobileexcerpt {
+    display: none; }
+
   .juicer-feed.image-grid li.feed-item, .juicer-feed.slider .juicer-feed.hip li.feed-item {
     display: inline-block; }
 
@@ -14438,14 +14447,14 @@ a.fav-video {
 
   .menu_butt__close,
   .site-menu {
-    right: 1%;
+    right: 2%;
     top: 10px; }
 
   .site-title {
     top: 10px; }
 
   .site-toplogin_btn {
-    left: 1%;
+    left: 2%;
     top: 10px; }
 
   .site-title a {
@@ -14594,6 +14603,9 @@ a.fav-video {
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .slick-list {
         margin: 0 30px;
         width: 80%; } }
+@media (max-width: 322px) {
+  .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
+    width: 60%; } }
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

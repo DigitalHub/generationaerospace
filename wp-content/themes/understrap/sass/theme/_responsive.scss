@@ -110,6 +110,13 @@
 		display: inline-block !important;
 	}
 
+	.featured_videohomepage,
+	.sub_content {
+		h1 {
+			text-align: center;
+		}
+	}
+
 	.featured_video--carousel_wrapper {
 		// margin: 30px auto;
 		margin: 0;
@@ -171,6 +178,15 @@
 }
 
 @media (max-width: 767px) {
+
+	.featured_trailbazers {
+		.post-thumbnail {
+			height: 150px;
+		}
+		.mobileexcerpt {
+			display: none;
+		}
+	}
 
 	.juicer-feed.image-grid li.feed-item, .juicer-feed.slider .juicer-feed.hip li.feed-item {
 		display: inline-block;
@@ -256,7 +272,7 @@
 
 	.menu_butt__close,
 	.site-menu {
-		right: 1%;
+		right: 2%;
 		top: 10px;
 	}
 
@@ -265,7 +281,7 @@
 	}
 
 	.site-toplogin_btn {
-		left: 1%;
+		left: 2%;
 		top: 10px;
 	}
 
@@ -498,4 +514,11 @@
 }
 
 @media (max-width: 322px) {
+	.featured_video--carousel_wrapper {
+		.featured_video--carousel {
+			.slick-list {
+				width: 60%;
+			}
+		}
+	}
 }
