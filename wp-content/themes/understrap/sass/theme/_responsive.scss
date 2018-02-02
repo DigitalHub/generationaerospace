@@ -184,7 +184,7 @@
 			height: 150px;
 		}
 	}
-	
+
 	.mobileexcerpt {
 		display: none;
 	}
@@ -260,7 +260,7 @@
 	}
 
 	h2 {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 
 	h3 {
@@ -524,14 +524,30 @@
 		}
 	}
 
-	.highlight {
-		font-size: 0.95rem;
-	}
-
 	.featured_video--carousel_wrapper {
 		.featured_video--carousel {
 			.slick-list {
 				width: 60%;
+			}
+		}
+	}
+
+	.explorer_slide.slick-slide, 
+	.explorer_slide.slick-cloned {
+		p {
+			0.8rem;
+		}
+	}
+
+	.explorer_slide.slick-center.slick-current {
+		.post-thumbnail {
+			height: 80px;
+			width: 80px;
+
+			img {
+				height: 80px;
+				width: 80px;
+				padding: 0;
 			}
 		}
 	}

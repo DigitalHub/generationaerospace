@@ -46,7 +46,9 @@
 	<div class="container sub_content">
 		<div class="row">
 			<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
-				<h2 style="text-align: center;">BECOME A #GENAERO EXPLORER</h2>
+				<div class="center mobileexcerpt">
+					<h2>BECOME A #GENAERO EXPLORER</h2>
+				</div>
 				<div class="genaero_explorer--navigation">
 					<?php while(have_rows('explorer_slides')) : the_row();
 					$icon = get_sub_field('icon');
