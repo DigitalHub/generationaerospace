@@ -164,7 +164,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%; 
-
+		padding-bottom: 50px;
 
 		.post-thumbnail {
 			height: 400px;
@@ -172,11 +172,6 @@
 			img {
 				height: 400px;
 			}
-		}
-
-		.single_experiment--col,
-		.single_trailblazers--col {
-			min-height: 550px;
 		}
 	}
 

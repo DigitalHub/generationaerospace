@@ -107,8 +107,9 @@
 
 		a {
 			color: $white;
-
 			&:hover {
+				border-bottom: 1px solid;
+				padding-bottom: 2px;
 				text-decoration: none;
 			}
 		}
@@ -443,63 +444,77 @@
 	}
 }
 
+
 .explorer_slide {
-	text-align: center;
+	&.slick-slide,
+	&.slick-cloned {
+		text-align: center;
 
-	.post-thumbnail {
-		height: 182px;
-		margin: 0 auto 40px;
-		overflow: hidden;
-		position: relative;
-		width: 182px;
-
-		img {
-			height: 112px;
-			left: 50%;
-			max-width: none;
-			top: 50%;
-			@include translate(-50%,-50%);
-			position: absolute;
-			width: auto;
-			@include transition(height 500ms ease-in-out);
-
-			&.running_icon {
-				@include opacity(0);
-			}
-
-			&.paused_icon {
-				@include opacity(1);
-			}
-		}
-	}
-
-	p {
-		margin: auto;
-		width: 80%;
-	}
-
-	&.slick-center {
 		.post-thumbnail {
+			height: 182px;
+			margin: 0 auto 40px;
+			overflow: hidden;
+			position: relative;
+			width: 182px;
+			// @include opacity(0);
 			img {
-				height: 185px;
-				@include transition(height 500ms ease-in-out);
+				display: none;
+				height: 112px;
+				left: 50%;
+				max-width: none;
+				padding: 20px;
+				position: absolute;
+				top: 50%;
+				@include transition(all 500ms ease-in-out);
+				width: auto;
+				@include translate(-50%,-50%);
 
 				&.running_icon {
-					@include opacity(1);
+					@include opacity(0);
 				}
 
 				&.paused_icon {
-					@include opacity(0);
+					background-color: rgba(255, 255, 255, 0.22);
+					@include border-radius(100px);
+					@include opacity(1);
 				}
 			}
 		}
 
-		&.slick-current .post-thumbnail {
-			margin: 0 auto 40px;
+		p {
+			margin: auto;
+			width: 80%;
+		}
+
+		&.slick-active {
+			.post-thumbnail {
+				img {
+					display: block;
+				}
+			}
+		}
+
+		&.slick-current {
+			.post-thumbnail {
+				img {
+					display: block;
+					height: 185px;
+					@include transition(all 500ms ease-in-out);
+
+					&.running_icon {
+						@include opacity(1);
+					}
+
+					&.paused_icon {
+						background-color: transparent;
+						@include border-radius(0);
+						@include opacity(0);
+					}
+				}
+			}
 		}
 	}
 }
-
 
 .featured_trailbazers {
 

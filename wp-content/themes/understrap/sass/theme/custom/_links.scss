@@ -179,9 +179,6 @@ a {
 	}
 }
 
-
-
-
 .menu_butt {
 	display: block;
 	text-decoration: none;
@@ -240,7 +237,6 @@ a {
 	display: block;
 	position: relative;
 	@include transition(all 0.1s ease-in-out);
-
 
 	&:before ,
 	&:after {
@@ -367,10 +363,10 @@ a {
 		&:before {
 			content: '';
 			position: absolute;
-			left: -15%;
-			top: 5%;
-			height: 90%;
-			width: 15%;
+			left: -100%;
+			top: 0;
+			height: 100%;
+			width: 100%;
 			z-index: -1;
 			@include transition(.4s .02s ease-in all);
 		}
@@ -512,10 +508,10 @@ a {
 		&:before {
 			content: '';
 			position: absolute;
-			left: -15%;
-			top: 5%;
-			height: 90%;
-			width: 15%;
+			left: -100%;
+			top: 0;
+			height: 100%;
+			width: 100%;
 			z-index: -1;
 			@include transition(.4s .02s ease-in all);
 		}
@@ -610,22 +606,6 @@ a {
 		width: 10px;
 		z-index: 11;
 	}
-}
-
-input {
-	// background-color: #ffffff40;
-	background-color: #000;
-	border: none;
-	color: $white;
-	padding: 15px 10px;
-	height: 40px;
-	// height: auto !important; //temporary
-	width: 100%;
-
-	&:focus {
-		outline: 0;
-	}
-
 }
 
 a#genaero-facebook-button {

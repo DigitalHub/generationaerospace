@@ -471,8 +471,6 @@
 	}
 }
 
-
-
 //** Main Menu Ends **//
 //*******************************************//
 //** Footer Starts **//
@@ -482,6 +480,7 @@
 	cursor: pointer;
 	right: 2%;
 	position: fixed;
+	z-index: 3;
 
 	&.up--button .headerbutt .hexagon-icon {
 		@include rotate(180);

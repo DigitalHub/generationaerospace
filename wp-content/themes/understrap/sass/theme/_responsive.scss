@@ -181,6 +181,16 @@
 	.content--overflow + .single_main {
 		padding-top: 0;
 	}
+
+	.single_experiment,
+	.single_trailblazers {
+		.single_experiment--methods,
+		.single_trailblazers--profile,
+		.single_experiment--materials, 
+		.single_trailblazers--video  {
+			height: auto;
+		}
+	}
 }
 
 @media (max-width: 576px) {
