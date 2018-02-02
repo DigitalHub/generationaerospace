@@ -516,13 +516,10 @@ a.fav-video {
 
 .youtube-player {
 	position: relative;
-	padding-bottom: 56.23%;
-	/* Use 75% for 4:3 videos */
-	height: 0;
+	height: 100%;
 	overflow: hidden;
 	max-width: 100%;
 	background: #000;
-	margin: 5px;
 
 	iframe {
 		position: absolute;

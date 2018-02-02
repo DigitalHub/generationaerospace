@@ -68,9 +68,11 @@ jQuery(document).ready(function($) {
         $('video').remove();
     }
 
-    $('a[href=#welcome]').on('click', function() {
+    if(jQuery('.home ').length > 0 ){
+        $('a[href=#welcome]').on('click', function() {
         $('video').get(0).play(); //play video on clicking 'welcome' link on homepage
     });
+    };
 
     jQuery(window).scroll(function() {
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
