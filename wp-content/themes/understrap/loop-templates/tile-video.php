@@ -55,7 +55,7 @@ $thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 				</div>
 			</div>
 			<div class="alignleft">
-				<div class="meta-posted">Posted by <span class="meta-student"><?=$name?></span></div>
+				<div class="meta-posted">Posted by <a class="inline-link" href="<?php echo get_permalink(get_page_by_path( 'user-profile' )).'?user='.$posted_by_username; ?>"><span class="meta-student"><?=$name?></span></a></div>
 				<div class="meta-date"><i class="fas fa-clock"></i><?=$posted_date?></div>
 				<!-- <div class="meta-comment"><i class="fas fa-comment"></i>200</div> -->
 				<div class="meta-fav"><i class="fas fa-heart"></i><?=$favourite?></div>
