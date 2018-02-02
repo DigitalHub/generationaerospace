@@ -14603,7 +14603,7 @@ a.fav-video {
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .slick-list {
         margin: 0 30px;
         width: 80%; } }
-@media (max-width: 322px) {
+@media (max-width: 375px) {
   .featured_video--carousel_wrapper .featured_video--carousel .slick-list {
     width: 60%; } }
 /*
