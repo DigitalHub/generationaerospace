@@ -39,8 +39,7 @@ $results_count = $wpdb->num_rows;
 								get_template_part( 'page-templates/members/fav', 'experiment-row' );
 							}
 						} else {
-							echo '<div class="row"><p>You have not liked any experiments yet. Check out some of our experiments here.</p>';
-							echo '<a href="'.get_permalink( get_page_by_path( 'try-this-at-home' ) ).'">Find an Experiment</a></div>';
+							echo '<div class="row"><p>You have not liked any experiments yet. Check out some of our experiments here. <a href="'.get_permalink( get_page_by_path( 'try-this-at-home' ) ).'">Find an Experiment</a></p></div>';
 						}?>
 					</div>
 				</div>

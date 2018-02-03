@@ -40,8 +40,7 @@ $results_count = $wpdb->num_rows;
 									get_template_part( 'page-templates/members/fav', 'video-row' );
 								}
 							} else {
-								echo '<div class="row"><p>You have not liked any videos yet. Why not submit your own video here?</p>';
-								echo '<a href="'.get_permalink( get_page_by_path( 'get-inspired' ) ).'">Submit New Video</a></div>';
+								echo '<div class="row"><p>You have not liked any videos yet. Why not submit your own video here? <a href="'.get_permalink( get_page_by_path( 'get-inspired' ) ).'">Submit New Video</a></p></div>';
 							}
 							?>
 						</div>
