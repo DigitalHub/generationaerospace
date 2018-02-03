@@ -129,14 +129,13 @@ if($wpdb->num_rows > 0) {
 	}
 }
 ?>
-
 <div class="wrapper" id="page-wrapper">
 	<?php $bgimg = get_template_directory_uri() . "/img/img-header_findaVideo.jpg";
 	include(locate_template('loop-templates/hub-base.php')); ?>
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 		<div class="row dashboard-row">
 			<?php get_sidebar( 'left' ); ?>
-			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
+			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12<?php else : ?>col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
 					<form id="profile_form" method="post" action="" enctype="multipart/form-data" class="row">
 						<div class="dashboard_content--title-half">
@@ -212,13 +211,18 @@ if($wpdb->num_rows > 0) {
 
 			</div><!-- #primary -->
 
-			<menu class="d-block d-md-none col-sm-12 col-xs-12 memberdashboard--menu">
-				<div class="memberdashboard--menuwrap">
-					<?php dynamic_sidebar( 'left-sidebar' ); ?>
-				</div>
-				<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
-			</menu>
+			
 
+			<menu class="container memberdashboard--menu">
+				<div class="row">
+					<div class="d-block d-md-none col-sm-12 col-xs-12">
+						<div class="memberdashboard--menuwrap">
+							<?php dynamic_sidebar( 'left-sidebar' ); ?>
+						</div>
+						<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
+					</div>
+				</div>
+			</menu>
 		</div><!-- .row -->
 
 	</div><!-- Container end -->

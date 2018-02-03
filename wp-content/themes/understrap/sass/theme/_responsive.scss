@@ -247,7 +247,9 @@
 			max-width: none;
 			min-width: none;
 		}
-
+		input#profile_password {
+			width: calc(100% - 85px);
+		}
 	}
 
 	.memberdashboard--menu {

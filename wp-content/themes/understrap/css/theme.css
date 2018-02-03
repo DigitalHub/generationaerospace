@@ -13673,6 +13673,10 @@ a.fav-video {
     background-color: #ffffff1f;
     color: #fff;
     border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
     display: block;
     float: right;
     height: 40px;
@@ -14448,6 +14452,8 @@ a.fav-video {
       width: 100%;
       max-width: none;
       min-width: none; }
+    .dashboard_content input#profile_password {
+      width: calc(100% - 85px); }
 
   .memberdashboard--menu {
     bottom: 0; } }

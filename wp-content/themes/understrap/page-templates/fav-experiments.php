@@ -26,11 +26,12 @@ $results_count = $wpdb->num_rows;
 			<?php get_sidebar( 'left' ); ?>
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
-					<div class="dashboard_content--title">
-						<h4>My Favourite Experiments</h4>
-					</div>
-					<div class="clear"></div>
-					<div class="container">
+					<div class="row">
+						<div class="dashboard_content--title">
+							<h4>My Favourite Experiments</h4>
+						</div>
+						<div class="clear"></div>
+						<div class="container">
 						<?php //TODO: STEF TO ADD PAGINATION
 						if($results_count > 0) {
 							foreach ($results as $result) {
@@ -42,16 +43,20 @@ $results_count = $wpdb->num_rows;
 							echo '<a href="'.get_permalink( get_page_by_path( 'try-this-at-home' ) ).'">Find an Experiment</a>';
 						}?>
 					</div>
-				</main><!-- #main -->
-			</div><!-- #primary -->
-
-			<menu class="d-block d-md-none col-sm-12 col-xs-12 memberdashboard--menu">
-				<div class="memberdashboard--menuwrap">
-					<?php dynamic_sidebar( 'left-sidebar' ); ?>
 				</div>
-				<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
-			</menu>
-		</div><!-- .row -->
-	</div><!-- Container end -->
+			</main><!-- #main -->
+		</div><!-- #primary -->
+		<menu class="container memberdashboard--menu">
+			<div class="row">
+				<div class="d-block d-md-none col-sm-12 col-xs-12">
+					<div class="memberdashboard--menuwrap">
+						<?php dynamic_sidebar( 'left-sidebar' ); ?>
+					</div>
+					<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
+				</div>
+			</div>
+		</menu>
+	</div><!-- .row -->
+</div><!-- Container end -->
 </div><!-- Wrapper end -->
 <?php get_footer(); ?>

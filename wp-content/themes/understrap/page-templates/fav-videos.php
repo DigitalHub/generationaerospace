@@ -32,9 +32,9 @@ $results_count = $wpdb->num_rows;
 							<h4>My Favourite Videos</h4>
 						</div>
 						<div class="clear"></div>
-						
+
 						<div class="container">
-							
+
 							<?php //TODO: STEF TO ADD PAGINATION
 							if($results_count > 0) {
 								foreach ($results as $result) {
@@ -51,11 +51,15 @@ $results_count = $wpdb->num_rows;
 				</main><!-- #main -->
 			</div><!-- #primary -->
 
-			<menu class="d-block d-md-none col-sm-12 col-xs-12 memberdashboard--menu">
-				<div class="memberdashboard--menuwrap">
-					<?php dynamic_sidebar( 'left-sidebar' ); ?>
+			<menu class="container memberdashboard--menu">
+				<div class="row">
+					<div class="d-block d-md-none col-sm-12 col-xs-12">
+						<div class="memberdashboard--menuwrap">
+							<?php dynamic_sidebar( 'left-sidebar' ); ?>
+						</div>
+						<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
+					</div>
 				</div>
-				<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
 			</menu>
 		</div><!-- .row -->
 	</div><!-- Container end -->
