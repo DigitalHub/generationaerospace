@@ -13563,7 +13563,7 @@ a.fav-video {
 
 .memberdashboard--menu {
   position: absolute;
-  bottom: 30px; }
+  bottom: 0; }
   .memberdashboard--menu .memberdashboard--menuwrap {
     background-color: #000;
     bottom: 48px;
@@ -14389,7 +14389,24 @@ a.fav-video {
   .single_trailblazers .single_trailblazers--profile,
   .single_trailblazers .single_experiment--materials,
   .single_trailblazers .single_trailblazers--video {
-    height: auto; } }
+    height: auto; }
+
+  .page-template-dashboard #wrapper-footer,
+  .page-template-profile #wrapper-footer,
+  .page-template-videos-list #wrapper-footer,
+  .page-template-add-video #wrapper-footer,
+  .page-template-fav-videos #wrapper-footer,
+  .page-template-fav-experiments #wrapper-footer,
+  .page-template-submit-idea #wrapper-footer {
+    display: none; }
+
+  .dashboard_content {
+    height: calc(100vh - 180px);
+    margin-top: 45px;
+    padding: 30px; }
+
+  .memberdashboard--menu {
+    bottom: 0; } }
 @media (max-width: 576px) {
   .row.dashboard_user--stats .total_favs, .row.dashboard_user--stats .total_videos {
     margin: 10px auto 0; }

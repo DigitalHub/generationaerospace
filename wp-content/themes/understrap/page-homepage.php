@@ -11,7 +11,6 @@
  */
 
 get_header(); ?>
-
 <div class="clear"></div>
 <div class="wrapper" id="page-wrapper">
 	<main id="main" class="site-main" role="main">

@@ -28,7 +28,7 @@
 	.tiny-stars, .planet-big,
 	.animated_circles, 
 	.home #wrapper-footer,
-	.featured_trailbazers a.arrowbtn:nth-last-child(2)  {
+	.featured_trailbazers a.arrowbtn:nth-last-child(2) {
 		display: none;
 	}
 
@@ -190,6 +190,29 @@
 		.single_trailblazers--video  {
 			height: auto;
 		}
+	}
+
+
+	.page-template-dashboard,
+	.page-template-profile,
+	.page-template-videos-list,
+	.page-template-add-video,
+	.page-template-fav-videos,
+	.page-template-fav-experiments,
+	.page-template-submit-idea {
+		#wrapper-footer {
+			display: none;
+		}
+	}
+
+	.dashboard_content {
+		height: calc(100vh - 180px);
+		margin-top: 45px;
+		padding: 30px;
+	}
+
+	.memberdashboard--menu {
+		bottom: 0;
 	}
 }
 

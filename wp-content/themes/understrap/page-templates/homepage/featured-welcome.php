@@ -13,7 +13,7 @@
 		<source src="<?php echo get_template_directory_uri(); ?>/img/GenAero-welcome.mp4" type="video/mp4">
 			<source src="<?php echo get_template_directory_uri(); ?>/img/GenAero-welcome.ogv" type="video/mp4">
 				<source src="<?php echo get_template_directory_uri(); ?>/img/GenAero-welcome.webm" type="video/mp4">
-				</video>
+				</video> 
 				<div class="HudOverlay">
 					<svg class="homeHudOverlay" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1316 653.6" style="enable-background:new 0 0 1316 653.6;" xml:space="preserve" preserveAspectRatio="none">
 						<path class="outsideHudOverlay" d="M0,0v653.6h1316V0H0z M1271.5,605.7c0,4.7-4.4,8.6-9.8,8.6H48.9c-5.3,0-9.8-3.9-9.8-8.6
