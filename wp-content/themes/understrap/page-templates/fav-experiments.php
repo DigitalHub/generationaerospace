@@ -43,7 +43,7 @@ $results_count = $wpdb->num_rows;
 							echo '<a href="'.get_permalink( get_page_by_path( 'try-this-at-home' ) ).'">Find an Experiment</a>';
 						}?>
 					</div>
-				</div>
+				</div> 
 			</main><!-- #main -->
 		</div><!-- #primary -->
 		<menu class="container memberdashboard--menu">
