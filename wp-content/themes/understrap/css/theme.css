@@ -14472,6 +14472,29 @@ a.fav-video {
   .memberdashboard--menu {
     bottom: 0; } }
 @media (max-width: 576px) {
+  .site-toplogin_btn .headerbutt .hexagon-icon, .site-menu .headerbutt .hexagon-icon {
+    height: 40px;
+    width: 40px; }
+    .site-toplogin_btn .headerbutt .hexagon-icon svg, .site-menu .headerbutt .hexagon-icon svg {
+      height: 40px;
+      width: 40px; }
+  .site-toplogin_btn .headerbutt span, .site-menu .headerbutt span {
+    font-size: 10px; }
+
+  .site-toplogin_btn .headerbutt .hexagon-icon {
+    margin: 0 0 auto 0; }
+  .site-toplogin_btn .headerbutt .hexagon {
+    height: 50px;
+    margin: 0 0 auto 0;
+    width: 40px; }
+  .site-toplogin_btn span {
+    text-align: left; }
+
+  .site-menu .headerbutt .hexagon-icon {
+    margin: 0 0 0 auto; }
+  .site-menu span {
+    text-align: right; }
+
   .row.dashboard_user--stats .total_favs, .row.dashboard_user--stats .total_videos {
     margin: 10px auto 0; }
 
@@ -14663,16 +14686,22 @@ a.fav-video {
     width: 100%; }
     .single_experimentcaraousel--wrapper .experiment--wrapperhidbar {
       overflow-y: scroll;
-      width: calc(100% + 20px); }
+      width: 100%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel {
-        width: 98%; }
+        width: 99%; }
         .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_left {
-          left: -2%; }
+          left: -2%;
+          top: 50%; }
         .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
-          right: -2%; }
+          right: -2%;
+          top: 50%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .slick-list {
         margin: 0 auto;
-        width: 80%; }
+        width: 84%; }
+
+  .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .tried_experiement {
+    margin-top: 30px;
+    padding: 15px; }
 
   .ongoing_events .events_row--content div:not(:first-child),
   .past_events .events_row--content div:not(:first-child) {
