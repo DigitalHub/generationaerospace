@@ -70,27 +70,21 @@ $featured_videos_count = $wpdb->num_rows;
 							<div class="row">
 								<div class="col-xl-2 col-lg-2 col-md-2 col-sm- col-xs- entry-share">
 									<div class="row">
-										<?php 
-										if($loggedin === '0') { 
-											?>
-											<a href="javascript:;" data-fancybox="modal" data-src="#login"><i class="fal fa-heart"></i> Save Video</a>
-											<?php
-										} elseif($loggedin === '1') {
+										<?php if($loggedin === '0') { ?>
+										<a href="javascript:;" data-fancybox="modal" data-src="#login"><i class="fal fa-heart"></i> Save Video</a>
+										<?php } elseif($loggedin === '1') {
 											$favs_sql = $wpdb->prepare("SELECT * FROM $fav_videos_table WHERE member_id = '%s' AND video_id='%s'", $user_id, $video_id);
 											$favs_results = $wpdb->get_results($favs_sql);
 											$favs_count = $wpdb->num_rows;
 											if($favs_count > 0) {
 												?>
 												<a id="favvideo" href="#" class="faved fav-video" data-id="<?=$video_id?>" data-user="<?=$user_id?>"><i class="fas fa-heart"></i> Saved Video</a>
-												<?php 
-											} else {
-												?>
+												<?php } else { ?>
 												<a id="favvideo" href="#" class="fav-video" data-id="<?=$video_id?>" data-user="<?=$user_id?>"><i class="fal fa-heart"></i> Save Video</a>
 												<?php
 											}
-										}
-										?>
-										<p><strong>Share This Video</strong></p>
+										} ?>
+										<p class="d-md-block d-sm-none d-none"><strong>Share This Video</strong></p>
 										<div class="addthis_inline_share_toolbox"></div>
 									</div>
 								</div>

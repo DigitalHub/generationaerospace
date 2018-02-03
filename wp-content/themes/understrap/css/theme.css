@@ -14675,9 +14675,29 @@ a.fav-video {
       line-height: 40px;
       width: 40px; }
 
+  .juicer-section .juicer-content .j-stacker-wrapper {
+    height: 230px; }
+
+  .juicer-feed.image-grid li.feed-item,
+  .juicer-feed.slider .juicer-feed.hip li.feed-item {
+    height: 100px;
+    margin-bottom: 15px !important;
+    margin-left: 15px !important;
+    max-height: 100px;
+    max-width: 100px; }
+    .juicer-feed.image-grid li.feed-item:nth-child(3n-2),
+    .juicer-feed.slider .juicer-feed.hip li.feed-item:nth-child(3n-2) {
+      margin-left: 0 !important; }
+
   .entry-share {
     background-color: #d1d1d1;
     margin-bottom: 30px; }
+    .entry-share a.fav-video {
+      display: block;
+      color: #000;
+      margin-top: 20px;
+      text-align: center;
+      width: 100%; }
     .entry-share .addthis_inline_share_toolbox {
       width: auto;
       margin: 10px auto; }
