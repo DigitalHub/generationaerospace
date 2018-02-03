@@ -3,8 +3,8 @@ Contributors: webdados, wonderm00n
 Donate link: http://bit.ly/donate_fb_opengraph
 Tags: facebook, open graph, open graph protocol, share, social, meta, rss, twitter card, twitter, schema, google+, g+, google, google plus, image, like, seo, search engine optimization, woocommerce, yoast seo, wordpress seo, woocommerce, subheading, php7
 Requires at least: 4.5
-Tested up to: 5.0-alpha-42440
-Stable tag: 2.2.3
+Tested up to: 5.0-alpha-42610
+Stable tag: 2.2.3.1
 
 Inserts Facebook Open Graph, Google+/Schema.org, Twitter and SEO Meta Tags into your WordPress Website for more efficient sharing results.
 
@@ -77,6 +77,7 @@ Our settings page is discreetly kept under "Options", as it should, instead of t
 
 * **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)**: Allows you to use title, url (canonical) and description from the Yoast SEO plugin.
 * **[WooCommerce](https://wordpress.org/plugins/woocommerce/)**: On product pages sets `og:type` to "product" and adds the price including tax to the `product:price` and `product:availability` tags. Also allows you to use the Product Category thumbnails as Open Graph Image and have Product Gallery images as additional Open Graph Images
+* **[WooCommerce Brands](https://woocommerce.com/products/brands/)**: On brand pages uses the brand image as Open Graph Image 
 * **[SubHeading](https://wordpress.org/extend/plugins/subheading/)**: Add the SubHeading to the post/page title.
 * **[Business Directory Plugin](https://wordpress.org/extend/plugins/business-directory-plugin/)**: Allows you to use BDP listing contents as Open Graph Tags.
 
@@ -149,6 +150,10 @@ We DO NOT provide email support for this plugin. If you send us an email asking 
 2. Or we can give you a quote on premium email/phone support if you prefer to
 
 == Changelog ==
+
+= 2.2.3.1 =
+* Tested with WooCommerce 3.3
+* Improved readme.txt
 
 = 2.2.3 =
 * Small bug fix introduced in 2.2 that would throw a PHP notice if no tool was selected when saving the settings (Thanks @osti47)
