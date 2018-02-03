@@ -378,6 +378,9 @@ a {
 		}
 
 		input {
+			background-color: transparent;
+			border: none;
+			color: $white;
 			cursor: pointer;
 			font-size: 0.9375rem !important;
 			height: 100% !important;

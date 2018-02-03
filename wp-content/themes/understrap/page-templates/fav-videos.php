@@ -27,27 +27,26 @@ $results_count = $wpdb->num_rows;
 			<?php get_sidebar( 'left' ); ?>
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
-
-					<div class="dashboard_content--title">
-						<h4>My Favourite Videos</h4>
-					</div>
-					<div class="clear"></div>
-
-					<div class="container">
-
-						<?php
-					//TODO: STEF TO ADD PAGINATION
-						if($results_count > 0) {
-							foreach ($results as $result) {
-								global $result;
-								get_template_part( 'page-templates/members/fav', 'video-row' );
+					<div class="row">
+						<div class="dashboard_content--title">
+							<h4>My Favourite Videos</h4>
+						</div>
+						<div class="clear"></div>
+						
+						<div class="container">
+							
+							<?php //TODO: STEF TO ADD PAGINATION
+							if($results_count > 0) {
+								foreach ($results as $result) {
+									global $result;
+									get_template_part( 'page-templates/members/fav', 'video-row' );
+								}
+							} else {
+								echo '<p>You have not liked any videos yet. Why not submit your own video here?</p>';
+								echo '<a href="'.get_permalink( get_page_by_path( 'get-inspired' ) ).'">Submit New Video</a>';
 							}
-						} else {
-							echo '<p>You have not liked any videos yet. Why not submit your own video here?</p>';
-							echo '<a href="'.get_permalink( get_page_by_path( 'get-inspired' ) ).'">Submit New Video</a>';
-						}
-						?>
-
+							?>
+						</div>
 					</div>
 				</main><!-- #main -->
 			</div><!-- #primary -->

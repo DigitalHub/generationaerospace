@@ -106,7 +106,7 @@ if($_POST['video_submit']) {
 
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
-					<form id="video_form" method="post" action="">
+					<form id="video_form" method="post" class="row" action="">
 						<div class="dashboard_content--title">
 							<?php if($is_new_video === '1') {
 								echo '<h4>Submit your Video!</h4>';

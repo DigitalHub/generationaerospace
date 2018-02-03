@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="offset-xl-1 col-xl-4 offset-lg-1 col-lg-4 col-md-10 offset-md-1 col-sm-12 col-xs-12">
 				<h1>TRY THIS AT HOME_</h1>
-				<div class="highlight" style="margin-bottom: 30px"><?php echo get_field('featured_experiment_copy'); ?></div>
+				<div class="highlight hidinmobile--inline" style="margin-bottom: 30px"><?php echo get_field('featured_experiment_copy'); ?></div>
 				
 				<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ); ?>" class="arrowbtn btn--color d-none d-lg-block">
 					<span class="fas fa-long-arrow-alt-right icon-left"></span>
@@ -78,11 +78,12 @@
 						<?php endwhile;?>
 					</div>
 				</div>
-
-				<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ); ?>" class="d-md-block d-lg-none arrowbtn btn--color">
-					<span class="fas fa-long-arrow-alt-right icon-left"></span>
-					<div class="arrowbtn-wrapper"><span>See More Experiments</span></div>
-				</a>
+				<div class="center">
+					<a href="<?php echo get_permalink( get_page_by_path( 'try-this-at-home' ) ); ?>" class="d-md-block d-lg-none arrowbtn btn--color">
+						<span class="fas fa-long-arrow-alt-right icon-left"></span>
+						<div class="arrowbtn-wrapper"><span>See More Experiments</span></div>
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="fullpagecounter"><span class="counting">03</span><span class="totalcount">06</span></div>

@@ -345,7 +345,7 @@
 }
 
 .fullpagecounter {
-	bottom: 16%;
+	bottom: 20%;
 	margin: 0;
 	position: absolute;
 	right: 3.6%;
@@ -624,6 +624,20 @@
 			left: 25px;
 			z-index: 1;
 		}
+
+		.post_date + p {
+			margin-bottom: 15px;
+		}
+	}
+	.post_date {
+		color: $rrskyblue;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 100%;
+
+		i {
+			margin-right: 5px;
+		}
 	}
 }
 
@@ -640,34 +654,15 @@
 	}
 }
 
-.featured_event {
-	.post-thumbnail {
-		height: 250px !important;
-
-		img {
-			height: 300px;
-		}
-
-		.post_date + p {
-			margin-bottom: 15px;
-		}
-	}
-
-	.post_date {
-		color: $rrskyblue;
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 100%;
-
-		i {
-			margin-right: 5px;
-		}
-	}
-}
-
 .typewriter {
 	color: $rrlimegreen;
 	font-size: 1.6rem;
 	font-weight: 400;
 	text-transform: uppercase;
+}
+
+.center {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
 }
