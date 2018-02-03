@@ -62,12 +62,15 @@ if($total_videos > 0) {
 
 				<main class="site-main container dashboard_content" id="main" role="main">
 					<div class="row">
-						<div class="announcement col-lg-12">
-							<i class="fal fa-bell"></i>
-							<?php if ( $announcement -> have_posts() ) : while ( $announcement->have_posts() ) : $announcement->the_post();
-							echo "<p>" . get_field('message'). "</p>";
-							endwhile; endif; ?>
-						</div>
+						<?php 
+						if ( $announcement -> have_posts() ) : 
+							echo '<div class="announcement col-lg-12"><i class="fal fa-bell"></i>';
+							while ( $announcement->have_posts() ) : $announcement->the_post();
+								echo "<p>" . get_field('message'). "</p>";
+							endwhile;
+							echo '</div>';
+						endif; 
+						?>
 					</div>
 
 					<div class="row dashboard_user--stats">
