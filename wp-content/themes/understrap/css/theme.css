@@ -14412,12 +14412,26 @@ a.fav-video {
     margin-left: 0;
     text-align: center; }
 
-  .singlepost--hud, .subpage--hud {
+  .singlepost--hud {
+    padding: 100px 0 0;
+    height: auto; }
+
+  .subpage--hud {
     padding: 100px 0 50px;
     height: auto; }
 
+  .single-genaero_experiments .experiment-meta .meta-date,
+  .single-genaero_experiments .experiment-meta .meta-keywords {
+    width: 100%; }
+
+  .content--overflow .singlepost--content .content--overflow_wrapper {
+    height: 300px;
+    max-height: 300px; }
   .content--overflow + .single_main {
-    padding-top: 0; }
+    padding-top: 30px; }
+
+  .single-genaero_videos .content--overflow + .single_main {
+    padding-top: 80px; }
 
   .single_experiment .single_experiment--methods,
   .single_experiment .single_trailblazers--profile,
@@ -14633,7 +14647,8 @@ a.fav-video {
       width: 40px; }
 
   .entry-share {
-    background-color: #d1d1d1; }
+    background-color: #d1d1d1;
+    margin-bottom: 30px; }
     .entry-share .addthis_inline_share_toolbox {
       width: auto;
       margin: 10px auto; }
@@ -14641,18 +14656,27 @@ a.fav-video {
         border-bottom: none !important;
         width: auto; }
 
+  #single-experiment-content .close-single-experiment {
+    right: 20px; }
+
   .single_experimentcaraousel--wrapper {
     width: 100%; }
     .single_experimentcaraousel--wrapper .experiment--wrapperhidbar {
       overflow-y: scroll;
       width: calc(100% + 20px); }
-      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_left {
-        left: -2%; }
-      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
-        right: 4%; }
+      .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel {
+        width: 98%; }
+        .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_left {
+          left: -2%; }
+        .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .experiment--carousel .double_arrow.small_arrow.arrow_right {
+          right: -2%; }
       .single_experimentcaraousel--wrapper .experiment--wrapperhidbar .slick-list {
-        margin: 0 30px;
-        width: 80%; } }
+        margin: 0 auto;
+        width: 80%; }
+
+  .ongoing_events .events_row--content div:not(:first-child),
+  .past_events .events_row--content div:not(:first-child) {
+    text-align: left; } }
 @media (max-width: 375px) {
   .site-title a {
     width: 250px; }

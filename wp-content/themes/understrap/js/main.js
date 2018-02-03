@@ -247,6 +247,7 @@ jQuery(document).ready(function($) {
             autoplay: false,
             dots: false,
             fade: true,
+            adaptiveHeight: true,
             prevArrow: '<div class="double_arrow small_arrow arrow_left"></div>',
             nextArrow: '<div class="double_arrow small_arrow arrow_right"></div>',
 

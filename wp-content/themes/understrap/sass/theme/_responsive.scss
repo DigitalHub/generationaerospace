@@ -199,13 +199,38 @@
 		text-align: center;
 	}
 
-	.singlepost--hud, .subpage--hud {
+	.singlepost--hud {
+		padding: 100px 0 0;
+		height: auto;
+	}
+
+	.subpage--hud {
 		padding: 100px 0 50px;
 		height: auto;
 	}
 
-	.content--overflow + .single_main {
-		padding-top: 0;
+	.single-genaero_experiments .experiment-meta {
+		.meta-date,
+		.meta-keywords {
+			width: 100%;
+		}
+	}
+	
+	.content--overflow {
+		.singlepost--content .content--overflow_wrapper {
+			height: 300px;
+			max-height: 300px;
+		}
+
+		+ .single_main {
+			padding-top: 30px;
+		}
+	}
+
+	.single-genaero_videos {
+		.content--overflow + .single_main {
+			padding-top: 80px;
+		}
 	}
 
 	.single_experiment,
@@ -217,7 +242,6 @@
 			height: auto;
 		}
 	}
-
 
 	.page-template-dashboard,
 	.page-template-profile,
@@ -525,6 +549,7 @@
 
 	.entry-share {
 		background-color: #d1d1d1;
+		margin-bottom: 30px;
 		.addthis_inline_share_toolbox {
 			width: auto;
 			margin: 10px auto;
@@ -535,6 +560,10 @@
 		}
 	}
 
+	#single-experiment-content .close-single-experiment {
+		right: 20px;
+	}
+
 	.single_experimentcaraousel--wrapper {
 		width: 100%;
 
@@ -543,20 +572,25 @@
 			width: calc(100% + 20px);
 
 			.experiment--carousel {
-
+				width: 98%;
 				.double_arrow.small_arrow.arrow_left {
 					left: -2%;
 				}
 
 				.double_arrow.small_arrow.arrow_right {
-					right: 4%;
+					right: -2%;
 				}
 			}
 			.slick-list {    
-				margin: 0 30px;
+				margin: 0 auto;
 				width: 80%;
 			}
 		}
+	}
+
+	.ongoing_events .events_row--content div:not(:first-child), 
+	.past_events .events_row--content div:not(:first-child) {
+		text-align: left;
 	}
 }
 
