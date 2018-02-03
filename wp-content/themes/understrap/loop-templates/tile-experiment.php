@@ -17,7 +17,7 @@ $results = $wpdb->get_results($experiments_sql);
 $results_count = $wpdb->num_rows;
 ?>
 
-<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 featured_experiment--card">
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 featured_experiment--card">
 	<a href="<?php the_permalink(); ?>">
 		<?php custom_post_thumbnail(); ?>
 	</a>

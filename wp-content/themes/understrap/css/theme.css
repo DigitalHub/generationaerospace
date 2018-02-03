@@ -14593,15 +14593,11 @@ a.fav-video {
     .featured-videos-section .featured_experiment--card > a .post-thumbnail {
       height: 100%;
       background-position: center; }
-  .featured-videos-section .featured_experiment--card .experiment--fav_link {
-    left: 27%;
-    right: unset;
-    top: 8px; }
-    .featured-videos-section .featured_experiment--card .experiment--fav_link i {
-      border-radius: 40px;
-      font-size: 23px;
-      line-height: 40px;
-      width: 40px; }
+  .featured-videos-section .featured_experiment--card .experiment--fav_link i {
+    border-radius: 40px;
+    font-size: 23px;
+    line-height: 40px;
+    width: 40px; }
   .featured-videos-section .featured_experiment--card .experiment_card--content {
     background-color: transparent;
     display: inline-block;
@@ -14612,20 +14608,29 @@ a.fav-video {
   .featured-videos-section .featured_experiment--card .meta-date_fav {
     display: none; }
 
-  .featured_experiment--card.col-xs-6 {
+  .featured_experiment--card.col-6 {
     width: 50%; }
-    .featured_experiment--card.col-xs-6 .post-thumbnail {
+    .featured_experiment--card.col-6 > a {
+      height: 100px;
+      width: 100%; }
+    .featured_experiment--card.col-6 .experiment_card--content {
+      margin-top: -6px;
+      padding: 0;
+      width: 100%; }
+      .featured_experiment--card.col-6 .experiment_card--content a {
+        background: #fff;
+        margin: 0 0 25px;
+        padding: 10px; }
+    .featured_experiment--card.col-6 .post-thumbnail {
       height: 150px; }
-    .featured_experiment--card.col-xs-6 .meta-keywords,
-    .featured_experiment--card.col-xs-6 .meta-date_fav {
+    .featured_experiment--card.col-6 .meta-keywords,
+    .featured_experiment--card.col-6 .meta-date_fav {
       display: none; }
-    .featured_experiment--card.col-xs-6 .experiment--fav_link {
-      top: 8px; }
-      .featured_experiment--card.col-xs-6 .experiment--fav_link i {
-        border-radius: 40px;
-        font-size: 23px;
-        line-height: 40px;
-        width: 40px; }
+    .featured_experiment--card.col-6 .experiment--fav_link i {
+      border-radius: 40px;
+      font-size: 23px;
+      line-height: 40px;
+      width: 40px; }
 
   .entry-share {
     background-color: #d1d1d1; }

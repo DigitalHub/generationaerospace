@@ -461,9 +461,6 @@
 			}
 
 			.experiment--fav_link {
-				left: 27%;
-				right: unset;
-				top: 8px;
 				i {
 					border-radius: 40px;
 					font-size: 23px;
@@ -487,8 +484,25 @@
 		}
 	}
 
-	.featured_experiment--card.col-xs-6 {
+	.featured_experiment--card.col-6 {
 		width: 50%;
+
+		> a {
+			height: 100px;
+			width: 100%;
+		}
+
+		.experiment_card--content {
+			margin-top: -6px;
+			padding: 0;
+			width: 100%;
+
+			a {
+				background: $white;
+				margin: 0 0 25px;
+				padding: 10px;
+			}
+		}
 
 		.post-thumbnail {
 			height: 150px;
@@ -500,7 +514,6 @@
 		}
 
 		.experiment--fav_link {
-			top: 8px;
 			i {
 				border-radius: 40px;
 				font-size: 23px;

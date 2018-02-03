@@ -40,7 +40,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="menu-content__footer small-text">
+	<div class="menu-content__footer small-text d-md-block d-sm-none d-none">
 		<?php wp_nav_menu( array( 'menu' => 'footer menu', 'container' => false, 'depth' => 0, ) ); ?>
 	</div>
 </menu>

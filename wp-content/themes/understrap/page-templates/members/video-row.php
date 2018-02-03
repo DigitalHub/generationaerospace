@@ -36,13 +36,9 @@ $thumbnail_url = 'http://img.youtube.com/vi/'.$youtube_id.'/mqdefault.jpg';
 		<?php if($desc) echo '<p class="d-md-block d-sm-none d-none">'.$desc.'...</p>';
 		?>
 	</div>
-	<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-l">
+	<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
 		<div class="row">
 			<a class="edit_videopost--btn" href="<?php echo get_permalink( get_page_by_path( 'edit-a-video' ) ) ?>?id=<?=$video_id?>"><i class="fal fa-pencil"></i></a>
-		</div>
-	</div>
-	<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-l">
-		<div class="row">
 			<a href="#" class="delete-video edit_videopost--btn" data-video-id="<?=$video_id?>" data-link-id="<?=$link_id?>"><i class="fal fa-trash"></i></a>
 		</div>
 	</div>

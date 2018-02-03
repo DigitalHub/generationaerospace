@@ -6,7 +6,7 @@
  */
 
 ?>
-<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-x-12 featured_trailblazer--card">
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 featured_trailblazer--card">
 	<a class="fullpopup" data-fancybox data-type="iframe" data-src="<?php the_permalink(); ?>" href="javascript:;">
 		<div class="post-thumbnail featured_trailblazer--img">
 			<div class="post-thumbnail--wrapper">
