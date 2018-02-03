@@ -37,6 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .row end -->
+			<hr>
 			<div class="row">
 				<div class="back-to-main">
 					<a href="<?php echo get_permalink( get_page_by_path( 'explore-the-vault' ) ) ?>" class="arrowbtn btn--color">
