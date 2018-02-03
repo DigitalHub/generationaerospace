@@ -73,6 +73,7 @@ $totalcount = 0;
 				<div class="experiment_matterial--list">
 					<?php echo get_field('materials'); ?>
 				</div><br>
+				<p><strong>Share This Experiment</strong></p>
 				<div class="addthis_inline_share_toolbox_dznu"></div><br>
 
 				<?php 
