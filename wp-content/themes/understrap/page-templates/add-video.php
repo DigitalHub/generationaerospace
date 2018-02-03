@@ -106,7 +106,7 @@ if($_POST['video_submit']) {
 
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
-					<form id="video_form" method="post" action="">
+					<form id="video_form" method="post" class="row" action="">
 						<div class="dashboard_content--title">
 							<?php if($is_new_video === '1') {
 								echo '<h4>Submit your Video!</h4>';
@@ -142,13 +142,16 @@ if($_POST['video_submit']) {
 
 			</div><!-- #primary -->
 
-			<menu class="d-block d-md-none col-sm-12 col-xs-12 memberdashboard--menu">
-				<div class="memberdashboard--menuwrap">
-					<?php dynamic_sidebar( 'left-sidebar' ); ?>
+			<menu class="container memberdashboard--menu">
+				<div class="row">
+					<div class="d-block d-md-none col-sm-12 col-xs-12">
+						<div class="memberdashboard--menuwrap">
+							<?php dynamic_sidebar( 'left-sidebar' ); ?>
+						</div>
+						<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
+					</div>
 				</div>
-				<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
 			</menu>
-
 		</div><!-- .row -->
 
 	</div><!-- Container end -->

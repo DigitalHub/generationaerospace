@@ -42,6 +42,7 @@
 		float: left;
 		// font-size: 1.333rem;
 		font-size: 15px;
+		height: 40px;
 		margin-bottom: 15px;
 		padding: 15px 10px;
 		width: 100%;
@@ -123,7 +124,7 @@
 
 .memberdashboard--menu {
 	position: absolute;
-	bottom: 30px;
+	bottom: 0;
 
 	.memberdashboard--menuwrap {
 		background-color: $black;
@@ -183,6 +184,7 @@
 			}
 
 			ul.sub-menu {
+				list-style: none;
 				margin: 0;
 				padding: 0;
 				li {
@@ -225,8 +227,11 @@
 	}
 
 	.dashboard_content--editlink {
+		float: right;
+		width: 50%;
 		input, a {
 			background-color: transparent;
+			border: none;
 			border-bottom: 1px solid $white;
 			color: $white;
 			float: right;
@@ -266,9 +271,12 @@
 		background-color: #ffffff1f;
 		color: $white;
 		border: none;
+		@include border-radius(0);
 		display: block;
 		float: right;
+		height: 40px;
 		margin-bottom: 10px;
+		padding: 10px;
 		width: calc(100% - 115px);
 
 		&:focus {
@@ -281,13 +289,17 @@
 	
 	input[type="date"] {
 		background: #ffffff1f;
-		color: $white;
+		border: none;
 		@include border-radius(0);
+		color: $white;
 		display: block;
 		float: right;
-		padding: 0 10px;
+		height: 40px;
+		padding: 10px;
 		width: calc(100% - 115px);
-
+		&:focus {
+			outline: none;
+		}
 	}
 
 	select {
@@ -326,6 +338,7 @@
 
 	input#profile_password {
 		margin: 0;
+		padding: 10px;
 		width: calc(100% - 195px);
 	}
 }

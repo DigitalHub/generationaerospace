@@ -219,7 +219,7 @@ $all_videos_count = $wpdb->num_rows;
 
 <section class="juicer-section">
 	<div class="juicer-wrapper"></div>
-	<div class="juicer-content container-fluid">
+	<div class="juicer-content container">
 		<h2 class="text-center">#GENAERO</h2>
 		<p class="highlight text-center" style="margin-bottom:60px">Check out what other GenAero Explorers are doing <a href="https://www.instagram.com/explore/tags/genaero/" target="_blank">here</a>!</p>
 		<ul class="juicer-feed" data-feed-id="genaero" data-per="12" data-columns="6"></ul>

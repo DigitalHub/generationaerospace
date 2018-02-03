@@ -18,7 +18,7 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+// ** MySQL settings - You can get this info form your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'admin_generationaerospace');
 // define('DB_NAME', 'generationaerospace');

@@ -107,7 +107,7 @@ if($total_videos > 0) {
 					<?php } else { ?>
 					<div class="row recent_submitted_video">
 						<div class="row">
-							<div class="col-lg-12">
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<p>It looks like you haven't submitted any videos yet. Why don't you get started by clicking the button below?</p>
 							</div>
 							<div class="offset-lg-3 col-lg-6">
@@ -123,11 +123,15 @@ if($total_videos > 0) {
 
 			</div><!-- #primary -->
 
-			<menu class="d-block d-md-none col-sm-12 col-xs-12 memberdashboard--menu">
-				<div class="memberdashboard--menuwrap">
-					<?php dynamic_sidebar( 'left-sidebar' ); ?>
+			<menu class="container memberdashboard--menu">
+				<div class="row">
+					<div class="d-block d-md-none col-sm-12 col-xs-12">
+						<div class="memberdashboard--menuwrap">
+							<?php dynamic_sidebar( 'left-sidebar' ); ?>
+						</div>
+						<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
+					</div>
 				</div>
-				<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
 			</menu>
 		</div><!-- .row -->
 	</div><!-- Container end -->

@@ -20,23 +20,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 				<main class="site-main dashboard_content" id="main" role="main">
-					<div class="dashboard_content--title">
-						<h4>Got an Idea or Feedback? Tell us!</h4>
+					<div class="row">
+						<div class="dashboard_content--title">
+							<h4>Got an Idea or Feedback? Tell us!</h4>
+						</div>
+						<?php while ( have_posts() ) : the_post();
+						the_content();
+						endwhile; ?>
+						
+						<div id="username" style="display:none" data-user-id="<?=$_SESSION['username']?>"></div>
 					</div>
-					<?php while ( have_posts() ) : the_post();
-					the_content();
-					endwhile; ?>
-
-					<div id="username" style="display:none" data-user-id="<?=$_SESSION['username']?>"></div>
 
 				</main><!-- #main -->
 			</div><!-- #primary -->
 
-			<menu class="d-block d-md-none col-sm-12 col-xs-12 memberdashboard--menu">
-				<div class="memberdashboard--menuwrap">
-					<?php dynamic_sidebar( 'left-sidebar' ); ?>
+			<menu class="container memberdashboard--menu">
+				<div class="row">
+					<div class="d-block d-md-none col-sm-12 col-xs-12">
+						<div class="memberdashboard--menuwrap">
+							<?php dynamic_sidebar( 'left-sidebar' ); ?>
+						</div>
+						<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
+					</div>
 				</div>
-				<a href="#" class="memberdashboard--btn">Dashboard Menu</a>
 			</menu>
 		</div><!-- .row -->
 	</div><!-- Container end -->
