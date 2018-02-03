@@ -14472,29 +14472,6 @@ a.fav-video {
   .memberdashboard--menu {
     bottom: 0; } }
 @media (max-width: 576px) {
-  .site-toplogin_btn .headerbutt .hexagon-icon, .site-menu .headerbutt .hexagon-icon {
-    height: 40px;
-    width: 40px; }
-    .site-toplogin_btn .headerbutt .hexagon-icon svg, .site-menu .headerbutt .hexagon-icon svg {
-      height: 40px;
-      width: 40px; }
-  .site-toplogin_btn .headerbutt span, .site-menu .headerbutt span {
-    font-size: 10px; }
-
-  .site-toplogin_btn .headerbutt .hexagon-icon {
-    margin: 0 0 auto 0; }
-  .site-toplogin_btn .headerbutt .hexagon {
-    height: 50px;
-    margin: 0 0 auto 0;
-    width: 40px; }
-  .site-toplogin_btn span {
-    text-align: left; }
-
-  .site-menu .headerbutt .hexagon-icon {
-    margin: 0 0 0 auto; }
-  .site-menu span {
-    text-align: right; }
-
   .row.dashboard_user--stats .total_favs, .row.dashboard_user--stats .total_videos {
     margin: 10px auto 0; }
 
@@ -14534,20 +14511,34 @@ a.fav-video {
 
   .site-title {
     top: 10px; }
+    .site-title a {
+      width: 270px; }
+      .site-title a .site-title-border--left {
+        left: 40px; }
+      .site-title a .site-title-border--right {
+        right: 40px; }
+      .site-title a .logo_img {
+        width: 70%; }
+
+  .site-toplogin_btn, .site-menu {
+    top: 10px;
+    width: auto; }
+    .site-toplogin_btn .headerbutt, .site-menu .headerbutt {
+      width: 40px; }
+      .site-toplogin_btn .headerbutt .hexagon-icon, .site-menu .headerbutt .hexagon-icon {
+        height: 40px;
+        width: 40px; }
+        .site-toplogin_btn .headerbutt .hexagon-icon svg, .site-menu .headerbutt .hexagon-icon svg {
+          height: 40px;
+          width: 40px; }
+      .site-toplogin_btn .headerbutt .hexagon, .site-menu .headerbutt .hexagon {
+        height: 45px;
+        width: 40px; }
+      .site-toplogin_btn .headerbutt span, .site-menu .headerbutt span {
+        font-size: 10px; }
 
   .site-toplogin_btn {
-    left: 2%;
-    top: 10px;
-    width: 80px; }
-
-  .site-title a {
-    width: 270px; }
-    .site-title a .site-title-border--left {
-      left: 40px; }
-    .site-title a .site-title-border--right {
-      right: 40px; }
-    .site-title a .logo_img {
-      width: 70%; }
+    left: 2%; }
 
   a#genaero-facebook-button {
     width: 100%; }
