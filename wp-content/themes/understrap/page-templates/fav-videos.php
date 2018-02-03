@@ -32,9 +32,7 @@ $results_count = $wpdb->num_rows;
 							<h4>My Favourite Videos</h4>
 						</div>
 						<div class="clear"></div>
-
 						<div class="container">
-
 							<?php //TODO: STEF TO ADD PAGINATION
 							if($results_count > 0) {
 								foreach ($results as $result) {
@@ -42,8 +40,8 @@ $results_count = $wpdb->num_rows;
 									get_template_part( 'page-templates/members/fav', 'video-row' );
 								}
 							} else {
-								echo '<p>You have not liked any videos yet. Why not submit your own video here?</p>';
-								echo '<a href="'.get_permalink( get_page_by_path( 'get-inspired' ) ).'">Submit New Video</a>';
+								echo '<div class="row"><p>You have not liked any videos yet. Why not submit your own video here?</p>';
+								echo '<a href="'.get_permalink( get_page_by_path( 'get-inspired' ) ).'">Submit New Video</a></div>';
 							}
 							?>
 						</div>

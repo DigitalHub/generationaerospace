@@ -88,16 +88,19 @@ if($total_videos > 0) {
 						<h3>Recent Submitted Video:</h3>
 					</div>
 					<div class="row recent_submitted_video">
-						<div class="col-lg-5">
+						<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12">
 							<div class="row">
 								<a href="<?=$youtube?>" target="_blank">
 									<img src="<?=$thumbnail_url?>" alt="<?=$title?>">
 								</a>
 							</div>
 						</div>
-						<div class="col-lg-7">
+						<div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-12">
 							<h5><?=$title?></h5>
-							<p><?=$desc?>...</p>
+							<?php if($desc) echo '<p class="d-md-block d-sm-none d-none">'.$desc.'...</p>';
+							?>
+						</div>
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 							<a href="<?php echo get_permalink( get_page_by_path( 'my-videos' ) ) ?>" class="arrowbtn btn--color">
 								<span class="fas fa-long-arrow-alt-right icon-left"></span>
 								<div class="arrowbtn-wrapper"><span>See More Videos</span></div>
