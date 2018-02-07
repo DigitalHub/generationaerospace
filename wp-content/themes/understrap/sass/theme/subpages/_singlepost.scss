@@ -42,6 +42,20 @@
 	}
 }
 
+.default-slick {
+	margin: auto;
+	width: 92%;
+
+	.double_arrow.big_arrow.arrow_left,
+	.double_arrow.big_arrow.arrow_right {
+		top: 50%;
+	}
+
+	.slick-slide img {
+		height: 500px;
+	}
+}
+
 //social media has icon and name
 .addthis_inline_share_toolbox {
 	.at-icon-wrapper.at-share-btn {

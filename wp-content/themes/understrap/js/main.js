@@ -304,6 +304,14 @@ jQuery(document).ready(function($) {
         nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
     });
 
+    jQuery('.default-slick').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        prevArrow: '<div class="double_arrow big_arrow arrow_left"></div>',
+        nextArrow: '<div class="double_arrow big_arrow arrow_right"></div>'
+    });
+
     jQuery('#all-events').on('click', function(event) {
         event.preventDefault();
         $('.past_events').show();
