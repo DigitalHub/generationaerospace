@@ -787,7 +787,7 @@ function extractUTubeVidId($url){
     echo '<b>Facebook: </b><em>'.$facebook.'</em><br>';
     echo '<b>Instagram: </b><em>'.$instagram.'</em><br>';
     echo '<b>Bio: </b><em>'.$bio.'</em><br>';
-    echo '<h2>Videos by '.$fullname.'</h2>';
+    echo '<h2>Videos by Member</h2>';
 
     $videos_sql = $wpdb->prepare("SELECT * FROM $videos_table INNER JOIN $wpdb->posts ON $videos_table.link_id = $wpdb->posts.id WHERE member_id = %s", $member_id);
     $video_results = $wpdb->get_results($videos_sql);
