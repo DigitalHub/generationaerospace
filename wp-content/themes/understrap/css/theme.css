@@ -12079,6 +12079,8 @@ a#genaero-facebook-button {
   width: 100%; }
   #wrapper-footer .site-footer p {
     margin: 0; }
+  #wrapper-footer .site-footer a:hover {
+    color: #00aed4; }
 
 .page-template-page-videos #wrapper-footer {
   background-color: transparent;
@@ -13126,6 +13128,15 @@ a.fav-video {
 
 .single-genaero_vault iframe {
   border: none; }
+
+.default-slick {
+  margin: auto;
+  width: 92%; }
+  .default-slick .double_arrow.big_arrow.arrow_left,
+  .default-slick .double_arrow.big_arrow.arrow_right {
+    top: 50%; }
+  .default-slick .slick-slide img {
+    height: 500px; }
 
 .addthis_inline_share_toolbox .at-icon-wrapper.at-share-btn {
   background-color: transparent !important;
